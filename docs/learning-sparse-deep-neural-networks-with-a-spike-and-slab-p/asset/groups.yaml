@@ -1,0 +1,1384 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # Learning sparse deep neural networks with a spike-and-slab prior
+
+
+    Yan Sun, Qifan Song, Faming Liang *
+
+
+    Department of Statistics, Purdue University, West Lafayette, IN 47907, USA
+
+
+    # ARTICLE INFO
+
+
+    Article history:
+
+    Received 6 February 2021
+
+    Received in revised form 27 June 2021
+
+    Accepted 11 September 2021
+
+    Available online 24 September 2021
+
+
+    Keywords:
+
+    Bayesian neural network
+
+    Sparse deep learning
+
+    Posterior consistency
+
+    High-dimensional nonlinear variable selection
+
+    Model calibration
+
+
+    # ABSTRACT
+
+
+    Deep learning has achieved great successes in many machine learning tasks. However,
+    the deep neural networks (DNNs) are often severely over-parameterized, making
+    them computationally expensive, memory intensive, less interpretable and mis-calibrated.
+    We study sparse DNNs under the Bayesian framework: we establish posterior consistency
+    and structure selection consistency for Bayesian DNNs with a spike-and-slab prior,
+    and illustrate their performance using examples on high-dimensional nonlinear
+    variable selection, large network compression and model calibration. Our numerical
+    results indicate that sparsity is essential for improving the prediction accuracy
+    and calibration of the DNN.
+
+
+    © 2021 Elsevier B.V. All rights reserved.
+
+
+    # 1. Introduction
+
+
+    During the past decade, deep neural networks (DNNs) have achieved great successes
+    in solving many complex machine learning tasks such as pattern recognition and
+    natural language processing. A key factor to these successes is their universal
+    approximation power, while heavily relying on a large number of parameters. The
+    DNNs used in these tasks may consist of hundreds of layers and billions of parameters,
+    see e.g. He et al. (2016) on image classification. Many DNNs are severely over-parameterized;
+    for some networks only 5% of parameters are enough to achieve acceptable models
+    (Denil et al., 2013). Moreover, these over-parameterized networks are no longer
+    well calibrated (Guo et al., 2017).
+
+
+    To reduce the complexity of the DNN and improve its calibration, sparse deep learning
+    has been considered by some researchers, see e.g. Schmidt-Hieber (2020), Bauer
+    and Kohler (2019), Polson and Ročková (2018) and Sun et al. (2021). The approximation
+    power of the sparse DNN has been studied from both frequentist and Bayesian perspectives.
+    From the frequentist perspective, Schmidt-Hieber (2020) and Bauer and Kohler (2019)
+    quantify the approximation error of the sparse DNN in approximating Hölder smooth
+    functions. From the Bayesian perspective, Polson and Ročková (2018) established
+    posterior consistency for the Bayesian DNN with a spike-and-slab prior, and Sun
+    et al. (2021) established posterior consistency for the Bayesian DNN with a mixture
+    Gaussian prior. Quite recently, the theory of sparse deep learning has also been
+    developed under the framework of variational inference, see e.g. Chérief-Abdellatif
+    (2020), Bai et al. (2020b) and Bai et al. (2020a). However, due to the approximation
+    nature of the variational posterior distribution, the resulting statistical inference
+    is often sub-optimal.
+
+
+    This paper studies theoretical properties of the Bayesian sparse DNN with a spike-and-slab
+    prior. It is closely related to Polson and Ročková (2018), which both employ a
+    spike-and-slab prior, but our theory is more general. In particular, our theory
+    is developed under the assumption that the input dimension and the upper bound
+    of the connection weights
+
+
+    * Corresponding author.
+
+    E-mail address: fliang@purdue.edu (F. Liang).'
+  - '[PAGE 1]
+
+
+    can increase with the training sample size; and the activation function is Lipschitz
+    continuous, which has covered many popular activation functions such as ReLU,
+    tanh, and sigmoid. In contrast, Polson and Ročková (2018) assumes that the input
+    dimension is of the order \(O(1)\), the connections weights are bounded, and the
+    activation function is ReLU. This paper also provides a scalable algorithm for
+    simulating from the posterior distribution of the Bayesian DNN. The numerical
+    results indicate that sparsity is essential for improving the prediction accuracy
+    and model calibration of the DNN.
+
+
+    The remaining part of this paper is organized as follows. Section 2 presents the
+    theoretical results. Section 3 describes a stochastic gradient Markov chain Monte
+    Carlo (SGMCMC) algorithm for Bayesian DNN simulation. Section 4 presents a network
+    compression example. Section 5 concludes the paper with a brief discussion.
+
+
+    # 2. Theoretical results
+
+
+    Let \(D_n = \{x^{(i)}, y^{(i)}\}_{i=1}^n\) denote a training dataset of \(n\)
+    i.i.d observations, where \(x^{(i)} \in \mathbb{R}^{p_n}\), \(y^{(i)} \in \mathbb{R}\),
+    and \(p_n\) denotes the dimension of the input variable and is assumed to grow
+    with the training sample size \(n\). We assume that the data are generated from
+    a generalized linear model with the pdf/pmf given by
+
+
+    ```
+
+    \(f(y|\mu^*(x)) = \exp\{A(\mu^*(x))y + B(\mu^*(x)) + C(y)\},\)
+
+    ```
+
+
+    where \(\mu^*(x)\) denotes an unknown function of \(x\), and \(A(\cdot)\), \(B(\cdot)\)
+    and \(C(\cdot)\) are appropriately defined functions. For example, for logistic
+    regression, we have \(A(\mu^*) = \mu^*\), \(B(\mu^*) = -\log(1+e^{\mu^*})\) and
+    \(C(y) = 1\); and for normal regression, by introducing an extra dispersion parameter
+    \(\sigma^2\), we have \(A(\mu^*) = \mu^*/\sigma^2\), \(B(\mu^*) = -\mu^{*2}/2\sigma^2\)
+    and \(C(y) = -y^2/2\sigma^2 - \log(2\pi\sigma^2)/2\). For simplicity of analysis,
+    \(\sigma^2\) is assumed to be known. To model the data, we propose to approximate
+    \(\mu^*(x)\) by a DNN with \(H_n - 1\) hidden layers. Let \(L_h\) denote the number
+    of hidden units at layer \(h\), with \(L_{H_n} = 1\) for the output layer and
+    \(L_0 = p_n\) for the input layer. Let \(w^h \in \mathbb{R}^{L_h \times L_{h-1}}\)
+    and \(b^h \in \mathbb{R}^{L_h \times 1}\), \(h \in \{1, 2, \dots, H_n\}\) denote
+    the weights and bias of layer \(h\), respectively. Let \(\psi^h: \mathbb{R}^{L_h
+    \times 1} \to \mathbb{R}^{L_h \times 1}\) denote a mapping which applies a piece-wise
+    differentiable activation function \(\psi\) to each entry of the input. In summary,
+    the DNN forms a nonlinear mapping
+
+
+    ```
+
+    \(\mu(\beta, x) = w^{H_n}\psi^{H_n-1}[\cdots \psi^1[w^1x + b^1]\cdots] + b^{H_n},\)
+    (1)
+
+    ```
+
+
+    where \(\beta = \{w_{ij}^h, b_k^h : 1 \le h \le H_n, 1 \le i, k \le L_h, 1 \le
+    j \le L_{h-1}\}\) denotes the collection of weights and biases of the DNN. A fully
+    connected DNN consists of \(K_n = |\beta| = \sum_{h=1}^{H_n} (L_{h-1} \times L_h
+    + L_h)\) tuning parameters. To facilitate representation for sparse DNNs, we re-parameterize
+    \(\beta\) by introducing an indicator variable for each element of \(\beta\),
+    which indicates the existence of the corresponding connection. Here the bias is
+    treated as a special connection with a constant input of 1. Let \(w^h = \tilde{w}^h
+    \circ y^{w^h}\) and \(b^h = \tilde{b}^h \circ y^{b^h}\), where \(y^{w^h}\) and
+    \(y^{b^h}\) are the matrices or vectors of indicators, and \(\circ\) denotes element-wise
+    product. Correspondingly, we define \(\tilde{\beta} = \{\tilde{w}_{ij}^h, \tilde{b}_k^h\}\)
+    and \(\gamma = \{y_{ij}^{w^h}, y_k^{b^h}\}\) which represent connection weights
+    and network structure, respectively. For notational simplicity, we rewrite \(\tilde{\beta}\)
+    and \(\gamma\) as \(\tilde{\beta} = (\tilde{\beta}_1, \tilde{\beta}_2, \dots,
+    \tilde{\beta}_{K_n}) \in \mathbb{R}^{K_n}\) and \(\gamma = (\gamma_1, \gamma_2,
+    \dots, \gamma_{K_n}) \in \{0, 1\}^{K_n}\). Correspondingly, we have \(\beta =
+    \tilde{\beta} \circ \gamma\).
+
+
+    # 2.1. Regularity conditions on sparse DNNs
+
+
+    With slight abuse of notation, we will rewrite \(\mu(\beta, x)\) in (1) for the
+    sparse DNN as \(\mu(\beta, \gamma, x)\) by including the network structure information.
+    In what follows, we characterize how well \(\mu^*(x)\) can be approximated by
+    \(\mu(\beta, \gamma, x)\) with a sparse DNN from the Bayesian perspective. For
+    this purpose, we assume the following regularity conditions:
+
+
+    +   A.1 The input \(x\) is bounded by 1 entry-wisely, i.e. \(x \in \Omega = [-1,
+    1]^{p_n}\), and the density of \(x\) is bounded in its support \(\Omega\) uniformly
+    with respect to \(n\).
+
+
+    +   A.2 The unknown regression mean function \(\mu^*(x)\) can be well approximated
+    by a sparse DNN model such that \(\mu(\beta^*, \gamma^*, x)\) satisfies
+
+
+    +   A.2.1 \(\|\mu^*(x) - \mu(\beta^*, \gamma^*, x)\|_{l^2(\Omega)}^2 \le \varpi_n\),
+    where the approximation error \(\varpi_n \to 0\) as the sample size \(n \to \infty\).
+
+
+    +   A.2.2 \(H_n \log K_n \ge C \log n\) for some constant \(C > 0\), \(1 < r_n^*
+    H_n \log K_n < n^1\) and \(\|\beta^*\|_\infty < E_n\), where \(E_n\) is a sequence
+    satisfying \(\log E_n = O(\log K_n)\), and \(r_n^*\) is the network size, i.e.,
+    \(r_n^* = \sum_{i=1}^{K_n} \gamma_i^*\).
+
+
+    +   A.3 The activation function \(\psi\) is Lipschitz continuous with a Lipschitz
+    constant of 1.
+
+
+    Refer to the supplementary material for more discussions on the conditions, where
+    we show how our Bayesian DNN theory is compatible with the existing sparse DNN
+    approximation theory.'
+  md: "\n## Learning sparse deep neural networks with a spike-and-slab prior\n\nYan\
+    \ Sun, Qifan Song, Faming Liang *\n\nDepartment of Statistics, Purdue University,\
+    \ West Lafayette, IN 47907, USA\n\n## ARTICLE INFO\n\nArticle history:\nReceived\
+    \ 6 February 2021\nReceived in revised form 27 June 2021\nAccepted 11 September\
+    \ 2021\nAvailable online 24 September 2021\n\nKeywords:\nBayesian neural network\n\
+    Sparse deep learning\nPosterior consistency\nHigh-dimensional nonlinear variable\
+    \ selection\nModel calibration\n\n## ABSTRACT\n\nDeep learning has achieved great\
+    \ successes in many machine learning tasks. However, the deep neural networks\
+    \ (DNNs) are often severely over-parameterized, making them computationally expensive,\
+    \ memory intensive, less interpretable and mis-calibrated. We study sparse DNNs\
+    \ under the Bayesian framework: we establish posterior consistency and structure\
+    \ selection consistency for Bayesian DNNs with a spike-and-slab prior, and illustrate\
+    \ their performance using examples on high-dimensional nonlinear variable selection,\
+    \ large network compression and model calibration. Our numerical results indicate\
+    \ that sparsity is essential for improving the prediction accuracy and calibration\
+    \ of the DNN.\n\n© 2021 Elsevier B.V. All rights reserved.\n\n## 1. Introduction\n\
+    \nDuring the past decade, deep neural networks (DNNs) have achieved great successes\
+    \ in solving many complex machine learning tasks such as pattern recognition and\
+    \ natural language processing. A key factor to these successes is their universal\
+    \ approximation power, while heavily relying on a large number of parameters.\
+    \ The DNNs used in these tasks may consist of hundreds of layers and billions\
+    \ of parameters, see e.g. He et al. (2016) on image classification. Many DNNs\
+    \ are severely over-parameterized; for some networks only 5% of parameters are\
+    \ enough to achieve acceptable models (Denil et al., 2013). Moreover, these over-parameterized\
+    \ networks are no longer well calibrated (Guo et al., 2017).\n\nTo reduce the\
+    \ complexity of the DNN and improve its calibration, sparse deep learning has\
+    \ been considered by some researchers, see e.g. Schmidt-Hieber (2020), Bauer and\
+    \ Kohler (2019), Polson and Ročková (2018) and Sun et al. (2021). The approximation\
+    \ power of the sparse DNN has been studied from both frequentist and Bayesian\
+    \ perspectives. From the frequentist perspective, Schmidt-Hieber (2020) and Bauer\
+    \ and Kohler (2019) quantify the approximation error of the sparse DNN in approximating\
+    \ Hölder smooth functions. From the Bayesian perspective, Polson and Ročková (2018)\
+    \ established posterior consistency for the Bayesian DNN with a spike-and-slab\
+    \ prior, and Sun et al. (2021) established posterior consistency for the Bayesian\
+    \ DNN with a mixture Gaussian prior. Quite recently, the theory of sparse deep\
+    \ learning has also been developed under the framework of variational inference,\
+    \ see e.g. Chérief-Abdellatif (2020), Bai et al. (2020b) and Bai et al. (2020a).\
+    \ However, due to the approximation nature of the variational posterior distribution,\
+    \ the resulting statistical inference is often sub-optimal.\n\nThis paper studies\
+    \ theoretical properties of the Bayesian sparse DNN with a spike-and-slab prior.\
+    \ It is closely related to Polson and Ročková (2018), which both employ a spike-and-slab\
+    \ prior, but our theory is more general. In particular, our theory is developed\
+    \ under the assumption that the input dimension and the upper bound of the connection\
+    \ weights can increase with the training sample size; and the activation function\
+    \ is Lipschitz continuous, which has covered many popular activation functions\
+    \ such as ReLU, tanh, and sigmoid. In contrast, Polson and Ročková (2018) assumes\
+    \ that the input dimension is of the order \\(O(1)\\), the connections weights\
+    \ are bounded, and the activation function is ReLU. This paper also provides a\
+    \ scalable algorithm for simulating from the posterior distribution of the Bayesian\
+    \ DNN. The numerical results indicate that sparsity is essential for improving\
+    \ the prediction accuracy and model calibration of the DNN.\n\nThe remaining part\
+    \ of this paper is organized as follows. Section 2 presents the theoretical results.\
+    \ Section 3 describes a stochastic gradient Markov chain Monte Carlo (SGMCMC)\
+    \ algorithm for Bayesian DNN simulation. Section 4 presents a network compression\
+    \ example. Section 5 concludes the paper with a brief discussion.\n\n* Corresponding\
+    \ author.\nE-mail address: fliang@purdue.edu (F. Liang).\n\n## 2. Theoretical\
+    \ results\n\nLet \\(D_n = \\{x^{(i)}, y^{(i)}\\}_{i=1}^n\\) denote a training\
+    \ dataset of \\(n\\) i.i.d observations, where \\(x^{(i)} \\in \\mathbb{R}^{p_n}\\\
+    ), \\(y^{(i)} \\in \\mathbb{R}\\), and \\(p_n\\) denotes the dimension of the\
+    \ input variable and is assumed to grow with the training sample size \\(n\\).\
+    \ We assume that the data are generated from a generalized linear model with the\
+    \ pdf/pmf given by\n\n```\n\\(f(y|\\mu^*(x)) = \\exp\\{A(\\mu^*(x))y + B(\\mu^*(x))\
+    \ + C(y)\\},\\)\n```\n\nwhere \\(\\mu^*(x)\\) denotes an unknown function of \\\
+    (x\\), and \\(A(\\cdot)\\), \\(B(\\cdot)\\) and \\(C(\\cdot)\\) are appropriately\
+    \ defined functions. For example, for logistic regression, we have \\(A(\\mu^*)\
+    \ = \\mu^*\\), \\(B(\\mu^*) = -\\log(1+e^{\\mu^*})\\) and \\(C(y) = 1\\); and\
+    \ for normal regression, by introducing an extra dispersion parameter \\(\\sigma^2\\\
+    ), we have \\(A(\\mu^*) = \\mu^*/\\sigma^2\\), \\(B(\\mu^*) = -\\mu^{*2}/2\\sigma^2\\\
+    ) and \\(C(y) = -y^2/2\\sigma^2 - \\log(2\\pi\\sigma^2)/2\\). For simplicity of\
+    \ analysis, \\(\\sigma^2\\) is assumed to be known. To model the data, we propose\
+    \ to approximate \\(\\mu^*(x)\\) by a DNN with \\(H_n - 1\\) hidden layers. Let\
+    \ \\(L_h\\) denote the number of hidden units at layer \\(h\\), with \\(L_{H_n}\
+    \ = 1\\) for the output layer and \\(L_0 = p_n\\) for the input layer. Let \\\
+    (w^h \\in \\mathbb{R}^{L_h \\times L_{h-1}}\\) and \\(b^h \\in \\mathbb{R}^{L_h\
+    \ \\times 1}\\), \\(h \\in \\{1, 2, \\dots, H_n\\}\\) denote the weights and bias\
+    \ of layer \\(h\\), respectively. Let \\(\\psi^h: \\mathbb{R}^{L_h \\times 1}\
+    \ \\to \\mathbb{R}^{L_h \\times 1}\\) denote a mapping which applies a piece-wise\
+    \ differentiable activation function \\(\\psi\\) to each entry of the input. In\
+    \ summary, the DNN forms a nonlinear mapping\n\n```\n\\(\\mu(\\beta, x) = w^{H_n}\\\
+    psi^{H_n-1}[\\cdots \\psi^1[w^1x + b^1]\\cdots] + b^{H_n},\\) (1)\n```\n\nwhere\
+    \ \\(\\beta = \\{w_{ij}^h, b_k^h : 1 \\le h \\le H_n, 1 \\le i, k \\le L_h, 1\
+    \ \\le j \\le L_{h-1}\\}\\) denotes the collection of weights and biases of the\
+    \ DNN. A fully connected DNN consists of \\(K_n = |\\beta| = \\sum_{h=1}^{H_n}\
+    \ (L_{h-1} \\times L_h + L_h)\\) tuning parameters. To facilitate representation\
+    \ for sparse DNNs, we re-parameterize \\(\\beta\\) by introducing an indicator\
+    \ variable for each element of \\(\\beta\\), which indicates the existence of\
+    \ the corresponding connection. Here the bias is treated as a special connection\
+    \ with a constant input of 1. Let \\(w^h = \\tilde{w}^h \\circ y^{w^h}\\) and\
+    \ \\(b^h = \\tilde{b}^h \\circ y^{b^h}\\), where \\(y^{w^h}\\) and \\(y^{b^h}\\\
+    ) are the matrices or vectors of indicators, and \\(\\circ\\) denotes element-wise\
+    \ product. Correspondingly, we define \\(\\tilde{\\beta} = \\{\\tilde{w}_{ij}^h,\
+    \ \\tilde{b}_k^h\\}\\) and \\(\\gamma = \\{y_{ij}^{w^h}, y_k^{b^h}\\}\\) which\
+    \ represent connection weights and network structure, respectively. For notational\
+    \ simplicity, we rewrite \\(\\tilde{\\beta}\\) and \\(\\gamma\\) as \\(\\tilde{\\\
+    beta} = (\\tilde{\\beta}_1, \\tilde{\\beta}_2, \\dots, \\tilde{\\beta}_{K_n})\
+    \ \\in \\mathbb{R}^{K_n}\\) and \\(\\gamma = (\\gamma_1, \\gamma_2, \\dots, \\\
+    gamma_{K_n}) \\in \\{0, 1\\}^{K_n}\\). Correspondingly, we have \\(\\beta = \\\
+    tilde{\\beta} \\circ \\gamma\\).\n\n### 2.1. Regularity conditions on sparse DNNs\n\
+    \nWith slight abuse of notation, we will rewrite \\(\\mu(\\beta, x)\\) in (1)\
+    \ for the sparse DNN as \\(\\mu(\\beta, \\gamma, x)\\) by including the network\
+    \ structure information. In what follows, we characterize how well \\(\\mu^*(x)\\\
+    ) can be approximated by \\(\\mu(\\beta, \\gamma, x)\\) with a sparse DNN from\
+    \ the Bayesian perspective. For this purpose, we assume the following regularity\
+    \ conditions:\n\n- A.1 The input \\(x\\) is bounded by 1 entry-wisely, i.e. \\\
+    (x \\in \\Omega = [-1, 1]^{p_n}\\), and the density of \\(x\\) is bounded in its\
+    \ support \\(\\Omega\\) uniformly with respect to \\(n\\).\n\n- A.2 The unknown\
+    \ regression mean function \\(\\mu^*(x)\\) can be well approximated by a sparse\
+    \ DNN model such that \\(\\mu(\\beta^*, \\gamma^*, x)\\) satisfies\n\n  - A.2.1\
+    \ \\(\\|\\mu^*(x) - \\mu(\\beta^*, \\gamma^*, x)\\|_{l^2(\\Omega)}^2 \\le \\varpi_n\\\
+    ), where the approximation error \\(\\varpi_n \\to 0\\) as the sample size \\\
+    (n \\to \\infty\\).\n\n  - A.2.2 \\(H_n \\log K_n \\ge C \\log n\\) for some constant\
+    \ \\(C > 0\\), \\(1 < r_n^* H_n \\log K_n < n^1\\) and \\(\\|\\beta^*\\|_\\infty\
+    \ < E_n\\), where \\(E_n\\) is a sequence satisfying \\(\\log E_n = O(\\log K_n)\\\
+    ), and \\(r_n^*\\) is the network size, i.e., \\(r_n^* = \\sum_{i=1}^{K_n} \\\
+    gamma_i^*\\).\n\n- A.3 The activation function \\(\\psi\\) is Lipschitz continuous\
+    \ with a Lipschitz constant of 1.\n\nRefer to the supplementary material for more\
+    \ discussions on the conditions, where we show how our Bayesian DNN theory is\
+    \ compatible with the existing sparse DNN approximation theory.\n"
+  mdcn: "\n\n## 带尖峰-底座先验的稀疏深度神经网络学习\n\n孙岩, 宋奇帆, 梁法明 *\n\n统计学院, 普渡大学, 西拉法叶, IN 47907,\
+    \ 美国\n\n## 文章信息\n\n文章历史记录：\n2021年2月6日收到\n2021年6月27日收到修改稿\n2021年9月11日接受\n2021年9月24日在线发布\n\
+    \n关键词：\n贝叶斯神经网络\n稀疏深度学习\n后验一致性\n高维非线性变量选择\n模型校准\n\n## 摘要\n\n深度学习在许多机器学习任务中取得了巨大成功。然而，深度神经网络（DNNs）往往严重过参数化，使得它们计算成本高昂、内存密集、可解释性差且校准失准。我们在贝叶斯框架下研究稀疏DNN：我们建立了带尖峰-底座先验的贝叶斯DNN的后验一致性和结构选择一致性，并通过高维非线性变量选择、大型网络压缩和模型校准的示例说明其性能。我们的数值结果表明，稀疏性对于提高DNN的预测精度和校准至关重要。\n\
+    \n© 2021 Elsevier B.V. 保留所有权利。\n\n## 1. 引言\n\n在过去十年中，深度神经网络（DNNs）在解决许多复杂机器学习任务（如模式识别和自然语言处理）方面取得了巨大成功。这些成功的关键因素是其通用近似能力，同时高度依赖大量参数。这些任务中使用的DNN可能包含数百层和数十亿个参数，例如\
+    \ He et al. (2016) 关于图像分类。许多DNN严重过参数化；对于某些网络，仅 5% 的参数足以实现可接受的模型（Denil et al.,\
+    \ 2013）。此外，这些过参数化网络不再具有良好的校准性（Guo et al., 2017）。\n\n为了降低DNN的复杂性并提高其校准性，一些研究者考虑了稀疏深度学习，例如\
+    \ Schmidt-Hieber (2020)、Bauer and Kohler (2019)、Polson and Ročková (2018) 和 Sun\
+    \ et al. (2021)。稀疏DNN的近似能力已从频率学派和贝叶斯两种视角进行了研究。从频率学派角度，Schmidt-Hieber (2020) 和\
+    \ Bauer and Kohler (2019) 量化了稀疏DNN在逼近 Hölder 光滑函数时的近似误差。从贝叶斯角度，Polson and Ročková\
+    \ (2018) 建立了带尖峰-底座先验的贝叶斯DNN的后验一致性，Sun et al. (2021) 建立了带混合高斯先验的贝叶斯DNN的后验一致性。最近，稀疏深度学习的理论也在变分推断框架下得到发展，例如\
+    \ Chérief-Abdellatif (2020)、Bai et al. (2020b) 和 Bai et al. (2020a)。然而，由于变分后验分布的近似性质，得到的统计推断往往是次优的。\n\
+    \n本文研究了带尖峰-底座先验的贝叶斯稀疏DNN的理论性质。它与 Polson and Ročková (2018) 密切相关，两者都采用尖峰-底座先验，但我们的理论更一般。具体来说，我们的理论是在输入维度和连接权重上界可随训练样本量增加、且激活函数为\
+    \ Lipschitz 连续的假设下发展而来的，这涵盖了 ReLU、tanh 和 sigmoid 等许多流行激活函数。相比之下，Polson and Ročková\
+    \ (2018) 假设输入维度为 O(1) 阶、连接权重有界且激活函数为 ReLU。本文还提供了一种可扩展算法，用于从贝叶斯DNN的后验分布中进行模拟。数值结果表明，稀疏性对于提高DNN的预测精度和模型校准至关重要。\n\
+    \n本文其余部分组织如下。第 2 节介绍理论结果。第 3 节描述了一种用于贝叶斯DNN模拟的随机梯度马尔可夫链蒙特卡罗（SGMCMC）算法。第 4 节介绍网络压缩示例。第\
+    \ 5 节以简短讨论结束全文。\n\n* 通讯作者。\nE-mail address: fliang@purdue.edu (F. Liang)。\n\n\
+    ## 2. 理论结果\n\n令 \\(D_n = \\{x^{(i)}, y^{(i)}\\}_{i=1}^n\\) 表示含 \\(n\\) 个独立同分布观测的训练数据集，其中\
+    \ \\(x^{(i)} \\in \\mathbb{R}^{p_n}\\)，\\(y^{(i)} \\in \\mathbb{R}\\)，且 \\(p_n\\\
+    ) 表示输入变量的维度，并假设其随训练样本量 \\(n\\) 增长。我们假设数据来自广义线性模型，其概率密度/概率质量函数（pdf/pmf）由\n\n```\n\
+    \\(f(y|\\mu^*(x)) = \\exp\\{A(\\mu^*(x))y + B(\\mu^*(x)) + C(y)\\},\\)\n```\n\n\
+    给出，其中 \\(\\mu^*(x)\\) 表示 \\(x\\) 的未知函数，\\(A(\\cdot)\\)、\\(B(\\cdot)\\) 和 \\(C(\\\
+    cdot)\\) 是适当定义的函数。例如，对于逻辑回归，有 \\(A(\\mu^*) = \\mu^*\\)，\\(B(\\mu^*) = -\\log(1+e^{\\\
+    mu^*})\\) 且 \\(C(y) = 1\\)；对于正态回归，通过引入额外离散参数 \\(\\sigma^2\\)，有 \\(A(\\mu^*) =\
+    \ \\mu^*/\\sigma^2\\)，\\(B(\\mu^*) = -\\mu^{*2}/2\\sigma^2\\) 且 \\(C(y) = -y^2/2\\\
+    sigma^2 - \\log(2\\pi\\sigma^2)/2\\)。为简化分析，假设 \\(\\sigma^2\\) 已知。为建模数据，我们建议用具有\
+    \ \\(H_n - 1\\) 个隐藏层的 DNN 近似 \\(\\mu^*(x)\\)。令 \\(L_h\\) 表示第 \\(h\\) 层的隐藏单元数，其中输出层\
+    \ \\(L_{H_n} = 1\\)，输入层 \\(L_0 = p_n\\)。令 \\(w^h \\in \\mathbb{R}^{L_h \\times\
+    \ L_{h-1}}\\) 和 \\(b^h \\in \\mathbb{R}^{L_h \\times 1}\\)，\\(h \\in \\{1, 2,\
+    \ \\dots, H_n\\}\\) 分别表示第 \\(h\\) 层的权重和偏置。令 \\(\\psi^h: \\mathbb{R}^{L_h \\times\
+    \ 1} \\to \\mathbb{R}^{L_h \\times 1}\\) 表示一种映射，它将分段可微激活函数 \\(\\psi\\) 应用于输入的每个元素。总之，DNN\
+    \ 构成一个非线性映射\n\n```\n\\(\\mu(\\beta, x) = w^{H_n}\\psi^{H_n-1}[\\cdots \\psi^1[w^1x\
+    \ + b^1]\\cdots] + b^{H_n},\\) (1)\n```\n\n其中 \\(\\beta = \\{w_{ij}^h, b_k^h :\
+    \ 1 \\le h \\le H_n, 1 \\le i, k \\le L_h, 1 \\le j \\le L_{h-1}\\}\\) 表示 DNN\
+    \ 的权重和偏置集合。完全连接的 DNN 包含 \\(K_n = |\\beta| = \\sum_{h=1}^{H_n} (L_{h-1} \\times\
+    \ L_h + L_h)\\) 个可调参数。为便于稀疏 DNN 的表示，我们通过为 \\(\\beta\\) 的每个元素引入指示变量来重新参数化 \\(\\\
+    beta\\)，该变量指示相应连接是否存在。这里偏置被视为一种具有常数输入 1 的特殊连接。令 \\(w^h = \\tilde{w}^h \\circ y^{w^h}\\\
+    ) 和 \\(b^h = \\tilde{b}^h \\circ y^{b^h}\\)，其中 \\(y^{w^h}\\) 和 \\(y^{b^h}\\) 为指示变量的矩阵或向量，\\\
+    (\\circ\\) 表示元素逐元乘积。相应地，我们定义 \\(\\tilde{\\beta} = \\{\\tilde{w}_{ij}^h, \\tilde{b}_k^h\\\
+    }\\) 和 \\(\\gamma = \\{y_{ij}^{w^h}, y_k^{b^h}\\}\\)，分别表示连接权重和网络结构。为简化记号，我们重写\
+    \ \\(\\tilde{\\beta}\\) 和 \\(\\gamma\\) 为 \\(\\tilde{\\beta} = (\\tilde{\\beta}_1,\
+    \ \\tilde{\\beta}_2, \\dots, \\tilde{\\beta}_{K_n}) \\in \\mathbb{R}^{K_n}\\)\
+    \ 和 \\(\\gamma = (\\gamma_1, \\gamma_2, \\dots, \\gamma_{K_n}) \\in \\{0, 1\\\
+    }^{K_n}\\)。相应地，有 \\(\\beta = \\tilde{\\beta} \\circ \\gamma\\)。\n\n### 2.1. 稀疏\
+    \ DNN 的正则性条件\n\n稍作记号滥用，我们将 (1) 中的 \\(\\mu(\\beta, x)\\) 为稀疏 DNN 重写为 \\(\\mu(\\\
+    beta, \\gamma, x)\\)，以包含网络结构信息。在下文中，我们将从贝叶斯视角刻画 \\(\\mu^*(x)\\) 能被稀疏 DNN 的 \\\
+    (\\mu(\\beta, \\gamma, x)\\) 多好逼近。为此，我们假设以下正则性条件：\n\n- A.1 输入 \\(x\\) 分量wise 被\
+    \ 1 界限，即 \\(x \\in \\Omega = [-1, 1]^{p_n}\\)，且 \\(x\\) 在其支撑集 \\(\\Omega\\) 上的密度关于\
+    \ \\(n\\) 一致界限。\n\n- A.2 未知回归均值函数 \\(\\mu^*(x)\\) 可由稀疏 DNN 模型较好逼近，使得 \\(\\mu(\\\
+    beta^*, \\gamma^*, x)\\) 满足\n\n  - A.2.1 \\(\\|\\mu^*(x) - \\mu(\\beta^*, \\gamma^*,\
+    \ x)\\|_{l^2(\\Omega)}^2 \\le \\varpi_n\\)，其中近似误差 \\(\\varpi_n \\to 0\\) 当样本量\
+    \ \\(n \\to \\infty\\)。\n\n  - A.2.2 \\(H_n \\log K_n \\ge C \\log n\\) 对某个常数\
+    \ \\(C > 0\\)，\\(1 < r_n^* H_n \\log K_n < n^1\\) 且 \\(\\|\\beta^*\\|_\\infty\
+    \ < E_n\\)，其中 \\(E_n\\) 是满足 \\(\\log E_n = O(\\log K_n)\\) 的一个序列，\\(r_n^*\\) 是网络大小，即\
+    \ \\(r_n^* = \\sum_{i=1}^{K_n} \\gamma_i^*\\)。\n\n- A.3 激活函数 \\(\\psi\\) 是 Lipschitz\
+    \ 连续的，其 Lipschitz 常数为 1。\n\n关于条件的更多讨论请参阅补充材料，其中我们展示了我们的贝叶斯 DNN 理论如何与现有稀疏 DNN 近似理论相容。\n\
+    \n"
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    # 2.2. The spike-and-slab prior
+
+
+    To conduct Bayesian inference for the DNN, we consider a hierarchical prior given
+    by
+
+
+    $\tilde{\beta}_i | \gamma_i = 1 \sim N(0, \sigma_{1,n}^2), \ i=1,2,\dots,K_n;
+    \ \pi(\gamma) \propto \lambda_n^{|\gamma|} (1-\lambda_n)^{K_n-|\gamma|} \mathbf{1}\{||\gamma||
+    \le \bar{r}_n, \gamma \in \mathcal{G}\}, \quad (2)$
+
+
+    where $\sigma_{1,n}^2$ is the variance of the normal distribution, $\bar{r}_n$
+    is the maximum size of candidate sparse DNNs, $\lambda_n$ can be read as an approximate
+    prior probability for each connection to be included in the DNN, and $\mathcal{G}$
+    is the set of all valid DNNs. With this hierarchical prior, $\beta_i$ follows
+    a discrete spike-and-slab prior, i.e., $\beta_i = \tilde{\beta}_i \circ \gamma_i
+    \sim \lambda_n N(0, \sigma_{1,n}^2) + (1-\lambda_n)\delta_0$ for $i=1,2,\dots,K_n$,
+    where $\delta_0$ denotes the Dirac delta function.
+
+
+    # 2.3. Posterior consistency
+
+
+    Posterior consistency measures the speed of posterior concentration around the
+    true density function, which plays a major role in validating Bayesian methods.
+    For DNNs, since the total number of parameters $K_n$ is often much larger than
+    the sample size $n$, posterior consistency provides a general guideline for prior
+    setting. Otherwise, the prior information may dominate data information, rendering
+    a biased inference for the underlying true model. For learning sparse DNNs, we
+    generally set $\lambda_n \to 0$ as $K_n \to \infty$, which provides an automatic
+    control for the multiplicity involved in structural selection (Scott et al., 2010).
+    Denote by $P^*$ and $E^*$ the respective probability measure and expectation with
+    respective to the data $D_n$, denote by $d(p_1, p_2)$ the Hellinger distance between
+    two densities $p_1(x,y)$ and $p_2(x,y)$, denote by $p_\beta$ the density function
+    induced by a DNN associated with the parameters $\beta$, and denote by $p_{\mu^*}$
+    the true density function induced by the unknown function $\mu^*(x)$. Let $\pi(A|D_n)$
+    denote the posterior probability of an event $A$. The following theorem establishes
+    posterior consistency for sparse DNNs under the spike-and-slab prior (2).
+
+
+    **Theorem 2.1.** Consider a DNN with $H_n$ layers and at most $K_n$ possible connections,
+    where both $H_n$ and $K_n$ are increasing with $n$. If the assumptions A.1-A.3
+    hold, and $\hat{\beta}$ and $y$ are subject to the prior (2) with the hyperparameters
+    subject to the constraints $\log \sigma_{1,n}^2 + E_n^2/\sigma_{1,n}^2 = O(H_n
+    \log K_n)$ and $1 \le r_n \le \bar{r}_n < K_n$, where $r_n = \lambda_n K_n$. Then
+    there exists a sequence $\epsilon_n \asymp \max\{\varpi_n, \sqrt{r_n H_n \log
+    K_n/n}\}$ such that for sufficiently large n,2 the posterior distribution satisfies
+
+
+    $$ \begin{aligned} P^* \left\{ \pi(d(p_\beta, p_{\mu^*}) > 4\epsilon_n | D_n)
+    \ge 2e^{-n\epsilon_n^2/4} \right\} \\ E^*\pi(d(p_\beta, p_{\mu^*}) > 4\epsilon_n
+    | D_n) \le 4e^{-n\epsilon_n^2/2}, \end{aligned} \quad (3) $$
+
+
+    Theorem 2.1 establishes a Bayesian contraction rate for sparse DNNs under the
+    Hellinger metric. Therefore, to obtain consistent Bayesian inference, it suffices
+    to require $\varpi_n \to 0$ and $\bar{r}_n H_n \log(K_n) < n$. If $\mu^*$ can
+    be optimally represented by a sparse DNN model (refer to Remark S2 in the supplementary
+    material), then $\varpi_n$ polynomially decays to 0 as $r_n$ increases to infinity.
+    On the other hand, $\bar{r}_n H_n \log(K_n) < n$ implies $\bar{r}_n = o(n/\log(n))$
+    by noticing that $K_n \ge \bar{r}_n$. Refer to the supplementary material for
+    more discussions on this theorem. In conclusion, we only need $\bar{r}_n$, the
+    upper bound of total connectivity, to increase slowly; or said differently, a
+    sparse DNN of connectivity $O(n/\log(n))$ could have been large enough for providing
+    a consistent approximation to the true posterior distribution.
+
+
+    # 2.4. Consistency of DNN structure selection
+
+
+    It is known that the DNN model is nonidentifiable in general due to the symmetry
+    of the network structure. However, by introducing appropriate constraints (Pourzanjani
+    et al., 2017; Liang et al., 2018), we can define a set of neural networks such
+    that each network in the set is unique up to simple node permutations, sign changes,
+    etc. Let $\Theta$ denote such a set of DNNs, where each element in $\Theta$ can
+    be viewed as an equivalent class of networks. Let $\upsilon(\cdot)$ be the transformation
+    such that $\upsilon(\beta) \in \Theta$. Since $p_\beta = p_{\upsilon(\beta)}$,
+    the posterior consistency (3) holds for $\upsilon(\beta)$ as well. In what follows,
+    we rewrite $\upsilon(\beta)$ by $\upsilon(y, \beta)$ by including the network
+    structure information. To serve the purpose of structure selection for the DNN,
+    we consider the marginal inclusion posterior probability (MIPP) approach proposed
+    in Liang et al. (2013) for high-dimensional variable selection. For each entry
+    of $y$, we define its MIPP by $q_i = \int \sum_y e_{i|\upsilon(y,\beta)} \pi(y|y,
+    D_n) \pi(\beta|D_n) d\beta$, where $e_{i|\upsilon(y,\beta)}$ indicates existence
+    of connection $i$ in the network $\upsilon(y, \beta)$. Similarly, we define $e_{i|\upsilon(y^*,
+    \beta^*)}$ as the indicator for connection $i$ in the true DNN $\upsilon(y^*,
+    \beta^*)$. The MIPP approach is to choose the connections for which the marginal
+    inclusion posterior probability is greater than a threshold value $\hat{q}$; that
+    is, setting $\hat{Y}_q = \{j: q_j > \hat{q}, j=1,2,\dots,K_n\}$ as a Bayes estimator
+    of the true model. To establish the consistency of $\hat{Y}_q$, the following
+    identifiability condition for the true network $Y_*$ is needed.
+
+
+    Let $A(\epsilon_n) = \{\beta : d(p_\beta, p_{\mu^*}) \ge \epsilon_n\}$. Define
+    $\rho(\epsilon_n) = \max_{1 \le i \le K_n} \int_{A(\epsilon_n)^c} \sum_y e_{i|\upsilon(y,\beta)}
+    - e_{i|\upsilon(y^*, \beta^*)} \pi(y|\beta, D_n) \pi(\beta|D_n) d\beta$, which
+    measures the distance between the true DNN model and the models drawn from the
+    posterior in the $\epsilon_n$-neighborhood $A(\epsilon_n)^c$. The identifiability
+    condition can be stated as follows:
+
+
+    +   B.1 $\rho(\epsilon_n) \to 0$, as $n \to \infty$ and $\epsilon_n \to 0$.'
+  - "[PAGE 3]\n\nThat is, when $n$ is sufficiently large, if a DNN produces approximately\
+    \ the same probability distribution as the true data, then its structure, after\
+    \ mapping into the network space $\\Theta$, must coincide with the true DNN structure.\
+    \ Note that this identifiability is different from the one mentioned at the beginning\
+    \ of this section, which is only with respect to structure and parameter rearrangements.\
+    \ Theorem 2.2 concerns consistency of $\\hat{\\gamma}$ and its sure screening\
+    \ property.\n\n**Theorem 2.2.** If the conditions of Theorem 2.1 and condition\
+    \ B.1 hold, then (i) $\\max_{1 \\le i \\le K_n} \\{ |q_i - e_{|v|(v^*, \\beta^*)}\
+    \ | \\} \\to 0$ in probability; and (ii) for any pre-specified $\\hat{q} \\in\
+    \ (0, 1)$, $\\lim_{n \\to \\infty} P(Y_* \\subset \\hat{G}_q) = 1$.\n\nIn practice,\
+    \ the value of $\\hat{q}$ can be determined by a multiple hypothesis test, see\
+    \ e.g. Liang and Zhang (2008). For simplicity, we often set $\\hat{q} = 0.5$.\
+    \ Recall that $\\mathbf{y}^w \\in \\mathbb{R}^{L_h \\times L_{h-1}}$ denotes the\
+    \ connection indicator matrix of layer h.\n\n$$\n\\mathbf{y}^x = \\mathbf{y}^{w^{h_n}}\
+    \ \\mathbf{y}^{w^{h_n-1}} \\cdots \\mathbf{y}^{w^1} \\in \\mathbb{R}^{1 \\times\
+    \ p_n},\n$$\n(4)\n\nand let $\\mathbf{y}_i^x$ denote the $i$th element of $\\\
+    mathbf{y}^x$. If $\\mathbf{y}_i^x > 0$ then the input variable $\\mathbf{x}_i$\
+    \ is effective in the network $\\mathbf{y}$, and $\\mathbf{y}_i^x = 0$ otherwise.\
+    \ As in treating network connections, we can define a MIPP for each input variable\
+    \ and determine a threshold value for the MIPP based on a multiple hypothesis\
+    \ test. As implied by (4), the consistency of structure selection implies consistency\
+    \ of variable selection with respect to the true network $\\mathbf{y}^*$ as defined\
+    \ in Assumption A.2.1.\n\n# 3. Computational algorithm\n\nAlthough the spike-and-slab\
+    \ prior leads to nice theoretical properties for Bayesian sparse DNNs, the resulting\
+    \ posterior is a mixture of distributions with varying dimensions. Conventional\
+    \ Bayesian sampling algorithms adopt reversible jump moves (Green, 1995) to explore\
+    \ different network architectures, see e.g. Liang et al. (2018), and lack scalability\
+    \ necessarily required for big data scenarios. Song et al. (2020) proposed an\
+    \ extended stochastic gradient Langevin dynamics (SGLD) algorithm for Bayesian\
+    \ variable selection under the big data scenario, which allows the mini-batch\
+    \ data to be used in updating the model and regression coefficients at each iteration\
+    \ and is thus scalable to big data problems. In this paper, we extend it further\
+    \ by combining it with stochastic gradient Hamiltonian Monte Carlo (SGHMC) (Chen\
+    \ et al., 2014), see Algorithm 1 for the procedure and the supplementary material\
+    \ for more explanations.\n\n```\n**Algorithm 1** Extended Stochastic Gradient\
+    \ Hamiltonian Monte Carlo\n\nInput: $T; m; \\tau; t_0; t_1$\nInitialization: Randomly\
+    \ initialize $\\tilde{\\beta}^{(1)}$. Set $\\gamma_i^{(0,t_0)}=1$ for all $i \\\
+    in \\{1, \\dots, K_n\\}$;\nfor $t = 1, 2, \\dots, T$ do\n  (i) Draw a subsample\
+    \ of size $m$ from the full dataset $D_n$, and duplicate it to form a dataset\
+    \ $D_{m,n}^{(t)}$.\n  (ii) Simulate models $\\gamma^{(t,1)}, \\gamma^{(t,2)},\
+    \ \\dots, \\gamma^{(t,t_0)}$ from the conditional posterior $\\pi(\\gamma|\\tilde{\\\
+    beta}^{(t)}, D_{m,n}^{(t)})$ by Metropolis-Hastings(MH) algorithm with a magnitude-based\
+    \ proposal.\n  (iii) Update $\\tilde{\\beta}^{(t)}$ via a SGHMC move,\n\n  $$\n\
+    \  v^{(t+1)} = (1-\\alpha)v^{(t)} + \\frac{\\epsilon_{t+1}}{2t_0} \\sum_{k=1}^{t_0}\
+    \ \\nabla_{\\tilde{\\beta}} \\log \\pi(\\tilde{\\beta}^{(t)}|\\gamma^{(t,k)},\
+    \ D_{m,n}^{(t)}) + \\sqrt{\\alpha \\epsilon_{t+1} \\tau} \\eta_{t+1},\n  $$\n\n\
+    \  $$\n  \\tilde{\\beta}^{(t+1)} = \\tilde{\\beta}^{(t)} + v^{(t+1)},\n  $$\n\n\
+    \  where $\\eta_{t+1} \\sim N(0, I_d)$, $\\epsilon_{t+1}$ is the learning rate,\
+    \ $\\tau$ is the temperature, and $1-\\alpha$ gives the momentum parameter.\n\
+    end for\n```\n\nThe main parameters of the extended SGHMC algorithm are the prior\
+    \ hyperparameters $\\lambda_n$ and $\\sigma_{1,n}$ defined in (2). Our theory\
+    \ allows $\\sigma_{1,n}$ to grow with $n$ from the perspective of data fitting,\
+    \ but in our experience, the magnitude of weights tend to adversely affect the\
+    \ generalization ability of the network. For this reason, we usually set $\\sigma_{1,n}$\
+    \ to a small number such as 0.01 or 0.02, and then tune the value of $\\lambda_n$\
+    \ for network sparsity such that the sparse constraint given in Assumption A.2.2\
+    \ is satisfied.\n\n# 4. Experiments\n\nThis section presents an example on network\
+    \ compression for convolutional neural networks (CNNs). Refer to the supplementary\
+    \ material for examples on high-dimensional nonlinear variable selection and DNN\
+    \ model calibration. In terms of network compression, extended SGHMC can be viewed\
+    \ as an unstructured dynamic pruning algorithm, where the spike-and-slab prior\
+    \ is imposed on each parameter and the sparsity mask $\\gamma$ can be adjusted\
+    \ during training (Lin et al., 2020). We test the proposed method on the CIFAR-10\
+    \ data (Krizhevsky et al., 2009), pruning ResNet20 and ResNet32"
+  md: "\n## 2.2. The spike-and-slab prior\n\nTo conduct Bayesian inference for the\
+    \ DNN, we consider a hierarchical prior given by\n\n$\\tilde{\\beta}_i | \\gamma_i\
+    \ = 1 \\sim N(0, \\sigma_{1,n}^2), \\ i=1,2,\\dots,K_n; \\ \\pi(\\gamma) \\propto\
+    \ \\lambda_n^{|\\gamma|} (1-\\lambda_n)^{K_n-|\\gamma|} \\mathbf{1}\\{||\\gamma||\
+    \ \\le \\bar{r}_n, \\gamma \\in \\mathcal{G}\\}, \\quad (2)$\n\nwhere $\\sigma_{1,n}^2$\
+    \ is the variance of the normal distribution, $\\bar{r}_n$ is the maximum size\
+    \ of candidate sparse DNNs, $\\lambda_n$ can be read as an approximate prior probability\
+    \ for each connection to be included in the DNN, and $\\mathcal{G}$ is the set\
+    \ of all valid DNNs. With this hierarchical prior, $\\beta_i$ follows a discrete\
+    \ spike-and-slab prior, i.e., $\\beta_i = \\tilde{\\beta}_i \\circ \\gamma_i \\\
+    sim \\lambda_n N(0, \\sigma_{1,n}^2) + (1-\\lambda_n)\\delta_0$ for $i=1,2,\\\
+    dots,K_n$, where $\\delta_0$ denotes the Dirac delta function.\n\n## 2.3. Posterior\
+    \ consistency\n\nPosterior consistency measures the speed of posterior concentration\
+    \ around the true density function, which plays a major role in validating Bayesian\
+    \ methods. For DNNs, since the total number of parameters $K_n$ is often much\
+    \ larger than the sample size $n$, posterior consistency provides a general guideline\
+    \ for prior setting. Otherwise, the prior information may dominate data information,\
+    \ rendering a biased inference for the underlying true model. For learning sparse\
+    \ DNNs, we generally set $\\lambda_n \\to 0$ as $K_n \\to \\infty$, which provides\
+    \ an automatic control for the multiplicity involved in structural selection (Scott\
+    \ et al., 2010). Denote by $P^*$ and $E^*$ the respective probability measure\
+    \ and expectation with respective to the data $D_n$, denote by $d(p_1, p_2)$ the\
+    \ Hellinger distance between two densities $p_1(x,y)$ and $p_2(x,y)$, denote by\
+    \ $p_\\beta$ the density function induced by a DNN associated with the parameters\
+    \ $\\beta$, and denote by $p_{\\mu^*}$ the true density function induced by the\
+    \ unknown function $\\mu^*(x)$. Let $\\pi(A|D_n)$ denote the posterior probability\
+    \ of an event $A$. The following theorem establishes posterior consistency for\
+    \ sparse DNNs under the spike-and-slab prior (2).\n\n### Theorem 2.1.\n\nConsider\
+    \ a DNN with $H_n$ layers and at most $K_n$ possible connections, where both $H_n$\
+    \ and $K_n$ are increasing with $n$. If the assumptions A.1-A.3 hold, and $\\\
+    hat{\\beta}$ and $y$ are subject to the prior (2) with the hyperparameters subject\
+    \ to the constraints $\\log \\sigma_{1,n}^2 + E_n^2/\\sigma_{1,n}^2 = O(H_n \\\
+    log K_n)$ and $1 \\le r_n \\le \\bar{r}_n < K_n$, where $r_n = \\lambda_n K_n$.\
+    \ Then there exists a sequence $\\epsilon_n \\asymp \\max\\{\\varpi_n, \\sqrt{r_n\
+    \ H_n \\log K_n/n}\\}$ such that for sufficiently large n, the posterior distribution\
+    \ satisfies\n\n$$ \\begin{aligned} P^* \\left\\{ \\pi(d(p_\\beta, p_{\\mu^*})\
+    \ > 4\\epsilon_n | D_n) \\ge 2e^{-n\\epsilon_n^2/4} \\right\\} \\\\ E^*\\pi(d(p_\\\
+    beta, p_{\\mu^*}) > 4\\epsilon_n | D_n) \\le 4e^{-n\\epsilon_n^2/2}, \\end{aligned}\
+    \ \\quad (3) $$\n\nTheorem 2.1 establishes a Bayesian contraction rate for sparse\
+    \ DNNs under the Hellinger metric. Therefore, to obtain consistent Bayesian inference,\
+    \ it suffices to require $\\varpi_n \\to 0$ and $\\bar{r}_n H_n \\log(K_n) < n$.\
+    \ If $\\mu^*$ can be optimally represented by a sparse DNN model (refer to Remark\
+    \ S2 in the supplementary material), then $\\varpi_n$ polynomially decays to 0\
+    \ as $r_n$ increases to infinity. On the other hand, $\\bar{r}_n H_n \\log(K_n)\
+    \ < n$ implies $\\bar{r}_n = o(n/\\log(n))$ by noticing that $K_n \\ge \\bar{r}_n$.\
+    \ Refer to the supplementary material for more discussions on this theorem. In\
+    \ conclusion, we only need $\\bar{r}_n$, the upper bound of total connectivity,\
+    \ to increase slowly; or said differently, a sparse DNN of connectivity $O(n/\\\
+    log(n))$ could have been large enough for providing a consistent approximation\
+    \ to the true posterior distribution.\n\n## 2.4. Consistency of DNN structure\
+    \ selection\n\nIt is known that the DNN model is nonidentifiable in general due\
+    \ to the symmetry of the network structure. However, by introducing appropriate\
+    \ constraints (Pourzanjani et al., 2017; Liang et al., 2018), we can define a\
+    \ set of neural networks such that each network in the set is unique up to simple\
+    \ node permutations, sign changes, etc. Let $\\Theta$ denote such a set of DNNs,\
+    \ where each element in $\\Theta$ can be viewed as an equivalent class of networks.\
+    \ Let $\\upsilon(\\cdot)$ be the transformation such that $\\upsilon(\\beta) \\\
+    in \\Theta$. Since $p_\\beta = p_{\\upsilon(\\beta)}$, the posterior consistency\
+    \ (3) holds for $\\upsilon(\\beta)$ as well. In what follows, we rewrite $\\upsilon(\\\
+    beta)$ by $\\upsilon(y, \\beta)$ by including the network structure information.\
+    \ To serve the purpose of structure selection for the DNN, we consider the marginal\
+    \ inclusion posterior probability (MIPP) approach proposed in Liang et al. (2013)\
+    \ for high-dimensional variable selection. For each entry of $y$, we define its\
+    \ MIPP by $q_i = \\int \\sum_y e_{i|\\upsilon(y,\\beta)} \\pi(y|y, D_n) \\pi(\\\
+    beta|D_n) d\\beta$, where $e_{i|\\upsilon(y,\\beta)}$ indicates existence of connection\
+    \ $i$ in the network $\\upsilon(y, \\beta)$. Similarly, we define $e_{i|\\upsilon(y^*,\
+    \ \\beta^*)}$ as the indicator for connection $i$ in the true DNN $\\upsilon(y^*,\
+    \ \\beta^*)$. The MIPP approach is to choose the connections for which the marginal\
+    \ inclusion posterior probability is greater than a threshold value $\\hat{q}$;\
+    \ that is, setting $\\hat{Y}_q = \\{j: q_j > \\hat{q}, j=1,2,\\dots,K_n\\}$ as\
+    \ a Bayes estimator of the true model. To establish the consistency of $\\hat{Y}_q$,\
+    \ the following identifiability condition for the true network $Y_*$ is needed.\n\
+    \nLet $A(\\epsilon_n) = \\{\\beta : d(p_\\beta, p_{\\mu^*}) \\ge \\epsilon_n\\\
+    }$. Define $\\rho(\\epsilon_n) = \\max_{1 \\le i \\le K_n} \\int_{A(\\epsilon_n)^c}\
+    \ \\sum_y e_{i|\\upsilon(y,\\beta)} - e_{i|\\upsilon(y^*, \\beta^*)} \\pi(y|\\\
+    beta, D_n) \\pi(\\beta|D_n) d\\beta$, which measures the distance between the\
+    \ true DNN model and the models drawn from the posterior in the $\\epsilon_n$-neighborhood\
+    \ $A(\\epsilon_n)^c$. The identifiability condition can be stated as follows:\n\
+    \n- B.1 $\\rho(\\epsilon_n) \\to 0$, as $n \\to \\infty$ and $\\epsilon_n \\to\
+    \ 0$.\n\nThat is, when $n$ is sufficiently large, if a DNN produces approximately\
+    \ the same probability distribution as the true data, then its structure, after\
+    \ mapping into the network space $\\Theta$, must coincide with the true DNN structure.\
+    \ Note that this identifiability is different from the one mentioned at the beginning\
+    \ of this section, which is only with respect to structure and parameter rearrangements.\
+    \ Theorem 2.2 concerns consistency of $\\hat{\\gamma}$ and its sure screening\
+    \ property.\n\n### Theorem 2.2.\n\nIf the conditions of Theorem 2.1 and condition\
+    \ B.1 hold, then (i) $\\max_{1 \\le i \\le K_n} \\{ |q_i - e_{i|\\upsilon(y^*,\
+    \ \\beta^*)}| \\} \\to 0$ in probability; and (ii) for any pre-specified $\\hat{q}\
+    \ \\in (0, 1)$, $\\lim_{n \\to \\infty} P(Y_* \\subset \\hat{Y}_q) = 1$.\n\nIn\
+    \ practice, the value of $\\hat{q}$ can be determined by a multiple hypothesis\
+    \ test, see e.g. Liang and Zhang (2008). For simplicity, we often set $\\hat{q}\
+    \ = 0.5$. Recall that $\\mathbf{y}^w \\in \\mathbb{R}^{L_h \\times L_{h-1}}$ denotes\
+    \ the connection indicator matrix of layer h.\n\n$$\n\\mathbf{y}^x = \\mathbf{y}^{w^{h_n}}\
+    \ \\mathbf{y}^{w^{h_n-1}} \\cdots \\mathbf{y}^{w^1} \\in \\mathbb{R}^{1 \\times\
+    \ p_n},\n$$\n(4)\n\nand let $\\mathbf{y}_i^x$ denote the $i$th element of $\\\
+    mathbf{y}^x$. If $\\mathbf{y}_i^x > 0$ then the input variable $\\mathbf{x}_i$\
+    \ is effective in the network $\\mathbf{y}$, and $\\mathbf{y}_i^x = 0$ otherwise.\
+    \ As in treating network connections, we can define a MIPP for each input variable\
+    \ and determine a threshold value for the MIPP based on a multiple hypothesis\
+    \ test. As implied by (4), the consistency of structure selection implies consistency\
+    \ of variable selection with respect to the true network $\\mathbf{y}^*$ as defined\
+    \ in Assumption A.2.1.\n\n## 3. Computational algorithm\n\nAlthough the spike-and-slab\
+    \ prior leads to nice theoretical properties for Bayesian sparse DNNs, the resulting\
+    \ posterior is a mixture of distributions with varying dimensions. Conventional\
+    \ Bayesian sampling algorithms adopt reversible jump moves (Green, 1995) to explore\
+    \ different network architectures, see e.g. Liang et al. (2018), and lack scalability\
+    \ necessarily required for big data scenarios. Song et al. (2020) proposed an\
+    \ extended stochastic gradient Langevin dynamics (SGLD) algorithm for Bayesian\
+    \ variable selection under the big data scenario, which allows the mini-batch\
+    \ data to be used in updating the model and regression coefficients at each iteration\
+    \ and is thus scalable to big data problems. In this paper, we extend it further\
+    \ by combining it with stochastic gradient Hamiltonian Monte Carlo (SGHMC) (Chen\
+    \ et al., 2014), see Algorithm 1 for the procedure and the supplementary material\
+    \ for more explanations.\n\n```\n**Algorithm 1** Extended Stochastic Gradient\
+    \ Hamiltonian Monte Carlo\n\nInput: $T; m; \\tau; t_0; t_1$\nInitialization: Randomly\
+    \ initialize $\\tilde{\\beta}^{(1)}$. Set $\\gamma_i^{(0,t_0)}=1$ for all $i \\\
+    in \\{1, \\dots, K_n\\}$;\nfor $t = 1, 2, \\dots, T$ do\n  (i) Draw a subsample\
+    \ of size $m$ from the full dataset $D_n$, and duplicate it to form a dataset\
+    \ $D_{m,n}^{(t)}$.\n  (ii) Simulate models $\\gamma^{(t,1)}, \\gamma^{(t,2)},\
+    \ \\dots, \\gamma^{(t,t_0)}$ from the conditional posterior $\\pi(\\gamma|\\tilde{\\\
+    beta}^{(t)}, D_{m,n}^{(t)})$ by Metropolis-Hastings(MH) algorithm with a magnitude-based\
+    \ proposal.\n  (iii) Update $\\tilde{\\beta}^{(t)}$ via a SGHMC move,\n\n  $$\n\
+    \  v^{(t+1)} = (1-\\alpha)v^{(t)} + \\frac{\\epsilon_{t+1}}{2t_0} \\sum_{k=1}^{t_0}\
+    \ \\nabla_{\\tilde{\\beta}} \\log \\pi(\\tilde{\\beta}^{(t)}|\\gamma^{(t,k)},\
+    \ D_{m,n}^{(t)}) + \\sqrt{\\alpha \\epsilon_{t+1} \\tau} \\eta_{t+1},\n  $$\n\n\
+    \  $$\n  \\tilde{\\beta}^{(t+1)} = \\tilde{\\beta}^{(t)} + v^{(t+1)},\n  $$\n\n\
+    \  where $\\eta_{t+1} \\sim N(0, I_d)$, $\\epsilon_{t+1}$ is the learning rate,\
+    \ $\\tau$ is the temperature, and $1-\\alpha$ gives the momentum parameter.\n\
+    end for\n```\n\nThe main parameters of the extended SGHMC algorithm are the prior\
+    \ hyperparameters $\\lambda_n$ and $\\sigma_{1,n}$ defined in (2). Our theory\
+    \ allows $\\sigma_{1,n}$ to grow with $n$ from the perspective of data fitting,\
+    \ but in our experience, the magnitude of weights tend to adversely affect the\
+    \ generalization ability of the network. For this reason, we usually set $\\sigma_{1,n}$\
+    \ to a small number such as 0.01 or 0.02, and then tune the value of $\\lambda_n$\
+    \ for network sparsity such that the sparse constraint given in Assumption A.2.2\
+    \ is satisfied.\n\n## 4. Experiments\n\nThis section presents an example on network\
+    \ compression for convolutional neural networks (CNNs). Refer to the supplementary\
+    \ material for examples on high-dimensional nonlinear variable selection and DNN\
+    \ model calibration. In terms of network compression, extended SGHMC can be viewed\
+    \ as an unstructured dynamic pruning algorithm, where the spike-and-slab prior\
+    \ is imposed on each parameter and the sparsity mask $\\gamma$ can be adjusted\
+    \ during training (Lin et al., 2020). We test the proposed method on the CIFAR-10\
+    \ data (Krizhevsky et al., 2009), pruning ResNet20 and ResNet32\n"
+  mdcn: "\n\n## 2.2. 尖峰-平板先验\n\nTo conduct Bayesian inference for the DNN, we consider\
+    \ a hierarchical prior given by\n\n$\\tilde{\\beta}_i | \\gamma_i = 1 \\sim N(0,\
+    \ \\sigma_{1,n}^2), \\ i=1,2,\\dots,K_n; \\ \\pi(\\gamma) \\propto \\lambda_n^{|\\\
+    gamma|} (1-\\lambda_n)^{K_n-|\\gamma|} \\mathbf{1}\\{||\\gamma|| \\le \\bar{r}_n,\
+    \ \\gamma \\in \\mathcal{G}\\}, \\quad (2)$\n\nwhere $\\sigma_{1,n}^2$ is the\
+    \ variance of the normal distribution, $\\bar{r}_n$ is the maximum size of candidate\
+    \ sparse DNNs, $\\lambda_n$ can be read as an approximate prior probability for\
+    \ each connection to be included in the DNN, and $\\mathcal{G}$ is the set of\
+    \ all valid DNNs. With this hierarchical prior, $\\beta_i$ follows a discrete\
+    \ spike-and-slab prior, i.e., $\\beta_i = \\tilde{\\beta}_i \\circ \\gamma_i \\\
+    sim \\lambda_n N(0, \\sigma_{1,n}^2) + (1-\\lambda_n)\\delta_0$ for $i=1,2,\\\
+    dots,K_n$, where $\\delta_0$ denotes the Dirac delta function.\n\n## 2.3. 后验一致性\n\
+    \nPosterior consistency measures the speed of posterior concentration around the\
+    \ true density function, which plays a major role in validating Bayesian methods.\
+    \ For DNNs, since the total number of parameters $K_n$ is often much larger than\
+    \ the sample size $n$, posterior consistency provides a general guideline for\
+    \ prior setting. Otherwise, the prior information may dominate data information,\
+    \ rendering a biased inference for the underlying true model. For learning sparse\
+    \ DNNs, we generally set $\\lambda_n \\to 0$ as $K_n \\to \\infty$, which provides\
+    \ an automatic control for the multiplicity involved in structural selection (Scott\
+    \ et al., 2010). Denote by $P^*$ and $E^*$ the respective probability measure\
+    \ and expectation with respective to the data $D_n$, denote by $d(p_1, p_2)$ the\
+    \ Hellinger distance between two densities $p_1(x,y)$ and $p_2(x,y)$, denote by\
+    \ $p_\\beta$ the density function induced by a DNN associated with the parameters\
+    \ $\\beta$, and denote by $p_{\\mu^*}$ the true density function induced by the\
+    \ unknown function $\\mu^*(x)$. Let $\\pi(A|D_n)$ denote the posterior probability\
+    \ of an event $A$. The following theorem establishes posterior consistency for\
+    \ sparse DNNs under the spike-and-slab prior (2).\n\n### Theorem 2.1.\n\nConsider\
+    \ a DNN with $H_n$ layers and at most $K_n$ possible connections, where both $H_n$\
+    \ and $K_n$ are increasing with $n$. If the assumptions A.1-A.3 hold, and $\\\
+    hat{\\beta}$ and $y$ are subject to the prior (2) with the hyperparameters subject\
+    \ to the constraints $\\log \\sigma_{1,n}^2 + E_n^2/\\sigma_{1,n}^2 = O(H_n \\\
+    log K_n)$ and $1 \\le r_n \\le \\bar{r}_n < K_n$, where $r_n = \\lambda_n K_n$.\
+    \ Then there exists a sequence $\\epsilon_n \\asymp \\max\\{\\varpi_n, \\sqrt{r_n\
+    \ H_n \\log K_n/n}\\}$ such that for sufficiently large n, the posterior distribution\
+    \ satisfies\n\n$$ \\begin{aligned} P^* \\left\\{ \\pi(d(p_\\beta, p_{\\mu^*})\
+    \ > 4\\epsilon_n | D_n) \\ge 2e^{-n\\epsilon_n^2/4} \\right\\} \\\\ E^*\\pi(d(p_\\\
+    beta, p_{\\mu^*}) > 4\\epsilon_n | D_n) \\le 4e^{-n\\epsilon_n^2/2}, \\end{aligned}\
+    \ \\quad (3) $$\n\nTheorem 2.1 establishes a Bayesian contraction rate for sparse\
+    \ DNNs under the Hellinger metric. Therefore, to obtain consistent Bayesian inference,\
+    \ it suffices to require $\\varpi_n \\to 0$ and $\\bar{r}_n H_n \\log(K_n) < n$.\
+    \ If $\\mu^*$ can be optimally represented by a sparse DNN model (refer to Remark\
+    \ S2 in the supplementary material), then $\\varpi_n$ polynomially decays to 0\
+    \ as $r_n$ increases to infinity. On the other hand, $\\bar{r}_n H_n \\log(K_n)\
+    \ < n$ implies $\\bar{r}_n = o(n/\\log(n))$ by noticing that $K_n \\ge \\bar{r}_n$.\
+    \ Refer to the supplementary material for more discussions on this theorem. In\
+    \ conclusion, we only need $\\bar{r}_n$, the upper bound of total connectivity,\
+    \ to increase slowly; or said differently, a sparse DNN of connectivity $O(n/\\\
+    log(n))$ could have been large enough for providing a consistent approximation\
+    \ to the true posterior distribution.\n\n## 2.4. DNN 结构选择的一致性\n\nIt is known that\
+    \ the DNN model is nonidentifiable in general due to the symmetry of the network\
+    \ structure. However, by introducing appropriate constraints (Pourzanjani et al.,\
+    \ 2017; Liang et al., 2018), we can define a set of neural networks such that\
+    \ each network in the set is unique up to simple node permutations, sign changes,\
+    \ etc. Let $\\Theta$ denote such a set of DNNs, where each element in $\\Theta$\
+    \ can be viewed as an equivalent class of networks. Let $\\upsilon(\\cdot)$ be\
+    \ the transformation such that $\\upsilon(\\beta) \\in \\Theta$. Since $p_\\beta\
+    \ = p_{\\upsilon(\\beta)}$, the posterior consistency (3) holds for $\\upsilon(\\\
+    beta)$ as well. In what follows, we rewrite $\\upsilon(\\beta)$ by $\\upsilon(y,\
+    \ \\beta)$ by including the network structure information. To serve the purpose\
+    \ of structure selection for the DNN, we consider the marginal inclusion posterior\
+    \ probability (MIPP) approach proposed in Liang et al. (2013) for high-dimensional\
+    \ variable selection. For each entry of $y$, we define its MIPP by $q_i = \\int\
+    \ \\sum_y e_{i|\\upsilon(y,\\beta)} \\pi(y|y, D_n) \\pi(\\beta|D_n) d\\beta$,\
+    \ where $e_{i|\\upsilon(y,\\beta)}$ indicates existence of connection $i$ in the\
+    \ network $\\upsilon(y, \\beta)$. Similarly, we define $e_{i|\\upsilon(y^*, \\\
+    beta^*)}$ as the indicator for connection $i$ in the true DNN $\\upsilon(y^*,\
+    \ \\beta^*)$. The MIPP approach is to choose the connections for which the marginal\
+    \ inclusion posterior probability is greater than a threshold value $\\hat{q}$;\
+    \ that is, setting $\\hat{Y}_q = \\{j: q_j > \\hat{q}, j=1,2,\\dots,K_n\\}$ as\
+    \ a Bayes estimator of the true model. To establish the consistency of $\\hat{Y}_q$,\
+    \ the following identifiability condition for the true network $Y_*$ is needed.\n\
+    \nLet $A(\\epsilon_n) = \\{\\beta : d(p_\\beta, p_{\\mu^*}) \\ge \\epsilon_n\\\
+    }$. Define $\\rho(\\epsilon_n) = \\max_{1 \\le i \\le K_n} \\int_{A(\\epsilon_n)^c}\
+    \ \\sum_y e_{i|\\upsilon(y,\\beta)} - e_{i|\\upsilon(y^*, \\beta^*)} \\pi(y|\\\
+    beta, D_n) \\pi(\\beta|D_n) d\\beta$, which measures the distance between the\
+    \ true DNN model and the models drawn from the posterior in the $\\epsilon_n$-neighborhood\
+    \ $A(\\epsilon_n)^c$. The identifiability condition can be stated as follows:\n\
+    \n- B.1 $\\rho(\\epsilon_n) \\to 0$, as $n \\to \\infty$ and $\\epsilon_n \\to\
+    \ 0$.\n\nThat is, when $n$ is sufficiently large, if a DNN produces approximately\
+    \ the same probability distribution as the true data, then its structure, after\
+    \ mapping into the network space $\\Theta$, must coincide with the true DNN structure.\
+    \ Note that this identifiability is different from the one mentioned at the beginning\
+    \ of this section, which is only with respect to structure and parameter rearrangements.\
+    \ Theorem 2.2 concerns consistency of $\\hat{\\gamma}$ and its sure screening\
+    \ property.\n\n### Theorem 2.2.\n\nIf the conditions of Theorem 2.1 and condition\
+    \ B.1 hold, then (i) $\\max_{1 \\le i \\le K_n} \\{ |q_i - e_{i|\\upsilon(y^*,\
+    \ \\beta^*)}| \\} \\to 0$ in probability; and (ii) for any pre-specified $\\hat{q}\
+    \ \\in (0, 1)$, $\\lim_{n \\to \\infty} P(Y_* \\subset \\hat{Y}_q) = 1$.\n\nIn\
+    \ practice, the value of $\\hat{q}$ can be determined by a multiple hypothesis\
+    \ test, see e.g. Liang and Zhang (2008). For simplicity, we often set $\\hat{q}\
+    \ = 0.5$. Recall that $\\mathbf{y}^w \\in \\mathbb{R}^{L_h \\times L_{h-1}}$ denotes\
+    \ the connection indicator matrix of layer h.\n\n$$\n\\mathbf{y}^x = \\mathbf{y}^{w^{h_n}}\
+    \ \\mathbf{y}^{w^{h_n-1}} \\cdots \\mathbf{y}^{w^1} \\in \\mathbb{R}^{1 \\times\
+    \ p_n},\n$$\n(4)\n\nand let $\\mathbf{y}_i^x$ denote the $i$th element of $\\\
+    mathbf{y}^x$. If $\\mathbf{y}_i^x > 0$ then the input variable $\\mathbf{x}_i$\
+    \ is effective in the network $\\mathbf{y}$, and $\\mathbf{y}_i^x = 0$ otherwise.\
+    \ As in treating network connections, we can define a MIPP for each input variable\
+    \ and determine a threshold value for the MIPP based on a multiple hypothesis\
+    \ test. As implied by (4), the consistency of structure selection implies consistency\
+    \ of variable selection with respect to the true network $\\mathbf{y}^*$ as defined\
+    \ in Assumption A.2.1.\n\n## 3. 计算算法\n\nAlthough the spike-and-slab prior leads\
+    \ to nice theoretical properties for Bayesian sparse DNNs, the resulting posterior\
+    \ is a mixture of distributions with varying dimensions. Conventional Bayesian\
+    \ sampling algorithms adopt reversible jump moves (Green, 1995) to explore different\
+    \ network architectures, see e.g. Liang et al. (2018), and lack scalability necessarily\
+    \ required for big data scenarios. Song et al. (2020) proposed an extended stochastic\
+    \ gradient Langevin dynamics (SGLD) algorithm for Bayesian variable selection\
+    \ under the big data scenario, which allows the mini-batch data to be used in\
+    \ updating the model and regression coefficients at each iteration and is thus\
+    \ scalable to big data problems. In this paper, we extend it further by combining\
+    \ it with stochastic gradient Hamiltonian Monte Carlo (SGHMC) (Chen et al., 2014),\
+    \ see Algorithm 1 for the procedure and the supplementary material for more explanations.\n\
+    \n```\n**Algorithm 1** Extended Stochastic Gradient Hamiltonian Monte Carlo\n\n\
+    Input: $T; m; \\tau; t_0; t_1$\nInitialization: Randomly initialize $\\tilde{\\\
+    beta}^{(1)}$. Set $\\gamma_i^{(0,t_0)}=1$ for all $i \\in \\{1, \\dots, K_n\\\
+    }$;\nfor $t = 1, 2, \\dots, T$ do\n  (i) Draw a subsample of size $m$ from the\
+    \ full dataset $D_n$, and duplicate it to form a dataset $D_{m,n}^{(t)}$.\n  (ii)\
+    \ Simulate models $\\gamma^{(t,1)}, \\gamma^{(t,2)}, \\dots, \\gamma^{(t,t_0)}$\
+    \ from the conditional posterior $\\pi(\\gamma|\\tilde{\\beta}^{(t)}, D_{m,n}^{(t)})$\
+    \ by Metropolis-Hastings(MH) algorithm with a magnitude-based proposal.\n  (iii)\
+    \ Update $\\tilde{\\beta}^{(t)}$ via a SGHMC move,\n\n  $$\n  v^{(t+1)} = (1-\\\
+    alpha)v^{(t)} + \\frac{\\epsilon_{t+1}}{2t_0} \\sum_{k=1}^{t_0} \\nabla_{\\tilde{\\\
+    beta}} \\log \\pi(\\tilde{\\beta}^{(t)}|\\gamma^{(t,k)}, D_{m,n}^{(t)}) + \\sqrt{\\\
+    alpha \\epsilon_{t+1} \\tau} \\eta_{t+1},\n  $$\n\n  $$\n  \\tilde{\\beta}^{(t+1)}\
+    \ = \\tilde{\\beta}^{(t)} + v^{(t+1)},\n  ```\n\n  where $\\eta_{t+1} \\sim N(0,\
+    \ I_d)$, $\\epsilon_{t+1}$ is the learning rate, $\\tau$ is the temperature, and\
+    \ $1-\\alpha$ gives the momentum parameter.\nend for\n```\n\nThe main parameters\
+    \ of the extended SGHMC algorithm are the prior hyperparameters $\\lambda_n$ and\
+    \ $\\sigma_{1,n}$ defined in (2). Our theory allows $\\sigma_{1,n}$ to grow with\
+    \ $n$ from the perspective of data fitting, but in our experience, the magnitude\
+    \ of weights tend to adversely affect the generalization ability of the network.\
+    \ For this reason, we usually set $\\sigma_{1,n}$ to a small number such as 0.01\
+    \ or 0.02, and then tune the value of $\\lambda_n$ for network sparsity such that\
+    \ the sparse constraint given in Assumption A.2.2 is satisfied.\n\n## 4. 实验\n\n\
+    This section presents an example on network compression for convolutional neural\
+    \ networks (CNNs). Refer to the supplementary material for examples on high-dimensional\
+    \ nonlinear variable selection and DNN model calibration. In terms of network\
+    \ compression, extended SGHMC can be viewed as an unstructured dynamic pruning\
+    \ algorithm, where the spike-and-slab prior is imposed on each parameter and the\
+    \ sparsity mask $\\gamma$ can be adjusted during training (Lin et al., 2020).\
+    \ We test the proposed method on the CIFAR-10 data (Krizhevsky et al., 2009),\
+    \ pruning ResNet20 and ResNet32\n\n"
+  merge: 0
+- raw:
+  - '[PAGE 4]
+
+
+    | Model | Method | Pruning ratio (%) | Test accuracy (%) | Pruning ratio (%) |
+    Test accuracy (%) |
+
+    |---|---|---|---|---|---|
+
+    | \multirow{7}{*}{ResNet20} | BNN$_{bma}$ | 9.65(0.05) | **91.60(0.06)** | 19.76(0.02)
+    | **92.65(0.02)** |
+
+    | | BNN$_{single}$ | 9.88(0.08) | **91.26(0.02)** | 19.83(0.02) | **92.32(0.04)**
+    |
+
+    | | BNN$_{cs}$ | 9.55(0.03) | 91.27(0.05) | 19.67(0.05) | 92.27(0.03) |
+
+    | | SVI | 10 | 89.43(0.05) | 20 | 91.78(0.06) |
+
+    | | SM | 10 | 89.76(0.40) | 20 | 91.54(0.16) |
+
+    | | DSR | 10 | 87.88(0.04) | 20 | 91.78(0.28) |
+
+    | | DPF | 10 | 90.88(0.07) | 20 | 92.17(0.21) |
+
+    | \multirow{7}{*}{ResNet32} | BNN$_{bma}$ | 4.89(0.09) | **91.84(0.09)** | 9.65(0.05)
+    | **92.99(0.08)** |
+
+    | | BNN$_{single}$ | 4.99(0.06) | **91.39(0.10)** | 8.77(0.12) | **92.74(0.10)**
+    |
+
+    | | BNN$_{cs}$ | 4.78(0.01) | 91.21(0.01) | 9.53(0.04) | 92.74(0.07) |
+
+    | | SVI | 5 | 86.31(0.23) | 10 | 91.61(0.10) |
+
+    | | SM | 5 | 88.68(0.22) | 10 | 91.54(0.18) |
+
+    | | DSR | 5 | 84.12(0.32) | 10 | 91.41(0.23) |
+
+    | | DPF | 5 | 90.94(0.35) | 10 | 92.42(0.18) |
+
+
+    networks (He et al., 2016) to different sparsity levels. We train the network
+    using the standard setup as in Lin et al. (2020), i.e. we use a mini-batch size
+    of 128 and train the model for 300 epochs with a fixed initial learning rate of
+    \(\epsilon_0 = 0.1\) and \(\epsilon_t\) being divided by 10 at epochs 150 and
+    225. We set \(\sigma_{1,n}^2 = 0.04\), and sample from the posterior using the
+    extended SGHMC algorithm with \(t_0 = 1\), \(\tau = 0.0001\), \(\alpha = 0.1\),
+    and a magnitude-based proposal for \(\gamma\). We tune \(\lambda_n\) and \(b\)
+    (a parameter of the magnitude-based proposal as described in the supplementary
+    material) to achieve target sparsity levels for different ResNets. Posterior samples
+    are collected at the end of each epoch and the first 225 samples are discarded
+    for the burn-in process.
+
+
+    We compare the proposed method with some recent unstructured compression methods
+    including dynamic pruning with feedback (DPF) (Lin et al., 2020), dynamic sparse
+    reparameterization (DSR) (Mostafa and Wang, 2019), sparse momentum (SM) (Dettmers
+    and Zettlemoyer, 2019), consistent sparse deep learning (BNN$_{cs}$) (Sun et al.,
+    2021), and variation inference for sparse deep learning (SVI) (Bai et al., 2020b).
+    The numerical results are summarized in Table 1. The comparison shows that the
+    proposed method can achieve higher prediction accuracy than the existing ones
+    at a similar sparsity level.
+
+
+    # 5. Conclusion
+
+
+    In this paper, we study sparse deep learning from the Bayesian perspective. Theoretically,
+    we establish posterior consistency and structure selection consistency for Bayesian
+    DNNs with a spike-and-slab prior. We give the posterior contraction rate, and
+    propose to use the marginal inclusion posterior probability approach to determine
+    the structure of the sparse DNN. We employ a scalable SGMCMC algorithm for simulating
+    from the posterior of the sparse DNN, which has about the same order of computational
+    complexity as popular optimization algorithms such as SGD. When irrelevant features
+    exist in the dataset, our numerical results show that learning a sparse DNN is
+    always rewarded in prediction compared to blindly learning a large, fully connected
+    DNN. The proposed method can be applied for large-scale network pruning tasks
+    as an unstructured dynamic pruning method, where the sparsity mask is adjusted
+    systematically during training. Our numerical result show that the proposed method
+    can achieve the state-of-the-art performance in network structure selection, large-scale
+    network pruning and model calibration.
+
+
+    As mentioned previously, sparsity is essential for improving the calibration of
+    the DNN (Wang and Ročková, 2020; Lee et al., 2020). This work provides a practical
+    and efficient method for learning sparse DNNs with a theoretical guarantee for
+    identification of an appropriate sparse structure, and thus it will naturally
+    enhance the development of trustworthy artificial intelligence.
+
+
+    # Acknowledgments
+
+
+    Liang''s research was supported in part by the NSF grant DMS-2015498, and NIH
+    grants R01-GM117597 and R01-GM126089. Song''s research was supported in part by
+    the NSF grant DMS-1811812. The authors thank the editor, associate editor, and
+    referees for their constructive comments which have led to significant improvement
+    of this paper.
+
+
+    # Appendix A. Supplementary data
+
+
+    Supplementary material related to this article can be found online at https://doi.org/10.1016/j.spl.2021.109246..
+    The online supplementary material contains the proof and remarks for the theoretical
+    results, the description for the extended stochastic gradient MCMC algorithm,
+    and more numerical results.'
+  - '[PAGE 5]
+
+
+    # References
+
+
+    +   Bai, J., Song, Q., Cheng, G., 2020a. Adaptive variational Bayesian inference
+    for sparse deep neural network. arXiv:1910.04355.
+
+    +   Bai, J., Song, Q., Cheng, G., 2020b. Efficient variational inference for sparse
+    deep learning with theoretical guarantee. In: Advances in Neural Information Processing
+    Systems. pp. 466–476.
+
+    +   Bauer, B., Kohler, M., 2019. On deep learning as a remedy for the curse of
+    dimensionality in nonparametric regression. Ann. Statist. 47 (4), 2261–2285.
+
+    +   Chen, T., Fox, E., Guestrin, C., 2014. Stochastic gradient hamiltonian monte
+    carlo. In: International Conference on Machine Learning. pp. 1683–1691.
+
+    +   Chérief-Abdellatif, B.-E., 2020. Convergence rates of variational inference
+    in sparse deep learning. In: Illi, H.D., Singh, A. (Eds.), Proceedings of the
+    37th International Conference on Machine Learning. In: Proceedings of Machine
+    Learning Research, vol. 119. PMLR, pp. 1831–1842.
+
+    +   Denli, M., Shakibi, B., Dinh, L., Ranzato, M., de Freitas, N., 2013. Predicting
+    parameters in deep learning. In: Proceedings of the 26th International Conference
+    on Neural Information Processing Systems – Volume 2. Curran Associates Inc., Red
+    Hook, NY, USA, pp. 2148–2156.
+
+    +   Dettmers, T., Zettlemoyer, L., 2019. Sparse networks from scratch: Faster
+    training without losing performance. arXiv preprint arXiv:1907.04840.
+
+    +   Green, P.J., 1995. Reversible jump Markov chain Monte carlo computation and
+    Bayesian model determination. Biometrika 82 (4), 711–732.
+
+    +   Guo, C., Pleiss, G., Sun, Y., Weinberger, K.Q., 2017. On calibration of modern
+    neural networks. In: Proceedings of the 34th International Conference on Machine
+    Learning – Volume 70. In: ICML’17. JMLR.org, pp. 1321–1330.
+
+    +   He, K., Zhang, X., Ren, S., Sun, J., 2016. Deep residual learning for image
+    recognition. In: 2016 IEEE Conference on Computer Vision and Pattern Recognition
+    (CVPR). pp. 770–778.
+
+    +   Krizhevsky, A., Hinton, G., et al., 2009. Learning Multiple Layers of Features
+    from Tiny Images. Tech. rep., Citeseer.
+
+    +   Lee, J., Hunnt, M., Feng, J., Triebel, R., 2020. Estimating model uncertainty
+    of neural networks in sparse information form. In: Illi, H.D., Singh, A. (Eds.),
+    Proceedings of the 37th International Conference on Machine Learning. Vol. 119.
+    PMLR, pp. 5702–5713.
+
+    +   Liang, F., Li, Q., Zhou, L., 2018. Bayesian neural networks for selection
+    of drug sensitive genes. J. Amer. Statist. Assoc. 113 (523), 955–972.
+
+    +   Liang, F., Song, Q., Yu, K., 2013. Bayesian subset modeling for high dimensional
+    generalized linear models. J. Amer. Statist. Assoc. 108, 589–606.
+
+    +   Liang, F., Zhang, J., 2008. Estimating false discovery rate using stochastic
+    approximation. Biometrika 95, 961–977.
+
+    +   Lin, T., Stich, S.U., Barba, L., Dmitriev, D., Jaggi, M., 2020. Dynamic model
+    pruning with feedback. In: International Conference on Learning Representations.
+
+    +   Mostafa, H., Wang, X., 2019. Parameter efficient training of deep convolutional
+    neural networks by dynamic sparse reparameterization. In: International Conference
+    on Machine Learning. pp. 4646–4655.
+
+    +   Polson, N., Ročková, V., 2018. Posterior concentration for sparse deep learning.
+    In: Advances in Neural Information Processing Systems. pp. 930–941.
+
+    +   Pourzanjani, A.A., Jiang, R.M., Petzold, L.R., 2017. Improving the identifiability
+    of neural networks for Bayesian inference. In: NIPS Workshop on Bayesian Deep
+    Learning.
+
+    +   Schmidt-Hieber, J., 2020. Nonparametric regression using deep neural networks
+    with ReLU activation function. Ann. Statist. 48 (4), 1875–1897.
+
+    +   Scott, J.G., Berger, J.O., et al., 2010. Bayes and empirical-Bayes multiplicity
+    adjustment in the variable-selection problem. Ann. Statist. 38 (5), 2587–2619.
+
+    +   Song, Q., Sun, Y., Ye, M., Liang, F., 2020. Extended stochastic gradient MCMC
+    for large-scale Bayesian variable selection. Biometrika 107 (4), 997–1004.
+
+    +   Sun, Y., Song, Q., Liang, F., 2021. Consistent sparse deep learning: Theory
+    and computation. J. Amer. Statist. Assoc. http://dx.doi.org/10.1080/01621459.2021.1895175,
+    in press.
+
+    +   Wang, Y., Ročková, V., 2020. Uncertainty quantification for sparse deep learning.
+    In: AISTATS.'
+  md: '
+
+    | Model | Method | Pruning ratio (%) | Test accuracy (%) | Pruning ratio (%) |
+    Test accuracy (%) |
+
+    |---|---|---|---|---|---|
+
+    | ResNet20 | BNN$_{bma}$ | 9.65(0.05) | **91.60(0.06)** | 19.76(0.02) | **92.65(0.02)**
+    |
+
+    | ResNet20 | BNN$_{single}$ | 9.88(0.08) | **91.26(0.02)** | 19.83(0.02) | **92.32(0.04)**
+    |
+
+    | ResNet20 | BNN$_{cs}$ | 9.55(0.03) | 91.27(0.05) | 19.67(0.05) | 92.27(0.03)
+    |
+
+    | ResNet20 | SVI | 10 | 89.43(0.05) | 20 | 91.78(0.06) |
+
+    | ResNet20 | SM | 10 | 89.76(0.40) | 20 | 91.54(0.16) |
+
+    | ResNet20 | DSR | 10 | 87.88(0.04) | 20 | 91.78(0.28) |
+
+    | ResNet20 | DPF | 10 | 90.88(0.07) | 20 | 92.17(0.21) |
+
+    | ResNet32 | BNN$_{bma}$ | 4.89(0.09) | **91.84(0.09)** | 9.65(0.05) | **92.99(0.08)**
+    |
+
+    | ResNet32 | BNN$_{single}$ | 4.99(0.06) | **91.39(0.10)** | 8.77(0.12) | **92.74(0.10)**
+    |
+
+    | ResNet32 | BNN$_{cs}$ | 4.78(0.01) | 91.21(0.01) | 9.53(0.04) | 92.74(0.07)
+    |
+
+    | ResNet32 | SVI | 5 | 86.31(0.23) | 10 | 91.61(0.10) |
+
+    | ResNet32 | SM | 5 | 88.68(0.22) | 10 | 91.54(0.18) |
+
+    | ResNet32 | DSR | 5 | 84.12(0.32) | 10 | 91.41(0.23) |
+
+    | ResNet32 | DPF | 5 | 90.94(0.35) | 10 | 92.42(0.18) |
+
+
+    networks (He et al., 2016) to different sparsity levels. We train the network
+    using the standard setup as in Lin et al. (2020), i.e. we use a mini-batch size
+    of 128 and train the model for 300 epochs with a fixed initial learning rate of
+    \(\epsilon_0 = 0.1\) and \(\epsilon_t\) being divided by 10 at epochs 150 and
+    225. We set \(\sigma_{1,n}^2 = 0.04\), and sample from the posterior using the
+    extended SGHMC algorithm with \(t_0 = 1\), \(\tau = 0.0001\), \(\alpha = 0.1\),
+    and a magnitude-based proposal for \(\gamma\). We tune \(\lambda_n\) and \(b\)
+    (a parameter of the magnitude-based proposal as described in the supplementary
+    material) to achieve target sparsity levels for different ResNets. Posterior samples
+    are collected at the end of each epoch and the first 225 samples are discarded
+    for the burn-in process.
+
+
+    We compare the proposed method with some recent unstructured compression methods
+    including dynamic pruning with feedback (DPF) (Lin et al., 2020), dynamic sparse
+    reparameterization (DSR) (Mostafa and Wang, 2019), sparse momentum (SM) (Dettmers
+    and Zettlemoyer, 2019), consistent sparse deep learning (BNN$_{cs}$) (Sun et al.,
+    2021), and variation inference for sparse deep learning (SVI) (Bai et al., 2020b).
+    The numerical results are summarized in Table 1. The comparison shows that the
+    proposed method can achieve higher prediction accuracy than the existing ones
+    at a similar sparsity level.
+
+
+    ## 5. Conclusion
+
+
+    In this paper, we study sparse deep learning from the Bayesian perspective. Theoretically,
+    we establish posterior consistency and structure selection consistency for Bayesian
+    DNNs with a spike-and-slab prior. We give the posterior contraction rate, and
+    propose to use the marginal inclusion posterior probability approach to determine
+    the structure of the sparse DNN. We employ a scalable SGMCMC algorithm for simulating
+    from the posterior of the sparse DNN, which has about the same order of computational
+    complexity as popular optimization algorithms such as SGD. When irrelevant features
+    exist in the dataset, our numerical results show that learning a sparse DNN is
+    always rewarded in prediction compared to blindly learning a large, fully connected
+    DNN. The proposed method can be applied for large-scale network pruning tasks
+    as an unstructured dynamic pruning method, where the sparsity mask is adjusted
+    systematically during training. Our numerical result show that the proposed method
+    can achieve the state-of-the-art performance in network structure selection, large-scale
+    network pruning and model calibration.
+
+
+    As mentioned previously, sparsity is essential for improving the calibration of
+    the DNN (Wang and Ročková, 2020; Lee et al., 2020). This work provides a practical
+    and efficient method for learning sparse DNNs with a theoretical guarantee for
+    identification of an appropriate sparse structure, and thus it will naturally
+    enhance the development of trustworthy artificial intelligence.
+
+
+    ## Acknowledgments
+
+
+    Liang''s research was supported in part by the NSF grant DMS-2015498, and NIH
+    grants R01-GM117597 and R01-GM126089. Song''s research was supported in part by
+    the NSF grant DMS-1811812. The authors thank the editor, associate editor, and
+    referees for their constructive comments which have led to significant improvement
+    of this paper.
+
+
+    ## Appendix A. Supplementary data
+
+
+    Supplementary material related to this article can be found online at https://doi.org/10.1016/j.spl.2021.109246.
+    The online supplementary material contains the proof and remarks for the theoretical
+    results, the description for the extended stochastic gradient MCMC algorithm,
+    and more numerical results.
+
+
+    ## References
+
+
+    - Bai, J., Song, Q., Cheng, G., 2020a. Adaptive variational Bayesian inference
+    for sparse deep neural network. arXiv:1910.04355.
+
+    - Bai, J., Song, Q., Cheng, G., 2020b. Efficient variational inference for sparse
+    deep learning with theoretical guarantee. In: Advances in Neural Information Processing
+    Systems. pp. 466–476.
+
+    - Bauer, B., Kohler, M., 2019. On deep learning as a remedy for the curse of dimensionality
+    in nonparametric regression. Ann. Statist. 47 (4), 2261–2285.
+
+    - Chen, T., Fox, E., Guestrin, C., 2014. Stochastic gradient Hamiltonian Monte
+    Carlo. In: International Conference on Machine Learning. pp. 1683–1691.
+
+    - Chérief-Abdellatif, B.-E., 2020. Convergence rates of variational inference
+    in sparse deep learning. In: Illi, H.D., Singh, A. (Eds.), Proceedings of the
+    37th International Conference on Machine Learning. In: Proceedings of Machine
+    Learning Research, vol. 119. PMLR, pp. 1831–1842.
+
+    - Denli, M., Shakibi, B., Dinh, L., Ranzato, M., de Freitas, N., 2013. Predicting
+    parameters in deep learning. In: Proceedings of the 26th International Conference
+    on Neural Information Processing Systems – Volume 2. Curran Associates Inc., Red
+    Hook, NY, USA, pp. 2148–2156.
+
+    - Dettmers, T., Zettlemoyer, L., 2019. Sparse networks from scratch: Faster training
+    without losing performance. arXiv preprint arXiv:1907.04840.
+
+    - Green, P.J., 1995. Reversible jump Markov chain Monte Carlo computation and
+    Bayesian model determination. Biometrika 82 (4), 711–732.
+
+    - Guo, C., Pleiss, G., Sun, Y., Weinberger, K.Q., 2017. On calibration of modern
+    neural networks. In: Proceedings of the 34th International Conference on Machine
+    Learning – Volume 70. In: ICML’17. JMLR.org, pp. 1321–1330.
+
+    - He, K., Zhang, X., Ren, S., Sun, J., 2016. Deep residual learning for image
+    recognition. In: 2016 IEEE Conference on Computer Vision and Pattern Recognition
+    (CVPR). pp. 770–778.
+
+    - Krizhevsky, A., Hinton, G., et al., 2009. Learning Multiple Layers of Features
+    from Tiny Images. Tech. rep., Citeseer.
+
+    - Lee, J., Hunt, M., Feng, J., Triebel, R., 2020. Estimating model uncertainty
+    of neural networks in sparse information form. In: Illi, H.D., Singh, A. (Eds.),
+    Proceedings of the 37th International Conference on Machine Learning. Vol. 119.
+    PMLR, pp. 5702–5713.
+
+    - Liang, F., Li, Q., Zhou, L., 2018. Bayesian neural networks for selection of
+    drug sensitive genes. J. Amer. Statist. Assoc. 113 (523), 955–972.
+
+    - Liang, F., Song, Q., Yu, K., 2013. Bayesian subset modeling for high dimensional
+    generalized linear models. J. Amer. Statist. Assoc. 108, 589–606.
+
+    - Liang, F., Zhang, J., 2008. Estimating false discovery rate using stochastic
+    approximation. Biometrika 95, 961–977.
+
+    - Lin, T., Stich, S.U., Barba, L., Dmitriev, D., Jaggi, M., 2020. Dynamic model
+    pruning with feedback. In: International Conference on Learning Representations.
+
+    - Mostafa, H., Wang, X., 2019. Parameter efficient training of deep convolutional
+    neural networks by dynamic sparse reparameterization. In: International Conference
+    on Machine Learning. pp. 4646–4655.
+
+    - Polson, N., Ročková, V., 2018. Posterior concentration for sparse deep learning.
+    In: Advances in Neural Information Processing Systems. pp. 930–941.
+
+    - Pourzanjani, A.A., Jiang, R.M., Petzold, L.R., 2017. Improving the identifiability
+    of neural networks for Bayesian inference. In: NIPS Workshop on Bayesian Deep
+    Learning.
+
+    - Schmidt-Hieber, J., 2020. Nonparametric regression using deep neural networks
+    with ReLU activation function. Ann. Statist. 48 (4), 1875–1897.
+
+    - Scott, J.G., Berger, J.O., et al., 2010. Bayes and empirical-Bayes multiplicity
+    adjustment in the variable-selection problem. Ann. Statist. 38 (5), 2587–2619.
+
+    - Song, Q., Sun, Y., Ye, M., Liang, F., 2020. Extended stochastic gradient MCMC
+    for large-scale Bayesian variable selection. Biometrika 107 (4), 997–1004.
+
+    - Sun, Y., Song, Q., Liang, F., 2021. Consistent sparse deep learning: Theory
+    and computation. J. Amer. Statist. Assoc. http://dx.doi.org/10.1080/01621459.2021.1895175,
+    in press.
+
+    - Wang, Y., Ročková, V., 2020. Uncertainty quantification for sparse deep learning.
+    In: AISTATS.
+
+    '
+  mdcn: '
+
+
+    | 模型 | 方法 | 剪枝比例 (%) | 测试准确率 (%) | 剪枝比例 (%) | 测试准确率 (%) |
+
+    |---|---|---|---|---|---|
+
+    | ResNet20 | BNN$_{bma}$ | 9.65(0.05) | **91.60(0.06)** | 19.76(0.02) | **92.65(0.02)**
+    |
+
+    | ResNet20 | BNN$_{single}$ | 9.88(0.08) | **91.26(0.02)** | 19.83(0.02) | **92.32(0.04)**
+    |
+
+    | ResNet20 | BNN$_{cs}$ | 9.55(0.03) | 91.27(0.05) | 19.67(0.05) | 92.27(0.03)
+    |
+
+    | ResNet20 | SVI | 10 | 89.43(0.05) | 20 | 91.78(0.06) |
+
+    | ResNet20 | SM | 10 | 89.76(0.40) | 20 | 91.54(0.16) |
+
+    | ResNet20 | DSR | 10 | 87.88(0.04) | 20 | 91.78(0.28) |
+
+    | ResNet20 | DPF | 10 | 90.88(0.07) | 20 | 92.17(0.21) |
+
+    | ResNet32 | BNN$_{bma}$ | 4.89(0.09) | **91.84(0.09)** | 9.65(0.05) | **92.99(0.08)**
+    |
+
+    | ResNet32 | BNN$_{single}$ | 4.99(0.06) | **91.39(0.10)** | 8.77(0.12) | **92.74(0.10)**
+    |
+
+    | ResNet32 | BNN$_{cs}$ | 4.78(0.01) | 91.21(0.01) | 9.53(0.04) | 92.74(0.07)
+    |
+
+    | ResNet32 | SVI | 5 | 86.31(0.23) | 10 | 91.61(0.10) |
+
+    | ResNet32 | SM | 5 | 88.68(0.22) | 10 | 91.54(0.18) |
+
+    | ResNet32 | DSR | 5 | 84.12(0.32) | 10 | 91.41(0.23) |
+
+    | ResNet32 | DPF | 5 | 90.94(0.35) | 10 | 92.42(0.18) |
+
+
+    网络 (He et al., 2016) 到不同稀疏水平。我们使用 Lin et al. (2020) 中的标准设置训练网络，即我们使用 128 的小批量大小，并以固定初始学习率
+    \(\epsilon_0 = 0.1\) 训练模型 300 个epoch，在epoch 150 和 225 时将 \(\epsilon_t\) 除以 10。我们设置
+    \(\sigma_{1,n}^2 = 0.04\)，并使用扩展 SGHMC 算法从后验中采样，参数为 \(t_0 = 1\)、\(\tau = 0.0001\)、\(\alpha
+    = 0.1\)，并为 \(\gamma\) 使用基于幅度的提议。我们调整 \(\lambda_n\) 和 \(b\)（基于幅度提议的一个参数，如补充材料中所述），以实现不同
+    ResNet 的目标稀疏水平。后验样本在每个epoch结束时收集，前 225 个样本被丢弃用于烧入过程。
+
+
+    我们将所提方法与一些最近的非结构化压缩方法进行比较，包括带反馈的动态剪枝 (DPF) (Lin et al., 2020)、动态稀疏重参数化 (DSR) (Mostafa
+    and Wang, 2019)、稀疏动量 (SM) (Dettmers and Zettlemoyer, 2019)、一致稀疏深度学习 (BNN$_{cs}$)
+    (Sun et al., 2021) 和用于稀疏深度学习的变分推断 (SVI) (Bai et al., 2020b)。数值结果总结于表 1。比较表明，所提方法在相似稀疏水平下可实现高于现有方法的预测准确率。
+
+
+    ## 5. 结论
+
+
+    本文从贝叶斯视角研究稀疏深度学习。从理论上，我们建立了带尖峰-平板先验的贝叶斯DNN的后验一致性和结构选择一致性。我们给出了后验收缩速率，并提出使用边际包含后验概率方法来确定稀疏DNN的结构。我们采用可扩展的SGMCMC算法来模拟稀疏DNN的后验，其计算复杂度阶数与SGD等流行优化算法大致相同。当数据集中存在无关特征时，我们的数值结果表明，与盲目学习大型全连接DNN相比，学习稀疏DNN在预测方面总是有回报的。所提方法可作为一种非结构化动态剪枝方法应用于大规模网络剪枝任务，其中稀疏掩码在训练期间系统地调整。我们的数值结果表明，所提方法在网络结构选择、大规模网络剪枝和模型校准方面可实现最先进的性能。
+
+
+    如前所述，稀疏性对改善DNN的校准至关重要 (Wang and Ročková, 2020; Lee et al., 2020)。这项工作为学习稀疏DNN提供了一种实用且高效的方法，并为识别适当的稀疏结构提供理论保证，因此将自然增强可信人工智能的发展。
+
+
+    ## 致谢
+
+
+    梁的研究部分得到NSF资助DMS-2015498和NIH资助R01-GM117597及R01-GM126089的支持。宋的研究部分得到NSF资助DMS-1811812的支持。作者感谢编辑、副编辑和审稿人提出的建设性意见，这些意见显著改进了本文。
+
+
+    ## 附录 A. 补充数据
+
+
+    与本文相关的补充材料可在线查阅 https://doi.org/10.1016/j.spl.2021.109246。在线补充材料包含理论结果的证明和评论、扩展随机梯度MCMC算法的描述以及更多数值结果。
+
+
+    ## 参考文献
+
+
+    - Bai, J., Song, Q., Cheng, G., 2020a. 稀疏深度神经网络自适应变分贝叶斯推断. arXiv:1910.04355.
+
+    - Bai, J., Song, Q., Cheng, G., 2020b. 具有理论保证的稀疏深度学习高效变分推断. In: 神经信息处理系统进展. pp.
+    466–476.
+
+    - Bauer, B., Kohler, M., 2019. 深度学习作为非参数回归中维度灾难补救方法的探讨. Ann. Statist. 47 (4),
+    2261–2285.
+
+    - Chen, T., Fox, E., Guestrin, C., 2014. 随机梯度哈密顿蒙特卡洛. In: 国际机器学习会议. pp. 1683–1691.
+
+    - Chérief-Abdellatif, B.-E., 2020. 稀疏深度学习中变分推断的收敛速率. In: Illi, H.D., Singh, A.
+    (Eds.), 第37届国际机器学习会议论文集. In: 机器学习研究论文集, vol. 119. PMLR, pp. 1831–1842.
+
+    - Denli, M., Shakibi, B., Dinh, L., Ranzato, M., de Freitas, N., 2013. 深度学习中的参数预测.
+    In: 第26届神经信息处理系统会议论文集 – 第2卷. Curran Associates Inc., Red Hook, NY, USA, pp. 2148–2156.
+
+    - Dettmers, T., Zettlemoyer, L., 2019. 从零开始构建稀疏网络：在不损失性能的情况下加速训练. arXiv预印本 arXiv:1907.04840.
+
+    - Green, P.J., 1995. 可逆跳马尔可夫链蒙特卡洛计算与贝叶斯模型确定. Biometrika 82 (4), 711–732.
+
+    - Guo, C., Pleiss, G., Sun, Y., Weinberger, K.Q., 2017. 现代神经网络校准探讨. In: 第34届国际机器学习会议论文集
+    – 第70卷. In: ICML’17. JMLR.org, pp. 1321–1330.
+
+    - He, K., Zhang, X., Ren, S., Sun, J., 2016. 图像识别的深度残差学习. In: 2016年IEEE计算机视觉与模式识别会议(CVPR).
+    pp. 770–778.
+
+    - Krizhevsky, A., Hinton, G., et al., 2009. 从小图像中学习多层特征. 技术报告, Citeseer.
+
+    - Lee, J., Hunt, M., Feng, J., Triebel, R., 2020. 稀疏信息形式中神经网络模型不确定性估计. In: Illi,
+    H.D., Singh, A. (Eds.), 第37届国际机器学习会议论文集. 第119卷. PMLR, pp. 5702–5713.
+
+    - Liang, F., Li, Q., Zhou, L., 2018. 用于药物敏感基因选择的贝叶斯神经网络. J. Amer. Statist. Assoc.
+    113 (523), 955–972.
+
+    - Liang, F., Song, Q., Yu, K., 2013. 高维广义线性模型的贝叶斯子集建模. J. Amer. Statist. Assoc.
+    108, 589–606.
+
+    - Liang, F., Zhang, J., 2008. 使用随机近似估计假发现率. Biometrika 95, 961–977.
+
+    - Lin, T., Stich, S.U., Barba, L., Dmitriev, D., Jaggi, M., 2020. 带反馈的动态模型剪枝.
+    In: 国际学习表征会议.
+
+    - Mostafa, H., Wang, X., 2019. 通过动态稀疏重参数化实现深度卷积神经网络的参数高效训练. In: 国际机器学习会议. pp.
+    4646–4655.
+
+    - Polson, N., Ročková, V., 2018. 稀疏深度学习的后验集中. In: 神经信息处理系统进展. pp. 930–941.
+
+    - Pourzanjani, A.A., Jiang, R.M., Petzold, L.R., 2017. 贝叶斯推断中神经网络可辨识性的改进. In:
+    NIPS贝叶斯深度学习研讨会.
+
+    - Schmidt-Hieber, J., 2020. 使用带ReLU激活函数的深度神经网络进行非参数回归. Ann. Statist. 48 (4), 1875–1897.
+
+    - Scott, J.G., Berger, J.O., et al., 2010. 变量选择问题中的贝叶斯和经验贝叶斯多重性调整. Ann. Statist.
+    38 (5), 2587–2619.
+
+    - Song, Q., Sun, Y., Ye, M., Liang, F., 2020. 大规模贝叶斯变量选择的扩展随机梯度MCMC. Biometrika
+    107 (4), 997–1004.
+
+    - Sun, Y., Song, Q., Liang, F., 2021. 一致稀疏深度学习：理论与计算. J. Amer. Statist. Assoc.
+    http://dx.doi.org/10.1080/01621459.2021.1895175, 即将发表.
+
+    - Wang, Y., Ročková, V., 2020. 稀疏深度学习的不确定性量化. In: AISTATS.
+
+
+    '
+  merge: 1
