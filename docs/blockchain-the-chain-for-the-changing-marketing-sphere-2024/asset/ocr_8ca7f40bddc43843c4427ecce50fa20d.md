@@ -1,0 +1,13 @@
+compete with larger corporations in the upcoming years. Among the most emerging technologies in the foreseeable future is blockchain, which trails only machine learning and AI in terms of adoption. From manufacturing to agriculture, finance, insurance, and many more industries, blockchain has helped practically every sector where it has been used.
+
+It is clear from the review of the potential advantages of using blockchain technology for the marketing sector that it is a wise bet. Because blockchain is decentralized, safe, and private by default, it is by far the finest technology for marketing. The major goal of a blockchain marketing company will be to integrate such benefits with its present business models providing growth opportunities. Users may accept responsibility for personal information thanks to blockchain technology, which further makes customer engagement activities more private. Also, with the assistance of blockchain marketing solutions, businesses might look for hypothetical improvements in the ability to battle scams such as click scams. Companies might reduce the expense of existing advertising campaigns and add solid value benefits by using distributed ledger technology.
+
+# References
+
++   Erragcha, N., & Babay, H. (2021). Blockchain Towards Decentralized Digital Marketing. In *Blockchain Technology and Applications for Digital Marketing* (pp. 32-51). IGI Global.
++   Makridakis, S., Polemitis, A., Giaglis, G., & Louca, S. (2018). Blockchain: the next breakthrough in the rapid progress of AI. *Artificial Intelligence-Emerging Trends and Applications, 10*.
++   Rabby, F., Chimhundu, R., & Hassan, R. (2022). Blockchain technology transforms digital marketing by growing consumer trust. *Transformations Through Blockchain Technology*, 265-289.
++   Schulze, T., Seebacher, S., & Hunke, F. (2020, February). Conceptualizing the role of blockchain technology in the digital platform business. In *International Conference on Exploring Services Science* (pp. 150-163). Springer, Cham.
++   Sharma, S., Kumar, A., Bhushan, M., Goyal, N., & Iyer, S. S. (2021). Is Blockchain Technology Secure to Work On? In *Blockchain and AI Technology in the Industrial Internet of Things* (pp. 66-80). IGI Global.
++   Singh, A. (2021). Big Data Analytics for Improved Accuracy, Efficiency, and Decision Making in Digital Marketing. *IGI Global*. https://doi.org/10.4018/978-1-7998-7231-3.
++   Singh, A., Bansal, R. & Sharma, S. (2022). *Big Data: A Road Map for Successful Digital Marketing*. Berlin, Boston: De Gruyter. https://doi.org/10.1515/9783110733716.

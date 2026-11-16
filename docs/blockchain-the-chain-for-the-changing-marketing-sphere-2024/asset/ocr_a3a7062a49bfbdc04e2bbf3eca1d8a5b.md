@@ -1,0 +1,7 @@
+contracts, which enable us to automate and track specific state transitions, is supported by blockchain technology. Patients can consent to share records between providers, and providers can add a new description for a particular patient. To manage identity verification, it uses a DNS-like implementation that maps the user’s Ethereum address to an already existing and widely accepted form of identification like their name or social security number.
+
+Peer nodes in the MedChain network (Shen, Guo, & Yang, 2019) fall into two categories: edge and super friends (Figure 11). Servers from smaller providers, like community clinics, that only store the actual patient data make up the edge nodes. There are two subnetworks within it: a directory service and a blockchain service network with various information derived from healthcare data. A super peer’s resources are divided into three modules: healthcare database, directory service, and blockchain service. The blockchain server maintains a complete blockchain for auditing and data integrity verification. The directory server manages data-sharing sessions and keeps track of user healthcare data’s inventory, location, and storage location. Two sub-networks are formed by the two types of servers on all super-peers. The actual patient healthcare information is stored in the final component, HDB.
+
+![](bbox=[0.125, 0.485, 0.885, 0.855])
+
+Figure 11. System Architecture (Shen, Guo, & Yang, 2019).

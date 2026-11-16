@@ -1,0 +1,7 @@
+learning and blockchain-based supply chain management. Participants and a blockchain network are presented as part of the DSCMR mechanism. Users can update and manage all activities in the supply chain. The blockchain-based system stores information about the system's users—suppliers, manufacturers, distributors, pharmacies, hospitals, doctors, and patients. The drug, raw material, order, and record repository are DSCMR systems' assets. A client application-based front-end is provided to each system user, allowing them to conduct transactions and communicate with the blockchain network quickly. The client application enables all relevant system participants to monitor the status of the drug delivery throughout the entire DSCMR procedure. On the other hand, a data storage pool, also known as a stored-off blockchain, is a separate data library.
+
+![](bbox=[0.13, 0.365, 0.87, 0.71])
+
+Figure 15. System Architecture (Abbas et al., 2020).
+
+To coordinate food tracking throughout the agriculture supply chain, the proposed model (Casado-Vara et al., 2018) uses a MAS, a smart contract, and the blockchain. The producer and importer are at the beginning of the current model. The products and data of these two supply chain members are sent to the next layer of the chain. The export, the processor, and the wholesaler are located at this subsequent layer (Figure 15). The essential products that are received by the supply chain are processed in this middle layer. The retailer

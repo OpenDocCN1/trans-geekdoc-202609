@@ -1,0 +1,11 @@
+results and outcomes. Better and more returns on their invested capital are also required by these business enterprises, companies, and organizations.
+
++   Better customer support: Customer segmentation is done by different business firms and organizations to understand the tastes and demands of their customers by segmenting them into different similar and relevant groups. This process helps business companies and business organizations to better understand the needs of their customer bases and customers. Thus, this method helps business organizations to enhance their efficient operations and provide better customer service and customer support to their customers. This is a point of providing better and greater customer satisfaction (Alkhayrat, Aljnidi & Aljoumaa, 2020).
+
++   Customization: The idea of products and services being customized or the content of the business organization being personalized helps brand loyalty and the brand image of that particular distinctive organization increases even more.
+
++   New products: A business organization or a business company gets the opportunity of producing new products or launching services by customer segmentation. The evaluation and the assessment of customer behaviors help them to do so.
+
++   Premium services for some customers: The method or process of customer segmentation is done by business companies, enterprises, and organizations by evaluating and assessing various customer behaviors. The assessment is done based on the customers who use their services and buy their products. The business organization can create premium services or launch a range of special products for such customers and increase the brand loyalty and sales of the business organization as well (Taneja et al., 2022a, 2022b)
+
+Several types and various products determine different criteria for the segmentation of the customers of a certain business company or business organization. Many parameters are distinct from each other, and they are assessed for undertaking the process of customer segmentation. The process of customer segmentation is performed by undertaking different surveys and collecting pieces of data to evaluate and assess them (Singh, 2021; Singh, Bansal and Sharma 2022).

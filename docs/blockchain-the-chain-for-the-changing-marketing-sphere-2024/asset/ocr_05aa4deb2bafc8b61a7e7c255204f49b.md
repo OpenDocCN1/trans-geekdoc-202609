@@ -1,0 +1,25 @@
+Fernández-Caramés, Tiago M., Oscar Blanco-Novoa, Manuel Suárez-Albela, and Paula Fraga-Lamas. “A UAV and blockchain-based system for industry 4.0 inventory and traceability applications.” Multidisciplinary digital publishing Institute proceedings 4, no. 1 (2018): 26.
+
+Ferreira, Célio Márcio Soares, Ricardo Augusto Rabelo Oliveira, Jorge Sá Silva, and Carlos Frederico Marcelo da Cunha Cavalcanti. “Blockchain for a machine-to-machine interaction in industry 4.0.” Blockchain Technology for Industry 4.0: Secure, Decentralized, Distributed and Trusted Industry Environment (2020): 99-116.
+
+Fu, Bailu, Zhan Shu, and Xiaogang Liu. “Blockchain enhanced emission trading framework in fashion apparel manufacturing industry.” Sustainability 10, no. 4 (2018): 1105.
+
+Haleem, Abid, and Mohd Javaid. “Medical 4.0 and its role in healthcare during COVID-19 pandemic: A review.” Journal of Industrial Integration and Management 5, no. 04 (2020): 531-545.
+
+Hathaliya, Jigna, Priyanka Sharma, Sudeep Tanwar, and Rajesh Gupta. “Blockchain-based remote patient monitoring in healthcare 4.0.” In 2019 IEEE 9th international conference on advanced computing (IACC), pp. 87-91. IEEE, 2019.
+
+Holland, Martin, Josip Stjepandić, and Christopher Nigischer. “Intellectual property protection of 3D print supply chain with blockchain technology.” In 2018 IEEE International Conference on Engineering, Technology, and Innovation (ICE/ITMC), pp. 1-8. IEEE, 2018.
+
+Hu, Yingbai, Zhijun Li, Guanglin Li, Peijiang Yuan, Chenguang Yang, and Rong Song. “Development of sensory-motor fusion-based manipulation and grasping control for a robotic hand-eye system.” IEEE Transactions on Systems, Man, and Cybernetics: Systems 47, no. 7 (2016): 1169-1180.
+
+Huang, Junjin, Linghe Kong, Guihai Chen, Min-You Wu, Xue Liu, and Peng Zeng. “Towards secure industrial IoT: Blockchain system with credit-based consensus mechanism.” IEEE Transactions on Industrial Informatics 15, no. 6 (2019): 3680-3689.
+
+Javaid, Mohd, Abid Haleem, Ravi Pratap Singh, Shanay Rab, and Rajiv Suman. “Exploring impact and features of machine vision for progressive industry 4.0 culture.” Sensors International 3 (2022): 100132.
+
+Kapitonov, Aleksandr, Ivan Berman, Sergey Lonshakov, and Aleksandr Krupenkin. “Blockchain-based protocol for economical communication in industry 4.0.” In 2018 Crypto Valley conference on blockchain technology (CVCBT), pp. 41-44. IEEE, 2018.
+
+Khan, Shahbaz, Rubeena Singh, and Kirti. “Critical factors for blockchain technology implementation: A supply chain perspective.” Journal of Industrial Integration and Management 7, no. 04 (2022): 479-492.
+
+Kuhi, Kristjan, Kati Kaare, and Ott Koppel. “Ensuring performance measurement integrity in logistics using blockchain.” In 2018 IEEE international conference on service operations and Logistics, and Informatics (SOLI), pp. 256-261. IEEE, 2018.
+
+Leng, Jiewu, and Pingyu Jiang. “Evaluation across and within collaborative manufacturing networks: a comparison of manufacturers’ interactions and attributes.” International Journal of Production Research 56, no. 15 (2018): 5131-5146.
