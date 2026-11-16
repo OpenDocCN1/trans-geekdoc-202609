@@ -1,0 +1,7 @@
+execution on the data it was trained with, while validation accuracy measures its performance on a separate, unseen dataset. Ideally, these lines should be closely aligned. Several scenarios can be interpreted from the graph. Similar training and validation accuracy suggest that the model is generalizable and capable of making accurate predictions on new data, representing a positive outcome.
+
+Training accuracy exceeding validation accuracy might indicate overfitting. This suggests that during training, the model operates effectively with training data but struggles with unseen data. Addressing this issue might require adjustments to the model or the inclusion of more training data. Figure 2.7 shows the confusion matrix for the training stage, and Figure 2.8 shows the testing stage's confusion matrix. The model generally performs well, with high accuracy across most categories. However, it shows some difficulty in distinguishing subtle erosion from normal tissue and might confuse polyps with dysplasia. Gastritis is consistently identified, while hiatal hernia occasionally gets mistakes for polyps. The model correctly identifies cancer with only
+
+![](bbox=[0.125, 0.435, 0.875, 0.885])
+
+FIGURE 2.7 Training phase confusion matrix.

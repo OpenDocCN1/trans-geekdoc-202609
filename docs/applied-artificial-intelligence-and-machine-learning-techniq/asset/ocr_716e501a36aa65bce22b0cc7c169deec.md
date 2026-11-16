@@ -1,0 +1,9 @@
+# 7 Acoustic-Based Parkinson's Disease Diagnosis Using Transfer Learning Combining VGG16 with Light Gradient Boosting Machine (LGBM) Classifier
+
+Shibina V and Thasleema T M
+
+# 7.1 INTRODUCTION
+
+Parkinson's disease (PD) is a chronic neurological impairment that progresses over time, mainly influencing motor control. The condition arises from the gradual destruction of dopamine-producing neurons in the substantia nigra, which is a region of the brain critical for mobility coordination. Patients commonly experience indications like tremors, slowness of movement, muscle rigidity, speech disorder, and balance problems. In addition to these motor symptoms, non-motor issues like sleep problems, cognitive decline, and mood disturbances are prevalent [1, 2]. Speaking difficulties are frequently among the first indications of Parkinson's disease. Research has indicated that 90% of PD patients have some degree of vocal dysfunction. PD impairs muscular function and voluntary movement; it significantly impacts the vocal system [3]. Speech disorders can include decreased vocal tract volume and tongue flexibility, decreased pitch range and intensity of speaking, poor speech quality, and untimely pauses. As a result, it makes sense and is a crucial topic to predict Parkinson's disease via speech cues, particularly during its initial phases [4]. Automated speech analysis has been explored in recent studies to diagnose Parkinson's disease. Deep learning (DL) and machine learning (ML) methods have been applied to verbal analytics to identify and monitor PD [5].
+
+PD symptoms can differ from one individual to another. Researchers have developed several imaging and signaling tests to detect PD. The examinations for PD are diffusion tensor imaging (DA Tscan) and magnetic resonance imaging (MRI) [6]. Though biomarkers, genes, and neuroimaging have advanced, the medical detection
