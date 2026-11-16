@@ -1,0 +1,16 @@
+# EEG-based emotion recognition: Leveraging CNNs for precision
+
+Ayushi Kotwal
+Department of Computer Science & IT, University of Jammu, Jammu, J&K, India
+
+Vishal Gupta
+Model Institute of Engineering and Technology, Jammu, J&K, India
+
+Meetal Verma, Jatinder Manhas & Vinod Sharma
+Department of Computer Science & IT, University of Jammu, Jammu, J&K, India
+
+ABSTRACT: Understanding human emotions is essential in recognizing cognitive and emotional functions. A lot of effort has been paid to emotion recognition as a crucial component of psychological study and interaction between humans and computers. Since its non-invasive design and great temporal resolution, electroencephalogram (EEG) signals have become a promising tool for emotion classification. The proposed methodology of emotion classification covers preprocessing of EEG data, extracting significant characteristics, and designing a CNN architecture. CNNs has the tendency to automatically learn key features, perform excellent in tasks identical to the recognition of emotions using EEG signals. They are effectively suited for dealing with the spatial and hierarchical nature of EEG data. The effectiveness and viability of the proposed approach are demonstrated by the experimental findings. The CNN model demonstrates its promise for real-time emotion identification applications by achieving excellent accuracy in its classification. The proposed structure provides fresh perspectives on human affective states and emotion classification. The approach undertaken for the study can be extended with its applications spanning from human-computer interaction systems to mental health evaluation.
+
+# 1 INTRODUCTION
+
+Affective computing primarily addresses the issue of computer systems helped in correctly processing, identifying, and knowing how humans show their mental and emotional intelligence. This covers the perception (or recognition) of emotions as a significant challenge. Emotion is a complicated psychological state that is connected to both physiological progresses and bodily movements [Canon et al. 1927]. EEG is a suitable method for obtaining information about human emotions, and it can be used to directly identify emotional states and investigate emotional cognitive processes. From the standpoint of potential applications, EEG-based emotion identification technology has spread to several industries, including safe driving, healthcare, educational institutions, entertainment, retail, and the military [Suhaimi et al. 2020]. The recently developed deep learning techniques might offer a way to classify EEG state-of-data with excellent accuracy and higher-level domain-invariant representations. Various models of deep learning, including recurrent neural networks [Chowdary et al. 2022], restricted Boltzmann machines (RBMs) [Gao et al. 2015], convolutional neural network models [Yang et al. 2019], long short-term memory models [Alhagry et al. 2017], deep belief networks [Zheng et al.], convolutional recurrent neural network model [Chen et al. 2020], transfer learning models [Demir et al. 2020], etc. are employed to recognize emotions using EEG data. To use ResNet [Asghar et al. 2020] and VGG16

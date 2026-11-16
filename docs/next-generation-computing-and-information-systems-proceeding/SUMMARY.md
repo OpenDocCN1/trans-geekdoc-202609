@@ -1,0 +1,2 @@
++   [下一代计算与信息系统：第2届国际下一代计算与信息系统会议论文集（ICNGCIS 2023），2023年12月18-19日，印度查谟和克什米尔查谟](README.md)
++   [下一代计算与信息系统：第2届国际下一代计算与信息系统会议论文集（ICNGCIS 2023），2023年12月18-19日，印度查谟和克什米尔查谟](next-generation-computing-and-information-systems-proceeding.md)

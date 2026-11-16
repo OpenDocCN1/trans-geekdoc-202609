@@ -1,0 +1,23 @@
+predictive accuracy of our models. These models demonstrated their ability to provide accurate and reliable estimates of ACT scores.
+
+# 5 CONCLUSION
+
+Our research offers valuable insights into the prediction of ACT scores based on weather and lifestyle features. The exceptional performance of the Random Forest and XGBoost models underscores the potential of ensemble methods in capturing complex patterns within the data. The findings presented in this study contribute to the ongoing efforts to optimize asthma management and personalized healthcare. The implications extend beyond the limitations of asthma control and provide a template to use the potential of machine learning in the management of lifestyle diseases. As we navigate the ever-evolving landscape of healthcare and data-driven solutions, the research presented here assists in improving patient outcomes and enhancing the quality of healthcare delivery. We hope that our work inspires further research and innovation in this field, ultimately leading to more effective asthma management, reduced healthcare costs, and improved patient well-being.
+
+# REFERENCES
+
++   Amaral JLM, Lopes AJ, Veiga J, Faria ACD, Melo PL (2017) High-accuracy detection of airway obstruction in asthma using machine learning algorithms and forced oscillation measurements. Comput Methods Programs Biomed 144:113–125.
++   Bansal, K., Bathla, R. K., Kumar, Y. (2022). Deep transfer learning techniques with hybrid optimization in early prediction and diagnosis of different types of oral cancer. Soft Computing 26(21), 11153–11184.
++   Bhardwaj, P., Bhandari, G., Kumar, Y., Gupta, S. (2022). An Investigational Approach for the Prediction of Gastric Cancer Using Artificial Intelligence Techniques: A Systematic Review. Archives of Computational Methods in Engineering 1–22.
++   Bose S, Kenyon CC, Masino AJ (2021) Personalized prediction of early childhood asthma persistence: a machine learning approach. PLoS ONE 16(3):e0247784.
++   Haque, R., Ho, S. B., Chai, I., Abdullah, A. (2021). Optimised deep neural network model to predict asthma exacerbation based on personalised weather triggers. F1000Research. 10:911.
++   Kaur, I., Sandhu, A. K., Kumar, Y. (2022). Artificial Intelligence Techniques for Predictive Modeling of Vector-Borne Diseases and its Pathogens: A Systematic Review. Archives of Computational Methods in Engineering 1–31.
++   Kaur, K., Singh, C., Kumar, Y. (2023). Diagnosis and Detection of Congenital Diseases in New-Borns or Fetuses Using Artificial Intelligence Techniques: A Systematic Review. Archives of Computational Methods in Engineering.
++   Koul, A., Bawa, R. K., Kumar, Y. (2022). Artificial intelligence techniques to predict the airway disorders illness: a systematic review. Archives of Computational Methods in Engineering 1–34.
++   Kumar, Y., Kaur, I., Mishra, S. (2023). Foodborne Disease Symptoms, Diagnostics, and Predictions Using Artificial Intelligence-Based Learning Approaches: A Systematic Review. Archives of Computational Methods in Engineering 0123456789.
++   Modi, K., Singh, I., Kumar, Y. (2023). A Comprehensive Analysis of Artificial Intelligence Techniques for the Prediction and Prognosis of Lifestyle Diseases. Archives of Computational Methods in Engineering 0123456789.
++   Nathan, R. A., Sorkness, C. A., Kosinski, M., Schatz, M., Li, J. T., Marcus, P., Murray, J. J., Pendergraft, T. B. (2004). Development of the asthma control test: a survey for assessing asthma control. The Journal of allergy and clinical immunology 113(1), 59–65.
++   Singh, J., Sandhu, J. K., Kumar, Y. (2023). An Analysis of Detection and Diagnosis of Different Classes of Skin Diseases Using Artificial Intelligence-Based Learning Approaches with Hyper Parameters. Archives of Computational Methods in Engineering 0123456789.
++   Sisodia, P. S., Ameta, G. K., Kumar, Y., Chaplot, N. (2023). A Review of Deep Transfer Learning Approaches for Class-Wise Prediction of Alzheimer’s Disease Using MRI Images. Archives of Computational Methods in Engineering 1–21.
++   Tomita K, Nagao R, Touge H, Ikeuchi T, Sano H, Yamasaki A, Tohda Y (2019). Deep learning facilitates the diagnosis of adult asthma. Allergol Int 68(4):456–461.
++   Vos, T. (2020). Global burden of 369 diseases and injuries in 204 countries and territories, 1990–2019: a systematic analysis for the Global Burden of Disease Study 2019. Lancet. 396(10258):1204–22.
