@@ -1,0 +1,11 @@
+# # Suggestion of Practical Predictive
+
+Effect Based on the model predictive effect constructed by the two kinds of forecasting factors discussed in this paper, the forecasting model of single factor construction is better for the prediction with less than 1000 m visibility. The forecasting model of multi-factor construction is more stable than the forecasting effect of more than 2000 m. So here at the same time use these two models. And taking into account the continuity of the change in visibility, we choose the model using the forecast factor of the past 12 h to make the actual forecast.
+
+Here we select Urumqi Airport December 31, 2016 visibility to predict. The day the airport visibility changes greatly, before 11 hours to maintain more than 1000 m, then quickly decreased to maintain two hours of 100 m, then 16:00 suddenly improved to 2000 m, and then down to maintain at 100 m, see Figure 4. The low visibility process includes persistent low visibility and a sudden improvement in visibility. This has a high test of the ability of the model to predict.
+
+It can be seen from the model predictions that both models can predict the trend of decreasing the visibility and the turn of the day. When the real visibility is greater than 1500 m, the prediction error of the multi-factor model is relatively small. When the dominant visibility is less than 1000 m, the prediction effect of the single factor is relatively better, especially when the long-term continuous visibility is less than 300 m, the average absolute error of the visibility of the single factor is 86 m. Therefore, by using the two types of forecasting models, it is possible to provide a quantitative reference for the forecasting staff to predict the visibility. However, it can be seen from the simulation of the actual case that the depth learning model has a certain hysteresis when the dominant visibility is good or worse, and the error increases obviously when the visibility is greater than 1500 m.
+
+# # CONCLUSIONS
+
+Due to the high incidence of low visibility weather, the impact of the system is more complex. Especially the forecasts of low visibility of the starting and ending time are more difficult. So how to as much as possible predict low visibility weather and dissipation of the time are the keys of Urumqi Airport winter service guarantee.

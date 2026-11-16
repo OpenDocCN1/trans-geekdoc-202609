@@ -1,0 +1,17 @@
+# Table 4. Classification accuracies with different parameters during fine-tuning of the ResNet. The numbers inside parenthesis indicate batch size and number of iterations.
+
+| Networks | label1 | label2 | label3 | label4 | label5 | label6 | label7 | label8 | label9 | overall |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| ResNet (16,2496) | 90.91% | 88.89% | 100% | 100% | 96.88% | 100% | 90.28% | 88.20% | 97.55% | 94.98% |
+| **ResNet (16,4992)** | **98.18%** | **98.77%** | **100%** | **98.62%** | **96.88%** | **100%** | **96.53%** | **88.82%** | **98.77%** | **97.19%** |
+| ResNet (16,9984) | 98.18% | 97.33% | 100% | 98.62% | 96.88% | 100% | 97.22% | 86.96% | 98.77% | 96.94% |
+| ResNet (32,2496) | 97.27% | 95.06% | 100% | 97.93% | 96.88% | 100% | 95.14% | 86.34% | 99.39% | 96.34% |
+| ResNet (32,4992) | 97.27% | 95.06% | 100% | 97.24% | 96.88% | 100% | 96.53% | 86.96% | 99.39% | 96.51% |
+| ResNet (32,9984) | 96.36% | 96.30% | 100% | 99.31% | 96.88% | 100% | 94.44% | 88.20% | 98.77% | 96.60% |
+| ResNet (64,2496) | 93.64% | 93.83% | 100% | 97.24% | 96.88% | 100% | 94.44% | 87.58% | 99.39% | 95.92% |
+| ResNet (64,4992) | 94.55% | 95.29% | 100% | 96.55% | 95.83% | 100% | 95.83% | 86.96% | 99.39% | 95.83% |
+| ResNet (64,9984) | 95.45% | 93.83% | 100% | 97.93% | 96.88% | 100% | 94.44% | 87.58% | 99.39% | 96.17% |
+
+ResNet50 has 177 layers if the layers for each building block and connection are calculated. In this experiment, the last three layers of ResNet were modified to a fully connected layer (denoted as “fc”), a softmax layer, and a classification layer, and the fully connected layer owns 9 neurons. The structure was changed by freezing the weights of a certain number of layers in the network by setting the learning rate in those layers to zero. During training, the parameters of the frozen layers are not updated. Full training and fine-tuning are defined by the number of training layers, i.e., full training (1–“fc”), fine-tuning (37–“fc”, 79–“fc”, 111–“fc”, 141– “fc”, 163–“fc”). The accuracy and training time of different network structure are presented in Table 5. At first, the batch size and 4992 iterations were combined; the initial learning rate was set to 0.001 and dropped by a factor of 0.1 every 2496 iterations. In order to get more convincing conclusions, ResNet (16, 9984), which gets the second place in Table 4, was also used to execute the experiments.
+
+In Table 5, the accuracy and training time of different network structures are presented. In two cases, i.e., the 4992 iterations and 9984 iterations of ResNet, the accuracy of the model from the 37 layer fine-tuning structure are higher than that of the full training model. In the case where the number of iterations is 4992, the accuracy of the model from the 79 layer fine-tuning structure is equal to that of the full training model.The fonal column of the Table 5 represents the training time of the corresponding network, and it is clear that the training time of the fine-tuning models is greatly lowered than the full training model. Because the gradients of the frozen layers do not need to be computed, freezing the weights of initial layers can speed up network training. We observe that the moderate fine-tuning models (37–“fc”, 79–“fc”, 111–“fc”) always led to a performance superior or approximately equal to the full training models. Thus, we suggest that, for practical application,

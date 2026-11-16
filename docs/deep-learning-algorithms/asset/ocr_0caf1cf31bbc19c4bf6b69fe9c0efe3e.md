@@ -1,0 +1,7 @@
+platforms; deep learning for hyperspectral data classification through exponential momentum deep convolution neural networks; and ensemble network architecture for deep reinforcement learning.
+
+Section 2 focuses on deep learning applications in biology, describing fish detection using deep learning; deep learning identification of tomato leaf disease; deep learning for plant identification in natural environment; and applying deep learning models to mouse behavior recognition.
+
+Section 3 focuses on deep learning applications in medicine, describing application of deep learning in neuroradiology: brain hemorrhage classification using transfer learning; a review of the application of deep learning in brachytherapy; exploring deep learning and transfer learning for colonic polyp classification; and deep learning algorithm for brain-computer interface.
+
+Section 4 focuses on deep learning applications in pattern recognition systems, describing application of deep learning in airport visibility forecast; hierarchical representations feature deep learning for face recognition; review of research on text sentiment analysis based on deep learning; classifying hand written digits with deep learning; and bitcoin price prediction based on deep learning methods.

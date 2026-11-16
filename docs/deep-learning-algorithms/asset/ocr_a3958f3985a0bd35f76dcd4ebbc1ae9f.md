@@ -1,0 +1,13 @@
+on the prior knowledge. Such manner directly extends the CNN network training time and the feature extraction time [18, 19]. Besides, the traditional CNN network has too many parameters, which is difficult to initialize. And the training algorithm based on gradient descend technique may lead to entrapment in local optimum and gradient dispersion. Moreover, there is little study on the convergence rate and smoothness improvement of CNN at present.
+
+In this paper, we propose an improved hyperspectral data classification framework based on exponential momentum deep convolution neural network (EM-CNN). And an innovative method for updating parameters of the CNN on the basis of exponential momentum gradient descendent is proposed aiming at the problem of gradient diffusion of deep network.
+
+The rest of the paper is organized into four sections. Section 2 describes the feature learning and deep learning. The proposed EM-CNN framework is introduced in Section 3, while Section 4 details the new way of exponential momentum gradient descent method, which yields the highest accuracy compared with homologous parameters momentum updating methods. Section 5 is the experiment results. Section 6 summarizes the results and draws a general conclusion.
+
+# FEATURE LEARNING
+
+Feature extraction is necessary and useful in the real-world for that the data such as images, videos, and sensor measurement data is usually redundant, highly variable, and complex. Traditional handcrafted feature extraction algorithms are time-consuming and laborious and usually rely on the prior knowledge of certain visual task. In contrast, feature learning allows a machine to both learn at a specific task and learn the features themselves.
+
+Deep learning is part of a broader family of machine learning based on learning representations of data. It attempts to model high-level abstractions in data by using a deep graph with multiple processing layers, composed of multiple linear and nonlinear transformations. Typical deep learning models include autoencoder (AE) [20], deep restricted Boltzmann machine (DRBM) [21], deep Boltzmann machines (DBM) [22], deep belief networks (DBN) [23], stacked autoencoder (SAE) [24], and deep convolutional neural networks (DCNN) [25].
+
+The deep convolutional neural network (DCNN), a kind of neural network, is an effective method for feature extraction, which can potentially lead to

@@ -1,0 +1,11 @@
+# Machine Learning Methods
+
+The core of sentiment analysis based on machine learning is effective feature extraction, and then using classifiers for emotion classification. In 2002, Pang [6] and others first used machine learning algorithms for sentiment classification tasks, and proposed Naive Bayes (NB), Maximum Entropy (ME), and Support Vector Machine (SVM) and other models for sentiment classification of text. Here only introduces an algorithm, taking the Weibo comment of an event as an example. The NB algorithm is that given several sentiment categories, it is assumed that the target data is independent between several sentiments, and then input text data to find the maximum probability of the target data appearing in each text category, which is the corresponding text categories to solve text classification problems; In recent years, machine learning-based sentiment classification models have been widely studied, which has led to rapid development of machine learning in sentiment analysis. The machine learning-based method runs faster, but still requires a lot of manual annotation and other operations. High-quality data integration is costly and time-consuming. Its classification performance is also limited by the design of complex features, and has poor adaptability in different fields.
+
+# INTRODUCTION TO TEXT SENTIMENT ANALYSIS BASED ON DEEP LEARNING
+
+In 2006, the concept of deep learning was proposed [7], and in 2011, Socher [8] introduced a model based on recursive autoencoders to perform sentiment analysis on movie evaluation, and the effect is more obvious than traditional methods. In recent years, CNN, RNN, LSTM and other methods have been gradually applied to sentiment analysis, and their effects have been significant. This chapter will summarize the characteristics of deep learning methods and introduce the characteristics of several deep neural networks and their applicability in sentiment analysis of texts.
+
+# Features of Deep Learning Methods
+
+Compared with the sentiment dictionary method and machine learning method, deep learning method is not perfect. It also has advantages and disadvantages for different types of text. In order to make it play a better role, the following summarizes and discusses its advantages and disadvantages.

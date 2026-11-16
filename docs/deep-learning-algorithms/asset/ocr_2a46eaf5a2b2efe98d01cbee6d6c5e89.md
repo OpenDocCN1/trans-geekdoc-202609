@@ -1,0 +1,12 @@
+# REFERENCES
+
++   1. R. Chaerani and R. E. Voorrips, “Tomato early blight (Alternaria solani): Te pathogen, genetics, and breeding for resistance,” Journal of General Plant Pathology, vol. 72, no. 6, pp. 335–347, 2006.
++   2. A. M. Dickey, L. S. Osborne, and C. L. Mckenzie, “Papaya (Carica papaya, Brassicales: Caricaceae) is not a host plant of tomato yellow leaf curl virus (TYLCV; family Geminiviridae, genus Begomovirus),” Florida Entomologist, vol. 95, no. 1, pp. 211–213, 2012.
++   3. G. Wei, L. Baoju, S. Yanxia, and X. Xuewen, “Studies on pathogenicity differentiation of corynespora cassiicola isolates, against cucumber, tomato and eggplant,” Acta Horticulturae Sinica, vol. 38, no. 3, pp. 465–470, 2011.
++   4. P. Lindhout, W. Korta, M. Cislislk, I. Vos, and T. Gerlagh, “Further identification of races of Cladosporium fulvum (Fulvia fulva) on tomato originating from the Netherlands France and Poland,” Netherlands Journal of Plant Pathology, vol. 95, no. 3, pp. 143–148, 1989.
++   5. K. Kubota, S. Tsuda, A. Tamai, and T. Meshi, “Tomato mosaic virus replication protein suppresses virus-targeted posttranscriptional gene silencing,” Journal of Virology, vol. 77, no. 20, pp. 11016–11026, 2003.
++   6. M. Tian, B. Benedetti, and S. Kamoun, “A second Kazallike protease inhibitor from Phytophthora infestans inhibits and interacts with the apoplastic pathogenesis-related protease P69B of tomato,” Plant Physiology, vol. 138, no. 3, pp. 1785–1793, 2005.
++   7. L. E. Blum, “Reduction of incidence and severity of Septoria lycopersici leaf spot of tomato with bacteria and yeasts,” Ci^encia Rural, vol. 30, no. 5, pp. 761–765, 2000.
++   8. E. A. Chatzivasiliaedis and M. W. Sabelis, “Toxicity of methyl ketones from tomato trichomes to Tetranychus urticae Koch,” Experimental and Applied Acarology, vol. 21, no. 6-7, pp. 473– 484, 1997.
++   9. M. Anthimopoulos, S. Christodoulidis, L. Ebner, A. Christe, and S. Mougiakakou, “Lung Pattern Classification for Interstitial Lung Diseases Using a Deep Convolutional Neural Network,” IEEE Transactions on Medical Imaging, vol. 35, no. 5, pp. 1207–1216, 2016.
++   10. Y. Tang and X. Wu, “Text-independent writer identification via CNN features and joint Bayesian,” in Proceedings of the 15th International Conference on Frontiers in Handwriting Recognition, ICFHR 2016, pp. 566–571, Shenzhen, China, October 2016.
