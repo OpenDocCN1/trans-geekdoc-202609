@@ -1,0 +1,1561 @@
+- pgno: 0
+  md: '# Optimal allocation of renewable energy sources in electrical distribution
+    systems based on technical and economic indices
+
+
+    Mohamed Zellaguiᵃᵇ, Samir Settoulᶜ, and Heba Ahmed Hassanᵈ
+
+
+    ᵃDepartment of Electrical Engineering, University of Quebec, Montreal, QC, Canada,
+    ᵇDepartment of Electrical Engineering, University of Batna 2, Batna, Algeria,
+    ᶜDepartment of Electrotechnic, Mentouri University of Constantine 1, Constantine,
+    Algeria, ᵈElectrical Power Engineering Department, Cairo University, Giza, Egypt
+
+
+    # 6.1 Introduction
+
+
+    # 6.1.1 Motivation
+
+
+    The rapid development of distributed generators (DGs) in different forms and capacities
+    is transforming the image of classical planning of electrical distribution systems
+    (EDSs). Despite the benefits offered by renewable DG technologies, several economic
+    and technical challenges can result from the inappropriate integration of DG into
+    the existing EDS. As a result, optimizing DG preparation is critical to ensuring
+    that the EDS’s output meets the expected power efficiency, voltage stability,
+    power loss reduction, durability, and profitability (Abdmouleh, Gastli, Ben-Brahim,
+    Haouari, & Al-Emadi, 2017; Ehsan & Yang, 2018).
+
+
+    Decentralized power generation from renewable energy sources (REsSs) is a long-term
+    solution that addresses the present environmental threats because of its widespread
+    availability, sustainability, nonpolluting generation, and eco-friendliness. The
+    most widely used renewable DG types are the photovoltaic (PV) and wind turbine
+    (WT) systems, where generation is intermittent.
+
+
+    Because of its universal affordability, reliability, nonpolluting generation,
+    and eco-friendliness, decentralized power generation from REsSs is a long-term
+    approach that addresses current environmental challenges. PV and WT systems, which
+    generate intermittently, are the most commonly used renewable DG forms. DGs are
+    a secure and cost-effective way to deliver power to consumers,'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'and they are usually wired either to the distribution network or on the customer''s
+    premises. As a result, it is critical to plan and distribute DGs optimally, in
+    terms of scale, placement, and form, in order to achieve the expected economic,
+    technological, environmental, and regulatory benefits of power systems (Zubo et
+    al., 2017).
+
+
+    # 6.1.2 Literature review
+
+
+    There are numerous techniques and algorithms to address the optimal DG planning
+    problem. In 2017, determination of optimal location of DG using analytical methods
+    (AMs) was used for the minimization of active power loss (APL), cost of energy
+    losses, and annual investment cost of DG units with a new voltage stability index
+    (VSI) (Kazmi & Shin, 2017). These methods include the particle swarm optimization
+    (PSO) algorithm for various techno-economic and environmental indices (Tanwar
+    & Khatod, 2017), PSO for the maximization of profit and initial investments for
+    distribution companies (Kansal, Tyagi, & Kumar, 2017), symbiotic organism search
+    (SOS) algorithm to minimize APL (Nguyen-Phuoc, Vo-Ngoc, & Tran-The, 2017), flower
+    pollination algorithm (FPA) approach in order to minimize APL and improve the
+    bus voltage (Oda, Abdelsalam, Abdel-Wahab, & El-Saadawi, 2017), krill herd algorithm
+    (KHA) in order to minimize line losses (Chithra Devi, Lakshminarasimman, & Balamurugan,
+    2017), ant lion optimization algorithm (ALOA) to reduce APL and improve voltage
+    deviation (VD) and VSI (Ali, Elazim, & Abdelaziz, 2017), and the applied gray
+    wolf optimizer (GWO) algorithm for the minimization of active and reactive energy
+    indexes (Sultana, Khairuddin, Mokhtar, Qazi, & Sultana, 2017).
+
+
+    In 2018, a new and effective stochastic fractal search algorithm (SFSA) was applied
+    based on three objectives involving APL, VD, and VSI (Nguyen & Ngoc Vo, 2018).
+    Ant lion optimization algorithm (ALOA) was proposed for reduction of APL and VD
+    (Hadidian-Moghaddam, Arabi-Nowdeh, Bigdeli, & Azizian, 2018), and ALOA for reducing
+    APL and consequently maximizing the net saving (Ali, Elazim, & Abdelaziz, 2018).
+    A new AM was applied for the optimization of DG-based wind farms (WFs) considering
+    the voltage stability of the system and minimizing the cost components of WFs
+    (Nikkhah & Rabiee, 2018), grasshopper optimizer algorithm (GOA) to minimize the
+    energy VSI (Sultana et al., 2018), population-based incremental learning (PBIL)
+    algorithm to reduce APL and VD (Grisales-Noreña, Montoya, & Ramos-Paja, 2018),
+    differential learning with biogeography-based optimization (DLBBO) algorithm to
+    minimize the APL (Ravindran & Victoire, 2018), dragonfly algorithm (DA) approach
+    to reduce the APL-based loss sensitivity factors (LSF) (Suresh & Belwin, 2018),
+    a comprehensive teaching-learning-based optimization (CTLBO) technique to minimize
+    APL and maximize VSI (Quadri, Bhowmick, & Joshi, 2018), human opinion dynamics
+    (HOD) technique to minimize APL and VD (Mahajan & Vadherva, 2018), and moth-flame
+    optimization (MFO) algorithm to minimize APL (Tolba, Diab, Tulsky, & Abdelaziz,
+    2018).'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'In 2019, the chaotic differential evolution (CDE) technique was applied for
+    minimizing various objectives including yearly economic loss, maintenance cost,
+    and APL (Kumar, Mandal, & Chakraborty, 2019a). Opposition-based tuned-chaotic
+    differential evolution (OTCDE) technique was applied considering cost index, voltage
+    deviation index, and line flow capacity index (Kumar, Mandal, & Chakraborty, 2019b),
+    and elephant herding optimization (EHO) algorithm for the reduction of APL and
+    reactive power loss (QPL) for all the buses (Prasad, Subbaramaiah, & Sujatha,
+    2019). A discrete-continuous hyper-spherical search (DC-HSS) algorithm was applied
+    to minimize APL in EDS with allocated soft open points and DG (Diaeldin, Abdel
+    Aleem, El-Rafei, Abdelaziz, & Zobaa, 2019), spider monkey optimization (SMO) algorithm
+    to minimize voltage deviation (Deb, Chakraborty, & Deb, 2019), heuristic moment
+    matching (HMM) technique applied for a multiobjective index for minimizing APL
+    and VD (Ehsan, Cheng, & Yang, 2019), moth-flame optimization (MFO) algorithm to
+    reduce the APL and augmented VSI in practical Algerian EDS (Settoul, Zellagui,
+    Abdelaziz, & Chenni, 2019), and MFO algorithm to minimize the ALP (Settoul, Chenni,
+    Hassan, Zellagui, & Kraimia, 2019). Biogeography-based optimization (BBO) algorithm
+    was applied to reduce APL while maintaining voltage harmonic distortion at the
+    limits (Duong, Pham, Nguyen, Doan, & Tran, 2019), unified particle swarm optimization
+    (UPSO) to minimize the APL (Gkaidatzis et al., 2019), and hybrid PSO algorithm
+    considering APL minimization as an objective (Yaprakdal, Baysal, & Anvari-Moghaddam,
+    2019).
+
+
+    Recently, in 2020, improved Harris Hawks optimization (HHO) algorithm was used
+    with the aim of minimizing the APL, reducing VD, and increasing the VSI (Selim,
+    Kamel, Alghamdi, & Jurado, 2020), improved estimation of distribution algorithm
+    (IEDA) to minimize the APL (Yang, Yang, Wu, & Liu, 2018), modified moth-flame
+    optimization (MMFO) algorithm to minimize the total operating cost, APL, VD, and
+    pollution emission (Elattar & Elsayed, 2020), backtracking search optimization
+    (BTSO) algorithm for minimizing the active and reactive power flows in the lines
+    and maximized microgrid success indicator (Osama, Zobaa, & Abdelaziz, 2020), craziness-based
+    PSO (CRPSO) algorithm based on the game-theoretic strategy to minimize the cost
+    of buying power, and APL (Karimizadeh, Soleymani, & Faghihi, 2020), coyote optimization
+    algorithm (COA) with considerations include the APL and voltage regulator tap
+    changes at different load levels (Chang & Chinh, 2020), and applied spring search
+    algorithm (SSA) to minimize the emissions, VD, APL, and energy cost (Dehghani,
+    Montazeri, & Malik, 2020).
+
+
+    # 6.1.3 Contribution and chapter organization
+
+
+    This chapter presents a new approach to optimal integration of RES-based DG in
+    electrical power systems using the modified WOA approach called cosine'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'adapted WOA algorithm (CAWOA) for techno-economic profits. The salient contributions
+    and findings of this study can be summarized as follows:
+
+
+    +   - Optimal integration of various DG-based RES: solar photovoltaic PV-DG and
+    wind WT-DG using CAWOA techniques.
+
+    +   - The CAWOA approach is applied to the standard IEEE 33-, 69-, and 118-bus
+    EDS.
+
+    +   - The optimal integration has been selected to minimize various technical
+    and economic indexes: the total APL, TVV, and TOC for test systems.
+
+    +   - The validity of the proposed algorithm is demonstrated by comparing with
+    existing optimization techniques.
+
+    +   - The chapter studies the impact of different types of DGs on active and reactive
+    branch currents in the distribution lines.
+
+    +   - It studies the impact of voltages profile and power losses under different
+    loadability that varied between 60% and 120% to reflect load uncertainty.
+
+
+    This chapter contains five sections along with references list, and is organized
+    as follows: Section 6.2 presents the mathematical problem formulation; Section
+    6.3 introduces the CAWOA algorithm applied; Section 6.4 provides the simulation
+    results, discussions, and comparisons of the result; and Section 6.5 presents
+    the conclusions.
+
+
+    # 6.2 Problem formulation
+
+
+    # 6.2.1 Multiobjective function
+
+
+    In this chapter, the authors proposed a multiobjective function (MOF) for the
+    EDS and represented by the following equations:
+
+
+    ```
+
+    $$MOF = \min \sum_{i=1}^{Nbus} \sum_{j=2}^{Nbus} \alpha_1 \cdot \Delta APL_{ij}
+    + \alpha_2 \cdot \Delta TVV_i + \alpha_3 \cdot \Delta TOC_{ij}$$ (6.1)
+
+    ```
+
+
+    ```
+
+    $$\sum_{m=1}^{3} \alpha_m = |\alpha_1| + |\alpha_2| + |\alpha_3| = 1$$ (6.2)
+
+    ```
+
+
+    In this chapter, $\alpha_1$ is taken as 0.5, while $\alpha_2$ and $\alpha_3$ are
+    taken as 0.25, based on the practical, technical, and economic indicators. The
+    three indices are presented by:
+
+
+    ```
+
+    $$\Delta APL = \frac{P_{Loss}^{After DG}}{P_{Loss}^{Before DG}}$$ (6.3)
+
+    ```
+
+
+    and:
+
+
+    ```
+
+    $$P_{Loss} = \sum_{i=1}^{Nbus} \sum_{j=2}^{Nbus} R_{ij} \frac{(P_{ij}^2 + Q_{ij}^2)}{V_i^2}$$
+    (6.4)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '```
+
+    \(\Delta TVV = \frac{TVV_{After DG}}{TVV_{Before DG}}\)
+
+    ```
+
+
+    where:
+
+
+    ```
+
+    \(TVV = \sum_{i=2}^{N} |1 - V_i|\)
+
+    ```
+
+
+    The TOC values for system study with the operation and maintenance costs included
+    the cost of DG integrated into the distribution system (Diaaeldin et al., 2019).
+    The \(\Delta\)TOC index is calculated by:
+
+
+    ```
+
+    \(\Delta TOC = \frac{TOC_{After DG}}{TOC_{Before DG}}\)
+
+    ```
+
+
+    The TOC before and after the integration of the DG is calculated by the following
+    expressions (Imran & Kowsalya, 2014):
+
+
+    ```
+
+    \(TOC_{Before DG} = K_2 \times P_{Loss}^{Before DG}\)
+
+    ```
+
+
+    ```
+
+    \(TOC_{After DG} = \left( K_1 \times P_{Loss}^{After DG} \right) + \left( K_2
+    \times P_{Loss}^{Before DG} \right)\)
+
+    ```
+
+
+    # 6.2.2 Equality constraints
+
+
+    The equality constraints represent the load flow balance equations, which can
+    be formulated as (Chang & Chinh, 2020; Dehghani et al., 2020; Elattar & Elsayed,
+    2020; Hassan & Zellagui, 2019; Imran & Kowsalya, 2014; Karimizadeh et al., 2020;
+    Osama et al., 2020; Yang et al., 2018):
+
+
+    ```
+
+    \(P_G + P_{DG} = P_D + P_{Loss}\)
+
+    ```
+
+
+    ```
+
+    \(\mathcal{Q}_G + \mathcal{Q}_{DG} = \mathcal{Q}_D + \mathcal{Q}_{Loss}\)
+
+    ```
+
+
+    # 6.2.3 Inequality constraints of distribution line
+
+
+    Inequality constraints represent the power system operating limits, which can
+    be given as:
+
+
+    (a) Bus voltage limits:
+
+
+    ```
+
+    \(V_{min} \le |V_i| \le V_{max}\)
+
+    ```
+
+
+    (b) Voltage drop limit:
+
+
+    ```
+
+    \(|1 - V_i| \le \Delta V_{max}\)
+
+    ```'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '(c) Line capacity constraint:
+
+
+    $|S_{ij}| \le |S_{max}|$ (6.14)
+
+
+    # 6.2.4 Inequality constraints of DG units
+
+
+    In the case of PV, the DG source only delivers active power, while in the case
+    of WT, the DG source delivers active and reactive power (Chang & Chinh, 2020;
+    Dehghani et al., 2020; Hassan & Zellagui, 2019; Imran & Kowsalya, 2014; Karimizadeh
+    et al., 2020; Lasmari et al., 2020).
+
+
+    (a) DG capacity limits:
+
+
+    $P_{DG}^{min} \le P_{DG} \le P_{DG}^{max}$ (6.15)
+
+
+    $Q_{DG}^{min} \le Q_{DG} \le Q_{DG}^{max}$ (6.16)
+
+
+    (b) Power Factor of DG:
+
+
+    $PF_{DG}^{min} \le PF_{DG} \le PF_{DG}^{max}$ (6.17)
+
+
+    $PF_{DG} = \frac{P_{DG}}{\sqrt{P_{DG}^2 + Q_{DG}^2}}$ (6.18)
+
+
+    (c) Position of DG:
+
+
+    $2 \le DG_{position} \le N_{bus}$ (6.19)
+
+
+    (d) Number of DG:
+
+
+    $N_{DG} \le N_{DG.max}$ (6.20)
+
+
+    (e) Location of DG:
+
+
+    $n_{DG,i} / Location \le 1$ (6.21)
+
+
+    The limits of constraint values are shown in Table 6.1.
+
+
+    # 6.3 Cosine adapted whale optimization algorithm (CAWOA)
+
+
+    In 2016, Mirjalili developed the basic whale optimization algorithm (WOA) approach
+    (Mirjalili & Andrew, 2016) as an innovative biological-inspired heuristic technique.
+    The natural body motions of humpback whales are the basis of the WOA. Three steps
+    are used to describe the bubble-net hunting process and'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '| Parameters | | 33-bus | 69-bus | 118-bus |
+
+    |---|---|---|---|---|
+
+    | Bus number | | 33 | 69 | 118 |
+
+    | P<sub>DG</sub> (kW) | min | 10 | 10 | 10 |
+
+    | | max | 3000 | 3000 | 3000 |
+
+    | Q<sub>DG</sub> (kVar) | min | 10 | 10 | 10 |
+
+    | | max | 2000 | 2000 | 2000 |
+
+    | V<sub>j</sub> (p.u.) | min | 0.95 | 0.95 | 0.90 |
+
+    | | max | 1.05 | 1.05 | 1.10 |
+
+    | ΔV<sub>max</sub> (%) | | 5 | 5 | 10 |
+
+    | PF<sub>DG</sub> | min | 0.80 | 0.80 | 0.80 |
+
+    | | max | 1.00 | 1.00 | 1.00 |
+
+    | Number of DGs | | 2 | 3 | 5 |
+
+
+    derive the WOA mathematical model. Modeling steps are detailed in the following
+    subsections (Elaziz & Mirjalili, 2019; Mirjalili & Andrew, 2016). Fig. 6.1 represent
+    the exploration mechanism implemented in basic WOA. This enhancement strategy
+    can modify spiral and circular movements, depending on the measure of _p_ (Elaziz
+    & Mirjalili, 2019).
+
+
+    In the basic WOA approach, the movement between exploration and exploitation phase
+    occurs with a decrease of distance control parameter "_a_" linearly from 2 to
+    0. The cosine adapted WOA (CAWOA) approach employs the cosine function to tune
+    the parameter "_a_" of the WOA for varying exploration and exploitation combinations
+    over the course of iterations (Eid & Abraham, 2018). The CAWOA approach employs
+    a cosine function instead of the linear function for the decay of the parameter
+    "_a_" over the course of iterations; as given in Eq. (6.22). The use of a cosine
+    feature for decaying "_a_" result in a differing exploration and exploitation
+    combination (Saha & Panda, 2020). The pseudo code of the CAWOA technique is presented
+    in Algorithm 6.1.
+
+
+    # ## 6.4 Results and discussion
+
+
+    # ### 6.4.1 Test systems
+
+
+    The proposed WOA algorithm is developed using MATLAB 2017.b and simulations are
+    carried out on a PC that possesses an Intel i5, 2.7GHz, and 8GB RAM.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_7_0.png)
+
+
+    FIG. 6.1 Exploration mechanism implemented in basic WOA (Mirjalili & Andrew, 2016).
+
+
+    The first test system is a standard IEEE 33-bus system and composed of 33 buses,
+    32 distribution lines with an active power load of 3715kW, and reactive power
+    load of 2300kVar with nominal voltage of 12.66kV, as represented in Fig. 6.2B.
+    The second test system is a standard IEEE 69-bus system, which is composed of
+    69 buses, 68 distribution lines with active power load of 3791.89kW, and reactive
+    power load of 2694.10kVar with nominal voltage of 12.66kV, as shown Fig. 6.2C.
+    To illustrate the applicability of the proposed algorithm in large-scale distribution
+    systems, it is applied on the standard IEEE 118-bus system, which is composed
+    of 118 buses with active power load of 22.71 MW and reactive power load of 17.04MVar,
+    as shown Fig. 6.2C. The nominal voltage is 12.66kV for all test systems.
+
+
+    The convergence optimization characteristics of the proposed CAWOA algorithm for
+    the three considered IEEE distributions systems in the presence of PV-DG and WT-DG
+    are presented in Fig. 6.3.
+
+
+    From the figure, when installing PV-DG, the IEEE 33-bus system takes almost 50
+    iterations to achieve the optimal solution, whereas the IEEE 69-bus system obtains
+    the optimal solution by iteration 170, and the larger systems IEEE 118-bus, takes
+    a long time to achieve the optimal solution—more than 170 iterations—but for the
+    three systems, a quick convergence in the first iterations can be observed.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '+   **Algorithm 6.1 Pseudo-code of CAWOA.**
+
+    +   1. Generate the initial population \(X_i\) (\(i = 1, 2, ..., n_p\))
+
+    +   2. Evaluate the fitness for each candidate solutions in \(X_i\)
+
+    +   3. \(X^*\) is the best candidate solutions
+
+    +   4. **while** (\(t < t_{max}\))
+
+    +   5. **for** \(i = 1\) to \(n_p\) (for each search agent)
+
+    +   6. Update the parameter \(a\) by equation:
+
+    +      \(a = 1 + 0.5 \cdot \cos \left( \pi \frac{t}{t_{max}} \right)\) (6.22)
+
+    +      Update \(A, C, l\) and p
+
+    +   7. **if** (\(p < 0.5\))
+
+    +   8.   **if** (\(|A| < 1\))
+
+    +   9.     Update the position of the search agent by equations:
+
+    +          \(\vec{D} = \left| \vec{C} \cdot \vec{X}^*(t) - \vec{X}(t) \right|\)
+    (6.23)
+
+    +          \(\vec{X}(t+1) = \vec{X}^*(t) - \vec{A} \cdot \vec{D}\) (6.24)
+
+    +   10.   **else if** (\(|A| \ge 1\))
+
+    +   11.     Select a random search agent (\(X_{rand}\))
+
+    +   12.     Update the position of the search agent by equations:
+
+    +          \(\vec{D} = \left| \vec{C} \cdot \vec{X}_{rand} - \vec{X} \right|\)
+    (6.25)
+
+    +          \(\vec{X}(t+1) = \vec{X}_{rand} - \vec{A} \cdot \vec{D}\) (6.26)
+
+    +   13.   **end if**
+
+    +   14. **else if** (\(p \ge 0.5\))
+
+    +   15.   Update the position of the current agent by equation:
+
+    +          \(\vec{X}(t+1) = \vec{D}'' \cdot e^{bt} \cdot \cos(2\pi l) + \vec{X}^*(t)\)
+    (6.27)
+
+    +   16. **end if**
+
+    +   17. **end for**
+
+    +   18. Check if any search agent goes beyond the search space
+
+    +   19. Calculate the MOF of each search agent
+
+    +   20. Update \(X^*\) if there is a better solution
+
+    +   21. \(t = t + 1\)
+
+    +   22. **end while**
+
+    +   23. Return \(X^*\)
+
+
+    In the case study of installing the WT-DG, IEEE 33-bus and 69-bus provide the
+    optimal solution by 60 iterations and the 118-bus system takes almost 180 iterations
+    to attain the best solution, this is related to the large size of this system.'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '# 6.4.2 Analysis of optimal results
+
+
+    The parameters of all distribution systems before DG integration are represented
+    in Table 6.2, the parameters of all DGs installed on EDSs are represented in Table
+    6.3, and optimization results after integration of PV-DG and WT-DG are represented
+    in Table 6.4.
+
+
+    According to the results illustrated in Table 6.4, for the first test system (IEEE
+    33-bus), the selected sizes by CAWOA algorithm for PV-DGs are 850.3 and 1158.6kW,
+    and for WT-DG are 828.0kW with a power factor of
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_9_0.png)
+
+
+    FIG. 6.2 Single line diagram of standard EDSs: (A) IEEE 33-bus, (B) IEEE 69-bus,
+    (Continued)'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_10_0.png)
+
+
+    # Fig. 6.2—Cont''d (C) IEEE 118-bus.
+
+
+    0.8944 (lagging) and 1243.3kW with a power factor of 0.8 (lagging). The DGs are
+    connected to their optimal places. They are placed in buses 13 and 30; thus, the
+    ΔAPL is minimized to 41.3132% for PV-DG and 13.9037% for WT-DG.
+
+
+    For the second test system, the IEEE 69-bus is considered. After optimizing the
+    sizes of the three DGs, the optimal size is found to be 576.1, 339.3, and 1716.8kW
+    connected at buses 11, 21, and 61, respectively, which minimizes the ΔAPL to 30.8611%.
+    Correspondingly, the WT-DGs with sizes of 432.7, 315.8, and 1662.2kW are installed
+    at buses 11, 21, and 61, respectively, and lead to the minimization of AAPL to
+    2.0168%.
+
+
+    For the third test system, the IEEE 118-bus, this larger system needed five PV-DGs
+    to minimize the ΔAPL to 44.3794% placed in buses 39, 74, 80, 96, and 110 with
+    a defined size for each PV-DG equal to 2971.4, 2257.4, 2382.4, 1782.6, and 2911.1kW.
+    On the other hand, five WT-DGs units are suggested'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_11_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_11_1.png)
+
+
+    # FIG. 6.3 Convergence curve of CAWOA for EDSs studies: (A) PV-DG, (B) WT-DG.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '| Parameters | IEEE 33-bus | IEEE 69-bus | IEEE 118-bus |
+
+    |---|---|---|---|
+
+    | \(\sum P_{Loss}\) (kW) | 210.9875 | 224.9480 | 1297.5000 |
+
+    | \(\sum Q_{Loss}\) (kVar) | 143.1284 | 102.1406 | 978.4956 |
+
+    | \(V_{min}\) (p.u.) | 0.9038 | 0.9092 | 0.8688 |
+
+    | \(\sum TVV\) (p.u) | 1.8047 | 1.8704 | 5.2877 |
+
+    | TOC (k$) | 1054.9375 | 1124.740 | 6487.500 |
+
+
+    | DG type | DGs Parameters | IEEE 33-bus | IEEE 69-bus | IEEE 118-bus |
+
+    |---|---|---|---|---|
+
+    | PV-DG | | | | 2971.4 (39) |
+
+    | | | | 576.1 (11) | 2257.4 (74) |
+
+    | | \(P_{DG}\), kW (Bus) | 850.3 (13) | 339.3 (21) | 2382.4 (80) |
+
+    | | | 1158.6 (30) | 1716.8 (61) | 1782.6 (96) |
+
+    | | | | | 2911.1 (110) |
+
+    | | \(\sum P_{DG}\) (MW) | 2.0089 | 2.6322 | 12.3049 |
+
+    | WT-DG | | | | 2.9038 (39) |
+
+    | | | | 432.7 (12) | 2.1597 (47) |
+
+    | | \(P_{DG}\), kW (Bus) | 828.0 (13) | 315.8 (21) | 2.7667 (72) |
+
+    | | | 1243.3 (30) | 1662.2 (61) | 2.3067 (80) |
+
+    | | | | | 2.9171 (118) |
+
+    | | \(\sum P_{DG}\) (MW) | 2.0713 | 2.4107 | 13.0540 |
+
+    | | | | | 0.8321 (39) |
+
+    | | | | 0.8000 (12) | 0.8869 (47) |
+
+    | | | 0.8944 (13) | 0.8000 (21) | 0.8321 (72) |
+
+    | | \(PF_{DG}\) | 0.8000 (30) | 0.8000 (61) | 0.8028 (80) |
+
+    | | | | | 0.8321 (118) |'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: '| Parameters | PV-DG | WT-DG | PV-DG | WT-DG | PV-DG | WT-DG |
+
+    | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
+    | | IEEE 33-bus | | IEEE 69-bus | | IEEE 118-bus | |
+
+    | \(\sum P_{Loss}\) (kW) | 87.1657 | 29.3351 | 69.4215 | 4.5367 | 575.8223 | 233.3590
+    |
+
+    | \(\Delta APL\) (%) | 41.3132 | 13.9037 | 30.8611 | 2.0168 | 44.3794 | 17.9853
+    |
+
+    | \(V_{min}\) (p.u.) | 0.9685 | 0.9804 | 0.9790 | 0.9943 | 0.9554 | 0.9662 |
+
+    | \(\sum TVV\) (p.u.) | 0.6775 | 0.1862 | 1.0277 | 0.1087 | 3.3633 | 1.4590 |
+
+    | \(\Delta TVV\) (%) | 37.541 | 10.318 | 54.946 | 5.812 | 63.6061 | 27.5923 |
+
+    | TOC (k$) | 1403.60 | 1172.28 | 1402.43 | 1142.89 | 8790.79 | 7420.94 |
+
+    | \(\Delta TOC\) (%) | 133.051 | 111.123 | 124.689 | 101.613 | 135.503 | 114.388
+    |
+
+    | CPU TIME (s) | 6.0750 | 7.7052 | 11.6577 | 13.2048 | 21.6061 | 23.3794 |'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: 'to be placed in buses 39, 47, 72, 80, 118, the appropriate output of active
+    power injected from WT-DGs is 2.9038, 2.1597, 2.7667, 2.3067, and 2.9171 kW, respectively,
+    with the location mentioned before, which allow the minimization of the ΔAPL to
+    17.9853%.
+
+
+    From this analysis, it is interesting to note that there is a significant improvement
+    after the installation of DGs in terms of the minimization of the power losses,
+    the enhancement of voltage profile, and also the minimization of the operating
+    cost of the tested systems, but the main observation is that the contribution
+    of WT-DG is higher than PV-DGs. This is related not just to the optimal reactive
+    power defined by the proposed algorithm, but also to the optimal lagging power
+    factors attain by the algorithm, which leads to the optimal choice of the active
+    and reactive powers being injected by the WT-DGs installed in their optimal places.
+
+
+    Fig. 6.4 shows the bus voltage profiles for different case studies performed for
+    all distribution systems. The voltage profiles have improved across the tested
+    power systems after the installation of DGs units. It can be seen that for different
+    voltage profiles for each type of DG unit, the effect of the optimal
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_14_0.png)
+
+
+    FIG. 6.4 Bus voltages profile of EDSs: (A) IEEE 33-bus,'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_15_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_15_1.png)
+
+
+    Fig. 6.4—Cont’d (B) IEEE 69-bus, and (C) IEEE 118-bus.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'factor obtained by the proposed algorithm allows the WT-DGs to maintain a better
+    improvement to the voltage profiles and make them almost flat.
+
+
+    Fig. 6.5 illustrates the impact of DG installation on active power losses for
+    the three test systems. Analysis of Fig. 6.5 reveals that after installation of
+    the DG, there is significant minimization on the amount of the active power losses.
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_16_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_16_1.png)
+
+
+    FIG. 6.5 Active power losses of EDSs: (A) IEEE 33-bus, (B) IEEE 69-bus, and (Continued)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_17_0.png)
+
+
+    Fig. 6.5—Cont’d (C) IEEE 118-bus.
+
+
+    It is observed that the WT-DG installation contributes to more minimization of
+    the power losses than the installation of PV-DG. These results are due to the
+    contribution of the reactive power injected from WT-DG, and also the optimal power
+    factors defined by the proposed algorithm. As mentioned above in Table 6.3, the
+    power factors are set between 0.8 and 0.9 (lagging).
+
+
+    Fig. 6.6 demonstrates the influence of DG installation on the bus voltage deviations
+    of the three test systems. In general, the installation of the two types of DGs,
+    i.e., PV-DG and WT-DG, will reduce the voltage deviation in all the buses. However,
+    from the voltage variation curve, it can be recognized that the active and reactive
+    powers injected from the integration of WT-DGs into the tested systems are more
+    effective in minimizing the voltage deviations. Moreover, it can be noted that
+    WT-DGs provide more improvement than PV-DGs in terms of system voltage level.
+
+
+    # ## 6.4.3 Comparison results
+
+
+    Table 6.5 contains the comparison results of various optimization algorithms against
+    the proposed CAWOA algorithm for all test EDS systems.
+
+
+    The comparison shown in Table 6.5 is carried out to demonstrate the performance
+    of the proposed CAWOA algorithm. The table contains the details of comparison
+    of the proposed algorithms with other benchmark algorithms from the literature
+    in terms of active power losses, \(\Delta APL\), \(\Delta TVV\), and \(\Delta
+    TOC\) for the three test systems with PV-DG and WT-DG integration.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_18_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_18_1.png)
+
+
+    FIG. 6.6 Bus voltage variation of standard EDSs: (A) IEEE 33-bus, (B) IEEE 69-bus,
+    and (Continued)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_19_0.png)
+
+
+    Fig. 6.6—Cont''d (C) IEEE 118-bus.
+
+
+    For the first test system, IEEE 33-bus, the CAWOA was compared with three algorithms
+    namely BSOA, FPA, and KHA for PV-DGs and PSO, BSOA, and ALOA for WT-DGs, in the
+    presence of PV-DGs. The compared algorithms reducing the amount of active power
+    losses to 89.340kW, 89.2000kW, and 87.4260kW, which in turn reduced the ΔAPL to
+    42.3437%, 42.2774%, and 41.4366% and the ΔATOC to 133.875%, 133.822%, and 133.149%,
+    respectively. On the other hand, the CAWOA reduced the active power losses to
+    87.1657kW. This leads to the minimization of the ΔAPL and ΔATOC to 41.3132% and
+    133.051%, respectively. The compared algorithms based on the integration of WT-DGs
+    are also able to determine the optimal placement and sizing needed to reduce the
+    power losses to 39.1000kW, 31.9800kW, and 30.9251kW, respectively, as mentioned
+    previously. In this instance, the ΔAPL has been minimized to 18.5319%, 15.1573%,
+    and 14.6573%. The ATOC has been reduced to 114.826%, 112.126%, 111.726%, and 111.123%.
+
+
+    The second system, IEEE 69-bus, is compared with three existing algorithms called
+    CDE, CSFS, and SFSA. In the case study of PV-DG installation, it can be observed
+    that after installation of three PV-DGs in their best locations obtained by these
+    algorithms, the power loss has been reduced to 69.4360kW, 69.4300kW, and 69.4280kW,
+    and ΔATOC to 124.694%, 124.692%, and 124.691%, respectively; at the same time,
+    the minimum power loss and ΔATOC'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '**TABLE 6.5 System results given by various optimization algorithms.**
+
+
+    | Test system | | Algorithms applied | Σ P<sub>Loss</sub> (kW) | ΔAPL (%) | ΔTVV
+    (%) | ΔTOC (%) |
+
+    |---|---|---|---|---|---|---|
+
+    | IEEE 33-bus | | | | | | |
+
+    | | PV-DG | | | | | |
+
+    | | | BSOA (El-Fergany, 2015) | 89.3400 | 42.3437 | 41.0040 | 133.875 |
+
+    | | | FPA (Oda et al., 2017) | 89.2000 | 42.2774 | 35.5738 | 133.822 |
+
+    | | | KHA (Chithra Devi et al., 2017) | 87.4260 | 41.4366 | 37.4577 | 133.149
+    |
+
+    | | | **CAWOA** | **87.1657** | **41.3132** | **37.5409** | **133.051** |
+
+    | | WT-DG | | | | | |
+
+    | | | PSO (Kaur, Kumbhar, & Sharma, 2014) | 39.1000 | 18.5319 | 10.6721 | 114.826
+    |
+
+    | | | BSOA (El-Fergany, 2015) | 31.9800 | 15.1573 | 32.6148 | 112.126 |
+
+    | | | ALOA (Ali et al., 2017) | 30.9251 | 14.6573 | 9.2037 | 111.726 |
+
+    | | | **CAWOA** | **29.3351** | **13.9037** | **10.3175** | **111.123** |
+
+    | IEEE 69-bus | | | | | | |
+
+    | | PV-DG | | | | | |
+
+    | | | CDE (Kumar et al., 2019a) | 69.4360 | 30.8676 | 54.9401 | 124.694 |
+
+    | | | CSFS (Nguyen & Vo, 2019) | 69.4300 | 30.8649 | 54.9401 | 124.692 |
+
+    | | | SFSA (Nguyen & Ngoc Vo, 2018) | 69.4280 | 30.8640 | 54.9348 | 124.691 |
+
+    | | | **CAWOA** | **69.4215** | **30.8611** | **54.9455** | **124.689** |
+
+    | | WT-DG | | | | | |
+
+    | | | LSFSA (Injeti & Kumar, 2013) | 16.2600 | 7.2283 | 15.0075 | 105.783 |
+
+    | | | BFOA (Imran & Kowsalya, 2014) | 12.9000 | 5.7347 | 25.9356 | 104.588 |
+
+    | | | GWO (Nowdeh et al., 2019) | 7.3100 | 3.2496 | 7.4476 | 102.600 |
+
+    | | | **CAWOA** | **4.5367** | **2.0168** | **5.8116** | **101.613** |'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: 'TABLE 6.5 System results given by various optimization algorithms—cont''d
+
+
+    | Test system | | Algorithms applied | Σ P_Loss (kW) | ΔAPL (%) | ΔTVV (%) | ΔTOC
+    (%) |
+
+    |---|---|---|---|---|---|---|
+
+    | IEEE 118-bus | PV-DG | CSFS (Nguyen & Vo, 2019) | 581.580 | 44.8231 | 69.0849
+    | 135.858 |
+
+    | | | SFSA (Nguyen & Ngoc Vo, 2018) | 578.741 | 44.6043 | 70.1780 | 135.683 |
+
+    | | | KHA (Nowdeh et al., 2019) | 576.490 | 44.4308 | 69.6220 | 135.545 |
+
+    | | | CAWOA | 575.822 | 44.3794 | 63.6061 | 135.503 |
+
+    | | WT-DG | LS FSA (Injeti & Kumar, 2013) | 684.028 | 52.7189 | 49.2880 | 142.175
+    |
+
+    | | | SFSA (Nguyen & Ngoc Vo, 2018) | 236.528 | 18.2295 | 41.4244 | 114.584 |
+
+    | | | KHA (Sultana & Roy, 2016) | 233.383 | 17.9871 | 40.9649 | 114.390 |
+
+    | | | CAWOA | 233.359 | 17.9853 | 27.5923 | 114.388 |'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: 'obtained by the proposed algorithm are 69.4215kW and 124.689%, respectively.
+    On the other side, the results of the WT-DGs case study has been compared with
+    LSFSA, BFOA, and GWO; as reported, the power losses it provides are 16.2600kW,
+    12.9000kW, and 7.3100kW, and the $\Delta APL$ and $\Delta TOC$ are 7.2283%, 5.7347%,
+    and 3.2496%, and 105.783%, 104.588%, and 102.600%, respectively. The power loss
+    amount attained by CAWOA is 4.5367, so $\Delta APL$ and $\Delta TOC$ are 2.0168%
+    and 101.613%, respectively.
+
+
+    The third test system (IEEE 118-bus) is equipped with PV-DGs. The obtained results
+    have been compared with CSFS, SFSA, and KHA, which made power losses of 581.580,
+    578.741, and 576.490kW, and $\Delta TOC$ of 142.175%, 114.584%, and 114.390%,
+    respectively. In the same manner as PV-DGs, the WT-DG have been compared with
+    LSFSA, SFSA, and KHA; based on these algorithms, the power losses are reduced
+    to 684.028kW, 236.528kW, and 233.383kW, and the $\Delta TOC$ to 142.175%, 114.584%,
+    and 114.390%, respectively, whereas the power losses and ATOC attained by CAWOA
+    are 233.359kW, and 114.388%.
+
+
+    Considering the holistic view of the above results and the comparison of the literature
+    benchmark algorithms against the proposed CAWOA algorithm, a great power loss
+    reduction has been achieved by the literature algorithms. However, the CAWOA algorithm
+    provides better results in terms of power losses minimization and the total operating
+    cost for the three tested systems with PV-DGs and WT-DGs; this is an indication
+    for the superior performance of the CAWOA algorithm in determination of the best
+    location and sizing of PV-DGs and WT-DGs.
+
+
+    Fig. 6.7 shows the bar chart for $\Delta TOC$ and $\Delta APL$ of the three standard
+    IEEE systems in the presence of PV-DG and WT-DG. This is to show the effectiveness
+    of the proposed algorithm versus the standard literature algorithms.
+
+
+    The results shown in Fig. 6.7 suggest that in all three IEEE test scenarios, while
+    applying CAWOA to optimize the siting and sizing of DGs for different systems
+    with the aim to reduce the active power losses index and the total operating cost,
+    the proposed algorithm proves its ability to handle this kind of the proposed
+    objective function. Furthermore, the comparison of CAWOA with the other algorithms
+    shows that the CAWOA algorithm performs well and is able to obtain the best and
+    optimum results in terms of either the minimization of power loss or operating
+    cost enhancement based on different types of DG units.
+
+
+    # 6.4.4 Impact of DG on branch currents
+
+
+    Fig. 6.8 shows the influence of DG installation on active and reactive branch
+    currents on all three test systems. As shown in the figure, the active current
+    is plotted with dashed lines and the reactive current is plotted with continuous
+    lines; the negative sign of reactive currents indicates that the nature of loads
+    is inductive. One of the objectives of installing DGs is reducing the branch'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_23_0.png)
+
+
+    FIG. 6.7 Comparison of CAWOA with other algorithms in the presence different type
+    of DG: (A) IEEE 33-bus, (Continued)
+
+
+    current, as knowing the losses of the branches in the system is dependent in the
+    first place on the current flowing through these branches. As can be noted, after
+    the installation of DGs, the branch current has clearly reduced for the three
+    tested systems; thus, the power losses are consequently reduced.
+
+
+    Because of the reactive power injected from the WT-DGS, the branch current is
+    affected by WT-DGs more than the PV-DGs in the three tested systems.
+
+
+    # 6.4.5 Impact of loadability variation on EDS
+
+
+    To validate the effectiveness and performance of the proposed algorithm, it has
+    been implemented on standard IEEE distribution systems. For all the cases of test
+    systems, the power system feeder loads are linearly varied from 60% (light load)
+    to 120% (peak load) in steps of 10% load; at the same time, the optimal size of
+    PV-DG and WT-DG are calculated by CAWOA algorithm for each load'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# PV-DG
+
+
+    # WT-DG
+
+
+    Fig. 6.7—Cont’d (B) IEEE 69-bus,
+
+
+    step variation. The voltage profile under different load variations of IEEE 33-,
+    69-, and 118-bus are represented in Fig. 6.9.
+
+
+    The accepted upper and lower voltage limits for each test system are plotted with
+    dashed red lines in Fig. 6.9. Before DG-installation, some of the bus voltages
+    broke the permissible limits with specific loads. For example, in the IEEE 33-bus
+    system, the buses from bus number 6 to bus 18 and from bus 26 to bus 33 had the
+    minimum values of the voltages—these values were less than 0.95 p.u.—but after
+    installing the PV-DGs and taking into account the changes in consumption, it is
+    observed that the voltage profiles have significantly improved, and the minimum
+    value has become 0.95 p.u. in bus number 18. Similarly, in WT-DGs, the voltage
+    profiles have improved but better than PV-DGs. The same observation can be made
+    for IEEE 69-bus and IEEE 118-bus systems—the best voltage profiles for different
+    consumption loads are obtained based on PV-DGs and WT-DGs. Also, it can be noted
+    that the voltages profiles for the system in light loads consumption is always
+    better than medium and peak loads.'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_25_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_25_1.png)
+
+
+    FIG. 6.7—Cont’d (C) IEEE 118-bus.
+
+
+    Fig. 6.10 is presented to investigate the impact of the loadability on the total
+    active and reactive powers before and after the integration of DG units for the
+    three test systems, in the same way as the variation of loads done previously.
+    The loads vary from 60% to 120%, with steps of 10%, and the active and reactive
+    power losses are calculated simultaneously.
+
+
+    As shown in the figure, the minimum of active and reactive distribution line losses
+    are achieved in the case of light loads consumption (60% of loads). On the other
+    side, the highest power losses are obtained in the case of high load consumption.
+    Whether before or after DG unit installation, it is seen that the power losses
+    are proportional with the increase in loads.
+
+
+    Another observation is that the best profile is obtained after the integration
+    of DG units—the injected power from the DGs units always made the losses up'
+  merge: -1
+  img_proc: true
+- pgno: 26
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_26_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_26_1.png)
+
+
+    FIG. 6.8 Active and reactive branch currents of EDSs: (A) IEEE 33-bus, (B) IEEE
+    69-bus, and (Continued)
+
+
+    to their optimal minimum value in the different loadabilities. Moreover, the active
+    and reactive power losses measured in the presence of WT-DGs and by the linear
+    variation in loads are better than those obtained in the presence of PV-DGs; this
+    observation is valid for the three tested systems.'
+  merge: -1
+  img_proc: true
+- pgno: 27
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_27_0.png)
+
+
+    Fig. 6.8—Cont’d (C) IEEE 118-bus.
+
+
+    # 6.5 Conclusions
+
+
+    In this chapter, the CAWOA algorithm has been proposed to solve the techno-economic
+    analysis problem of optimal location and sizing of renewable DG in the EDSs. Thus,
+    a multiobjectives function has been used for the optimal integration of PV-DG
+    and WT-DG sources with the optimum power factors. The optimal power factors obtained
+    by the proposed algorithms show a positive and clear effect on power losses and
+    bus voltages, unlike many techniques posed in the literature, which suggest a
+    predefined power factor. In general, the best results are obtained by installing
+    the WT-DGs.
+
+
+    In this study, the proposed algorithm is applied to minimize the active power
+    losses index, voltage variation index, and the total operation cost index subject
+    to the quality and inequality constraints within a predefined tolerance to avoid
+    violation of these constraints. The active and reactive branch currents are calculated,
+    and the results show that the currents are minimized after the installation of
+    DGs and the profile of the current has greater reduction thru the presence of
+    WT-DGs. Careful and realistic results have been attained by a linear change in
+    loads; the loadability results show that the total power losses and the voltage
+    profiles are proportional with the increasing or decreasing of loads.
+
+
+    To show the performance of the proposed algorithms, the obtained results have
+    been compared with other excising results of algorithms from the literature. The
+    comparative study shows that CAWOA is better than the compared algorithms in terms
+    of minimizing the power losses of the studied systems;'
+  merge: -1
+  img_proc: true
+- pgno: 28
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_28_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_28_1.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_28_2.png)
+
+
+    FIG. 6.9 Voltage profile with different load variations of EDSs: (A) IEEE 33-bus,
+
+    (Continued)
+
+
+    furthermore, it performs well and obtains better results considering the same
+    number of DGs installed in the systems. In general, the results show that WAO
+    can handle this type of proposed objective function.
+
+
+    This research work gives guidelines and hints for power distribution companies
+    to reducing power losses. This work will also help the power distribution companies
+    in incorporating small-sized renewable energy sources to distribution networks
+    easily and more reliably.'
+  merge: -1
+  img_proc: true
+- pgno: 29
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_29_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_29_1.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_29_2.png)
+
+
+    Fig. 6.9—Cont''d (B) IEEE 69-bus, and (Continued)
+
+
+    # Abbreviations and symbols
+
+
+    # Abbreviations
+
+
+    +   APL active power loss
+
+    +   EDS electrical distribution system
+
+    +   OPF optimal power flow
+
+    +   PV-DG PV source-based DG
+
+    +   VD voltage deviation
+
+    +   VSI voltage stability index
+
+    +   WT-DG WT source-based DG'
+  merge: -1
+  img_proc: true
+- pgno: 30
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_30_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_30_1.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_30_2.png)
+
+
+    Fig. 6.9—Cont''d (C) IEEE 118-bus.
+
+
+    # Symbol objective function
+
+
+    +   - $K_1$: cost coefficient of real power supplied by the substation and DG
+    (4 $/kW)
+
+    +   - $K_2$: the maintenance and installation costs coefficient of DGs (5 $/kW)
+
+    +   - $N_{bus}$: number of buses
+
+    +   - $OF$: objective function
+
+    +   - $P_{ij}, Q_{ij}$: active and reactive powers of the distribution line'
+  merge: -1
+  img_proc: true
+- pgno: 31
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_31_0.png)
+
+
+    ![](img/e7ce0de7efd2624a2354b67f19462c1d_31_1.png)
+
+
+    FIG. 6.10 Total active and reactive power losses under different loadability value
+    of EDSs: (A) IEEE 33-bus, (B) IEEE 69-bus, and (Continued)
+
+
+    +   * $P_{Loss}$ total active loss on the distribution
+
+    +   * $R_{ij}$ resistance of the distribution line
+
+    +   * $TOC$ total operating cost
+
+    +   * $TVV$ total voltage variation'
+  merge: -1
+  img_proc: true
+- pgno: 32
+  md: '![](img/e7ce0de7efd2624a2354b67f19462c1d_32_0.png)
+
+
+    Fig. 6.10—Cont''d (C) IEEE 118-bus.
+
+
+    | $V_i$ | the voltage at bus $i$ |
+
+    | --- | --- |
+
+    | $\alpha_1, \alpha_2, \text{and } \alpha_3$ | weighting factors |
+
+    | $\Delta APL$ | active power loss index |
+
+    | $\Delta TOC$ | TOC index |
+
+    | $\Delta TVV$ | TVV index |
+
+
+    # Symbols of constraints
+
+
+    | $DG_{Position}$ | position of DG units |
+
+    | --- | --- |
+
+    | $N_{DG}$ | number of DG units |
+
+    | $n_{DG, i}$ | location of PV-DG units at bus $i$ |
+
+    | $P_D, Q_D$ | total active and reactive of demand load |
+
+    | $P_{DG}, Q_{DG}$ | total active and reactive injection from DG |
+
+    | $P_{DG}^{min}, P_{DG}^{max}$ | minimum and maximum active power output limits
+    of the DG |
+
+    | $PF_{DG}$ | power factor of DG |
+
+    | $PF_{DG}^{min}, PF_{DG}^{max}$ | minimum and maximum value $PF_{DG}$ |
+
+    | $P_G, Q_G$ | total active and reactive power of generator |
+
+    | $P_{Loss}, Q_{Loss}$ | total active and reactive powers losses |
+
+    | $Q_{DG}^{min}, Q_{DG}^{max}$ | minimum and maximum reactive power output limits
+    of the DG |
+
+    | $S_{ij}$ | apparent power in bus $i$ to bus $j$ branch |
+
+    | $S_{max}$ | maximum apparent power |'
+  merge: -1
+  img_proc: true
+- pgno: 33
+  md: '+   V_1 voltage at the generating station is equal to 1.0 p.u.
+
+    +   V_{min}, V_{max} limited specified voltages
+
+    +   \Delta V_{max} maximum voltage drops
+
+
+    # Parameters of CA WOA algorithm
+
+
+    +   A and C the coefficient vectors
+
+    +   a control parameter
+
+    +   b constant to represent the state of the logarithmic helix
+
+    +   D distance between ith whale and the prey
+
+    +   D'' determines the location or distance of whales i to the prey
+
+    +   l arbitrary number in the range -1, and 1
+
+    +   p arbitrary number having a range between 0 and 1.
+
+    +   r random vector in the interval of 0 and 1
+
+    +   t indicates the current iteration
+
+    +   t_{max} maximum number of iterations
+
+    +   X position vector
+
+    +   X* position vector of the best solution obtained so far
+
+    +   X_{rand} arbitrary position vector (a random whale)
+
+
+    # References
+
+
+    +   Abdmouleh, Z., Gastli, A., Ben-Brahim, L., Haouari, M., & Al-Emadi, N. A.
+    (2017). Review of optimization techniques applied for the integration of distributed
+    generation from renewable energy sources. Renewable Energy, 113, 266–280. https://doi.org/10.1016/j.renene.2017.05.087.
+
+    +   Ali, E. S., Elazim, S. A., & Abdelaziz, A. Y. (2018). Optimal allocation and
+    sizing of renewable distributed generation using ant lion optimization algorithm.
+    Electrical Engineering, 100(1), 99–109. https://doi.org/10.1007/s00202-016-0477-z.
+
+    +   Ali, E. S., Elazim, S. A., & Abdelaziz, A. Y. (2017). Ant lion optimization
+    algorithm for optimal location and sizing of renewable distributed generations.
+    Renewable Energy, 101, 1311–1324. https://doi.org/10.1016/j.renene.2016.09.023.
+
+    +   Chang, G. W., & Chinh, N. C. (2020). Coyote optimization algorithm-based approach
+    for strategic planning of photovoltaic distributed generation. IEEE Access, 8,
+    36180–36190. https://doi.org/10.1109/ACCESS.2020.2975107.
+
+    +   Chithra Devi, S. A., Lakshminarasimman, L., & Balamurugan, R. (2017). Study
+    krill herd algorithm for multiple DG placement and sizing in a radial distribution
+    system. Engineering Science and Technology, an International Journal, 20(2), 748–759.
+    https://doi.org/10.1016/j.jestch.2016.11.009.
+
+    +   Deb, G., Chakraborty, K., & Deb, S. (2019). Spider monkey optimization technique-based
+    allocation of distributed generation for demand side management. International
+    Transactions on Electrical Energy Systems, 29(5), e12009. https://doi.org/10.1002/2050-7038.12009.
+
+    +   Dehghani, M., Montazeri, Z., & Malik, O. P. (2020). Optimal sizing and placement
+    of capacitor banks and distributed generation in distribution systems using spring
+    search algorithm. International Journal of Emerging Electric Power Systems, 21(1),
+    1–9. https://doi.org/10.1515/ijeeps-2019-0217.'
+  merge: -1
+  img_proc: true
+- pgno: 34
+  md: 'Diaaeldin, I., Abdel Aleem, S., El-Rafei, A., Abdelaziz, A. Y., & Zobaa, A.
+    F. (2019). Optimal network reconfiguration in active distribution networks with
+    soft open points and distributed generation. Energies, 12(21), 4172. https://doi.org/10.3390/en12214172.
+
+
+    Duong, M. Q., Pham, T. D., Nguyen, T. T., Doan, A. T., & Tran, H. V. (2019). Determination
+    of optimal location and sizing of solar photovoltaic distribution generation units
+    in radial distribution systems. Energies, 12(1), 174. https://doi.org/10.3390/en12010174.
+
+
+    Ehsan, A., Cheng, M., & Yang, Q. (2019). Scenario-based planning of active distribution
+    systems under uncertainties of renewable generation and electricity demand. CSEE
+    Journal of Power and Energy Systems, 5(1), 56–62. https://doi.org/10.17775/CSEEJPES.2018.00460.
+
+
+    Ehsan, A., & Yang, Q. (2018). Optimal integration and planning of renewable distributed
+    generation in the power distribution networks: A review of analytical techniques.
+    Applied Energy, 210, 44–59. https://doi.org/10.1016/j.apenergy.2017.10.106.
+
+
+    Eid, H. F., & Abraham, A. (2018). Adaptive feature selection and classification
+    using modified whale optimization algorithm. International Journal of Computer
+    Information Systems and Industrial Management Applications, 10, 174–182.
+
+
+    Elattar, E. E., & Elsayed, S. K. (2020). Optimal location and sizing of distributed
+    generators based on renewable energy sources using modified moth flame optimization
+    technique. IEEE Access, 8, 109625–109638. https://doi.org/10.1109/ACCESS.2020.3001758.
+
+
+    Elaziz, M. A., & Mirjalili, S. (2019). A hyper-heuristic for improving the initial
+    population of whale optimization algorithm. Knowledge-Based Systems, 172, 42–63.
+    https://doi.org/10.1016/j.knosys.2019.02.010.
+
+
+    El-Fergany, A. (2015). Optimal allocation of multi-type distributed generators
+    using backtracking search optimization algorithm. International Journal of Electrical
+    Power and Energy Systems, 64, 1197–1205. https://doi.org/10.1016/j.ijepes.2014.09.020.
+
+
+    Gkaidatzis, P. A., Bouhouras, A. S., Sgouras, K. I., Doukas, D. I., Christoforidis,
+    G. C., & Labridis, D. P. (2019). Efficient RES penetration under optimal distributed
+    generation placement approach. Energies, 12(7), 1250. https://doi.org/10.3390/en12071250.
+
+
+    Grisales-Noreña, L. F., Montoya, D. G., & Ramos-Paja, C. A. (2018). Optimal sizing
+    and location of distributed generators based on PBIL and PSO techniques. Energies,
+    11(4), 1018. https://doi.org/10.3390/en11041018.
+
+
+    Hadidian-Moghaddam, M. J., Arabi-Nowdeh, S., Bigdeli, M., & Azizian, D. (2018).
+    A multi-objective optimal sizing and siting of distributed generation using ant
+    lion optimization technique. Ain Shams Engineering Journal, 9(4), 2101–2109. https://doi.org/10.1016/j.asej.2017.03.001.
+
+
+    Hassan, H. A., & Zellagui, M. (2019). MVO algorithm for optimal simultaneous integration
+    of DG and DSTATCOM in standard radial distribution systems based on technical-economic
+    indices. In 21st international Middle East power systems conference (MEPCON),
+    (MEPCON), 17–19 December. Egypt: Tanta University. https://doi.org/10.1109/MEPCON47431.2019.9007995.
+
+
+    Imran, A. M., & Kowsalya, M. (2014). Optimal size and siting of multiple distribution
+    generators in distribution system using bacterial foraging optimization. Swarm
+    and Evolutionary Computation, 15, 58–65. https://doi.org/10.1016/j.swevo.2013.12.001.
+
+
+    Injeti, S. K., & Kumar, N. P. (2013). A novel approach to identify optimal access
+    point and capacity of multiple DGs in a small, medium and large-scale radial distribution
+    systems. International Journal of Electrical Power & Energy Systems, 45(1), 142–151.
+    https://doi.org/10.1016/j.ijepes.2012.08.043.
+
+
+    Kansal, S., Tyagi, B., & Kumar, V. (2017). Cost-benefit analysis for optimal distributed
+    generation placement in distribution systems. International Journal of Ambient
+    Energy, 38(1), 45–54. https://doi.org/10.1080/01430750.2015.1031407.'
+  merge: -1
+  img_proc: true
+- pgno: 35
+  md: 'Karimizadeh, K., Soleymani, S., & Faghihi, F. (2020). Optimal placement of
+    DG units for the enhancement of MG networks performance using coalition game theory.
+    IET Generation, Transmission & Distribution, 14(5), 853–862. https://doi.org/10.1049/iet-gtd.2019.0070.
+
+
+    Kaur, S., Kumbhar, G., & Sharma, J. (2014). A MINLP technique for optimal placement
+    of multiple DG units in distribution systems. International Journal of Electrical
+    Power & Energy Systems, 63, 609–617. https://doi.org/10.1016/j.ijepes.2014.06.023.
+
+
+    Kazmi, S. A. A., & Shin, D. R. (2017). DG placement in loop distribution network
+    with new voltage stability index and loss minimization condition-based planning
+    approach under load growth. Energies, 10(8), 1203. https://doi.org/10.3390/en10081203.
+
+
+    Kumar, S., Mandal, K. K., & Chakraborty, N. (2019a). Optimal DG placement by multi-objective
+    opposition based chaotic differential evolution for techno-economic analysis.
+    Applied Soft Computing, 78, 70–83. https://doi.org/10.1016/j.asoc.2019.02.013.
+
+
+    Kumar, S., Mandal, K. K., & Chakraborty, N. (2019b). A novel opposition-based
+    tuned-chaotic differential evolution technique for techno-economic analysis by
+    optimal placement of distributed generation. Engineering Optimization, 51, 1–20.
+    https://doi.org/10.1080/0305215X.2019.1585832.
+
+
+    Lasmari, A., Zellagui, M., Chemni, R., Semaoui, S., El-Bayeh, C. Z., & Hassan,
+    H. A. (2020). Optimal energy management system for distribution systems using
+    simultaneous integration of PV-based DG and DSTATCOM units. Energetika, 66(1),
+    1–14. https://doi.org/10.6001/energetika.v66i1.4294.
+
+
+    Mahajan, S., & Vadhera, S. (2018). Optimal location and sizing of distributed
+    generation unit using human opinion dynamics optimization technique. Distributed
+    Generation and Alternative Energy Journal, 33(2), 38–57. https://doi.org/10.1080/21563306.2018.12002410.
+
+
+    Mirjalili, S., & Andrew, L. (2016). The whale optimization algorithm. Advances
+    in Engineering Software, 95, 51–67. https://doi.org/10.1016/j.advengsoft.2016.01.008.
+
+
+    Nguyen, T. P., & Ngoc Vo, D. (2018). A novel stochastic fractal search algorithm
+    for optimal allocation of distributed generators in radial distribution systems.
+    Applied Soft Computing Journal, 70, 773–796. https://doi.org/10.1016/j.asoc.2018.06.020.
+
+
+    Nguyen, T. P., & Vo, D. N. (2019). Improved stochastic fractal search algorithm
+    with chaos for optimal determination of location, size, and quantity of distributed
+    generators in distribution systems. Neural Computing and Applications, 31(11),
+    7707–7732. https://doi.org/10.1007/s00521-018-3603-1.
+
+
+    Nguyen-Phuoc, T., Vo-Ngoc, D., & Tran-The, T. (2017). Optimal number, location,
+    and size of distributed generators in distribution systems by symbiotic organism
+    search-based method. Advances in Electrical and Electronic Engineering, 15(5),
+    724–735. https://doi.org/10.15598/aee.v15i5.2355.
+
+
+    Nikkhah, S., & Rabiee, A. (2018). Optimal wind power generation investment, considering
+    voltage stability of power systems. Renewable Energy, 115, 308–325. https://doi.org/10.1016/j.renene.2017.08.056.
+
+
+    Nowdeh, S. A., Davoudkhani, I. F., Moghdaddam, M. H., Najmi, E. S., Abdelaziz,
+    A. Y., Ahmadi, A., et al. (2019). Fuzzy multi-objective placement of renewable
+    energy sources in distribution system with objective of loss reduction and reliability
+    improvement using a novel hybrid method. Applied Soft Computing, 77, 761–779.
+    https://doi.org/10.1016/j.asoc.2019.02.003.
+
+
+    Oda, E. S., Abdelsalam, A. A., Abdel-Wahab, M. N., & El-Saadawi, M. M. (2017).
+    Distributed generations planning using flower pollination algorithm for enhancing
+    distribution system voltage stability. Ain Shams Engineering Journal, 8(4), 593–603.
+    https://doi.org/10.1016/j.asej.2015.12.001.'
+  merge: -1
+  img_proc: true
+- pgno: 36
+  md: 'Osama, R. A., Zobaa, A. F., & Abdelaziz, A. Y. (2020). A planning framework
+    for optimal partitioning of distribution networks into microgrids. IEEE Systems
+    Journal, 14(1), 916–926. https://doi.org/10.1109/JSYST.2019.2904319.
+
+    Prasad, C. H., Subbaramaiah, K., & Sujatha, P. (2019). Cost–benefit analysis for
+    optimal DG placement in distribution systems by using elephant herding optimization
+    algorithm. Renewables, 6 (2), 1–12. https://doi.org/10.1186/s40807-019-0056-9.
+
+    Quadri, I. A., Bhowmick, S., & Joshi, D. A. (2018). Comprehensive technique for
+    optimal allocation of distributed energy resources in radial distribution systems.
+    Applied Energy, 211, 1245–1260. https://doi.org/10.1016/j.apenergy.2017.11.108.
+
+    Ravindran, S., & Victoire, T. A. A. (2018). A bio-geography-based algorithm for
+    optimal siting and sizing of distributed generators with an effective power factor
+    model. Computers & Electrical Engineering, 72, 482–501. https://doi.org/10.1016/j.compeleceng.2018.10.010.
+
+    Saha, N., & Panda, S. (2020). Cosine adapted modified whale optimization algorithm
+    for control of switched reluctance motor. Computational Intelligence, 1–41. https://doi.org/10.1111/coin.12310.
+
+    Selim, A., Kamel, S., Alghamdi, A. S., & Jurado, F. (2020). Optimal placement
+    of DGs in distribution system using an improved Harris Hawks optimizer based on
+    single- and multi-objective approaches. IEEE Access, 8, 52815–52829. https://doi.org/10.1109/ACCESS.2020.2980245.
+
+    Settoul, S., Chenni, R., Hassan, H. A., Zellagui, M., & Kraisnia, M. N. (2019).
+    MFO algorithm for optimal location and sizing of multiple photovoltaic distributed
+    generation units for loss reduction in distribution systems. In 7th international
+    renewable and sustainable energy conference (IRSEC), Agadir, Morocco, 27–30 November.
+    IRSEC48032.2019.9078241. https://doi.org/10.1109/IRSEC48032.2019.9078241.
+
+    Settoul, S., Zellagui, M., Abdelaziz, A. Y., & Chenni, R. (2019). Optimal integration
+    of renewable distributed generation in practical distribution grids based on moth-flame
+    optimization algorithm. In International conference on advanced electrical engineering
+    (ICAEE), Algiers, Algeria, 19–21 November. https://doi.org/10.1109/ICAEE47123.2019.9014662.
+
+    Sultana, U., Khairuddin, A., Mokhtar, A. S., Qazi, S. H., & Sultana, B. (2017).
+    An optimization approach for minimizing energy losses of distribution systems
+    based on distributed generation placement. Journal Teknologi, 79(8), 87–96. https://doi.org/10.11113/jt.v79.5574.
+
+    Sultana, U., Khairuddin, A. B., Sultana, B., Rasheed, N., Qazi, S. H., & Malik,
+    N. R. (2018). Placement and sizing of multiple distributed generation and battery
+    swapping stations using grasshopper optimization algorithm. Energy, 165, 408–421.
+    https://doi.org/10.1016/j.energy.2018.09.083.
+
+    Sultana, S., & Roy, P. K. (2016). Krill herd algorithm for optimal location of
+    distributed generator in radial distribution system. Applied Soft Computing, 40,
+    391–404. https://doi.org/10.1016/j.asoc.2015.11.036.
+
+    Suresh, M. C. V., & Belwin, E. J. (2018). Optimal DG placement for benefit maximization
+    in distribution networks by using Dragonfly algorithm. Renewables, 5(4), 1–8.
+    https://doi.org/10.1186/s40807-018-0050-7.
+
+    Tanwar, S. S., & Khatot, D. K. (2017). Techno-economic and environmental approach
+    for optimal placement and sizing of renewable DGs in distribution system. Energy,
+    127, 52–67. https://doi.org/10.1016/j.energy.2017.02.172.
+
+    Tolba, M. A., Diab, A. A. Z., Tulsy, V. N., & Abdelaziz, A. Y. (2018). LVCI approach
+    for optimal allocation of distributed generations and capacitor banks in distribution
+    grids based on moth–flame optimization algorithm. Electrical Engineering, 100(3),
+    2059–2084. https://doi.org/10.1007/s00202-018-0684-x.'
+  merge: -1
+  img_proc: true
+- pgno: 37
+  md: 'Yang, L., Yang, X., Wu, Y., & Liu, X. (2018). Applied research on distributed
+    generation optimal allocation based on improved estimation of distribution algorithm.
+    *Energies*, *11*(9), 2363. https://doi.org/10.3390/en11092363.
+
+
+    Yaprakdal, F., Baysal, M., & Anvari-Moghaddam, A. (2019). Optimal operational
+    scheduling of reconfigurable microgrids in presence of renewable energy sources.
+    *Energies*, *12*(10), 1858. https://doi.org/10.3390/en12101858.
+
+
+    Zubo, R. H. A., Mokryani, G., Rajamani, H. H., Aghaei, J., Niknam, T., & Pillai,
+    P. (2017). Operation and planning of distribution networks with integration of
+    renewable distributed generators considering uncertainties: A review. *Renewable
+    and Sustainable Energy Reviews*, *72*, 1177–1198. https://doi.org/10.1016/j.rser.2016.10.036.'
+  merge: -1
+  img_proc: true
