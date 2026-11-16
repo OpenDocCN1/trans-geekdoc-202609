@@ -1,0 +1,17 @@
+In this paper, we explore the design, functionality, and performance of these personal thermal and moisture management wearable systems. We examine their potential benefits and limitations, discuss the underlying principles of heat and moisture transfer, and present recent advancements in this rapidly evolving field. Through a comprehensive analysis, we aim to shed light on the significance of these wearable technologies and their potential applications in improving human thermal comfort and well-being.
+
+# ## 2. Thermal and Moisture Management Mechanism
+
+The human–clothing–environment heat and moisture transfer mechanism includes both heat and moisture transfer. When talking about human heat and moisture management, clothing plays an important role in this process.
+
+# ### 2.1. Thermal Transfer Mechanism
+
+Heat transfer from the human body surface to the environment is a complex and variable process involving the interaction of several factors. Among them, the air layer between the skin and the garment, the thermal conductivity properties of the garment material, and the heat transfer from the air layer between the garment and the environment are the key elements. The modes of heat transfer include conduction, convection, radiation, and evaporative heat dissipation, which interact and work together to influence the heat exchange process between the body and the environment.
+
+Clothing plays a crucial role in the heat exchange between the human body and the environment, and it can provide thermal insulation and heat preservation. In order to better understand the heat transfer performance of garments, researchers have abstracted and idealized the heat transfer process of garments, thus establishing garment heat transfer models, as shown in Figure 3. However, these models do not fully reflect the situation of real human beings wearing garments, because the heat exchange between the human body and the environment is very complex in real situations.
+
+![](bbox=[0.28, 0.53, 0.88, 0.68])
+
+**Figure 3.** Thermal transfer mechanism of clothing.
+
+When the human body wears looser clothing, is in a state of motion, or is in an environment with high airflow velocities, there is not only conduction and radiation but also convective heat dissipation between the human body and the clothing and the air layer between the clothing and the clothing. In addition, convective heat dissipation also occurs between the air layer and the environment, and when the garment material is fluffy, radiative heat dissipation also occurs within the garment. Therefore, in order to evaluate the heat transfer performance of garments more comprehensively, researchers have proposed the concept of garment thermal resistance [10]. Garment thermal resistance integrates several factors, including the heat transfer performance of the garment material, the heat transfe performance of the air layer between the body and the garment, the fit of the garment to the body, and the flow of the air layer within the garment. By measuring the size of the thermal resistance of a garment, we were able to evaluate the heat transfer performance of the garment more comprehensively [11]. It is worth noting that current cooling suits can put the human body in a comfortable temperature range, but there still

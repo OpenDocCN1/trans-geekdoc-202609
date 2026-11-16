@@ -1,0 +1,11 @@
++   35. Zhu, F.L.; Fan, J.B.; Feng, Q.Q.; Zhou, Y. Application and feasibility analysis of phase change materials for fire-fighting suit. J. Text. Res. 2014, 35, 124–132. [CrossRef]
++   36. Shen, T.; Lu, S.; Xin, C. Preparation of thermal energy storage microcapsule by phase of change and the application in intelligent textiles. J. Xi’an Polytechn. Univ. 2017, 31, 306–314. [CrossRef]
++   37. Ali, K.; Gul, R.M.; Arshad, S.N.; Kamran, M.A. Personalized Cooling System Using Phase Change Materials. Key Eng. Mater. 2021, 875, 184–192. [CrossRef]
++   38. Itani, M.; Bachnak, R.; Ghaddar, N.; Ghali, K. Evaluating Performance of Hybrid PCM-Fan and Hybrid PCM-Desiccant Vests in Moderate and Hot Climates. J. Build. Eng. 2019, 22, 383–396. [CrossRef]
++   39. Ji, C.F.; Ji, C.Y.; Wang, Z.R.; Li, S.J. Experimental Study on Properties of Phase Change Cold Storage Materials Filled in Cooling Suits. Coal Mine Saf. 2019, 50, 21–25+30. [CrossRef]
++   40. Sun, W.; Liang, G. Research and development of individual cooling composite shaped paraffin based phase change cold storage materials for mining. Chem. Eng. Equip. 2021, 43–44+47. [CrossRef]
++   41. Liang, Y.H.; Li, W.L.; Zhu, J.Y.; Liu, C.H.; Ning, B.S. Optimal design and thermal comfort evaluation of ultralight phase change cooling suit. Wool Text. J. 2022, 50, 97–103. [CrossRef]
++   42. Song, W.; Wang, F.; Wei, F. Hybrid cooling clothing to improve thermal comfort of office workers in a hot indoor environment. Build. Environ. 2016, 100, 92–101. [CrossRef]
++   43. Kang, Z.; Udayraj, Wan, X.; Wan, F. A new hybrid personal cooling system (HPCS) incorporating insulation pads for thermal comfort management: Experimental validation and parametric study. Build. Environ. 2018, 145, 276–289. [CrossRef]
+
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.

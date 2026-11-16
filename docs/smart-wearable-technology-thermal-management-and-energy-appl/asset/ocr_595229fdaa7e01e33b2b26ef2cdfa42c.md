@@ -1,0 +1,21 @@
++   21. Monga, V.; Li, Y.; Eldar, Y.C. Algorithm unrolling: Interpretable, efficient deep learning for signal and image processing. IEEE Signal Process. Mag. 2021, 38, 18–44. [CrossRef]
++   22. Li, C.; Li, J.; Li, Y.; He, L.; Fu, X.; Chen, J. Fabric defect detection in textile manufacturing: A survey of the state of the art. Secur. Commun. Netw. 2021, 2021, 9948808. [CrossRef]
++   23. Sikka, M.P.; Sarkar, A.; Garg, S. Artificial intelligence (AI) in textile industry operational modernization. Res. J. Text. Appar. 2024, 28, 67–83. [CrossRef]
++   24. Behera, B. Image-processing in textiles. Text. Prog. 2004, 35, 1–193. [CrossRef]
++   25. Conci, A.; Proença, C. A comparison between image-processing approaches to textile inspection. J. Text. Inst. 2000, 91, 317–323. [CrossRef]
++   26. Mohanty, A.K.; Bag, A. Detection and classification of fabric defects in textile using image mining and association rule miner. Int. J. Electr. Electron. Comput. 2017, 2, 28–33.
++   27. Nazir, M.K.; Ghani, M.A.N.U.; Ashraf, A.; Alam, S.M.; Farooq, R.U.; Latif, Z. A textile image classification based on texture and shape features. In Proceedings of the 2021 International Conference on Innovative Computing (ICIC), Online, 15–16 September 2021, pp. 1–6.
++   28. Shahrrabadi, S.; Castilla, Y.; Guevara, M.; Magalhães, L.G.; Gonzalez, D.; Adão, T. Defect detection in the textile industry using image-based machine learning methods: A brief review. J. Phys. Conf. Ser. 2022, 2224, 012010. [CrossRef]
++   29. Wang, H.; Luo, H.; Zhang, X.; Zhao, Z.; Wang, J.; Li, Y. Automatic defect detection of carbon fiber woven fabrics using machine vision. Mech. Adv. Mater. Struct. 2024, 31, 10921–10934. [CrossRef]
++   30. Chen, M.; Yu, L.; Zhi, C.; Sun, R.; Zhu, S.; Gao, Z.; Ke, Z.; Zhu, M.; Zhang, Y. Improved faster R-CNN for fabric defect detection based on Gabor filter with Genetic Algorithm optimization. Comput. Ind. 2022, 134, 103551. [CrossRef]
++   31. Suryarasmi, A.; Chang, C.-C.; Akhmalia, R.; Marshallia, M.; Wang, W.-J.; Liang, D. FN-Net: A lightweight CNN-based architecture for fabric defect detection with adaptive threshold-based class determination. Displays 2022, 73, 102241. [CrossRef]
++   32. Shang, H.; Li, P.; Zhang, X.; Peng, X. Overview of fabric defect detection techniques based on computer vision. In Proceedings of the Third International Conference on Computer Graphics, Image, and Virtualization (ICCGIV 2023), Nanjing, China, 16–18 June 2023; pp. 108–115.
++   33. Guan, S. Fabric defect detection using an integrated model of bottom-up and top-down visual attention. J. Text. Inst. 2016, 107, 215–224. [CrossRef]
++   34. Wang, D.; Yu, W.; Lian, P.; Zhang, M. Textile Defect Detection Algorithm Based on Unsupervised Learning. In Proceedings of the 2022 7th International Conference on Image, Vision and Computing (ICIVC), Xi’an, China, 26–28 July 2022; pp. 81–86.
++   35. Heidari, N.; Azmi, R.; Pishgoo, B. Fabric textile defect detection, by selecting a suitable subset of wavelet coefficients, through genetic algorithm. Int. J. Image Process. (IJIP) 2011, 5, 25.
++   36. Aminzadeh, M.; Kurfess, T. Automatic thresholding for defect detection by background histogram mode extents. J. Manuf. Syst. 2015, 37, 83–92. [CrossRef]
++   37. Zhou, J.; Wang, J. Fabric defect detection using adaptive dictionaries. Text. Res. J. 2013, 83, 1846–1859. [CrossRef]
++   38. Kang, X.; Zhang, E. A universal and adaptive fabric defect detection algorithm based on sparse dictionary learning. IEEE Access 2020, 8, 221808–221830. [CrossRef]
++   39. Karegowda, A.G.; Pooja, R.; Rani, A.L.; Devika, G. Detection of Stain Defects in Textile Industry using State-of-Art Transfer Learning Models. In Proceedings of the 2024 International Conference on Smart Systems for applications in Electrical Sciences (ICSSES), Tumakuru, India, 3–4 May 2024; pp. 1–6.
+
+**Disclaimer/Publisher’s Note:** The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.

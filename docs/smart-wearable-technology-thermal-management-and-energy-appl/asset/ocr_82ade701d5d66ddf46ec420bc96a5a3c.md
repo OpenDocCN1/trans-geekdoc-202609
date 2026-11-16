@@ -1,0 +1,21 @@
+Review
+
+# Personal Wearable Thermal and Moisture Management Clothing: A Review on Its Recent Trends and Performance Evaluation Methods
+
+Junming Zhou 1, Jinming Zhao 1, Xiaolei Guo 1, Yuxing Hu 1, Xiaofeng Niu 1,* and Faming Wang 2
+
+1 College of Urban Construction, Nanjing Tech University, Nanjing 211816, China; junmingzhou@njtech.edu.cn (J.Z.); 202261224064@njtech.edu.cn (J.Z.); 202361224073@njtech.edu.cn (X.G.); 202161224201@njtech.edu.cn (Y.H.) 2 Division Animal and Human Health Engineering, Department of Biosystems (BIOSYST), KU Leuven, Kasteelpark Arenberg 30, BE-3001 Leuven, Belgium; faming.wang@kuleuven.be * Correspondence: newton@njtech.edu.cn
+
+Abstract: Personal wearable systems designed to manage temperature and moisture are gaining popularity due to their potential to enhance human thermal comfort, safety, and energy efficiency, particularly in light of climate change and energy shortages. This article presents the mechanisms of thermal and moisture management, recent advances in wearable systems for human thermal and moisture management, and methods for their performance evaluation. It evaluates the pros and cons of various systems. The study finds that most wearable systems for thermal and moisture management are being examined as individual topics. However, human heat and moisture management have noteworthy interactions and impacts on human thermal comfort. There are certain limitations in the methods used for evaluating personal heat and moisture management in wearable systems. This review suggests future research directions for wearable systems to advance this field and overcome these limitations.
+
+Keywords: high-temperature and high-humidity environments; wearable clothing; thermal and moisture management; performance evaluation indicators
+
+Citation: Zhou, J.; Zhao, J.; Guo, X.; Hu, Y.; Niu, X.; Wang, F. Personal Wearable Thermal and Moisture Management Clothing: A Review on Its Recent Trends and Performance Evaluation Methods. Processes 2023, 11, 3063. https://doi.org/10.3390/pr11113063
+
+Academic Editors: Zhansiao Kang, Qing Chen and Blaž Likoizar Received: 6 October 2023 Revised: 19 October 2023 Accepted: 24 October 2023 Published: 25 October 2023
+
+Copyright: © 2023 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https:// creativecommons.org/licenses/by/ 4.0/).
+
+# 1. Introduction
+
+Personnel working in high-temperature and high-humidity environments, such as outdoor medical personnel, workers in mining, metallurgy, and other industries who need to wear heat-protective clothing, as well as firefighters, are not equipped with air conditioning and other temperature-control devices due to the limitations of the workplace. In addition, these personnel are also required to carry out high-intensity labor, which is prone to generating excessive heat and then forming a high-temperature and high-humidity microenvironment, resulting in uncompensated heat stress [1]. Physiological studies indicate that high-temperature environments can decrease human concentration and execution, while also triggering a sense of anxiety, which can significantly impact work efficiency. Additionally, if body temperature exceeds 39 °C, individuals are at risk of a heatstroke, and at a temperature of 40.6 °C, it can be life-threatening, as demonstrated in Figure 1 [2]. Therefore, maintaining a constant human body temperature not only ensures work efficiency but is also an important prerequisite for good health. In the face of the growing demand for personal cooling/dehumidification, the concept of personal thermal and moisture management wearable systems has been proposed [3]. Personal thermal and moisture management wearable systems are one of the common solutions to protect the body from heat stress, especially for those who work in hot and humid areas, which is considered to be an effective personal protection measure [4].

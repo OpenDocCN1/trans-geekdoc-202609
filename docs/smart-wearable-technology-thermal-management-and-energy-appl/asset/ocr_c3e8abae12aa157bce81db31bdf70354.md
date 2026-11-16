@@ -1,0 +1,18 @@
++   104. Wang, F.; Havenith, G.; Mayor, T.S.; Kuklane, K.; Leonard, J.; Młynarczyk, M.; Hodder, S.; Wong, C.; Kishino, J.; Dai, X. Clothing real evaporative resistance determined by means of a sweating thermal manikin: A new round-robin study. In Proceedings of the 10th International Meeting on Thermal Manikin and Modelling (10i3m), Tampere, Finland, 7–9 September 2014.
++   105. Wang, F.; Kuklane, K.; Gao, C.; Holmér, I. Development and validity of a universal empirical equation to predict skin surface temperature on thermal manikins. J. Therm. Biol. 2010, 35, 197–203. [CrossRef]
++   106. Wang, F.; Lai, D.; Shi, W.; Fu, M. Effects of fabric thickness and material on apparent ‘wet’ conductive thermal resistance of knitted fabric ‘skin’ on sweating manikins. J. Therm. Biol. 2017, 70, 69–76. [CrossRef] [PubMed]
++   107. Takada, S.; Kobayashi, H.; Matsushita, T. Thermal Model of Human Body Fitted with Individual Characteristics of Body Temperature Regulation. Build. Environ. 2009, 44, 463–470. [CrossRef]
++   108. Li, F. A 3D Finite Element Thermal Model for Clothed Human Body. JFBI 2013, 6, 149–160. [CrossRef]
++   109. Enescu, D. Models and Indicators to Assess Thermal Sensation Under Steady-State and Transient Conditions. Energies 2019, 12, 841. [CrossRef]
++   110. Takada, S.; Sakiyama, T.; Matsushita, T. Validity of the Two-Node Model for Predicting Steady-State Skin Temperature. Build. Environ. 2011, 46, 597–604. [CrossRef]
++   111. Doherty, T.; Arens, E.A. Evaluation of the Physiological Bases of Thermal Comfort Models; American Society of Heating, Refrigerating and Air-Conditioning Engineers: Peachtree Corners, GA, USA, 1988.
++   112. Ooka, R.; Minami, Y.; Sakoi, T.; Tsuzuki, K.; Rijalt, H.B. Improvement of Sweating Model in 2-Node Model and Its Application to Thermal Safety for Hot Environments. Build. Environ. 2010, 45, 1565–1573. [CrossRef]
++   113. Melnikov, V.; Krzhibzanovskaya, V.V.; Lees, M.H.; Sloot, P.M.A. System Dynamics of Human Body Thermal Regulation in Outdoor Environments. Build. Environ. 2018, 143, 760–769. [CrossRef]
++   114. Joshi, A.; Wang, F.; Kang, Z.; Yang, B.; Zhao, D. A three-dimensional thermoregulatory model for predicting human thermophysiological responses in various thermal environments. Build. Environ. 2022, 207, 108506. [CrossRef]
++   115. Katić, K.; Li, R.; Zeiler, W. Thermophysiological Models and Their Applications: A Review. Build. Environ. 2016, 106, 286–300. [CrossRef]
++   116. Stolwijk, J.A. Mathematical models of thermal regulation. Ann. N. Y. Acad. Sci. 1980, 335, 98–106. [CrossRef]
++   117. Munir, A.; Takada, S.; Matsushita, T. Re-Evaluation of Stolwijk’s 25-Node Human Thermal Model under Thermal-Transient Conditions: Prediction of Skin Temperature in Low-Activity Conditions. Build. Environ. 2009, 44, 1777–1787. [CrossRef]
++   118. Kang, Z.; Wang, F.; Udayraj. An advanced three-dimensional thermoregulatory model of the human body: Development and validation. Int. Commun. Heat Mass Transf. 2019, 107, 34–43. [CrossRef]
++   119. Ismail, N.; Ghaddar, N.; Ghali, K. Predicting Segmental and Overall Ventilation of Ensembles Using an Integrated Bioheat and Clothed Cylinder Ventilation Models. Text. Res. J. 2014, 84, 2198–2213. [CrossRef]
+
+**Disclaimer/Publisher’s Note:** The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.
