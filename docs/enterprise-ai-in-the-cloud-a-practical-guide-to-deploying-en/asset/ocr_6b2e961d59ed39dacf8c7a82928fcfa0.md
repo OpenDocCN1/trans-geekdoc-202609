@@ -1,0 +1,4 @@
+| TASK | TASK OWNERS | DELIVERABLES |
+| :--- | :--- | :--- |
+| **Develop your plan:** During this phase, you capture these gaps in the form of a plan so that you can work toward launching the AI initiative in the next phase. There are two types of plans. One is at the project level to implement the identified AI POC as part of the Launch phase, and the other enables enterprise AI from a transformation perspective. The latter is known as the AI transformation plan. | Project managers, strategy team | Project plan, AI transformation plan |
+| **Create your roadmap:** Create a roadmap with clearly defined milestones with your idea of the resources and timelines. | Strategic planners, project managers | AI initiative roadmap, milestone chart |

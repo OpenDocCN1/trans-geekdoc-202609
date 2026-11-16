@@ -1,0 +1,147 @@
+
+
+## REFERENCE ARCHITECTURE PATTERNS FOR TYPICAL USE CASES
+
+- Review the typical reference architectures (AWS, Azure, and the Google Cloud Platform) for the most common use cases
+- Review the general components of an ML platform
+- Learn how to choose between building and buying a ready-made ML platform
+- Learn how to choose between different cloud providers
+- Review hybrid and edge computing and the multicloud architecture
+
+There are close to 200 services provided by AWS and this number keeps growing. This becomes challenging for companies attempting to choose the correct tools for the right problem and map them to various use cases. This section reviews a few reference architecture patterns so you can use them to customize your implementation based on your specific project needs. This can help you create your future-state strategy and gain insights from big data processing, data warehousing, visualization, and AI/ML to prepare for the future. Those architectural patterns are related to the following five use cases:
+
+- Customer 360-degree architecture
+- Event-driven architecture with IoT data
+- Personalized recommendation architecture
+- Real-time customer engagement
+- Data anomaly and fraud detection
+
+### Customer 360-Degree Architecture
+
+Customer 360-degree architecture can be used to increase customer retention and profitability by improving customer service, increasing sales, and improving marketing campaigns. Building a 360-degree customer view involves aggregating data from multiple data sources into a single unified solution, from which you can draw the necessary insight about your customers.
+
+Building this architecture, as shown in Figure 13.2, involves four steps.
+
+| STEP NUMBER | STEP NAME | DESCRIPTION | POSSIBLE AWS COMPONENTS |
+|---|---|---|---|
+| 1 | Data sources | Ingest the data from multiple sources into a single data source. Data can come from SAP, ERP, CRM, websites, Salesforce, Google Analytics, and so on. | AWS Database Migration Service, AWS Glue |
+| 2 | Knowledge graph system | Build a unified customer profile by implementing a graph-based knowledge system to identify new customer segments and build customer hierarchies. | Amazon Neptune |
+| 3 | Intelligence layer | Build an intelligence layer by offloading the data into Amazon Redshift or S3 so that insights can be drawn using analytical tools such as Amazon Athena. | Amazon Redshift, Amazon S3, Amazon Athena |
+| 4 | Activation layer | Use the insights from the intelligence layer and enrich it with recommendations or predictions from AI/ML to create the next best action and personalize customer experiences. | AWS Lambda, Amazon Personalize |
+
+![](img/1490b3cf638678afadc8c48abc1698d5_285_0.png)
+
+**FIGURE 13.2**: Customer 360-degree architecture
+
+Figure 13.3 shows an implementation of the customer 360-degree architecture using AWS components. You should be able to build similar architecture using Google or Azure Cloud components.
+
+NOTE The customer 360-degree architecture has four steps: data ingestion, knowledge graph system, intelligence layer for insights, and activation layer for personalized customer experiences.
+
+- **DATA SOURCES**
+  - CRM
+  - ERP
+  - SFDC
+  - Social media
+  - Mobile
+  - POS
+  - MDM
+  - Sensors
+  - Chat
+  - Call center
+  - Images
+  - Videos
+  - Emails
+
+- **DATA INGESTION**
+  - REST API
+  - Streaming
+  - ETL (Extract, Transform, Load)
+  - FTP
+
+- **CONNECTED CUSTOMER 360**
+  - Data Lake (S3)
+  - Data Warehouse (Amazon Redshift)
+  - Feature Store (Amazon Neptune)
+  - Graph Database (Feature Store)
+  - Catalog
+  - Data Discovery
+  - Data Lineage
+  - Data Quality
+  - Data Lifecycle
+
+- **DATA HARMONIZATION**
+  - Transforms, Aggregate
+  - Deduplication, Entity Linking
+  - Ontology Creation, Refinement
+
+- AWS Identity Access Management
+- AWS Key Management Service
+- AWS Secret Manager
+- Logging (Amazon CloudWatch)
+- Auditing (AWS CloudTrail)
+- CI/CD Stack
+
+- **INTELLIGENCE/ACTIVATION**
+  - SQL Query (Amazon Athena)
+  - Data Warehouse (Amazon Redshift)
+  - Business Intelligence (Amazon QuickSight)
+  - AI/ML
+
+- **CONSUMPTION**
+  - Digital Channels
+  - Call Center
+  - Data Exchange
+
+**FIGURE 13.3:** Customer 360-degree architecture using AWS components (AWS components shown in bold)
+
+### EXERCISE: BUILDING A CUSTOMER 360-DEGREE VIEW ARCHITECTURE USING AWS
+
+This is an experiential learning exercise that allows the team members to apply their theoretical knowledge of AWS services into practice and acquire AWS skills.
+
+| STEP NAME | TASK OWNER | TASK DETAILS | DELIVERABLE |
+|---|---|---|---|
+| Set up data sources | Data engineer | Create mock data that represents different data sources (CRM system, web analytics, etc.) | Mock data files |
+| Data ingestion | Data scientist | Ingest the data from multiple sources into a single data source on AWS using AWS Database Migration Service or AWS Glue. | AWS Database Migration Service or AWS Glue configuration |
+| Build knowledge graph system | Data scientist | Create a Graph DB using Amazon Neptune. Load the ingested data into this DB and explore the relations between different data entities. | Amazon Neptune DB setup, relations explored |
+| Build intelligence layer | Machine learning engineer | Offload the data into Amazon Redshift or S3. Draw insights from the data using Amazon Athena. | Amazon Redshift or S3 setup, insights drawn using Amazon Athena |
+| Build activation layer | Machine learning engineer and data scientist | Enrich the insights from the intelligence layer with predictions or recommendations from AI/ML to create the next best action and personalize customer experiences. Use AWS Lambda and Amazon Personalize for this. | AWS Lambda and Amazon Personalize setup, recommendations, or predictions generated |
+| Report preparation | AI architect | Document the architecture built, problems encountered, solutions implemented, and insights drawn from the customer data. Include screenshots of the AWS console. | Report with necessary details and screenshots |
+
+### Develop an Event-Driven Architecture Using IoT Data
+
+The event-driven architecture shown in Figure 13.4 is focused on getting value by making near real-time decisions from the data. Some of these use cases are as follows:
+
+- Data from medical devices used to provide personalized healthcare
+- Data from equipment to prevent equipment failures or to impact employee training
+- Data from autonomous vehicles to improve safety
+
+![](img/1490b3cf638678afadc8c48abc1698d5_288_0.png)
+
+**FIGURE 13.4**: Event-driven near real-time predictive analytics using IoT data (AWS components shown in bold)
+
+![](img/1490b3cf638678afadc8c48abc1698d5_288_1.png)
+
+**FIGURE 13.5**: IoT-based event-driven predictive analytics using AWS components (AWS components shown in bold)
+
+Figure 13.5 shows the IoT-based event driven architecture using AWS components. The following table shows the steps involved in setting up an Internet of Things (IoT)–based architecture that facilitates an end-to-end journey—from data collection to insight generation.
+
+| STEPS | DESCRIPTION | AWS SERVICES |
+| :--- | :--- | :--- |
+| Data collection | Data from IoT devices, such as medical devices, car sensors, and industrial equipment is collected. | AWS Greengrass |
+| Data ingestion | The collected data is then ingested into the cloud platform. | AWS IoT Core, AWS IoT SiteWise |
+| Stream transformation | The streamed data from these IoT devices is transformed using data from a data warehouse. | Amazon Kinesis Data Analytics |
+| Data storage | The transformed data is then stored for further downstream analysis. | Amazon Redshift |
+| Model training and deployment | The model is trained and deployed to generate inferences. | Amazon SageMaker |
+| Event triggering | Inferences from the models trigger certain events. | AWS Lambda |
+| Dashboard creation | Dashboards are created to visualize insights. | Amazon OpenSearch Service Dashboards |
+
+> **TIP** IoT architecture leverages streaming data from IoT devices to make real-time decisions for use cases such as personalized healthcare, autonomous cars, and equipment monitoring.
+
+### EXERCISE: BUILDING AN EVENT-DRIVEN ARCHITECTURE USING AWS AND IoT DATA
+
+This is an experiential learning exercise that allows the team members to design and implement an event-driven architecture that collects, processes, and analyzes data from IoT devices in real time.
+
+**Prerequisites:** You need a basic knowledge of AWS services, IoT devices, and some data science concepts.
+
+**Tasks:** Use the steps outlined in the previous table to build this architecture. The details of building this architecture is outside the scope of the book, but it would be a good starting point if your use case involves processing IoT data.
+

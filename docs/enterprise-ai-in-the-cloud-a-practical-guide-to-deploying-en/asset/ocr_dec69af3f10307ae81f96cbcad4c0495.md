@@ -1,0 +1,3 @@
+| STEP | TASK | EXAMPLE | TASK OWNER (SKILL SETS) | DELIVERABLES |
+|---|---|---|---|---|
+| Identifying data needs | You can now start understanding the data needs, such as what kinds of data are required and the potential sources for the same. List what types of data you might need for such a prediction and possible sources. | Past sales data is essential, along with data related to promotional offers, seasonal trends, price changes, customer reviews, competitor data, economic indicators, and so on. | Data scientist, data analyst | A comprehensive list of required data and potential data sources |

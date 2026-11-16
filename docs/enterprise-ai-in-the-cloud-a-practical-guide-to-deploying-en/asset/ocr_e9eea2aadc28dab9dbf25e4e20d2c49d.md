@@ -1,0 +1,3 @@
+| STEPS IN MACHINE LEARNING WORKFLOW | DESCRIPTION | TOOLS/APPLICATIONS | USE CASES |
+| :--- | :--- | :--- | :--- |
+| Using a feature store | A feature store is a key feature in the MLOps lifecycle. It speeds up machine learning tasks and eliminates the need to create the same feature multiple times. | Online and offline feature storage. Online feature storage is used for real-time inferences, while offline feature storage is used to maintain a history of feature values. | It is helpful for training and batch inferences. It helps machine learning engineers and data scientists create, share, and manage features during ML development and reduces the curation work required to create features out of raw data. |
