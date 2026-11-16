@@ -1,0 +1,15 @@
+or principal components), which are linear combinations of the raw measurements. After computing the latent variables in the process being investigated, these fewer number of variables are then used instead of using the raw data. This latent variables regression (LVR) approach generally results in well-conditioned parameter estimates and reliable model predictions [20]. In this section, these LVR methods are briefly presented. For more details, refer to [21–23]. Before presenting PCR and PLS regression methods, we present PCA, which is a popular multivariate dimensionality-reduction approach.
+
+# ### 2.2.2.1 Principal component analysis
+
+# **Feature extraction with PCA**
+
+PCA, a dimensionality-reduction approach, is an increasingly popular modeling framework for discovering relevant and crucial features from multivariate data. The foundation of PCA can be tracked back to Pearson (1901) [24] and Hotelling (1933) [25]. By projecting process variables into a lower-dimensional subspace, PCA reveals the inherent cross-correlation among process variables [26]. In this regard, PCA latent variables or principal components (PCs) (also called scores), which consist of linear combinations of physical variables, can efficiently describe a process in a reduced subspace. PCA-based methods are currently more commonly applied in data compression [27], pattern recognition, data smoothing, classification [28], and fault detection [29].
+
+PCA does not differentiate between input data X and output data Y. It is applied to one data set that contains all the process variables involved in the problem. Here, X is used to represent the whole data set. Let X = [x_1^T, ..., x_n^T]^T \in R^{n x m} be a dataset gathered from a process having n observations and m variables.
+
+Let us first discuss an important point before going into any further in detail. When performing PCA on multivariate data, it is assumed that all the data are on a comparable scale. If scaling of the data is omitted, then certain variables in the data have to be adjusted to avoid the occurrence of misleading dominance. Scaling of data changes the covariance matrix and consequently affects the principal components. Scaling is important for both the variance and mean adjustments [30]. When the process variables are measured with different units, the purpose of the usual scaling is to make the variance the same (i.e., to give standard units), which gives a correlation matrix. Other variance-stabilizing transformations, such as log transformation, are used in the literature. The most commonly used scaling converts the variables to zero mean and unit variance. Each variable x_j \in R^n, j = 1, ..., m, should be scaled to have zero mean and unit variance prior to using PCA:
+
+```
+$$x_{j,s} = \frac{x_j - \mu_{x_j}}{\sigma_{x_j}}$$ (2.9)
+```

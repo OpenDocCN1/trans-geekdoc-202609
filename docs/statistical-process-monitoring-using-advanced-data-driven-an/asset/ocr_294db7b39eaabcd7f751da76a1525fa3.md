@@ -1,0 +1,20 @@
+[18] X. Huang, H. Tan, G. Lin, Y. Tian, A LSTM-based bidirectional translation model for optimizing rare words and terminologies, in: 2018 International Conference on Artificial Intelligence and Big Data (ICAIBD), May 2018, pp. 185–189.
+[19] S.P. Singh, A. Kumar, H. Darbari, L. Singh, A. Rastogi, S. Jain, Machine translation using deep learning: an overview, in: 2017 International Conference on Computer, Communications and Electronics (Competelix), July 2017, pp. 162–167.
+[20] B. Athiwaratkun, J.W. Stokes, Malware classification with LSTM and GRU language models and a character-level CNN, in: 2017 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), March 2017, pp. 2482–2486.
+[21] E. Song, F.K. Soong, H. Kang, Effective spectral and excitation modeling techniques for LSTM-RNN-based speech synthesis systems, IEEE/ACM Transactions on Audio, Speech and Language Processing 25 (11) (Nov 2017) 2152–2161.
+[22] M. Bi, H. Lu, Z. Shang, M. Lei, Z. Yan, Deep feed-forward sequential memory networks for speech synthesis, in: 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2018, pp. 4794–4798.
+[23] M. Rozenwald, E. Khrameeva, G. Sapunov, M. Gelfand, Prediction of 3D chromatin structure using recurrent neural networks, in: 2018 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), 2018, p. 2488.
+[24] L.T. Hattori, C.M.V. Benitez, M. Gutoski, N.M.R. Aquino, H.S. Lopes, A novel approach to protein folding prediction based on long short-term memory networks: a preliminary investigation and analysis, in: 2018 International Joint Conference on Neural Networks (IJCNN), 2018, pp. 1–8.
+[25] X. Pan, P. Rijnebeek, J. Yan, H.-B. Shen, Prediction of RNA-protein sequence and structure binding preferences using deep convolutional and recurrent neural networks, BMC Genomics 19 (1) (2018) 511.
+[26] Y. Jiang, Z. Wu, J. Tang, Z. Li, X. Xue, S. Chang, Modeling multimodal clues in a hybrid deep learning framework for video classification, IEEE Transactions on Multimedia 20 (11) (Nov 2018) 3137–3147.
+[27] Y. Yang, J. Zhou, J. Ai, Y. Bin, A. Hanjalic, H.T. Shen, Yi, Video captioning by adversarial LSTM, IEEE Transactions on Image Processing 27 (11) (2018) 5600–5611.
+[28] L. Gao, Z. Guo, H. Zhang, X. Xu, H.T. Shen, Video captioning with attention-based LSTM and semantic consistency, IEEE Transactions on Multimedia 19 (9) (Sep. 2017) 2045–2055.
+[29] A. Ullah, J. Ahmad, K. Muhammad, M. Sajjad, S.W. Baik, Action recognition in video sequences using deep bi-directional LSTM with CNN features, IEEE Access 6 (2018) 1155–1166.
+[30] W. Du, Y. Wang, Y. Qiao, Recurrent spatial-temporal attention network for action recognition in videos, IEEE Transactions on Image Processing 27 (3) (March 2018) 1347–1360.
+[31] F.A. Gers, N.N. Schraudolph, J. Schmidhuber, Learning precise timing with LSTM recurrent networks, Journal of Machine Learning Research 3 (2002) 115–143.
+[32] F.A. Gers, J. Schmidhuber, F. Cummins, Learning to forget: continual prediction with LSTM, Neural Computation 12 (10) (2000) 2451–2471.
+[33] I. Sutskever, G.E. Hinton, G.W. Taylor, The recurrent temporal restricted Boltzmann machine, in: Advances in Neural Information Processing Systems, 2009, pp. 1601–1608.
+[34] Q. Lyu, Z. Wu, J. Zhu, Polyphonic music modelling with LSTM-RTRBM, in: Proceedings of the 23rd ACM International Conference on Multimedia, ACM, 2015, pp. 991–994.
+[35] K. Goel, R. Vohra, J. Sahoo, Polyphonic music generation by modeling temporal dependencies using an RNN-DBN, in: International Conference on Artificial Neural Networks, Springer, 2014, pp. 217–224.
+[36] R. Vohra, K. Goel, J. Sahoo, Modeling temporal dependencies in data using a DBN-LSTM, in: 2015 IEEE International Conference on Data Science and Advanced Analytics (DSAA), IEEE, 2015, pp. 1–4.
+[37] N. Boulanger-Lewandowski, Y. Bengio, P. Vincent, Modeling temporal dependencies in high-dimensional sequences: application to polyphonic music generation and transcription, preprint, arXiv:1206.6392, 2012.

@@ -1,0 +1,11 @@
+![](bbox=[0.14, 0.1, 0.86, 0.34])
+
+FIGURE 3.14 Checkerboard plot of fault isolation results, where a black box indicates that a variable is identified as shifted at a given time point but is white otherwise. Variables that are suspected to be truly shifted are highlighted in yellow (light gray in print version).
+
+Between April 17–19, ras_ph is consistently identified as shifted. The shift in mbr_2_level is also clearly identified, but the shift in mbr_1_level is not; this is likely due to the fact that the shift is much smaller in magnitude and may have been masked by some extreme values in the training period. Another shift is identified in ras_ph at the end of April 23 and is consistently flagged as shifted until the end of the monitoring period. However, perm_cond is not identified as shifted, which is likely due to the nonstationarity present in the residuals. Additional shifts identified in variables such as bio_1_temp, bio_2_temp, and ras_temp are likely also caused by nonstationarity or noise in the data and can be disregarded without consistent evidence that the variable is shifted.
+
+Operators were not alerted to the fault until 10:00 a.m. on April 24, and once the underlying problem was identified, it took two months for the system to fully recover and achieve normal operating conditions. Using the FD&I methods presented in this case study would have detected the fault sooner and would have also pointed operators to some of the key variables responsible for the fault, allowing them to more quickly address the problem. In systems with many complexly related variables, FD is often not sufficient because it can be difficult for operators to identify the shifted variables, especially in the case of a drift fault that becomes more severe over time. Therefore, FI is a vital step in diagnosing a fault before the entire system is impacted.
+
+# 3.6 Further reading
+
+Some excellent review papers that include references for further reading have been published. Capizzi [101] summarizes some of the Phase II VS-based control charts and identifies some open areas of research, such as developing distribution-free methods, methods for autocorrelated data, and VS methods for
