@@ -1,0 +1,11 @@
+education/certification checks, and Internet or social media checks might be run before new-hire orientation ever occurs. New employees might be asked to sign *nondisclosure agreements* (*NDAs*), agree to good security practices, and agree to *acceptable use policies* (*AUPs*).
+
+When employees are onboarded, a number of controls can be used to control access and privilege. First, *separation of duties* describes the process of dividing duties so that more than one person is required to complete a particular task. **Job rotation** can be used to maintain redundancy, back up key personnel, and help identify fraudulent activities. The *principle of least privilege* is another important concept that can help an organization achieve its operational security goals. According to this principle, individuals should have only enough resources to accomplish their required tasks.
+
+Controls such as mandatory vacations provide time for audits and for examining user activity for illicit activities. Controls need to be backed up by policies, procedures, and training. Keep in mind that organizations benefit when each employee actively participates in the security of the organization.
+
+# Clipping Levels
+
+No one has the time to investigate every event or anomaly that occurs, but an organization must have systems in place to log and monitor activities. An organization can set a *clipping level* to identify an acceptable threshold for the normal mistakes a user might commit. Then, events that occur with a frequency in excess of the clipping level can trigger administrative notification and investigation.
+
+A clipping level allows users to occasionally make mistakes, but if the established level is exceeded, violations are recorded or some type of response occurs. A network administrator might, for example, allow users to attempt to log in three times. If a user can’t get the password right by the third try, the account is locked, and the user is forced to call the help desk for support. If an administrator or a help desk staffer is contacted to reset a password, a second type of authentication should be required to protect against social engineering attacks. *Chapter 7, “Security Assessment and Testing,”* covers social engineering in detail.

@@ -1,0 +1,9 @@
+# Security Modes of Operation
+
+Several security modes of operation are based on Department of Defense (DoD) 5220.22-M classification levels. According to the DoD, information being processed on a system and the clearance level of authorized users can be classified into one of four modes (see Table 4.2):
+
++   Dedicated: A need to know is required to access all information stored or processed. Every user requires formal access with clearance and approval and must have executed a signed nondisclosure agreement (NDA) for all the information stored and/or processed. This mode must also support enforced system access procedures. All hard-copy output and media removed will be handled at the level for which the system is accredited until reviewed by a knowledgeable individual. As the system is dedicated to processing of one particular type or classification of information all authorized users can access all data.
+
++   System high: All users have a security clearance; however, a need to know is required only for some of the information contained within the system. Every user requires access approval and needs to have signed NDAs for all the information stored and/or processed. Access to an object by users not already possessing access permission must only be assigned by authorized users of the object. This mode must be capable of providing an audit trail that records time, date, user ID, terminal ID (if applicable), and filename. All users can access some data based on their need to know.
+
++   Compartmented: Valid need to know is required for some of the information on the system. All users must have formal access approval for all information they will access on the system and require proper clearance for the highest level of data classification on the system. All users must have signed NDAs for all information they will access on the system. All users can access some data based on their need to know and formal access approval.

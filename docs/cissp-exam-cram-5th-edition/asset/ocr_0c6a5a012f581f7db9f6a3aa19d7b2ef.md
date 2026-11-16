@@ -1,0 +1,10 @@
+Implementations of physical security surround us. For example, you might have a radio frequency ID (RFID) tag on your car that permits you access to park in the company parking garage. Perhaps company policy requires you to get a new photo taken each year for your company ID badge. Access to the equipment room might be limited to employees who have been assigned access via their badge. You deal with physical access controls every day.
+
+Security administrators have more to worry about than just physical access. Many employees have logical access to multiple company resources that may reside locally, in remote servers and in the cloud. Users might be tied to many roles and accounts that must be managed. Luckily, there is a way to consolidate these accounts: through the use of single sign-on solutions. A single sign-on solution allows users the ability to authenticate only once to access all needed resources and systems. Authentication systems can be centralized, decentralized, or hybrid. This chapter introduces all these concepts.
+
+> **Tip**
+> Single sign-on (SSO) is not the same as password synchronization. Password synchronization typically involves using a static password that is shared across multiple systems or programs, whereas in an SSO solution, a user must authenticate to an authentication server, and the authentication server provides further provisional access control privileges for the user.
+
+Although knowing who to authenticate serves as a basis of access control, there also exists the issue of authorization. Authorization defines what access the user has and what abilities are present. Authorization is a core component of access control. Once a user has been authenticated to a domain, a server, an application, or a system, what is that person authorized to do? As you can see from this brief introduction, controlling access is the first line of defense in allowing authorized users access while keeping unauthorized users out.
+
+Authorization can be accomplished by using several types of access controls, including discretionary, nondiscretionary, attribute-based, and role-based

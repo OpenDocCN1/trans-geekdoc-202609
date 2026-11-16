@@ -1,0 +1,304 @@
+
+## acceptance testing/implementation, SDLC, 569–571
+
+## access controls, 129–130
+- attacks/threats, 438
+- access aggregation, 438–439
+- password attacks, 439–442
+- unauthorized access, 438
+- networks, 321–322
+- DMZ, 324–325
+- firewalls, 322, 481
+- NAT, 325
+- packet filters, 322
+- proxy servers, 322–324
+- stateful firewalls, 322
+- zero trust, 325
+- operational security, 471
+- physical, 240, 495–497
+- remote access, 326, 476
+- CHAP, 326
+- EAP, 326–328
+- IPsec, 329–330
+- PAP, 326
+- PPP, 326
+- RADIUS, 328
+- TACACS, 328–329
+- restricted access/work area security, 241
+
+## access/identity management, 342, 358–359, 377
+- accountability, 343
+- authentication, 342–343, 358–361
+  - AAL, 360
+  - biometrics, 370–375
+  - card-based authentication, 369–370
+  - CHAP, 390
+  - digital certificates, 370
+  - EAP, 390
+  - FIM, 358–360
+  - IAL, 360
+  - IDaaS, 358–360
+  - MS-CHAPv2, 390
+  - multifactor authentication, 375
+  - OAuth, 362
+  - OpenID, 362
+  - PAP, 390
+  - passwords, 363–367
+  - SAML, 361–362
+  - strong authentication, 375
+  - tokens, 367–368
+  - two-factor authentication, 375
+- authorization, 343, 382
+  - ABAC, 387–388
+  - audits, 394–396
+  - CDAC, 389
+  - centralized access control, 390–393
+  - DAC, 382–383
+  - decentralized access control, 393–394
+  - IDS, 396–401, 510–511, 512–513
+  - IPS, 384, 401
+  - keystroke monitoring, 402–403
+  - LBAC, 389
+  - MAC, 383–385
+  - monitoring access, 394–396
+  - NAC, 401–402
+  - RBAC, 385–387
+  - rule-based access control, 388
+  - SIEM, 401
+- employee access control, 355
+  - biometrics, 358, 370–375
+  - card keys/badges, 355–356
+  - RFID tags, 342, 357
+  - silent hostage (duress) alarms, 356
+  - smart/dumb cards, 356
+- federation, 377
+- Kerberos, 378–381
+- least privilege, 343
+- lifecycles, 376
+- perimeter physical control systems, 344
+  - bollards, 346–347
+  - CCTV cameras, 348–349, 496
+  - deadman doors, 346
+  - dogs, 350
+  - fences, 343
+  - gates, 345–346
+  - guards, 350
+  - lighting, 349–350
+  - locks, 351–355
+  - mantraps, 346
+  - turnstiles, 346
+- physical access controls, 342–343, 344–348
+- profile management, 377
+- SESAME, 381
+- SPML, 378
+- SSO, 343, 378
+- user provisioning, 376
+- WS-Security, 377
+- XML, 377
+- **access logs, 416**
+- **account management, 469**
+
+- access controls, 471
+- clipping levels, 471–472
+- database administrators, 469
+- job rotation, 471
+- least privilege, 471
+- network administrators, 469
+- privileged entities, 470–471
+- quality assurance specialists, 469
+- reasonably prudent person rule, 472–473
+- security architects, 469
+- separation of duties, 469–470, 471
+- system administrators, 469
+- systems analysts, 469
+- accountability, 343, 487–489
+- accreditation, 195, 571
+- ace locks, 352
+- ACL (Access Control Lists), 382–383, 388
+- acquisition, digital forensics, 516, 517–519
+- active sniffing, 432
+- ActiveX programming language, 590
+- activity blockers, 484
+- adhesion, contracts of, 53
+- administrative controls, 128
+- administrative (regulatory) law, U.S. legal system/laws, 71
+- administrators, system, 469
+- advisor groups, security, data management, 34
+- advisory policies, 125
+- AES (Advanced Encryption Standard), 217
+- aggregation
+  - access, 438–439
+  - databases, 583, 584
+- agile development, software, 577–578
+- aging, passwords, 364
+- AH (Authentication Headers), 329
+- AI (Artificial Intelligence), 587–588
+- AIC. See CIA triad
+- alarms, 509–510
+  - IDS, 510–511, 512–513
+  - monitoring/detection, 511–512
+  - silent hostage (duress) alarms, 356
+- ALE (Annual Loss Expectancy), 97, 98–99, 106
+- algorithms
+  - cryptographic, 204, 206–207
+    - asymmetric cryptography, 207
+    - symmetric algorithms, 207
+  - DSA, 236, 237
+  - hashing algorithms, 205, 231–233, 237
+    - CBC-MAC, 234
+    - CMAC, 235
+    - HAVAL, 234
+    - HMAC, 234
+    - MAC, 234–235
+    - SHA-1, 233
+    - SHA-2, 233
+    - SHA-3, 234
+  - IDEA, 210
+  - LUC algorithm, 222
+  - MD algorithms, 233
+  - Rivest cipher algorithms, 210–211, 218
+  - RSA algorithm, 222
+- alpha testing, 570
+- ALU (Arithmetic Logic Units), 158
+- analytics
+  - BIA, 117–119
+  - MTD, 122
+  - potential loss assessments, 119–122
+  - qualitative ranking, 120–121
+  - quantitative ranking, 121–122
+  - questionnaires, 119–121
+  - risk reduction process, 121–122
+- comparative analysis, passwords, 439
+- cost-benefit analysis of risk management, 106
+- data analytics, 37
+- digital forensics, 517, 520–521
+- FRAP, 102
+- frequency analysis, 299
+- MITRE Risk Matrix, 106
+- payback analysis, 564
+- risk factor analysis, 87
+- root causes analyses, 415
+- threats, 93–96
+- traffic analysis, 437
+
+- **anomaly-based IDS, 399–400**
+
+- **answers, CISSP exams**
+  - drag-and-drop questions, 26
+  - hotspot questions, 26
+  - multiple-choice questions, 26
+  - strategies for answering, 27
+
+- **anti-malware, telecommunications control, 483–484**
+
+- **antivirus software, 60**
+
+- **applets, 595**
+
+- **application controls, 561–562**
+
+- **application layer**
+  - OSI network model, 256
+  - TCP/IP network model, 267–271, 316–320
+
+- **application-level proxies, 323–324**
+
+## application servers, 169
+
+## applications
+- logs, 416
+- security testing, 420
+- transaction monitoring, 489–490
+- whitelisting, 60
+
+## APT (Advanced Persistent Threats), 450
+
+## architecture security and engineering, 152, 170
+- accreditation, 195
+- certification, 194–195
+- computer/device configurations, 168–170
+- CPU, 158–163
+- cryptography, 203
+  - 3DES, 215–216
+  - AES, 217
+  - algorithms, 204, 206–207
+  - asymmetric encryption, 205, 207, 218–224, 237
+  - attacks, 237–240
+  - authentication, 203–204, 230–231
+  - block ciphers, 205, 207–208
+  - ciphertext, 204
+  - confidentiality, 203
+  - cryptanalysis, 205
+  - CSS, 238
+  - DES, 211–215
+  - digital signatures, 205, 235–236, 237
+  - DRM, 205
+  - encryption, 203, 204
+  - hashing algorithms, 205, 231–236, 237
+  - hybrid encryption, 224–225
+  - integrity, 204, 230–231
+  - Kerckhoff’s Principle, 238
+  - key management, 205
+  - keys, 204
+  - MD algorithms, 233
+  - nonces, 206–207
+  - nonrepudiation, 204
+  - plaintext, 204
+  - pseudorandom numbers, 206–207
+  - s-boxes, 208
+  - steganography, 205
+  - stream ciphers, 205, 208
+  - symmetric encryption, 205, 208–211, 223–224, 237
+- defense in depth design process, 152–153
+- design guidelines, 152–155
+- EA, 155–157
+- frameworks, 154–155
+- fundamentals, overview, 158
+- I/O bus standards, 166–167
+- open/closed systems, 175
+- operating states, 177–178
+- PKI, 153, 225–226
+  - CA, 226
+  - client’s role, 229–230
+  - CRL, 227
+  - digital certificates, 227–229
+  - RA, 226–227
+- process control, 157–158
+- process isolation, 179
+- product security evaluation models, 189
+  - Common Criteria (ISO 15408), 192–194
+  - CTCPEC, 190
+  - ITSEC, 191–192
+  - Rainbow Series, The, 189–191
+    - TCSEC, 189–190, 191–192
+- protection rings, 170–172
+- recovery procedures, 178, 486–487
+- regulatory compliance, 157–158
+- security models, 179, 189
+  - Bell-LaPadula model, 182–184
+  - Biba model, 185–186
+  - Brewer and Nash model, 188
+  - Clark-Wilson model, 187
+  - Graham-Denning model, 188
+  - Harrison-Ruzzo-Ullman model, 188
+  - information flow model, 182
+  - Lattice model, 188
+  - Lipner model, 188
+  - noninterference model, 182
+  - state machine model, 180–181
+  - Take-Grant model, 188
+- security modes of operation, 176–177
+- site/facility controls, 240–241
+- storage media, 163
+  - CD, 165
+  - direct-access storage, 165
+  - DVD, 166
+  - flash memory storage, 166
+  - I/O bus standards, 166–167
+  - optical media, 165
+  - RAM, 163–164, 167–168
+  - ROM, 164–165
+  - secondary storage, 165–166
+  - sequential storage, 165
+  - software, 165
+  - SSD, 166

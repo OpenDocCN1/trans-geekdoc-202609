@@ -1,0 +1,288 @@
+
+- nation-state hackers, 78
+- personnel security attacks, 77
+- physical security attacks, 77
+- script kiddies, 78
+- social engineering attacks, 77
+- threat actors, 78
+- global legal/regulatory issues, 74–75
+- Data Protection Authority, 75
+- right to be forgotten, 75
+- holistic enterprise security systems, 71
+- international legal system/laws, 72–73
+- 1998 Directive on Data Protection, 76
+- Corpus Juris Civilis, 73
+- customary law, 73
+- halakha law, 73
+- intellectual property, 73–74
+- mixed law systems, 73
+- Napoleonic law, 73
+- religious law, 73
+- sharia law, 73
+- policies, assets, 51–52
+- privacy laws, 75–76
+- sexual harassment, 79
+- U.S. legal system/laws
+  - administrative (regulatory) law, 71
+  - CFAA (Computer Fraud and Abuse Act) of 1986, 72
+  - civil law, 71
+  - common law, 71
+  - criminal law, 71
+  - due care, 72
+  - due diligence, 72
+  - Economic Espionage Act of 1996, 72
+- Federal Sentencing Guidelines of 1991, 72
+- hearsay evidence, 72
+- Identity Theft and Assumption Deterrence Act of 1998, 76
+- personal information websites, 76
+- Privacy Act of 1974, The, 75
+- privacy laws, 75–76
+- stare decisis, 71
+- U.S. Child Pornography Prevention Act of 1996, 72
+- U.S. Patriot Act of 2001, 72
+- governance frameworks, 154
+- ISO/IEC 19249, 154–155
+- ITIL, 155
+- Protection of Information in Computing Systems, The, 154
+- governance policies, data, 32–33
+- Graham-Denning security model, 188
+- granularity, databases, 583
+- graybox testing, 420
+- graylists, 480
+- grid computing, 533–534
+- guards, perimeter physical control systems, 350
+- guidelines, risk management, 127
+
+## H
+
+- hackers/computer crime, 76
+- attack methodologies, 430–431
+- attack vectors, 77
+- communications attacks, 77
+- corporate spies, 78
+- crackers, 77–78
+- cyberterrorists/cybercriminals, 78
+- data breaches, 76–77
+- disgruntled employees, 78
+- hacker researchers, 428, 429
+- hactivism, 142, 428
+- insurance, 93
+- investigating computer crimes, 452, 459, 513
+  - business continuity, 458–459
+  - digital forensics, 461–465
+  - disaster recovery, 458–459
+  - incident response, 453–458, 514
+  - interviews/interrogations, 459–460
+  - jurisdictions, 452–453
+  - search and seizure/surveillance, 459
+- IOCE, 516
+- law enforcement/security conferences, 79
+- logical attacks, 77
+- nation-state hackers, 78
+- organized crime, 428
+- personnel security attacks, 77
+- phreakers, 308, 430, 482, 492
+- physical security attacks, 77
+- script kiddies, 78
+- skilled hackers, 428
+- social engineering attacks, 77
+- threat actors, 78
+- halakha law, 73
+- half duplex communication, 280
+- halon fire suppression, 508–509
+- hand geometry recognition, 372
+- Hanoi, Tower of, 538
+- hard changeovers, software, 572
+- hard drives, SED, 56
+- hardware
+- bridges, 282
+- configuration lockdowns, 60
+- data sanitization, 476–477
+- decommissioning, 46–47
+- degaussing, 477
+- destroying, 477
+- disk encryption, 60
+- drive wiping, 47, 477
+- equipment lifecycles, 54–55, 505
+- forensics, 515
+- gateways, 287
+- hubs, 281
+- keystroke loggers, 403
+- mirrored ports, 284
+- network taps, 284
+- repeaters, 281
+- routers, 285–286
+- routine maintenance, 54
+- SED, 56
+- switches, 282–283
+- technical support, 54–55
+- zeroization, 477
+- zero-trust environments, 59
+- **Harrison-Ruzzo-Ullman security model**, 188
+- **hashing algorithms**, 205, 231–233, 237
+- HAVAL, 234
+- MAC, 234–235
+- CBC-MAC, 234
+- CMAC, 235
+- HMAC, 234
+- SHA-1, 233
+- SHA-2, 233
+- SHA-3, 234
+- HAVAL, 234
+- HBA (Hot Bus Adapters), 41
+- HDLC (High-Level Data Link Control), 294
+- headers, 257
+- AH, 329
+- UDP, 266–267
+- hearsay evidence, U.S. legal system/laws, 72
+- heuristic scanning, 483
+- HIDS (Host-Based Intrusion Detection Systems), 398, 512
+- hierarchical database management systems, 582
+- hierarchical designs, MAC, 385
+- high-impact assets, 92–93
+- high-risk assets, 92–93
+- hijacking sessions, 431–432
+- HIPAA (Health Insurance Portability and Accountability Act), 79–80
+- HMAC (Hash-based Message Authentication Code), 234
+- hoaxes, virus, 444
+- holistic enterprise security systems, 71
+- honeypots/honeynets, operational security, 484–485
+- hopping, VLAN, 285
+- host-to-gateway architectures, 330
+- host-to-host architectures, 330
+- host-to-host (transport) layer, TCP/IP network model, 259–260, 318–319
+- TCP, 264–266, 267
+- UDP, 264–265, 266–267
+- Host-to-LAN tunneling protocols, 58
+- hot fixes, 595
+- hot sites, disaster recovery, 525–526
+- hotspot questions, CISSP exams, 25, 26
+- HR, need for, 128
+- HSSI (High-Speed Serial Interface), 294
+- HTML programming language, 590
+- HTTP (HyperText Transfer Protocol), 269, 324
+- data security, 57
+- S-HTTP, 317
+- hubs, 281
+- human-caused threats, 494–495
+- HVAC/environmental controls, 241, 501, 502–503
+- hybrid attacks, 440
+- hybrid clouds, 478
+- hybrid designs, MAC, 385
+- hybrid encryption, 224–225
+
+## I
+
+- IA (Interoperability Agreements), 111
+- IaaS (Infrastructure-as-a-Service), 294–295, 478
+- IAB (Internet Architecture Board), ethics training/awareness, 140–141
+- IAL (Identity Assurance Levels), 360
+- IAM (INFOSEC Assessment Methodology), 102
+- IAST (Interactive Application Security Testing), 425
+- ICMP (Internet Control Message Protocol), TCP/IP network model, 263
+- ICS (Industrial Control Systems), 169
+- IDaaS (Identity as a Service), 362–363
+- IDEA (International Data Encryption Algorithm), 210, 218
+- IDEAL model, software development, 579
+- identifying assets, 91–93, 107
+- identity theft, 443
+- Identity Theft and Assumption Deterrence Act of 1998, 76
+- identity/access management, 342, 358–359, 377
+- accountability, 343
+- authentication, 342–343, 358–361
+- AAL, 360
+- biometrics, 370–375
+- card-based authentication, 369–370
+- CHAP, 390
+- digital certificates, 370
+- EAP, 390
+- FIM, 358–360
+- IAL, 360
+- IDaaS, 358–360
+- MS-CHAPv2, 390
+- multifactor authentication, 375
+- OAuth, 362
+- OpenID, 362
+- PAP, 390
+- passwords, 363–367
+- SAML, 361–362
+- strong authentication, 375
+- tokens, 367–368
+- two-factor authentication, 375
+- authorization, 343, 382
+- ABAC, 387–388
+- audits, 394–396
+- CDAC, 389
+- centralized access control, 390–393
+- DAC, 382–383
+- decentralized access control, 393–394
+- IDS, 396–401, 510–511, 512–513
+- IPS, 384, 401
+- keystroke monitoring, 402–403
+- LBAC, 389
+- MAC, 383–385
+- monitoring access, 394–396
+- NAC, 401–402
+- RBAC, 385–387
+- rule-based access control, 388
+- SIEM, 401
+- employee access control, 355
+- biometrics, 358, 370–375
+- card keys/badges, 355–356
+- RFID tags, 342, 357
+- silent hostage (duress) alarms, 356
+- smart/dumb cards, 356
+- federation, 377
+- Kerberos, 378–381
+- least privilege, 343
+- lifecycles, 376
+- perimeter physical control systems, 344
+- bollards, 346–347
+- CCTV cameras, 348–349, 496
+- deadman doors, 346
+- dogs, 350
+- fences, 343
+- gates, 345–346
+- guards, 350
+- lighting, 349–350
+- locks, 351–355
+- mantraps, 346
+- turnstiles, 346
+- physical access controls, 342–343, 344–348
+- profile management, 377
+- SESAME, 381
+- SPML, 378
+- SSO, 343, 378
+- user provisioning, 376
+- WS-Security, 377
+- XML, 377
+- **IDS (Intrusion Detection Systems), 396–397, 510–511**
+  - anomaly-based IDS, 399–400
+  - HIDS, 398, 512
+  - NIDS, 397–398, 512
+  - rule-based IDS, 400
+  - sensor placement, 400–401
+  - signature-based IDS, 399
+- **IEEE 1394 (FireWire) interfaces, 167**
+- **IGMP (Internet Group Management Protocol), TCP/IP network model, 264**
+- **IKE (Internet Key Exchange), 329–330**
+- **ILM (Information Lifecycle Management), 35**
+- **IM (Instant Messaging), 331**
+- **images, digital forensics**
+  - primary images, 520
+  - working images, 520
+- **IMAP (Internet Message Authentication Protocol), 269, 479**
+- impact scale, qualitative assessments, 100–101
+- impersonation attacks, 444
+- implementing disaster recovery plans, 544–545
+- incident response, computer crime investigations, 453–458, 514
+- incremental attacks, 198
+- incremental backups, 537
+- incremental development, software, 575
+- inference
+  - attacks, 321
+  - databases, 583, 584–585
+- information flow security model, 182
+- information handling requirements, data storage, 44–45
+- information security steering committees, data management, 34
+- informative policies, 125–126

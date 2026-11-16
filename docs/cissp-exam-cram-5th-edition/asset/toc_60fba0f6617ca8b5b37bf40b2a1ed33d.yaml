@@ -1,0 +1,26 @@
+level_changes:
+- line: 1445
+  before: 2
+  after: 1
+- line: 3217
+  before: 2
+  after: 1
+- line: 5187
+  before: 2
+  after: 1
+- line: 6963
+  before: 2
+  after: 1
+- line: 8371
+  before: 2
+  after: 1
+- line: 9522
+  before: 2
+  after: 1
+- line: 11282
+  before: 2
+  after: 1
+- line: 11284
+  before: 3
+  after: 2
+text_changes: []

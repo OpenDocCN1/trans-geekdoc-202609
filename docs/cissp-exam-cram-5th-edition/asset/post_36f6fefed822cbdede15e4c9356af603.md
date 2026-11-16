@@ -1,0 +1,299 @@
+
+- ARP, 263–264
+- ICMP, 263
+- IGMP, 264
+- IP, 260–262
+- Internet layer controls, 319–320
+- network access layer, 259–260
+- network access layer controls, 320
+- process layer controls, 317–318
+
+- **TCSEC (Trusted Computer System Evaluation Criteria)**, 189–190, 191–192
+- **teams/responsibilities**, disaster recovery, 523
+- **technical controls**, 129
+- **technical problems**, operational security, 495
+- **technical reference model**, FEA frameworks, 156
+- **technical support**, equipment lifecycles, 54–55
+- **telecommunications control**, 477
+
+- anti-malware, 483–484
+- blacklists, 480
+- cloud computing, 477–478
+- email, 478–479
+- faxes, 482
+- firewalls, 481
+- graylists, 480
+- honeypots/honeynets, 484–485
+- patch management, 485
+- PBX, 482
+- phones, 482
+- sandboxing, 480
+- whitelists, 480
+
+- **telecommunications equipment**, 281
+- **Telnet**, 57, 268
+- **TEMPEST**, 198–199, 492
+
+- tension wrenches, 354
+- termination of employees, 133–134
+- terminology, CISSP exams, 28
+- tertiary sites, disaster recovery, 525
+- testing
+  - disaster recovery plans, 546–547
+  - interface testing, 569
+  - security, 412
+    - audits, 412–415
+    - blackbox testing, 420
+    - code reviews, 425
+    - coverage, 413–414
+    - DAST, 425
+    - DoS testing, 420
+    - Fagan inspections, 426
+    - fuzz testing, 426
+    - graybox testing, 420
+    - IAST, 425
+    - integer overflow, 426–427
+    - KPI, 414–415
+    - KRI, 415
+    - log reviews, 415–418
+    - misuse case testing, 426
+    - outsider testing, 420
+    - penetration testing, 257–263
+    - RASP, 425
+    - root causes analyses, 415
+    - sampling plans, 413–414
+    - SAST, 425
+    - scanning networks, 418–419
+    - social engineering testing, 421
+    - stress testing, 420
+  - synthetic transactions, 426
+  - techniques/methods, 424–427
+  - vulnerability scanning, 419
+  - war dialing, 420–421
+  - whitebox testing, 420
+  - wireless network testing, 420
+
+- **software**
+- alpha testing, 570
+- blackbox testing, 570
+- final testing, 570
+- function testing, 570
+- interface testing, 569
+- parallel testing, 570
+- pilot/beta testing, 570
+- regression testing, 570
+- sociability testing, 570
+- system testing, 569
+- unit testing, 569
+- whitebox testing, 570
+
+- **TFTP (Trivial File Transfer Protocol), 269**
+- **thin clients, 378**
+- **third-party risk management, 110–112**
+- **threads, CPU, 161**
+- **threat actors, 78, 429–430**
+  - attack methodologies, 430–431
+  - corporate spies, 428
+  - doxing, 428
+  - foreign government agents, 429
+  - hacker researchers, 428, 429
+  - hacktivism, 428
+  - insiders/disgruntled employees, 428
+  - organized crime, 428
+  - outsiders, threat actors, 428
+  - phreakers, 308, 430, 482, 492
+  - script kiddies, 428
+  - skilled hackers, 428
+  - zero trust, 429
+
+- **threats/attacks, 431**
+  - access controls, 438
+    - access aggregation, 438–439
+    - password attacks, 439–442
+    - unauthorized access, 438
+  - APT, 450
+  - ARP poisoning, 436
+  - backdoors, 447–449
+  - booters, 434
+  - botnets, 434–436
+  - brute-force cracking, 441
+  - buffer overflows, 595–596
+  - crypters, 448–449
+  - database attacks, 437
+  - DDoS attacks, 433–434
+  - DNS spoofing, 437
+  - DoS attacks, 433
+  - dumpster diving, 444
+  - eavesdropping, 442
+  - email bombing, 437
+  - exploit kits, 450
+  - financial attacks, 596–597
+  - human-caused threats, 494–495
+  - hybrid attacks, 440
+  - identity theft, 443
+  - impersonation attacks, 444
+  - intelligence, conducting, 107
+  - IOC, 597
+  - logic bombs, 446–447, 596–597
+  - malicious software, 444–445
+    - APT, 450
+    - backdoors, 447–449
+    - crypters, 448–449
+    - exploit kits, 450
+    - logic bombs, 446–447
+    - packers, 448
+    - ransomware, 450–451
+    - rootkits, 449–450
+    - success attacks, 450
+    - Trojans, 447–449
+    - viruses, 445–446
+    - worms, 446
+    - wrappers, 448
+  - methodologies of attacks, 430–431
+  - mitigating, 108
+  - modeling, 107, 108
+    - categorizing threats, 107
+    - DREAD, 109
+    - identifying threats, 107
+    - mapping/diagramming potential attacks, 107
+    - mitigating threats, 108
+    - OCTAVE, 109
+    - PASTA, 109
+    - software, 593
+    - STRIDE, 108
+    - threat intelligence, 107
+    - Trike, 109–110
+    - VAST, 109
+  - packers, 448
+  - pharming attacks, 437
+  - phishing, 443
+  - phreaking, 492
+  - piggybacking, 444
+  - pretexting, 443–444
+  - rainbow tables, 441–442
+  - ransomware, 450–451
+  - risk assessments, 89, 93–96
+  - rootkits, 449–450
+  - session hijacking, 431–432
+  - shoulder surfing, 442, 444
+  - smishing, 308, 443
+  - sniffing, 432
+  - social engineering attacks, 443–444
+  - spear phishing, 443
+  - spoofing attacks, 442, 444
+  - success attacks, 450
+  - tailgating, 444
+  - traffic analysis, 437
+  - Trojans, 447–449
+  - Van Eck Phreaking, 199, 492
+  - virus hoaxes, 444
+  - viruses, 445–446, 597–598
+  - war driving, 437
+  - whaling, 443
+  - wiretapping, 433, 437
+  - worms, 446, 597–598
+  - wrappers, 448
+
+- threshold levels, 364
+- Thunderbolt interfaces, 167
+- Tibetan monks, Biba security model, 186
+- tires (flat), disaster recovery, 522–523
+
+- **TLS (Transport Layer Security), 318–319**
+- **TNI (Trusted Network Interpretation), 191**
+- **tokens, 367**
+  - asynchronous tokens, 367–368
+  - LAN, 272
+  - synchronous tokens, 367–368
+- **tolerating risk, 104, 105**
+- **topologies**
+  - network, 272
+  - bus topologies, 272
+  - fully connected topologies, 275
+  - mesh topologies, 274
+  - ring topologies, 273–274
+  - star topologies, 273
+  - wireless topologies, 309–310
+- **Tower of Hanoi tape-rotation schemes, 538**
+- **TPM chips, 55–56, 154**
+- **trade secrets, 73–74**
+- **trademarks, 73**
+- **traffic analysis, 437**
+- **traffic padding, 321**
+- **training employees, 134–135**
+  - disaster recovery, 545
+  - ethics training/awareness, 137–138
+    - 10 Commandments of Computer Ethics, 139–140
+    - common fallacies, 141–142
+    - Computer Ethics Institute, 139–140
+    - IAB, 140–141
+    - (ISC)2 Code of Ethics, 138–139
+    - ISOC, 140–141
+    - NIST SP 800–14, 141
+    - regulatory requirements, 142–143
+    - RFC 1087, 140–141
+
+- transactions
+  - processing, databases, 585
+  - synthetic, 426
+- transferring risk, 104–105
+- transistors, CPU, 159
+- transit (encryption), data in, 57–59
+- transport (host-to-host) layer, TCP/IP network model, 259–260, 318–319
+  - TCP, 264–266, 267
+  - UDP, 264–265, 266–267
+- transport layer, OSI network model, 254–255
+- transport mode, IPsec, 330
+- Trike, threat modeling, 109–110
+- Triple DES (3DES), 206
+- Trojans, 447–449
+- trunks, VLAN, 285
+- trusted recovery, 475–476
+- tubular locks, 352, 355
+- tumbler locks, 352
+- tumbling attacks, 307–308
+- tunnel mode, IPsec, 330
+- tunneling protocols, encryption, 57–58
+  - L2TP, 320
+  - PPTP, 320
+  - SSTP, 319
+- tuples, databases, 583
+- turnstiles, perimeter physical control systems, 346
+- twisted pair cables, 275–277
+- two-factor authentication, 375
+- Twofish, 210
+- Type I errors, 371
+- Type II errors, 371
+
+## U
+
+- UA (Uptime Agreements), 111
+- UDP (User Datagram Protocol), 255, 264–265, 266–267
+- unauthorized access, 438
+- unauthorized phone use, 306
+- unencrypted sensitive data, database vulnerabilities, 586
+- Unicode encoding, web-based vulnerabilities, 200
+- unit testing, 569
+- unnecessary enabled features, database vulnerabilities, 586
+- unpatched databases, 586
+- unpatched OS/software/browsers, mobile system vulnerabilities, 203
+- UPS, facility/site security controls, 504–505
+- URL encoding, web-based vulnerabilities, 200
+- USB (Universal Serial Bus), 167
+- user management, audits, 488–489
+- user mode, protection rings, 171
+- user provisioning, 376
+- users
+  - data management, 34
+  - managing, 469
+    - access controls, 471
+    - clipping levels, 471–472
+    - database administrators, 469
+    - job rotation, 471
+    - least privilege, 471
+    - network administrators, 469
+    - privileged entities, 470–471
+    - quality assurance specialists, 469
+    - reasonably prudent person rule, 472–473
+    - security architects, 469
+    - separation of duties, 469–470, 471

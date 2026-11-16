@@ -1,0 +1,32 @@
+digital certificates, 370
+EAP, 390
+FIM, 358–360
+IAL, 360
+IDaaS, 358–360
+MS-CHAPv2, 390
+multifactor authentication, 375
+OAuth, 362
+OpenID, 362
+PAP, 390
+passwords, 363–367
+SAML, 361–362
+strong authentication, 375
+tokens, 367–368
+two-factor authentication, 375
+authorization, 343, 382
+ABAC, 387–388
+audits, 394–396
+CDAC, 389
+centralized access control, 390–393
+DAC, 382–383
+decentralized access control, 393–394
+IDS, 396–401, 510–511, 512–513
+IPS, 384, 401
+keystroke monitoring, 402–403
+LBAC, 389
+MAC, 383–385
+monitoring access, 394–396
+NAC, 401–402
+RBAC, 385–387
+rule-based access control, 388
+SIEM, 401

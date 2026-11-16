@@ -1,0 +1,11 @@
+Although the security models described in this section are the ones the CISSP exam is most likely to focus on, there are many other models, such as the Sutherland, Boebert and Kain, Karger, Gong, and Jueneman models. Even though many security professionals may have never heard of these models, those who develop systems most likely learned of them in college.
+
+# Product Security Evaluation Models
+
+A set of evaluation standards is needed when evaluating the security capabilities of information systems. A number of documents and guidelines have been developed to help evaluate and establish system assurance. These items are important to a CISSP candidate because they provide a level of trust and assurance that these systems will operate in a given and predictable manner. A trusted system has undergone testing and been validated to a specific standard. Assurance means freedom from doubt and a level of confidence that a system will perform as required every time it is used.
+
+Think of product evaluation models as being similar to EPA gas mileage ratings, which give buyers and sellers a way to evaluate different automotive brands and models. In the world of product security, developers can use product evaluation systems when preparing to sell a system. A buyer can use the same evaluation models when preparing to make a purchase, as they provide a way to measure a system’s effectiveness and benchmark its abilities. The following sections describe documents and guidelines that facilitate these needs.
+
+# The Rainbow Series
+
+The Rainbow Series is so named because each book in the series has a label of a different color. This 6-foot-tall stack of books was developed by the National Computer Security Center (NCSC), an organization that is part of the National Security Agency (NSA). These guidelines were developed for the Trusted Product Evaluation Program (TPEP), which tests commercial products against a comprehensive set of security-related criteria. The first of these books, released in 1983, is known as Trusted Computer System

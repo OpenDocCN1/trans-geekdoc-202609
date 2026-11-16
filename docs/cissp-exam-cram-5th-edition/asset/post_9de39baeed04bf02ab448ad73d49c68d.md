@@ -1,0 +1,274 @@
+
+- 22. Data Classification
+- 23. Military Data Classification
+- 24. Public/Private Data Classification
+- 25. Asset Management and Governance
+- 26. Software Licensing
+- 27. The Equipment Lifecycle
+- 28. Determining Data Security Controls
+- 29. Data at Rest
+- 30. Data in Transit
+- 31. Endpoint Security
+- 32. Baselines
+- 33. Exam Prep Questions
+- 34. Answers to Exam Prep Questions
+- 35. Need to Know More?
+
+## Chapter 3 Security and Risk Management
+
+- 1. Introduction
+- 2. Security Governance
+- 3. U.S. Legal System and Laws
+- 4. Relevant U.S. Laws and Regulations
+- 5. International Legal Systems and Laws
+- 6. International Laws to Protect Intellectual Property
+- 7. Global Legal and Regulatory Issues
+- 8. Computer Crime and Hackers
+- 9. Sexual Harassment
+- 10. U.S. Governance
+- 11. Health Insurance Portability and Accountability Act (HIPAA)
+
+- 12. Gramm-Leach-Bliley Act (GLBA)
+- 13. Federal Information Security Management Act (FISMA)
+- 14. Sarbanes-Oxley Act (SOX)
+- 15. National Institute of Standards and Technology (NIST)
+- 16. Federal Information Processing Standards (FIPS)
+- 17. International Governance
+- 18. Risk Management Concepts
+- 19. Risk Management Frameworks
+- 20. Risk Assessment
+- 21. Risk Management Team
+- 22. Asset Identification and Valuation
+- 23. Threats Analysis
+- 24. Quantitative Assessments
+- 25. Qualitative Assessments
+- 26. Selecting Countermeasures
+- 27. Threat Modeling Concepts and Methodologies
+- 28. Threat Modeling Steps
+- 29. Threat Modeling Tools and Methodologies
+- 30. Managing Risk with the Supply Chain and Third Parties
+- 31. Reducing Risk in Organization Processes
+- 32. Identifying and Prioritizing Business Continuity Requirements Based on Risk
+- 33. Project Management and Initiation
+- 34. Business Impact Analysis
+- 35. Assessing Potential Loss
+- 36. Developing and Implementing Security Policy
+
+- 37. Security Policy
+- 38. Advisory Policy
+- 39. Informative Policy
+- 40. Regulatory Policy
+- 41. Standards
+- 42. Baselines
+- 43. Guidelines
+- 44. Procedures
+- 45. Types of Controls
+- 46. Administrative Controls
+- 47. Technical Controls
+- 48. Physical Controls
+- 49. Access Control Categories
+- 50. Implementing Personnel Security
+- 51. New-Hire Agreements and Policies
+- 52. Separation of Duties
+- 53. Job Rotation
+- 54. Least Privilege
+- 55. Mandatory Vacations
+- 56. Termination
+- 57. Security Education, Training, and Awareness
+- 58. Security Awareness
+- 59. Social Engineering
+- 60. Professional Ethics Training and Awareness
+- 61. (ISC)2 Code of Ethics
+- 62. Computer Ethics Institute
+
+- 63. Internet Architecture Board
+- 64. NIST SP 800-14
+- 65. Common Computer Ethics Fallacies
+- 66. Regulatory Requirements for Ethics Programs
+- 67. Exam Prep Questions
+- 68. Answers to Exam Prep Questions
+- 69. Need to Know More?
+
+## Chapter 4 Security Architecture and Engineering
+
+- 1. Introduction
+- 2. Secure Design Guidelines and Governance Principles
+- 3. Enterprise Architecture
+- 4. Regulatory Compliance and Process Control
+- 5. Fundamental Concepts of Security Models
+- 6. Central Processing Unit
+- 7. Storage Media
+- 8. RAM
+- 9. ROM
+- 10. Secondary Storage
+- 11. I/O Bus Standards
+- 12. Virtual Memory and Virtual Machines
+- 13. Computer Configurations
+- 14. Security Architecture
+- 15. Protection Rings
+- 16. Trusted Computing Base
+- 17. Open and Closed Systems
+- 18. Security Modes of Operation
+
+- 19. Operating States
+- 20. Recovery Procedures
+- 21. Process Isolation
+- 22. Common Formal Security Models
+- 23. State Machine Model
+- 24. Information Flow Model
+- 25. Noninterference Model
+- 26. Confidentiality
+- 27. Bell-LaPadula Model
+- 28. Integrity
+- 29. Biba Model
+- 30. Clark-Wilson Model
+- 31. Take-Grant Model
+- 32. Brewer and Nash Model
+- 33. Other Models
+- 34. Product Security Evaluation Models
+- 35. The Rainbow Series
+- 36. The Orange Book: Trusted Computer System Evaluation Criteria
+- 37. The Red Book: Trusted Network Interpretation
+- 38. Information Technology Security Evaluation Criteria (ITSEC)
+- 39. Common Criteria
+- 40. System Validation
+- 41. Certification and Accreditation
+- 42. Vulnerabilities of Security Architectures
+- 43. Buffer Overflows
+
+- 44. Backdoors
+- 45. State Attacks
+- 46. Covert Channels
+- 47. Incremental Attacks
+- 48. Emanations
+- 49. Web-Based Vulnerabilities
+- 50. Mobile System Vulnerabilities
+- 51. Cryptography
+- 52. Algorithms
+- 53. Cipher Types and Methods
+- 54. Symmetric Encryption
+- 55. Data Encryption Standard (DES)
+- 56. Electronic Codebook (ECB) Mode
+- 57. Cipher Block Chaining (CBC) Mode
+- 58. Cipher Feedback (CFB) Mode
+- 59. Output Feedback (OFB) Mode
+- 60. Counter (CTR) Mode
+- 61. Triple DES (3DES)
+- 62. Advanced Encryption Standard (AES)
+- 63. International Data Encryption Algorithm (IDEA)
+- 64. Rivest Cipher Algorithms
+- 65. Asymmetric Encryption
+- 66. Diffie-Hellman
+- 67. RSA
+- 68. El Gamal
+- 69. Elliptical Curve Cryptosystem (ECC)
+
+- 70. Merkle-Hellman Knapsack
+- 71. Review of Symmetric and Asymmetric Cryptographic Systems
+- 72. Hybrid Encryption
+- 73. Public Key Infrastructure and Key Management
+- 74. Certificate Authorities
+- 75. Registration Authorities
+- 76. Certificate Revocation Lists
+- 77. Digital Certificates
+- 78. The Client's Role in PKI
+- 79. Integrity and Authentication
+- 80. Hashing and Message Digests
+- 81. MD Series
+- 82. SHA-1/2
+- 83. SHA-3
+- 84. HAVAL
+- 85. Message Authentication Code (MAC)
+- 86. HMAC
+- 87. CBC-MAC
+- 88. CMAC
+- 89. Digital Signatures
+- 90. DSA
+- 91. Cryptographic System Review
+- 92. Cryptographic Attacks
+- 93. Site and Facility Security Controls
+- 94. Exam Prep Questions
+- 95. Answers to Exam Prep Questions
+
+- 96. Need to Know More?
+
+## Chapter 5 Communications and Network Security
+
+- 1. Introduction
+- 2. Secure Network Design
+- 3. Network Models and Standards
+- 4. OSI Model
+- 5. Physical Layer
+- 6. Data Link Layer
+- 7. Network Layer
+- 8. Transport Layer
+- 9. Session Layer
+- 10. Presentation Layer
+- 11. Application Layer
+- 12. OSI Summary
+- 13. Encapsulation/De-encapsulation
+- 14. TCP/IP
+- 15. Network Access Layer
+- 16. Internet Layer
+- 17. Internet Protocol (IP)
+- 18. Internet Control Message Protocol (ICMP)
+- 19. Address Resolution Protocol (ARP)
+- 20. Internet Group Management Protocol (IGMP)
+- 21. Host-to-Host (Transport) Layer
+- 22. Transmission Control Protocol (TCP)
+- 23. User Datagram Protocol (UDP)
+- 24. Comparing and Contrasting UDP and TCP
+
+- 25. Application Layer
+- 26. LANs and Their Components
+- 27. LAN Communication Protocols
+- 28. Network Topologies
+- 29. Bus Topology
+- 30. Mesh Topology
+- 31. Fully Connected Topology
+- 32. LAN Cabling
+- 33. Network Types
+- 34. Network Storage
+- 35. Communication Standards
+- 36. Network Equipment
+- 37. Repeaters
+- 38. Hubs
+- 39. Bridges
+- 40. Switches
+- 41. Mirrored Ports and Network Taps
+- 42. VLANs
+- 43. Routers
+- 44. Gateways
+- 45. Routing
+- 46. WANs and Their Components
+- 47. Packet Switching
+- 48. Synchronous Optical Network (SONET)
+- 49. X.25
+- 50. Frame Relay
+
+- 51. Asynchronous Transfer Mode (ATM)
+- 52. Circuit Switching
+- 53. Plain Old Telephone Service (POTS)
+- 54. Integrated Services Digital Network (ISDN)
+- 55. T-Carrier
+- 56. Digital Subscriber Line (DSL)
+- 57. Cable Internet Access
+- 58. Other WAN Technologies
+- 59. Cloud Computing
+- 60. Software-Defined WAN (SD-WAN)
+- 61. Securing Email Communications
+- 62. Pretty Good Privacy (PGP)
+- 63. Other Email Security Applications
+- 64. Securing Voice and Wireless Communications
+- 65. Secure Communications History
+- 66. Voice over IP (VoIP)
+- 67. VoIP Vulnerabilities
+- 68. Cell Phones
+- 69. 802.11 Wireless Networks and Standards
+- 70. Wireless Topologies
+- 71. Wireless Standards
+- 72. Bluetooth
+- 73. Wireless LAN Components
+- 74. Wireless Protection Mechanisms
+- 75. Other Wireless Technologies
+- 76. Securing TCP/IP with Cryptographic Solutions

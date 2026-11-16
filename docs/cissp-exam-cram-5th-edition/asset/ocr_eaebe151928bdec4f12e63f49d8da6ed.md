@@ -1,0 +1,1 @@
+into the pipe only when a specified temperature or separate detection device triggers its release. See Chapter 8.

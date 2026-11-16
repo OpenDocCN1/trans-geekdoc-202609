@@ -1,0 +1,5 @@
+# About the Author
+
+Michael Gregg has more than 20 years of experience in information security and risk management. He holds two associate’s degrees, a bachelor’s degree, and a master’s degree. Some of the certifications he holds include CISSP, SSCP, MCSE, CTT+, A+, N+, Security+, CASP, CCNA, GSEC, CEH, CHFI, CEI, CISA, CISM, and CGEIT.
+
+In addition to his experience performing security management, audits, and assessments, Gregg has authored or coauthored more than 25 books, including Certified Ethical Hacker Exam Prep (Que), CISSP Exam Cram 2 (Que), and Security Administrator Street Smarts (Sybex). He has testified before the U.S. Congress, his articles have been published on IT websites, and he has been sourced as an industry expert for CBS, ABC, CNN, Fox News, and the New York Times. He has created more than 15 security-related courses and training classes for various companies and universities. Although leading, building, and managing security programs is where he spends the bulk of his time, contributing to the written body of IT security knowledge is how Michael believes he can give something back to the community that has given him so much.

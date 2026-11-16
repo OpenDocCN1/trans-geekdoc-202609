@@ -1,0 +1,11 @@
+assign dynamic addresses, so answer C is incorrect.
+
+5. B. Teredo is a transition technology that can be used for IPv6-capable hosts that are on the IPv4 Internet and have no native connection to an IPv6 network. Answer A is incorrect because Virtual Router Redundancy Protocol (VRRP) is used for router redundancy. Answer C is incorrect because 802.1AE is a Layer 1 OSI technology known as MACsec. Answer D is incorrect because although 6to4 is an Internet transition mechanism for migrating from IPv4 to IPv6, it is typically used where there is connectivity to an IPv6 network.
+
+6. D. Poison reverse sets the number of hops to the unconnected gateway to a number that indicates infinite. All other answers are incorrect. Answer A describes the loopback address, which has no relevance to the question. Answer B is incorrect because split horizon is a route advertisement that prevents routing loops in distance-vector routing protocols by prohibiting a router from advertising a route back onto the router interface from which it was discovered. Answer C is incorrect because classless inter-domain routing was designed to slow the growth of routing tables on routers across the Internet and to help slow the rapid exhaustion of IPv4 addresses.
+
+7. A. WPA2 is the current standard for wireless security. Answer B is incorrect because SMLI is a firewall technology. Answer C is incorrect because PGP is an email-protection mechanism, and POP, answer D, is associated with email, so it is incorrect.
+
+8. B. Circuit-level proxies closely resemble packet-filtering devices because they examine addresses, ports, and protocols. Stateless firewalls are packet-filtering devices and application proxies, and stateful firewalls examine higher-level content, so answers A, C, and D are incorrect.
+
+9. C. X.25 predates Frame Relay. Although it is not fast, it is reliable and works over analog phone lines. SMDS is a high-speed MAN/WAN packet-switched protocol, so answer A is incorrect. ATM is a modern protocol that offers high speed and various classes of service, so answer B is incorrect. T-carrier is a circuit-switched technology, so answer D is incorrect.
