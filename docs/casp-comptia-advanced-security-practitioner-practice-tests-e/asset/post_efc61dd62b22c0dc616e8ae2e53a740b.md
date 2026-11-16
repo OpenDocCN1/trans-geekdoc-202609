@@ -1,0 +1,260 @@
+
+## P
+
+- persistence, 286–287
+- personal area network (PAN), 134, 210, 309, 347
+- phishing, 232, 355
+- physical testing, 288
+- PIN, 59, 256, 277
+- ping command, 240, 305, 359
+- pivoting, 85, 213, 286, 348
+- PKI tokens, 152, 319
+- platform-as-a-service (PaaS), 99, 190, 252, 295, 338
+- playbooks, 297–298
+- Point-to-Point Tunneling Protocol (PPTP), 273
+- policies, 347
+- port scanning, 74, 258, 279
+- port security, 354
+- post scanner, 254
+- post-exploitation, 85, 286–287
+- postmortem, 117, 305
+- PowerShell, 296
+- pretexting, 213, 348
+- Pretty Good Privacy (PGP), 160, 324
+- preventive control, 45, 185, 193, 205, 268, 336, 339, 345
+- primary firewall, 29, 258
+- private branch exchange (PBX), 248
+- private clouds, 187, 190, 275, 336, 338
+- private function evaluation (PFE), 277
+- private information retrieval (PIR), 59, 277
+- private key, 154, 157, 320, 321, 322
+- privilege escalation, 28, 49, 50, 258, 270–271
+- procedures, 204, 215, 336, 345, 347, 349
+- process, 249
+- productivity, 38, 263
+- programmable logic controllers (PLCs), 317
+- proprietary, 280
+- protocol decoding, 211, 347
+- protocols, hybrid, 163, 326
+- provisioning, 55, 275
+- proxy, 32, 251, 260
+- proxy firewall, 16, 251
+- proxy server, 250
+- ps command, 117, 305
+- pseudonymization, 235, 357
+- public cloud, 27, 257, 275
+- public key infrastructure (PKI), 157, 267, 322
+- public keys, 155, 156–157, 321, 327
+- public relations, 89, 289
+- push notification, 233, 355
+- pwd command, 305
+- Python, 296
+
+## Q
+
+- QRadar, 312
+- qualitative analysis, 181, 184, 334, 335
+- quantitative analysis, 334
+- quantum computing, 277
+- quantum proxy, 250
+- query building, 119, 306
+- quid pro quo, 237, 357
+
+## R
+
+- race condition, 87, 288
+- RACE Integrity Primitives Evaluation Message Digest (RIPEMD), 325
+- RAID configuration, 12, 47, 248, 269
+- Rapid7, 215, 349
+- RC4/RC5, 162, 163, 164, 326, 327
+- readelf, 113, 302
+- reconnaissance, 75, 87, 204, 280, 286–287, 288, 345
+- recovery point objective (RPO), 36, 262
+- recovery time objective (RTO), 104, 298
+- red team, 214, 348
+- registration authority (RA), 321
+- regression testing, 39, 264
+- remote access service (RAS), 248
+- Remote Authentication Dial-In User Service (RADIUS), 53, 221, 273, 351
+- Remote Desktop Protocol (RDP), 22, 43, 250, 255, 266–267
+- Remote Frame Buffer (RFB), 23, 255
+- remote lock/wipe, 25, 136, 139, 256, 310, 312
+- remotely triggered black hole, 229, 354
+- replacement cost, 182, 205, 334, 345
+- Representational State Transfer (REST), 92, 252, 290
+- request for proposal (RFP), 335, 343
+- request for quote (RFQ), 185, 335
+- requirement analysis, 38, 263
+- return on investment (ROI), 103–104, 298, 317
+- retweet storm, 74, 279
+- reverse engineering, 111, 286, 301
+- reverse proxy, 16, 251
+- revocation request, 172, 332–333
+- revoking keys, 161, 325
+- RFID, 215, 241, 349, 359
+- risk acceptance, 24, 74, 75, 183, 255, 280, 335
+- risk analysis, 82, 101, 216–217, 284, 296, 349
+- risk assessment, 82, 87, 219, 284–285, 288, 351
+- risk evaluation, 43, 267
+- risk mitigation, 98, 102, 183, 295, 297, 335
+- risk register, 186, 336
+- risk transference, 153, 320, 335
+- role-based access control, 52, 272–273
+- rollback, 210, 347
+- routing, 138, 312
+- route poisoning, 237, 357
+- router, 99, 295
+- Routing Information Protocol (RIP), 354
+- RSA encryption algorithm, 166, 328
+- Rules of Engagement (RoE), 287
+- runbooks, 297–298
+- runtime debugging, 236, 357
+
+## S
+
+- Safety Instrumented System, 317
+- sandbox/sandboxing, 34, 252, 261, 287
+- Scalpel, 121, 307
+- scanner/scanning
+  - active, 82, 285
+  - application, 239, 252, 358
+  - authenticated, 195, 340
+  - credentialed, 284
+  - passive, 285
+  - port, 74, 258, 279
+  - post, 254
+  - vulnerability, 85, 87, 239, 264, 285, 287, 288, 358
+- scope, 336
+- screen mirroring, 135, 310
+- screened host firewalls, 249
+- script kiddie, 74, 279
+- Scrum, 265
+- Scytale cipher, 277
+- SD3, 233, 356
+- SDLC, 38, 41, 263, 264, 265
+- SEAndroid, 143, 314
+- Secure Boot, 95, 144, 293, 315
+- secure by default, 233–234, 356
+- secure by design, 162, 326
+- secure function evaluation (SFE), 277
+- secure in deployment, 234, 356
+- secure multiparty computation (SMPC), 277
+- Secure Shell (SSH), 17, 191, 252, 256, 338
+- Secure Sockets Layer (SSL), 27, 220, 222, 250, 257, 351, 352
+- Secure/Multipurpose Internet Mail Extensions (S/MIME), 324
+- Security Account Manager (SAM), 48, 120, 270, 307
+- Security Admin Tool for Analyzing Networks (SATAN), 265
+- security as a service (SECaaS), 218, 350
+- Security Assertion Markup Language (SAML), 51, 272, 273
+- security assessment, 285
+- security awareness training, 96, 293
+- Security Content Automation Protocol (SCAP), 82, 83, 85, 285, 287
+- security information and event management (SIEM) system, 14, 19, 22, 73, 77, 98, 249, 253, 254, 259, 279, 282, 295
+- security marking, 245, 361
+- security metrics, 243, 360
+- security operations center (SOC), 103, 297
+- security orchestration and automation response (SOAR), 31, 103, 259, 298
+- security perimeter, 199, 342
+- Security-Enhanced Linux (SELinux), 255
+- self-healing hardware, 147, 316
+- self-provisioning, 30, 259
+- senior management, 189, 202, 210, 337, 344, 347
+- separation of duties, 49, 270, 337
+- Serpent, 310
+- service level agreement (SLA), 104, 201, 252, 298, 335, 343
+- Service Provisioning Markup Language (SPML), 217, 218, 350
+- service-oriented architecture (SOA), 37, 140, 263, 313
+- session management, 35, 261
+- SHA-1/SHA-512, 16, 107, 160, 300, 304, 324
+- shadow copy, 198, 341
+- shell restrictions, 142, 314
+- Shibboleth, 51, 272
+- Shodan, 41, 237, 265, 357
+- side-channel analysis, 286
+- sideloading, 138, 311
+- signature-based intrusion detection system, 101, 266, 296
+- Simple Certificate Enrollment Protocol (SCEP), 89, 134, 289, 309
+- Simple Network Management Protocol (SNMP), 20, 78, 164, 253, 282, 326
+- Simple Object Access Protocol (SOAP), 18, 57, 93, 252, 276, 291
+- simulation, 157, 322
+- single loss expectancy (SLE), 334
+- single point of failure, 53, 273
+- single sign-on, 88, 289
+- smartphones, 147, 316
+- SMS message, 54, 274
+- social engineering, 74, 86, 97, 103, 220, 280, 287, 288, 294, 297, 351
+- social media, 224, 225, 237, 353, 357
+- Social-Engineer Toolkit (SET), 98, 294
+- software, 91, 108, 286, 290, 300
+- software as a service (SaaS), 17, 50, 216, 252, 271, 349
+- software assurance (SwA), 261
+- Software Composition Analysis (SCA), 286
+- software development kit (SDK), 33, 260
+- software-defined networking (SDN), 27, 28, 257
+- spam filters, 17, 251
+- spear phishing, 213, 348
+
+## T
+
+- spiral method, 40, 265
+- split DNS, 22, 254
+- split tunnel, 250
+- SQL databases, 145, 315
+- SQL injection (SQLi), 94, 288, 292
+- ssdeep, 120, 306–307
+- SSL/TLS certificate, 135, 170, 171, 310, 331, 332
+- standard operating environment (SOE), 187, 336
+- standards, 185, 195, 209, 336, 340, 347
+- state management, 235, 357
+- statement of work (SOW), 103, 297–298
+- static analysis, 304
+- static application security testing (SAST), 35, 261, 262, 286
+- steganographic watermarking, 44, 267
+- steganography, 24, 99, 255, 295
+- storage area network (SAN), 242, 256–257, 360
+- storage capacity, 47, 269
+- strace, 114, 302–303
+- strategic cyber-intelligence, 73, 279
+- stream cipher, 89, 289
+- STRIDE, 223, 352
+- strong private information retrieval (SPIR), 59, 277
+- structured walk-through, 153, 320
+- supervisory control and data acquisition (SCADA), 145, 315, 317
+- supply chain attack, 74, 280
+- switched port analyzer (SPAN) port, 18, 252
+- switches, 228, 353, 354
+- SYN flood, 328
+- syslog server, 249, 282
+- system scanner, 252
+- tabletop exercise, 204, 287, 345
+- tailgating, 100, 296
+- tar command, 305
+- TCP SYN scan, 120, 307
+- tcpdump command, 110, 119, 256, 301, 306
+- technical control function, 97, 294
+- Terminal Access Controller Access Control System Plus (TACACS+), 53, 273
+- terminal server, 142, 314
+- termination, 184, 193, 335, 337, 339
+- tethering, 136, 310
+- The Sleuth Kit (TSK), 115, 304
+- thin client, 189, 337
+- third-party apps, 224, 353
+- thread, 249
+- threat databases, 75, 280
+- threat emulation, 73, 279
+- threat identification, 82, 284–285
+- threat model, 236, 357
+- threat reports, 201, 343
+- 3D printers, 59, 278
+- time of check (ToC), 100, 295
+- tokenization, 20, 45, 133, 253, 268, 308
+- total cost of ownership (TCO), 187, 336
+- traceroute, 240, 359
+- traffic access point (TAP), 19, 253
+- training, 150, 208, 318, 346
+- transaction volume, 223, 352
+- transitive trust, 51, 272
+- Transmission Control Protocol (TCP), 253
+- Transport Layer Security (TLS), 58, 158–159, 163, 250, 276, 323, 326
+- transport security, 354
+- trend analysis, 201, 343

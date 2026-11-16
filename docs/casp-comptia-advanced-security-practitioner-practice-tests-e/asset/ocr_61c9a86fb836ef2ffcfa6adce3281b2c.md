@@ -1,0 +1,17 @@
+Ptrace is a kernel feature that allows observation and control over execution of another pro- cess. Etrace is an Internet-based firewalls tracing agency. Otrace is a Python-based object- oriented debugger.
+
+**205.** C. The ldd command prints the shared libraries required by each program or shared library specified on the command line.
+
+**206.** C. Forensic analysis is a term for in-depth analysis. It is an investigation to objectively identify and document the attackers, reasons, course, and consequences of a security incident or violation of state laws or rules of the organization. The main purpose of a forensic analysis is to analyze, recover, document, and preserve evidence in an investigation. Gap analysis is a tool used to find the space between current performance and desired performance. It evaluates where you started and the actual performance and then identifies the necessary improvements.
+
+**207.** C. The file command classifies files based on a series of tests and determines the file type based on the first successful test. In its simplest form when used without any option, the file command will display the filename along with the file type.
+
+**208.** B. Due care is using reasonable care to protect the interests of your enterprise. Due diligence is the actual practice of specific activities that maintain due care. If proper due care is not taken, you open the organization up to legal liability.
+
+**209.** D. ExifTool is an open source software program used for manipulating, updating, reading, and writing metadata of media files. ExifTool, developed by Phil Harvey, is platform independent and is available as a Perl library as well as a command-line application. ExifTool is extremely flexible and is compatible with a large collection of file types.
+
+**210.** B. AirCrack-ng is the best-known tool available for cracking WEP and WPA-PSK in Windows. Knowing how to use Aircrack-ng to break WEP with mathematical analysis or WPA-PSK with brute force is important for the blue team as well as the red team. Nmap is for network mapping, sn1per is used for vulnerability scanning, and MiTM is a man-in-the-middle attack, not a tool.
+
+**211.** A. The weakness in WPA/WPA2 wireless passwords is that the encrypted password is shared in what is known as a four-way handshake. When a client authenticates to an access point, the client and the access point go through a four-step process to authenticate the user to the access point. We can then capture the password with Aircrack-ng and attempt to crack it. Ettercap is one of the best tools for network and host analysis. Netstumbler is a great tool used to detect wireless networks. Burp Suite is used to test application security.
+
+**212.** D. The Volatility Foundation is an independent 501(c) (3) nonprofit organization. The foundation's mission is to promote the use of Volatility and memory analysis within the forensics community, to defend the project's intellectual property (trademarks, licenses, etc.) and longevity, and to help advance innovative memory analysis research. Volatility is an open source memory forensics framework for incident response and malware analysis. Volatility also provides a unique platform that enables research to be immediately transitioned into the hands of digital investigators. Pentoo is a security-focused tool on Gentoo. BackBox is an Ubuntu system designed for penetration tests, and Buscador is a Linux virtual machine configured for online investigators.
