@@ -1,0 +1,48 @@
+
+
+Thanks to machine learning, it can be understood whether the person being controlled has HF.
+
+### 1.4.1 Clinical Decision Support Systems
+
+There is a need to develop a system in order to collect patient data and make diagnoses based on them. These systems are generally called decision support systems. Decision support systems work by analyzing the data collected from the terminal units in accordance with the needs in the center to support decision making and presenting the results. Decision support systems can sometimes be developed for the field of health and sometimes for another field. Regardless of the field, the task of decision support systems is to infer with the help of the collected data and the rules at hand.
+
+Decision support systems developed specifically for the health field are often referred to as clinical decision support systems. Clinical decision support systems sometimes help experts diagnose disease and recommend treatment methods based on health information. The concept of computer-aided clinical decision making came to the fore many years ago [15]. The working principle of clinical decision support systems is simply as follows: information such as blood values and enzyme values of the patient is obtained, this information is evaluated according to the knowledge base of the health institution, and an inference is made about the patient. When a direct relationship can be established between the inputs and the final decision during inference, this is known as an open box decision support system; when the correct relationship cannot be established between the inputs and the final decision, it is called a closed box decision support system [16].
+
+A decision support system is a software that helps decision making and works based on the ruleset. The rule set can be in the form of simple IF-THEN rules or a more complex structure. Rule sets can be created with the help of expert knowledge or with models that learn from data. Comparing the event that occurred with the rules in the rule set determines which rule triggered the situation. Thus, whichever rule is triggered by the situation to produce the result, the output of the decision support system will be consistent.
+
+Decision support systems are systems that help to decide about a situation. A system that will decide on HF takes the patient’s measurements as input and provides information about the risk of HF as output. The system’s inputs are sometimes the information coming from the IoT devices and sometimes the data that has been entered manually. For example, based on heart rate and blood values, it will be possible to predict whether there will be HF. At this point, we come across systems based on machine learning and knowledge. In machine learning based systems, data classification is carried out with the help of models trained with historical data. As a result of the classification, there might or might not be an indicated risk of HF.
+
+## 1.5 Diagnosis with Artificial Intelligence Methods
+
+One of the techniques that can be used to diagnose HF is artificial intelligence and machine learning.
+
+### 1.5.1 Introduction to Artificial Intelligence
+
+Artificial intelligence is the name of the general discipline that combines software and hardware studies. It includes designing systems that act like a human, learning and making decisions like humans. Scientists have been curious about artificial intelligence since the 1950s and there is increasing interest in it. It has become an even more important discipline with the developments in information technologies. The focus on developing systems that exhibit human-like behavior has already attained this goal in some areas. Examining the recent history of artificial intelligence shows that machine learning algorithms and then deep learning algorithms have led to striking developments. For example, thanks to natural language processing, systems that produce and understand language have been developed; with the help of image processing techniques, systems close to human vision have been developed; systems that imitate human learning, systems that extract information, systems that establish connections have been developed; and studies that reveal abnormal situations have been conducted.
+
+The main reason artificial intelligence-powered solutions have come to the fore is their ability to exploit many advantages of information technologies. Cheaper storage units, the increase in the capacities of the processing units, and advances in artificial intelligence algorithms make the field more popular every day. The cheaper storage units and the increase in their capacity have enabled more patient data to be stored. The increase in capacity and speed in processor units makes it possible to analyze data in a way not possible in the past. In fact, data collection and transfer possibilities from remote units have increased due to the developments in network technologies. All developments favor artificial intelligence and data science, and many jobs have become fulfilled with the help of artificial intelligence and data science.
+
+The developments have also contributed to artificial intelligence programming skills. With artificial intelligence, it has become possible to solve many problems that could not be solved with classical programming skills, and while complex data relationships cannot be solved with classical methods, recently relationships between data have become easily inferred.
+
+One of the areas most supported by artificial intelligence is computer-aided decision making, thanks to its various capabilities, notably diagnosis and prediction. Artificial intelligence-based diagnostic systems can be seen as an example of a non-invasive procedure, because there is no interference with the body in artificial intelligence supported clinical decision support systems, in which expert systems make decisions based on both expert opinions and machine learning systems’ modeling from past case examples. These systems, which are sometimes used separately, are used together in some places. With the increase in the studies on artificial intelligence, its subfields have emerged. There are many artificial intelligence subdomains, each with different characteristics. Among these subareas, machine learning, deep learning, expert systems, and image processing in particular provide auxiliary features in computer-aided decision making.
+
+### 1.5.1.1 Expert Systems
+
+Expert systems are based on imitating human expertise with machines [17]. They are considered among the first successful applications of artificial intelligence. An expert system is often used in decision support systems development. In addition, the expert system has two components: the knowledge base and the inference engine.
+
+### 1.5.1.2 Machine Learning
+
+Machine learning is the most prominent area among the artificial intelligence subareas. It is a field focused on developing systems that learn with the help of historical data. As a result of learning, they can classify new data, cluster, establish similarities between data, and capture other relationships. Although supervised and unsupervised learning algorithms are often prominent in machine learning algorithms, semi-supervised and reinforced learning methods are also supported. The main purpose of machine learning algorithms is to aid decision making [18].
+
+### 1.5.1.3 Deep Learning
+
+Deep learning is a sub-branch of machine learning. It is also recognized as the most powerful alternative to machine learning. It can perform more complex operations with fewer data. In addition, while feature selection is performed manually in traditional machine learning algorithms, this process is automatic in deep learning. The working principle of deep learning algorithms is the working principle of the brain. It is based on densely multilayered neural networks, but constrained Boltzmann machines and probabilistic graph models are also associated with deep learning. These are the methods that work with large amounts of data and reach the final output by further improving the results in each layer. It is supervised, unsupervised, or semi-supervised in terms of the type of education. Its prominent algorithms are convolutional neural network (CNN) and recurrent neural network (RNN). Deep learning models have found use in many areas from natural language processing to image processing.
+
+### 1.5.1.4 Image Processing
+
+Image processing is one of the most important application areas of artificial intelligence. With the help of image processing techniques, visual features are converted into numerical features and thus diagnostic studies are carried out numerically. It refers to studies based on finding the patterns in the images. Especially with the help of 3D image processing, the borders of the diseased areas can be determined (Figure 1.1). Yang et al. [19] conducted a study of the 3D reconstruction of coronary vessels from angiography images, thus providing the possibility of better diagnosis of CAD. In the study, an aperture camera model and optimization methods were used.
+
+### 1.5.2 Artificial Intelligence Supported HF Diagnostic Studies
+
+With the use of artificial intelligence in health and especially in heart diseases, it has been possible to estimate the risk, diagnoses, and work flows and to apply sensitive treatment methods [21]. Thanks to artificial intelligence techniques, it has been possible to interpret large-sized data sets and thus obtain a more precise diagnosis. Within the artificial intelligence discipline, machine learning, image processing, robotics, and even
+

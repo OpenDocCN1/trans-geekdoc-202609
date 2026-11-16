@@ -1,0 +1,17 @@
+them best.The most important feature that distinguishes supervised learning from unsupervised learning is label information in supervised data. It is the class label in the data that provides the control. Although the output of both methods is different, the goal is to estimate the value of the output variable based on input variables.
+
+# 1.6.2.1.1 Decision Trees
+
+One of the prominent algorithms related to the classification task is the decision tree. The model presented with the tree data structure is learned directly from the data. Through the tree induction process, the characteristics of the training data are processed on the tree. The decision tree algorithm we often use and are used to seeing is the C4.5 algorithm [29]. Since the C4.5 algorithm is suitable for working with both numerical and categorical input variables, it can be used in many data sets.
+
+# 1.6.2.1.2 Naive Bayes
+
+The Naive Bayes classifier is a probability-based classifier. It is an algorithm that tries to find the final probabilities P (Cj | A) of the test data with the help of the preliminary probabilities P (A | Cj) learned from the training data. The algorithm is based on the Bayes’ theorem [30]. According to Bayes’ theorem, events are interrelated and there is a relationship between probabilities P (A | C) and P (C | A), P (A), P (C). Therefore, while calculating the value of P (A | C) with the help of Bayes, we use the equation P (C | A) = (P (A | C) P (C)) / (P (A)). The Naive Bayes approach is used to solve the zero probability problem of Bayesian approach. Thanks to the naive approach, it is assumed that there is no relationship between the events and the process is shortened. Thus, it is possible to get rid of sparsity in the data relatively.
+
+# 1.6.2.1.3 Support Vector Machines
+
+SVMs were first introduced by Vapnik [31]. The technique uses what we call support vectors to distinguish between data points belonging to different classes. The method aims to find the hyperplane that will best distinguish (margin maximization) different classes from each other. In its simplest form, it distinguishes two-class spaces from each other with the help of two equations wTx + b = + 1 and wTx + b = -1. SVMs were first developed in accordance with linear classification and, later, kernel functions for nonlinear spaces were developed. Kernel functions express a transformation between linear and nonlinear spaces. There are types such as linear, polynomial, radial basis function, and sigmoid. Depending on the nature of the data used, kernel functions can be superior to each other.
+
+# 1.6.2.1.4 K-Nearest Neighbor
+
+The k-nearest neighbor (k-NN) algorithm is a distance-based classifier, which looks at the neighbors of the data point to classify a data object whose class is unknown. A majority vote is made for the classification decision. The two prominent parameters for the algorithm are the k (neighbor) number and the distance (distance) function. There is no exact method for determining the number of neighbors, so the ideal k value is often found after trials. The cosine similarity, Manhattan, Euclidian, or Chebyshev distance is used as the distance function. One of the problems with the k-NN algorithm is the scale

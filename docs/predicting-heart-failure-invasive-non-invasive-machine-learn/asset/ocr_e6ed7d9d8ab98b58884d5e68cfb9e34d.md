@@ -1,0 +1,8 @@
+| Study | Target | Method | Features | Data Set | Evaluation Measures |
+|---|---|---|---|---|---|
+| Potter et al. 2020 | HF diagnosis<br>Healthy vs. HF | RF | Demographics, symptoms, echocardiogram features, physical examination features, medications | Training set<br>254 subjects<br>135 with HF<br>Test set<br>65 subjects<br>27 with HF | AUC 76.00%<br>Sensitivity 93.00%<br>Specificity 61.00% |
+| Pires et al. 2020 | Diagnosis of HF | NN, C4.5, k-NN, SVM, SGD | Heart rate features | 270 subjects | Accuracy 87.69% |
+| Gjoreski et al. 2020 | Chronic HF diagnosis<br>Healthy vs. chronic HF | ML and end-to-end DL | Heart sound characteristics | 947 subjects | Accuracy 92.90%<br>Sensitivity 82.30%<br>Specificity 96.20% |
+| Lal et al. 2020 | HF diagnosis<br>Healthy vs. HF | SVM, k-NN, decision trees, ensemble classifiers | HRV measures | 116 subjects<br>44 with congestive HF<br>72 controls | SVM gives accuracy 93.10% |
+| Ning et al. 2020 | HF diagnosis<br>Healthy vs. HF | DL method that is composed of a CNN and an RNN. | ECG signals | 15 chronic HF patients<br>18 controls | Accuracy 99.93%<br>Sensitivity 99.85%<br>Specificity 100.00% |
+| Choi et al. 2020 | Healthy vs. HFrEF vs. HFmrEF vs. HFpEF | Hybrid approach (expert-driven and machine-learning driven) | Demographics, symptoms, clinical history, physical examination, ECG and echocardiographic features, NT-proBNP | 1198 subjects | Accuracy 98.30% |

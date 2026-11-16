@@ -1,0 +1,13 @@
+# # 12 Artificial Intelligence Based Commercial Non-Invasive and Invasive Devices for Heart Failure Diagnosis and Prediction
+
+*Kanchan Kulkarni, Eric M. Isselbacher, and Antonis A. Armoundas*
+
+# ## 12.1 Introduction
+
+Heart failure (HF) is a highly morbid disease affecting over 26 million people worldwide [1, 2] and accounting for about 20% of all hospitalizations among the elderly population [3]. Despite many efforts, the financial burden of this chronic disease in the US remains unacceptably high [4] and HF readmissions alone constitute a significant healthcare expenditure [5]. Efforts to reduce the rehospitalization burden using conventional markers have been largely ineffective [6], primarily since efficient interventions in the ambulatory setting remain elusive.
+
+Clinically, HF is characterized by reduced cardiac output and high intracardiac pressures resulting in pulmonary edema, peripheral edema, and increased jugular venous pressure and usually accompanied by symptoms of breathlessness and fatigue. However, patients can present with asymptomatic structural or functional cardiac abnormalities such as left ventricular dysfunction, which are known precursors of acute HF or decompensated HF (Figure 12.1). As demonstrated by Figure 12.1, prior to clinical manifestations of symptoms of decompensated HF that necessitate hospitalization, there is a progressive development of changes in cardiac function manifested by changes in intracardiac pressure, autonomic balance, and intrathoracic impedance. Hence, recognition of these precursors, which are related to poor outcomes, can play a vital role in reducing mortality in patients with asymptomatic ventricular dysfunction [8].
+
+Multiple invasive devices that monitor the right ventricular, left atrial, and pulmonary artery pressure [6, 9–12] have been investigated as a means to reduce HF readmissions. Furthermore, with the recent upsurge in telemedicine, use of virtual communication has become commonplace in healthcare institutions across the US, paving the way for remote monitoring tools that can provide healthcare and clinical decision support to people that do not have direct access to in-hospital services.
+
+As there are several different underlying pathologies that can cause HF, identification of these diverse pathologies for predicting the onset of HF constitutes an integral part of the diagnostic process. Artificial intelligence (AI) based methods offer a promising approach for the prediction, early detection, and risk assessment for individuals prone to

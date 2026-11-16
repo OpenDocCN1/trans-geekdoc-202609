@@ -1,0 +1,5 @@
+| Author/Year | Objective | Model | Features | Sample Size | Result |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Yang 2020 | All-cause mortality prediction in HF patients | RF | Demographics, ECG features, index of HF, echocardiographic features, and advanced laboratory biomarkers | 506 patients | AUC 75.00% |
+| Adler 2020 | Mortality risk prediction Low vs. high | Boosted decision tree | Diastolic blood pressure, creatinine, blood urea nitrogen, hemoglobin, white blood cell count, platelets, albumin, and red blood cell distribution width | 5822 subjects | AUC 88.00% |
+| Jing 2020 | 1-year all-cause mortality prediction in HF patients | Nonlinear XGBoost | Demographics, laboratory test results, medications, ECG and echocardiographic features, vaccinations | 26,971 patients with HF | AUC 77.00% |
