@@ -1,0 +1,768 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # # CS224n: Natural Language Processing with Deep Learning
+
+    Lecture Notes: Part IV
+
+    Dependency Parsing
+
+    Winter 2019
+
+
+    **Keyphrases:** Dependency Parsing.
+
+
+    # ## 1 Dependency Grammar and Dependency Structure
+
+
+    Parse trees in NLP, analogous to those in compilers, are used to analyze the syntactic
+    structure of sentences. There are two main types of structures used - constituency
+    structures and dependency structures.
+
+
+    Constituency Grammar uses phrase structure grammar to organize words into nested
+    constituents. This will be covered in more detail in following chapters. We now
+    focus on Dependency Parsing.
+
+
+    Dependency structure of sentences shows which words depend on (modify or are arguments
+    of) which other words. These binary asymmetric relations between the words are
+    called dependencies and are depicted as arrows going from the **head** (or governor,
+    superior, regent) to the **dependent** (or modifier, inferior, subordinate). Usually
+    these dependencies form a tree structure. They are often typed with the name of
+    grammatical relations (subject, prepositional object, apposition, etc.). An example
+    of such a dependency tree is shown in Figure 1. Sometimes a fake ROOT node is
+    added as the head to the whole tree so that every word is a dependent of exactly
+    one node.
+
+
+    ![](img/560bf78645fc57d87af7a2e5d9683d71_0_0.png)
+
+
+    Figure 1: Dependency tree for the sentence "Bills on ports and immigration were
+    submitted by Senator Brownback, Republican of Kansas"
+
+
+    # ## 1.1 Dependency Parsing
+
+
+    Dependency parsing is the task of analyzing the syntactic dependency structure
+    of a given input sentence S. The output of a dependency parser is a dependency
+    tree where the words of the input sentence are connected by typed dependency relations.
+    Formally, the dependency parsing problem asks to create a mapping from the input
+    sentence with words S = w0w1...wn (where w0 is the ROOT) to its dependency tree
+    graph G. Many different variations of dependency-based methods have been developed
+    in recent years, including neural network-based methods, which we will describe
+    later.
+
+
+    To be precise, there are two subproblems in dependency parsing (adapted from Kuebler
+    et al., chapter 1.2):
+
+
+    +   1. **Learning**: Given a training set D of sentences annotated with dependency
+    graphs, induce a parsing model M that can be used to parse new sentences.'
+  - '[PAGE 1]
+
+
+    +   2. Parsing: Given a parsing model $M$ and a sentence $S$, derive the optimal
+    dependency graph $D$ for $S$ according to $M$.
+
+
+    # 1.2 Transition-Based Dependency Parsing
+
+
+    Transition-based dependency parsing relies on a state machine which defines the
+    possible transitions to create the mapping from the input sentence to the dependency
+    tree. The learning problem is to induce a model which can predict the next transition
+    in the state machine based on the transition history. The parsing problem is to
+    construct the optimal sequence of transitions for the input sentence, given the
+    previously induced model. Most transition-based systems do not make use of a formal
+    grammar.
+
+
+    # 1.3 Greedy Deterministic Transition-Based Parsing
+
+
+    This system was introduced by Nivre in 2003 and was radically different from other
+    methods in use at that time.
+
+
+    This transition system is a state machine, which consists of states and transitions
+    between those states. The model induces a sequence of transitions from some initial
+    state to one of several terminal states.
+
+
+    # States:
+
+
+    For any sentence $S = w_0 w_1 ... w_n$, a state can be described with a triple
+    $c = (\sigma, \beta, A)$:
+
+
+    +   1. a stack $\sigma$ of words $w_i$ from $S$,
+
+    +   2. a buffer $\beta$ of words $w_i$ from $S$,
+
+    +   3. a set of dependency arcs $A$ of the form $(w_i, r, w_j)$, where $w_i, w_j$
+    are from $S$, and $r$ describes a dependency relation.
+
+
+    It follows that for any sentence $S = w_0 w_1 ... w_n$,
+
+
+    +   1. an initial state $c_0$ is of the form $([w_0]_\sigma, [w_1, ..., w_n]_\beta,
+    \emptyset)$ (only the ROOT is on the stack $\sigma$, all other words are in the
+    buffer $\beta$ and no actions have been chosen yet),
+
+    +   2. a terminal state has the form $(\sigma, []_\beta, A)$.
+
+
+    # Transitions:
+
+
+    There are three types of transitions between states:
+
+
+    +   1. SHIFT: Remove the first word in the buffer and push it on top of the stack.
+    (Pre-condition: buffer has to be non-empty.)
+
+    +   2. LEFT-ARC: r: Add a dependency arc $(w_j, r, w_i)$ to the arc set $A$, where
+    $w_i$ is the word second to the top of the stack and $w_j$ is the
+
+
+    ![](img/560bf78645fc57d87af7a2e5d9683d71_1_0.png)'
+  - '[PAGE 2]
+
+
+    word at the top of the stack. Remove \(w_i\) from the stack. (Pre-condition: the
+    stack needs to contain at least two items and \(w_i\) cannot be the ROOT.)
+
+
+    +   3. RIGHT-ARC\(_r\): Add a dependency arc \((w_i, r, w_j)\) to the arc set
+    \(A\), where \(w_i\) is the word second to the top of the stack and \(w_j\) is
+    the word at the top of the stack. Remove \(w_j\) from the stack. (Pre-condition:
+    The stack needs to contain at least two items.)
+
+
+    A more formal definition of these three transitions is presented in Figure 2.
+
+
+    # 1.4 Neural Dependency Parsing
+
+
+    While there are many deep models for dependency parsing, this section focuses
+    specifically on greedy, transition-based neural dependency parsers. This class
+    of model has demonstrated comparable performance and significantly better efficiency
+    than traditional feature-based discriminative dependency parsers. The primary
+    distinction from previous models is the reliance on dense rather than sparse feature
+    representations.
+
+
+    The model we will describe employs the arc-standard system for transitions, as
+    presented in section 1.3. Ultimately, the aim of the model is to predict a transition
+    sequence from some initial configuration \(c\) to a terminal configuration, in
+    which the dependency parse tree is encoded. As the model is greedy, it attempts
+    to correctly predict one transition \(T \in \{\text{SHIFT, LEFT-ARC}_r, \text{RIGHT-ARC}_r\}\)
+    at a time, based on features extracted from the current configuration \(c = (\sigma,
+    \beta, A)\). Recall, \(\sigma\) is the stack, \(\beta\) the buffer, and \(A\)
+    the set of dependency arcs for a given sentence.
+
+
+    # Feature Selection:
+
+
+    Depending on the desired complexity of the model, there is flexibility in defining
+    the input to the neural network. The features for a given sentence \(S\) generally
+    include some subset of:
+
+
+    +   1. \(S_{word}\): Vector representations for some of the words in \(S\) (and
+    their dependents) at the top of the stack \(\sigma\) and buffer \(\beta\).
+
+
+    +   2. \(S_{tag}\): Part-of-Speech (POS) tags for some of the words in \(S\).
+    POS tags comprise a small, discrete set: \(\mathcal{P} = \{\text{NN, NNP, NNS,
+    DT, JJ, ...}\}\)
+
+
+    +   3. \(S_{label}\): The arc-labels for some of the words in \(S\). The arc-labels
+    comprise a small, discrete set, describing the dependency relation: \(\mathcal{L}
+    = \{\text{amod, tmod, nsubj, csubj, dobj, ...}\}\)'
+  - '[PAGE 3]
+
+
+    For each feature type, we will have a corresponding embedding matrix, mapping
+    from the feature’s one hot encoding, to a d-dimensional dense vector representation.
+    The full embedding matrix for $S_{word}$ is $E^w \in \mathbb{R}^{d \times N_w}$
+    where $N_w$ is the dictionary/vocabulary size. Correspondingly, the POS and label
+    embedding matrices are $E^t \in \mathbb{R}^{d \times N_t}$ and $E^l \in \mathbb{R}^{d
+    \times N_l}$ where $N_t$ and $N_l$ are the number of distinct POS tags and arc
+    labels.
+
+
+    Lastly, let the number of chosen elements from each set of features be denoted
+    as $n_{word}$, $n_{tag}$, and $n_{label}$ respectively.
+
+
+    # Feature Selection Example:
+
+
+    +   1. $S_{word}$: The top 3 words on the stack and buffer: $s_1, s_2, s_3, b_1,
+    b_2, b_3$. The first and second leftmost / rightmost children of the top two words
+    on the stack: $lc_1(s_i), rc_1(s_i), lc_2(s_i), rc_2(s_i), i = 1, 2$. The two
+    leftmost of leftmost / rightmost of rightmost children of the top two words on
+    the stack: $lc_1(lc_1(s_i)), rc_1(rc_1(s_i)), i = 1, 2$. In total $S_{word}$ contains
+    $n_w = 18$ elements.
+
+
+    +   2. $S_{tag}$: The corresponding POS tags for $S_{tag}$ ($n_t = 18$).
+
+
+    +   3. $S_{label}$: The corresponding arc labels of words, excluding those 6 words
+    on the stack/buffer ($n_l = 12$).
+
+
+    Note that we use a special NULL token for non-existent elements: when the stack
+    and buffer are empty or dependents have not been assigned yet. For a given sentence
+    example, we select the words, POS tags and arc labels given the schematic defined
+    above, extract their corresponding dense feature representations produced from
+    the embedding matrices $E^w$, $E^t$, and $E^l$, and concatenate these vectors
+    into our inputs $[x^w, x^t, x^l]$. At training time we backpropagate into the
+    dense vector representations, as well as the parameters at later layers.
+
+
+    # Feedforward Neural Network Model:
+
+
+    The network contains an input layer $[x^w, x^t, x^l]$, a hidden layer, and a final
+    softmax layer with a cross-entropy loss function. We can either define a single
+    weight matrix in the hidden layer, to operate on a concatenation of $[x^w, x^t,
+    x^l]$, or we can use three weight matrices $[W^w_1, W^t_1, W^l_1]$, one for each
+    input type, as shown in Figure 3. We then apply a non-linear function and use
+    one more affine layer $[W_2]$ so that there are an equivalent number of softmax
+    probabilities to the number of possible transitions (the output dimension).'
+  md: '
+
+    ## CS224n: Natural Language Processing with Deep Learning
+
+    Lecture Notes: Part IV
+
+    Dependency Parsing
+
+    Winter 2019
+
+
+    **Keyphrases:** Dependency Parsing.
+
+
+    ### 1 Dependency Grammar and Dependency Structure
+
+
+    Parse trees in NLP, analogous to those in compilers, are used to analyze the syntactic
+    structure of sentences. There are two main types of structures used - constituency
+    structures and dependency structures.
+
+
+    Constituency Grammar uses phrase structure grammar to organize words into nested
+    constituents. This will be covered in more detail in following chapters. We now
+    focus on Dependency Parsing.
+
+
+    Dependency structure of sentences shows which words depend on (modify or are arguments
+    of) which other words. These binary asymmetric relations between the words are
+    called dependencies and are depicted as arrows going from the **head** (or governor,
+    superior, regent) to the **dependent** (or modifier, inferior, subordinate). Usually
+    these dependencies form a tree structure. They are often typed with the name of
+    grammatical relations (subject, prepositional object, apposition, etc.). An example
+    of such a dependency tree is shown in Figure 1. Sometimes a fake ROOT node is
+    added as the head to the whole tree so that every word is a dependent of exactly
+    one node.
+
+
+    ![](img/560bf78645fc57d87af7a2e5d9683d71_0_0.png)
+
+
+    Figure 1: Dependency tree for the sentence "Bills on ports and immigration were
+    submitted by Senator Brownback, Republican of Kansas"
+
+
+    ### 1.1 Dependency Parsing
+
+
+    Dependency parsing is the task of analyzing the syntactic dependency structure
+    of a given input sentence S. The output of a dependency parser is a dependency
+    tree where the words of the input sentence are connected by typed dependency relations.
+    Formally, the dependency parsing problem asks to create a mapping from the input
+    sentence with words $S = w_0 w_1 ... w_n$ (where $w_0$ is the ROOT) to its dependency
+    tree graph G. Many different variations of dependency-based methods have been
+    developed in recent years, including neural network-based methods, which we will
+    describe later.
+
+
+    To be precise, there are two subproblems in dependency parsing (adapted from Kuebler
+    et al., chapter 1.2):
+
+
+    - 1. **Learning**: Given a training set D of sentences annotated with dependency
+    graphs, induce a parsing model M that can be used to parse new sentences.
+
+    - 2. Parsing: Given a parsing model $M$ and a sentence $S$, derive the optimal
+    dependency graph $D$ for $S$ according to $M$.
+
+
+    ### 1.2 Transition-Based Dependency Parsing
+
+
+    Transition-based dependency parsing relies on a state machine which defines the
+    possible transitions to create the mapping from the input sentence to the dependency
+    tree. The learning problem is to induce a model which can predict the next transition
+    in the state machine based on the transition history. The parsing problem is to
+    construct the optimal sequence of transitions for the input sentence, given the
+    previously induced model. Most transition-based systems do not make use of a formal
+    grammar.
+
+
+    ### 1.3 Greedy Deterministic Transition-Based Parsing
+
+
+    This system was introduced by Nivre in 2003 and was radically different from other
+    methods in use at that time.
+
+
+    This transition system is a state machine, which consists of states and transitions
+    between those states. The model induces a sequence of transitions from some initial
+    state to one of several terminal states.
+
+
+    ### States:
+
+
+    For any sentence $S = w_0 w_1 ... w_n$, a state can be described with a triple
+    $c = (\sigma, \beta, A)$:
+
+
+    - 1. a stack $\sigma$ of words $w_i$ from $S$,
+
+    - 2. a buffer $\beta$ of words $w_i$ from $S$,
+
+    - 3. a set of dependency arcs $A$ of the form $(w_i, r, w_j)$, where $w_i, w_j$
+    are from $S$, and $r$ describes a dependency relation.
+
+
+    It follows that for any sentence $S = w_0 w_1 ... w_n$,
+
+
+    - 1. an initial state $c_0$ is of the form $([w_0]_\sigma, [w_1, ..., w_n]_\beta,
+    \emptyset)$ (only the ROOT is on the stack $\sigma$, all other words are in the
+    buffer $\beta$ and no actions have been chosen yet),
+
+    - 2. a terminal state has the form $(\sigma, []_\beta, A)$.
+
+
+    ### Transitions:
+
+
+    There are three types of transitions between states:
+
+
+    - 1. SHIFT: Remove the first word in the buffer and push it on top of the stack.
+    (Pre-condition: buffer has to be non-empty.)
+
+    - 2. LEFT-ARC\(_r\): Add a dependency arc $(w_j, r, w_i)$ to the arc set $A$,
+    where $w_i$ is the word second to the top of the stack and $w_j$ is the
+
+    ![](img/560bf78645fc57d87af7a2e5d9683d71_1_0.png)
+
+    word at the top of the stack. Remove \(w_i\) from the stack. (Pre-condition: the
+    stack needs to contain at least two items and \(w_i\) cannot be the ROOT.)
+
+    - 3. RIGHT-ARC\(_r\): Add a dependency arc \((w_i, r, w_j)\) to the arc set $A$,
+    where $w_i$ is the word second to the top of the stack and $w_j$ is the word at
+    the top of the stack. Remove \(w_j\) from the stack. (Pre-condition: The stack
+    needs to contain at least two items.)
+
+
+    A more formal definition of these three transitions is presented in Figure 2.
+
+
+    ### 1.4 Neural Dependency Parsing
+
+
+    While there are many deep models for dependency parsing, this section focuses
+    specifically on greedy, transition-based neural dependency parsers. This class
+    of model has demonstrated comparable performance and significantly better efficiency
+    than traditional feature-based discriminative dependency parsers. The primary
+    distinction from previous models is the reliance on dense rather than sparse feature
+    representations.
+
+
+    The model we will describe employs the arc-standard system for transitions, as
+    presented in section 1.3. Ultimately, the aim of the model is to predict a transition
+    sequence from some initial configuration \(c\) to a terminal configuration, in
+    which the dependency parse tree is encoded. As the model is greedy, it attempts
+    to correctly predict one transition \(T \in \{\text{SHIFT, LEFT-ARC}_r, \text{RIGHT-ARC}_r\}\)
+    at a time, based on features extracted from the current configuration \(c = (\sigma,
+    \beta, A)\). Recall, \(\sigma\) is the stack, \(\beta\) the buffer, and \(A\)
+    the set of dependency arcs for a given sentence.
+
+
+    ### Feature Selection:
+
+
+    Depending on the desired complexity of the model, there is flexibility in defining
+    the input to the neural network. The features for a given sentence \(S\) generally
+    include some subset of:
+
+
+    - 1. \(S_{word}\): Vector representations for some of the words in \(S\) (and
+    their dependents) at the top of the stack \(\sigma\) and buffer \(\beta\).
+
+    - 2. \(S_{tag}\): Part-of-Speech (POS) tags for some of the words in \(S\). POS
+    tags comprise a small, discrete set: \(\mathcal{P} = \{\text{NN, NNP, NNS, DT,
+    JJ, ...}\}\)
+
+    - 3. \(S_{label}\): The arc-labels for some of the words in \(S\). The arc-labels
+    comprise a small, discrete set, describing the dependency relation: \(\mathcal{L}
+    = \{\text{amod, tmod, nsubj, csubj, dobj, ...}\}\)
+
+
+    For each feature type, we will have a corresponding embedding matrix, mapping
+    from the feature’s one hot encoding, to a d-dimensional dense vector representation.
+    The full embedding matrix for $S_{word}$ is $E^w \in \mathbb{R}^{d \times N_w}$
+    where $N_w$ is the dictionary/vocabulary size. Correspondingly, the POS and label
+    embedding matrices are $E^t \in \mathbb{R}^{d \times N_t}$ and $E^l \in \mathbb{R}^{d
+    \times N_l}$ where $N_t$ and $N_l$ are the number of distinct POS tags and arc
+    labels.
+
+
+    Lastly, let the number of chosen elements from each set of features be denoted
+    as $n_{word}$, $n_{tag}$, and $n_{label}$ respectively.
+
+
+    ### Feature Selection Example:
+
+
+    - 1. $S_{word}$: The top 3 words on the stack and buffer: $s_1, s_2, s_3, b_1,
+    b_2, b_3$. The first and second leftmost / rightmost children of the top two words
+    on the stack: $lc_1(s_i), rc_1(s_i), lc_2(s_i), rc_2(s_i), i = 1, 2$. The two
+    leftmost of leftmost / rightmost of rightmost children of the top two words on
+    the stack: $lc_1(lc_1(s_i)), rc_1(rc_1(s_i)), i = 1, 2$. In total $S_{word}$ contains
+    $n_w = 18$ elements.
+
+    - 2. $S_{tag}$: The corresponding POS tags for $S_{tag}$ ($n_t = 18$).
+
+    - 3. $S_{label}$: The corresponding arc labels of words, excluding those 6 words
+    on the stack/buffer ($n_l = 12$).
+
+
+    Note that we use a special NULL token for non-existent elements: when the stack
+    and buffer are empty or dependents have not been assigned yet. For a given sentence
+    example, we select the words, POS tags and arc labels given the schematic defined
+    above, extract their corresponding dense feature representations produced from
+    the embedding matrices $E^w$, $E^t$, and $E^l$, and concatenate these vectors
+    into our inputs $[x^w, x^t, x^l]$. At training time we backpropagate into the
+    dense vector representations, as well as the parameters at later layers.
+
+
+    ### Feedforward Neural Network Model:
+
+
+    The network contains an input layer $[x^w, x^t, x^l]$, a hidden layer, and a final
+    softmax layer with a cross-entropy loss function. We can either define a single
+    weight matrix in the hidden layer, to operate on a concatenation of $[x^w, x^t,
+    x^l]$, or we can use three weight matrices $[W^w_1, W^t_1, W^l_1]$, one for each
+    input type, as shown in Figure 3. We then apply a non-linear function and use
+    one more affine layer $[W_2]$ so that there are an equivalent number of softmax
+    probabilities to the number of possible transitions (the output dimension).
+
+    '
+  mdcn: '
+
+
+    ## CS224n: 自然语言处理与深度学习
+
+    Lecture Notes: Part IV
+
+    依存分析
+
+    Winter 2019
+
+
+    **关键词：** 依存分析。
+
+
+    ### 1 依存语法与依存结构
+
+
+    NLP 中的分析树类似于编译器中的分析树，用于分析句子的句法结构。主要使用两种结构：成分结构和依存结构。
+
+
+    成分语法使用短语结构语法将词组织成嵌套的成分。这将在后续章节中详细介绍。我们现在专注于依存分析。
+
+
+    句子的依存结构显示哪些词依赖于（修饰或作为论元）哪些其他词。词之间的这些二元非对称关系称为依存关系，并被描绘为从 **核心词**（或 governor, superior,
+    regent）到 **依赖词**（或 modifier, inferior, subordinate）的箭头。通常，这些依存关系形成树结构。它们常以语法关系名称（subject,
+    prepositional object, apposition, 等）进行类型标注。这种依存树的示例如图 1 所示。有时会添加一个虚拟 ROOT 节点作为整棵树的核心词，以便每个词恰好是一个节点的依赖词。
+
+
+    ![](img/560bf78645fc57d87af7a2e5d9683d71_0_0.png)
+
+
+    图 1：句子 "关于港口和移民的法案已由堪萨斯州共和党参议员布朗巴克提交" 的依存树
+
+
+    ### 1.1 依存分析
+
+
+    依存分析是分析给定输入句子 S 的句法依存结构的任务。依存分析器的输出是一棵依存树，其中输入句子的词通过类型化的依存关系连接。形式上，依存分析问题要求从输入句子（词为
+    $S = w_0 w_1 ... w_n$，其中 $w_0$ 为 ROOT）到其依存树图 G 创建一个映射。近年来，已开发出许多不同的基于依存的方法变体，包括基于神经网络的方法，我们将在后面描述。
+
+
+    精确地说，依存分析中有两个子问题（改编自 Kuebler et al., 第 1.2 章）：
+
+
+    - 1. **学习**：给定一个标注了依存图的训练集 D，诱导一个可用于分析新句子的解析模型 M。
+
+    - 2. 分析：给定解析模型 $M$ 和句子 $S$，根据 $M$ 为 $S$ 推导最优依存图 $D$。
+
+
+    ### 1.2 基于转移的依存分析
+
+
+    基于转移的依存分析依赖于一个状态机，该状态机定义了从输入句子到依存树创建映射的可能转移。学习问题是诱导一个模型，该模型可以基于转移历史预测状态机中的下一个转移。分析问题是在给之前诱导的模型的情况下，为输入句子构建最优转移序列。大多数基于转移的系统不使用形式语法。
+
+
+    ### 1.3 贪心确定性基于转移的分析
+
+
+    该系统由 Nivre 于 2003 年提出，与当时使用的其他方法截然不同。
+
+
+    这个转移系统是一个状态机，由状态和状态之间的转移组成。该模型从某个初始状态诱导出到若干终止状态之一的一系列转移。
+
+
+    ### 状态：
+
+
+    对于任何句子 $S = w_0 w_1 ... w_n$，状态可以用三元组 $c = (\sigma, \beta, A)$ 来描述：
+
+
+    - 1. 来自 $S$ 的词的堆栈 $\sigma$，
+
+    - 2. 来自 $S$ 的词的缓冲区 $\beta$，
+
+    - 3. 形状为 $(w_i, r, w_j)$ 的依存弧集合 $A$，其中 $w_i, w_j$ 来自 $S$，且 $r$ 描述一个依存关系。
+
+
+    因此，对于任何句子 $S = w_0 w_1 ... w_n$，
+
+
+    - 1. 初始状态 $c_0$ 的形式为 $([w_0]_\sigma, [w_1, ..., w_n]_\beta, \emptyset)$（只有 ROOT
+    在堆栈 $\sigma$ 上，所有其他词在缓冲区 $\beta$ 中，且尚未选择任何动作），
+
+    - 2. 终止状态的形式为 $(\sigma, []_\beta, A)$。
+
+
+    ### 转移：
+
+
+    状态之间有三种类型的转移：
+
+
+    - 1. SHIFT：移除缓冲区中的第一个词并将其压入堆栈顶。（前提条件：缓冲区必须非空。）
+
+    - 2. LEFT-ARC\(_r\)：向弧集合 $A$ 添加一个依存弧 $(w_j, r, w_i)$，其中 $w_i$ 是堆栈中倒数第二个词，$w_j$
+    是
+
+    ![](img/560bf78645fc57d87af7a2e5d9683d71_1_0.png)
+
+    堆栈顶部的词。从堆栈中移除 $w_i$。（前提条件：堆栈需要至少包含两个项目，且 $w_i$ 不能是 ROOT。）
+
+    - 3. RIGHT-ARC\(_r\)：向弧集合 $A$ 添加一个依存弧 $(w_i, r, w_j)$，其中 $w_i$ 是堆栈中倒数第二个词，$w_j$
+    是堆栈顶部的词。从堆栈中移除 $w_j$。（前提条件：堆栈需要至少包含两个项目。）
+
+
+    这三个转移的更正式定义在图 2 中给出。
+
+
+    ### 1.4 基于神经网络的依存分析
+
+
+    虽然有许多用于依存分析的深度模型，但本节专门关注贪心、基于转移的神经依存分析器。这类模型已展示出与传统基于特征的判别式依存分析器相当的性能，并具有显著更好的效率。与以前模型的主要区别在于依赖于密集而非稀疏的特征表示。
+
+
+    我们将描述的模型采用第 1.3 节中介绍的 arc-standard 系统进行转移。最终，该模型的目标是从某个初始配置 \(c\) 预测到终止配置的转移序列，其中编码了依存分析树。由于模型是贪心的，它尝试基于从当前配置
+    \(c = (\sigma, \beta, A)\) 提取的特征，一次正确预测一个转移 \(T \in \{\text{SHIFT, LEFT-ARC}_r,
+    \text{RIGHT-ARC}_r\}\)。回顾，\(\sigma$ 是堆栈，\(\beta$ 是缓冲区，$A$ 是给定句子的依存弧集合。
+
+
+    ### 特征选择：
+
+
+    根据模型所需的复杂程度，定义神经网络输入具有灵活性。给定句子 \(S\) 的特征通常包括以下内容的某个子集：
+
+
+    - 1. \(S_{word}\)：栈 \(\sigma$ 和缓冲区 $\beta$ 顶部的句子 $S$ 中某些词（及其依赖词）的向量表示。
+
+    - 2. \(S_{tag}\)：句子 $S$ 中某些词的词性（POS）标记。POS 标记包含一个小的离散集合：\(\mathcal{P} = \{\text{NN,
+    NNP, NNS, DT, JJ, ...}\}\)
+
+    - 3. \(S_{label}$：句子 $S$ 中某些词的弧标签。弧标签包含一个小的离散集合，描述依存关系：\(\mathcal{L} = \{\text{amod,
+    tmod, nsubj, csubj, dobj, ...}\}\)
+
+
+    对于每种特征类型，我们都会有一个相应的嵌入矩阵，将特征的 one-hot 编码映射为 d 维密集向量表示。$S_{word}$ 的完整嵌入矩阵为 $E^w
+    \in \mathbb{R}^{d \times N_w}$，其中 $N_w$ 是词典/词汇表大小。相应地，POS 和标签嵌入矩阵为 $E^t \in \mathbb{R}^{d
+    \times N_t}$ 和 $E^l \in \mathbb{R}^{d \times N_l}$，其中 $N_t$ 和 $N_l$ 是不同 POS 标记和弧标签的数量。
+
+
+    最后，设从每组特征中选择的元素数量分别表示为 $n_{word}$、$n_{tag}$ 和 $n_{label}$。
+
+
+    ### 特征选择示例：
+
+
+    - 1. $S_{word}$：堆栈和缓冲区上的前 3 个词：$s_1, s_2, s_3, b_1, b_2, b_3$。堆栈顶部两个词的第一个和第二个最左侧/最右侧子节点：$lc_1(s_i),
+    rc_1(s_i), lc_2(s_i), rc_2(s_i), i = 1, 2$。堆栈顶部两个词的最左侧子节点的两个最左侧子节点 / 最右侧子节点的两个最右侧子节点：$lc_1(lc_1(s_i)),
+    rc_1(rc_1(s_i)), i = 1, 2$。总共，$S_{word}$ 包含 $n_w = 18$ 个元素。
+
+    - 2. $S_{tag}$：$S_{tag}$ 对应的 POS 标记（$n_t = 18$）。
+
+    - 3. $S_{label}$：词的对应弧标签，不包括堆栈/缓冲区上的那 6 个词（$n_l = 12$）。
+
+
+    请注意，我们使用特殊的 NULL 标记表示不存在的元素：当堆栈和缓冲区为空或尚未分配依赖词时。对于给定的句子示例，我们根据上面定义的示意图选择词、POS 标记和弧标签，提取由嵌入矩阵
+    $E^w$、$E^t$ 和 $E^l$ 生成的相应密集特征表示，并将这些向量连接为我们的输入 $[x^w, x^t, x^l]$。在训练时，我们将反向传播到密集向量表示以及后续层的参数中。
+
+
+    ### 前馈神经网络模型：
+
+
+    该网络包含一个输入层 $[x^w, x^t, x^l]$、一个隐藏层，以及一个带有交叉熵损失函数的最终 softmax 层。我们可以在隐藏层中定义一个单一权重矩阵来对
+    $[x^w, x^t, x^l]$ 的拼接进行操作，或者可以使用三个权重矩阵 $[W^w_1, W^t_1, W^l_1]$，每种输入类型一个，如图 3 所示。然后我们应用一个非线性函数，并再使用一个仿射层
+    $[W_2]$，使得 softmax 概率的数量等于可能转移的数量（输出维度）。
+
+
+    '
+  merge: -1
+- raw:
+  - '[PAGE 4]
+
+
+    **Softmax layer:**
+
+    $p = \text{softmax}(W_2 h)$
+
+    **Hidden layer:**
+
+    $h = (W_1^w x^w + W_1^t x^t + W_1^l x^l + b_1)^3$
+
+    **Input layer:** $[x^w, x^t, x^l]$
+
+
+    ![](img/560bf78645fc57d87af7a2e5d9683d71_4_0.png)
+
+
+    Figure 3: The neural network architecture for greedy, transition-based dependency
+    parsing.
+
+
+    Note that in Figure 3, $f(x) = x^3$ is the non-linear function used.
+
+
+    For a more complete explanation of a greedy transition-based neural dependency
+    parser, refer to "A Fast and Accurate Dependency Parser using Neural Networks"
+    under Further Reading.
+
+
+    +   **Further reading:**
+
+    +   - Danqi Chen, and Christopher D. Manning. "A Fast and Accurate Dependency
+    Parser using Neural Networks." EMNLP. 2014.
+
+    +   - Kuebler, Sandra, Ryan McDonald, and Joakim Nivre. "Dependency parsing."
+    Synthesis Lectures on Human Language Technologies 1.1 (2009): 1-127.'
+  md: '
+
+    ### Softmax layer
+
+    $p = \text{softmax}(W_2 h)$
+
+
+    ### Hidden layer
+
+    $h = (W_1^w x^w + W_1^t x^t + W_1^l x^l + b_1)^3$
+
+
+    ### Input layer
+
+    $[x^w, x^t, x^l]$
+
+
+    ![](img/560bf78645fc57d87af7a2e5d9683d71_4_0.png)
+
+
+    Figure 3: The neural network architecture for greedy, transition-based dependency
+    parsing.
+
+
+    Note that in Figure 3, $f(x) = x^3$ is the non-linear function used.
+
+
+    For a more complete explanation of a greedy transition-based neural dependency
+    parser, refer to "A Fast and Accurate Dependency Parser using Neural Networks"
+    under Further Reading.
+
+
+    ### Further reading
+
+    - Danqi Chen, and Christopher D. Manning. "A Fast and Accurate Dependency Parser
+    using Neural Networks." EMNLP. 2014.
+
+    - Kuebler, Sandra, Ryan McDonald, and Joakim Nivre. "Dependency parsing." Synthesis
+    Lectures on Human Language Technologies 1.1 (2009): 1-127.
+
+    '
+  mdcn: '
+
+
+    ### Softmax 层
+
+    $p = \text{softmax}(W_2 h)$
+
+
+    ### 隐藏层
+
+    $h = (W_1^w x^w + W_1^t x^t + W_1^l x^l + b_1)^3$
+
+
+    ### 输入层
+
+    $[x^w, x^t, x^l]$
+
+
+    ![](img/560bf78645fc57d87af7a2e5d9683d71_4_0.png)
+
+
+    图 3：贪婪、基于转换的依赖分析的神经网络架构。
+
+
+    请注意，在图 3 中，$f(x) = x^3$ 是所使用的非线性函数。
+
+
+    欲了解贪婪、基于转换的神经依赖分析器的更完整解释，请参阅“进一步阅读”部分中的《使用神经网络的快速准确依赖分析器》。
+
+
+    ### 进一步阅读
+
+    - Danqi Chen, and Christopher D. Manning. "使用神经网络的快速准确依赖分析器." EMNLP. 2014.
+
+    - Kuebler, Sandra, Ryan McDonald, and Joakim Nivre. "依赖分析." Synthesis Lectures
+    on Human Language Technologies 1.1 (2009): 1-127.
+
+
+    '
+  merge: 0
