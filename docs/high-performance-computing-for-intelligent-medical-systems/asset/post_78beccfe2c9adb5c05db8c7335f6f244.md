@@ -1,0 +1,58 @@
+
+that allow for rapid or more intensive feedback. In the presented model, the quick feedback level response also provides sufficient information as a basis for the quality assessment of the area.
+
+## References
+
+- [1] Li C, Chen E, Savoia G, Fraser H and Eickhoff C 2020 Mining misdiagnosis patterns from biomedical literature AMIA Jt. Summits Trans. Sci. Proc. 2020 360–6
+- [2] Committee on Diagnostic Error in Health Care, Board on Health Care Services, Institute of Medicine, and The National Academies of Sciences, Engineering, and Medicine 2015 Improving Diagnosis in Health Care ed E P Balogh, B T Miller and J R Ball (Washington DC: National Academies Press)
+- [3] Ozeke O, Ozeke V, Coskun O and Budakoglu II 2019 Second victims in health care: current perspectives Adv. Med. Educ. Pract. 10 593
+- [4] Hautz W, Kämer J E, Hautz S, Sauter T, Zwaan L, Exadaktylos A, Birrenbach T N, Maier V, Müller M and Schaußer S K 2019 Diagnostic error increases mortality and length of hospital stay in patients presenting through the emergency room Scand. J. Trauma Resuscitation Emerg. Med. 27 54
+- [5] Rodziewicz T L and Hipskind J E 2018 Medical Error Prevention (Treasure Island, FL: StatPearls Publishing)
+- [6] Giardina T D, Haskell H, Menon S, Hallisy J, Southwick F S, Sarkar U, Royse K E and Singh H 2018 Learning from patients’ experiences related to diagnostic errors is essential for progress in patient safety Health Affairs 37 1821–7
+- [7] Clark B W, Derakhshan A and Desai S V 2018 Diagnostic errors and the bedside clinical examination Med. Clin. 102 453–64
+- [8] Robertson J J and Long B 2018 Suffering in silence: medical error and its impact on health care providers J. Emerg. Medicine 54 402–9
+- [9] Fernholm R, Wachtler C, Malm-Willadsen K, Holzmann M J, Carlsson A C, Nilsson G H and Pukk Härenstam K 2020 Validation and initial results of surveys exploring perspectives on risks and solutions for diagnostic and medication errors in primary care in Sweden Scand. J. Prim. Health Care 38 381–90
+- [10] Panesar S S, Desilva D, Carson-Stevens A, Cresswell K M, Salvilla S A, Slight S P, Javad S, Netuveli G, Larizgoitia I and Donaldson L J 2016 How safe is primary care? A systematic review BMJ Qual. Saf. 25 544–53
+- [11] Sari A B, Cracknell A and Sheldon T A 2008 Incidence, preventability and consequences of adverse events in older people: results of a retrospective case-note review Age Ageing 37 265–9
+- [12] Pukk K, Lundberg J, Penaloza-Pesantes R V, Brommels M and Gaffney F A 2003 Do women simply complain more? National patient injury claims data show gender and age differences Qual. Manage. Healthcare 12 225–31
+- [13] Sánchez A M and Campos R M 2011 Detection of prescribing related problems at the community pharmacy Int. J. Clin. Pharm. 1 66–9
+- [14] Royce C S, Hayes M M and Schwartzstein R M 2019 Teaching critical thinking: a case for instruction in cognitive biases to reduce diagnostic errors and improve patient safety Acad. Med. 94 187–94
+- [15] Newman-Toker D E, Wang Z, Zhu Y, Nasser N, Tehrani A S S, Schaffer A C, Yu-Moe C W, Clemens G D, Fanai M and Siegal D 2020 Rate of diagnostic errors and serious misdiagnosis-related harms for major vascular events, infections, and cancers: toward a national incidence estimate using the ‘Big Three’ Diagnosis 8 67–84
+- [16] Fernholm R, Pukk Härenstam K, Wachtler C, Nilsson G H, Holzmann M J and Carlsson A C 2019 Diagnostic errors reported in primary healthcare and emergency departments: a retrospective and descriptive cohort study of 4830 reported cases of preventable harm in Sweden Eur. J. Gen. Pract. 25 128–35
+- [17] Omron R, Kotwal S, Garibaldi B T and Newman-Toker D E 2018 The diagnostic performance feedback ‘calibration gap’: why clinical experience alone is not enough to prevent serious diagnostic errors AEM Educ. Train. 2 339–42
+- [18] Schiff G D, Hasan O, Kim S, Abrams R, Cosby K, Lambert B L, Elstein A S, Hasler S, Kabongo M L and Krasnjarn N 2009 Diagnostic error in medicine: analysis of 583 physician-reported errors Arch. Intern. Med. 169 1881–7
+- [19] Chimowitz M I, Logigian E L and Caplan L R 1990 The accuracy of bedside neurological diagnoses Ann. Neurol. 28 78–85
+- [20] Dhaliwal G 2017 Premature Closure? Not So Fast (London: BMJ Publishing Group Ltd)
+- [21] Mahajan P et al 2021 An operational framework to study diagnostic errors in emergency departments: findings from a consensus panel J. Patient Saf. (published ahead of print)
+- [22] European Society of Radiology 2010 The future role of radiology in healthcare Insights Imaging. 1 2–11
+- [23] Lexa F J 2021 Duty hour limits for radiologists: It’s about time J. Am. Coll. Radiol. 18 208–10
+- [24] Bruno M A, Walker E A and Abujudeh H H 2015 Understanding and confronting our mistakes: the epidemiology of error in radiology and strategies for error reduction Radiographics 35 1668–76
+- [25] Oestmann J W, Greene R, Kushner D C, Bourgouin P M, Linetsky L and Llewellyn H J 1988 Lung lesions: correlation between viewing time and detection Radiology 166 451–3
+- [26] Heher Y K 2020 Reduction of Diagnostic Error: Following Cytopathology’s Lead (New York: Wiley Online Library)
+- [27] Kohn L T, Corrigan J and Donaldson M S 2000 To Err Is Human: Building a Safer Health System vol 6 (Washington DC: National Academy Press)
+- [28] Verna R, Velazquez A B and Laposata M 2019 Reducing diagnostic errors worldwide through diagnostic management teams Ann. Lab. Med. 39 121–4
+- [29] Blease C, Torous J and Häßglund M 2020 Does patient access to clinical notes change documentation? Front. Public Health 8 578
+- [30] Astier A, Carlet J, Hoppe-Ticky T, Jacklin A, Jeanes A, McManus S, Pletz M W, Seifert H and Fitzpatrick R 2020 What is the role of technology in improving patient safety? A French, German and UK healthcare professional perspective J. Patient Saf. Risk Manage. 25 219–24
+- [31] Mello M M, Studdert D M and Kachalia A 2014 The medical liability climate and prospects for reform JAMA 312 2146–55
+- [32] Marcusson J, Nord M, Dong H-J and Lyth J 2020 Clinically useful prediction of hospital admissions in an older population BMC Geriatr. 20 1–9
+- [33] Boumendil A, Aegerter P, Guidet B and Network C-R 2005 Treatment intensity and outcome of patients aged 80 and older in intensive care units: a multicenter matched-cohort study J. Am. Geriatr. Soc. 53 88–93
+- [34] Ehni H-J and Wahl H-W 2020 Six propositions against ageism in the COVID-19 pandemic J. Aging Soc. Policy 32 515–25
+- [35] Adams W L, McIlvain H E, Lacy N L, Magsi H, Crabtree B F, Yenny S K and Sitorius M A 2002 Primary care for elderly people: why do doctors find it so hard? Gerontologist 42 835–42
+- [36] Schofield P 2018 The assessment of pain in older people: UK national guidelines Age Ageing 47 1–22
+- [37] Johansson M M, Barbero M, Peolsson A, Falla D, Cesccon C, Folli A and Dong H-J 2021 Pain characteristics and quality of life in older people at high risk of future hospitalization Int. J. Environ. Res. Public Health 18 958
+- [38] Oh D K, Na W, Park Y R, Hong S-B, Lim C-M, Koh Y and Huh J-W 2019 Medical resource utilization patterns and mortality rates according to age among critically ill patients admitted to a medical intensive care unit Medicine 98 e15835
+- [39] Audisio R 2008 Shall we operate? Preoperative assessment in elderly cancer patients (PACE) can help: A SIOG surgical task force prospective study Crit. Rev. Oncol./Hematol. 65 156–63
+- [40] Decavèle M, Dreyfus A, Gatulle N, Weiss N and Houillier C et al 2021 Clinical features and outcome of patients with primary central nervous system lymphoma admitted to the intensive care unit: a French national expert center experience J. Neurol. 1–10
+- [41] Wou F, Gladman J R, Bradshaw L, Franklin M, Edmans J and Conroy S P 2013 The predictive properties of frailty-rating scales in the acute medical unit Age Ageing 42 776–81
+- [42] McCabe J J and Kennelly S P 2015 Acute care of older patients in the emergency department: strategies to improve patient outcomes Open Access Emerg. Med.: OAAEM 7 45
+- [43] Edmans J, Bradshaw L, Gladman J R, Franklin M, Berdunov V, Elliott R and Conroy S P 2013 The Identification of Seniors at Risk (ISAR) score to predict clinical outcomes and health service costs in older people discharged from UK acute medical units Age Ageing 42 747–53
+- [44] Seegmiller A C et al 2013 Optimizing personalized bone marrow testing using an evidence-based, interdisciplinary team approach Am. J. Clin. Pathol. 140 643–50
+- [45] van Veen J 2020 Job Criteria for Successful Use of AI (University of Twente)
+- [46] Rissanen M 2020 Translational health technology and system schemes: enhancing the dynamics of health informatics Health Inf. Sci. Syst. 8 39
+- [47] Shafqat S, Fayyaz M, Khattak H A, Bilal M, Khan S, Ishtiaq O, Abbasi A, Shafqat F, Alnumay W S and Chatterjee P 2021 Leveraging deep learning for designing healthcare analytics heuristic for diagnostics Neural Process. Lett. 53 1–27
+- [48] Rong G, Mendez A, Assi E B, Zhao B and Sawan M 2020 Artificial intelligence in healthcare: review and prediction case studies Engineering 6 291–301
+- [49] Quiroz J C, Laranjo L, Kocaballi A B, Berkovsky S, Rezazadegan D and Coiera E 2019 Challenges of developing a digital scribe to reduce clinical documentation burden NPJ Digital Med. 2 1–6
+- [50] Jaspano O, Wysocka A, Sanchez C and Schweitzer A D 2021 Improving the relationship between confidence and competence: implications for diagnostic radiology training from the psychology and medical literature Acad. Radiol. (in press)
+- [51] Meyer A N, Payne V L, Meeks D W, Rao R and Singh H 2013 Physicians’ diagnostic accuracy, confidence, and resource requests: a vignette study JAMA Intern. Med. 173 1952–8
+- [52] Graber M L, Trowbridge R, Myers J S, Umscheid C, Strull W and Kanter M H 2014 The next organizational challenge: finding and addressing diagnostic error Jt. Comm. J. Qual. Patient Saf. 40 102–10
+- [53] Schiff G D 2008 Minimizing diagnostic error: the importance of follow-up and feedback Am. J. Med. 121 S38–42

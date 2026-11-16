@@ -1,0 +1,11 @@
+# Chapter 10
+
+# A comparative analysis of image enhancement techniques for detection of microcalcification in screening mammogram
+
+# Gaurav Makwana, Ram Narayan Yadav and Lalita Gupta
+
+Breast cancer is the main source of cancer-related death in women of all ages. Among various imaging techniques, mammography is the most reliable and cost-effective technique for the diagnosis of breast malignancy. Radiologists investigate the presence of microcalcification and the pattern of its spread and interpret the information. However, diagnosis of the abnormality is completely subjective and depends upon the experience and expertise of the radiologists. There is always a possibility of human error due to poor contrast and noise that might cause the misleading diagnosis of abnormalities like calcification, masses, etc. Therefore, it is beneficial to use image processing techniques for mammogram image enhancement to improve the image quality for better interpretation of the image. In this chapter image enhancement techniques are applied to reduce the different types of noises like impulse noise, Gaussian noise, and speckle noise to increase the contrast of the mammogram images. The performance comparison of various image enhancement techniques like spatial domain filtering, frequency domain filtering and machine learning technique is shown. A quantitative measure of performance comparison is provided in terms of the parameters like Mean Square Error (MSE), Peak Signal-to-Noise Ratio (PSNR), Signal-to-Noise Ratio (SNR), mean, variance, etc. The test results indicate that the median filter can reduce impulse noise with the lowest MSE of 0.0206, whereas CNN is a better option to remove Gaussian and speckle noise with MSE of 0.0026 and 0.0017, respectively. We have also seen that these methods increase the contrast that helps in improving the diagnostic efficiency of mammograms.
+
+# 10.1 Introduction
+
+Cancer refers to the uncontrolled growth of epithelial cells in a particular location of the body. Malignant growths can be characterized by the kind of influenced cells or

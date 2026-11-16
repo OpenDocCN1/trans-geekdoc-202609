@@ -1,0 +1,11 @@
+# # Chapter 5
+
+# # Reliability of machine learning methods for diagnosis and prognosis during the COVID-19 pandemic: a comprehensive critical review
+
+**Hamid Reza Marateb, Mohammad Reza Mohebbian, Mehdi Shirzadi, Arezoo Mirshamsi, Shadi Zamani, Atena Abrisham chi, Fateme Bafande and Miguel Ángel Mañas**
+
+COVID-19, the severe acute respiratory syndrome coronavirus (SARS-CoV-2), has been a disaster since 2020. Many papers were published by the medical and computer research communities during the pandemic. However, there are concerns about whether papers with problems in statistical analysis, study design and reported performance indices could help fight the pandemic. Reducing the risk of bias requires proper statistical and validation models. A variety of machine learning methods were proposed in the literature for COVID-19 diagnosis and prognosis, among which deep learning methods were mainly focused on the chest CT-scan. Despite these efforts, there are issues not taken into account hindering their clinical applications. This chapter analyzed the critical STARD/TRIPOD issues of more than 45 machine learning methods proposed in the literature during the pandemic. Strategies were recommended to avoid systematic flaws and improve the clinical reliability of such systems.
+
+# ## 5.1 Introduction
+
+Severe acute respiratory syndrome coronavirus (SARS-CoV-2), also known as COVID-19, was not only a disaster in 2020 but continues in 2021 with mutations and more severe clinical outcomes across the world [1]. It has been affecting the entire human society from different perspectives [2–4]. Various machine learning methods have been used for COVID-19 diagnosis, prognosis, and long-term side effects [5–9]. However, most of the proposed methods’ quality is low and are not recommended for clinical applications [10, 11]. This is surprising, as there are standards such as TRIPOD (Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis) [12] published in the literature that could be extended to limited sample

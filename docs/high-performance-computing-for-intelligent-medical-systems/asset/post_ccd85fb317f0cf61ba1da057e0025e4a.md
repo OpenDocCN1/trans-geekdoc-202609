@@ -1,0 +1,46 @@
+
+### 3.2.1 Quantitative analysis
+
+- A. Fundamental frequency estimation. Since the EGG signal is an indirect physiological proof of the cyclic origin of laryngeal vibrations, it is in reality an ideal candidate for the extraction of fundamental frequencies. Several earlier studies used the EGG in various contexts to establish fundamental frequencies [72]. Proceedings can include testing dosimetry [73], quantifying timbre in a cappella quartet performance [74], or researching vocal sensations [75]. The [75] study showed that the fundamental frequency obtained from the acoustic signals has been correlated with the EGG signal as calculated in a database of 8000 voice signals. As a result of this EGG efficiency for fundamental frequency extraction, [76] employed EGG signals to set up a fundamental frequency database derived from running sound. [77] noted that EGG was a better predictor of disturbance parameters compared to acoustic sound. However, it is appropriate to ensure that in EGG signaling devices such as baseline timbres, noise equipment is mitigated. In addition, careful cataloging of algorithms for the extraction of fundamental frequencies may be needed if certain signal properties, such as cycle-by-cycle disturbances and/or subharmonics, are present.
+
+- B. Amplitude of the EGG waveform. Different factors such as larynx heights, electrode placement, posture changes, neck size and automatic gain controllers (AGCs) can affect the amplitude of the EGG signal. This leads to the incorrect understanding of the vocal fold contact operation [46, 70, 78, 79]. Research studies often use non-normalized dEGG or EGG parameters for quantitative analysis [80, 81]. The importance of the overall amplitude of the unfiltered EGG signal was discussed in [82] where signal elements below the vibration level of the vocal fold could, in theory, be used to track this function of the vocal fold alteration, that is, systemic changes of the general amplitude may occur in the signal acquired without the AGC. Perhaps because the potential factors actually influence the overall amplitude of the EGG waveform mentioned above, the scientific hypothesis between the vocal fold (pre-)phonation (pre-)phonoid laryngeal configurations and any possible structural consequences for the EGG amplitude is not currently provided with strong empirical support (e.g., the laryngeal endoscopy). It is therefore important to distinguish between low-frequency alterations under the vibration rate of the vocal fold and in-cycle variations of the VFCA in the ‘amplitude’ of the EGG signal.
+
+## 3.3 Voice Pathology Datasets
+
+The current section discusses some recent and most popularly implemented standardized datasets worldwide.
+
+### 3.3.1 Voice ICar fEDerico II (VOICED)
+
+[83] suggested a pathological speech dataset called Voice ICar fEDerico II (VOICED). There are 150 pathological and 58 balanced voice recordings with an 85 kHz and a 32-bit resolution. A total of 150 pathological records were given by 98 female and 52 male candidates and 58 safe files were facilitated by 37 females and 21 males. Participants were aged between 18 and 60 years. Three different types of disorders, that is, hyperkinetic dysphonia, hypokinetic dysphonia and laryngitis reflux, were grouped in their datasets under the pathology class. Stiffness of vocal folds, vocal fold nodules, polyps, etc are a form of hyperkinetic dysphonia. Second, the hypokinetic dysphonia community comprises speech disorders such as fold paralysis, laryngitis, and glottis insufficiency. There are signs of pharyngitis, asthma, halitosis and cough at night in the third category. The Voice Database was developed in collaboration with the University Hospital of Naples ‘Federico II’ by the Institute of High-Performance Computing and Networking of the Italian National Research Council (ICAR-CNR). This repository has uneven samples, namely 150 and 58 for a safe and pathological voice. Each recording has the vowel /a/ voice at a rate of 8000 Hz with a sound and pathological voice. This database is very new and few research studies are currently using it.
+
+### 3.3.2 Massachusetts Eye and Ear Infirmary
+
+This database has been developed by the MEEI Voice and Speech Lab. It includes more than 1400 voice samples of the continuous vowel /a/ and the first section of the Rainbow Quotation. Kay Elemetrics [84] markets the materials. Two different configurations have been recorded. The sample frequency was 50 kHz for normal samples, compared with 25 kHz or 50 kHz for pathological samples. There are many inconveniences, such as the differing conditions and the sampling rates used to capture natural and abnormal voices. It has been used in a number of research works. This database used a variety of methods to assess voice fitness, including stroboscopy, audio aerodynamics, and medical assessments for the neck and mouth. Numerous voice disorders can be treated by analyzing changes in muscles that can induce and improve the strength of the voice.
+
+### 3.3.3 Saarbruecken Voice Database
+
+This is an unrestricted and accessible German database with a wide variety of samples. This diversity of samples allows numerous forms of studies to be carried out for various scientific purposes. The database [85] is freely available for download and is maintained by the Saarland University Institute of Phonetics. It includes sustained vowels /a/, /i/, and /u/ with different tonalities: regular, low, high, and low-high-low with a German-language phrase ‘Guten Morgen, wie geht es Ihnen?’ which implies, ‘Good morning, how are you?’ These characteristics make it a good database to perform experiments for researchers. Any voices of the SVD database have 16-bit resolutions sampled at 50 kHz.
+
+### 3.3.4 Arabic Voice Pathology Database
+
+The AVPD dataset of speech recordings was collected by well-experienced phoniatricians at King Abdul Aziz University in Saudi Arabia. Records of speeches were collected over two years from a project funded by the National Science and Technology Plans of Saudi Arabia. Phoniatricians maintained a sampling system such that the flaws in the MEEI database could be mitigated. The database contains continuous vowel records for normal and vocal fold patients. After clinical assessment with laryngeal stroboscopy, a safe and unhealthy vocal fold of individuals was established. In clinical cases, the perceived severity of voice disorders has been assessed at a scale of 1 to 3, with 3 being the worst. On the basis of a panel of three medical experts, each sample was connected to a severity ranking. The database contains three different types of documents. They are three long-lasting vowels with beginning and offset information, single words, including Arabic numerals and some other common terms and a continuous voice. The text has been deliberately selected to cover all Arabic phonemes. The three vowels a, u and i were reported by all speakers, while isolated words and continuous speech were used once to prevent tiring patients. The sampling frequency in the database was 44 kHz and the speech was captured in the computerized speech lab (CSL) software. Several specialist physicians at King Abdul Aziz University Hospital have tested and confirmed the voice disorders recorded in this database [86].
+
+## 3.4 Acoustic Speech Features with Machine Learning for Voice Pathology Classification
+
+There are two subsections in this section. The first one addresses several important speech pathology features extraction procedures. Research works using handcrafted features and ML classifiers are discussed in the second subsection.
+
+### 3.4.1 Feature Extraction Techniques
+
+This is the most critical step in any ML process. This includes the conversion of a voice signal into acoustic features by digital signal processing techniques.
+
+- A. Acoustic analysis. This is an estimate of the audio metadata in the voice. Acoustic assessment results may be used to determine the severity of a speech disturbance. Any activity related to acoustic voice signal analysis can be as follows.
+  - (A) Abnormalities around the basic pitch and the peak amplitude.
+  - (B) The frequency range of the noisy signal.
+  - (C) Waveform pattern from cycle to cycle.
+  - (D) Natural features of the frequency.
+  - (E) Properties of signal transformation.
+
+- B. Mel Frequency Cepstral Coefficients (MFCC). Essentially, this is used for the diagnosis of speech deficiency. The key benefits compared to other voice features are that they can fully represent the vocal tract. Once the vocal tract has been precisely established, the phoneme produced by the vocal tract can be precisely determined. The vocal tract is distributed in a short-term continuum envelope, and this envelope is properly represented in the MFCC. The following procedure defines the MFCCs. [87].
+  - (A) Initially, the voice signal (x[n]) is broken up using a short-term Fourier transform (STFT) and a window (w[n]).
+  - (B) The magnitude of the signal (say X) is now being weighted by a number of filter frequency responses that are roughly balanced by the frequency and bandwidth of the center of the audio filters called ‘mel scale’ filters.
+  - (C) The next step is to classify the energy in the
