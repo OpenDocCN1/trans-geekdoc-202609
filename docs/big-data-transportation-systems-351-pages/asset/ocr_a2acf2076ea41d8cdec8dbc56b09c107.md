@@ -1,0 +1,11 @@
+intelligence, which can judge the road conditions in real time based on the massive map data. Compared with manual driving, the autopilot technology will play an extreme role in route, driving mode and emergency avoidance, making big data produce the greatest effect. Therefore in the future, the autopilot technology will gradually replace the traditional driving mode, and the big data will become the first “natural person” of autopilot.
+
+# 11.1.3 Internet vehicle
+
+Compared with the vehicle–road collaboration technology and the automatic driving technology, the Internet vehicles have been widely used. The characteristic of Internet vehicle is to implant Internet skills into traditional driving mode, such as voice real-time broadcast of road information, the mobile phone and the vehicle association in the crisis road driving vehicle through voice, fast payment when driving into the highway, and intelligent payment in the parking lot. Many brands of vehicle implanted the mobile payment, which is an effective attempt of Internet technology.
+
+For example, the physical examination for vehicles is an effective application of big data through the Internet. Through the big data, the Internet vehicles collect the data of all users’ car use, analyze the vehicle’s excellence, maintenance cycle and tire pressure and send the information to the owners through onboard screen or mobile app, etc. In this way, the owners will fully understand the condition of their vehicles and conduct timely maintenance and repair to avoid sudden damage to the vehicle on the road. When the vehicle is in a healthy state, the road accidents will also greatly decrease.
+
+# 11.1.4 Rapid promotion of ETC technology
+
+At present, the ETC technology is actively and effectively promoted in many provinces. It is also the embodiment of personalized services in big data transportation industry. The ETC, the electronic toll collection system, is currently the most advanced toll collection method in the world. When the vehicle is installed with an ETC card, it can use the microwave special short-range communication between the microwave antennas on the ETC lane in front of the high-speed toll station, and use the computer

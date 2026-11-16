@@ -1,0 +1,11 @@
+information. If they can be effectively connected to the unified law enforcement platform, these video information can also be used as a strong evidence for the work of transportation, road, and administration law enforcement.
+
+In April 2016, Shanghai Jing’an Branch took the lead in the pilot application of traffic violation monitoring intelligent identification equipment, forming a new mode of traffic violation investigation and punishment combining “system intelligent collection and artificial screening”. Subsequently, through the joint efforts of 16 districts and counties, the technology was promoted in Shanghai.
+
+The system is mainly composed of four parts: front-end acquisition equipment, back-end identification, data transmission and exchange, and data interface, which integrates the image monitoring information collected by the front-end of the road, such as electronic police, public security checkpoint, and HD probe. This platform uses big data analysis technology to intelligently identify and analyze the illegal video data the traffic collected by HD monitoring equipment, and forms the illegal data of vehicle according to the technical standards. Finally, after being reviewed by the public security and traffic police department, the illegal vehicles are processed to realize the real-time detection and real-time alarm processing of traffic illegal.
+
+On the traffic law enforcement platform, the effective use of big data technology can discover the violations and locations of law enforcement counterparts in time so as to enhance the pertinence of law enforcement work and improve the efficiency of law enforcement. At the same time, the law enforcement behavior of law enforcement personnel can also be counted in time to reduce arbitrary law enforcement behavior, comprehensively analyze various law enforcement indicators, and improve the scientific decision-making level of law enforcement work.
+
+# 6.4.1 Data cloud center for traffic law enforcement platform
+
+To build a traffic law enforcement platform, a data cloud center must be established. The cloud center technology is used to integrate basic data information of road administration, transportation administration, taxi

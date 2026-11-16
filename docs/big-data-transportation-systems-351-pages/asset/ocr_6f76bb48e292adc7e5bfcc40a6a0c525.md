@@ -1,0 +1,5 @@
+Zhao Guanghui is Professor Ni Jun’s student. As a young talent in science and technology recognized by the Ministry of Transport, he pursues rigorous and precise study of big data, and he is good at innovation and exploration. I am so delighted to write a foreword his book Big Data Transportation Systems. I headed a team in 2014 to the M. Wu Manufacturing Research Center of the University of Michigan to study the US manufacturing. At that time, Professor Ni Jun happened to be in China. Dr. Zhao told us at the seminar that he used to work at the Ministry of Transport, and came to the University of Michigan to study big data manufacturing and traffic big data. It was a very rewarding visit. Four years have passed, but I still remember vividly taking photo with Dr. Zhao on the campus of the University of Michigan. In the past four years, he wrote a series of books on traffic big data, some of which have been published overseas. He is always tireless and diligent, and young scholars can learn from him.
+
+You Zheng
+Tsinghua Campus, China
+April 13, 2018

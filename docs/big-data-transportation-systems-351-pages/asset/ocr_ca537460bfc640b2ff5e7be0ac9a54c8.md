@@ -1,0 +1,11 @@
+These data can effectively show the hot spot map through the big data platform, and analyze the places which have the maximum flow of people. Therefore, when setting up bus stops and taxi stops, it can effectively target and maximize the use of resources.
+
++   (2) Sensor Data. The new traffic sensor can effectively sense the environment of the road and continuously send the data back to the platform. The new sensor can be placed on street buildings, street furniture, street greening, and street advertising, which can quickly capture the changes of the road and provide real-time data. Therefore, with this data, there are effective data references for traffic light setting and overpass on the intersection.
+
+# 8.3.3 Big data convenience of the road planning
+
+With the help of big data, it can effectively and scientifically improve the road planning and also bring the most direct visual experience so as to make road planning more convenient. At the same time, the public can also join in it to further improve the practicability and traffic convenience of road design.
+
++   (1) Early stage of design. At the early stage of road design, actively introducing the big data will make the public understand relevant information and become the information provider from the passive receiver. The traditional road design is dominated by designers and the public participation is very limited; however, through the big data platform, the design department can disclose the information through the official website and local media, and the public can provide suggestions for the design. For example, by providing information through APP, the public can log in and upload information according to the big data capture in the smartphone, which will provide reference to the design. With the help of the big data, the designers can effectively screen the meaningful information as well as the meaningless information, which ultimately affects the results of road construction.
+
+At the same time, due to the rapid exchange of the big data, the information of electric power, water conservancy, and gas pipelines will also be included in the big data information, so that the designer can take these contents into consideration so as to avoid the repeated

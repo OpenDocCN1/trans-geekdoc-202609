@@ -1,0 +1,11 @@
+As early as 2000, Shenzhen had established an intelligent traffic command center. Relying on intelligent signal lights, closed-circuit television, intelligent traffic violation management system, Shenzhen's traffic management integrates information, monitoring and command, which can effectively manage the urban transportation.
+
+Subsequently, the big data technology is continuously applied in the field of transportation in Shenzhen. In August 2007, eight enterprises in Shenzhen established the Intellectual Traffic Safety Association of Shenzhen, which built a more efficient and intelligent communication and development platform. The “intelligent traffic 1 + 6” project invested by Shenzhen with 1 billion yuan has made the big data technology get a new upgrade.
+
+The “1” in “intelligent traffic 1 + 6” project is the “one resource sharing platform”, which includes the transportation information, traffic police, urban construction and other departments, and all the information has been effectively exchanged. The “6” refers to the six service systems under the platform: traffic monitoring information, traffic management information, road traffic control information, public travel information, traffic command emergency information, and traffic management, and decision-making information. It is by virtue of the “1 + 6” system that Shenzhen's big data transportation has realized a comprehensive upgrade and effectively serves urban transportation.
+
+In order to make better use of the big data, Shenzhen has continuously accelerated the construction of the intelligent comprehensive traffic operation and command center and carried out the construction of sub-centers according to the actual situation, aggregating more mass data of public transportation. For the vast majority of cities in China, the Shenzhen model is the best reference, constantly upgrading for the big data transportation technology so as to cope with the growing number of cars and urban population. Science and technology serve people. Every progress of science and technology may bring great improvement to the previous work.
+
+# 10.4 Organization Model of Big Data Transportation
+
+The application of big data transportation can not only rely on the independent action of the transport department but also must be carried out in

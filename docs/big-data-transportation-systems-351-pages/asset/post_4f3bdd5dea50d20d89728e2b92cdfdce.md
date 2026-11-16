@@ -1,0 +1,42 @@
+
+other departments shall respond quickly to solve the road traffic problem, which will greatly alleviate the traffic congestion and ensure the safety and smoothness of the traffic flow on the road.
+
+Hangzhou big data transportation model also actively introduces the power of the third-party enterprises. The data of Didi, Baidu Map, and others are also imported into Hangzhou’s big data transportation platform, which is released by Hangzhou traffic police department. For example, with the help of big data statistics of third-party enterprises, Hangzhou traffic management department found that by the end of February 2017, the number of female drivers in Hangzhou had been 1.3964 million, accounting for 36.3% of the total number of motor vehicle drivers, which could provide data support for the formulation of traffic laws and regulations. The establishment of parking lots, drainage, and planning routes can take care of female groups, which is more in line with the characteristics of traffic in Hangzhou.
+
+In December 2017, another big data transportation event happened in Hangzhou. On December 2, 23 big data enterprises set up the Zhejiang Transportation Big Data Maker Space, featuring “Internet + transportation”, to serve the transportation of Hangzhou and even the whole Zhejiang province. Among them, there are not only the Zhejiang Transportation Information Center, the Settlement Center of Zhejiang Highway Bureau, the Zhejiang Tourism Information Center, Zhejiang High Speed Information Engineering Technology Co., Ltd. and other institutions but also Baidu, Huawei, Alibaba Cloud, ProLogis, Beijing Yihualu, Cybernaut, and three major operators to build a complete new model of big data management. In the future, the big data management model will inevitably present the mentality of “departments and institutions + third-party enterprises” to work together and effectively combine various forces to find the key to the development of urban transportation.
+
+## 10.6 Credit Model of Big Data Transportation
+
+The operation of transportation big data also needs to be supported by credit. This is because, regardless of the data collection, screening, analysis, and release, the grassroots people are often in the receiving end. If the information frequently deviates, it will inevitably lead to people’s distrust on big data transportation and affect the operation of big data.
+
+So, from what angle should we solve the trust problem of big data transportation?
+
+### 10.6.1 Multi-channels and professional releasing
+
+When releasing big data, the traffic department should cooperate with other channels besides its own platform, especially the official platform and certification platform such as the local traffic radio station, television station, onboard terminal, vehicle rolling display screen, variable information board, and traffic warning signs. Big data should be connected with these channels in time to release the information in the first time so as to let the public know the relevant trends in the first time.
+
+In addition, in public places, the traffic department should also establish cooperative relationships with regional WeChat official platform and Weibo provide relevant information to operators and release data through their platforms. We must choose the certified platform to cooperate so as to ensure that the information is truly and effectively pushed to the public, and enhance the credibility of data release. Once there is lack of cooperation with these channels, it will inevitably lead to the rapid spread of false information and rumor information, and the value of big data will not be reflected, which will further affect the credit value of the traffic management department.
+
+### 10.6.2 Easy to understand and professional interpretation
+
+For big data transportation information, because it involves professionalism, many contents must be reprocessed so that they can be easily understood and comprehended by the public. However, easy to understand does not mean “unprofessional”. Otherwise, it is easy to cause public misunderstanding and mistrust of the big data information.
+
+Therefore, in the process of easy understanding of the big data, the traffic department should also interpret it from a professional perspective, so that the public can understand the operation mechanism of big data and be convinced. For example, when the data are released, the traffic flow analysis, time-out prediction, and time identification should be emphasized, and the public can see the problem through historical record comparison. At the same time, the traffic conditions should be analyzed in combination with static photos and dynamic videos so that users can feel the valuable information, and also see how big data mining information, how to analyze information, and how to make decisions, so that the credit value of big data will greatly improve.
+
+Once there is trust in the big data, the public will actively participate in the process of information collection. For example, most mobile APPs have positioning functions. When the public realizes that positioning can effectively carry out data transmission and further optimize traffic routes, they will also actively upload geographic location and enable monitoring functions so as to promote the data collection of big data more perfect.
+
+### 10.6.3 Uniting the public security department to crack down on rumors
+
+The traffic is related to the basic life of the public, which is the focus of public attention, so it is also the focus of rumors. If the traffic management department does not deal with these rumors, it will easily lead to the spread of false information, greatly influence the normal traffic information release, and doubt the big data traffic management. Therefore, the traffic department should take the initiative to cooperate with the public security department to crack down on traffic rumors and avoid the further spread of false information.
+
+For example, in July 2014, Guangning County, Zhaoqing City, Guangdong Province suddenly had news that four people were killed in a major traffic accident the day before in the path section of Nanjie Town, Guangning County, with three pictures. The news spread rapidly in the local area, and a large number of netizens reprinted it. The local people questioned the work of the traffic police. Subsequently, the local traffic police department quickly intervened and found that this was a network rumor. In order to make a grandstanding, the suspect released false information in his QQ space. The traffic police department and the public security department quickly linked up to detain the suspect according to law, finally dispelled the rumors, and the image of the traffic department was restored.
+
+For this kind of incident, the traffic department must treat the data strictly, otherwise it will easily make the public have a negative impression on the traffic department. Once this happens, even when accurate big data information is released, it would be difficult to obtain the trust from the public and the significance of big data transportation management would no longer exist.
+
+## Chapter 11 Future Development of Big Data Transportation
+
+The big data transportation has developed for many years and gradually matured, but there are also many challenges. Moreover, with the industry segmentation, in order to serve the public well in the future, the transportation big data need continuous improvement of technology and continuous integration of multiple levels of content and technology, so that in the future, the big data transportation will be more intelligent and humanized.
+
+### 11.1 Personalized Service of Big Data Transportation Industry
+
+Although the China's big data transportation industry started off quite late because of basic livelihood issues involved, and the rapid layout of major commercial companies, the industry shows a rapid development momentum. In the past, China's big data transportation needed to rely on the technology of the United States and other developed countries, but now China has become the leader of the big data transportation industry, with various new technologies and concepts emerging frequently. Looking at the development of the industry, the big data transportation industry in the future will further penetrate into the personalized service, and even form a “one person's transportation big data” mode to achieve “customized exclusive service”.

@@ -1,0 +1,11 @@
+**Signal:** The signal is an important factor that affects the operation of unmanned driving trains. Only when the signal system is running stably can the train complete acceleration, deceleration, turning, stopping, opening and closing the doors, etc. Safety accidents such as doors pinching passengers and trains derailing may happen when there are problems with the signal system. Therefore, the automatic detection and maintenance of the signal system is particularly critical.
+
+**Evacuation Platform:** The handling of accidents may be more challenging when the accidents happen while the trains are in operation because the staff cannot get to the spot to handle the accidents effectively. In order to reduce the negative impact of the accidents, an evacuation platform has to be set up in the tunnel so that passengers can be moved to a safe area if an accident occurs.
+
+The unmanned driving technology itself has a high dependence on the supporting hardware and software facilities. The solutions have to be made manually when the supporting hardware and software facilities have problems and the control center cannot effectively solve the problem. Therefore, the train operation department must carry out real-time inspection of the train supporting facilities and equipment to fully ensure the reliability of unmanned driving train operations.
+
+# 12.6.5.2 Innovative management model
+
+In some cases, the remote control from the control center cannot effectively solve the problem and staff must enter the interior of the train to deal with it when there are problems with train in operation. The manual handling also requires a certain amount of time. The problems cannot be handled in a timely manner by the crew as is generally the case with traditional human-piloted trains. Therefore, it is necessary to make innovation in management mode in order to improve the processing speed of the unmanned driving trains.
+
+The driver’s role does not exist in the unmanned driving trains, and the driver’s functions in the traditional manned driving mode will be transferred to the dispatching department, which requires the latter to be more refined, that is, the dispatching department of the unmanned driving trains should have strong communication and coordination skills and professional driving skills, etc., so that it can monitor train passenger flow in

@@ -1,0 +1,11 @@
+and electric power department through the network system, so that the big data can play a real role, and effectively integrate all kinds of information to achieve the rapid development and release of emergency data.
+
+The establishment of emergency command service platform has become the key to big data emergency planning. Such a platform will play three important roles: beforehand supervision and prediction, interim emergency response and scheduling, and afterwards summary and filing.
+
+(1) Beforehand supervision and prediction. The traffic command center conducts real-time inspection on each road section through the system, conducts more self-monitoring on the congested road section, and timely deals with the hidden dangers found. The data platform will share data with other departments, such as house decoration and fire drill in a certain section. Forecast information shall be sent to the public through the platform in advance to remind the public to detour.
+
+(2) Interim emergency response and scheduling. In case of traffic accident, the traffic emergency platform shall immediately start the emergency plan, timely transmit the scene of the accident to the traffic command center, and at the same time, the information can also be transmitted to the hospital and the public security department at its earliest to do a good job in emergency treatment and avoiding traffic jam.
+
+(3) Afterwards summary and filing. The emergency platform can effectively record the intercommunication information between various departments and save the picture. After the accident is handled, the data can be classified and consolidated to provide basis for the handling of similar events in the future.
+
+All of the aforementioned work needs the big data support, which includes the urban road state judgment, information query, information transmission of various departments, and so on. Only in this way can the big data play a role, handle events efficiently and timely, and ensure the smooth flow of roads. Otherwise, when the accident occurs, if the traffic department does not receive the information or the medical institutions do not receive the treatment call, it will inevitably cause further traffic chaos and greatly affect the travel.

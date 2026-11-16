@@ -1,0 +1,11 @@
+which provide new ideas for controlling train operating costs and improving the quality of travel services, and it is a major hot direction in the field of transportation. Therefore, the analysis of the unmanned driving technology application in the urban rail transit to find effective solutions will promote this technology in the city, which will have a positive influence on the large-scale application of unmanned driving technology in the field of rail transportation.
+
+# 12.6.5.1 Guarantee of facilities and equipments
+
+**Train Functional Guarantee**: The unmanned driving train in operation does not need human involvement because the train not only has the automatic operating functions but also tests their breakdown. When there is a potential safety hazard or fault in a certain part of the train, it is necessary for the train to be able to find out the root of the problem, provide effective solutions, take effective measures in time to prevent the situation from worsening so that the stable and safe operation of the train can be ensured.
+
+It is necessary for the train to be able to automatically perform backward positioning. The execution of loading and unloading operations is likely to cause safety accidents when the unmanned driving train crosses the stopping position. Therefore, it is necessary to ensure that the unmanned driving train can perform backward positioning to ensure the safety of passengers on and off the train.
+
+It is also necessary for the train to obtain the function of detecting and handling obstacles automatically. Major traffic accidents may happen when the unmanned driving train encounters obstacles in the course of operation and no effective measures are taken in a timely manner. Therefore, the unmanned driving trains must be able to automatically detect and effectively handle obstacles in order to ensure the safety of trains in operation.
+
+It is necessary for the train to obtain the function of video monitoring as well. With the support of the video monitoring system, the train operation control center can keep track of the internal and external conditions of the train in real time, so that the control center can make timely and effective adjustments to prevent traffic accidents when problems arise in the operation of the train.

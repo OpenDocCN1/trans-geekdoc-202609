@@ -1,0 +1,13 @@
+vehicle card, and government cloud computing center. With the continuous upgrading of big data from 2013, these core projects are integrated into “two networks and one platform”, namely, LTE government private network, Internet of Things, and citizen integrated service platform, effectively improving the state diagnosis ability of the big data and effectively communicating various kinds of information.
+
+Especially for the public and service platform, this platform will not only provide relevant data and suggestions to the public transportation department but also is open to the citizens. Through real-time road conditions, citizens can get specific information of each station and road, get the best road suggestions in advance, and ensure the smooth traffic flow of the road. This state diagnosis is the future trend of the traffic management, which can not only make the data more accurate but also effectively reduce the cost of traffic supervision and operation.
+
+In terms of technical means, how does the big data transportation carry out these state diagnosis?
+
+# 10.1.1 Operation of information collection module
+
+In order to carry out state diagnosis, the data collection must be carried out first, which is the basis of big data operation. At present, there are two modes of information collection: static mode and dynamic mode.
+
+In most cities, static information collection has been opened. The characteristic of this method is to capture the corresponding data quickly when the car passes through the video monitoring device or induction loop fixed on the road so as to realize the vehicle information collection. For example, thousands of information collectors installed on Beijing expressway and main road belong to the static collection equipment. This kind of equipment is characterized by its low price and simple fixed installation and maintenance, but its disadvantage lies in its limited flexibility. Once the vehicle evades the monitoring range, it will lead to the failure of data collection. Therefore, the number of static information collection equipment is often large.
+
+Compared with the disadvantages of the static information collection, the dynamic information collection equipment is more flexible. For example, the collection equipment installed on the traffic vehicle and supervision vehicle will collect the data through magnetic frequency, photoelectric, weight sensor, and other methods, which can effectively collect the real-time running speed of the vehicle. The data are in flux, so projections of congestion are more accurate.

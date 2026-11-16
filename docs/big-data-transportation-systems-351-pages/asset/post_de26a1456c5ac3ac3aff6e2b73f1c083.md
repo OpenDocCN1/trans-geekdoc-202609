@@ -1,0 +1,316 @@
+
+- high dependence, 301
+- high safety, 296
+- high vacancy rate of cars, 65
+- high-definition digital maps, 267
+- high-definition digital video monitoring, 76
+- high-speed development of startups, 252
+- high-speed railway travel, 26
+- highway environment, 236
+- highway management department, 29
+- highway network monitoring system, 91
+- Hisense, 17
+- Hohhot, 164
+- homemade unmanned driving car, 259
+- Honda Motor Company's Internavi, 52
+- hub planning, 166
+- huge data, 83
+- human and material resources, 29
+- human face recognition system, 26
+- human intelligence, 16
+- human intervention, 135
+- human or car, 286
+- human support, 302
+- human-caused traffic accidents account, 285
+- humane and intelligent considerations, 276
+- human-computer interaction technology, 270
+- human-machine monitoring interface, 296
+
+## I
+
+- 3D images, 254
+- IC card, 84
+- immediate warning, 90
+- implementation of the unmanned operation, 265
+- Implementation Plan on Promoting the Internet + Convenient Transportation to Promote the Development of Intelligent Transportation, 233
+- implementation plan, 233
+- import and apply, 79
+- improper transportation capacity, 170
+- In Aichi Prefecture, 294
+- increase capital investment, 233
+- increasing improvement of urban rail transit, 295
+- increasing popularity of the shared car, 245
+- independent brands, 218
+- industry chain, 44
+- information analysis in real time, 200
+- information barriers, 212
+- information infrastructure, 49
+- information island effect, 207
+- information island, xi
+- information layer, 208
+- information resources, 11
+- information superhighway, 42
+- information traceability, 136
+- innovation and development, 230
+- innovative cases, 61
+- Inrix, 225
+- installation and debugging of the equipment, 174
+- instructional cars, 69
+- Insurance Institute for Highway Safety in the United States, 247
+- integrated classification of goods, 143
+- integration model, 211
+- integrity, 159
+- Intellectual Traffic Safety Association of Shenzhen, 206
+- intelligent airport, 144
+- intelligent automobile laws and regulations, 244
+- intelligent automobile standards, 244
+- intelligent bus dispatching center, 170
+- intelligent control systems, 271
+- intelligent development of China's automobile industry, 5
+- intelligent digital image information processing technology, 92
+- intelligent interconnection, 5
+- intelligent operation and dispatching system of Olympic bus, 179
+- intelligent prediction system, 194
+- intelligent quotation and intelligent scheduling, 146
+- intelligent traffic recognition algorithm, 204
+- intelligent transportation system, 7, 244, 268
+- intelligent travel in Nanjing, 172
+- interaction of each system, 272
+- interim emergency response and scheduling, 173
+- international competition, 55
+- international leading level, xiii
+- Internavi information center, 53
+- Internet + action, 230
+- Internet + convenient transportation, 233
+- Internet + traffic, x
+- Internet + transportation, 6
+- Internet age, xiii
+- Internet channels, 120
+- Internet conflicts, 131
+- Internet of things sensor, 203
+- Internet of vehicles, 31
+- Internet skills, 219
+- intersection of Huangjin Road and Zaoshan Road, 201
+- investment and financing boom of the big data transportation industry, 226
+
+## J
+
+- Japanese companies, 55
+- Japan Meteorological Society's database, 54
+- Jiaxing, 165
+- Jinan municipal government, 75
+- Jiuqu Data, 227
+- journey of the development of the unmanned driving technology, 238
+
+## K
+
+- key to automated driving, 269
+- key driver credit system, 14
+
+## L
+
+- labor-saving, 153
+- lack of data security, 60
+- lack of national unified planning, 58
+- lack of surrounding parking lots, 199
+- lane deviation detection system, 264
+- lane separation, 284
+- large-scale activities, 175
+- later stage of design, 163
+- law enforcement behavior of law enforcement personnel, 112
+- law enforcement station and service areas, 15
+- leader of the big data transportation industry, 217
+- leadership of the government, 130
+- legality of the unmanned driving, 288
+- Level 0, 239
+- Level 1, 239
+- Level 2, 239
+- Level 5, 240
+- Li Yongle's wireless network technology, 267
+- lidar, 266
+- life cycle of a vehicle, 46
+- loading objects, 283
+- location of the traffic accident, 107
+- logistics and supermarket distribution, 149
+- logistics costs, 149
+- logistics enterprises, 124
+- logistics experience of the shipper and the carrier, 147
+- logistics in China, 123
+- logistics industry management, 118
+- logistics industry, 117
+- logistics information platform, 115
+- logistics transportation channels, 138
+- logistics transportation, 123
+- loopholes, 157
+- low-carbon development of transportation, 81
+
+## M
+
+- macro-background, xi
+- Made in China, ix
+- main mode of urban motorized transport, 279
+- mainstream domestic express companies, 132
+- mainstream tool for urban residents' daily travel, 299
+- mainstream trend of the unmanned driving car exploration projects, 266
+- maintain efficient coordination, 302
+- major world events, 177
+- management measures, 183
+- management of Guiyang Low Carbon Transportation Information Command Center, 68
+- management of logistics cost, 150
+- management of shipping companies, 145
+- managerial confusion, 59
+- manual handling, 301
+- manual mode, 93
+- manufacturing and operations of the unmanned vehicles, 252
+- map software, 21
+- market operation, 230
+- market scale of China's satellite navigation products and services, 224
+- market-led development, 42
+- mass carpooling, 280
+- mass storage and rapid calculation, 113
+- massive data, 11
+- mature technology applications, 99
+- medium and long-term Development Plan of the National Satellite Navigation Industry, 224
+- Metro Line 1 in Paris, 294
+- metro lines in Guangzhou, 168
+- metro operating companies, 24
+- metro operations, 299
+- metro planning, 168
+- micro data collection, 200
+- microcirculation pilot, 160
+- Microsoft, 260
+- millimeter-wave radar, 266
+- mine and meet the demands, 70
+- mixed data, 158
+- mobile APP, 6
+- mobile charging, 290
+- mobile handling plan, 180
+- mobile patrol car, 181
+- mobile phone for transportation services, 194
+- mobile phone map, 4
+- mobile platform, 120
+- Mobileye, 258
+- modern logistics and traditional logistics, 125
+- monitoring equipment, 120
+- monitoring system, 102, 179
+- monitoring the regional video, 113
+- more obvious advantages, 27
+- most advanced toll collection method, 219
+- movement mode, 87
+- multi parameter and large-scale detection, 93
+- multi-day travel, 82
+- multi-platform and multi-channel travel mode, 167
+- multi-point cooperation and all-round development, 210
+- multi-stage detection, 94
+- multimodal transportation, 137
+- Municipal Transportation Commission, 56
+- MySQL database, 201
+
+## N
+
+- Nanjing Metro, 22
+- Nanning Rail Transit APP, 23
+- national conditions, xiv
+- National Convention Center of Chaoyang District, 193
+- national economic development, 186
+- national economy, x
+- National Highway Traffic Safety Administration (NHTSA), 239
+- National Information Center, 222
+- national intelligent bus card, 84
+- national policy field, 229
+- national road network, 91
+- national strategy, 51
+- National Tourism Administration, 37
+- navigation services, 73
+- navigation industry, 223
+- neighboring countries, 141
+- network cable planning, 158
+- network communication layer, 208
+- network in Beijing, 178
+- network line congestion, 157
+- network line planning, 157
+- network-based database, 101
+- new energy electric vehicle, 223
+- New Silk Road Challenge plan, 255
+- new traffic characteristics of Beijing, 193
+- new urban rail transit technology, 293
+- new way of thinking, xi
+- NFC, 84
+- Ningdu–Dingnan expressway, 101
+- no automation, 239
+- no reasonable network, 154
+- nodes and multi-technologies, 111
+- non-paid area, 110
+- non-popularity, 220
+- non-truck operating common carrier, 145
+- normal operation, 297
+- number of passengers, 65, 283
+- number of private vehicles, 247
+- number of share on the lane, 108
+
+## O
+
+- OBD, 89
+- OBD2 system, 54
+- objectivity and calmness, 271
+- obtain the function of video monitoring, 300
+- occupancy rate, 106
+- odd-and-even license plate rule, 180
+- official platform and certification platform, 215
+- on-board sensors, 273
+- onboard electronic navigation map industry, 94
+- one machine in hand, free travel in the world, 190
+- one shared SAV, 256
+- one stop of information services, 138
+- one website, one phone, 184
+- One-Belt-One-Road Forum, 191
+- one-day travel, 82
+- online testing and monitoring, 298
+- open government, 43
+- open-loop, 155
+- operating platforms, 83
+- operational pressure of express companies, 133
+- optical fiber, 103
+- optimal driving path, 268
+- optimization of resource allocation, 213
+- orderly construction of intelligent application demonstration projects of urban public transportation, 232
+- organization model, 207
+- organization, 123
+- original technical and management obstacles, 151
+- Oslo, 279
+- outbreak of industry, 229
+- overall management awareness of chess, 10
+- overseas warehouse, 142
+
+## P
+
+- package volume skyrocketed, 134
+- pace of development, 72
+- paid area, 110
+- Paris electric car rental system, 62
+- parking guidance system, 164
+- partial unmanned driving car research and development, 261
+- parts suppliers, 251
+- passenger flow detection platform, 108
+- passenger flow detection platform, 110
+- passengers' interference, 303
+- path planning technology, 263
+- path planning, 263
+- peak of large passenger flow, 109
+- people-oriented development, 280
+- people's travel methods, 19, 278
+- people's travel, 41
+- per capita vehicle ownership, 44
+- perception level, 265
+- perfect emergency planning scheme, 172
+- personal information, 34
+- personalized service, 220
+- pilot cities, 232
+- plan the driving routes, 267
+- planning and design of public transport, 108
+- platform area, 110
+- police affairs cloud big data processing technology, 76
+- position in the global automobile development, 238
+- positioning and navigation system, 262
+- precise data, 66
+- prediction of the industry authorities, 246

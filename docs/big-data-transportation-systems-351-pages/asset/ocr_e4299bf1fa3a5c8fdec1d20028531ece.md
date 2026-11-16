@@ -1,0 +1,13 @@
+organization structure of different departments, forming a “three-layer structure”. Among them, the communication service provider is the support to complete the final data collection.
+
++   (1) **Information layer.** The first layer of three-layer structure is the information layer, whose function is information collection. This requires the cooperation between the traffic department, the satellite data department, and the communication service provider to quickly collect data through the satellite and mobile phone terminals, and then transmit it to the transportation server period through the network.
++   
++   Subsequently, the relevant technical personnel conduct data investigation on the specific location and route of vehicles or individuals through various allele algorithms, and store and manage in the cloud service platform, while residents can view relevant information through mobile terminal APPs such as mobile phones and enjoy the convenience brought by big data transportation.
+
++   (2) **Network communication layer.** The second layer is the network communication layer. The work of this organization system is to organize the data effectively and transmit the data to the cloud service platform through WLAN, 4G, and other ways. For this, the third-party big data company must play an active role in ensuring the effective operation of the server and avoid information omission, loss, and other problems.
+
++   (3) **Cloud service layer.** The third layer is the cloud service layer. The main work of this layer is to code and transform the data, mine the information, and predict the traffic jams. This requires professionals to make use of big data platform to ensure the accuracy and effectiveness of information screening. Especially for the densely populated road sections such as the city center and the business district, the work of this layer is busier, providing perfect path optimization, real-time public transport query and other services, so it needs the cooperation of multiple departments to effectively solve the problem.
+
+# 10.4.3 Organization system of big data transportation
+
+With the continuous upgrading of the big data technology, the big data transportation has formed a complete industrial chain, including data collection, integration, analysis, mining, display and service. In the future, most cities will establish a detailed organization structure according to

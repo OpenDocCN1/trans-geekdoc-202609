@@ -1,0 +1,11 @@
+process of urban delivery. In this way, it can not only realize the local economic growth, but also make full use of the big data obtained in the logistics delivery to realize the integrated planning and management of urban logistics and even more industries. Of course, for the government, it is quite a challenging goal to directly seek the cooperation of urban logistics enterprises and complete the extraction, collection and management of logistics big data.
+
+# 7.3.2 Industry alliance to build a sharing platform
+
+Under the leadership of the government, an urban logistics delivery industry alliance involving logistics companies and enterprises can be established. This is because the logistics industry enterprises can master the first-hand information of urban logistics and the industry alliance can build the information resource sharing platform, which can solve the resource problem of logistics big data. At the same time, the industry alliance stores all the data and information in the same database to facilitate the instant sharing and information exchange between logistics locations and avoid the traffic jams, disordered logistics operation, low customer satisfaction, and other problems.
+
+# 7.3.3 Attaching importance to the construction of urban logistics and storage platform
+
+In order to build a sharing platform of urban delivery resources, it is necessary to use big data to support the urban logistics storage platform. Urban logistics storage platform is an important factor affecting the efficiency of urban delivery, whose foundation includes storage center, dispatching center, settlement center, etc. Through this platform, all delivery channels are comprehensively analyzed, including human resources, material resources, item flow direction, delivery speed, and delivery cost so as to calculate the best location and delivery plan and optimize the resources (see Figure 7.1).
+
+In a word, the best way to solve the problem of urban delivery is to focus on the big data transportation technology led by government departments, participated by logistics enterprises, provided technology by professional companies and build a platform for sharing urban distribution information.

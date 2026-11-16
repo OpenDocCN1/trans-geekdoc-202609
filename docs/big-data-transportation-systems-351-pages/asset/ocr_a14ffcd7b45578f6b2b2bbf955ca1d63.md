@@ -1,0 +1,11 @@
+Tencent also has a rapid layout in the big data transportation industry. In December 2017, Zhonghe Technology announced to cooperate with Tencent, which entered the big data intelligent transportation market. Tencent’s focus is on Zhonghe Technology’s transportation industry experience. Based on Zhejiang University, Zhonghe is engaged in the construction of urban rail transit system and comprehensive ticketing system. It has already carried out business in metro projects in Shenyang, Xi’an, Zhengzhou, and other cities and has successively innovated and developed rail transit driverless signal system and intelligent train related products. It can be seen that Tencent is also covetous for the big data transportation industry.
+
+Regardless of start-ups or Internet giants, more and more enterprises are participating in the big data transportation industry, which means that the outbreak of industry is coming. Transportation is related to people’s basic necessities of life and reflects the development vitality and potential of a city, so we have reason to believe that in the future, the development of big data transportation industry will inevitably become more and more mature and lead the world trend.
+
+# 11.4 Police Guidance of Big Data Transportation Industry
+
+The development of the big data transportation in the business field is surging. The national policy field is also full of concerns about this, and constantly issues policy guidance to encourage the development of the industry.
+
+# 11.4.1 Definite support for the 13th Five-Year Plan
+
+In the 13th Five-Year Plan, the goal of building a modern comprehensive transportation system and realizing the development prospect of networking and intelligence is clearly put forward. The planning outline states that “we shall build a comprehensive transportation transportation network to realize the integrated connection of transportation hubs. We shall gradually optimize the spatial layout of comprehensive transportation hubs and improve the construction of transportation hubs at the national, regional and local levels”. In order to achieve this goal, we must actively access the big data system so as to form a data system mode and effectively connect all links
