@@ -1,0 +1,17 @@
+```
+File: cmd/web/templates.go
+
+package main
+
+import "snippetbox.alexedwards.net/internal/models"
+
+// Define a templateData type to act as the holding structure for
+// any dynamic data that we want to pass to our HTML templates.
+// At the moment it only contains one field, but we'll add more
+// to it as the build progresses.
+type templateData struct {
+    Snippet models.Snippet
+}
+```
+
+And then let's update the `snippetView` handler to use this new struct when executing our templates:

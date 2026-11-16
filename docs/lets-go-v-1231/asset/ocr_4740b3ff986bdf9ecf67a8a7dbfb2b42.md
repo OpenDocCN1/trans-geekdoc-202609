@@ -1,0 +1,7 @@
+I understand that the code in our `UserModel.Insert()` method isn't very pretty, and that checking the error returned by MySQL feels a bit flaky. What if future versions of MySQL change their error numbers? Or the format of their error messages?
+
+An alternative (but also imperfect) option would be to add an `UserModel.EmailTaken()` method to our model which checks to see if a user with a specific email already exists. We could call this *before* we try to insert a new record, and add a validation error message to the form as appropriate.
+
+However, this would introduce a race condition to our application. If two users try to sign up with the same email address at *exactly* the same time, both submissions will pass the validation check but ultimately only one `INSERT` into the MySQL database will succeed. The other will violate our `UNIQUE` constraint and the user would end up receiving a `500 Internal Server Error` response.
+
+The outcome of this particular race condition is fairly benign, and some people would advise you to simply not worry about it. But thinking critically about your application logic and writing code which avoids race conditions is a good habit to get into, and where there’s a viable alternative — like there is in this case — it’s better to avoid shipping with known race conditions in your codebase.
