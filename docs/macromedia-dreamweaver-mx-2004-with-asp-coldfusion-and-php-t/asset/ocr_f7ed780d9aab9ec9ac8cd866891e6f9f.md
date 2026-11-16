@@ -1,0 +1,5 @@
+9) Save and upload tourprice.asp. Select tours_detail.asp in the Site panel, and press F12 to test it. Choose a random tour, and click both its country name link (which should take you to the correct profile) and its Tour Price Calculator link (which should load the proper tour name in the form menu). Notice that the URL parameter is displayed at the bottom of the browser window, when you roll over the Tour Price Calculator link. The functionality is working pretty well, with one exception.
+
+![](bbox=[0.28, 0.24, 0.93, 0.62])
+
+10) Still in the browser, click the Tour Price Calculator link from any tour. Without entering values for the Number of Adults or Number of Children, click Submit. The form validation kicks in and reloads the page, displaying the error message. So far, so good. But notice that the Tour Name has reverted to Biking From Oxford to London. When the page was reloaded, the tourID URL parameter is no longer there, and so the menu fails to display the correct tour, and instead shows the first tour in the recordset.

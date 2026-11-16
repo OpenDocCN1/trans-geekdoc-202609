@@ -1,0 +1,315 @@
+
+- Select File, 352
+- Select Image Source, 26, 300
+- Session Variable, 419
+- Site Definition, 13
+- Update Record, 442
+- Validate Form, 193
+- <!DOCTYPE> tag, 53–56, 456
+- Dreamweaver, website, 5
+- Dynamic Data dialog box, 341
+- Dynamic List/Menu dialog box, 341
+- dynamic sites, 104–105
+  - basics, 106–109
+  - binding data, 146–147
+  - cookies, 162–169
+  - HTTP protocol basics, 149–151
+  - hyperlinks, sending data, 157–162
+  - URL retrieval, 151–157
+- building simple applications
+  - input page, 136–138
+  - output page, 139–145
+- defining in Dreamweaver, 130–136
+- local servers, 113–114
+  - Apache, 118–119
+  - ASP, 114–115
+  - ColdFusion, 116–118
+  - IIS, 114–115
+  - PHP, 118–119
+- Newland Tours project, redefining site to XHTML, 112–113
+- remote server, site development, 129–130
+- Dynamic Text dialog box, 272, 302, 351
+
+## E
+
+- Edit menu commands
+  - Copy, 20
+  - Find, 399
+  - Find and Replace, 56
+  - Paste, 22
+  - Select All, 20
+  - <em> tag, 30, 63
+- email, 170–171
+  - client-side form validation, 192–194
+  - ColdFusion, configuring to send, 176–177
+  - dynamic values, 189–191
+  - IIS, configuring to send email, 174–175
+  - programming code, 178–185
+  - SMTP, configuring to send, 173
+  - Web form, 185–188
+- empty tags, 34
+  - XHTML, closing, 66–69
+- eXtensible Markup Language (XML), 52
+- eXtensible Stylesheet Language for Transformation (XSLT), 108
+
+## F-G
+
+- fields, hidden, tracking users, 418–420
+- File menu commands
+  - Convert, 48
+  - New, 55
+  - Save, 410
+  - Save As, 20
+- Files command (Window menu), 19
+- filtered recordsets, tour price calculator, 269–270
+- filtering data, 280–281
+  - dynamic images, 299–305
+  - formatting population number, 299–305
+  - generating URLs dynamically, 284–290
+    - ASP block, 290
+    - ColdFusion block, 291
+    - PHP block, 291–295
+  - input page, 282–284
+  - looking up with SQL, 306–310
+  - output page, 294–295
+  - populating pages dynamically, 296–299
+- Find and Replace command (Edit menu), 56
+- Find and Replace dialog box, 48
+  - resizing, 71
+- Find command (Edit menu), 399
+- <font> tag, 36, 64
+- foreign keys, 228
+- Form command (Insert menu), 186
+- <form> tag, 476
+  - <form#form1> tag, 138
+- forms, 225
+  - CMS
+    - creating interface, 414–418
+    - inserting record, 420–423
+    - recordsets, 454–466
+  - email, client-side validation, 192–194
+  - filtering variables, 367–373
+
+## H-I
+
+- </h1> tag, 22
+- <h1> tag, 22, 80
+- <h2> tag, 80
+- <h3> tag, 80
+- HTML
+  - CSS, redefining elements, 80–89
+  - databases, embed markup in database table, 413
+  - table overuse, 35
+  - upgrading to XHTML, 52–59
+- HTML command (Insert menu), 322, 336
+- HTTP protocol, binding data, 149–151
+  - hyperlinks, sending data, 157–162
+- <i> tag, 30, 63
+- ignore whitespace differences option (Find and Replace dialog box), 58
+- IIS (Internet Information Services), 114
+- CMS hand-coding, 448–449
+  - adding delete functionality, 489–491
+  - adding update functionality, 485–489
+  - building forms, 454–466
+  - creating detail page, 476–485
+  - creating master page, 470–479
+  - data insertion functionality, 466–469
+  - detail page conversion to updatable page, 438–446
+  - master-detail page planning, 429–437
+  - pages layout, 427–428
+  - planning content, 451–454
+- email, 171
+  - configuring to send, 174–175
+- local environment set up, 114–115
+- Image command (Insert menu), 300, 328
+- Image Source dialog box, 328
+- images
+  - filtering data, 299–305
+  - inserting, tour descriptions application, 327–331
+  - XHTML, finding without alt attribute, 69–74
+- <img> tag, 35
+- inheritance, 83
+- input page, filtering data, 282–284
+- Insert Images button, 25
+- Insert Master-Detail Page Set dialog box, 431
+- Insert menu commands
+  - Application, 333
+  - Application Objects, 431
+  - Form, 186
+  - HTML, 322, 336
+  - Image, 300, 328
+  - Named Anchor, 99
+  - Table, 186
+- Insert Record dialog box, 421
+- Insert Table button (Insert toolbar), 27
+- Insert toolbar, Insert Table button, 27
+- Instances, 179
+- Internet Information Services. See IIS
+- Internet Information Services (IIS) dialog box, 175
+- invisible navigation, CSS, 98–102
+- IsDefined() function, 347
+- IsEmpty() function, 347
+
+## J-L
+
+- Java Servlet Pages (JSP), 110
+- JSP (Java Servlet Pages), 110
+- <!> tag, 80
+- Link External Style Sheet dialog box, 86
+- List Values dialog box, 265
+- Live Data command (View menu), 258
+- local servers
+  - Apache, 118–119
+  - installing in Mac OS X, 124–125
+  - installing in Windows, 119–121
+  - ASP, 114–115
+  - ColdFusion, 116–118
+  - dynamic sites, 113–114
+  - IIS, 114–115
+  - PHP, 118–119
+  - Installing in Windows, 121–124
+- Log In User dialog box, 394
+- log-in page, authentication, 393–397
+- loops, 289, 462
+
+## M
+
+- Mac OS X, databases, installation of MySQL, 236–240
+- Macintosh, system requirements, 9
+- Macintosh OS 9, local server development, 114
+- Macintosh OS X
+  - local server development, 114
+  - setting up PHP, 126–129
+- Macromedia ColdFusion Markup Language (CFML), 1–2
+- Macromedia command (Start menu), 176
+- mail. See email
+- Manage Sites command (Site menu), 14, 130
+- master pages, hand-coding CMS, 470–479
+- master-detail pages, 425
+  - pages layout, 427–428
+  - planning, 429–437
+- match case option (Find and Replace dialog box), 57
+- MathML, 52
+- <meta> tag, 60
+- methods, programming email, 178–185
+- Microsoft ASP. See ASP
+- MM_Username command (Session menu), 420
+- Modify menu commands
+  - Page Properties, 88
+  - Table, 439
+- MySQL
+  - databases
+    - installation in Mac OS X, 236–240
+    - installation on Windows, 232–235
+    - Newland Tours installing on remote server, 240–241
+  - GUI interface, 225
+
+## N
+
+- Newland Tours project, 3
+  - business process, 37–43
+  - code evaluation, 31–36
+  - contact us page
+    - creating, 18–22
+    - formatting, 23–30
+  - CMS hand-coding, 448–449
+    - adding delete functionality, 489–491
+    - adding update functionality, 485–489
+    - building forms, 454–466
+    - creating detail page, 476–485
+    - creating master page, 470–479
+    - data insertion functionality, 466–469
+    - detail page conversion to updatable page, 438–446
+    - master-detail page planning, 429–437
+    - pages layout, 427–428
+    - planning content, 451–454
+  - CSS
+    - custom styles, 89–95
+    - invisible navigation, 98–102
+    - redefining HTML elements, 80–89
+    - reusable templates, 95–97
+  - database review, 242–246
+  - dynamic sites, 104–105
+    - basics, 106–109
+    - building simple applications, 136–145
+    - defining in Dreamweaver, 130–136
+    - local servers, 113–119
+    - redefining site to XHTML, 112–113
+    - remote server site development, 129–130
+  - installing database on remote server, 240–241
+  - static sites
+    - defining, 13–18
+    - previewing, 43–46
+
+## O
+
+- object-oriented programming, (OOP), 171
+- objects
+  - databases, 224–227
+  - programming email, 178–185
+- ODBC Microsoft Access Setup dialog box, 249
+- <ol> tag, 80
+- OOP (object-oriented programming), 171
+- <option> tag, 460
+- output page, filtering data, 294–295
+
+## P
+
+- </p> tag, 22
+- <p> tag, 19, 21–22, 29–30, 80
+- Page Properties command (Modify menu), 88
+- Page Properties dialog box, 88
+- Parameters dialog box, 352
+- Paste command (Edit menu), 22
+- Personal Web Server (PWS), 114
+- PHP (PHP Hypertext Processor), 110
+  - CMS hand-coding, 448–449
+    - adding delete functionality, 489–491
+    - adding update functionality, 485–489
+    - building forms, 454–466
+    - creating detail page, 476–485
+    - creating master page, 470–479
+    - data insertion functionality, 466–469
+    - detail page conversion to updatable page, 438–446
+    - master-detail page planning, 429–437
+    - pages layout, 427–428
+    - planning content, 451–454
+  - concatenation, 360
+  - data, generating URLs dynamically, 291–295
+  - database connection to Web pages, 253–254
+  - email, 171
+  - ensuring session management, 119–121
+  - local environment set up, 118–119
+  - installing in Windows, 121–124
+  - setting up in Mac OS X, 126–129
+  - setting cookies, 164
+  - side by side with ASP and ColdFusion, 111–112
+- Please Provide a Test Value dialog box, 270
+- pound signs (#), 155
+- Preferences dialog box, 75
+  - prerequisites, 1–2
+- price calculator, 196–197, 260–261
+  - building forms, 200–204
+  - code documentation, 275–279
+  - conditional statements, 214–217
+  - CSS custom styles, 217–220
+  - data, 204–210
+  - dynamic population of form menu, 262–268
+  - filtered recordsets, 269–270
+  - page creation, 198–200
+  - revising calculation script, 271–275
+  - server-side validation, 210–214
+- primary keys, 228
+- production servers, 15
+- properties, programming email, 178–185
+- Property inspector, 21
+  - CSS styles application, 94
+  - displaying, 93
+- PWS (Personal Web Server), 114
+
+## Q-R
+
+- queries, 226
+- QWERTY, 67
+- Read-Only icon, 17
+- records, 224

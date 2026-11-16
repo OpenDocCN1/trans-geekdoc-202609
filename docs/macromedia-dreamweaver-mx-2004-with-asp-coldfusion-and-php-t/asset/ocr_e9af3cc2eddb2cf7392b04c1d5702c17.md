@@ -1,0 +1,13 @@
+the database along with the data entered on page 4? You have seen online shopping carts and probably taken multipage surveys, so you know there are solutions to these problems.
+
+It is hard to develop dynamic Web sites without an awareness of the request-and-response transaction and the statelessness of HTTP. Binding data to pages takes place within this context, and the differences between querystring (or URL) variables and form variables, POST and GET, and setting and retrieving cookies—all of which you are about to become familiar with—are considerably less obscure when you understand how they relate to the HTTP protocol.
+
+# RETRIEVING DATA FROM THE URL
+
+At the end of the previous lesson, users filled out a short form and submitted it to a page that displayed the value they entered in the form. As you know from the preceding section, the variable sent from the form to the test_form_processor.asp page was enclosed in the body of the request. There are other ways to send data between pages. You can send variables through URLs, cookies, and (depending on your server technology) session and application variables. You’ll learn all about each of these during the course of the book, but for now it is sufficient to understand that there are many ways to share data among pages.
+
+The logical question that follows from this is, why are there so many different ways, and how do you know which one to use? The answer is that each has unique capabilities and limitations.
+
+For example, the form variable you sent in Lesson 4 in the body of the request sent the data from the form page to the page that processed and displayed the information. One limitation of this approach is that once the server completes this transaction, it forgets the firstName name-value pair. So though it outputs the user’s first name to that page, if the user goes to a different page, the server no longer knows the value of the firstName variable, which means that this name-value pair is no longer available to your code. If you were developing a multiple-page shopping cart or survey, you’d soon encounter the limitations of form variables.
+
+In this task, you’ll pass data from the form to the test_form_processor.asp page in a different way: You’ll use a querystring. A querystring is a list of variables appended to the end of a URL. You have probably noticed as you surfed the Web that sometimes URLs are quite long and seem to contain much more information than the page address; that information is a querystring. Let’s modify the Web form you created in Lesson 4 so that it sends information using a querystring, rather than a form variable.

@@ -1,0 +1,32 @@
+level_changes:
+- line: 752
+  before: 3
+  after: 2
+- line: 1245
+  before: 3
+  after: 2
+- line: 2339
+  before: 3
+  after: 2
+- line: 3245
+  before: 3
+  after: 2
+- line: 3807
+  before: 1
+  after: 2
+- line: 5637
+  before: 3
+  after: 2
+- line: 7002
+  before: 3
+  after: 2
+- line: 7458
+  before: 3
+  after: 2
+- line: 8147
+  before: 3
+  after: 2
+text_changes:
+- line: 0
+  before: Macromedia Dreamweaver Mx 2004 With Asp, Coldfusion, and Php：官方培训指南
+  after: Macromedia Dreamweaver MX 2004 With ASP, ColdFusion, and PHP：官方培训指南
