@@ -1,0 +1,5 @@
+members or computer programs, while a GA usually operates on (coded) strings of numbers a GP has to operate on members. GP allows, in comparison with GA, the optimization of much more complicated structures and can therefore be applied to a greater diversity of problems (Koza, 1992). A schematic overview of GP model which shows its different stages is given in Figure 3. The following steps are performed in each stage of programming. The aim of GP is to find out the member or offspring that best solves the problem. Possible solutions in GP are all the possible computer programs that can be composed in a recursive manner from a set of function genes which is as F = {f1, f2 ... , fm}, where m is the number of function genes, and the set of terminal genes T = {a1, a2 ... , an}, where n is the number of terminal genes. Each individual function fi from the set F has a certain number of arguments z(fi). The appropriate number of arguments for function genes from the set F is thus determined with the list {z(f1), z(f2), ..., z(fm)}.
+
+# Figure 3. Schematic overview of GP model application (Zadshakoyan & Pourmostaghi, 2013)
+
+![](bbox=[0.222, 0.443, 0.773, 0.847])

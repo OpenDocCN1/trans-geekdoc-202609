@@ -1,0 +1,13 @@
+# Chapter 4
+Protein Motif Comparator Using Bio-Inspired Two-Way K-Means ....................95
+R. Gowri, Periyar University, India
+R. Rathipriya, Periyar University, India
+
+In this scientific world, the evolution of the disease is predominantly higher than the medicines. The diagnosis and prognosis of such diseases will differ from patient to patient. In this scenario, the protein motifs are very useful for understanding the functionality and lethality of the disease. Most of the existing techniques are supervised approaches which require prior knowledge of the data. As the protein sequences are unsupervised data, the unsupervised data mining techniques like Clustering and 2-way Clustering are chosen to mine the homologous protein motifs. The quality of the results is refined further using the bio-inspired computing models like Particle Swarm Optimization, Genetic Algorithm and Venus Flytrap Optimization in this research work. The existing approaches can mine homologous patterns with structure similarity of 75 percent which is increased in this proposed approach. The results from these three different approaches show that the bio-inspired based 2-way Clustering approaches can mine more homologous motifs than the clustering approaches.
+
+# Chapter 5
+Metaheuristics in Manufacturing: Predictive Modeling of Tool Wear in Machining Using Genetic Programming .................118
+Mohammad Zadshakoyan, University of Tabriz, Iran
+Vahid Pourmostaghi, University of Tabriz, Iran
+
+The state of a cutting tool is an important factor in any metal cutting process as additional costs in terms of scrapped components, machine tool breakage and unscheduled downtime result from worn tool usage. Therefore, tool wear prediction plays an important role in industry automation for higher productivity and acceptable product quality. Therefore, in order to increase the productivity of turning process, various researches have been made recently for tool wear estimation and classification in turning process. Chip form is one of the most important factors commonly considered in evaluating the performance of machining process. On account of the effect of the progressive tool wear on the shape and geometrical features of produced chip, it is possible to predict some measurable machining outputs such as crater wear. According to experimentally performed researches, cutting speed and cutting time are two extremely effective parameters which contribute to the development of the crater wear on the tool rake face. As a result, these parameters will change the chip radius and geometry. This chapter presents the development of the genetic equation for the tool wear using occurred changes in chip radius in turning process.

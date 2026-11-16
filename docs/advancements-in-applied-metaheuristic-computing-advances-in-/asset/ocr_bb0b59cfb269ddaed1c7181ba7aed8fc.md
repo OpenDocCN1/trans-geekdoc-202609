@@ -1,0 +1,15 @@
+# Chapter 7
+
+# Effect of SMES Unit in AGC of an Interconnected Multi-Area Thermal Power System With ACO-Tuned PID Controller....................................164
+
+K. Jagatheesan, Paavai Engineering College, India B. Anand, Hindusthan College of Engineering and Technology, India Nilanjun Dey, Techno India College of Technology, India Amira S. Ashour, Tanta University, Egypt
+
+Load changes in any one of interconnected power system that influence the system response from their nominal values. The Proportional–Integral- Derivative (PID) controller is employed to mitigate this issue as a secondary controller in addition to the Superconducting Magnetic Energy Storage (SMES) unit. In Automatic Generation Control (AGC), the current work proposed an Ant Colony Optimization (ACO) technique to tune PID controller gain values of multi-area interconnected thermal power system. The gain value of PID controller is tuned by using the ACO techniques. The system response is compared with and without considering SMES unit in the system. The comparative results clearly established that the system response with SMES unit improve the performance of system during sudden load disturbance.
+
+# Chapter 8
+
+# Meta-Heuristic Algorithms in Medical Image Segmentation: A Review............185
+
+Nilanjun Dey, Techno India College of Technology, India Amira S. Ashour, Tanta University, Egypt
+
+Artificial intelligence is the outlet of computer science apprehensive with creating computers that perform as humans. It compromises expert systems, playing games, natural language, and robotics. However, soft computing (SC) varies from the hard (conventional) computing in its tolerant of partial truth, uncertainty, imprecision, and approximation, thus, it models the human mind. The most common SC techniques include neural networks, fuzzy systems, machine learning, and the meta-heuristic stochastic algorithms (e.g., Cellular automata, ant colony optimization, Memetic algorithms, particle swarms, Tabu search, evolutionary computation and simulated annealing. Due to the required accurate diseases analysis, magnetic resonance imaging, computed tomography images and images of other modalities segmentation remains a challenging problem. Over the past years, soft computing approaches attract attention of several researchers for problems solving in medical data applications. Image segmentation is the process that partitioned an image into some groups based on similarity measures. This process is employed for abnormalities volumetric analysis in medical images to identify the disease nature. Recently, meta-heuristic algorithms are conducted to support the segmentation techniques. In the current chapter, different segmentation procedures are addressed. Several meta-heuristic approaches are reported with highlights on their procedures. Finally, several medical applications using meta-heuristic based-approaches for segmentation are discussed.
