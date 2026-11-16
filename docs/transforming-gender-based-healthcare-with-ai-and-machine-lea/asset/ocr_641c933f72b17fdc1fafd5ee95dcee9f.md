@@ -1,0 +1,15 @@
+data and communication technologies, keeping pace with the fast progress in technology. However, because such divergent technologies are interconnected, there is a steady rise in both internal and external security concerns. Therefore, it is necessary to identify and prioritize essential systems in order to reduce these hazards from medical equipment. Although several MEMPs have been created and implemented in healthcare organisations for more than 30 years, there has been a dearth of research providing an ideal concept that considers affordability, safety, and reliability when it comes to the service delivery of these medical equipment devices [50].
+
+# 10.17 HOW ARE MEDICAL RECORDS KEPT IN EHR SOFTWARE?
+
+EHRs have the ability to improve patient care by increasing the accessibility of health-related data, which is in line with the previous points. Cybersecurity, on the other hand, is concerned with protecting computer systems and the data they hold from infiltration and inadvertent or detrimental disturbance [51]. The absence of medical information integrity and confidentiality has raised worries about the inadequate cybersecurity in the healthcare industry. EHRs are physical items that are dispersed over several regions. Because of this, unauthorized people can access the platform and devices, corrupt all of the data on them, or even program the device and take out the security keys. The purpose of this study is to bring attention to the security and privacy risks connected with digital technologies in the healthcare business. This is important since the industry must undergo significant development before it can fully use new technology to provide patients with high-quality treatment.
+
+# 10.18 FUTURE SCOPE
+
+# 10.18.1 FURTHER RESEARCH OF SECURITY AND PRIVACY REGULATIONS IN HEALTHCARE
+
+The healthcare sector is legally mandated to deploy security and privacy safeguards to protect the personal data of patients. Encryption technology protects electronic data from illegal access. Access restrictions limit access to patient data depending on roles and authorisation levels. Medical practitioners are subject to restrictions like insurance coverage. HIPAA and GDPR mandate strict privacy and security measures for patient information. The healthcare business utilizes both technology and policy-based measures to ensure patient data security and privacy. Further studies might focus on the healthcare sector’s privacy and confidentiality rules.
+
+# 10.18.2 Exploration into How Digitalization Influences Patient Outcomes
+
+In the sector of healthcare, digitalization has had a substantial impact on patient outcomes. EHRs are one instrument used to measure this impact. Increased access to a patient’s medical history through digitalization can upturn diagnosis and treatment planning. One of the additional strategies is using telemedicine, which allows

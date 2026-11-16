@@ -1,0 +1,11 @@
+# 8.3.1 TELEMEDICINE AND REMOTE HEALTHCARE
+
+Remotely providing medical services, including examinations and consultations, is known as telemedicine, often referred to as telehealth or e-medicine. Telemedicine allows doctors to diagnose and treat patients remotely. A patient visits the nearby local health centre, where a local healthcare professional performs a primary health check-up. The regional healthcare unit collects vital statistics and sends the data to a city hospital. The medical practitioner at that remote hospital then conducts a live interaction with the patient, using audio or video conferencing systems and automated live feeds. The hospitals store the patient data, details, and recorded interactions in the shared database, which can be accessed using mobile apps or a web-based interface. The leading hospitals and the specialist hospitals are also linked for any specialised support needed in case of emergencies. The leading hospitals also have the same teleconferencing units to support remote patients. This system allows for more convenient and efficient healthcare services for patients. Patients can use personal technology or telehealth kiosks to connect with physicians from home, as shown in Figure 8.1. It enables real-time doctor-patient communication [9], [10].
+
+Telemedicine uses telecommunication technology to deliver medical diagnosis, intervention, and therapy [11]. Telehealth also covers remote patient monitoring and medical training services that are non-clinical. Millions of people rely on telemedicine for health promotion and disease prevention. Healthcare professionals use telehealth apps to diagnose and treat patients [12–15].
+
+Telehealth empowers patients by increasing access to care, removing geographical restrictions, enabling remote or limited mobility patients to contact healthcare providers. Telehealth consultations can improve patient satisfaction and reduce the travel burden for numerous diseases. Patients can make appointments, get consultations, and acquire medications from home, increasing convenience. This convenience improves healthcare use and treatment adherence. Telehealth platforms offer
+
+![](bbox=[0.115, 0.679, 0.884, 0.886])
+
+FIGURE 8.1 Digital health monitoring architecture.

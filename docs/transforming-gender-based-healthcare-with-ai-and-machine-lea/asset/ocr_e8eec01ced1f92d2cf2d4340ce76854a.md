@@ -1,0 +1,11 @@
+condition. These devices let you keep track of them all the time, which not only makes particular to gender care more accurate but additionally gives people an overwhelming sense of control and autonomy. Understanding greater detail about how remote monitoring tools affect the well-being of women is an obvious step towards a more customised, prepared, and patient-centred approach to healthcare. This is a big step forward in the continual delivery of based on gender care. It will assist in making persons feel greater autonomy and connected to their personal healthcare. Figure 9.2 shows technological products that help individuals maintain contact and have been easy for everybody to use.
+
+# 9.3 GENETIC TESTING AND PRECISION MEDICINE IN GENDER HEALTH
+
+When precision healthcare and DNA testing combine their efforts, they can make an enormous impact in the well-being of women and welcome in an entirely novel era of individualised and focused care. As a part of precision medicine, genetic testing looks at the unique genetic patterns of both men and women. This can tell you a lot about their sexual health, hormonal balance, and overall health. For this reason, doctors can make treatments that work better and more precisely for each person because they are based on their unique DNA (American Medical Association, 2018). Figure 9.3 shows how genetic medicine and services linked to it are used.
+
+In terms of reproductive health, this new way of thinking is very important because it gives us a fuller picture of genetic factors that can help us decide on hormone medicines, fertility treatments, and family planning. It is not true that one size fits all when DNA tests and precision medicine are used together. Instead, they look at how men's and women's genes affect their health. The world is changing quickly, and it's clear that genetic testing and precision medicine work better together. This means that healthcare plans will work better, and patients will get more personalised, patient-centred care in the complicated field of gender health (National Human Genome Research Institute, 2020).
+
+![](bbox=[0.22, 0.66, 0.78, 0.88])
+
+FIGURE 9.2 Easy-to-use devices keep patients connected.

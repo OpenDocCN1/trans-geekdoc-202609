@@ -1,0 +1,13 @@
+# About the Editors
+
+![](bbox=[0.116, 0.162, 0.305, 0.326])
+
+Dr. Meenu Gupta is associate professor at the UIE-CSE Department, Chandigarh University, India. She is pursuing her Post Doc Fellowship from MIR Lab, USA. She completed her Ph.D. in Computer Science and Engineering from Ansal University Gurgaon, India, in 2020. She has more than 16 years of teaching experience. Her research areas cover machine learning, intelligent systems, and data mining, with a specific interest in artificial intelligence, image processing and analysis, smart cities, data analysis, and human/brain-machine interaction (BMI). She has edited more than 17 books and authored four engineering books. She reviews several journals, including Big Data, Artificial Intelligence Review, CMC, Scientific Reports, Digital Health. She is a life member of ISTE and IAENG. She is also a senior member of IEEE. She has authored or co-authored more than 37 book chapters and over 200 papers in refereed international journals and conferences. She also organised many conferences technically sponsored by the IEEE Delhi Section and AIP.
+
+![](bbox=[0.116, 0.467, 0.305, 0.644])
+
+Dr. Rakesh Kumar is professor and associate director at the UIE-CSE Department, Chandigarh University, Punjab, India. He is pursuing his Post Doc Fellowship from MIR Lab, USA. He completed his Ph.D. in Computer Science and Engineering from Punjab Technical University, Jalandhar, 2017. He has more than 20 years of teaching experience. His research interests are IoT, machine learning, and natural language processing. He has edited more than seven books with the reputed publishers like Taylor & Francis Group and authored five books. He works as a reviewer for several journals, including Big Data, CMC, Scientific Reports, TSP, Multimedia Tools and Applications, and IEEE Access. He is a senior member of IEEE. He has authored or co-authored more than 170 publications in various national/international conferences and journals. He is also an organizer and editor of many international conferences under the aegis of IEEE and AIP.
+
+![](bbox=[0.116, 0.756, 0.305, 0.9])
+
+Dr. Zhongyu Lu is a professor in the Department of Computer Science and is the research group leader of information and system engineering (ISE) at the Centre of High Intelligent Computing (CHIC). She was previously team leader in the IT department of the Charlesworth Group Publishing Company. She successfully led and completed two research projects in the area of XML database systems and document processing in collaboration with Beijing University. Both systems were
