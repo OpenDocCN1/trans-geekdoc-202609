@@ -1,0 +1,56 @@
+level_changes:
+- line: 2087
+  before: 1
+  after: 3
+- line: 2122
+  before: 1
+  after: 3
+- line: 2140
+  before: 1
+  after: 3
+- line: 2979
+  before: 4
+  after: 2
+- line: 2995
+  before: 5
+  after: 3
+- line: 2999
+  before: 5
+  after: 3
+- line: 3008
+  before: 5
+  after: 3
+- line: 3012
+  before: 6
+  after: 3
+- line: 3016
+  before: 6
+  after: 3
+- line: 3021
+  before: 6
+  after: 3
+- line: 3032
+  before: 2
+  after: 3
+- line: 3036
+  before: 2
+  after: 3
+- line: 3040
+  before: 2
+  after: 3
+- line: 3048
+  before: 2
+  after: 3
+text_changes:
+- line: 1028
+  before: '**GitHub Copilot 和 OpenAI 的 Codex**'
+  after: GitHub Copilot 和 OpenAI 的 Codex
+- line: 1888
+  before: '*起点*'
+  after: 起点
+- line: 1892
+  before: '*出错之处*'
+  after: 出错之处
+- line: 1896
+  before: '*发生了什么*'
+  after: 发生了什么

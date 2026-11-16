@@ -1,0 +1,9 @@
+# Conclusion
+
+The appearance of ChatGPT and the blossoming of the overall LLM ecosystem felt sudden. However, it was just part of an accelerating curve of AI capabilities that’s been building momentum for years. At the start of this chapter, we examined several factors that have contributed to that, but more importantly, those factors are still at play and accelerating. As William Gibson said in the quote at the start of this chapter, “The future is already here—it’s just not evenly distributed.”
+
+As the curve extends, we’ll see the power and the risk from these systems grow. We will undoubtedly see more capable AI systems. Remember the story of Tay in Chapter 1? That was 2016, and it’s now eight years later. We’re still seeing the same problems that plagued Tay in today’s LLM applications, and we’ll see people make the same mistakes in the future. Businesses and individuals are tempted to rush forward, provide these systems with access to more data, and increase their levels of autonomy and agency. If we’re not careful, we’re on a road that will lead to many safety and security disasters.
+
+I hope you’ll apply the knowledge you’ve gained throughout the book to help keep your LLM-based applications on a responsible path. Use the RAISE framework and checklist to help your teams think through the issues and ensure that you’ve done your utmost to build a robust and safe system.
+
+The power of LLMs and emerging AI technologies is undoubtedly a game changer. Companies and countries that don’t adopt these technologies will fall behind rapidly. Be bold, experiment, and build great new applications. But remember, with great power comes great responsibility! You can create powerful applications safely, securely, and responsibly.

@@ -1,0 +1,13 @@
+The term “hallucination” is unpopular with some because it personifies the LLM and makes its flaws seem less critical. Some literature now refers to this phenomenon as confabulation. However, hallucination is far more prevalent, so we’ll use it in this book.
+
+This nuanced dance between fact and fiction in LLM outputs brings us to the crux of the challenge: overreliance. As humans, we are naturally inclined to trust results that are presented confidently, especially when they emanate from sophisticated computer software. Yet, it’s this very trust that can steer us astray. When LLMs hallucinate, they often don’t waver in their confidence, making it hard to discern genuine knowledge from imperfect statistical artifacts. The danger lies in the hallucination and also in our propensity to take these dreamlike utterances at face value, potentially leading to misinformation, missteps, and broader implications in real-world applications.
+
+Overreliance refers to the excessive trust in the capabilities and exactness of LLM elaborations. Excessive confidence in LLM output, especially when hallucinations, errors, or biased data input are present, can lead to damaging outputs, particularly in professional or safety-critical environments. A significant example is trusting an LLM to provide medical advice without sufficient testing.
+
+# Why Do LLMs Hallucinate?
+
+The core reason for hallucinations lies in the LLM’s operational mechanism, which is geared toward pattern matching and statistical extrapolation rather than factual verification. While they acquire knowledge through training on vast training datasets, LLMs often lack specific, actual knowledge. Their operation is rooted in identifying patterns in the input data and attempting to match these patterns with those learned during training. This pattern matching occurs without a real-world understanding, which can lead to the generation of hallucinated text, especially when faced with ambiguous or novel input prompts.
+
+The quality and nature of the training data significantly impact the likelihood and extent of hallucinations. Biases, inaccuracies, or noise in the training data can mislead the model into generating biased or incorrect text.
+
+Hallucinations present a substantial challenge in using LLMs for critical or sensitive applications. They underline AI development’s inherent intricacies and challenges, spotlighting the gap between statistical pattern matching and real-world, factual understanding. The hallucination phenomenon in LLMs opens a window into the broader discourse on the limitations and the ethical implications of deploying large-scale AI models in real-world scenarios without a robust mechanism for factual verification or contextual understanding.

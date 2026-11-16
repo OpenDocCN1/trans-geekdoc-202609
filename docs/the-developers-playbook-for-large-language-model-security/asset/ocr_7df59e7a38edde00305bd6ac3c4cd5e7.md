@@ -1,0 +1,7 @@
+These services often function within an organization’s controlled environment, enabling uniform application of security policies. However, just because these services are internal, you mustn’t fall victim to a false sense of security. They are still vulnerable to various threats, such as unauthorized access, data leaks, and internal threats from within the organization.
+
+Internal services such as databases, proprietary APIs, and backend systems often constitute the operational backbone for LLM applications. These resources typically reside within the organization’s secure network, providing trust and control that is harder to achieve with external services. However, this internal nature can paradoxically elevate the security risks involved, primarily if these services house the organization’s “crown jewels” of sensitive or valuable data.
+
+# ## Conclusion
+
+Securing LLM applications is an endeavor fraught with complexities, intricacies, and challenges that are significantly different from those of traditional web applications. This chapter has aimed to lay down the foundational knowledge required to navigate this complex landscape, focusing on three critical areas: distinguishing between artificial intelligence, neural networks, and large language models; understanding the pivotal role of transformer architectures; and diving deep into LLM application architecture, particularly the concept of trust boundaries. Knowing what sets LLMs apart helps us tailor our security strategies more effectively, going beyond general AI or machine learning frameworks.

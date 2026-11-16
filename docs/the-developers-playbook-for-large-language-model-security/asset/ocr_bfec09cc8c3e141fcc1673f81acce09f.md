@@ -1,0 +1,13 @@
+To exploit this hallucination, an attacker needs only to create malicious versions of the hallucinated packages, upload them to popular code repositories, and then wait for an unsuspecting developer to download and run this code based on AI suggesting the package.
+
+![](bbox=[0.178, 0.178, 0.253, 0.256])
+
+> In March 2024, the team at Lasso Security followed up on this study and found that up to 30% of the coding questions they asked a popular model resulted in at least one hallucinated package!
+
+The shift by developers from searching for coding solutions online to asking AI platforms like ChatGPT for answers created a lucrative opportunity for attackers. This scenario signifies a severe security concern as it showcases a novel pathway for attackers to exploit AI technologies to propagate malicious code, thereby compromising the integrity and security of software applications. While this vulnerability has been widely reported, it’s unclear how much this has been exploited in the wild. Nonetheless, it’s an essential example of another domain where hallucination and overreliance can combine to put an organization at risk.
+
+This incident sheds light on several critical lessons. Firstly, it underlines the necessity for rigorous validation of AI-generated outputs, particularly when such results can potentially influence software development or other mission-critical operations. It’s imperative to have mechanisms to verify the authenticity and safety of AI-recommended packages. Secondly, it highlights the importance of continuously monitoring and updating AI systems to mitigate the risks associated with outdated or inaccurate training data. Lastly, it calls for a collective effort within the AI and cybersecurity communities to devise strategies for detecting and preventing such exploitation avenues in the future. By learning from such incidents, stakeholders can work toward building more robust and secure AI-driven platforms that are resilient against evolving threat landscapes.
+
+# Who’s Responsible?
+
+Development teams working with LLMs sometimes perceive the damage caused by hallucinations as a “people problem,” where they blame the user for misinterpreting or misusing the information provided. There’s no question that user education is important. Just as people learned that they can’t trust all the information they find on the web, people will grow more sophisticated in examining erroneous information given to them by a chatbot or copilot.
