@@ -1,0 +1,9 @@
+If we select the Basic Network Scan as our starting point, we can begin to select our target and then go through customization. Figure 5.19 shows the configuration settings for the Basic Network Scan. You'll see in the first screen that you provide the name of the scan. Keep in mind that you are creating a configuration here and you can run that configuration multiple times. Each run will have a time stamp associated with it, so you don't need to add your own date and time as part of the name. You'll want to name it something that is meaningful to you so you can differentiate this configuration from other configurations.
+
+# FIGURE 5.19 Scan configuration settings
+
+![](bbox=[0.152, 0.275, 0.843, 0.633])
+
+You might, for instance, have a configuration where you have a specific set of credentials. Figure 5.20 shows the configuration for credentials. You'll see that you can create SSH and Windows credentials for host authentication. For each of these types, you will be able to create multiple configurations. You could use SSH key authentication for some systems and then also have an authentication setting for where you need to use username and password. According to the interface, you can have unlimited credentials for both SSH and Windows. In order to create another set of credentials, there is a button at the end of the line indicating the credential type.
+
+In addition to host credentials, you can set authentication credentials for database, miscellaneous, and plain text. The last category is for protocols like HTTP, FTP, and SMTP, among others. Miscellaneous gives you settings for VMware and Palo Alto firewalls. This provides the means for Nessus to check local vulnerabilities across a variety of applications and also devices.

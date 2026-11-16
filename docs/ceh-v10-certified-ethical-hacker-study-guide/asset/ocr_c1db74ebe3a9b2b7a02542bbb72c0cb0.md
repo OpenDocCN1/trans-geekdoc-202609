@@ -1,0 +1,15 @@
+Of course, you don't have to make use of Node.js to build your infrastructure if you need C&C services. It's a fairly easy way to stand up a web server with application-like functionality, but you could also write pages that could be put up into a web server that either already exists or could be installed.
+
+# Antivirus Solutions
+
+Antivirus is going to be the bane of existence for anyone writing malware. Fortunately, it's not all that hard to fool antivirus if the malware author wants to put in a little effort. Keep in mind that antivirus typically uses known properties of malware to identify it. This may be a hash of the malware. To generate a different hash, the malware just needs to change a single byte. That single byte change will result in a completely different hash. Malware can use a number of techniques to get around antivirus. First, any new malware won't be identified because there isn't a signature for it until it has been analyzed and the signature has been added to the database for the antivirus software.
+
+Sometimes, malware can be polymorphic. This means it has many shapes. The program essentially rewrites itself as it propagates, making minor modifications as it goes. This means each copy could look different. This would require the malware to make alterations to the binary file, potentially by writing out a fresh copy as it propagates. Most types of malware can be polymorphic, but it takes some skill on the part of the malware author. They need to know how to make alterations to copies of the program without resulting in an executable that won't run.
+
+Malware can use packers and encryptors to make it difficult for antivirus to detect it. Using a different packing scheme, perhaps by compressing harder or not as hard, can result in a file that looks different because the data section would appear to be different. Encryption could use a different key and the file would look different.
+
+Even in cases where antivirus or endpoint detection is looking at behaviors, dropped files could have randomly generated names. The same is true with Registry keys and values. Writing files and Registry values as actions aren't especially troublesome, so these protection solutions can't just identify those actions. There would be too many alerts on common actions. They need more specific details to look for. This is one reason systems that have antivirus solutions in place can become infected by malware.
+
+# Summary
+
+Malware is a serious problem across the information technology industry. It affects businesses and people alike. Malware authors generally have the upper hand. If they want to be on top of things, they can be always ahead of antivirus programs. This means they can get the malware into systems before anyone can protect against it. They usually get a leg up

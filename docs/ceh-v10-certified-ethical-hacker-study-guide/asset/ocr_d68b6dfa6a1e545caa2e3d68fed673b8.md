@@ -1,0 +1,15 @@
+# IP
+
+Moving into the Network layer, we run across the IP. Certainly there are other protocols that exist at the Network layer, such as the Internet Packet Exchange (IPX), but as the Internet runs on IP and its associated protocols, we’ll focus there. So far, we haven’t talked much about headers. As each layer is passed through, a set of data is added to the message that is specific to the protocol processing the message. This set of data is called headers. Each protocol has its own set of headers that get attached. The message is then encapsulated by the headers, creating an entirely new PDU. For IP, the PDU is called a packet. You may hear every set of data on the network referred to as a packet, but from a technical standpoint, a message from the IP header down is a packet.
+
+Addressing is something to consider, as well. This is an aspect people who work with networking are often fairly familiar with, but it’s useful to understand what an address comprises. Associated with the address is the subnet mask. This can be challenging to understand, but there are some mathematical tricks that can help, once you know them. There are also a couple of different ways to render the subnet mask, and you’ll often run across both of them.
+
+There are currently two versions of IP in use. The one that is most common is version 4, commonly designated as IPv4. We’ve been in the process of switching over to version 6 for the last couple of decades. It hasn’t happened yet, but every modern device and operating system supports IPv6, so you will see the IPv6 address on most systems you will interact with. IPv6 has some differences over IPv4, not the least of which is the size of the address space.
+
+IP is considered a best-effort protocol. It does its very best to get packets from the source to the destination. It does nothing to absolutely ensure that they get there. It does facilitate the transmission, however, by providing addressing.
+
+# Headers
+
+The Internet Engineering Task Force (IETF) is responsible for maintaining all of the documentation related to protocols. When someone, or more commonly a group of people, wants to propose a new protocol or an extension to an existing protocol, they write something called a Request for Comments (RFC) document. The IETF not only maintains the RFCs, it also manages the process of getting them approved. The very first RFC was written in 1969 and was related to the host software for the IMP that was used to interface a computer system to the ARPAnet. At the time, of course, the IETF didn’t exist, but using RFCs was still the process for creating specifications and standards.
+
+The RFC for IP, which was published in 1981, is 791. It defines how IP is supposed to work and also defines the header fields used by IP. Figure 2.9 shows a set of IP headers from a message captured off the network. This is the same set of headers that would be presented in the form of a table in the RFC referenced. The difference between the table form and just looking at the headers in this way is that with the table, you can clearly see the size of each header field.

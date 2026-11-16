@@ -1,0 +1,15 @@
+![](bbox=[0.145, 0.108, 0.345, 0.27])
+
+This is where we get to what many people think is what “hacking,” or penetration testing, is all about. Certainly system hacking is an important element, since it’s where you demonstrate that the vulnerabilities actually exist, but it’s not the only one. Penetration testing, or ethical hacking, isn’t just about breaking into systems—looting and pillaging. Keep in mind that the objective is always to help organizations improve their security posture. Exploiting vulnerabilities to gain access to systems is one way of doing that. Breaking into a system demonstrates the existence of the vulnerability, and it also provides potential pathways to other systems.
+
+With the end goal in mind, and with the list of vulnerabilities in place, we can start looking for exploits. There are a handful of ways to do that, some more effective than others. One method can be done directly on the system from which you are running your tests. Locating the exploits is essential to being able to run them against your target systems to gain access. Once you gain access, you move on to post-exploitation activities.
+
+You’ll want to grab passwords and attempt to crack those passwords. This does two things. First, it demonstrates that there are passwords that can be cracked—strong passwords shouldn’t be crackable without taking an immense amount of time and computing resources. Second, if you can easily crack a password, it isn’t strong enough and should be changed. Second, usernames and passwords are credentials you can use on other systems.
+
+Just getting into a system may not get you much. When you run an exploit, you only have the permissions that have been provided to the user the service is running as. Typically, this is a reduced set of permissions. As a result, you may not be able to do much of anything. At least, you may not be able to do much of anything without gaining a higher level of privileges. This means you need a local vulnerability, one that exists in software that can only be accessed or run when you are logged into the system. Running these privilege escalations, if they are successful, will gain you another level of information and access that you can make use of.
+
+Attackers will generally try to obscure their existence in a system. If you are really working in a red-team capacity, where the operations teams at your target are being tested for their ability to detect and respond, you too will want to cover your tracks. There are several steps you may want to take to hide your existence. This may be especially true if there is evidence of your initial infiltration of the system.
+
+# Searching for Exploits
+
+You’ve done your enumeration and your scanning to identify vulnerabilities. So you have a list of vulnerabilities that seem promising. You need ways of exploiting the vulnerabilities, and even if you could, you just don’t have the time to write exploits yourself. You may as
