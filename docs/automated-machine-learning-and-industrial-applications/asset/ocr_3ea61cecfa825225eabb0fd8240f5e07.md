@@ -1,0 +1,3 @@
++   24. Gangadevi, E., Rani, R.S., Dhanaraj, R.K., Nayyar, A., Spot-out fruit fly algorithm with simulated annealing optimized SVM for detecting tomato plant diseases. Neural Comput. Appl., 36, 8, 4349–4375, 2023, Springer Science and Business Media LLC. https://doi.org/10.1007/s00521-023-09295-1.
+
++   25. He, X., Zhao, K., Chu, X., AutoML: A survey of the state-of-the-art. Knowl.-Based Syst., 212, 106622, 2021.

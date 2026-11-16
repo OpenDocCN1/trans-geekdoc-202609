@@ -1,0 +1,11 @@
+their present methods to incorporate blockchain. Nevertheless, this is still in the early stages of both the improvement of blockchain era and its use in the financial service industry. Our transaction processing and interoperability developments are the most critical blockchain enhancements to watch out for, considering that both will improve the era`s usefulness for economic establishments.
+
+Blockchains are not going to take the place of the traditional financial systems very soon. Instead, before integrating blockchain gradually into their present systems, economic institutions will test it out to see how well it works. Blockchain improvement is still in its early stages. Due to the consistent changes, it faces a number of challenges. Information changes at the blockchain are not approved. One blockchain cannot make use of or alternate data with some other blockchain. Blockchain networks want to prioritize interoperability solutions. The transition to blockchain generation is expensive, and that is true given the lack of certified blockchain developers. Therefore, similar to cutting-edge machine adjustments, smaller monetary institutions may be unwilling to invest. These include the possibility that generation can be exploited to support illegal activities, dangers to customers, and threats to the financial system due to the existing lack of client safeguards. Perhaps, blockchain is not enough.
+
+# 12.13 Recommendations for Implementation
+
+The following are some detailed recommendations for organizations seeking to implement Automated Machine Learning (AutoML) in their industrial applications:
+
++   1. Assess Organizational Needs: Conduct a pre-adoption analysis of AutoML by evaluating specific needs, challenges, and objectives. This includes understanding the problem domain and available data to choose suitable AutoML techniques and tools. Organizations should also scrutinize their prevailing infrastructure, expertise, and budget to ascertain the feasibility of AutoML implementation.
+
++   2. Invest in Data Quality: Top-grade data are indispensable for the success of AutoML projects. Organizations should invest in data collection, cleaning, and preprocessing to ensure the data fed into AutoML algorithms is accurate, relevant, and representative of the problem domain. This encompasses

@@ -1,0 +1,11 @@
+# ## 11.7 Software Testing
+
+Testing is a crucial process that involves examining and evaluating the performance and functionality of a product or system. It is applied in various fields, including human knowledge and skills, as computer hardware and software development. In software development, testing is a critical step used to determine whether a project meets its objectives. Software testing can be conducted at any stage of the development process depending on the testing methods employed. The primary goal of software testing is to validate and verify that the software program or application conforms to the required standards and specifications. As a result, software testing is essential for ensuring that the final product is both trustworthy and suitable for its intended purpose.
+
+# ### 11.7.1 Types of Testing
+
+The quality of software programs may be tested in a number of ways, including white box testing, black box testing, and gray box testing. These testing methods involve different levels of access to the underlying code and architecture of the software being tested. The following is an explanation of each testing method along with some examples:
+
++   - White box testing: In software testing, “white box” refers to the practice of disassembling a program to see how it is put together from the inside. In this method, the tester has access to the underlying code and architecture of the software allowing them to identify any potential vulnerabilities.
++   - Black box testing: Black box testing is a testing method that focuses on the external behavior of a software application. In this method, the tester does not have access to the underlying code and architecture of the software, but rather tests the software from the perspective of the user or a customer.
++   - Gray box testing: The term “gray box testing” refers to an approach to testing that mixes white box and black box techniques. With this approach, the tester is only given partial visibility into the software’s source code and architecture, but is, nevertheless, able to get an understanding of its operation. Examples of gray box testing include API testing and database testing.

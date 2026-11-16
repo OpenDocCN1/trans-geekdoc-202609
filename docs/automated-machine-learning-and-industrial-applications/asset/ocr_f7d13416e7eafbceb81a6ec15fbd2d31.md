@@ -1,0 +1,13 @@
+0.503 to 0.529. For trial_5, the val_accuracy ranges from 0.512 to 0.999 for all 15 epochs.
+
+It is observed that in the first trial, the accuracy starts at 0.69, then decreases to 0.58, and then increases to 0.72 in trial_3. Then, it decreases in trial_4 to approximately 0.51. This leads to trial_5, where the accuracy increases, and the classifier trained with various hyper-parameters achieves a final AutoML model accuracy of approximately 0.814% with optimized hyper-parameters. After finding the neural architectural search space or model selection, the best model from trial_5 will be exported, and this model is fit into the Flipkart review dataset for further classification. It attains 0.81% accuracy, which is shown in Table 6.4.
+
+The above Figure 6.8 represents the graphical representation of ACC (accuracy) and loss obtained throughout the train/test phase. For the consecutive trials 1 to 5, the accuracy is decreased from trial 1 to trial 2, increased in trial 3, decreased in trial 4, and finally, in trial 5, the accuracy increases gradually. Therefore, the trial 5 optimized model is selected for deploying the Flipkart dataset.
+
+# 6.4.1 Comparative Analysis: AutoML vs ML
+
+The same dataset is employed in supervised ML techniques such as NB, SVM, and LR. Here, data pre-processing was done as specified in the above steps, i.e., tokenization, stopword removing, stemming, or lemmatization. Feature engineering will be done with Term Frequency-Inverse Document Frequency (TF-IDF). TF-IDF is recurrently applied in text mining and retrieval of information. This is employed toward rearranging the set of unprocessed textual information into a matrix of TF-IDF attributes. This transformer takes an accumulation of textual data as input and produces a distributed matrix illustration of the documents based on their TF-IDF scores.
+
+After the feature engineering process, the dataset is divided into simple train/test sets for learning and evaluation. The model is fitted with the data using the corresponding classification algorithm. Then, the model is fine-tuned with the optimizing hyper-parameters. This step involves manual process of experimenting with different parameter values to improve the model performance. Therefore, this optimization tuning will continue until it reaches the best model through iteration.
+
+The AutoCRM Keras model is compared with traditional ML algorithms connected with performance measurements. The accuracy and precision rates are obtained by training the prototype with various parameters and finding the resultant one with the best-optimized hyper-parameters. This process is done by manually applying various parameters in the traditional

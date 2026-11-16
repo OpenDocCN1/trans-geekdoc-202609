@@ -1,0 +1,11 @@
+# 13.6 Case Study
+
+# 13.6.1 PharmEasy
+
+Let us take a look into PharmEasy and how they leveraged AI technologies in India. Founded in 2014, they found that there was an issue where users abandoned items in their cart and did not place orders. So they partnered with Clear Tap, a customer engagement platform backed by AI technology, which helped boost customer retention as well as analysis. By looking into their problem more in depth, they discovered that it was a journey of keeping users engaged throughout their website right from the landing page to placing an order. They did behavioral analysis and trained it for locational awareness as well and made it so they could better direct the users into confirming an order then and there. This proved to be a very good move since they were able to close 1.5–2× purchases. To enhance user experience, the team utilized ML tech stacks including TensorFlow, Hadoop, Spark, and Kafka.
+
+Another major step taken by them was during the COVID-19 pandemic. They devised a simple questionnaire that users could fill out to help them be aware if they were at risk of the disease. This helped curb its spread in the nation as well as reduce panic. As a bonus, more users were driven to their platform as well. Although their primary motive may have just been to do a socially good deed, they were rewarded nicely for it. It is expected that their market cap will reach 3 billion dollars by the end of 2024.
+
+# 13.6.2 Qure.ai
+
+Founded in 2016, deep learning techniques and AI was applied to streamline and improve radiological diagnosis of chest X-rays and brain scan CTs [24]. Access to early diagnosis is key for treating many diseases. In many countries, there is a very low doctor–patient ratio, which can often lead to long wait times as well as long waiting list for operations. By utilizing models for faster analysis of reports, we can free up our radiologists and prevent burnout for them. The main benefit is that, now, they can spend more time with the patient and listen to them about their symptoms as well, which can be done in place of the time they can spend looking at reports. They utilize two models in their predictions mainly qXR and qER. The qXR
