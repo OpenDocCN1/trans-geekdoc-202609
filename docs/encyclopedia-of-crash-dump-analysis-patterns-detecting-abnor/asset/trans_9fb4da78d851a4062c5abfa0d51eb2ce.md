@@ -1,0 +1,321 @@
+
+
+```c
+CloseHandle(hThread);
+                return (INT_PTR)TRUE;
+            }
+            break;
+        }
+        return (INT_PTR)FALSE;
+}
+```
+
+当我们打开崩溃转储时，我们看到这些线程：
+
+```
+0:002> ~*kL
+
+  0  Id: cb0.9ac Suspend: 1 Teb: 7efdd000 Unfrozen
+ChildEBP RetAddr
+0012fdf4 00411554 user32!NtUserGetMessage+0x15
+0012fdf8 00412329 NullThread!WinMain+0x44
+0012fff8 0041208d NullThread!_tmainCRTStartup+0x289
+0012fff0 7d4e7d2a NullThread!WinMainCRTStartup+0xd
+0012fff0 00000000 kernel32!BaseProcessStart+0x28
+
+  1  Id: cb0.8b4 Suspend: 1 Teb: 7efda000 Unfrozen
+ChildEBP RetAddr
+01eafec4 7d63f501 ntdll!NtWaitForMultipleObjects+0x15
+01eaff48 7d63f988 ntdll!EtwWaitForMultipleObjectsEx+0xf7
+01eaff88 7d4dfe21 ntdll!EtwEventPump+0x27f
+01eaffec 00000000 kernel32!BaseThreadStart+0x34
+
+  2  Id: cb0.ca8 Suspend: 1 Teb: 7efd7000 Unfrozen
+ChildEBP RetAddr
+0222fff8 7d4dfe21 NullThread!ThreadProc+0x34
+0222ffec 00000000 kernel32!BaseThreadStart+0x34
+
+  3  Id: cb0.5bc Suspend: 1 Teb: 7efaf000 Unfrozen
+ChildEBP RetAddr
+WARNING: Frame IP not in any known module. Following frames may be wrong.
+0236fff8 7d4dfe21 0x0
+0236ffec 00000000 kernel32!BaseThreadStart+0x34
+
+  4  Id: cb0.468 Suspend: -1 Teb: 7efac000 Unfrozen
+ChildEBP RetAddr
+01f7fff4 7d674807 ntdll!NtTerminateThread+0x12
+01f7ffc4 7d65509f ntdll!RtlExitUserThread+0x26
+01f7fff4 00000000 ntdll!DbgUiRemoteBreakin+0x41
+```
+
+我们看到我们创建的第一个线程在循环：
+
+```
+0:003> ~2s
+eax=cbfc04b5 ebx=00000000 ecx=00000000 edx=00000000 esi=00000000 edi=0222ffb8
+eip=00411aa4 esp=0222fee0 ebp=0222ffb8 iopl=0 nv up ei ng nz na po nc
+cs=0023 ss=002b ds=002b es=002b fs=0053 gs=002b efl=00000282
+NullThread!ThreadProc+0x34:
+00411aa4 7402          je      NullThread!ThreadProc+0x38 (00411aa8)  [br=0]
+```
+
+```
+0:002> u
+NullThread!ThreadProc+0x34:
+00411aa4 je       NullThread!ThreadProc+0x38 (00411aa8)
+00411aa6 jmp      NullThread!ThreadProc+0x27 (00411a97)
+00411aa8 xor      eax,eax
+00411aaa pop      edi
+00411aab pop      esi
+00411aac pop      ebx
+00411aad mov      esp,ebp
+00411aaf pop      ebp
+```
+
+我们可能会期望其原始堆栈数据中内容很少，但当我们通过 !teb 命令转储其堆栈范围时，所看到的是线程启动残留（这是一种我们未来可能会添加的模式），其中一些符号信息也可能是巧合的（巧合符号信息，第 137 页）：
+
+```
+0:002> dds 0222ff00 02230000
+0222ff00 00000000
+0222ff04 00000000
+0222ff08 00000000
+...
+0222f104 00000000
+0222f108 00000000
+0222f10c 00000000
+0222f110 7d621954 ntdll!RtlImageNtHeaderEx+0xee
+0222f114 7dfde000
+0222f118 00000000
+0222f11c 00000001
+0222f120 000000e8
+0222f124 00400e08 NullThread!_enc$textbss$begin <PERF> (NullThread+0x8e)
+0222f128 00000000
+0222f12c 0222f144
+0222f130 00000000
+0222f134 0222fca0
+0222f138 7d61ff18 ntdll!_except_handler3
+0222f13c 76e21958 ntdll!RtlpRunTable+0x4a0
+0222f140 ffffffff
+0222f144 7d621954 ntdll!RtlImageNtHeaderEx+0xee
+0222f148 7d621a84 ntdll!RtlImageNtHeader+0x1b
+0222f14c 00000001
+0222f150 00400000 NullThread!_enc$textbss$begin <PERF> (NullThread+0x0)
+0222f154 00000000
+0222f158 00000000
+0222f15c 0222f160
+0222f160 00400e08 NullThread!_enc$textbss$begin <PERF> (NullThread+0x8e)
+0222f164 0222f7bc
+0222f168 7d4f4ea3 kernel32!ConsoleApp+0xe
+0222f16c 00400000 NullThread!_enc$textbss$begin <PERF> (NullThread+0x0)
+0222f170 7d4f4e77 kernel32!BaseDllInitialize+0x1f5
+0222f174 00000000
+0222f178 7d4f4e8c kernel32!BaseDllInitialize+0x20a
+0222f17c 00000000
+0222f180 00000000
+...
+0222f290 00000000
+0222f294 0022f2b0
+0222f298 7d625e68 ntdll!base+0x42
+0222f29c 00180144
+0222f2a0 0222fb24
+0222f2a4 7d625992 ntdll!ARRAY_FITS+0x29
+0222f2a8 00000aac
+0222f2ac 00001f01
+0222f2b0 0222fc0
+0222f2b4 0222f7f4
+0222f2b8 7d625944 ntdll!RtlpLocateActivationContextSection+0x1da
+
+0222fbbc 00001f01
+0222fbc0 000029a8
+...
+0222ffe0 536cd652
+0222ffe4 0222f334
+0222ffe8 7d625d62 ntdll!RtlpFindUnicodeStringInSection+0x7b
+0222ffec 0222f418
+0222fff0 00000000
+0222fff4 0042f324
+0222fff8 7d625f7f
+0222fffc ntdll!RtlpFindNextActivationContextSection+0x64
+0222fc2c 00181f01
+0222fc30 c0150008
+...
+0222f320 7efd7000
+0222f324 0222f344
+0222f328 7d625cd2 ntdll!RtlFindNextActivationContextSection+0x46
+0222f32c 0222f368
+0222f330 0222f3a0
+0222f334 0222f38c
+0222f338 0222f340
+0222f33c 00181f01
+0222f340 00000000
+0222f344 0222f390
+0222f348 7d625a88 ntdll!RtlFindActivationContextString+0x1e
+0222f34c 0222f368
+0222f350 0222f3a0
+...
+0222f38c 00000a8c
+0222f390 0222f454
+0222f394 7d626381 ntdll!CsrCaptureMessageMultiUnicodeStringsInPlace+0xa57
+0222f398 00000003
+0222f39c 00000000
+0222f3a0 00181f01
+0222f3a4 0222f418
+0222f3a8 0222f3b4
+0222f3ac 7da60340 ntdll!LdrpApiDefaultExtension
+0222f3b0 07d6263df ntdll!CsrCaptureMessageMultiUnicodeStringsInPlace+0xb73
+0222f3b4 00000040
+0222f3b8 00000000
+...
+0222f420 00000000
+0222f424 0222f458
+0222f428 7d625f9a ntdll!CsrCaptureMessageMultiUnicodeStringsInPlace+0x4c1
+0222f42c 00200200
+0222f430 0222f44c
+0222f434 0222f44c
+0222f438 0222f44c
+0222f43c 00000802
+0222f440 00000002
+0222f444 7d62f59a ntdll!RtlCaptureMessageMultiUnicodeStringsInPlace+0x4c1
+0222f448 00020000
+0222f44c 00000000
+0222f450 00003fcb
+0222f454 0222f5cb
+0222f458 0222f54c
+0222f45c 0222f5bc
+0222f460 7d626290 ntdll!RtlDosApplyFileIsolationRedirection_Ustr+0x346
+0222f464 0222f490
+0222f468 00000000
+0222f46c 0222f49c
+0222f470 7d6262f5 ntdll!RtlDosApplyFileIsolationRedirection_Ustr+0x3de
+0222f474 0222f510
+0222f478 7d6a0340 ntdll!LdrApiDefaultExtension
+0222f47c 7d626290 ntdll!RtlDosApplyFileIsolationRedirection_Ustr+0x346
+0222f480 00000000
+0222f484 00800000
+...
+0222f544 00000000
+0222f548 00000001
+0222f54c 7d6a0290 ntdll!LdrpHashTable+0x50
+0222f550 00000000
+0222f554 05000000
+...
+0222f59c 00000000
+0222f5a0 0222f5d4
+0222f5a4 7d6251d0 ntdll!LdrUnlockLoaderLock+0x84
+0222f5a8 7d6251d7 ntdll!LdrUnlockLoaderLock+0x8d
+0222f5ac 00000000
+0222f5b0 0227f95c
+0222f5b4 00000000
+0222f5b8 0003fcb
+0222f5bc 0222f5c0
+0222f5c0 0222f5c0
+0222f5c4 7d62f5ac
+0222f5c8 0227f4f0
+0222f5cc 7d61ff18 ntdll!_except_handler3
+0222f5d0 7d621e50 ntdll!`string'+0x74
+0222f5d4 ffffffff
+0222f5d8 7d6251d3 ntdll!LdrUnlockLoaderLock+0x8d
+0222f5dc 7d626fb3 ntdll!LdrGetDllHandleEx+0x368
+0222f5e0 00000001
+0222f5e4 8c480042
+0222f5e8 7d626f76 ntdll!LdrGetDllHandleEx+0x329
+0222f5ec 00000000
+0222f5f0 7d626db0 ntdll!LdrGetDllHandle
+0222f5f4 00000002
+0222f5f8 001a0818
+...
+0222f640 0222f6a8
+0222f644 7d61f1f8 ntdll!_except_handler3
+0222f648 7d6266e0 ntdll!`string'+0xb4
+0222f64c ffffffff
+0222f650 7d626f76 ntdll!LdrGetDllHandleEx+0x329
+0222f654 7d6262d3 ntdll!LdrGetDllHandle+0x18
+0222f658 00000001
+...
+0222f66c 0222f6b8
+0222f670 7d4ffb6e kernel32!GetModuleHandleForUnicodeString+0x20
+0222f674 00000001
+0222f678 00000000
+0222f67c 0222f6d4
+0222f680 7d4df4fe kernel32!GetModuleHandleForUnicodeString+0x97
+0222f684 00000000
+0222f688 7e7d0c0
+0222f68c 00000002
+0222f690 00000001
+0222f694 00000000
+0222f698 0227f6f0
+0222f69c 7d4c0000 kernel32!_imp__NtFsControlFile <PERF> (kernel32+0x0)
+0222f6a0 0222f6b4
+0222f6a4 7edf7c00
+0222f6a8 0222f628
+0222f6ac 7d4d89c4 kernel32!_except_handler3
+0222f6b0 7d4df728 kernel32!`string'+0x18
+0222f6b4 ffffffff
+0222f6b8 7d4dffff kernel32!GetModuleHandleForUnicodeString+0x97
+0222f6bc 7d4e09f1 kernel32!BasepGetModuleHandleEx+0x17f
+0222f6c0 7d4e09e9 kernel32!BasepGetModuleHandleEx+0x23c
+0222f6c4 00000000
+0222f6c8 0222f0c8
+0222f6cc 00000001
+0222f6d0 ffffffff
+0222f6d4 010a0018
+0222f6d8 7edf7c00
+0222f6dc 0222f050
+0222f6e0 00000000
+0222f6e4 00000000
+0222f6e8 00000000
+0222f6ec 02000000 oleaut32!PictSaveEnhMetaFile+0x76
+0222f6f0 0222f90c
+0222f6f4 02080000 oleaut32!PictSaveEnhMetaFile+0x76
+0222f6f8 0222f704
+0222f6fc 00000000
+0222f700 7d4c0000 kernel32!_imp__NtFsControlFile <PERF> (kernel32+0x0)
+0222f704 00000000
+0222f708 02080000 oleaut32!PictSaveEnhMetaFile+0x76
+0222f70c 0222f928
+0222f710 02080000 oleaut32!PictSaveEnhMetaFile+0x76
+0222f714 0222f720
+0222f718 00000000
+0222f71c 7d4c0000 kernel32!_imp__NtFsControlFile <PERF> (kernel32+0x0)
+0222f720 00000000
+...
+0222f724 00000000
+...
+0222f7b0 0000f949
+0222f7bc 0222fb04
+0222f7c0 7d4dfdd4 kernel32!BaseDllInitialize+0x6b
+0222f7c4 00000002
+0222f7c8 00000000
+0222f7cc 00000000
+0222f7d0 7d4fd4e4 kernel32!BaseDllInitialize+0x495
+0222f7d4 00000000
+0222f7d8 7efde800
+0222f7dc 7d4c0000 kernel32!_imp__NtFsControlFile <PERF> (kernel32+0x0)
+0222f7e0 00000000
+0222f7e4 00000000
+...
+0222f894 01c58ae0
+0222f898 0222fac0
+0222f89c 7d62155b ntdll!RtlAllocateHeap+0x460
+0222f8a0 7d61f7c8 ntdll!RtlAllocateHeap+0x7e7
+0222f8a4 00000000
+0222f8a8 0222f0c8
+...
+0222f8d8 00000000
+0222f8dc 7d621954 ntdll!RtlImageNtHeaderEx+0xee
+0222f8e0 0222f9a4
+0222f8e4 7d614c80 ntdll!$VPROC_ImageExportDirectory+0x2c48
+0222f8e8 0222f9a6
+0222f8ec 7d612040 ntdll!$VPROC_ImageExportDirectory
+0222f8f0 00000221
+0222f8f4 0222f944
+0222f8f8 7d627405 ntdll!LdrpSnapThunk+0xc0
+0222f8fc 0222f9a6
+0222f900 00005584
+0222f904 7d600000 ntdll!RtlDosPathSeparatorsString <PERF> (ntdll+0x0)
+0222f908 7d613678 ntdll!$VPROC_ImageExportDirectory+0x1638
+0222f90c 7d614c80 ntdll!$VPROC_ImageExportDirectory+0x2c48
+0222f910 0222f9a4
+0222f914 00000801
+```
+

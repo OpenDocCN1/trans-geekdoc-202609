@@ -1,0 +1,215 @@
+
+0: kd> !pool e173c1d8
+池页 e173c1d8 区域为未知
+e173c000 大小: 28 前一个大小: 0 (已分配) CMVa
+e173c028 大小: 8 前一个大小: 28 (空闲) 0..
+e173c030 大小: 10 前一个大小: 8 (已分配) MmSt
+e173c040 大小: 48 前一个大小: 10 (已分配) SSh
+e173c088 大小: 68 前一个大小: 48 (已分配) SCnc
+e173c0f0 大小: 8 前一个大小: 68 (空闲) Ntf0
+e173c0f8 大小: 10 前一个大小: 8 (已分配) ObBi
+e173c108 大小: 28 前一个大小: 10 (已分配) CMVa
+e173c130 大小: 80 前一个大小: 28 (已分配) IONm
+e173c1b0 大小: 8 前一个大小: 80 (空闲) Sect
+e173c1b8 大小: 20 前一个大小: 8 (已分配) CMVa
+*e173c1d8 大小: 20 前一个大小: 20 (已分配) *Ppen
+池标记 Ppen : 用于执行设备枚举的例程, 二进制 : nt!pnp
+GetUlongFromAddress: 无法从 80565d50 读取
+e173c1f8 不是有效的小池分配, 正在检查大池...
+无法获取池大页表 - 符号不正确或池标记已禁用
+e173c1f8 已释放 (或已损坏) 池
+e173c1f8 处的上一分配大小不正确, 上一个大小为 4
+
+***
+*** 在池中检测到错误 (或损坏);
+*** 池区域未知 (0xFFFFFFFFE173C1F8)
+***
+*** 使用 !poolval e173c000 获取更多详细信息.
+***
+
+0: kd> !poolval e173c000
+池页 e173c000 区域为未知
+
+正在验证池页: e173c000 的池标头
+
+池页 [ e173c000 ] 为 __无效.
+
+正在分析链接列表...
+[ e173c1d8 -> e173c2c0 (大小 = 0xe8 字节)]: 损坏区域
+
+正在扫描单比特错误...
+
+未找到
+
+```
+0: kd> dps e173c1d8
+e173c1d8 0c040404
+e173c1dc 6e57050
+e173c1e0 00260032
+e173c1e4 00370061
+e173c1e8 00360035
+e173c1ec 00370035
+e173c1f0 00260032
+e173c1f4 004e0030
+e173c1f8 00520054
+e173c1fc 004c004f
+e173c200 002e0053
+[...]
+e173c214 00360032
+e173c218 00300030
+e173c21c 0c12004a
+e173c220 e24e4d43
+e173c224 00010001
+e173c228 7224c689
+e173c22c e17b53a4
+e173c230 23230077
+e173c234 4448233f
+[...]
+e173c24c 44264431
+e173c250 375f5645
+e173c254 26353036
+```
+
+## A. 池标记 Ppen : 用于执行设备枚举的例程, 二进制 : nt!pnp
+
+Ppen 来自 PnP 管理器
+
+如果我们搜索此堆栈跟踪帧:
+
+```
+PipMakeGloballyUniqueId+0x3a9
+```
+
+我们会找到关于类似蓝屏的讨论, 或许还有解决方案⁵¹。
+
+另外, 请注意地址 e173c1f8 及其附近地址的内容由 UNICODE 普通数据 (第 833 页) 覆盖. 我们可能需要检查这些字符串提示 (第 960 页).
+
+池损坏还可能导致池管理中的访问违例, 伴随 KMODE_EXCEPTION_NOT_HANDLED (1e) 等常见错误检查:
+
+```
+0: kd> k
+ # Child-SP RetAddr Call Site
+00 fffff802`d2afe568 fffff802`d103db86 nt!KeBugCheckEx
+01 fffff802`d2afe570 fffff802`d0fc652d nt!KiFatalExceptionHandler+0x22
+02 fffff802`d2afe5b0 fffff802`d0e83139 nt!RtlpExecuteHandlerForException+0xd
+03 fffff802`d2afe5e0 fffff802`d0e815a8 nt!RtlDispatchException+0x429
+04 fffff802`d2afece0 fffff802`d0fcb0c2 nt!KiDispatchException+0x144
+05 fffff802`d2aff3c0 fffff802`d0fc957d nt!KiExceptionDispatch+0xc2
+06 fffff802`d2aff5a0 fffff802`d10af119 nt!KiGeneralProtectionFault+0xfd
+*** ERROR: Module load completed but symbols could not be loaded for vmci.sys
+07 fffff802`d2aff730 fffff800`84456159 nt!ExAllocatePoolWithTag+0x7c9
+08 fffff802`d2aff810 fffff800`84457131 vmci+0x6159
+09 fffff802`d2aff840 fffff800`8445398b vmci+0x7131
+0a fffff802`d2aff890 fffff802`d0eec3c0 vmci+0x398B
+0b fffff802`d2aff8c0 fffff802`d0eebad9 nt!KiExecuteAllDpcs+0x270
+0c fffff802`d2affa10 fffff802`d0fc323a nt!KiRetireDpcList+0xe9
+0d fffff802`d2affc60 00000000`00000000 nt!KiIdleLoop+0x5a
+```
+
+## 托管堆
+
+这里是 **托管堆** 与 **进程堆** (第 307 页) 和 **内核池** (第 292 页) **动态内存损坏** 模式的对应项. 它通常由 CLR 在 GC 阶段期间检测到. 以下是 CLR 2 (CLR 4 类似) 的典型堆栈:
+
+```
+0:000> kL
+ChildEBP RetAddr
+002baae0 779b06a0 ntdll!KiFastSystemCallRet
+002baae4 772c774d ntdll!NtWaitForSingleObject+0xc
+002bab54 772c7742 kernel32!WaitForSingleObjectEx+0xbe
+002bab68 7a0c0a43 kernel32!WaitForSingleObject+0x12
+002bab98 7a0c0e89 mscorwks!CLRWaitForSingleObjectEx+0x24
+002bb054 7a0c2bfd mscorwks!RunWatson+0x1df
+002bb798 7a0c3171 mscorwks!DoFaultReportWorker+0xb62
+002bb7d4 7a106b2d mscorwks!DoFaultReport+0xc3
+002bb7fc 7a1061ac mscorwks!WatsonLastChance+0x43
+002bbc8b 7a10624f mscorwks!EEPolicy::LogFatalError+0x3ae
+002bbcd0 79ffe2f mscorwks!EEPolicy::HandleFatalError+0x36
+002bbcf4 79f04f1f mscorwks!CLRVectoredExceptionHandlerPhase3+0xc1
+002bbd28 79f04e98 mscorwks!CLRVectoredExceptionHandlerPhase2+0x20
+002bbd5c 79f9149e mscorwks!CLRVectoredExceptionHandler+0x10a
+002bbd70 779b1039 mscorwks!CLRVectoredExceptionHandlerShimX86+0x27
+002bbd94 779b100b ntdll!ExecuteHandler2+0x26
+002bbe3c 779b0e97 ntdll!ExecuteHandler+0x24
+002bbe3c 79f69360 ntdll!KiUserExceptionDispatcher+0xf
+002bc13c 79f663f1 mscorwks!SVR::heap_segment_next_rw+0xf
+002bc228 79f65d63 mscorwks!WKS::gc_heap::plan_phase+0x37c
+002bc248 79f6614c mscorwks!WKS::gc_heap::gc1+0x6e
+002bc25c 79f65f5d mscorwks!WKS::gc_heap::garbage_collect+0x261
+002bc288 79f663c2 mscorwks!WKS::GCHeap::GarbageCollectGeneration+0x1a9
+002bc314 79ef1566 mscorwks!WKS::gc_heap::try_allocate_more_space+0x12e
+002bc328 79ef1801 mscorwks!WKS::gc_heap::allocate_more_space+0x11
+002bc348 79e7510e mscorwks!WKS::GCHeap::Alloc+0x3b
+002bc364 79e86713 mscorwks!Alloc+0x60
+002bc3a0 79e86753 mscorwks!SlowAllocateString+0x29
+002bc3ac 79be4efb mscorwks!UnfairAllocateString+0xc
+002bc3e0 79e91f58 mscorwks!AllocateStringObject+0x2e
+002bc424 79e82892 mscorwks!GlobalStringLiteralMap::AddStringLiteral+0x3f
+002bc438 79e82810 mscorwks!GlobalStringLiteralMap::GetStringLiteral+0x43
+002bc47c 79e82956 mscorwks!AppDomainStringLiteralMap::GetStringLiteral+0x72
+002bc494 79e81b6f mscorwks!BaseDomain::GetStringObjRefPtrFromUnicodeString+0x31
+002bc4cc 79ef4704 mscorwks!Module::ResolveStringRef+0x88
+002bc4e4 79f23132 mscorwks!ConstructStringLiteral+0x39
+002bc558 7908c351 mscorwks!CEEInfo::constructStringLiteral+0x108
+002bc57c 7906276d mscorjit!Compiler::fgMorphConst+0xa3
+002bc598 79065ea0 mscorjit!Compiler::fgMorphTree+0x63
+002bc610 79062bb5 mscorjit!Compiler::fgMorphArgs+0x86
+002bc63c 7906311f mscorjit!Compiler::fgMorphCall+0x2c1
+002bc658 79065ea0 mscorjit!Compiler::fgMorphTree+0xa3
+002bc6d0 79062bb5 mscorjit!Compiler::fgMorphArgs+0x86
+002bc6fc 7906311f mscorjit!Compiler::fgMorphCall+0x2c1
+002bc718 790659fa mscorjit!Compiler::fgMorphTree+0xa3
+002bc73c 79065026 mscorjit!Compiler::fgMorphStmts+0x63
+002bc774 79064f9f mscorjit!Compiler::fgMorphBlocks+0x79
+002bc788 79064e63 mscorjit!Compiler::fgMorph+0x60
+002bc798 79061e46 mscorjit!Compiler::compCompile+0x5f
+002bc7f0 79061236 mscorwks!Compiler::compCompile+0x2df
+002bc884 7906118c mscorjit!jitNativeCode+0xb8
+002bc8bc 790ff9cf mscorjit!CILJit::compileMethod+0x3d
+002bc928 79f0f945 mscorwks!InlineCompileMethodHelper+0x72
+002bc96c 79f0f8da mscorwks!invokeCompileMethod+0x31
+002bc9c4 79f0ea33 mscorwks!CallCompileMethodWithSEHWrapper+0x84
+002bcd7c 79f0e795 mscorwks!UnsafeJitFunction+0x230
+002bce20 79e87f52 mscorwks!MethodDesc::MakeJitWorker+0x1c1
+002bce78 79e8809e mscorwks!MethodDesc::DoPrestub+0x486
+002bcec8 0330836 mscorwks!PreStubWorker+0xeb
+WARNING: Frame IP not in any known module. Following frames may be wrong.
+002bcee0 79e7c74b 0x330836
+002bcf10 79e7c6cc mscorwks!CallDescrWorker+0x33
+002bcf90 79e7c8e1 mscorwks!CallDescrWorkerWithHandler+0xa3
+002bbdd0 79e7c783 mscorwks!MethodDesc::CallDescr+0x19c
+002bbdec 79e7c90d mscorwks!MethodDesc::CallTargetWorker+0x1f
+002bd100 79e8b983 mscorwks!MethodDesc::CallSite::Call_RetArgSlot+0x18
+002bbd8 79e8bbe6 mscorwks!MethodTable::RunClassInitWorker+0xb8
+002bbd60 79e8b7fa mscorwks!MethodTable::RunClassInitEx+0x11e
+002bbd724 79ebcee6 mscorwks!MethodTable::DoRunClassInitThrowing+0x2f0
+002bd79c 79fc49db mscorwks!MethodTable::CheckRunClassInitNT+0x8c
+002bbd2c 790a2801 mscorwks!CEEInfo::initClass+0x19b
+002bbdcc 79062cdc mscorjit!Compiler::impExpandInline+0x2aaa
+002bde24 79062b7c mscorjit!Compiler::fgMorphCallInline+0xf8
+002bde50 7906311f mscorjit!Compiler::fgMorphCall+0x27b
+002bde6c 790650fa mscorjit!Compiler::fgMorphTree+0xa3
+002bde8c 79065026 mscorjit!Compiler::fgMorphStmts+0x63
+002bdec8 79064f9f mscorjit!Compiler::fgMorphBlocks+0x79
+002bdedc 79064e63 mscorjit!Compiler::fgMorph+0x60
+002bdeec 79061e46 mscorjit!Compiler::compCompile+0x5f
+002bdf44 79061236 mscorwks!Compiler::compCompile+0x2df
+002bbdf8 7906118c mscorwks!jitNativeCode+0xb8
+002bbe10 79f0f9cf mscorjit!CILJit::compileMethod+0x3d
+002bbe0c 79f0f945 mscorwks!InlineCompileMethodHelper+0x72
+002bbe0c 79f0f8da mscorwks!invokeCompileMethod+0x31
+002bbe18 79f0ea33 mscorwks!CallCompileMethodWithSEHWrapper+0x84
+002be4d0 79f0e795 mscorwks!UnsafeJitFunction+0x230
+002be574 79e87f52 mscorwks!MethodDesc::MakeJitWorker+0x1c1
+002be5cc 79e8809e mscorwks!MethodDesc::DoPrestub+0x486
+002be61c 00330836 mscorwks!PreStubWorker+0xeb
+002be634 0570c859 0x570c859
+002be69c 0595bccc 0x595bccc1
+002be700 0595b954 0x595b954
+002be704 009b66e0 0x99b66e0
+002be708 002be728 0x2be728
+002be70c 09589c90 0x9589c90
+002be728 099b67b8 0x99b67b8
+002be72c 00000000 0x99b67b8
+```
+
+通常 !VerifyHeap SOS WinDbg 扩展命令有助于在托管堆上查找第一个无效对象并显示最后一个有效对象. 有时损坏会深度影响堆, 或者在遍历 GC 期间发生崩溃时, GC 状态可能不适合分析:

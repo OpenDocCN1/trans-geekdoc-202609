@@ -1,0 +1,7 @@
+# Diachronic Module
+
+When we have a performance issue, we may request a set of consecutive memory dump saved after some interval. In such memory dumps we may see the same thread(s) having similar stack trace(s). In this simple diagnostic scenario we may diagnose several patterns based on the stack traces: Active Threads (page 66) that can be Spiking Threads (page 885) with Spike Intervals (page 884) or stable, not changing, Wait Chains (for example, critical sections, page 1086). Here we may easily identify Top (page 1012) active and Blocking (page 96) modules based on Module Wait Chain (page 1103).
+
+The more complex case arises when we have different Active Threads and/or Wait Chains with different thread IDs at different times. However, if their Top Module is the same, we may have found it as a performance root cause component especially in the case of Active Threads since it is statistically probable that such threads were active for considerable time deltas around the snapshot times (since threads are usually waiting). Such hypothesis may also be confirmed by inter-correlational analysis (Inter-Correlation40) with software traces and logs where we can see Thread of Activity41 Discontinuities42 and Time Deltas43.
+
+We call this analysis pattern Diachronic Module since we see the module component appears in different thread stack traces diachronically (at different times). The typical simplified scenario is illustrated in this diagram:

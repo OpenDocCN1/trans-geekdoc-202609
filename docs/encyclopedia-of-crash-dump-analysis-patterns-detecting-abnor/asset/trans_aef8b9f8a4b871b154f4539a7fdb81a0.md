@@ -1,0 +1,187 @@
+
+
+```
+PROCESS 85c60020 SessionId: 1 Cid: 53bc Peb: 7ffdf000 ParentCid: 44c8 DirBase: cffb84a0 ObjectTable: e1214e90 HandleCount: 39 Image: application.exe
+PROCESS 85c5d380 SessionId: 1 Cid: 53c8 Peb: 7ffde000 ParentCid: 44c8 DirBase: cffb8a60 ObjectTable: e7baf638 HandleCount: 39 Image: application.exe
+PROCESS 85c648b8 SessionId: 1 Cid: 53dc Peb: 7ffde000 ParentCid: 44c8 DirBase: cffb8a80 ObjectTable: e759d060 HandleCount: 39 Image: application.exe
+PROCESS 85c62528 SessionId: 1 Cid: 53e0 Peb: 7ffde000 ParentCid: 44c8 DirBase: cffb8aa0 ObjectTable: e3b8fa00 HandleCount: 39 Image: application.exe
+PROCESS 85c59d88 SessionId: 1 Cid: 53e8 Peb: 7ffdc000 ParentCid: 44c8 DirBase: cffb8ac0 ObjectTable: e31751e0 HandleCount: 39 Image: application.exe
+PROCESS 85c46d88 SessionId: 1 Cid: 542c Peb: 7ffd5000 ParentCid: 4d9c DirBase: cffb8b00 ObjectTable: e6fbc500 HandleCount: 136 Image: nllapplication.exe
+PROCESS 85c3c020 SessionId: 1 Cid: 5464 Peb: 7ffdc000 ParentCid: 44c8 DirBase: cffb8440 ObjectTable: e218b948 HandleCount: 39 Image: application.exe
+PROCESS 85c2a020 SessionId: 1 Cid: 546c Peb: 7ffdb000 ParentCid: 44c8 DirBase: cffb8b60 ObjectTable: e639a8d0 HandleCount: 39 Image: application.exe
+PROCESS 85c202c8 SessionId: 1 Cid: 5474 Peb: 7ffd7000 ParentCid: 44c8 DirBase: cffb8b80 ObjectTable: e517caa8 HandleCount: 39 Image: application.exe
+PROCESS 85c1b020 SessionId: 1 Cid: 547c Peb: 7ffd6000 ParentCid: 44c8 DirBase: cffb8ba0 ObjectTable: e60cbcb0 HandleCount: 39 Image: application.exe
+PROCESS 85c1dd88 SessionId: 1 Cid: 5484 Peb: 7ffd5000 ParentCid: 44c8 DirBase: cffb8bc0 ObjectTable: e4a42f68 HandleCount: 39 Image: application.exe
+PROCESS 85d3ed88 SessionId: 1 Cid: 5488 Peb: 7ffd5000 ParentCid: 44c8 DirBase: cffb8be0 ObjectTable: e68558f0 HandleCount: 39 Image: application.exe
+```
+
+我们可以看到，所有创建的进程都有相同的父进程，PID 为 44c8。当我们检查它时，可以看到其中有许多线程在创建 application.exe 进程：
+
+```
+1: kd> .process /r /p 8607c020
+Implicit process is now 8607c020
+Loading User Symbols
+
+1: kd> !process 8607c020
+PROCESS 8607c020  SessionId: 1  Cid: 44c8    Peb: 7ffdc000  ParentCid: 4cf8
+    DirBase: cffb7080  ObjectTable: e3c9fd38  HandleCount: 25407.
+    Image: explorer.exe
+    VadRoot 88efec98 Vads 3445 Clone 0 Private 30423. Modified 71292. Locked 0.
+    DeviceMap e3743340
+    Token                             e29be5e0
+    ElapsedTime                       00:54:31.359
+    UserTime                          00:00:019.234
+    KernelTime                        00:04:04.828
+    QuotaPoolUsage[PagedPool]         1075132
+    QuotaPoolUsage[NonPagedPool]      137800
+    Working Set Sizes (now,min,max)  (15457, 50, 345) (61828KB, 200KB, 1380KB)
+    PeakWorkingSetSize                48919
+    VirtualSize                       585 Mb
+    PeakVirtualSize                   978 Mb
+    PageFaultCount                    123488
+    MemoryPriority                    BACKGROUND
+    BasePriority                      8
+    CommitCharge                      49919
+
+[...]
+
+THREAD 84f25300  Cid 44c8.6288  Teb: 7ff8e000 Win32Thread: bc486830 READY
+IRP List:
+    88699110: (0006,0220) Flags: 00000884  Mdl: 00000000
+Not impersonating
+DeviceMap                 e3743340
+Owning Process            8607c020       Image:         explorer.exe
+Wait Start TickCount      1327981        Ticks: 29 (0:00:00:00.453)
+Context Switch Count      145332         LargeStack
+UserTime                  00:00:00.000
+KernelTime                00:00:00.093
+Win32 Start Address SHLWAPI!SHCreateThread (0x77ec3ea5)
+Start Address kernel32!BaseThreadStartThunk (0x7c8217ec)
+Stack Init a98e4000 Current a98e3700 Base a98e4000 Limit a98e0000 Call 0
+Priority 8 BasePriority 8 PriorityDecrement 0
+ChildEBP RetAddr
+a98e3718 80833ec5 nt!KiSwapContext+0x26
+a98e3744 80829bc0 nt!KiSwapThread+0x2e5
+a98e378c 8087e0d8 nt!KeWaitForSingleObject+0x346
+a98e374c 8087e397 nt!ExpWaitForResource+0x30
+a98e37e4 badff32a nt!ExAcquireResourceExclusiveLite+0x8d
+a98e3808 badffe35 driverA+0x132a
+a98e3824 bae02028 driverA+0x1e35
+a98e3868 bae0e45a driverA+0x2208
+a98e38a0 8081e095 driverA+0x1045a
+a98e38b4 b972c73b nt!IofCallDriver+0x45
+```
+
+```
+[...]
+a98e38e8 b9b194e1 nt!IofCallDriver+0x45
+[...]
+a98e3940 b85cbf08 nt!IofCallDriver+0x45
+a98e3968 b85cbcfc driverB!LowerDevicePassThrough+0x48
+a98e398c b85bd63d driverB+0x6fcc
+a98e3a24 b85cb167 driverB+0x763d
+a98e3a34 b85cb1b7 driverB+0x15167
+a98e3a5c 8081e095 driverB!DispatchPassThrough+0x48
+a98e3a70 808f13b nt!IofCallDriver+0x45
+a98e3b58 80939c6a nt!IopParseDevice+0xa35
+a98e3bd8 80935d9e nt!ObpLookupObjectName+0x5b0
+a98e3c2c 808ece57 nt!ObOpenObjectByName+0xea
+a98e3ca8 808ee0f1 nt!IoCreateFile+0x447
+a98e3d04 808f1e31 nt!IoCreateFile+0xa3
+a98e3d44 8088ad3c nt!NtOpenFile+0x27
+a98e3d44 7c9485ec nt!KiFastCallEntry+0xfc (TrapFrame @ a98e3d64)
+03bbda04 7c82bdf6 ntdll!KiFastSystemCallRet
+03bbda2c 7c82dd9a kernel32!BasepSxsCreateStreams+0xe2
+03bbda9c 7c82dd95 kernel32!BasepSxsCreateProcessCsrMessage+0x136
+03bbec24 7c802a40 kernel32!CreateProcessInternalW+0x1943
+03bbee2f 7ca36750 kernel32!CreateProcessW+0x2c
+03bbd80 7ca36b45 SHELL32!_SHCreateProcess+0x387
+03bbded4 7ca3617b SHELL32!CShellExecute::DoExecCommand+0xb4
+03bbee0 7ca35a76 SHELL32!CShellExecute::TryInvokeApplication+0x49
+03bbef4 7ca3599f SHELL32!CShellExecute::ExecuteNormal+0xb1
+03bbee08 7ca35933 SHELL32!ShellExecuteNormal+0x30
+03bbee24 7ca452ff SHELL32!ShellExecuteExW+0x8d
+```
+
+```
+1: kd> .thread 84e6a600
+```
+隐式线程现为 84e6a600
+
+```
+1: kd> kv 100
+```
+
+```
+[...]
+03bbda04 7c82bdf6 001200a9 03bbda8c 03bbdb20 ntdll!KiFastSystemCallRet
+03bbda2c 7c82dd9a 00000000 00000000 001200a9 kernel32!BasepSxsCreateStreams+0xe2
+03bbda9c 7c82dd95 00000000 00000000 03bbdc38 kernel32!BasepSxsCreateProcessCsrMessage+0x136
+03bbec24 7c802a40 00000000 01daf89c 01da904 kernel32!CreateProcessInternalW+0x1943
+03bbee2f 7ca36750 01daf89c 01da904 00000000 kernel32!CreateProcessW+0x2c
+03bbd80 7ca36b45 00010098 00000000 01daffac SHELL32!_SHCreateProcess+0x387
+[...]
+```
+
+```
+1: kd> du /c 100 01daf8c
+```
+
+```
+01daf8c9 "C:\\Program Files\\App Package\\Application.exe"
+```
+
+此模式与类似的句柄泄漏（第 526 页）或僵尸进程（第 1158 页）之间的区别在于：泄漏通常发生在进程忘记关闭句柄时，而进程工厂会创建活跃进程，这些进程是完整的资源容器并消耗系统资源。例如，它们都拥有完整的句柄表，或者如果是 GUI 进程，则会消耗 GDI 资源。
+
+## 间歇性内存泄漏
+
+此模式的一个示例与进程堆 176 的大块分配泄漏有些相似。一个应用程序具有一些功能，执行每个命令后，其提交内存会增加 50 - 60 Mb。在故障发生前和每次故障发生后各获取了三个进程内存转储：
+
+```
+// Before failures
+
+0:000> !address -summary
+```
+
+**使用情况摘要**
+
+| 类型 | 区域数 | 总大小 | 占用百分比 | 总百分比 |
+|------|----------|------------|---------|----------|
+| 空闲 | 267 | 76c50000 (1.856 Gb) | | 92.79% |
+| <未分类> | 270 | 4d6f000 (77.434 Mb) | 52.45% | 3.78% |
+| 映像 | 620 | 31bf000 (49.746 Mb) | 33.70% | 2.43% |
+| 堆栈 | 60 | 1400000 (20.000 Mb) | 13.55% | 0.98% |
+| 激活上下文数据 | 48 | 35000 (212.000 kb) | 0.14% | 0.01% |
+| NLS 表 | 1 | 23000 (140.000 kb) | 0.09% | 0.01% |
+| TEB | 20 | 14000 (80.000 kb) | 0.05% | 0.00% |
+| CSR 共享内存 | 1 | 5000 (20.000 kb) | 0.01% | 0.00% |
+| PEB | 1 | 1000 (4.000 kb) | 0.00% | 0.00% |
+
+**类型汇总（已用）**
+
+| 类型 | 区域数 | 总大小 | 占用百分比 | 总百分比 |
+|------|----------|------------|---------|----------|
+| MEM_PRIVATE | 296 | 3bca000 (59.789 Mb) | 40.50% | 2.92% |
+| MEM_IMAGE | 647 | 340c000 (52.047 Mb) | 35.26% | 2.54% |
+| MEM_MAPPED | 78 | 23ca000 (35.789 Mb) | 24.24% | 1.75% |
+
+**状态汇总**
+
+| 状态 | 区域数 | 总大小 | 占用百分比 | 总百分比 |
+|-------|----------|------------|---------|----------|
+| MEM_FREE | 267 | 76c50000 (1.856 Gb) | | 92.79% |
+| MEM_RESERVE | 125 | 50060000 (80.023 Mb) | 54.21% | 3.91% |
+| MEM_COMMIT | 896 | 439a0000 (67.602 Mb) | 45.79% | 3.30% |
+
+**保护汇总（提交）**
+
+| 保护 | 区域数 | 总大小 | 占用百分比 | 总百分比 |
+|-------|----------|------------|---------|----------|
+| PAGE_EXECUTE_READ | 125 | 1f2c000 (31.172 Mb) | 21.12% | 1.52% |
+| PAGE_READONLY | 363 | 1ee5000 (30.895 Mb) | 20.93% | 1.51% |
+| PAGE_READWRITE | 309 | 4c2000 (4.758 Mb) | 3.22% | 0.23% |
+| PAGE_WRITECOPY | 43 | 6a000 (424.000 kb) | 0.28% | 0.02% |
+| PAGE_READWRITE\|PAGE_GUARD | 40 | 4b000 (300.000 kb) | 0.20% | 0.01% |
+| PAGE_EXECUTE_READWRITE | 15 | 11000 (68.000 kb) | 0.04% | 0.00% |
+| PAGE_EXECUTE | 1 | 1000 (4.000 kb) | 0.00% | 0.00% |
+

@@ -1,0 +1,298 @@
+
+
+```
+fffffa60`0495ce80 00000000`00000001
+fffffa60`0495ce88 00000000`0000000a
+fffffa60`0495ce90 ffffffa60`3d5917a
+fffffa60`0495ce98 00000000`40000082
+fffffa60`0495cea0 00000000`00000001
+fffffa60`0495cea8 fffff800`01922c3e nt!KeBugCheck2+0x92e
+fffffa60`0495ceb0 fffff800`000000d1
+fffffa60`0495ceb8 00000000`000004d0
+fffffa60`0495cec0 fffff800`01443640 nt!KiProcessorBlock
+fffffa60`0495cec8 00000000`0000000a
+fffffa60`0495ced0 ffffffa60`3d5917a
+fffffa60`0495ced8 ffffffa60`0495cf70
+fffffa60`0495cee0 ffffffa80`02bdeb00
+fffffa60`0495cee8 00000000`00000000
+fffffa60`0495cef0 00000000`00000000
+fffffa60`0495cef8 fffffa80`02bdeb00
+fffffa60`0495cf00 00000000`c21a6d00
+fffffa60`0495cf08 00000000`00000000
+fffffa60`0495cf10 fffff800`0198e7a0 nt!KiInitialPCR+0x2a0
+fffffa60`0495cf18 fffff800`0198e680 nt!KiInitialPCR+0x180
+fffffa60`0495cf20 fffff8a0`02bb7320
+fffffa60`0495cf28 00000000`00000000
+fffffa60`0495cf30 00000000`00000000
+fffffa60`0495cf38 fffff960`00000003
+[...]
+fffffa60`0495d050 00000000`00000001
+fffffa60`0495d058 00000000`83360018
+fffffa60`0495d060 ffffffa80`02b3ee40
+fffffa60`0495d068 fffff800`0186e650 nt!KeBugCheckEx
+fffffa60`0495d070 00000000`00000000
+fffffa60`0495d078 00000000`00000000
+fffffa60`0495d080 00000000`00000000
+fffffa60`0495d088 00000000`00000000
+fffffa60`0495d090 00000000`00000000
+fffffa60`0495d098 00000000`00000000
+fffffa60`0495d0a0 00000000`00000000
+[...]
+```
+
+If BSOD was reported after installing new drivers, we shouldn’t suspect _SATA_Driver_ package here because its components would almost always be present on any bugcheck thread as referenced after a bugcheck cause. Their presence is the “effect”. This example might seem trivial and pointless, but we’ve seen some memory dump analysis conclusions based on the reversal of causes and effects.
+
+## Embedded Comments
+
+Such comments in dump files are useful to record external information like the reason for saving a memory dump, a tool used to do that, and some pre-analysis and monitoring data that might help or guide in the future analysis. Comments are not widely used, but some examples include **Manual Dump** (page 630), **False Positive Dump** (page 393) patterns, and process and thread CPU consumption comments in dump files saved by Sysinternals ProcDump62 tool. Such comments may not be necessarily saved by IDebugClient2::WriteDumpFile2 function but any buffer saved in memory that is accessible later from a dump file will do as was easily demonstrated by the Citrix SystemDump63 tool that allowed embedding comments of arbitrary complexity.
+
+Here we might need to do manual stack trace reconstruction⁶⁴ like shown in the following example:
+
+```
+0:002> ~2s
+eax=00000070 ebx=0110fb94 ecx=00000010 edx=005725d8 esi=0110fe58 edi=00000d80
+eip=7c82847c esp=0110efe0 ebp=0110eff0 iopl=0 nv up ei pl zr na pe nc
+cs=001b ss=0023 ds=0023 es=0023 fs=003b gs=0000 efl=00000246
+ntdll!KiFastSystemCallRet:
+7c82847c c3 ret
+
+0:002> kl
+ChildEBP RetAddr
+0110efdc 00000000 ntdll!KiFastSystemCallRet
+
+0:002> !teb
+TEB at 7ffdc000
+ExceptionList: 0110f980
+StackBase: 01110000
+StackLimit: 0110d000
+SubSystemTib: 00000000
+FiberData: 00001e00
+ArbitraryUserPointer: 00000000
+Self: 7ffdc000
+EnvironmentPointer: 00000000
+ClientId: 00000d04 . 00000bd0
+RpcHandle: 00000000
+Tls Storage: 00000000
+PEB Address: 7ffda000
+LastErrorValue: 87
+LastStatusValue: c000000d
+Count Owned Locks: 0
+HardErrorMode: 0
+
+0:002> dps 0110d000 01110000
+0110d000 00000000
+0110d004 00000000
+[...]
+0110f640 0110f64c
+0110f644 02b91ea8
+0110f648 00001000
+0110f64c 00000004
+0110f650 0110f6f0
+0110f654 0374669d DbgHelp!WriteFullMemory+0x3cd
+0110f658 fffffffd
+0110f65c 0110fdd0
+0110f660 00000000
+[...]
+0110f6ac 00040004
+0110f6b0 7ffe0000 SharedUserData
+0110f6b4 00000000
+0110f6b8 00001000
+0110f6bc 00000000
+0110f6c0 0480f5c0
+0110f6c4 00000000
+0110f6c8 0c4a0000
+0110f6cc 00000000
+0110f6d0 000003c7
+0110f6d4 00000000
+0110f6d8 00023b17
+0110f6dc 00000000
+0110f6e0 01110000
+0110f6e4 00000000
+0110f6e8 0999f000
+0110f6ec 00000000
+0110f6f0 0110f704
+0110f6f4 037469d6 DbgHelp!WriteDumpData+0x206
+0110f6f8 0110f738
+0110f6fc 0110f7b0
+0110f700 00000000
+0110f704 0110f868
+0110f708 03747449 DbgHelp!MiniDumpProvideDump+0x359
+0110f70c 0110f738
+[...]
+0110ff24 0000000a
+0110ff28 33017f51 ModuleA!Run+0xde
+0110ff2c 00000001
+0110ff30 0110ff74
+0110ff34 00f08898
+0110ff38 00000000
+0110ff3c 00f082a8
+0110ff40 00000000
+0110ff44 00000001
+0110ff48 33017e33 ModuleA!ThreadProc+0x2c
+0110ff4c a9b21e1e
+0110ff50 00000000
+0110ff54 00000000
+0110ff58 00f08898
+0110ff5c 0110ff4c
+0110ff60 0110ffac
+0110ff64 0110ff9c
+0110ff68 33054245
+0110ff6c 9ba52ad2
+0110ff70 00000000
+0110ff74 0110ffac
+0110ff78 78543433 msvcr90!_endthreadex+0x44
+0110ff7c 00f082a8
+0110ff80 a9b2b0d3
+0110ff84 00000000
+0110ff88 00000000
+0110ff8c 00f08898
+0110ff90 0110ff80
+0110ff94 0110ff80
+0110ff98 0110ffdc
+[...]
+0110ff9c 0110ffdc
+0110ffa0 7858c5fe msvcr90!_except_handler4
+0110ffa4 0f8787df
+0110ffa8 00000000
+0110ffac 0110ffb8
+0110ffb0 785434c7 msvcr90!_endthreadex+0xd8
+0110ffb4 00000000
+0110ffb8 0110ffec
+0110ffbc 776e482f kernel32!BaseThreadStart+0x34
+0110ffc0 00f88898
+0110ffc4 00000000
+0110ffc8 00000000
+0110ffcc 00f88898
+0110ffd0 00000000
+0110ffd4 0110ffc4
+0110ffd8 80833bcc
+0110ffdc ffffffff
+0110ffe0 77e61a60 kernel32!_except_handler3
+0110ffe4 776e4838 kernel32!`string'+0x98
+0110ffe8 00000000
+0110ffec 00000000
+0110fff0 00000000
+0110fff4 7854345e msvcr90!_endthreadex+0x6f
+0110fff8 00f88898
+0110fffc 00000000
+01110000 00000130
+
+0:002> k L=0110f650 0110f650 0110f650
+ChildEBP RetAddr
+WARNING: Frame IP not in any known module. Following frames may be wrong.
+0110f650 0374659d 0x110f650
+0110f6f0 0374696d DbgHelp!WriteFullMemory+0x3cd
+0110f704 03747449 DbgHelp!WriteDumpData+0x206
+0110f868 03747662 DbgHelp!MiniDumpProvideDump+0x359
+0110f8dc 33050dd9 DbgHelp!MiniDumpWriteDump+0x1b2
+[...]
+0110fdfc 33031726 ModuleA!WriteExceptionMiniDump+0x50
+0110fea0 33018c81 ModuleA!ThreadHung+0x6c
+[...]
+0110ff44 33017e33 ModuleA!Run+0xde
+00000000 00000000 ModuleA!ThreadProc+0x2c
+```
+
+⁶⁴ Manual Stack Trace Reconstruction, Memory Dump Analysis Anthology, Volume 1, page 157
+
+## Comments
+
+One of the asked questions:
+
+Q. Why does “k” even need the instruction pointer to walk the stack? I’ve always seen it set to EBP and ESP like this which doesn’t make sense to me.
+
+A. We think it needs EIP to show the top stack frame correctly pointing to the currently executing instruction. In our pattern example, it doesn’t matter.
+
+## Environment Hint
+
+This pattern is useful for inconsistent dumps or incomplete supporting information. It provides information about environment variables for troubleshooting suggestions such as product elimination for testing purposes and necessary upgrade, for example:
+
+```
+0: kd> !peb
+PEB at 7ffd7000
+InheritedAddressSpace: No
+ReadImageFileExecOptions: Yes
+BeingDebugged: No
+ImageBaseAddress: 01000000
+Ldr 7c8897e0
+Ldr.Initialized: Yes
+Ldr.InInitializationOrderModuleList: 00081f18 . 000f9e88
+Ldr.InLoadOrderModuleList: 00081eb0 . 000f9e78
+Ldr.InMemoryOrderModuleList: 00081eb8 . 000f9e80
+Base TimeStamp Module
+1000000 45d6a03c Feb 17 06:27:08 2007 C:\WINNT\system32\svchost.exe
+7c800000 49900d60 Feb 09 11:02:56 2009 C:\WINNT\system32\ntdll.dll
+[...]
+SubSystemData: 00000000
+ProcessHeap: 00080000
+ProcessParameters: 00020000
+WindowTitle: 'C:\WINNT\system32\svchost.exe'
+ImageFile: 'C:\WINNT\system32\svchost.exe'
+CommandLine: 'C:\WINNT\system32\svchost.exe -k rpcss'
+DllPath: [...]
+Environment: 00010000
+ALLUSERSPROFILE=C:\Documents and Settings\All Users
+[...]
+PROTECTIONDIR=C:\Documents and Settings\All Users\Application Data\3rdPartyAntivirus\Protection
+[...]
+Path= [...]
+```
+
+### Comments
+
+We can get environment hints from all processes in a complete memory dump by using this command:
+
+```
+!for_each_process ".process /r /p @#Process; !peb"
+```
+
+## Error Reporting Fault
+
+This pattern is about faults in error reporting infrastructure. The latter should be guarded against such faults to avoid recursion. Here is a summary example of such a pattern on Windows platforms that involve Windows Error Reporting (WER).
+
+In a complete memory dump, we notice thousands of WerFault.exe processes:
+
+```
+0: kd> !process 0 0
+[...]
+PROCESS fffffa8058010380
+SessionId: 2 Cid: 488f0 Peb: 7efdf000 ParentCid: 27cb8
+DirBase: 25640c000 ObjectTable: fffffa8a06cd2ac50 HandleCount: 54.
+Image: WerFault.exe
+
+PROCESS fffffa805bbd5970
+SessionId: 2 Cid: 4801c Peb: 7efdf000 ParentCid: 27cb8
+DirBase: 2c3f69000 ObjectTable: fffffa8a040563af0 HandleCount: 54.
+Image: WerFault.exe
+
+PROCESS fffffa8078aec060
+SessionId: 2 Cid: 3feac Peb: 7efdf000 ParentCid: 488f0
+DirBase: abd200000 ObjectTable: fffffa8a07851a0a0 HandleCount: 59.
+Image: WerFault.exe
+
+PROCESS fffffa805bbe9a10
+SessionId: 2 Cid: 3d8b8 Peb: 7efdf000 ParentCid: 4801c
+DirBase: 261f91000 ObjectTable: fffffa8a02d864d40 HandleCount: 56.
+Image: WerFault.exe
+
+PROCESS fffffa805bd29060
+SessionId: 2 Cid: 1142c Peb: 7efdf000 ParentCid: 3feac
+DirBase: 429fb3000 ObjectTable: fffffa8a0355b42e0 HandleCount: 58.
+Image: WerFault.exe
+
+PROCESS fffffa8053d853d0
+SessionId: 2 Cid: 1fc4c Peb: 7efdf000 ParentCid: 3d8b8
+DirBase: 714371000 ObjectTable: fffffa8a01cb6bba0 HandleCount: 58.
+Image: WerFault.exe
+[...]
+```
+
+Each process has only one thread running through WOW64 modules (Virtualized Process pattern, page 1068), so we get its 32-bit stack trace:
+
+```
+0: kd> !process fffffffa8075c21b30 3f
+[...]
+THREAD fffffa807c183b60 Cid 2d3c8.4334c Teb: 000000007efdb000 Win32Thread: fffff900c3f71010 WAIT: (UserRequest) UserMode Non-Alertable
+[...]
+```
+

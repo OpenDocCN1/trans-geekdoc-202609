@@ -1,0 +1,3 @@
+# Embedded Comments
+
+Such comments in dump files are useful to record external information like the reason for saving a memory dump, a tool used to do that, and some pre-analysis and monitoring data that might help or guide in the future analysis. Comments are not widely used, but some examples include **Manual Dump** (page 630), **False Positive Dump** (page 393) patterns, and process and thread CPU consumption comments in dump files saved by Sysinternals ProcDump62 tool. Such comments may not be necessarily saved by IDebugClient2::WriteDumpFile2 function but any buffer saved in memory that is accessible later from a dump file will do as was easily demonstrated by the Citrix SystemDump63 tool that allowed embedding comments of arbitrary complexity.

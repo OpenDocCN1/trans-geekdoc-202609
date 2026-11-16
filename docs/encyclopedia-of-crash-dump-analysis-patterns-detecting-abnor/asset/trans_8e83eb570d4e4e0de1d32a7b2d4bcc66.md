@@ -1,0 +1,252 @@
+
+02 rpcrt4!NdrpClientCall3
+03 rpcrt4!NdrClientCall3
+04 winspool!RpcFindNextPrinterChangeNotification
+05 winspool!FindNextPrinterChangeNotification
+06 prncache!PrintCache::Listeners::Listener::ProcessWait
+07 prncache!PrintCache::Listeners::Listener::ProcessWaitCB
+08 ntdll!TppWaitpExecuteCallback
+09 ntdll!TppWorkerThread
+0a kernel32!BaseThreadInitThunk
+0b ntdll!RtlUserThreadStart
+
+ID: 1344.f98 挂起: 1 TEB: 000007ff`fffa6000 未冻结
+# 调用站点
+00 ntdll!RtlUserThreadStart
+
+// 第 12 次转储
+
+ID: 1344.1ca4 挂起: 1 TEB: 000007ff`fffdd000 未冻结
+# 调用站点
+00 usp10!otlChainingLookup::apply
+01 usp10!ApplyLookup
+02 usp10!ApplyFeatures
+03 usp10!SubstituteOtlGlyphs
+04 usp10!GenericEngineGetGlyphs
+05 usp10!ShlShape
+06 usp10!ScriptShape
+07 usp10!RenderItemNoFallback
+08 usp10!RenderItemWithFallback
+09 usp10!RenderItem
+0a usp10!ScriptStringAnalyzeGlyphs
+0b usp10!ScriptStringAnalyse
+0c lpk!LpkCharsetDraw
+0d lpk!LpkDrawTextEx
+0e user32!DT_DrawStr
+0f user32!DT_DrawJustifiedLine
+10 user32!DrawTextExWorker
+11 user32!DrawTextW
+12 comctl32!CLVView::_ComputeLabelSizeWorker
+13 comctl32!CLVView::v_RecomputeLabelSize
+14 comctl32!CLVListView::v_DrawItem
+15 comctl32!CLVDrawItemManager::DrawItem
+16 comctl32!CLVDrawManager::_PaintItems
+17 comctl32!CLVDrawManager::_PaintWorkArea
+18 comctl32!CLVDrawManager::_OnPaintWorkAreas
+19 comctl32!CLVDrawManager::OnPaint
+1a comctl32!CListView::WndProc
+1b comctl32!CListView::s_WndProc
+1c user32!CallWindowProcCheckWow
+1d user32!CallWindowProcAorW
+1e user32!CallWindowProcW
+1f comctl32!CallOriginalWndProc
+20 comctl32!CallNextSubclassProc
+21 comctl32!DefSubclassProc
+22 shell32!DefSubclassProc
+23 shell32!CListViewHost::_ListViewSubclassWndProc
+24 comctl32!CallNextSubclassProc
+25 comctl32!MasterSubclassProc
+26 user32!UserCallWinProcCheckWow
+27 user32!DispatchClientMessage
+28 user32!_fnDOWORD
+29 ntdll!KiUserCallbackDispatcherContinue
+2a user32!NtUserDispatchMessage
+2b user32!DispatchMessageWorker
+2c user32!IsDialogMessageW
+2d comctl32!Prop_IsDialogMessage
+2e comctl32!RealPropertySheet
+2f comctl32!_PropertySheet
+30 comdlg32!Print_InvokePropertySheets
+31 comdlg32!PrintDlgExX
+32 comdlg32!PrintDlgExW
+33 notepad!GetPrinterDCviaDialog
+34 notepad!PrintIt
+35 notepad!NPCommand
+36 notepad!NPWndProc
+37 user32!UserCallWinProcCheckWow
+38 user32!DispatchMessageWorker
+39 notepad!WinMain
+3a notepad!DisplayNonGenuineDlgWorker
+3b kernel32!BaseThreadInitThunk
+3c ntdll!RtlUserThreadStart
+
+ID: 1344.1ab0 挂起: 1 TEB: 000007ff`fffdb000 未冻结
+# 调用站点
+00 ntdll!NtWaitForMultipleObjects
+01 ntdll!TppWaiterThread
+02 kernel32!BaseThreadInitThunk
+03 ntdll!RtlUserThreadStart
+
+ID: 1344.1638 挂起: 1 TEB: 000007ff`ffff9000 未冻结
+# 调用站点
+00 ntdll!NtUnmapViewOfSection
+01 KERNELBASE!FreeLibrary
+02 user32!PrivateExtractIconsW
+03 shell32!SHPrivateExtractIcons
+04 shell32!SHDefExtractIconW
+05 shell32!CExtractIcon::_ExtractW
+06 shell32!CExtractIconBase::Extract
+07 shell32!IExtractIcon_Extract
+08 shell32!GetIIIndexGivenPIIcon
+09 shell32!GetIIIndexFromItem
+0a shell32!SHGetIconIndexFromPIDL
+0b shell32!MapIDListToIconIIndex
+0c shell32!CLoadSystemIconTask::InternalResumeRT
+0d shell32!CRunnableTask::Run
+0e shell32!CShellTask::TT_Run
+0f shell32!CShellTaskThread::ThreadProc
+10 shell32!CShellTaskThread::s_ThreadProc
+11 shlwapi!ExecuteWorkItemThreadProc
+12 ntdll!RtlpTpWorkCallback
+13 ntdll!TppWorkerThread
+14 kernel32!BaseThreadInitThunk
+15 ntdll!RtlUserThreadStart
+
+ID: 1344.830 挂起: 1 TEB: 000007ff`fffd7000 未冻结
+# 调用站点
+00 ntdll!NtWaitForMultipleObjects
+01 KERNELBASE!WaitForMultipleObjectsEx
+02 kernel32!WaitForMultipleObjectsEx
+03 prncache!PrintCache::Store::CacheStore::RegistryMonitor::MonitorRegistryChanges
+04 prncache!PrintCache::Store::CacheStore::RegistryMonitor::MonitorRegistryChangesThreadProc
+05 kernel32!BaseThreadInitThunk
+06 ntdll!RtlUserThreadStart
+
+ID: 1344.1edc 挂起: 1 TEB: 000007ff`fffd5000 未冻结
+# 调用站点
+00 ntdll!NtWaitForMultipleObjects
+01 KERNELBASE!WaitForMultipleObjectsEx
+02 kernel32!WaitForMultipleObjectsExImplementation
+03 user32!RealMsgWaitForMultipleObjectsEx
+04 user32!MsgWaitForMultipleObjectsEx
+05 user32!MsgWaitForMultipleObjects
+06 shell32!CShellTaskScheduler::_TT_MsgWaitForMultipleObjects
+07 shell32!CShellTaskScheduler::TT_TransitionThreadToRunningOrTerminating
+08 shell32!CShellTaskThread::ThreadProc
+09 shell32!CShellTaskThread::s_ThreadProc
+0a shlwapi!ExecuteWorkItemThreadProc
+0b ntdll!RtlpTpWorkCallback
+0c ntdll!TppWorkerThread
+0d kernel32!BaseThreadInitThunk
+0e ntdll!RtlUserThreadStart
+
+ID: 1344.1b44 挂起: 1 TEB: 000007ff`fffd3000 未冻结
+# 调用站点
+00 ntdll!NtWaitForMultipleObjects
+01 KERNELBASE!WaitForMultipleObjectsEx
+02 kernel32!WaitForMultipleObjectsExImplementation
+03 user32!RealMsgWaitForMultipleObjectsEx
+04 user32!MsgWaitForMultipleObjectsEx
+05 user32!MsgWaitForMultipleObjects
+06 shell32!CShellTaskScheduler::_TT_MsgWaitForMultipleObjects
+07 shell32!CShellTaskScheduler::TT_TransitionThreadToRunningOrTerminating
+08 shell32!CShellTaskThread::ThreadProc
+09 shell32!CShellTaskThread::s_ThreadProc
+0a shlwapi!ExecuteWorkItemThreadProc
+0b ntdll!RtlpTpWorkCallback
+0c ntdll!TppWorkerThread
+0d kernel32!BaseThreadInitThunk
+0e ntdll!RtlUserThreadStart
+
+ID: 1344.1d9c 挂起: 1 TEB: 000007ff`fffae000 未冻结
+# 调用站点
+00 gdi32!ZwGdiSetDIBitsToDeviceInternal
+01 gdi32!SetDIBitsToDevice
+02 gdi32!SetDIBits
+03 user32!BitmapFromDIB
+04 user32!ConvertDIBitmap
+05 user32!ConvertDIBIcon
+06 user32!CreateIconFromResourceEx
+07 user32!PrivateEnumProc
+08 kernel32!EnumResourceNamesInternal
+09 kernel32!EnumResourceNamesExW
+0a user32!PrivateExtractIconsW
+0b shell32!SHPrivateExtractIcons
+0c shell32!SHDefExtractIconW
+0d shell32!CExtractIcon::ExtractW
+0e shell32!CExtractIconBase::Extract
+0f shell32!IExtractIcon_Extract
+10 shell32!_GetIIIndexGivenPIIcon
+11 shell32!_GetIIIndexFromItem
+12 shell32!SHGetIconIndexFromPIDL
+13 shell32!MapIDListToIconIIndex
+14 shell32!CLoadSystemIconTask::InternalResumeRT
+15 shell32!CRunnableTask::Run
+16 shell32!CShellTask::TT_Run
+17 shell32!CShellTaskThread::ThreadProc
+18 shell32!CShellTaskThread::s_ThreadProc
+19 shlwapi!ExecuteWorkItemThreadProc
+1a ntdll!RtlpTpWorkCallback
+1b ntdll!TppWorkerThread
+1c kernel32!BaseThreadInitThunk
+1d ntdll!RtlUserThreadStart
+
+ID: 1344.139c 挂起: 1 TEB: 000007ff`fffac000 未冻结
+# 调用站点
+00 ntdll!ZwMapViewOfSection
+01 KERNELBASE!BaseLoadLibraryAsDataFileInternal
+02 KERNELBASE!LoadLibraryExW
+03 user32!PrivateExtractIconsW
+04 shell32!SHPrivateExtractIcons
+05 shell32!SHDefExtractIconW
+06 shell32!CExtractIcon::ExtractW
+07 shell32!CExtractIconBase::Extract
+08 shell32!IExtractIcon_Extract
+09 shell32!_GetIIIndexGivenPIIcon
+0a shell32!_GetIIIndexFromItem
+0b shell32!SHGetIconIndexFromPIDL
+0c shell32!MapIDListToIconIIndex
+0d shell32!CLoadSystemIconTask::InternalResumeRT
+0e shell32!CRunnableTask::Run
+0f shell32!CShellTask::TT_Run
+10 shell32!CShellTaskThread::ThreadProc
+11 shell32!CShellTaskThread::s_ThreadProc
+12 shlwapi!ExecuteWorkItemThreadProc
+13 ntdll!RtlpTpWorkCallback
+14 ntdll!TppWorkerThread
+15 kernel32!BaseThreadInitThunk
+16 ntdll!RtlUserThreadStart
+
+ID: 1344.1b80 挂起: 1 TEB: 000007ff`fffaa000 未冻结
+# 调用站点
+00 ntdll!ZwAlpcSendWaitReceivePort
+01 rpcrt4!LRPC_CASSOCIATION::AlpcSendWaitReceivePort
+02 rpcrt4!LRPC_BASE_CCALL::DoSendReceive
+03 rpcrt4!LRPC_BASE_CCALL::SendReceive
+04 rpcrt4!NdrpcClientCall2
+05 rpcrt4!NdrClientCall2
+06 ole32!CRpcResolver::BulkUpdateOIDs
+07 ole32!CROIDTable::ClientBulkUpdateOIDWithPingServer
+08 ole32!CROIDTable::WorkerThreadLoop
+09 ole32!CRpcThread::WorkerLoop
+0a ole32!CRpcThreadCache::RpcWorkerThreadEntry
+0b kernel32!BaseThreadInitThunk
+0c ntdll!RtlUserThreadStart
+
+ID: 1344.eb8 挂起: 1 TEB: 000007ff`fffa8000 未冻结
+# 调用站点
+00 ntdll!NtWaitForWorkViaWorkerFactory
+01 ntdll!TppWorkerThread
+02 kernel32!BaseThreadInitThunk
+03 ntdll!RtlUserThreadStart
+
+ID: 1344.f98 挂起: 1 TEB: 000007ff`fffa6000 未冻结
+# 调用站点
+00 ntdll!NtWaitForWorkViaWorkerFactory
+01 ntdll!TppWorkerThread
+02 kernel32!BaseThreadInitThunk
+03 ntdll!RtlUserThreadStart
+
+ID: 1344.1fb0 挂起: 1 TEB: 000007ff`fffa4000 未冻结
+# 调用站点
+00 ntdll!RtlUserThreadStart

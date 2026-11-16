@@ -1,0 +1,290 @@
+
+
+## 注释
+
+Silverlight 应用程序使用 coreclr。
+
+```
+0:000> lmv m clr
+start    end        module name
+000007fe`eadc0000 000007fe`eb725000   clr        (pdb symbols)
+    Loaded symbol image file: clr.dll
+    Image path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll
+    Image name: clr.dll
+    Timestamp:        Thu Mar 18 12:39:07 2010 (4BA21EEB)
+    CheckSum:         00959DBD
+    ImageSize:        00965000
+    File version:     4.0.30319.1
+    Product version:  4.0.30319.1
+    File flags:       8 (Mask 3F) Private
+    File OS:          4 Unknown Win32
+    File type:        2.0 Dll
+    File date:        00000000.00000000
+    Translations:     0409.04b0
+    CompanyName:      Microsoft Corporation
+    ProductName:      Microsoft® .NET Framework
+    InternalName:     clr.dll
+    OriginalFilename: clr.dll
+    ProductVersion:   4.0.30319.1
+    FileVersion:      4.0.30319.1 (RTMRel.030319-0100)
+    PrivateBuild:     DBBLD431
+    FileDescription:  Microsoft .NET Runtime Common Language Runtime - WorkStation
+    LegalCopyright:   © Microsoft Corporation. All rights reserved.
+    Comments:         Flavor=Retail
+```
+
+```
+0:000> ~16kc
+Call Site
+ntdll!NtWaitForSingleObject
+KERNELBASE!WaitForSingleObjectEx
+clr!CLREvent::WaitEx
+clr!CLREvent::WaitEx
+clr!CLREvent::WaitEx
+clr!Thread::WaitSuspendEventsHelper
+clr!Thread::WaitSuspendEvents
+clr! ?? ::FNODOBFM::`string'
+clr!Thread::RareDisablePreemptiveGC
+clr!GCHeap::Base\(1,0,0,1::`::EnterInternal
+clr!AddThreadCallBackEx
+clr!ThreadpoolMgr::AsyncTimerCallbackCompletion
+clr!UnmanagedPerAppDomainTPCount::DispatchWorkItem
+clr!ThreadpoolMgr::NewWorkerThreadStart
+clr!ThreadpoolMgr::WorkerThreadStart
+clr!Thread::intermediateThreadProc
+kernel32!BaseThreadInitThunk
+ntdll!RtlUserThreadStart
+```
+
+## 巧合错误代码
+
+整个地址空间中搜索错误和状态代码可能会显示 **巧合错误代码**：
+
+```
+0:000> !heap -x -v c0000005
+Search VM for address range c0000005 - c0000005 : 028690b8 (c0000005), [...]
+
+0:000> dd 028690b8 l1
+028690b8 c0000005
+```
+
+在这种情况下，我们需要检查这些地址是否属于堆栈等易失性区域，因为这些值可能作为合法代码和图像数据存在：
+
+```
+0:000> !address 028690b8
+
+Usage:                   Image
+Allocation Base:         02700000
+Base Address:            02869000
+End Address:             02874000
+Region Size:             0000b000
+Type:                    01000000 MEM_IMAGE
+State:                   00001000 MEM_COMMIT
+Protect:                 00000002 PAGE_READONLY
+More info: lmv m ModuleA
+More info: !lmi ModuleA
+More info: ln 0x28690b8
+
+0:000> u 028690b8
+ModuleA!ComputeB:
+028690b8 050000c000  add eax,0C00000h
+[...]
+```
+
+## 另一个示例 (x64):
+
+```
+0:000> !heap -x -v c0000005
+Search VM for address range 00000000c0000005 - 00000000c0000005 : 7feff63ab60 (c0000005),
+
+0:000> !address 7feff63ab60
+Usage:                  Image
+Allocation Base:        000007fe`ff460000
+Base Address:           000007fe`ff635000
+End Address:            000007fe`ff63c000
+Region Size:            00000000`00007000
+Type:                   01000000 MEM_IMAGE
+State:                  00001000 MEM_COMMIT
+Protect:                00000004 PAGE_READWRITE
+More info: lmv m ole32
+More info: !lmi ole32
+More info: ln 0x7feff63ab60
+
+0:000> dp 7feff63ab60
+000007fe`ff63ab60 00000000`c0000005 00000194`00000001
+000007fe`ff63ab70 00000001`00000000 00000000`c0000aaa
+000007fe`ff63ab80 80000002`00000001 00000001`00000000
+000007fe`ff63ab90 00000000`c0000096 00000001`00000001
+000007fe`ff63aba0 00000001`00000000 00000000`80000003
+000007fe`ff63abb0 c00000fd`00000001 00000001`00000000
+000007fe`ff63abc0 00000000`c0000235 00000006`00000001
+000007fe`ff63abd0 00000001`00000000 00000000`c0004420
+```
+
+在后一种情况下，数据结构表明是一个错误表：
+
+```
+0:000> ln 7feff63ab60
+(000007fe`ff63ab60) ole32!gReportedExceptions
+```
+
+## 巧合帧
+
+对于某些堆栈跟踪，我们应始终注意原始堆栈数据中类似 **巧合符号信息** 模式（第 137 页）的巧合帧。此类帧可能导致错误的分析结论。请参考内核内存转储中的以下堆栈跟踪片段：
+
+```
+0: kd> kL 100
+ChildEBP RetAddr
+9c5b6550 8082d9a4 nt!KeBugCheckEx+0x1b
+9c5b6914 8088befa nt!KiDispatchException+0x3a2
+9c5b697c 8088beae nt!CommonDispatchException+0x4a
+9c5b699c 80a6056d nt!KiExceptionExit+0x186
+9c5b69a0 80893ae2 hal!KeReleaseQueuedSpinLock+0x2d
+9c5b6a08 b20c3de5 nt!MiFreePoolPages+0x7dc
+WARNING: Stack unwind information not available. Following frames may be wrong.
+9c5b6a48 b20c4107 DriverA+0x17de5
+[...]
+```
+
+具有 MiFreePoolPages 符号的帧可能暗示某种池损坏。我们甚至可以双重检查返回地址，并看到合乎常理的汇编语言代码：
+
+```
+0: kd> ub 8088beae
+nt!KiExceptionExit+0x167:
+8088be8f 33c9 xor ecx,ecx
+8088be91 e1a0000000 call nt!CommonDispatchException (8088beb0)
+8088be96 33d2 xor edx,edx
+8088be98 b901000000 mov ecx,1
+8088be9d 8e00000000 call nt!CommonDispatchException (8088beb0)
+8088bea2 33d2 xor edx,edx
+8088bea4 b902000000 mov ecx,2
+8088bea9 e802000000 call nt!CommonDispatchException (8088beb0)
+```
+
+```
+0: kd> ub 80a6056d
+hal!KeReleaseQueuedSpinLock+0x1b:
+80a6055b 7511 jne hal!KeReleaseQueuedSpinLock+0x2e (80a6056e)
+80a6055d 50 push eax
+80a6055e f00fbb119 lock cmpxchg dword ptr [ecx],ebx
+80a60562 58 pop eax
+80a60563 7512 jne hal!KeReleaseQueuedSpinLock+0x37 (80a60577)
+80a60565 5b pop ebx
+80a60566 8aca mov cl,dl
+80a60568 e8871e0000 call hal!KfLowerIrql (80a623f4)
+```
+
+```
+0: kd> ub 80893ae2
+nt!MiFreePoolPages+0x7c3:
+80893ac9 761c jbe nt!MiFreePoolPages+0x7e1 (80893ae7)
+80893acb ff75f8 push dword ptr [ebp-8]
+80893ace ff7508 push dword ptr [ebp+8]
+80893ad1 e87e1fcfff call nt!MiFreeNonPagedPool (8085dc54)
+80893ad6 8a55ff mov dl,byte ptr [ebp-1]
+80893ad9 6a0f push 0Fh
+80893adb 59              pop     ecx
+80893adc ff1524118080    call    dword ptr [nt!_imp_KeReleaseQueuedSpinLock (80801124)]
+```
+
+```
+0: kd> ub b20c3de5
+DriverA+0x17dcf:
+b20c3dcf 51              push    ecx
+b20c3dd0 ff5010          call    dword ptr [eax+10h]
+b20c3dd3 eb10           jmp     DriverA+0x17de5 (b20c3de5)
+b20c3dd5 8b5508          mov     edx,dword ptr [ebp+8]
+b20c3dd8 52              push    edx
+b20c3dd9 8d86a0000000    lea     eax,[esi+0A0h]
+b20c3ddf 50              push    eax
+b20c3de0 e8ebf1ffff     call    DriverA+0x16fd0 (b20c2fd0)
+```
+
+但是，如果我们尝试手动重建堆栈跟踪17，我们会自然跳过这三个帧（显示为带下划线的粗体）：
+
+```
+9c5b6550 8082d9a4 nt!KeBugCheckEx+0x1b
+9c5b6914 8088befa nt!KiDispatchException+0x3a2
+9c5b697c 8088beae nt!CommonDispatchException+0x4a
+9c5b699c 80a6056d nt!KiExceptionExit+0x186
+9c5b69a0 80893ae2 hal!KeReleaseQueuedSpinLock+0x2d
+9c5b6a08 b20c3de5 nt!MiFreePoolPages+0x7dc
+9c5b6a48 b20c4107 DriverA+0x17de5
+[...]
+```
+
+```
+0: kd> !thread
+THREAD 8f277020 Cid 081c.7298 Teb: 7ff11000 Win32Thread: 00000000 RUNNING on processor 0
+IRP List:
+8e234b60: (0006,0094) Flags: 00000000 Mdl: 00000000
+
+Not impersonating
+DeviceMap            e1002880
+Owning Process       8fc78b80       Image:         ProcessA.exe
+Attached Process     N/A            Image:         N/A
+Wait Start TickCount 49846879       Ticks: 0
+Context Switch Count 10
+UserTime             00:00:00.000
+KernelTime           00:00:00.000
+Win32 Start Address DllBaseThreadAddr (0x7654dc90)
+Start Address kernel32!BaseThreadStartThunk (0x77e617dc)
+Stack Init 9c5b7000 Current 9c5b6c50 Base 9c5b7000 Limit 9c5b4000 Call 0
+Priority 10 BasePriority 10 PriorityDecrement 0
+ChildEBP RetAddr  Args to Child
+[...]
+```
+
+```
+0: kd> dds 9c5b4000 9c5b7000
+9c5b4000 00000000
+9c5b4004 00000000
+9c5b4008 00000000
+[...]
+9c5b6290  ffdff13c
+9c5b6294  9c5b6550
+9c5b6298  80827e01 nt!KeBugCheckEx+0x1b
+9c5b629c  00000008
+9c5b62a0  00000286
+[...]
+9c5b654c  00000000
+9c5b6550  9c5b6914
+9c5b6554  8082d9a4 nt!KiDispatchException+0x3a2
+9c5b6558  0000008e
+9c5b655c  c0000005
+[...]
+9c5b6910  ffffffff
+9c5b6914  9c5b6984
+9c5b6918  8088befa nt!CommonDispatchException+0x4a
+9c5b691c  9c5b6930
+9c5b6920  00000000
+[...]
+9c5b6980  8088beae nt!KiExceptionExit+0x186
+9c5b6984  9c5b6a08
+9c5b6988  b20c3032 DriverA+0x17032
+9c5b698c  badb0d00
+9c5b6990  00000006
+9c5b6994  8dc11cec
+9c5b6998  808b6900 nt!KiTimerTableLock+0x3c0
+9c5b699c  9c5b69d4
+9c5b69a0  80a6056d hal!KeReleaseQueuedSpinLock+0x2d
+9c5b69a4  80893a2e nt!MiFreePoolPages+0x7dc
+9c5b69a8  808b0b40 nt!NonPagedPoolDescriptor
+9c5b69ac  03151fd0
+9c5b69b0  00000000
+9c5b69b4  00000000
+[...]
+9c5b6a04  8f47123b
+9c5b6a08  9c5b6a48
+9c5b6a0c  b20c3de5 DriverA+0x17de5
+9c5b6a10  8e3640a0
+9c5b6a14  8f4710d0
+[...]
+9c5b6a44  00000000
+9c5b6a48  9c5b6a80
+9c5b6a4c  b20c4107 DriverA+0x18107
+9c5b6a50  8f4710d0
+9c5b6a54  9c5b6a6c
+[...]
+```
+

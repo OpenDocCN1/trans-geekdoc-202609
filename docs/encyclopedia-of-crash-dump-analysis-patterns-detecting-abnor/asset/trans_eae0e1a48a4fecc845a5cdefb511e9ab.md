@@ -1,0 +1,185 @@
+
+
+```
+b2a9aca4 80829bc0 nt!KiSwapThread+0x2e5
+b2a9acec 8093b03d nt!KeWaitForSingleObject+0x346
+b2a9ad50 8088ad3c nt!NtWaitForSingleObject+0x9a
+b2a9ad50 7c9485ec nt!KiFastCallEntry+0xfc
+022cf8d0 7c821c8d ntdll!KiFastSystemCallRet
+022cf8e4 741269e5 kernel32!WaitForSingleObject+0x12
+022cf8f8 7412cdca ComponentE!Enumerate+0x37
+[...]
+022cf944 77cb33e1 RPCRT4!Invoke+0x30
+022cfd44 77cb35c4 RPCRT4!NdrStubCall2+0x299
+022cfd60 77caff7a RPCRT4!NdrServerCall2+0x19
+022cfd94 77c5042d RPCRT4!DispatchToStubInCNoAvrf+0x38
+022cfde8 77c50353 RPCRT4!RPC_INTERFACE::DispatchToStubWorker+0x11f
+022cfe0c 77c38e0d RPCRT4!RPC_INTERFACE::DispatchToStub+0xa3
+022cfe40 77c38cb3 RPCRT4!OSF_SCALL::DispatchHelper+0x149
+022cfe54 77c38c2b RPCRT4!OSF_SCALL::DispatchRPCCall+0x10d
+022cfea8 77c38b5c RPCRT4!OSF_SCALL::ProcessReceivedPDU+0x57f
+022cfea4 77c38e6b RPCRT4!OSF_SCALL::BeginRpcCall+0x194
+022cfff04 77c3e7b4 RPCRT4!OSF_SCConnection::ProcessReceiveComplete+0x435
+022cfff18 77c4b799 RPCRT4!ProcessConnectionServerReceiveEvent+0x21
+022cfff84 77c4bb95 RPCRT4!LOADABLE_TRANSPORT::ProcessIOEvents+0x1b8
+022cfff8c 77c5872d RPCRT4!ProcessIOEventsWrapper+0xd
+022cfffac 77c4ab10 RPCRT4!BaseCachedThreadRoutine+0x9d
+022cfffb8 7c824829 RPCRT4!ThreadStartRoutine+0x1b
+022cfffec 00000000 kernel32!BaseThreadStart+0x34
+```
+
+因此，我们有 4 个主要的 *等待链*（第 1092 页）端点，涉及语义上不相交的 *组件A*、*组件B*、*组件E* 和 *驱动程序A* 模块。尽管其模块名称并不暗示不相交性，但此示例摘录自真实事件，其中各模块具有不同的系统功能，甚至来自不同的软件供应商。
+
+## 语义结构
+
+### PID.TID
+
+此部分启动了称为 **语义结构** 的模式块。这些结构是具有意义的内存片段，有助于我们进行故障排除和调试。此块中的第一个模式涉及形式为 DWORD : DWORD 或 QWORD : QWORD 的 PID.TID 结构。此类内存片段对于等待链分析（第 1188 页）很有用，例如，通过查看原始堆栈上留下的 **执行残留**（第 371 页）来查找 RPC 或 (A)LPC 调用的目标或源。RPC 目标示例可在文章《寻找丢失的CID》^186 中找到。在这里，我们将查看另一个示例，这次是为了查找 ALPC 调用的发起方。
+
+*服务A* 进程正在执行某些非预期功能，并在 *模块A* 代码上设置了断点，以便在不可重现的条件下触发它。然后保存了完整内存转储以供离线分析。在那里，我们看到触发断点的 ALPC 服务器线程，但在 WinDbg **!thread** 命令的输出中看不到消息信息，这些信息可以帮助我们轻松找到对应的 ALPC 客户端线程：
+
+```
+THREAD fffff8a005e6b060 Cid 0cc0.1838 Teb: 000007fffffe8000 Win32Thread: 0000000000000000 WAIT:
+(Executive) KernelMode Non-Alertable
+SuspendCount 1
+fffff880094ad0a0 SynchronizationEvent
+Not impersonating
+DeviceMap fffff8a001aba3c0
+Owning Process fffff8a00480b3b0 Image: ServiceA.exe
+Attached Process N/A Image: N/A
+Wait Start TickCount 1441562 Ticks: 106618 (0:00:27:43.251)
+Context Switch Count 414
+UserTime 00:00:00.000
+KernelTime 00:00:00.031
+Win32 Start Address ntdll!TppWorkerThread (0x0000000077c88f00)
+Stack Init fffff880094addb0 Current fffff880094acdb0
+Base fffff880094aea00 Limit fffff880094a0000 Call 0
+Priority 12 BasePriority 10 UnusualBoost 0 ForegroundBoost 0 IoPriority 2 PagePriority 5
+Child-SP RetAddr Call Site
+fffff880`094acdf0 fffffff800`01678992 nt!KiSwapContext+0x7a
+fffff880`094acf30 fffffff800`0167acff nt!KiCommitThreadWait+0x1d2
+fffff880`094acfc0 fffffff800`01a150e8 nt!KeWaitForSingleObject+0x19f
+fffff880`094ad060 fffffff800`01a1546c nt!DbgkpQueueMessage+0x2a8
+fffff880`094ad230 fffffff800`019b9116 nt!DbgkpSendApiMessage+0x5c
+fffff880`094ad270 fffffff800`016abb96 nt! ?? ::NNGAKEGL::`string'+0x3463d
+fffff880`094ad3b0 fffffff800`01670d82 nt!KiDispatchException+0x316
+fffff880`094ad4a0 fffff800`0166eb4 nt!KiExceptionDispatch+0xc2
+fffff880`094adc20 000007fe`f79365d1 nt!KiBreakpointTrap+0x4f (TrapFrame @ fffff880`094adc20)
+00000000`035e5680 000007fe`f80670b5 ModuleA+0x38611
+[...]
+00000000`035e5d00 000007fe`ff4bc7f5 ModuleB!Start+0x6e1
+00000000`035ee770 000007fe`ff56b62e RPCRT4!Invoke+0x65
+00000000`035ee7c0 000007fe`ff4bf1f6 RPCRT4!Ndr64StubWorker+0x61b
+00000000`035ee8d0 000007fe`ffedf223 RPCRT4!NdrStubCall3+0xb5
+00000000`035eeede 000007fe`ffedfc0d ole32!CStdStubBuffer_Invoke+0x5b
+00000000`035eee10 000007fe`ffedfb83 ole32!SyncStubInvoke+0x5d
+00000000`035eee80 000007fe`ffd7fd60 ole32!StubInvoke+0xdb
+00000000`035eef30 000007fe`ffedfa2e ole32!CCtxComChnl::ContextInvoke+0x190
+00000000`035eefc0 000007fe`ffedf76b ole32!AppInvoke+0xc2
+00000000`035eff10 000007fe`ffeded6d ole32!ComInvokeWithLockAndIPID+0x52b
+00000000`035eff20 000007fe`ff4b9c24 ole32!ThreadInvoke+0x3d
+00000000`035ef360 000007fe`ff4b9d86 RPCRT4!DispatchToStubInCNoAvrf+0x14
+00000000`035ef390 000007fe`ff4bc44b RPCRT4!RPC_INTERFACE::DispatchToStubWorker+0x146
+00000000`035ef4b0 000007fe`ff4bc38b RPCRT4!RPC_INTERFACE::DispatchToStub+0x9b
+00000000`035ef4f0 000007fe`ff4bc322 RPCRT4!RPC_INTERFACE::DispatchToStubWithObject+0x5b
+00000000`035ef570 000007fe`ff4ba11d RPCRT4!LRPC_SCALL::DispatchRequest+0x422
+00000000`035ef650 000007fe`ff4c7ddf RPCRT4!LRPC_SCALL::HandleRequest+0x20d
+00000000`035ef780 000007fe`ff4c7995 RPCRT4!LRPC_ADDRESS::ProcessIO+0x3bf
+00000000`035ef8c0 00000000`77c84b3f RPCRT4!LrpcIoComplete+0xa5
+00000000`035ef950 00000000`77c8923f ntdll!TppAlpcpExecuteCallback+0x26b
+00000000`035ef9e0 00000000`77a6f56d ntdll!TppWorkerThread+0x3f8
+00000000`035efce0 00000000`77ca3281 kernel32!BaseThreadInitThunk+0xd
+00000000`035efd10 00000000`00000000 ntdll!RtlUserThreadStart+0x1d
+```
+
+我们检查原始堆栈，从 RPCRT4 子跟踪的第一个顶部 Child-SP 值开始，在那里发现类似于 PID:TID 对的 NNN:NNN 数据：
+
+```
+1: kd> dpp 00000000`035ef360 l100
+[...]
+00000000`035ef698 00000000`00000000
+00000000`035ef6a0 00000000`00000001
+00000000`035ef6a8 00000000`00000000
+00000000`035ef6b0 00000000`00000000
+00000000`035ef6b8 00000000`00000118
+00000000`035ef6c0 00000000`0000048c
+00000000`035ef6c8 00000000`00495e50 000007fe`ff57d920 RPCRT4!LRPC_ADDRESS::'vftable'
+00000000`035ef6d0 00000000`00000000
+[...]
+```
+
+我们在堆栈跟踪集合（第 943 页）中找到此类 CID，并看到正在等待 ALPC 消息回复：
+
+```
+THREAD fffffa8003d49b60 Cid 0118.048c Teb: 000007ffffaa0000 Win32Thread: fffff900c01e4c30 WAIT:
+(WrLpcReply) UserMode Non-Alertable
+fffffa8003d49f20 Semaphore Limit 0x1
+Waiting for reply to ALPC Message fffffa8000db6c0 : queued at port fffffa80042f8090 : owned by process fffffa8004803b30
+Not impersonating
+DeviceMap fffffa8000008600
+Owning Process fffffa8003cf15d0 Image: ServiceB.exe
+Attached Process N/A Image: N/A
+Wait Start TickCount 1441554 Ticks: 106626 (0:00:27:43.376)
+Context Switch Count 23180 LargeStack
+UserTime 00:00:00.468
+KernelTime 00:00:03.057
+Win32 Start Address ntdll!TppWorkerThread (0x0000000077c8f000)
+Stack Init fffff88004ffcdb0 Current fffff88004ffc620
+Base fffff88004ffd000 Limit fffff88004ff7000 Call 0
+Priority 6 BasePriority 6 UnusualBoost 0 ForegroundBoost 0 IoPriority 2 PagePriority 5
+Kernel stack not resident.
+Child-SP RetAddr Call Site
+fffff880`04ffc600 fffff800`01678992 nt!KiSwapContext+0x7a
+fffff880`04ffc7a0 fffff800`0167acff nt!KiCommitThreadWait+0x1d2
+fffff880`04ffc830 fffff800`0168df1f nt!KeWaitForSingleObject+0x19f
+fffff880`04ffc8d0 fffff800`01977ac6 nt!AlpcpSignalAndWait+0x8f
+fffff880`04ffc980 fffff800`01975a50 nt!AlpcpReceiveSynchronousReply+0x46
+fffff880`04ffc9e0 fffff800`01972fcb nt!AlpcpProcessSynchronousRequest+0x33d
+fffff880`04ffcb00 fffff800`01670993 nt!NtAlpcSendWaitReceivePort+0x1ab
+fffff880`04ffcb00 00000000`77c0707a nt!KiSystemServiceCopyEnd+0x13 (TrapFrame @ fffff880`04ffcc20)
+00000000`018c3080 000007fe`ff4aca76 ntdll!ZwAlpcSendWaitReceivePort+0xa
+00000000`018ce310 000007fe`ff4bf802 RPCRT4!LRPC_CALL::SendReceive+0x156
+00000000`018c3d00 000007fe`ffee0900 RPCRT4!I_RpcSendReceive+0x42
+00000000`018c4e00 000007fe`ffee05ef ole32!ThreadSendReceive+0x40
+00000000`018c4500 000007fe`ffee0410 ole32!CRpcChannelBuffer::SwitchAptAndDispatchCall+0xa3
+00000000`018c4e40 000007fe`ffd819c6 ole32!CRpcChannelBuffer::SendReceive+0x11b
+00000000`018c6b00 000007fe`ffd81928 ole32!CAptRpcChnl::SendReceive+0x52
+00000000`018c7800 000007fe`ffedcf50 ole32!CCtxComChnl::SendReceive+0x68
+00000000`018ce830 000007fe`ff56ba3b ole32!NdrExtProcProxySendReceive+0x45
+00000000`018c8600 000007fe`ffee02d0 RPCRT4!NdrpClientCall3+0x2e2
+00000000`018ceb20 000007fe`ffd818a2 ole32!ObjectStublessClient+0x11d
+00000000`018ceeb0 00000000`ff5afe64 ole32!ObjectStubless+0x42
+[...]
+00000000`018cf7a0 00000000`77c8f8eb ServiceB!Worker+0x366
+00000000`018cf800 00000000`77c89df0 ntdll!RtlpTpWorkCallback+0x16b
+00000000`018cf8e0 00000000`77ca65fd ntdll!TpPoolWorkerThread+0x5ff
+00000000`018cfbe0 00000000`77ca3281 kernel32!BaseThreadInitThunk+0xd
+00000000`018cfc10 00000000`00000000 ntdll!RtlUserThreadStart+0x1d
+```
+
+检查该消息表明，它被定向到了我们触发断点的服务器线程：
+
+```
+1: kd> !alpc /m fffff8a000bdb6c0
+Message @ fffff8a000bdb6c0
+MessageID : 0x0600 (1536)
+CallbackID : 0x2D91D0 (2986253)
+SequenceNumber : 0x0002CB50 (183120)
+Type : LPC_REQUEST
+DataLength : 0x0068 (104)
+TotalLength : 0x0090 (144)
+Canceled : No
+Release : No
+ReplyWaitReply : No
+Continuation : Yes
+OwnerPort : fffff8a004823a80 [ALPC_CLIENT_COMMUNICATION_PORT]
+WaitingThread : fffff8a003d49b60
+QueueType : ALPC_MSGQUEUE_PENDING
+QueuePort : fffff8a0042f8090 [ALPC_CONNECTION_PORT]
+QueuePortOwnerProcess : fffffa8004803b30 (ServiceA.exe)
+ServerThread : fffffa8005e6b060
+QuotaCharged : No
+CancelQueuePort : 0000000000000000
+CancelSequencePort : 0000000000000000
+```
+
