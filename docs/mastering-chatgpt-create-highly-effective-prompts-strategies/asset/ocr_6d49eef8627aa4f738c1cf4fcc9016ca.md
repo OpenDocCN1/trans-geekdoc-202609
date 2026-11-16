@@ -1,0 +1,1 @@
+From there, you can send it to your computer via email, Google Docs, or cloud storage.
