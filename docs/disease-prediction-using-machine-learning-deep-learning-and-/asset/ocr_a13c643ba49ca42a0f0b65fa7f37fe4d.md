@@ -1,0 +1,13 @@
+# # Region-Based Methods for Segmentation
+
+Region-based approaches divide an image into similar regions based on a set of predetermined parameters. These approaches include region growing (RGA) and region splitting and merging (RSMA) as described below.
+
+**Region Growing Algorithm (RGA):** Based on a predetermined criterion, the image is segmented by dividing its pixels into smaller or larger sections [44]. This is achieved by first selecting a seed-pixel cluster within the original image and then defining a set of criteria, such as the strength of the grey-level color, to establish a cutoff threshold. The segmentation process then expands the regions by including surrounding pixels that meet the criteria like the seed pixels. This expansion continues until no more pixels qualify to be added to that region, at which point the process comes to a halt.
+
+**Region Splitting and Merging Algorithm (RSMA):** The programmer applies a method of dividing an image into a set of arbitrarily disconnected sections and then recombines them into achieve proper image segmentation. This approach is implemented using quad-tree data. The technique involves dividing the picture into quadrants when Q(R) = FALSE. If Q is false for any quadrant, such as Q(Ri) = FALSE, the procedure further subdivides the quadrants into sub-quadrants, and so on, until no further splitting is possible. Here, R represents the complete image region, and a predicate Q is selected.
+
+One potential flaw in this approach is that after only splitting, the final divisions could have nearby sections with the same attributes. To address this, the method allows for both merging and splitting, meaning that it can integrate several contiguous regions, Rj and Rk, for which Q (Rj U Rk) = TRUE. Once no further merging is possible, the process comes to a halt. This ensures a more accurate and efficient image segmentation.
+
+# # Clustering Based Methods for Segmentation
+
+It is an unsupervised learning method used for pixel classification, involving the establishment of a finite collection of categories known as clusters [45]. Clustering is employed without the need for training steps; instead, the clusters are formed spontaneously using existing data. The method uses a matching criterion to group pixels together into final clusters, guided by maximizing intra-class similarity and interclass similarity. The quality of the output is influenced by both the similarity measure and the execution of the method. Various clustering algorithms, such as hard clustering, k-means clustering, and fuzzy clustering, are utilized for classification. These algorithms contribute to the effective grouping and classification of pixels within the image.

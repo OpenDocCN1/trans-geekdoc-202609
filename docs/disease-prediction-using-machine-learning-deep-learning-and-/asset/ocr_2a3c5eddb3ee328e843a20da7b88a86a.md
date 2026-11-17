@@ -1,0 +1,13 @@
+Reactive BCI: It is a device that uses brain signals which are formed as a result of response to a stimulus. It is used to monitor an application by the consumer by P300.
+
+Passive BCI: Detecting drowsiness in drivers and thus preventing road traffic accidents is possible through methods that utilize unintended emotional/cognitive brain functioning.
+
+Signal Acquisition Modalities have been used to Classify Structures as Invasive or Noninvasive BCI
+
+The most important component of a BCI-based device is the ability to measure brain-generated oscillations. It represents the user's current voluntary neural behavior and various signal acquisition techniques have been investigated. By using the BCI application, you can determine which acquisition method and calculations are appropriate for your signals [13].
+
+# Invasive Techniques
+
+Electrocorticography (ECoG) analyzes the neuronal activity of the brain either intra-cortical from within the nervous system or on the surface of the cortex. The main benefit is that they have a spatial resolution and high temporal, by which the signal-to-noise ratio and efficiency of the signal are improved. These methods have a number of flaws. Aside from concerns regarding the usability of surgical procedures, an issue with output has also been raised. One of them is the limited size of the tracked brain regions by such implants. They can't be moved to test brain activity in another part of the brain once they've been implanted. During a surgical procedure, electrode strips or grids are implanted over the surface of the cortex as shown in Fig. (3). ECoG recording falls somewhere in the middle between non-invasive security and invasiveness. It has a higher spatial resolution and signal amplitude than non-invasive techniques like EEG because of its proximity to the signal source. ECoG brain signals were used to discern right vs left hand and finger vs tongue imagery movement for both non-paralyzed and paralyzed epileptic patients and were also used to calculate kinematic parameters for five-finger flexion.
+
+The most invasive approach is the Intracortical acquisition technique. It is implanted under the brain's cortex surface. It can be done with an array of electrodes or a single electrode that monitors individual neuron action of the signal. Since the electrode tips are located close to the signal source, the arrays must be stable in excess of time. Its use in source localization problems is highly recommended due to its high spatial resolution. Intracortical acquisition, on the other hand, can experience signal variability over time. Rats and monkeys have

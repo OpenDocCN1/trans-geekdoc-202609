@@ -1,0 +1,1 @@
+[17] E.M.S. Mäkikyrö, M.S. Jaakkola, and J.J.K. Jaakkola, "Subtypes of asthma based on asthma control and severity: A latent class analysis", Respir. Res., vol. 18, no. 1, pp. 24-32, 2017. [http://dx.doi.org/10.1186/s12931-017-0508-y] [PMID: 28114991]

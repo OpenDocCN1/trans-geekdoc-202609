@@ -1,0 +1,11 @@
+# Role of Machine Learning and Deep Learning Techniques in Detection of Disease Severity: A Survey
+
+Geeta Rani¹, Vijaypal Singh Dhaka¹* and Sushma Hans²
+
+¹ Department of Computer and Communication Engineering, Manipal University Jaipur, Jaipur, India
+
+² Amity University, Dubai Campus, Dubai, United Arab Emirates
+
+Abstract: The increasing number of health issues is a cause of concern for public as well as health services across the globe. However, a boom in the use of imaging techniques such as CT scans and chest radiographs has been observed for correct diagnosis. But, manual scanning of these modalities requires expertise in modality reading. It is also a time-consuming task. Artificial intelligence-based techniques have proven their potential in pattern recognition, object identification, and data analysis. Therefore, these techniques can be used to provide assisting tools for the primary screening of diseases from these modalities. It has been observed from the literature that a lot of research works are available on disease diagnosis and classification using machine learning, and deep learning. But, the disease severity detection is underexplored. Moreover, the techniques employed for the detection of the severity of diseases have lacunae that need immediate attention. These challenges motivated us to review the machine learning and deep learning-based technological solutions proposed in the literature for the detection of disease severity. The objective of this research is to present a comprehensive survey of research works available about disease severity detection. This research also presents a comparative analysis of the machine learning techniques and deep learning techniques employed, datasets used, and performance achieved. It also highlights the drawbacks of the technological solution proposed. Further, it provides the directions for future scope in the domain of disease severity detection.
+
+Keywords: Artificial intelligence, Disease, Deep learning, Machine learning, Severity.
