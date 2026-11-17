@@ -1,0 +1,3 @@
+The model layer is the most complex of the symfony framework. One reason for this complexity is that data manipulation is an intricate matter. The related security issues are crucial for a website and should not be ignored. Another reason is that symfony is more suited for middle- to large-scale applications in an enterprise context. In such applications, the automations provided by the symfony model really represent a gain of time, worth the investment in learning its internals.
+
+So don't hesitate to spend some time testing the model objects and methods to fully understand them. The solidity and scalability of your applications will be a great reward.
