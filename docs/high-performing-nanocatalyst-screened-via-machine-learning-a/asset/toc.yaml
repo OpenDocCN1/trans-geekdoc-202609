@@ -1,0 +1,17 @@
+level_changes:
+- line: 5
+  before: 2
+  after: 1
+- line: 7
+  before: 2
+  after: 1
+- line: 19
+  before: 2
+  after: 1
+- line: 34
+  before: 2
+  after: 1
+- line: 38
+  before: 2
+  after: 1
+text_changes: []
