@@ -1,0 +1,11 @@
+addListener adds this object (this node) as a listener for any event that tree (this_parent) will broadcast. On the next line, we assign a function for this custom event, in this case the rotateGraphics method we wrote just a few moments ago. Now, in addition to receiving notification of all of the standard movie clip events (enterFrame, mouseMove, load, and so on), our NodeClass instances will receive notification when the tree rotates as well, and they will use the onRotate handler when this event occurs.
+
+Test your movie now to see how the nodes know when to rotate their graphics. This ability to assign custom events can come in extremely handy – and is pretty fun to play around with, too!
+
+![](bbox=[0.11, 0.4, 0.51, 0.72])
+
+# # Taking it further
+
+What I've shown you in this chapter is how to build, manipulate and animate a branching structure. The finished file as was presented in this tutorial can be found in the download files as gods_tree_book.fla if you want to look at the code in its entirety. As you saw in the initial gods_tree.swf, I went on to build another level of functionality for this system by allowing the user to click on nodes to access additional information (plus I added spouse nodes to the system). All the code is commented, and I encourage you to open it up and take a look at how certain things were accomplished.
+
+In addition, imagine where you could take this concept and this file further. Although it works well to display branching information, and indeed that is what it was built for, I couldn't help but think of some great games that could be built from this system, from a more sophisticated Whack-a-Mole to a Choose Your Own Adventure type interactive story. Instead of loading a single interface full of information, perhaps you could set the system up as a gallery where selecting a low-res image on a node loaded the higher-res full screen version. How about making the gallery system respond to the types of images that a user has previously chosen, loading similar or complementary images in the next generation? Maybe you could remove the user entirely and use some random generation and funky math to animate the nodes and the colors of the system to create some surrealistic Web-art. Or maybe I should stop giving my ideas away and beat you to the punch!

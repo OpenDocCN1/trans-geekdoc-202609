@@ -1,0 +1,7 @@
+What I decided to go for instead was something perhaps a little more simple, but hopefully a bit more legible and usable. The basic premise I started with was that each node in the XML structure, each category if you will, would form the hub of a cluster, with each of the sub-categories grouped around the circumference. Rather than showing all of the nodes at once in a kind of fractal pattern this will show one path through the data at a time. While this means that we no longer have a picture of the overall structure of the data it will show us all of the alternate paths we could have taken while reaching a particular category. The following diagrams should make the process somewhat clearer. They demonstrate the thought process I went through in arriving at the final interface.
+
+The diagram on the left is the first one I made of just one open cluster. I realized fairly quickly that the positioning of text would be a problem. If one were to position the text consistently on one side of the node graphic there would be overlap with the line connecting the node to its parent. Positioning the text differently depending on which direction the node was pointing was a possibility but seemed somewhat clunky. The solution I came up with was to put each piece of text on top of the graphic, resizing the graphic to fit the proportions of the text.
+
+![](bbox=[0.105, 0.405, 0.505, 0.68])
+
+![](bbox=[0.54, 0.405, 0.95, 0.68])

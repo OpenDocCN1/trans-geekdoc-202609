@@ -1,0 +1,7 @@
+# MAKING XML WORK FOR YOUR INTERFACE
+
+Having looked at the use of Flash in presenting data graphically, it's a good idea to look at how other technologies can help Flash reach this end. This chapter is all about getting your interfaces fully intertwined with XML (eXtensible Markup Language) – something that's going to allow it to function in a simpler, more logical way.
+
+The original idea I had for this interface was a kind of clustering application. The interface would bring in some XML data and then display that as a series of clusters, giving a graphical representation of the structure of the data. The difficulty with something like that is to provide an accurate representation of the structure while also maintaining legibility. It's one thing to draw a series of clusters of dots to highlight different concentrations of data, but quite another to turn this into an effective navigation. One solution to this problem is that implemented by Inxight, which can be seen at www.inxight.com/map/, in which the various branches of the tree span out as you drag across them in a kind of fisheye effect. I'm not sure whether one would be able to produce something similar within Flash, at least not with the same smoothness, and I'm not sure that I'd be capable of the mathematics involved.
+
+![](bbox=[0.28, 0.3, 0.99, 1.0])

@@ -1,0 +1,14 @@
+level_changes:
+- line: 6467
+  before: 1
+  after: 3
+- line: 6468
+  before: 1
+  after: 3
+- line: 6477
+  before: 1
+  after: 3
+text_changes:
+- line: 2624
+  before: 神的层级
+  after: 树的层级

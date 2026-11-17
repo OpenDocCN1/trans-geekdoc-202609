@@ -1,0 +1,5 @@
+# Hierarchy of the gods
+
+I think the best way to begin this tutorial is to actually start at the end and show you the final project that we will be building in this chapter. Open up the file gods_tree.swf from the download files to see the end result, a branching hierarchical structure to display the gods and titans of Greek mythology. Have fun exploring the structure, by rotating and expanding the nodes to see how we could use such a system to display a large amount of information. Notice the gloopy connectors that stretch between the nodes, and how a smooth gradient can be drawn to ease color from a parent node to its child. Try opening a node to access more information and then using the combo boxes to navigate to a different node. Once you close the interface, the tree structure has been updated to your new position. Think about how you might go about structuring, drawing, expanding, and navigating such a system – then read on to see how I approached it.
+
+![](bbox=[0.0, 0.505, 1.0, 1.0])
