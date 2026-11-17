@@ -1,0 +1,19 @@
+operating system. Once installed, rootkits provide attackers with access to compromised computers and easy access to launching additional attacks. Rootkits are newer than other types of malware and did not appear until around 1990. They can be very difficult to detect and remove since their main purpose is to hide their own existence. But identifying and removing rootkits is crucial to maintaining a secure system.
+
+In 2015, reports began to emerge that described very serious types of rootkits. It was discovered that rootkits could be burned into the firmware of hard disk drives or even into a computer’s Basic Input/Output System (BIOS). These rootkits would survive complete operating system reinstallation and hard drive reformatting. In the case of the BIOS rootkit, even replacing a disk drive with a completely new disk drive would not remove the rootkit. These newer types of rootkits are extremely pervasive and difficult to remove without substantial technical skill. In 2016, several sources reported that the U.S. National Security Agency (NSA) has used hard drive firmware rootkits to enable surveillance on specific targets.
+
+# Ransomware
+
+Another type of malware attempts to generate funds directly from a computer user. This type of malware is also one of the fastest-growing menaces. Ransomware attacks a computer and limits the user’s ability to access the computer’s data. It can limit access by slowing the computer down, denying access for authorized users, or blocking access to specific programs or resources. Many current ransomware programs operate by encrypting important files or even the entire disk and making them inaccessible.
+
+One of the first ransomware programs was CryptoL0cker, which was released in 2013. Ransomware programs have become even more sophisticated and dangerous since then. The attacker generally alerts the users to the restrictions and demands a payment to restore full access. The demand for a payment, or ransom, gives this type of malware its name. The attacker promises to decrypt the user’s data or remove any mechanisms that block access once the ransom is paid. Most computer users rely on their computers and the data they store. Few computer users can lose access to their data and other resources without encountering ongoing frustration.
+
+Business users may find ransomware to be far more than a simple annoyance. The inability to access key parts of a business computing system can have the same effect as a DoS attack. A ransomware attack can cost an organization large sums of lost profits in a very short period of time. Attackers that launch ransomware attacks expose themselves to huge risks but also can realize large profits. Ransomware is a growing trend in malware. User reliance on mobile devices makes such devices attractive targets. As computers and other devices become more mobile, they become even more vulnerable to potential ransomware attacks.
+
+# NOTE
+
+So, how can malware simply take control of a computer? Malware can use many different techniques, but two common ones depend on lazy programmers. A buffer overflow is a condition when a program allows more data to be loaded into a variable than it expected. When this happens, the “extra” data can change protected data in memory or even change a program’s instructions. A similar weakness is an integer overflow, an arithmetic operation that results in a number that is too large to be stored in a simple integer variable. In both cases, programmers should handle the errors and alert the user, but many programs behave in unusual ways when overflows occur.
+
+# Spam
+
+**Spam** is one of the most bothersome challenges faced by network administrators. Not only does spam often contain viruses or other

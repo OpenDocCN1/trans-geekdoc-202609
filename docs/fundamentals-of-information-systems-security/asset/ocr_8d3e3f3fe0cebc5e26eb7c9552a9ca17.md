@@ -1,0 +1,13 @@
+# TABLE 1-3 Risks, threats, vulnerabilities, and mitigation plans for the Workstation Domain.
+
+| RISK, THREAT, OR VULNERABILITY | MITIGATION |
+| :--- | :--- |
+| Unauthorized access to workstation | Enable password protection on workstations for access. Enable auto screen lockout for inactive times. Disable system admin rights for users. |
+| Unauthorized access to systems, applications, and data | Define strict access control policies, standards, procedures, and guidelines. Implement a second level or layer of authentication to applications that contain sensitive data (e.g., two-step authentication). |
+| Desktop or laptop computer operating system software vulnerabilities | Define a workstation operating system **vulnerability window** policy and standard. The vulnerability window is the gap in time a workstation is exposed to a known vulnerability until patched. Perform frequent **vulnerability assessment** scans as part of ongoing security operations. |
+| Desktop or laptop application software vulnerabilities and software patch updates | Define a workstation application **software vulnerability window** policy. Update application software and security patches according to defined policies, standards, procedures, and guidelines. |
+| Infection of a user's workstation or laptop computer by viruses, malicious code, or malware | Use workstation antivirus and malicious code policies, standards, procedures, and guidelines. Enable an automated antivirus protection solution that scans and updates individual workstations with proper protection. |
+| User insertion of CDs, digital video discs (DVDs), or universal serial bus (USB) thumb drives into the organization's computers | Deactivate all CD, DVD, and USB ports. Enable automatic antivirus scans for inserted CDs, DVDs, and USB thumb drives that have files. |
+| User downloads of photos, music, or videos via the Internet | Use content filtering and antivirus scanning at Internet entry and exit. Enable workstation auto-scans for all new files and automatic file quarantine for unknown file types. |
+| User violation of AUP, which creates security risk for the organization's IT infrastructure | Mandate annual security awareness training for all employees. Set up security awareness campaigns and programs throughout the year. |
+| Employees and users want to use their own smartphone or tablets, driving the need to support Bring Your Own Device (BYOD) | Develop a BYOD policy and procedure that allows employees to use their personal smartphones or mobile devices. BYOD policies and procedures typically permit the organization to data-wipe the user's smartphone or mobile device if it is lost or the employee is terminated. |

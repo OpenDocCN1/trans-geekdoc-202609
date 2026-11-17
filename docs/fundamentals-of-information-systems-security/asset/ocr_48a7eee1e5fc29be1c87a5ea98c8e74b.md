@@ -1,0 +1,15 @@
+Session hijacking reveals the importance of identifying the other party in a session. It is possible for an intruder to replace a legitimate user for the remainder of a communication session. This calls for a scheme to authenticate the data's source throughout the transmission. In fact, authenticating both ends of a connection, a process called *mutual authentication*, could reduce the potential of an undetected hijack. However, even the strongest authentication methods are not always successful in preventing hijacking attacks. That means you might need to encrypt all transmissions.
+
+has created. This gives the user the impression that the attacker has compromised the website when in fact the attacker simply diverted the user’s browser from the actual site. This type of attack is also known as *typo squatting*. Attackers can use this attack with phishing to trick a user into providing private information such as a password. (You’ll learn about phishing in a moment.)
+
++   * Session hijacking—In session hijacking, the attacker attempts to take over an existing connection between two network computers. The first step in this attack is for the attacker to take control of a network device on the LAN, such as a firewall or another computer, in order to monitor the connection. This enables the attacker to determine the sequence numbers used by the sender and receiver. After determining the sequence numbering, the attacker generates traffic that appears to come from one of the communicating parties. This steals the session from one of the legitimate users. To get rid of the legitimate user who initiated the hijacked session, the attacker overloads one of the communicating devices with excess packets so that it drops out of the session.
+
+# Replay Attacks
+
+Replay attacks involve capturing data packets from a network and retransmitting them to produce an unauthorized effect. The receipt of duplicate, authenticated IP packets may disrupt service or have some other undesired consequence. Systems can be broken through replay attacks when attackers reuse old messages or parts of old messages to deceive system users. This helps intruders to gain information that allows unauthorized access into a system.
+
+# Man-in-the-Middle Attacks
+
+A man-in-the-middle attack takes advantage of the multihop process used by many types of networks. In this type of attack, an attacker intercepts messages between two parties before transferring them on to their intended destination.
+
+Web spoofing is a type of man-in-the-middle attack in which the user believes a secure session exists with a particular web server. In reality, the secure connection exists only with the attacker, not the web server. The attacker then establishes a secure connection with the web server; acting as an invisible go-between. The attacker passes traffic between the user and the web server. In this way, the attacker can trick the user into supplying passwords, credit card information, and other private data.

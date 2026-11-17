@@ -1,0 +1,76 @@
+web servers, 35, 238, 272
+web spoofing, 95
+Webroot Antivirus, 107
+well-formed transaction, 165
+WEP. See Wired Equivalent Privacy
+whaling, 103
+white-box testing, 248
+white-hat hacker, 79
+whitelisting, 388
+WHOIS service, 245f
+WHOIS tool, 383, 384f
+wide area networks (WANs), 19,
+329–332, 329f
+connectivity options, 330–331
+routers, 331–332
+Wi-Fi Protected Access (WPA)
+standard, 231, 316, 349
+Windows permissions, 161
+Wired Equivalent Privacy (WEP),
+231, 316, 348–349
+wireless access points (WAPs),
+24, 316, 348
+wireless encryption, 348–349
+Wireless Fidelity (Wi-Fi)
+hotspot, 33
+
+wireless LANs (WLANs),
+24, 316
+Wireless network attack, 104
+wireless network security
+controls, 348–351
+wireless networks,
+348–351
+wireless security, 315–316
+wiretapping, 85
+witnessing, 297t, 298, 299t
+WLANs. See wireless LANs
+workplace monitoring, 173–174
+Workstation Domain, 20f, 22,
+23t, 88t, 90t
+workstation impact,
+262–263, 262f
+workstations, 22, 23t, 24,
+88t, 240
+World Wide Web (WWW), 3
+World Wide Web Consortium
+(W3C), 401
+worms, 32t, 100, 364–366,
+365f, 377
+WPA standard. See Wi-Fi
+Protected Access standard
+
+X
+X9.17, 323
+XKMS. See XML key management
+specification
+XML. See extensible markup
+language
+XML injection, 105, 368
+XML key management
+specification (XKMS), 323
+XSRF. See cross-site request
+forgery
+XSS. See cross-site scripting
+XTACACS. See Extended
+Terminal Access
+Controller Access
+Control System
+
+Y
+YouTube training, 417t
+
+Z
+zero-day, 105, 388
+zone transfer, 244
+ZyXEL, 108

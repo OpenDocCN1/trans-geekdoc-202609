@@ -1,0 +1,297 @@
+
+- EPHI. See electronic protected health information
+- EPP. See Extensible Provisioning Protocol
+- E-Rate program, 479
+- ESET Nod32 Antivirus, 107
+- ESP. See encapsulating security payload
+- espionage, 91
+- Ethernet, 24
+- Ethernet networks, 332–333
+- ethical hacker, 79
+- ethics, 40, 188
+- EULA. See end-user license agreement
+- European Telecommunications Standards Institute (ETSI), 406–407
+- evaluation assurance levels (EALs), 206
+- event, 253
+- event logs, 186, 233
+- event-based synchronization system, 146
+- evil twin, 104
+- exclusive OR function, 302, 309
+- exit interview, 228
+- expectation of privacy, 172–176
+- expert level, 446t, 449t
+- exploit software, 81
+- exponentiation cipher, 302
+- exposure factor (EF), 260
+- Extended Terminal Access Controller Access Control System (XTACACS), 170
+- Extensible Authentication Protocol (EAP), 347
+- extensible markup language (XML), 323
+- Extensible Provisioning Protocol (EPP), 403
+- extensions, 170
+
+## F
+
+- fabrications, 92
+- facial recognition, 150
+- FACTA. See Fair and Accurate Credit Transactions Act
+- failure auditing, 145, 146
+
+- Fair and Accurate Credit Transactions Act (FACTA), 154–155
+- Fair Isaac Corp. (FICO) personal credit rating, 15
+- false acceptance rate (FAR), 149
+- false negatives, 232
+- false positives, 232, 236
+- false rejection rate (FRR), 148–149
+- Family Educational Rights and Privacy Act (FERPA), 14, 126, 455t, 476–478
+- Family Policy Compliance Office (FPCO), 478
+- FAR. See false acceptance rate
+- fault tolerance, 272
+- FCC. See Federal Communications Commission
+- FCoE. See Fibre Channel over Ethernet
+- FDIC. See Federal Deposit Insurance Corporation
+- Federal Communications Commission (FCC), 479, 480
+- Federal Deposit Insurance Corporation (FDIC), 470
+- Federal Financial Institutions Examination Council (FFIEC), 67, 125
+- federal incident response center, 459
+- Federal Information Processing Standards (FIPS), 290, 302, 319, 459
+- Federal Information Security Management Act (FISMA), 12, 125, 456
+- Federal Information Security Modernization Act (FISMA), 13, 125–126, 458–459
+- Federal laws, 221
+- Federal Reserve System, 470
+- Federal Trade Commission (FTC), 98, 468, 469f, 470
+- federated access, 152
+- FERPA. See Family Educational Rights and Privacy Act
+
+- FFIEC. See Federal Financial Institutions Examination Council
+- fibre channel, 333
+- Fibre Channel over Ethernet (FCoE), 333
+- field, 302
+- field theory, 302
+- file infectors, 357–359, 376
+- file (program) infectors, 358–359, 359f
+- file server and print server, 24
+- File Transfer Protocol (FTP), 26–27
+- finances and financial data, 36, 74, 76–77
+- financial institutions, 471
+- Financial Services Modernization Act of 1999, 467
+- findings presentation, 229
+- finger tool, 383
+- fingerprint, 149
+- FIPS. See Federal Information Processing Standards
+- firewall deployment techniques, 343–345
+- firewall rules, 342
+- firewalls, 97, 108, 313, 341–345
+- First Amendment of the U.S. Constitution, 479
+- First Amendment rights, 479, 480
+- FISMA. See Federal Information Security Modernization Act
+- flash cookies, 105, 372
+- flexibility of self-study, 413
+- flood guard, 342
+- flooding a network, 340
+- flooding attacks, 83
+- foreign agent (FA), 61
+- Forensic Toolkit® (FTK®), 143
+- forensics, 130
+- Form5 boot sector virus, 376
+- FPCO. See Family Policy Compliance Office
+- freeware programs, 371
+- FRR. See false rejection rate
+- FTC. See Federal Trade Commission
+- FTC Safeguards Rule, 471
+- FTP. See File Transfer Protocol
+- full backup, 276
+- full device encryption, 130
+- full interruption test, 122, 276
+- functional definition, 204
+- functional policy, 193–194
+- functional requirements, 204
+- fuzzing, 205
+
+## G
+
+- G DATA Antivirus, 107
+- gaming consoles, 258
+- gap analysis, 123, 275, 276
+- gaps, 275
+- gauss, 400
+- general security knowledge, 414
+- Generation Y, 10
+- GIAC. See Global Information Assurance Certification
+- GIAC Security Expert (GSE), 441
+- GLBA. See Gramm-Leach-Bliley Act
+- GLBA Privacy Rule, 470–471
+- GLBA Safeguards Rule, 471–472
+- Global Information Assurance Certification (GIAC), 440–441, 442t
+- global positioning system (GPS), 131
+- Government Information Security Reform Act (Security Reform Act) of 2000, 127
+- GPO. See Group Policy Object
+- GPS. See global positioning system
+- Gramm-Leach-Bliley Act (GLBA), 13, 126, 455t, 467–472, 469f
+
+- gray-box testing, 248
+- gray-hat hackers, 79
+- group membership policy, 140
+- Group Policy, 169
+- Group Policy Object (GPO), 169
+- group-based permissions, 159
+- GSE. See GIAC Security Expert
+- guidelines, 41, 183, 196, 415, 459
+
+## H
+
+- HA. See home agent
+- hackers, 78–79, 143
+- hacktivists, 340, 370
+- hand geometry, 149
+- hands-on skill-sets labs, 415
+
+- hardened configuration, 239
+- hardening systems, 22, 238–240
+- hardware configuration chart, 199
+- hardware controls, 156t
+- hardware distribution of keys, 310
+- hardware inventory, 199–200
+- hash, 289
+- hash functions, 311–312, 312f; 318–320, 319f
+- hash value, 318
+- HCISPP. See HealthCare Certified Information Security and Privacy Practitioner
+- header manipulation, 105, 374
+- Health Information Technology for Economic and Clinical Health (HITECH) Act, 461, 463, 466
+- Health Insurance Portability and Accountability Act (HIPAA), 13, 125, 154, 221, 426, 455t, 461–467
+- HealthCare Certified Information Security and Privacy Practitioner (HCISSP), 439
+
+- hertz, 400
+- Herzing University, 421t
+- heuristic analysis, 107
+- HHS. See Department of Health and Human Services
+- HIDS. See host-based intrusion detection system
+- hierarchical IT security policy framework, 41, 41f
+- high probability, 262
+- high-level security policy audit, 220
+- high-value customers, 56
+- hijacking, 94–95
+- HIPAA. See Health Insurance Portability and Accountability Act
+- HIPAA Privacy Rule, 462–463
+- HIPAA Security Rule, 464, 465t, 466t
+- HITECH Act. See Health Information Technology for Economic and Clinical Health Act
+- HMAC-based one-time password (HOTP), 172
+
+- hoaxes, 87, 103, 373
+- Hollings Manufacturing Extension Partnership, 397
+- home agent (HA), 61
+- homepage hijacking, 374
+- honeynet, 392
+- honeypot, 392
+- host isolation, 238
+- host-based activity, 231
+- host-based antivirus software, 391
+- host-based intrusion detection system (HIDS), 230, 234–235, 237, 238
+- hot sites, 121t, 283–285
+- HOTP. See HMAC-based one-time password
+- HTTP. See Hypertext Transfer Protocol
+- HTTPS. See Hypertext Transfer Protocol Secure
+- hubs, 333–334
+- human error, 322
+- human resources and payroll, 36
+- human resources security, 408
+- hybrid cloud, 174
+- Hypertext Transfer Protocol (HTTP), 26, 392
+- Hypertext Transfer Protocol Secure (HTTPS), 17, 34, 317
+
+## I
+
+- IaaS. See Infrastructure as a Service
+- IAB. See Internet Architecture Board
+- IANA. See Internet Assigned Numbers Authority
+- ICFR. See internal controls over financial reporting
+- ICMP. See Internet Control Management Protocol; Internet Control Message Protocol
+- ICMP (ping), 246f, 383
+- ICMP echo request, 338
+- IDEA. See International Data Encryption Algorithm
+- identification, 35, 137, 141–142, 182, 297t, 298, 299t
+- identity theft, 2, 15, 74, 467, 468, 469f
+- identity-based encryption (IBE), 290
+- identity-management system, 227
+- IDS. See intrusion detection system
+- IEC. See International Electrotechnical Commission
+- IEEE. See Institute of Electrical and Electronics Engineers
+- IEEE 802.1x standard, 347
+- IEEE 802.3 CSMA/CD standard, 24
+- IETF. See Internet Engineering Task Force
+- IIA. See Institute of Internal Auditors
+- impact, 119, 253, 262–263, 262f
+- impact assessment, 202
+- implement security controls, 460
+- implementation, 204, 204f, 207, 269
+- implicit deny, 342
+- in-band key exchange, 294
+- incident handling, 277–280
+- incident logs, 224
+- incident response, 457
+- incidents, 253, 459
+- incremental backup, 276
+- indirect attacks, 382
+- indirect costs, 117
+- indirect identifiers, 477
+- information classification objectives, 197
+- information security, 292–295, 456
+- information security compliance, 486–487, 487t
+- information security control, 464
+- information security gap, 123–124, 254
+- information security incident management, 409
+- information security objectives, 296, 297t, 298
+- information security professional certification, 433–449
+
+- information security risk management, 123t, 252–255
+- information security tenets, 127, 128f
+- information security training programs, 425–430
+- information security war, 10
+- information systems, 11
+- information systems acquisition development and maintenance, 409
+- Information Systems Audit and Control Association (ISACA), 225, 443, 444t
+- information systems security, 3–14, 456
+- Information Systems Security Architecture Professional (ISSAP), 440
+- Information Systems Security Engineering Professional (ISSEP), 440
+- Information Systems Security Management Professional (ISSMP), 440
+- Information Technology Infrastructure Library (ITIL), 225
+- InfoSec Institute, 428t
+- Infrastructure as a Service (IaaS), 175
+- infrastructure considerations, 130
+- Initiative for Open Authentication (OATH), 172
+- injection techniques, 368–369
+- instant messaging (IM) chat, 33
+- Institute of Electrical and Electronics Engineers (IEEE), 24, 403–404, 404t
+- Institute of Internal Auditors (IIA), 225
+- instructor-led programs, 416–418
+- integer overflow, 105
+- integrity, 14, 17, 18f, 127, 293, 295, 354, 378, 408, 486, 487t
+- intellectual property (IT), 74, 76
+- interceptions, 92
+- interference, 104
+
+- interim processing strategies, 283–285
+- intermediary, 369–370
+- internal consistency, 165
+- internal controls and information security goals, 474t
+- internal controls over financial reporting (ICFR), 222t, 473
+- internal routers, 332
+- internal security, 295
+- internal threats, 379
+- internal use only data, 42
+- International Data Encryption Algorithm (IDEA), 314
+- International Electrotechnical Commission (IEC), 400–401
+- International Information Systems Security Certification Consortium, Inc. (ISC)2, 44, 438
+- International Organization for Standardization (ISO), 398–400
+- International Standard Book Number (ISBN), 399
+- International Telecommunication Union (ITU), 404–405
+- Internet, 3, 40, 329–331, 376–378
+- Internet Architecture Board (IAB), 40, 188, 403
+- Internet Assigned Numbers Authority (IANA), 27
+- Internet Control Management Protocol (ICMP), 383
+- Internet Control Message Protocol (ICMP), 336–338, 370
+- Internet Engineering Task Force (IETF), 65, 401–403
+- Internet marketing strategy, 56–57
+- Internet of Things (IoT), 2, 10f, 390
+- converting to TCP/IP world, 50–51, 51f
+- critical-infrastructure, 69
+- e-commerce, bricks and mortar to, 55–57

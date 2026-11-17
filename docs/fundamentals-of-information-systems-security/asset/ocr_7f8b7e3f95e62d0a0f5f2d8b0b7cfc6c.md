@@ -1,0 +1,14 @@
+| RISK, THREAT, OR VULNERABILITY | MITIGATION |
+|---|---|
+| Open, public, easily accessible to anyone who wants to connect | Apply acceptable-use policies in accord with the document “RFC 1087: Ethics and the Internet.” Enact new laws regarding unauthorized access to systems, malicious attacks on IT infrastructures, and financial loss due to malicious outages. |
+| Most Internet traffic sent in cleartext | Prohibit using the Internet for private communications without encryption and VPN tunnels. If you have a data classification standard, follow the policies, procedures, and guidelines specifically. |
+| Vulnerable to eavesdropping | Use encryption and VPN tunnels for end-to-end secure IP communications. If you have a data classification standard, follow the policies, procedures, and guidelines. |
+| Vulnerable to malicious attacks | Deploy layered LAN-to-WAN security countermeasures, DMZ with IP stateful firewalls, IDS/IPS for security monitoring, and quarantining of unknown email file attachments. |
+| Vulnerable to DoS, DDoS, TCP SYN flooding, and IP spoofing attacks | Apply filters on exterior IP stateful firewalls and IP router WAN interfaces to block TCP SYN “open connections” and ICMP (echo-request) ping packets. Alert your Internet service provider (ISP) to put the proper filters on its IP router WAN interfaces in accordance with CERT Advisory CA-1996-21. This can be found here: www.cert.org/advisories/CA-1996-21.html. |
+| Vulnerable to corruption of information and data | Encrypt IP data transmissions with VPNs. Back up and store data in offsite data vaults (online or physical data backup) with tested recovery procedures. |
+| Inherently insecure TCP/IP applications (HTTP, FTP, TFTP, etc.) | Refer to your data classification standard for proper handling of data and use of TCP/IP applications. Never use TCP/IP applications for confidential data without proper encryption. Create a network management VLAN and isolate TFTP and SNMP traffic used for network management. |
+| Email of Trojans, worms, and malicious software by hackers, attackers, and perpetrators | Scan all email attachments for type, antivirus, and malicious software at the LAN-to-WAN Domain. Isolate and quarantine unknown file attachments until further security review is conducted. Provide security awareness training to remind employees of dangers, such as embedded URL links and email attachments from unknown parties, and to urge them to be careful when clicking on links and opening files. |
+
+# Remote Access Domain
+
+The Remote Access Domain connects remote users to the organization’s IT infrastructure. Remote access is critical for staff members who work in the field or from home—for example, outside sales reps, technical support specialists, or health care professionals. Global access makes it easy to connect to the Internet, email, and other business applications

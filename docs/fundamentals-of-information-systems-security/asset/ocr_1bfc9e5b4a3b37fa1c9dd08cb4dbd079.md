@@ -1,0 +1,15 @@
+The following elements are typically included in an organization’s new-hire security awareness training course. These topics may be reinforced in the acceptable use policy (AUP) and the organization’s annual security awareness training, depending on need:
+
++   - **Compliance with regulatory requirements and laws**—Security awareness training typically includes topics regarding your organization’s regulatory compliance and legal requirements as an employee. This may include regulatory compliance and protection of sensitive data such as personally identifiable information (PII), protected health care information (PHI), or cardholder data (credit card numbers).
++   - **Password behaviors**—The organization’s password management policy and complex password requirements are typically reviewed in annual security awareness training.
++   - **Information/data classification, handling, and labeling**—This is an important part of security awareness training that reminds employees of proper handling for regulated sensitive data versus nonregulated data.
++   - **Clean desk policies**—Security awareness training should remind employees to ensure confidentiality by not leaving any sensitive information or documents on their desks.
++   - **Prevent tailgating**—Employees should be reminded not to let secure doorways or entranceways be compromised by individuals approaching behind them.
++   - **Personally owned devices**—Organizations that permit the use of personally owned devices such as laptop computers or smartphones must address the bring-your-own-device (BYOD) policy in annual security awareness training.
++   - **New threats and new security trends/alerts**—Security awareness training is a good tool for educating employees on new attack methods and trends from hackers and perpetrators.
++   - **New viruses (e.g., ransomware, cryptolocker, etc.)**—Security awareness training is a good tool to educate employees on new attack viruses and malicious software such as ransomware and cryptolocker software.
++   - **Phishing attacks**—Reminders about phishing emails and targeted phishing emails are typically communicated in annual security awareness training.
++   - **Zero-day exploits**—Malware and malicious software that may not have an anti-malware solution can cause a zero-day exploit that may force your organization to remove an IT asset from production. Zero-day attacks and exploits are typically communicated in annual security awareness training.
++   - **Use of social networking and peer-to-peer communications**—Both are typically prohibited in the AUP and in other policy definitions; hence, this topic is commonly shared in annual security awareness training.
+
+Without periodic security awareness training, employees will not be aware of new policies and procedures regarding security and privacy. Some organizations require a policy for ensuring that security awareness training is updated and delivered annually to all employees and contractors. This is an important risk-mitigating requirement to address the
