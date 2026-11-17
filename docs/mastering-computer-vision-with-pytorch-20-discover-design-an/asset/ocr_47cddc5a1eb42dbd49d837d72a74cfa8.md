@@ -1,0 +1,9 @@
+that other programming languages provided. To address these challenges, a group of AI researchers at Facebook, Soumith Chintala, the director of AI Research (FAIR), began constructing a brand new deep learning system. They wanted a tool that was just as responsive, adaptable, and user-friendly as Torch while also being tightly connected with a more powerful programming language.
+
+They introduced PyTorch, an open-source machine learning package created for Python, in January 2017. Python, a language that was already a leader in the field of scientific computing and had a strong ecosystem of libraries like NumPy, SciPy, and Matplotlib, was created with the intention of bringing the magic of the Torch library to Python. The machine learning community reacted positively to PyTorch’s release, which hastened the adoption of this tool.
+
+# PyTorch’s Philosophy and Early Days
+
+From the beginning, PyTorch was guided by a Python-first philosophy. It wasn’t a binding into a monolithic C++ framework, but a tool built to be deeply integrated with Python. It could leverage the power of Python to deliver a user experience that was smooth, flexible, and intuitive. This was in stark contrast to other machine learning frameworks of the time, which often felt like they were fighting against Python’s dynamics, rather than embracing them.
+
+The Python-first design of PyTorch had profound implications. It meant that users could leverage the full power of Python when working with PyTorch, and they could use native Python control flow statements in their models. It also meant that debugging PyTorch models was as straightforward as debugging Python scripts. This was a

@@ -1,0 +1,2 @@
++   [PyTorch 2.0 计算机视觉精通指南：使用 PyTorch 2.0 和深度学习技术探索、设计并构建尖端高性能计算机视觉解决方案](README.md)
++   [PyTorch 2.0 计算机视觉精通指南：使用 PyTorch 2.0 和深度学习技术探索、设计并构建尖端高性能计算机视觉解决方案](mastering-computer-vision-with-pytorch-20-discover-design-an.md)

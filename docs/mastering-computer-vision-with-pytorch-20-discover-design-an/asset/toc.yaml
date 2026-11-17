@@ -1,0 +1,20 @@
+level_changes:
+- line: 3198
+  before: 1
+  after: 2
+- line: 3199
+  before: 1
+  after: 2
+- line: 5858
+  before: 3
+  after: 2
+text_changes:
+- line: 3816
+  before: 第6章
+  after: 第 6 章
+- line: 547
+  before: 第1章 深入PyTorch 2.0
+  after: 第 1 章 深入PyTorch 2.0
+- line: 3199
+  before: 深入卷积神经网络（CNNs）。
+  after: 深入卷积神经网络（CNNs）
