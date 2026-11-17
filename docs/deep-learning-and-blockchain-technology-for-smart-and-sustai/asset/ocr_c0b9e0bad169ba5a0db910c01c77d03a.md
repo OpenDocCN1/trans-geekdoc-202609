@@ -1,0 +1,13 @@
+# A. Prospects for Combining Blockchain Technology with Internet of Things
+
+IoT systems can use from blockchain technologies’ increased interoperability, privacy, and security. Furthermore, the scalability and dependability of IoT systems can also be improved by blockchain [6]. This kind of blockchain-IoT integration is known as BCIoT.
+
+Compared to existing IoT systems, BCIoT offers the potential advantages listed below:
+
++   1. **Improved Interoperability**: Blockchain basically makes IoT systems more interoperable by converting and storing IoT data in blockchains. In this process, diverse forms of IoT data are transformed and retrieved, then compressed. After that, they are ultimately saved on blockchain platforms. Furthermore, blockchains are made on top of Peer-to-Peer overlay networks, which enable universal Internet access. Another indication of interoperability is how easily they can navigate various kinds of fragmented networks.
+
++   2. **IoT Security Systems Enhancement**: Since IoT data is kept as blockchain transactions that are encrypted and digitally signed using cryptographic keys (such as the elliptic curve digital signature algorithm, ECDSA), blockchains can provide security for it [9]. Additionally, by automatically updating IoT device firmware to fix any breaches, the integration of blockchain technologies (such as smart contracts) with IoT systems can help to improve system security [10].
+
++   3. **Traceability and Reliability**: Anywhere, at any time, blockchain data may be recognized and validated. As for earlier transactions, they are all traceable and kept on the blockchains. For example, a blockchain-based product traceability has been established by Lu and Xu [11] to offer traceable services to suppliers and merchants. This allows for scrutiny and proof of the products’ uniqueness and quality. Furthermore, as it is very hard to change or invent any transaction recorded in a blockchain, the immutability of blockchains further ensures the accuracy of IoT data.
+
++   4. **Autonomic Interactions**: BC technology can enable automatic communication between IoT devices or subsystems. For example, Zhang and Wen [12] offer to automate transactions in which traditional responsibilities such as governments or firms are not involved in the payment process, and distributed autonomous corporations (DACs) are utilized. Smart contracts enable DACs to function autonomously, eliminating the need for human interaction and resulting in cost savings.

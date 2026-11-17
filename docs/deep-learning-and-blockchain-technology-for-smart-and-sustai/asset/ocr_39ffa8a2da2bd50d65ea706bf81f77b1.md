@@ -1,0 +1,11 @@
+# # Addressing
+
+The high cost of new infrastructure and regulatory issues are two of the major issues that cities now face. Smart city innovation and growth are hampered by these issues.
+
+Government managers should understand that significant expenditures in infrastructure and technology will be required to make the transition to smart cities in order to stay up with the rapidly expanding trend of smart cities.
+
+It could be challenging to swiftly adopt changes for smart cities and keep up with urban growth due to financial limitations and conflicting goals. Technological advancement frequently surpasses municipal resources, and when it does arrive, it might not be fully utilized.
+
+Given their current communications infrastructure, the electric, gas, and water utilities are the industries best positioned to provide smart city services. Utility infrastructure could be used to lower deployment costs dramatically and hasten the rollout of smart city services. Existing laws governing public utilities, however, could occasionally function as a significant barrier. Restrictions imposed by regulations and worries about utility returns on investment (and the corresponding costs of electricity distribution) may force cities to invest large sums of money in developing their own infrastructure instead of utilizing the public utilities’ existing infrastructure, increasing costs and slowing down innovation.
+
+Public utility regulation frameworks may also operate as roadblocks to urban modernization. For instance, Public Utility Commissions and other regulatory authorities must approve a specific tariff before a public utility can begin building out its infrastructure [11]. The influence on the electric consumer is the main concern of these regulatory agencies, which typically concentrate on the operations of public utilities. It is difficult to determine how a public utility’s smart city services should affect the rate base, which makes infrastructure investments even more difficult. The optimal way to deliver services for smart cities needs coordination between utilities, regulators, and governments. If local governments cannot afford to invest in the infrastructure and technology required to raise the standard of living for their residents, smart cities will not be able to expand and thrive.

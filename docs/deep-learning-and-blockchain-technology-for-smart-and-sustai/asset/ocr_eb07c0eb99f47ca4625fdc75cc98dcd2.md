@@ -1,0 +1,13 @@
+# 13.2 Related Work
+
+Zhou et al. (2019) constructed an AQI prediction model using GRU, an attention mechanism, and a CNN. The input data was processed using CNN to extract features, and the AQI was predicted using a GRU. To demonstrate the greater accuracy of the GRU prediction model, weather and air quality measurements from 1 January 2017 to 30 September 2020 were gathered and applied to the Chinese city of Shijiazhuang. The results were compared with the performance of other models, and the suggested model performed the best overall.
+
+In a busy highway field, Sharma et al. (2019) tracked the horizontal concentrations of air pollutants. They noted that there is an inverse relationship between particle air pollution concentrations and distance.
+
+The researchers found that maintaining air quality stability may help stabilize the environment and has a significant relationship with raising air purity. Using a variety of ML-based models, including Decision Tree (DT), Random Forests (RF), and Extreme Gradient Boost (XGBoost) (Van et al., 2023) developed a strategy for processing air pollution data and improving the AQI forecasting process. The results are examined using MAE, RMSE, and R2 approaches. With an RMSE of 0.03684, XGBoost outperformed the other algorithms in AQI value prediction.
+
+Campbell-Lendrum and Prüss-Ustün (2019) demonstrated how to apply ML to estimate the PM2.5 μm level based on meteorological information in a high-elevation, non-metropolitan city (Quito, Ecuador). Based on historical PM2.5 μm levels, auto-regression was employed to predict PM2.5 values. With an accuracy score of approximately 89%, SVM algorithm and DT were capable of predicting PM2.5.
+
+Pant et al. (2022) used supervised ML techniques to estimate the air conditions in Dehradun, Uttarakhand. The test findings showed that the DT exhibited a greater precision and accuracy level. By analyzing the levels of contaminants and particles and calculating the air quality rating using SVR (Support Vector Regression) and Radial basis function (RBF), Castelli et al. (2020) demonstrated that SVR provided the most reliable and accurate forecasts with an accuracy rate.
+
+Al-Janabi et al. (2020) presented a DL model using a smart recurrent neural network (RNN) to forecast the concentrations of air pollutants for the following two days. They computed the algorithm using a particle swarm optimization

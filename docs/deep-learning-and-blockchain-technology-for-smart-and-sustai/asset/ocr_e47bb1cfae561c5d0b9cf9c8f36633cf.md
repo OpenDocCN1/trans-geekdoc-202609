@@ -1,0 +1,11 @@
+and SBFS. Subject and Text features of the emails have been extracted from the email dataset. Based on various rules framed on RBSA algorithm, the words of subject are analysed. The existence of spam words is also found in order to compute the weight of email. The Bag of Words model has been applied on body of email to find the frequency of words in body text. This BOW model produces sparse matrix as output, and it is augmented with the output of RBSA and SBFS algorithms. The machine learning algorithms such as SVM, Multinomial Naive Bayes, Gaussian Naive Bayes, and Bernoulli Naive Bayes have been applied for classifying emails into spam or ham. The performance of the proposed methodology has been compared with traditional method without using RBSA and SBFS.
+
+# 2.3.1 Dataset Collection
+
+The Enron email dataset [18] is used in this suggested work. There are 5,643 emails in total in dataset D. Since we only focus on subject and body features of email, unnecessary columns have been deleted from the dataset. In a data frame, the columns Label, Subjects, Text, and Weight are kept for later processing.
+
+# 2.3.2 Preprocessing
+
+In text processing and natural language processing [19,20], preprocessing is a crucial step. Preprocessing is used in email contents in order to minimise the amount of features. Text typically includes extraneous words, URLs, HTML elements, meaningless words, several words with the same meaning, special characters, and digits. These are eliminated from the provided input text to increase machine learning algorithms’ accuracy. Ham is encoded as 0, but spam is 1. The class labels can be made normal by using these encodings. Text labels should be changed to numeric labels since they are not comparable.
+
+The Subject and Text columns are then subjected to tokenization. Word tokenization is used to represent the content in the Subject and Text columns. Words like “in,” “the,” “this,” “that,” “is,” etc. are stop words. Prior to using machine learning techniques, these terms should be disregarded because they are more common and do not help with the

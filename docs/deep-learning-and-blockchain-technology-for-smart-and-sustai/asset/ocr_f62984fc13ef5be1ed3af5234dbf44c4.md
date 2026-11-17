@@ -1,0 +1,1 @@
+25. Jiang, Z., Lin, Z., Davis, L.S. Label consistent K-SVD: Learning a discriminative dictionary for recognition, pattern analysis and machine intelligence. IEEE Transactions on Pattern Analysis and Machine Intelligence, 35(11), 2651–2664, 2013.
