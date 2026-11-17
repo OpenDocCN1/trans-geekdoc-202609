@@ -1,0 +1,2756 @@
+- raw:
+  - '[PAGE 0]
+
+
+    # New interpretation of GNRB® knee arthrometer results for ACL injury diagnosis
+    support using machine learning
+
+
+    Jean Mouchotte a,*, Matthieu LeBerre a, Théo Cojean b, Henri Robert c
+
+
+    a Learn Data & Robotics Laboratory (LDR), ESIEA, LAVAL, 53 000, France
+
+    b Univ Lyon, Univ Gustave Eiffel, Univ Claude Bernard Lyon 1, LBMC UMRT 9406,
+    Lyon, F-69622, France
+
+    c Centre Hospitalier du Haut Anjou, Château-Gontier-Sur-Mayenne, 53 200, France
+
+
+    # ARTICLE INFO
+
+
+    +   - ACL tears
+
+    +   - AI medical diagnosis
+
+    +   - Arthrometry
+
+    +   - GNRB®
+
+    +   - Machine learning
+
+    +   - Diagnostic accuracy
+
+    +   - Knee anterior laxity
+
+
+    # ABSTRACT
+
+
+    Purpose: GNRB is an arthrometer and alternative diagnostic method less expensive
+    than MRI and more accurate than KT-1000 in Anterior Cruciate Ligament (ACL) tears
+    detection. Dynamic knee laxity tests are more complex to analyze and will require
+    a new solution of universal interpretation. The hypothesis is that using a solution
+    based on Artificial Intelligence (AI) will allow us to obtain a more accurate
+    and robust non-invasive diagnostic method than the current solution with three
+    laxity thresholds.
+
+
+    Method: AI can enhance the reliability of this analysis by utilizing advanced
+    algorithms and incorporating a wide range of additional parameters, leading to
+    more precise diagnostics. The existing process solely rely on laxity differences
+    obtained from the device, overlooking influential factors like clamping force.
+    By considering a broader set of parameters and employing well-calibrated models
+    a comparative study was performed between different Machine Learning (ML) models
+    and Ensemble Learning to get the best compromise. The correction process will
+    leverage statistical analysis of the current solutions.
+
+
+    Results: Association of Voting, Stacking and threshold laxity methods results
+    report a 6% increase in accuracy and approximately 13% improvement in tear detection
+    compared to the current solution with 1384 GNRB® measurements. Predicted diagnoses
+    are also more prone to new data from patients unknown to the model and confirmed
+    using a validation database.
+
+
+    Conclusion: A first ML model was introduced in ACL tears detection using GNRB
+    device. GNRB coupled with ML was encouraging with better results than the current
+    static diagnostic method. It could be integrated and recommended as a complementarity
+    solution to MRI.
+
+
+    # 1. Introduction
+
+
+    Anterior cruciate ligament (ACL) rupture is a common knee injury that involves
+    complex movements such as cutting and pivoting. The diagnosis of this pathology
+    is a public health issue because a patient must consult an average of three doctors
+    to obtain a result (Micheo et al., 2010). The reliability of ACL tear diagnosis
+    is currently dependent on the experience of the healthcare professional conducting
+    the clinical examination, which includes Lachman test (Branch et al., 2010; Torg
+    et al., 1976). However, in many cases, further examinations such as MRI may be
+    required to confirm the diagnosis. MRI is the most commonly used non-invasive
+    examination for diagnosing ACL tears, although partial rupture, scanning technique,
+    or knee pain impacts its accuracy (Chang et al., 2013; Crawford et al., 2007;
+    Ebrahimpour et al., 2014; Phelan et al., 2016). Less expensive and easier solutions
+    without radiation exposure have therefore been developed. Moreover,
+
+
+    it cannot directly assess knee laxity and is mainly used to assess the associated
+    tears.
+
+
+    In the 1980s, Americans introduced the KT1000 with dynamic laxity (Balasch et
+    al., 1999). It measures the relative anterior tibial drawer movement to the femur,
+    providing an objective measurement of tibial translation using an arthrometer.
+    The Rolimeter (Schuster et al., 2004), developed by Roland Jacob, and stress radiography
+    via Telos (Pässler & März, 1986) have been introduced as complementary diagnostic
+    methods. However, many factors can affect the quality of the results, such as
+    examiner experience, clamping force, positioning, or leg rotation. As a result,
+    a large body of literature reports the inherent inaccuracy and poor reproducibility
+    of these devices, resulting in subjective and unreliable results (Bouguennec et
+    al., 2015; Collette et al., 2012; Jenny et al., 2017; Lefevre et al., 2014). Therefore,
+    a new arthrometer, the GNRB®, has been developed.'
+  - '[PAGE 1]
+
+
+    | | GNRB® | | | | MRI | | | |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | | Complete | | Partial | | Complete | | Partial | |
+
+    | | Sn | Sp | Sn | Sp | Sn | Sp | Sn | Sp |
+
+    | Robert et al. (2009) | 70% | 99% | 80% | 87% | | | | |
+
+    | Klouche et al. (2015) | 92% | 96% | 92% | 98% | | | | |
+
+    | Di Iorio et al. (2014) | | | 72% | | 84% | 92% | | |
+
+    | Beauraain (2020) | 73% | | 62% | | 76% | | 30% | |
+
+    | Lefevre N | 84% | 81% | 87% | 87% | | | | |
+
+    | Beldame J | 62% | 75% | | | | | | |
+
+    | Phelan et al. (2016) | | | | | 87% | 93% | | |
+
+    | Bohu et al. (2012) | | | | | | | 32% | |
+
+
+    The GNRB® device (Genourob, Laval, France) represents the pioneering automated
+    dynamic laximetry (ADL) system. It is one of the most effective non-invasive methods
+    with superior accuracy and reproducibility than other devices. Saravia et al.
+    (2020). However, the diagnosis is solely based on the absolute difference in laxity
+    measured at 134 N between the healthy knee and the pathological knee according
+    to three thresholds suggest by the manufacturer (Genourob, Laval) : 0 to 1.5 mm
+    (healthy) ; 1.5 to 3.0 mm : (partial tear) and above 3 mm (total tear)
+
+
+    This static approach is not universal and explains the large differences in sensitivity
+    and specificity obtained in different studies that can reach more than 20% (Beauraain,
+    2020). Others question the relevance of the thresholds and ask that they be re-evaluated
+    (Mouarbes et al., 2018).
+
+
+    The hypothesis is that relying solely on the difference in laxity measured at
+    134 N may not be sufficient to achieve reliable results for patients worldwide,
+    considering the recommended thresholds. Therefore, a new method is proposed in
+    this study, which using a Machine Learning (ML) model to incorporate a broader
+    range of parameters such as age, gender, height, weight, tightness, compliance,
+    and other relevant data to enhance the accuracy of the diagnosis. The following
+    problem can thus arise : Would the set of measurements performed by the GNRB®
+    and the patient''s data allow us to obtain a more accurate and universal solution
+    using Machine Learning? The study assembled the largest database with 1384 GNRB®
+    measurements from healthy and injured patients to address this scientific lock.
+
+
+    Firstly, GNRB® limitations will be discussed to explain the contribution of the
+    proposed solution to the field of medicine. For this purpose, complementary approaches
+    based on Machine Learning will suggest, each with improvements to reach an optimal
+    ratio of sensitivity and specificity. Finally, the best solution will be confirmed
+    through cross-validation using a new database collected at the Brest Hospital
+    (France) to affirm or refute the hypothesis.
+
+
+    Intelligent decision algorithms for ACL tear detection will, to our knowledge,
+    attend a first in the literature. It could then allow obtaining a complementary
+    diagnosis more reliable than the existing solutions thanks to the consideration
+    of a large number of data and parameters. The decision to explore AI is based
+    on its remarkable ability to “grasp general medical principles and apply them
+    to new patients” (Obermeyer & Emanuel, 2016).
+
+
+    # 2. Materials and methods
+
+
+    Accurate clinical detection using non-invasive methods is crucial for determining
+    the most effective treatment approach. Hence, this article primarily focuses on
+    the GNRB® as an attempt to enhance the accuracy of its diagnosis. Nonetheless,
+    arthroscopy is considered as the “gold standard” in numerous studies due to its
+    high reliability, as it allows direct observation of the condition of the ACL
+    by the surgeon (Crawford et al., 2007). Operative reports will serve as the basis
+    for comparison throughout the study and provide the targets for ML models.
+
+
+    # 2.1. GNRB® and results limitations
+
+
+    The GNRB® is based on the Lachman (Torg et al., 1976) test but in an automated
+    way to guarantee a high reproducibility and optimal knee flexion of 20° (Collette
+    et al., 2012). While this explains the high reproducibility and accuracy, the
+    universality of GNRB® diagnostics can be questioned. Table 1 shows a significant
+    heterogeneity of results which can be explained by :
+
+
+    +   - an apparent lack of transparency especially for the clamping force which
+    impacts the Laxity measurement (Alqahtani et al., 2018; Bouguennec et al., 2015).
+    The GNRB® documentation recommends a maximum difference of 20 N between two measurements;
+
+    +   - the fact that the difference in laxity measured at 134 N is not universal
+    and uses their own thresholds. Studies suggest a re-evaluation, especially for
+    the 1.5 mm threshold (Mouarbes et al., 2018);
+
+    +   - the GNRB® allows for multiple measurements from 67 N to 200 N (Robert et
+    al., 2009), but not all of the data are exploited. Other factors could also be
+    considered, including patient gender, which has not been reported;
+
+
+    Due to more consistent and accurate results (Table 1), MRI remains the best method
+    to date. On the other hand, dynamic laximetry, which allows economic and societal
+    benefits while avoiding radiation, needs to be improved to be recommended in the
+    same way as MRI (Gustafsson et al., 2020).
+
+
+    # 2.2. DataBase design
+
+
+    The first step is to obtain a balanced and realistic database because all the
+    models proposed afterward will depend on the choices made.
+
+
+    # 2.2.1. GNRB® data selection
+
+
+    A GNRB® database of 30,000 measurements performed on 1840 patients over a period
+    of 2 ± 7 months after injury between 2008 and 2019 with an average of 30 ± 12
+    years old. MRI scans are also and have been performed in several centers using
+    a Siemens or Philips 1.5 T MRI scanner according to a standard protocol for the
+    knee: sagittal fat-suppressed (FS) T2-weighted, sagittal proton density (PD)-weighted,
+    axial FS PD-weighted, coronal T2 and PD-weighted images. No sagittal or coronal
+    oblique planes were performed in this series.
+
+
+    They have allowed us to prepare a batch of 5000 healthy patients and 869 with
+    arthroscopically confirmed ACL rupture. Each consists of a unique set of measurements
+    at diverse forces (between 67 N and 250 N) on one healthy and injured knee (or
+    two healthy knees) of the same patient. They had to be made the same day under
+    similar conditions (clamping force less than 20N). All the choice explains why
+    the number of exploitable data is voluntarily reduced.
+
+
+    The training and test base contains 85% of patients against 33% in the ideal because
+    there are three classes. A model with the dominance'
+  md: "\n## New interpretation of GNRB® knee arthrometer results for ACL injury diagnosis\
+    \ support using machine learning\n\nJean Mouchotte a,*, Matthieu LeBerre a, Théo\
+    \ Cojean b, Henri Robert c\n\na Learn Data & Robotics Laboratory (LDR), ESIEA,\
+    \ LAVAL, 53 000, France  \nb Univ Lyon, Univ Gustave Eiffel, Univ Claude Bernard\
+    \ Lyon 1, LBMC UMRT 9406, Lyon, F-69622, France  \nc Centre Hospitalier du Haut\
+    \ Anjou, Château-Gontier-Sur-Mayenne, 53 200, France\n\n## ARTICLE INFO\n\n- ACL\
+    \ tears  \n- AI medical diagnosis  \n- Arthrometry  \n- GNRB®  \n- Machine learning\
+    \  \n- Diagnostic accuracy  \n- Knee anterior laxity  \n\n## ABSTRACT\n\nPurpose:\
+    \ GNRB is an arthrometer and alternative diagnostic method less expensive than\
+    \ MRI and more accurate than KT-1000 in Anterior Cruciate Ligament (ACL) tears\
+    \ detection. Dynamic knee laxity tests are more complex to analyze and will require\
+    \ a new solution of universal interpretation. The hypothesis is that using a solution\
+    \ based on Artificial Intelligence (AI) will allow us to obtain a more accurate\
+    \ and robust non-invasive diagnostic method than the current solution with three\
+    \ laxity thresholds.\n\nMethod: AI can enhance the reliability of this analysis\
+    \ by utilizing advanced algorithms and incorporating a wide range of additional\
+    \ parameters, leading to more precise diagnostics. The existing process solely\
+    \ rely on laxity differences obtained from the device, overlooking influential\
+    \ factors like clamping force. By considering a broader set of parameters and\
+    \ employing well-calibrated models a comparative study was performed between different\
+    \ Machine Learning (ML) models and Ensemble Learning to get the best compromise.\
+    \ The correction process will leverage statistical analysis of the current solutions.\n\
+    \nResults: Association of Voting, Stacking and threshold laxity methods results\
+    \ report a 6% increase in accuracy and approximately 13% improvement in tear detection\
+    \ compared to the current solution with 1384 GNRB® measurements. Predicted diagnoses\
+    \ are also more prone to new data from patients unknown to the model and confirmed\
+    \ using a validation database.\n\nConclusion: A first ML model was introduced\
+    \ in ACL tears detection using GNRB device. GNRB coupled with ML was encouraging\
+    \ with better results than the current static diagnostic method. It could be integrated\
+    \ and recommended as a complementary solution to MRI.\n\n## 1. Introduction\n\n\
+    Anterior cruciate ligament (ACL) rupture is a common knee injury that involves\
+    \ complex movements such as cutting and pivoting. The diagnosis of this pathology\
+    \ is a public health issue because a patient must consult an average of three\
+    \ doctors to obtain a result (Micheo et al., 2010). The reliability of ACL tear\
+    \ diagnosis is currently dependent on the experience of the healthcare professional\
+    \ conducting the clinical examination, which includes Lachman test (Branch et\
+    \ al., 2010; Torg et al., 1976). However, in many cases, further examinations\
+    \ such as MRI may be required to confirm the diagnosis. MRI is the most commonly\
+    \ used non-invasive examination for diagnosing ACL tears, although partial rupture,\
+    \ scanning technique, or knee pain impacts its accuracy (Chang et al., 2013; Crawford\
+    \ et al., 2007; Ebrahimpour et al., 2014; Phelan et al., 2016). Less expensive\
+    \ and easier solutions without radiation exposure have therefore been developed.\
+    \ Moreover,\n\nit cannot directly assess knee laxity and is mainly used to assess\
+    \ the associated tears.\n\nIn the 1980s, Americans introduced the KT1000 with\
+    \ dynamic laxity (Balasch et al., 1999). It measures the relative anterior tibial\
+    \ drawer movement to the femur, providing an objective measurement of tibial translation\
+    \ using an arthrometer. The Rolimeter (Schuster et al., 2004), developed by Roland\
+    \ Jacob, and stress radiography via Telos (Pässler & März, 1986) have been introduced\
+    \ as complementary diagnostic methods. However, many factors can affect the quality\
+    \ of the results, such as examiner experience, clamping force, positioning, or\
+    \ leg rotation. As a result, a large body of literature reports the inherent inaccuracy\
+    \ and poor reproducibility of these devices, resulting in subjective and unreliable\
+    \ results (Bouguennec et al., 2015; Collette et al., 2012; Jenny et al., 2017;\
+    \ Lefevre et al., 2014). Therefore, a new arthrometer, the GNRB®, has been developed.\n\
+    \n| | GNRB® | | | | MRI | | | |\n|---|---|---|---|---|---|---|---|---|\n| | Complete\
+    \ | | Partial | | Complete | | Partial | |\n| | Sn | Sp | Sn | Sp | Sn | Sp |\
+    \ Sn | Sp |\n| Robert et al. (2009) | 70% | 99% | 80% | 87% | | | | |\n| Klouche\
+    \ et al. (2015) | 92% | 96% | 92% | 98% | | | | |\n| Di Iorio et al. (2014) |\
+    \ | | 72% | | 84% | 92% | | |\n| Beauraain (2020) | 73% | | 62% | | 76% | | 30%\
+    \ | |\n| Lefevre N | 84% | 81% | 87% | 87% | | | | |\n| Beldame J | 62% | 75%\
+    \ | | | | | | |\n| Phelan et al. (2016) | | | | | 87% | 93% | | |\n| Bohu et al.\
+    \ (2012) | | | | | | | 32% | |\n\nThe GNRB® device (Genourob, Laval, France) represents\
+    \ the pioneering automated dynamic laximetry (ADL) system. It is one of the most\
+    \ effective non-invasive methods with superior accuracy and reproducibility than\
+    \ other devices. Saravia et al. (2020). However, the diagnosis is solely based\
+    \ on the absolute difference in laxity measured at 134 N between the healthy knee\
+    \ and the pathological knee according to three thresholds suggested by the manufacturer\
+    \ (Genourob, Laval) : 0 to 1.5 mm (healthy) ; 1.5 to 3.0 mm : (partial tear) and\
+    \ above 3 mm (total tear)\n\nThis static approach is not universal and explains\
+    \ the large differences in sensitivity and specificity obtained in different studies\
+    \ that can reach more than 20% (Beauraain, 2020). Others question the relevance\
+    \ of the thresholds and ask that they be re-evaluated (Mouarbes et al., 2018).\n\
+    \nThe hypothesis is that relying solely on the difference in laxity measured at\
+    \ 134 N may not be sufficient to achieve reliable results for patients worldwide,\
+    \ considering the recommended thresholds. Therefore, a new method is proposed\
+    \ in this study, which using a Machine Learning (ML) model to incorporate a broader\
+    \ range of parameters such as age, gender, height, weight, tightness, compliance,\
+    \ and other relevant data to enhance the accuracy of the diagnosis. The following\
+    \ problem can thus arise : Would the set of measurements performed by the GNRB®\
+    \ and the patient's data allow us to obtain a more accurate and universal solution\
+    \ using Machine Learning? The study assembled the largest database with 1384 GNRB®\
+    \ measurements from healthy and injured patients to address this scientific lock.\n\
+    \nFirstly, GNRB® limitations will be discussed to explain the contribution of\
+    \ the proposed solution to the field of medicine. For this purpose, complementary\
+    \ approaches based on Machine Learning will suggest, each with improvements to\
+    \ reach an optimal ratio of sensitivity and specificity. Finally, the best solution\
+    \ will be confirmed through cross-validation using a new database collected at\
+    \ the Brest Hospital (France) to affirm or refute the hypothesis.\n\nIntelligent\
+    \ decision algorithms for ACL tear detection will, to our knowledge, be a first\
+    \ in the literature. It could then allow obtaining a complementary diagnosis more\
+    \ reliable than the existing solutions thanks to the consideration of a large\
+    \ number of data and parameters. The decision to explore AI is based on its remarkable\
+    \ ability to “grasp general medical principles and apply them to new patients”\
+    \ (Obermeyer & Emanuel, 2016).\n\n## 2. Materials and methods\n\nAccurate clinical\
+    \ detection using non-invasive methods is crucial for determining the most effective\
+    \ treatment approach. Hence, this article primarily focuses on the GNRB® as an\
+    \ attempt to enhance the accuracy of its diagnosis. Nonetheless, arthroscopy is\
+    \ considered as the “gold standard” in numerous studies due to its high reliability,\
+    \ as it allows direct observation of the condition of the ACL by the surgeon (Crawford\
+    \ et al., 2007). Operative reports will serve as the basis for comparison throughout\
+    \ the study and provide the targets for ML models.\n\n### 2.1. GNRB® and results\
+    \ limitations\n\nThe GNRB® is based on the Lachman (Torg et al., 1976) test but\
+    \ in an automated way to guarantee a high reproducibility and optimal knee flexion\
+    \ of 20° (Collette et al., 2012). While this explains the high reproducibility\
+    \ and accuracy, the universality of GNRB® diagnostics can be questioned. Table\
+    \ 1 shows a significant heterogeneity of results which can be explained by :\n\
+    \n- an apparent lack of transparency especially for the clamping force which impacts\
+    \ the Laxity measurement (Alqahtani et al., 2018; Bouguennec et al., 2015). The\
+    \ GNRB® documentation recommends a maximum difference of 20 N between two measurements;\n\
+    - the fact that the difference in laxity measured at 134 N is not universal and\
+    \ uses their own thresholds. Studies suggest a re-evaluation, especially for the\
+    \ 1.5 mm threshold (Mouarbes et al., 2018);\n- the GNRB® allows for multiple measurements\
+    \ from 67 N to 200 N (Robert et al., 2009), but not all of the data are exploited.\
+    \ Other factors could also be considered, including patient gender, which has\
+    \ not been reported;\n\nDue to more consistent and accurate results (Table 1),\
+    \ MRI remains the best method to date. On the other hand, dynamic laximetry, which\
+    \ allows economic and societal benefits while avoiding radiation, needs to be\
+    \ improved to be recommended in the same way as MRI (Gustafsson et al., 2020).\n\
+    \n### 2.2. Database design\n\nThe first step is to obtain a balanced and realistic\
+    \ database because all the models proposed afterward will depend on the choices\
+    \ made.\n\n#### 2.2.1. GNRB® data selection\n\nA GNRB® database of 30,000 measurements\
+    \ performed on 1840 patients over a period of 2 ± 7 months after injury between\
+    \ 2008 and 2019 with an average of 30 ± 12 years old. MRI scans are also and have\
+    \ been performed in several centers using a Siemens or Philips 1.5 T MRI scanner\
+    \ according to a standard protocol for the knee: sagittal fat-suppressed (FS)\
+    \ T2-weighted, sagittal proton density (PD)-weighted, axial FS PD-weighted, coronal\
+    \ T2 and PD-weighted images. No sagittal or coronal oblique planes were performed\
+    \ in this series.\n\nThey have allowed us to prepare a batch of 5000 healthy patients\
+    \ and 869 with arthroscopically confirmed ACL rupture. Each consists of a unique\
+    \ set of measurements at diverse forces (between 67 N and 250 N) on one healthy\
+    \ and injured knee (or two healthy knees) of the same patient. They had to be\
+    \ made the same day under similar conditions (clamping force less than 20N). This\
+    \ choice explains why the number of exploitable data is voluntarily reduced.\n\
+    \nThe training and test base contains 85% of patients against 33% in the ideal\
+    \ because there are three classes. A model with the dominance\n"
+  mdcn: "\n## 基于机器学习的ACL损伤诊断支持中GNRB®膝关节动态仪结果的新解读\n\nJean Mouchotte a,*, Matthieu LeBerre\
+    \ a, Théo Cojean b, Henri Robert c\n\na 数据与机器人学习实验室（LDR）, ESIEA, 拉瓦尔, 53 000,\
+    \ 法国  \nb 里昂大学, 古斯塔夫·埃菲尔大学, 克劳德·贝尔纳里昂1大学, LBMC UMRT 9406, 里昂, F-69622, 法国  \n\
+    c 上昂中心医院, 马恩河畔谢托-贡蒂耶, 53 200, 法国\n\n## 文章信息\n\n- ACL撕裂  \n- AI医疗诊断  \n- 关节动态测量\
+    \  \n- GNRB®  \n- 机器学习  \n- 诊断准确性  \n- 膝关节前向松弛度  \n\n## 摘要\n\n目的：GNRB是一种关节动态仪，也是一种替代诊断方法，其成本低于MRI，在前十字韧带（ACL）撕裂检测中的准确性高于KT-1000。膝关节动态松弛度测试分析更为复杂，需要一种通用的解释新方案。假设是，使用基于人工智能（AI）的解决方案将使我们能够获得比目前三种松弛度阈值方案更准确、更稳健的非侵入性诊断方法。\n\
+    \n方法：AI可以通过利用先进算法并纳入广泛的额外参数来增强该分析的可靠性，从而实现更精确的诊断。现有流程仅依赖设备获得的松弛度差值，忽略了夹持力等有影响因素。通过考虑更广泛的参数集并采用经过良好校准的模型，在不同机器学习（ML）模型和集成学习之间进行了比较研究，以获得最佳折中方案。校正过程将利用当前解决方案的统计分析。\n\
+    \n结果：投票法、堆叠法与阈值松弛度方法的关联结果显示，与使用1384次GNRB®测量的当前方案相比，准确率提高了6%，撕裂检测率提高了约13%。预测诊断对模型未知患者的新数据也更具鲁棒性，并通过验证数据库得到证实。\n\
+    \n结论：首次将机器学习模型引入使用GNRB设备的ACL撕裂检测中。GNRB与机器学习的结合令人鼓舞，其效果优于目前的静态诊断方法。它可以作为MRI的补充方案进行集成和推荐。\n\
+    \n## 1. 引言\n\n前十字韧带（ACL）断裂是一种常见的膝关节损伤，涉及变向和转体等复杂动作。该病理的诊断是一个公共卫生问题，因为患者平均需要咨询三位医生才能获得结果（Micheo\
+    \ et al., 2010）。目前，ACL撕裂诊断的可靠性取决于进行临床检查的医疗专业人员的经验，其中包括Lachman测试（Branch et al.,\
+    \ 2010; Torg et al., 1976）。然而，在许多情况下，可能需要MRI等进一步检查来确诊。MRI是诊断ACL撕裂最常用的非侵入性检查，尽管部分断裂、扫描技术或膝痛会影响其准确性（Chang\
+    \ et al., 2013; Crawford et al., 2007; Ebrahimpour et al., 2014; Phelan et al.,\
+    \ 2016）。因此，开发了成本更低、更易于操作且无辐射暴露的解决方案。此外，\n\nMRI无法直接评估膝关节松弛度，主要用于评估相关撕裂。\n\n1980年代，美国人引入了具有动态松弛度的KT1000（Balasch\
+    \ et al., 1999）。它测量胫骨相对于股骨的相对前向抽屉运动，利用关节动态仪提供胫骨平移的客观测量。由Roland Jacob开发的Rolimeter（Schuster\
+    \ et al., 2004）以及通过Telos（Pässler & März, 1986）进行的应力X线摄影已被引入作为补充诊断方法。然而，许多因素都可能影响结果质量，例如检查者经验、夹持力、定位或腿部旋转。因此，大量文献报告称这些设备存在固有的不准确性和可重复性差，导致结果主观且不可靠（Bouguennec\
+    \ et al., 2015; Collette et al., 2012; Jenny et al., 2017; Lefevre et al., 2014）。因此，开发了一种新的关节动态仪，即GNRB®。\n\
+    \n| | GNRB® | | | | MRI | | | |\n|---|---|---|---|---|---|---|---|---|\n| | 完全\
+    \ | | 部分 | | 完全 | | 部分 | |\n| | Sn | Sp | Sn | Sp | Sn | Sp | Sn | Sp |\n| Robert\
+    \ et al. (2009) | 70% | 99% | 80% | 87% | | | | |\n| Klouche et al. (2015) | 92%\
+    \ | 96% | 92% | 98% | | | | |\n| Di Iorio et al. (2014) | | | 72% | | 84% | 92%\
+    \ | | |\n| Beauraain (2020) | 73% | | 62% | | 76% | | 30% | |\n| Lefevre N | 84%\
+    \ | 81% | 87% | 87% | | | | |\n| Beldame J | 62% | 75% | | | | | | |\n| Phelan\
+    \ et al. (2016) | | | | | 87% | 93% | | |\n| Bohu et al. (2012) | | | | | | |\
+    \ 32% | |\n\nGNRB®设备（Genourob，法国拉瓦尔）代表了开创性的自动化动态松弛度测量（ADL）系统。它是最有效的非侵入性方法之一，其准确性和可重复性优于其他设备。Saravia\
+    \ et al. (2020)。然而，诊断仅基于制造商（Genourob，法国拉瓦尔）建议的三个阈值下，健康膝与病理膝在134 N处测得的松弛度绝对差值：0至1.5\
+    \ mm（健康）；1.5至3.0 mm（部分撕裂）；超过3 mm（完全撕裂）。\n\n这种静态方法并非通用，并解释了不同研究中获得的灵敏度和特异度存在较大差异，差异可超过20%（Beauraain,\
+    \ 2020）。其他人对这些阈值的相关性表示质疑，并要求重新评估（Mouarbes et al., 2018）。\n\n假设是，仅依赖在134 N处测得的松弛度差值可能不足以在全球患者中获得可靠结果，考虑到推荐的阈值。因此，本研究提出了一种新方法，该方法使用机器学习（ML）模型纳入更广泛的参数范围，如年龄、性别、身高、体重、紧固度、顺应性及其他相关数据，以提高诊断准确性。因此可能出现以下问题：GNRB®进行的一组测量和患者数据是否能让我们使用机器学习获得更准确、更通用的解决方案？本研究汇集了来自健康和受伤患者的1384次GNRB®测量的最大数据库，以解决这一科学难题。\n\
+    \n首先，将讨论GNRB®的局限性，以说明所提解决方案对医学领域的贡献。为此，将提出基于机器学习的补充方法，每种方法都有改进，以达到灵敏度和特异度的最佳比率。最后，将通过使用布雷斯特医院（法国）收集的新数据库进行交叉验证来确认最佳解决方案，以证实或反驳假设。\n\
+    \n据我们所知，ACL撕裂检测的智能决策算法将是文献中的首次。然后，它可能允许获得比现有解决方案更可靠的补充诊断，这要归功于对大量数据和参数的考虑。探索AI的决定基于其“掌握一般医学原则并将其应用于新患者”的显著能力（Obermeyer\
+    \ & Emanuel, 2016）。\n\n## 2. 材料与方法\n\n使用非侵入性方法进行准确的临床检测对于确定最有效的治疗方法至关重要。因此，本文主要关注GNRB®，旨在提高其诊断准确性。尽管如此，由于其高可靠性，关节镜检查在众多研究中被视为“金标准”，因为它允许外科医生直接观察ACL的状况（Crawford\
+    \ et al., 2007）。手术报告将在整个研究中作为比较的基础，并为ML模型提供目标。\n\n### 2.1. GNRB®及其结果的局限性\n\nGNRB®基于Lachman测试（Torg\
+    \ et al., 1976），但以自动化方式进行，以保证高可重复性和最佳的20°膝关节屈曲（Collette et al., 2012）。虽然这解释了高可重复性和准确性，但GNRB®诊断的普遍性仍可受到质疑。表1显示结果存在显著异质性，可由以下原因解释：\n\
+    \n- 表面上缺乏透明度，尤其是夹持力影响松弛度测量（Alqahtani et al., 2018; Bouguennec et al., 2015）。GNRB®文档建议两次测量之间的最大差异为20\
+    \ N；\n- 在134 N处测得的松弛度差值并非通用，并且使用其自身阈值。研究建议重新评估，尤其是1.5 mm阈值（Mouarbes et al., 2018）；\n\
+    - GNRB®允许在67 N至200 N范围内进行多次测量（Robert et al., 2009），但并非所有数据都被利用。还可以考虑其他因素，包括患者性别，但此前未有报道；\n\
+    \n由于结果更加一致和准确（表1），MRI至今仍是最佳方法。另一方面，动态松弛度测量可以带来经济和社会效益，同时避免辐射，需要得到改进，以便像MRI一样被推荐（Gustafsson\
+    \ et al., 2020）。\n\n### 2.2. 数据库设计\n\n第一步是获得平衡且现实的数据库，因为之后提出的所有模型都将取决于所做的选择。\n\
+    \n#### 2.2.1. GNRB®数据选择\n\n一个包含30,000次测量的GNRB®数据库，这些测量对象为1840名患者，时间跨度为2008年至2019年，损伤后2\
+    \ ± 7个月，平均年龄为30 ± 12岁。MRI扫描也已在多个中心使用标准膝关节协议（Siemens或Philips 1.5 T MRI扫描仪）进行：矢状脂肪抑制（FS）T2加权、矢状质子密度（PD）加权、轴位FS\
+    \ PD加权、冠状T2和PD加权图像。该系列中未进行矢状或冠状斜位平面。\n\n这使我们能够准备一批5000名健康患者和869名经关节镜确认ACL断裂的患者。每个患者包含在同一患者的一条健康膝和受伤膝（或两条健康膝）上，以不同力值（67\
+    \ N至250 N之间）进行的一组独特测量。这些测量必须在同一天、相似条件下进行（夹持力小于20 N）。这一选择解释了为什么可用数据的数量被自愿减少。\n\n\
+    训练和测试基础包含85%的患者，而理想情况下为33%，因为存在三个类别。一个具有优势的模型\n"
+  merge: -1
+- raw:
+  - '[PAGE 2]
+
+
+    of one group in its training set will tend to predict the majority class and must
+    be corrected. An arbitrary selection of healthy patients reduced them to 515 (36%)
+    with 492 complete tears (36%) and 377 partial tears (28%). Partial LCA ruptures
+    represent less than 30% because they are less operated than complete ruptures.
+
+
+    # 2.2.2. Input parameter selection
+
+
+    Machine learning algorithms require that the input parameters be carefully chosen
+    and present on all samples. Parameters allow the models to establish links between
+    the training data and the arthroscopy diagnoses that are the reference. Above
+    150 N, a modest proportion of patients have laxity measurements. To maintain the
+    1384 samples, we could keep GNRB® tests performed only at 67 N, 89 N, and 134
+    N. The same problem is observed in Klouche’s study (Klouche et al., 2015) on the
+    difficulty of reproduction in the concrete case if the force applied is too great.
+    The slope coefficient P2 calculated using the laxity measurements is retained.
+    This aligns with Bercovy’s (Bercovy & Weber, 1995) description that laxity alone
+    is not a sufficient parameter to describe the biomechanical behavior of the ACL
+    Clamping force is accepted as a critical parameter (Algahtani et al., 2018; Bouguennec
+    et al., 2015) and can be a new input parameter in the same way as the patient’s
+    gender or age. Pearson’s coefficient confirms that the clamping force impacts
+    the quality of the measurements with a score above 0.40 (one knee) and 0.22 (laxity
+    difference). Gender had similar scores, unlike age (score < 0.10), which was therefore
+    ignored as an input parameter. These results are consistent with a recent study
+    (Klasan et al., 2020) showing that male investigators had a significantly higher
+    mm laxity reading than females. The input parameters are the laxity measurements
+    at three translation forces (67 N, 89 N, and 134 N), the P2 coefficient, the clamping
+    force, and gender.
+
+
+    # 2.2.3. Validation of the panel with respect to GNRB recommendation
+
+
+    Once the complete database has been created, it seems important to check the consistency
+    of the data. The GNRB® documentation advises to keep the measurements only if
+    the difference in clamping force is less than 20 N. Retain 5% ineligible data
+    to add a bias to the models by imposing a greater generalization on them (Fig.
+    2). Fig. 2 shows that the data are consistent given the three thresholds analysis
+    with a specificity above 95%. However, several samples with partial and total
+    tears have a laxity difference of less than 1.5 mm confirming the previous state
+    of the art. The accuracy observed with this dataset is 70% with the three threshold
+    diagnosis methods and is therefore consistent. The current solution does not seem
+    robust to a random selection of measurements, although it is admissible.
+
+
+    # 2.3. Data mining using machine learning
+
+
+    The second stage is to establish the Machine Learning algorithms to maximize the
+    differentiation between a healthy and an ACL tear.
+
+
+    # 2.3.1. Most popular techniques
+
+
+    No type of machine learning algorithm is better than the others. The choice depends
+    on the problem, the number of input variables (6), samples (1384), and the issue.
+    Our problem is to predict a diagnosis among three classes: healthy (0), partial
+    tear (1), or total tear (2). Algorithms like Naive Bayes used for textual prediction
+    are not suitable. Regression, Clustering, and neural network techniques (Mahesh,
+    2020; Zhou, 2021) have been implemented with the database. The first two methods
+    are unsuitable for the problems because there is no linear relationship and different
+    scales between the data. In the case of neural networks, interpretability was
+    complex, and the limited amount of data made it difficult to ensure reliable and
+    robust results. Increasing the amount of various data would allow us to solve
+    this problem, but we decided not to study it because of the risk of artificial
+    data (Hairy, 2021). All these techniques have therefore been discarded.
+
+
+    Support Vector Machine (SVM) (Zhou, 2021) techniques reduce the classification
+    problem to a hyperplane. Several models were trained (e.g SVC — Support Vector
+    Machine or BGD — Batch Gradient Descent), but only SGD was retained due to its
+    high sensitivity. The results using the SVC algorithm seems promising because
+    the separation is likely to be a straight line parallel to the x-axis around 1.5
+    mm. The choice was to select SGD due to its better performance (speed & accuracy)
+    and ability to adapt to new data in real-time. It is the first study with AI to
+    diagnose ACL tears, and new data can be added regularly, which is a significant
+    advantage. The 3D representation (Fig. 2) shows that each patient has at least
+    four neighbors with the same result. The K-plus-neighbor algorithm is based on
+    this principle and makes a prediction based on the similarities of a reference
+    set. In addition to being easy to implement and highly adaptable to complex data,
+    Knn is robust to noisy data. It should be accurate, especially considering that
+    patients are in batches of 4-5 with the same diagnosis. Ultimately, it aims to
+    approach human analysis by comparing measurements with those of other patients
+    who have similar results to make a diagnosis. Consequently, this model should
+    always be included as a reference due to its qualities and adaptability to the
+    problem.
+
+
+    Decision trees are based on the same principle as GNRB®’s analysis with higher
+    conditions and could be worthwhile to exploit. The decision trees were excluded
+    due to the requirement for a shallow depth to avoid overfitting. As a result,
+    the diagnoses were primarily based on differences in laxity, leading to inferior
+    results. A single tree cannot capture the relationships between all the parameters.
+    It excludes variables considered less significant than, for example, laxity. An
+    alternative approach would be to use a random forest instead of a single tree,
+    which provides a robust solution that incorporates all variables.
+
+
+    # 2.3.2. Ensemble learning
+
+
+    Ensemble learning techniques are based on the assumption that combining methods
+    with different predictions would result in a new, more accurate solution (Learnia,
+    2022; Zhou, 2021). However, three conditions had to be fulfilled :
+
+
+    +   1. no model should have an accuracy of less than 50;
+
+    +   2. the predictions of each model must be sufficiently different;
+
+    +   3. a large amount of data is required;
+
+
+    The Bagging consists (Learnia, 2022; Zhou, 2021) of training an algorithm on different
+    parts of the training set to obtain the most varied predictions possible. Of all
+    the labels, the one most present will correspond to the predicted diagnosis. One
+    of the most popular algorithms is RandomForest (RF), which should enable effective
+    detection of ACL ruptures despite sometimes very close measures. It combines predictions
+    from multiple decision trees, which helps reduce the bias and variance inherent
+    in a single decision tree. This allows for a robust interpretation of the data,
+    even in cases where the relationships are non-linear and the interactions between
+    variables are subtle. Thus, this model addresses the issues associated with previous
+    decision trees, making it an excellent choice.
+
+
+    Boosting algorithms (Learnia, 2022; Zhou, 2021) such as GradBoost and AdaBoost
+    were excluded due to poor sensitivity–specificity trade-off. The main criterion
+    for their exclusion is a high sensitivity to outliers as well as the risk of overfitting.
+    Database include measurements that are heterogeneous depending on the clamping
+    force and the patient, who may be hypermobile. Although these flaws can be mitigated,
+    early implementations were strengthened because a decrease in diagnostic accuracy
+    was noticeable.
+
+
+    The machine learning algorithms of Voting and Stacking have been subject to a
+    more in-depth study due to their numerous advantages. The first advantage is that
+    combining multiple individual models should result in a final model that is more
+    accurate, robust, and generalizable. The second advantage is the ability to model
+    more complex phenomena than what an individual model could achieve. Among the
+    most accurate models mentioned in the previous section, a wise choice has to be
+    made:'
+  md: '
+
+    of one group in its training set will tend to predict the majority class and must
+    be corrected. An arbitrary selection of healthy patients reduced them to 515 (36%)
+    with 492 complete tears (36%) and 377 partial tears (28%). Partial ACL ruptures
+    represent less than 30% because they are less operated than complete ruptures.
+
+
+    ## 2.2.2. Input parameter selection
+
+
+    Machine learning algorithms require that the input parameters be carefully chosen
+    and present on all samples. Parameters allow the models to establish links between
+    the training data and the arthroscopy diagnoses that are the reference. Above
+    150 N, a modest proportion of patients have laxity measurements. To maintain the
+    1384 samples, we could keep GNRB® tests performed only at 67 N, 89 N, and 134
+    N. The same problem is observed in Klouche’s study (Klouche et al., 2015) on the
+    difficulty of reproduction in the concrete case if the force applied is too great.
+    The slope coefficient P2 calculated using the laxity measurements is retained.
+    This aligns with Bercovy’s (Bercovy & Weber, 1995) description that laxity alone
+    is not a sufficient parameter to describe the biomechanical behavior of the ACL.
+    Clamping force is accepted as a critical parameter (Algahtani et al., 2018; Bouguennec
+    et al., 2015) and can be a new input parameter in the same way as the patient’s
+    gender or age. Pearson’s coefficient confirms that the clamping force impacts
+    the quality of the measurements with a score above 0.40 (one knee) and 0.22 (laxity
+    difference). Gender had similar scores, unlike age (score < 0.10), which was therefore
+    ignored as an input parameter. These results are consistent with a recent study
+    (Klasan et al., 2020) showing that male investigators had a significantly higher
+    mm laxity reading than females. The input parameters are the laxity measurements
+    at three translation forces (67 N, 89 N, and 134 N), the P2 coefficient, the clamping
+    force, and gender.
+
+
+    ## 2.2.3. Validation of the panel with respect to GNRB recommendation
+
+
+    Once the complete database has been created, it seems important to check the consistency
+    of the data. The GNRB® documentation advises to keep the measurements only if
+    the difference in clamping force is less than 20 N. Retain 5% ineligible data
+    to add a bias to the models by imposing a greater generalization on them (Fig.
+    2). Fig. 2 shows that the data are consistent given the three thresholds analysis
+    with a specificity above 95%. However, several samples with partial and total
+    tears have a laxity difference of less than 1.5 mm confirming the previous state
+    of the art. The accuracy observed with this dataset is 70% with the three threshold
+    diagnosis methods and is therefore consistent. The current solution does not seem
+    robust to a random selection of measurements, although it is admissible.
+
+
+    ## 2.3. Data mining using machine learning
+
+
+    The second stage is to establish the Machine Learning algorithms to maximize the
+    differentiation between a healthy and an ACL tear.
+
+
+    ### 2.3.1. Most popular techniques
+
+
+    No type of machine learning algorithm is better than the others. The choice depends
+    on the problem, the number of input variables (6), samples (1384), and the issue.
+    Our problem is to predict a diagnosis among three classes: healthy (0), partial
+    tear (1), or total tear (2). Algorithms like Naive Bayes used for textual prediction
+    are not suitable. Regression, Clustering, and neural network techniques (Mahesh,
+    2020; Zhou, 2021) have been implemented with the database. The first two methods
+    are unsuitable for the problems because there is no linear relationship and different
+    scales between the data. In the case of neural networks, interpretability was
+    complex, and the limited amount of data made it difficult to ensure reliable and
+    robust results. Increasing the amount of various data would allow us to solve
+    this problem, but we decided not to study it because of the risk of artificial
+    data (Hairy, 2021). All these techniques have therefore been discarded.
+
+
+    Support Vector Machine (SVM) (Zhou, 2021) techniques reduce the classification
+    problem to a hyperplane. Several models were trained (e.g., SVC — Support Vector
+    Machine or BGD — Batch Gradient Descent), but only SGD was retained due to its
+    high sensitivity. The results using the SVC algorithm seems promising because
+    the separation is likely to be a straight line parallel to the x-axis around 1.5
+    mm. The choice was to select SGD due to its better performance (speed & accuracy)
+    and ability to adapt to new data in real-time. It is the first study with AI to
+    diagnose ACL tears, and new data can be added regularly, which is a significant
+    advantage. The 3D representation (Fig. 2) shows that each patient has at least
+    four neighbors with the same result. The k-nearest neighbor algorithm is based
+    on this principle and makes a prediction based on the similarities of a reference
+    set. In addition to being easy to implement and highly adaptable to complex data,
+    kNN is robust to noisy data. It should be accurate, especially considering that
+    patients are in batches of 4-5 with the same diagnosis. Ultimately, it aims to
+    approach human analysis by comparing measurements with those of other patients
+    who have similar results to make a diagnosis. Consequently, this model should
+    always be included as a reference due to its qualities and adaptability to the
+    problem.
+
+
+    Decision trees are based on the same principle as GNRB®’s analysis with higher
+    conditions and could be worthwhile to exploit. The decision trees were excluded
+    due to the requirement for a shallow depth to avoid overfitting. As a result,
+    the diagnoses were primarily based on differences in laxity, leading to inferior
+    results. A single tree cannot capture the relationships between all the parameters.
+    It excludes variables considered less significant than, for example, laxity. An
+    alternative approach would be to use a random forest instead of a single tree,
+    which provides a robust solution that incorporates all variables.
+
+
+    ### 2.3.2. Ensemble learning
+
+
+    Ensemble learning techniques are based on the assumption that combining methods
+    with different predictions would result in a new, more accurate solution (Learnia,
+    2022; Zhou, 2021). However, three conditions had to be fulfilled:
+
+
+    - 1. no model should have an accuracy of less than 50;
+
+    - 2. the predictions of each model must be sufficiently different;
+
+    - 3. a large amount of data is required;
+
+
+    The Bagging consists (Learnia, 2022; Zhou, 2021) of training an algorithm on different
+    parts of the training set to obtain the most varied predictions possible. Of all
+    the labels, the one most present will correspond to the predicted diagnosis. One
+    of the most popular algorithms is RandomForest (RF), which should enable effective
+    detection of ACL ruptures despite sometimes very close measures. It combines predictions
+    from multiple decision trees, which helps reduce the bias and variance inherent
+    in a single decision tree. This allows for a robust interpretation of the data,
+    even in cases where the relationships are non-linear and the interactions between
+    variables are subtle. Thus, this model addresses the issues associated with previous
+    decision trees, making it an excellent choice.
+
+
+    Boosting algorithms (Learnia, 2022; Zhou, 2021) such as GradBoost and AdaBoost
+    were excluded due to poor sensitivity–specificity trade-off. The main criterion
+    for their exclusion is a high sensitivity to outliers as well as the risk of overfitting.
+    Database include measurements that are heterogeneous depending on the clamping
+    force and the patient, who may be hypermobile. Although these flaws can be mitigated,
+    early implementations were strengthened because a decrease in diagnostic accuracy
+    was noticeable.
+
+
+    The machine learning algorithms of Voting and Stacking have been subject to a
+    more in-depth study due to their numerous advantages. The first advantage is that
+    combining multiple individual models should result in a final model that is more
+    accurate, robust, and generalizable. The second advantage is the ability to model
+    more complex phenomena than what an individual model could achieve. Among the
+    most accurate models mentioned in the previous section, a wise choice has to be
+    made:
+
+    '
+  mdcn: '
+
+
+    训练集中某一组群的数据倾向于预测多数类，因此必须进行纠正。对健康患者进行任意选择后，样本减少至 515 例（36%），其中 492 例为完全撕裂（36%），377
+    例为部分撕裂（28%）。部分 ACL 断裂所占比例不到 30%，因为其手术率低于完全断裂。
+
+
+    ## 2.2.2. 输入参数选择
+
+
+    机器学习算法要求输入参数经过精心挑选，并且在所有样本中均存在。参数使模型能够建立训练数据与作为参考的关节镜诊断之间的关联。当力大于 150 N 时，只有少数患者有松弛度测量数据。为保持
+    1384 个样本，我们可以仅保留在 67 N、89 N 和 134 N 下进行的 GNRB® 测试。同样的问题也在 Klouche 的研究（Klouche
+    et al., 2015）中被观察到，即当施加的力过大时，在具体病例中难以重现。使用松弛度测量值计算的斜率系数 P2 被保留。这与 Bercovy（Bercovy
+    & Weber, 1995）的描述一致，即单靠松弛度不足以描述 ACL 的生物力学行为。夹紧力被接受为关键参数（Algahtani et al., 2018;
+    Bouguennec et al., 2015），并可像患者的性别或年龄一样作为新的输入参数。Pearson 系数证实，夹紧力对测量质量有影响，得分分别高于
+    0.40（单膝）和 0.22（松弛度差值）。性别得分相似，而年龄（得分 < 0.10）则因此被忽略为输入参数。这些结果与最近的一项研究（Klasan et
+    al., 2020）一致，该研究显示男性研究者测得的 mm 松弛度读数显著高于女性。输入参数包括三种平移力（67 N、89 N 和 134 N）下的松弛度测量值、P2
+    系数、夹紧力和性别。
+
+
+    ## 2.2.3. 相对于 GNRB 建议的面板验证
+
+
+    创建完整数据库后，检查数据一致性似乎很重要。GNRB® 文档建议仅在夹紧力差小于 20 N 时保留测量值。保留 5% 的不合格数据，通过强加更强的泛化能力来为模型增加偏差（图
+    2）。图 2 显示，基于三个阈值分析，数据具有一致性，特异度高于 95%。然而，部分和完全撕裂的若干样本的松弛度差小于 1.5 mm，印证了之前的技术现状。使用该数据集观察到的准确率为
+    70%，采用三个阈值诊断方法，因此具有一致性。当前解决方案对测量的随机选择似乎不够鲁棒，尽管其是可接受的。
+
+
+    ## 2.3. 使用机器学习进行数据挖掘
+
+
+    第二阶段是建立机器学习算法，以最大限度地提高健康膝盖与 ACL 撕裂之间的区分度。
+
+
+    ### 2.3.1. 最常用技术
+
+
+    没有哪种机器学习算法比其他算法更好。选择取决于问题、输入变量数量（6）、样本数（1384）以及具体问题。我们的问题是预测三个类别中的诊断：健康（0）、部分撕裂（1）或完全撕裂（2）。像用于文本预测的朴素贝叶斯等算法不适用。回归、聚类和神经网络技术（Mahesh,
+    2020; Zhou, 2021）已在该数据库上实现。前两种方法不适用于此问题，因为数据之间不存在线性关系且量级不同。对于神经网络，可解释性较复杂，且数据量有限使得难以确保结果可靠且稳健。增加各种数据的量可能解决这个问题，但由于人工数据的风险（Hairy,
+    2021），我们决定不进行研究。因此，所有这些技术都被舍弃了。
+
+
+    支持向量机（SVM）（Zhou, 2021）技术将分类问题归约为超平面。训练了多种模型（例如，SVC — 支持向量机 或 BGD — 批量梯度下降），但由于其灵敏度高，仅保留了
+    SGD。使用 SVC 算法的结果似乎很有前景，因为分界可能是围绕 1.5 mm 且平行于 x 轴的直线。选择 SGD 是因为其性能更好（速度和准确率）以及能够实时适应新数据。这是首个使用
+    AI 诊断 ACL 撕裂的研究，且新数据可以定期添加，这是一个显著优势。3D 表示（图 2）显示每个患者至少有四个具有相同结果的邻居。k 近邻算法基于这一原理，根据参考集的相似性进行预测。kNN
+    除了实现简单且高度适应复杂数据外，对噪声数据也具有鲁棒性。它应该准确，特别是考虑到患者以 4-5 人一组具有相同诊断的情况。最终，其目标是通过将测量值与其他具有相似结果的患者的测量值进行比较来诊断，从而接近人类分析。因此，由于其优点和对问题的适应性，此模型应始终作为参考包含在内。
+
+
+    决策树基于与 GNRB® 分析相同的原理，具有更高的条件，可能值得利用。决策树因要求较浅的深度以避免过拟合而被排除。因此，诊断主要基于松弛度差异，导致结果较差。单棵树无法捕捉所有参数之间的关系。它会排除被认为不如松弛度等变量重要的变量。一种替代方法是使用随机森林而不是单棵树，这提供了一个包含所有变量的强健解决方案。
+
+
+    ### 2.3.2. 集成学习
+
+
+    集成学习技术基于这样一个假设：结合预测不同的方法将产生一个更准确的新解决方案（Learnia, 2022; Zhou, 2021）。然而，必须满足三个条件：
+
+
+    - 1. 任何模型的准确率均不应低于 50；
+
+    - 2. 各模型的预测必须足够不同；
+
+    - 3. 需要大量数据；
+
+
+    Bagging（Learnia, 2022; Zhou, 2021）包括在训练集的不同部分上训练算法，以获得尽可能多样化的预测。在所有标签中，出现最多的标签将对应预测的诊断。最流行的算法之一是
+    RandomForest（RF），即使在测量值有时非常接近的情况下，也应能有效检测 ACL 断裂。它结合多个决策树的预测，有助于减少单个决策树固有的偏差和方差。这使得对数据的稳健解释成为可能，即使在关系非线性且变量之间交互作用微妙的情况下也是如此。因此，此模型解决了之前决策树相关的问题，是一个绝佳的选择。
+
+
+    由于灵敏度—特异度权衡不佳，GradBoost 和 AdaBoost 等 Boosting 算法（Learnia, 2022; Zhou, 2021）被排除。其排除的主要标准是对异常值高度敏感以及过拟合的风险。数据库包含的测量值取决于夹紧力和患者（患者可能有关节过度活动症），具有异质性。尽管这些缺陷可以缓解，但早期实现被加强，因为诊断准确率下降是显而易见的。
+
+
+    由于具有诸多优势，Voting 和 Stacking 机器学习算法经过了更深入的研究。第一个优势是，结合多个个体模型应该产生一个更准确、更稳健且泛化能力更强的最终模型。第二个优势是能够建模单个模型无法实现的更复杂现象。在前一节提到的最准确模型中，必须做出明智的选择：
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 3]
+
+
+    Table 2
+
+    Comparison of several supervised learning algorithms and thresholds methods using
+    accuracy, sensitivity, and specificity based on three diagnoses: healthy, partial
+    tear, or complete tear. The incorporation of tear-type precision highlights the
+    most accurate method for classifying the type of tear. Conducted using cross-validation
+    and 1384 GNRB measurements.
+
+
+    | | Thresholds | Knn | SGD | RForest | Vote | Stack | New_Method |
+
+    |---|---|---|---|---|---|---|---|
+
+    | Accuracy (all diagnosis) | 69.49% | 69.56% | 67.80% | 68.62% | 69.72% | 69.35%
+    | 75.64% |
+
+    | Sensitivity (all diagnosis) | 80.71% | 91.50% | 84.26% | 92.70% | 91.80% | 92.77%
+    | 93.32% |
+
+    | Specificity (all diagnosis) | 97.30% | 91.55% | 96.28% | 89.18% | 91.52% | 90.01%
+    | 94.50% |
+
+    | Precision for partial ACLs | 40.95% | 38.62% | 15.48% | 38.63% | 37.89% | 36.32%
+    | 56.02% |
+
+    | Precision for complete ACLs | 62.40% | 70.24% | 77.97% | 60.92% | 71.58% | 73.00%
+    | 70.67% |
+
+    | NPV | 74.79% | 86.39% | / | / | 86.81% | / | 89.06% |
+
+    | PPV | 98.07% | 94.84% | / | / | 94.84% | / | 96.72% |
+
+    | PPV Partial | 56.30% | 52.16% | / | / | 52.39% | / | 62.82% |
+
+    | PPV_Complete | 69.66% | 61.88% | / | / | 61.77% | / | 69.05% |
+
+
+    +   - voting method (Learnia, 2022; Zhou, 2021) use different algorithms trained
+    on the same data. The difficulty lies in their selection and the weighting of
+    their predictions for the final decision. The main advantage of this technique
+    is the identification of the patterns that have contributed to the final predictions.
+    Several configurations showed that it was essential to keep the KNN model (with
+    weight = 2). The choice was to associate only Forest model (weight = 1) to emphasize
+    lesion detection (specificity). No other models were added, such as SGD, as it
+    did not improve accuracy. The best configuration combines 2KNN + 1RForest to achieve
+    optimal distinction between healthy and affected patients.
+
+    +   - stacking method (Learnia, 2022; Zhou, 2021) replaces the majority label
+    selection of the voting technique by applying a model named “MetaClassifier” (e.g.
+    LogisticRegression). It will come to play the role of the judge to decide which
+    prediction has the best chance to be valid. This time, a third model will be added
+    to those selected during Voting (Knn & RForest). The objective is to add predictions
+    that are significantly different in order to force the meta-classifier to generalize.
+    The choice has been made for SGD in order to maximize the detection of total admitted
+    ruptures. The low precision for classifying an LCA as healthy should enhance sensitivity
+    due to the high precision of Knn & RForest. This is a compromise as sensitivity
+    is expected to decrease. Therefore, the SGD, KNN, and RandomForest configuration
+    may not be optimal. However, it is the best configuration obtained after successive
+    evaluations involving multiple models;
+
+
+    # 2.4. New diagnosis process
+
+
+    The study could have stopped at the evaluation of the last two models, Voting
+    and Stacking, as it already represents an innovation in the absence of studies
+    for diagnosing an ACL rupture. The hypothesis was made that it was possible to
+    find new interpretations of the data and machine learning models to achieve even
+    more accurate diagnoses. This section aims to innovate by combining the current
+    static methods with an AI model, for example. The hypothesis is that using the
+    most accurate model (Voting) and reinforcing its decisions with a precise rupture
+    detection model (Stacking) and another model for healthy patients (Three thresholds)
+    would be relevant (Table 2). Additionally, new interpretations of the data can
+    be made.
+
+
+    # 2.4.1. Input parameters and interpretation
+
+
+    The first modification was to increase the impact of the laxity measurement to
+    134 N based on Klouche''s assumption that a higher translation force will result
+    in higher accuracy. The experiments showed that there was no gain but a decrease
+    in accuracy. The fact of not observing a gain remains coherent because it allows
+    a greater diversity of measurements and a generalization of the model thanks to
+    a dynamic analysis of the data.
+
+
+    A second assumption is that a healthy patient would obtain a measurement close
+    to zero against negative values in an ACL tear. Changing the interpretation of
+    laxity could increases accuracy and improves the
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_3_0.png)
+
+
+    Fig. 1. The results of the statistical analysis demonstrate the probability that
+    a diagnosis based on the proposed 3 mm threshold is correct. This threshold is
+    recommended by the GNRB device manufacturers.
+
+
+    discrimination between healthy. Consequently, the newly implemented discrimination
+    method will use the relative difference. This is a first key differentiating factor
+    in implementing a new method in addition to AI and should increase sensitivity
+    with limited impact on specificity to achieve a rate beyond 90%.
+
+
+    # 2.4.2. Increasing sensitivity and ACL tears distinctions
+
+
+    This part proposes a solution that no longer involves comparing but rather associating
+    three diagnostic methods (Voting, Stacking, Thresholds) in order to leverage the
+    advantages of each method. Indeed, this approach involves creating a meta-model,
+    similar to ensemble learning methods like voting, by combining multiple diagnostic
+    methods together.
+
+
+    First change is to support or modify voting decisions based on statistical analysis.
+    The study analyzes the distribution of measurements according to the diagnoses
+    to demonstrate the proportion in which a diagnosis is correct based on the thresholds
+    suggested by the GNRB device manufacturer (Fig. 1). It allows for influencing
+    the predicted result by the voting method using the thresholds in two well-defined
+    cases:
+
+
+    +   - beyond this threshold, there are less than 1% of patients without tears.
+    A complete tear will then replace the AI prediction in the case of a healthy patient;
+
+    +   - there are 30% of partials and 70% of complete tears beyond 3 mm. If the
+    result is a tear (partial or total or Δ > 3.0 mm), a probability table ([0; 0.30;
+    0.70]) will be added to the predictions to accentuate the diagnosis in favor of
+    a total rupture;
+
+
+    Beyond the change in the interpretation of values, which is a new approach, reinforcing
+    the diagnosis through statistical analysis is a significant addition. This modification
+    affects the probability of a diagnosis being true after a prediction by the trained
+    models. This addition is a deliberate choice to improve the distinction between
+    partial and complete ruptures. The final modification involves reusing part of
+    this'
+  - '[PAGE 4]
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_4_0.png)
+
+
+    Fig. 2. Laxity measured of healthy and torn patients at 134 N as a function of
+    clamp force, P2 slope coefficient with an arthroscopy result : healthy (green)
+    ; partial tear (orange) ; complete tear (red). (For interpretation of the references
+    to colour in this figure legend, the reader is referred to the web version of
+    this article.)
+
+
+    analysis to associate, rather than compare, the solutions (Voting and Thresholds)
+    by incorporating the Stacking model as a decision criterion. The aim is to achieve
+    a model with the highest possible accuracy.
+
+
+    +   - On the contrary, if the laxity difference is less than 3 mm and 1.5 mm and
+    the second model (Stacking) does not detect a complete rupture, it will be reclassified
+    as partial. The hypothesis is that considering a total tear is likely an overstatement
+    if two methods consider the LCA healthy or partially tear. If the condition (Δ
+    < 1.5 mm + stack_label < 2) is not met, the most accurate method (voting) is used.
+
+
+    The second modification involves using the stacking and thresholding solution
+    to improve the diagnostics made by the Voting method. The stacking ensemble learning
+    method has proven to be the most accurate technique for detecting and classifying
+    a rupture as complete (Table 2). Therefore, its combination with the thresholds
+    defined by the manufacturers should increase the sensitivity and qualification
+    of a rupture in two cases:
+
+
+    +   - to assert a complete rupture if the difference in laxity is superior at
+    3 mm by ignoring that of the voting method
+
+    +   - to correct a diagnosis of a healthy patient if the difference in laxity
+    is greater than 1.5 mm and the Stack model admits a rupture. The diagnosis will
+    be a partial tear as the Voting method defines the patient as healthy.
+
+    +   - in addition, in the case of a lesion detected by the Voting model, it is
+    also possible to increase the rate of partial lesions. If the laxity difference
+    is less than 1.5 mm and the Stacking model predicts at most partial rupture, the
+    diagnosis will be a partial tear. Otherwise, the prediction of the Voting model
+    will be retained as it is the most accurate, especially if the laxity difference
+    is between 1.5 mm and 3.0 mm.
+
+
+    The right part of the diagram aims to increase sensitivity and the rate of correctly
+    diagnosed partial ruptures :
+
+
+    +   - The first condition (Δ < 1.5 mm) confirms the prediction made by the Voting
+    model since this diagnostic threshold accurately identifies patients as healthy.
+
+    +   - The second condition (stack_label = 2) reclassifies the initial diagnosis
+    (vote_label=0) as having a partial lesion if the Stacking model predicts a tear.
+    This modification should improve the diagnostic rate as Stacking is more precise
+    in detecting a rupture, and the 1.5 mm threshold supports its choice.
+
+    +   - The last condition follows the analyses in Section 2.4.2, showing that ACL
+    tears should qualify when the absolute laxity difference is above 3 mm. To support
+    a diagnosis in favor of a rupture (partial or complete) without imposing the decision
+    probability table will be applied.
+
+
+    # ## 2.4.3. New diagnostic process with diagram explanation
+
+
+    By incorporating all the suggested improvements from the previous subsections,
+    it is possible to achieve a new diagnostic process. This process combines statistical
+    analysis to reinforce the decisions of the selected ensemble Machine Learning
+    models: Voting (2Knn + RForest) and Stacking (Knn + SGD + RForest). The aim is
+    to offer a better trade-off between sensitivity and specificity while improving
+    the qualification of a rupture as either partial or complete. Fig. 3 represents
+    the new diagnostic suggested as a process diagram.
+
+
+    # ## 2.5. Statistical analysis
+
+
+    Firstly, the left part aims to improve the qualification of ruptures defined as
+    partial or complete. Once ACL tear is diagnosed by the Voting method, a first
+    condition (Δ < 3.0 mm) aims to align with the analyses conducted in Section 2.4.2:
+
+
+    Statistical analyses were performed using XLSTAT (Addinsoft, Paris, France), a
+    software suite for data analysis and statistics in Microsoft Excel (Microsoft
+    Corporation, Redmond, Washington, US). Confusion matrices were used to compare
+    the ML models and assess the significance of differences, using sensitivity, specificity,
+    positive predictive value, and negative predictive value as indicators of proportions.
+    Significance was set at p < 0.05 for all analyses.
+
+
+    +   - When exceeding 3 mm and the second condition (stack_label=2) fulfilled,
+    it will be possible to classify the rupture as complete, regardless of the label
+    predicted by the first model (Voting). Otherwise, the probability table is added
+    to the one provided by the voting decision. The aim is to reinforce the idea that
+    a patient has a complete rupture without forcing it.
+
+
+    Simultaneously, the Matplotlib visualization library plot ROC curves for five
+    different approaches evaluated on the same portion of the dataset (training and
+    testing). It provides an overall measure of the performance of a machine-learning
+    model and facilitates the comparison of different approaches.
+
+
+    All hyperparameters were automatically selected to achieve the best trade-off
+    between accuracy and loss during model training. Choices were checked manually
+    to ensure consistency, such as the optimal number of neighbors K, which was 6,
+    consistent with an interpretation of Fig. 2.'
+  md: '
+
+    Table 2
+
+    Comparison of several supervised learning algorithms and thresholds methods using
+    accuracy, sensitivity, and specificity based on three diagnoses: healthy, partial
+    tear, or complete tear. The incorporation of tear-type precision highlights the
+    most accurate method for classifying the type of tear. Conducted using cross-validation
+    and 1384 GNRB measurements.
+
+
+    | | Thresholds | Knn | SGD | RForest | Vote | Stack | New_Method |
+
+    |---|---|---|---|---|---|---|---|
+
+    | Accuracy (all diagnosis) | 69.49% | 69.56% | 67.80% | 68.62% | 69.72% | 69.35%
+    | 75.64% |
+
+    | Sensitivity (all diagnosis) | 80.71% | 91.50% | 84.26% | 92.70% | 91.80% | 92.77%
+    | 93.32% |
+
+    | Specificity (all diagnosis) | 97.30% | 91.55% | 96.28% | 89.18% | 91.52% | 90.01%
+    | 94.50% |
+
+    | Precision for partial ACLs | 40.95% | 38.62% | 15.48% | 38.63% | 37.89% | 36.32%
+    | 56.02% |
+
+    | Precision for complete ACLs | 62.40% | 70.24% | 77.97% | 60.92% | 71.58% | 73.00%
+    | 70.67% |
+
+    | NPV | 74.79% | 86.39% | / | / | 86.81% | / | 89.06% |
+
+    | PPV | 98.07% | 94.84% | / | / | 94.84% | / | 96.72% |
+
+    | PPV Partial | 56.30% | 52.16% | / | / | 52.39% | / | 62.82% |
+
+    | PPV_Complete | 69.66% | 61.88% | / | / | 61.77% | / | 69.05% |
+
+
+    - voting method (Learnia, 2022; Zhou, 2021) use different algorithms trained on
+    the same data. The difficulty lies in their selection and the weighting of their
+    predictions for the final decision. The main advantage of this technique is the
+    identification of the patterns that have contributed to the final predictions.
+    Several configurations showed that it was essential to keep the KNN model (with
+    weight = 2). The choice was to associate only Forest model (weight = 1) to emphasize
+    lesion detection (specificity). No other models were added, such as SGD, as it
+    did not improve accuracy. The best configuration combines 2KNN + 1RForest to achieve
+    optimal distinction between healthy and affected patients.
+
+
+    - stacking method (Learnia, 2022; Zhou, 2021) replaces the majority label selection
+    of the voting technique by applying a model named “MetaClassifier” (e.g. LogisticRegression).
+    It will come to play the role of the judge to decide which prediction has the
+    best chance to be valid. This time, a third model will be added to those selected
+    during Voting (Knn & RForest). The objective is to add predictions that are significantly
+    different in order to force the meta-classifier to generalize. The choice has
+    been made for SGD in order to maximize the detection of total admitted ruptures.
+    The low precision for classifying an ACL as healthy should enhance sensitivity
+    due to the high precision of Knn & RForest. This is a compromise as sensitivity
+    is expected to decrease. Therefore, the SGD, KNN, and RandomForest configuration
+    may not be optimal. However, it is the best configuration obtained after successive
+    evaluations involving multiple models;
+
+
+    ## 2.4. New diagnosis process
+
+
+    The study could have stopped at the evaluation of the last two models, Voting
+    and Stacking, as it already represents an innovation in the absence of studies
+    for diagnosing an ACL rupture. The hypothesis was made that it was possible to
+    find new interpretations of the data and machine learning models to achieve even
+    more accurate diagnoses. This section aims to innovate by combining the current
+    static methods with an AI model, for example. The hypothesis is that using the
+    most accurate model (Voting) and reinforcing its decisions with a precise rupture
+    detection model (Stacking) and another model for healthy patients (Three thresholds)
+    would be relevant (Table 2). Additionally, new interpretations of the data can
+    be made.
+
+
+    ### 2.4.1. Input parameters and interpretation
+
+
+    The first modification was to increase the impact of the laxity measurement to
+    134 N based on Klouche''s assumption that a higher translation force will result
+    in higher accuracy. The experiments showed that there was no gain but a decrease
+    in accuracy. The fact of not observing a gain remains coherent because it allows
+    a greater diversity of measurements and a generalization of the model thanks to
+    a dynamic analysis of the data.
+
+
+    A second assumption is that a healthy patient would obtain a measurement close
+    to zero against negative values in an ACL tear. Changing the interpretation of
+    laxity could increase accuracy and improve the discrimination between healthy.
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_3_0.png)
+
+
+    Fig. 1. The results of the statistical analysis demonstrate the probability that
+    a diagnosis based on the proposed 3 mm threshold is correct. This threshold is
+    recommended by the GNRB device manufacturers.
+
+
+    Consequently, the newly implemented discrimination method will use the relative
+    difference. This is a first key differentiating factor in implementing a new method
+    in addition to AI and should increase sensitivity with limited impact on specificity
+    to achieve a rate beyond 90%.
+
+
+    ### 2.4.2. Increasing sensitivity and ACL tears distinctions
+
+
+    This part proposes a solution that no longer involves comparing but rather associating
+    three diagnostic methods (Voting, Stacking, Thresholds) in order to leverage the
+    advantages of each method. Indeed, this approach involves creating a meta-model,
+    similar to ensemble learning methods like voting, by combining multiple diagnostic
+    methods together.
+
+
+    First change is to support or modify voting decisions based on statistical analysis.
+    The study analyzes the distribution of measurements according to the diagnoses
+    to demonstrate the proportion in which a diagnosis is correct based on the thresholds
+    suggested by the GNRB device manufacturer (Fig. 1). It allows for influencing
+    the predicted result by the voting method using the thresholds in two well-defined
+    cases:
+
+
+    - beyond this threshold, there are less than 1% of patients without tears. A complete
+    tear will then replace the AI prediction in the case of a healthy patient;
+
+    - there are 30% of partials and 70% of complete tears beyond 3 mm. If the result
+    is a tear (partial or total or Δ > 3.0 mm), a probability table ([0; 0.30; 0.70])
+    will be added to the predictions to accentuate the diagnosis in favor of a total
+    rupture;
+
+
+    Beyond the change in the interpretation of values, which is a new approach, reinforcing
+    the diagnosis through statistical analysis is a significant addition. This modification
+    affects the probability of a diagnosis being true after a prediction by the trained
+    models. This addition is a deliberate choice to improve the distinction between
+    partial and complete ruptures. The final modification involves reusing part of
+    this analysis to associate, rather than compare, the solutions (Voting and Thresholds)
+    by incorporating the Stacking model as a decision criterion. The aim is to achieve
+    a model with the highest possible accuracy.
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_4_0.png)
+
+
+    Fig. 2. Laxity measured of healthy and torn patients at 134 N as a function of
+    clamp force, P2 slope coefficient with an arthroscopy result : healthy (green)
+    ; partial tear (orange) ; complete tear (red). (For interpretation of the references
+    to colour in this figure legend, the reader is referred to the web version of
+    this article.)
+
+
+    - On the contrary, if the laxity difference is less than 3 mm and 1.5 mm and the
+    second model (Stacking) does not detect a complete rupture, it will be reclassified
+    as partial. The hypothesis is that considering a total tear is likely an overstatement
+    if two methods consider the ACL healthy or partially tear. If the condition (Δ
+    < 1.5 mm + stack_label < 2) is not met, the most accurate method (voting) is used.
+
+
+    The second modification involves using the stacking and thresholding solution
+    to improve the diagnostics made by the Voting method. The stacking ensemble learning
+    method has proven to be the most accurate technique for detecting and classifying
+    a rupture as complete (Table 2). Therefore, its combination with the thresholds
+    defined by the manufacturers should increase the sensitivity and qualification
+    of a rupture in two cases:
+
+
+    - to assert a complete rupture if the difference in laxity is superior at 3 mm
+    by ignoring that of the voting method
+
+    - to correct a diagnosis of a healthy patient if the difference in laxity is greater
+    than 1.5 mm and the Stack model admits a rupture. The diagnosis will be a partial
+    tear as the Voting method defines the patient as healthy.
+
+    - in addition, in the case of a lesion detected by the Voting model, it is also
+    possible to increase the rate of partial lesions. If the laxity difference is
+    less than 1.5 mm and the Stacking model predicts at most partial rupture, the
+    diagnosis will be a partial tear. Otherwise, the prediction of the Voting model
+    will be retained as it is the most accurate, especially if the laxity difference
+    is between 1.5 mm and 3.0 mm.
+
+
+    The right part of the diagram aims to increase sensitivity and the rate of correctly
+    diagnosed partial ruptures :
+
+
+    - The first condition (Δ < 1.5 mm) confirms the prediction made by the Voting
+    model since this diagnostic threshold accurately identifies patients as healthy.
+
+    - The second condition (stack_label = 2) reclassifies the initial diagnosis (vote_label=0)
+    as having a partial lesion if the Stacking model predicts a tear. This modification
+    should improve the diagnostic rate as Stacking is more precise in detecting a
+    rupture, and the 1.5 mm threshold supports its choice.
+
+    - The last condition follows the analyses in Section 2.4.2, showing that ACL tears
+    should qualify when the absolute laxity difference is above 3 mm. To support a
+    diagnosis in favor of a rupture (partial or complete) without imposing the decision
+    probability table will be applied.
+
+
+    ### 2.4.3. New diagnostic process with diagram explanation
+
+
+    By incorporating all the suggested improvements from the previous subsections,
+    it is possible to achieve a new diagnostic process. This process combines statistical
+    analysis to reinforce the decisions of the selected ensemble Machine Learning
+    models: Voting (2Knn + RForest) and Stacking (Knn + SGD + RForest). The aim is
+    to offer a better trade-off between sensitivity and specificity while improving
+    the qualification of a rupture as either partial or complete. Fig. 3 represents
+    the new diagnostic suggested as a process diagram.
+
+
+    ### 2.5. Statistical analysis
+
+
+    Firstly, the left part aims to improve the qualification of ruptures defined as
+    partial or complete. Once ACL tear is diagnosed by the Voting method, a first
+    condition (Δ < 3.0 mm) aims to align with the analyses conducted in Section 2.4.2:
+
+
+    - When exceeding 3 mm and the second condition (stack_label=2) fulfilled, it will
+    be possible to classify the rupture as complete, regardless of the label predicted
+    by the first model (Voting). Otherwise, the probability table is added to the
+    one provided by the voting decision. The aim is to reinforce the idea that a patient
+    has a complete rupture without forcing it.
+
+
+    Simultaneously, the Matplotlib visualization library plot ROC curves for five
+    different approaches evaluated on the same portion of the dataset (training and
+    testing). It provides an overall measure of the performance of a machine-learning
+    model and facilitates the comparison of different approaches.
+
+
+    All hyperparameters were automatically selected to achieve the best trade-off
+    between accuracy and loss during model training. Choices were checked manually
+    to ensure consistency, such as the optimal number of neighbors K, which was 6,
+    consistent with an interpretation of Fig. 2.
+
+    '
+  mdcn: '
+
+
+    表 2
+
+    基于三种诊断（健康、部分撕裂、完全撕裂），对多种监督学习算法和阈值方法使用准确率、灵敏度和特异度进行比较。加入撕裂类型精确度突显了最准确的撕裂类型分类方法。采用交叉验证和
+    1384 次 GNRB 测量进行。
+
+
+    | | 阈值 | Knn | SGD | RForest | 投票 | 堆叠 | 新方法 |
+
+    |---|---|---|---|---|---|---|---|
+
+    | 准确率（所有诊断） | 69.49% | 69.56% | 67.80% | 68.62% | 69.72% | 69.35% | 75.64% |
+
+    | 灵敏度（所有诊断） | 80.71% | 91.50% | 84.26% | 92.70% | 91.80% | 92.77% | 93.32% |
+
+    | 特异度（所有诊断） | 97.30% | 91.55% | 96.28% | 89.18% | 91.52% | 90.01% | 94.50% |
+
+    | 部分 ACL 的精确率 | 40.95% | 38.62% | 15.48% | 38.63% | 37.89% | 36.32% | 56.02% |
+
+    | 完全 ACL 的精确率 | 62.40% | 70.24% | 77.97% | 60.92% | 71.58% | 73.00% | 70.67% |
+
+    | NPV | 74.79% | 86.39% | / | / | 86.81% | / | 89.06% |
+
+    | PPV | 98.07% | 94.84% | / | / | 94.84% | / | 96.72% |
+
+    | 部分 PPV | 56.30% | 52.16% | / | / | 52.39% | / | 62.82% |
+
+    | 完全 PPV | 69.66% | 61.88% | / | / | 61.77% | / | 69.05% |
+
+
+    - 投票法（Learnia, 2022; Zhou, 2021）使用在相同数据上训练的不同算法。难点在于它们的选择以及对其预测进行加权以作出最终决策。该技术的主要优势在于识别对最终预测有贡献的模式。多种配置表明，保留
+    KNN 模型（权重 = 2）是必不可少的。选择只关联 Forest 模型（权重 = 1）以强调病变检测（特异度）。未添加其他模型，如 SGD，因为它未提高准确率。最佳配置结合
+    2KNN + 1RForest，以实现健康患者和受影响患者之间的最佳区分。
+
+
+    - 堆叠法（Learnia, 2022; Zhou, 2021）用名为“MetaClassifier”的模型（例如 LogisticRegression）取代投票技术的多数标签选择。它将充当法官的角色，决定哪个预测最有可能有效。这次，将第三个模型添加到投票期间选定的模型中（Knn
+    & RForest）。目的是添加显著不同的预测，以迫使元分类器泛化。选择 SGD 以最大化完全断裂的检测。将 ACL 归类为健康的低精确度应因 Knn &
+    RForest 的高精确度而增强灵敏度。这是一种妥协，因为预计灵敏度会降低。因此，SGD、KNN 和 RandomForest 的配置可能不是最佳的。但是，这是在涉及多个模型的连续评估后获得的最佳配置。
+
+
+    ## 2.4. 新诊断流程
+
+
+    该研究本可以在评估最后两个模型（投票法和堆叠法）后停止，因为这在缺乏诊断 ACL 断裂的研究方面已经代表了一项创新。假设可以找到对数据和机器学习模型的新诠释，以实现更准确的诊断。本节旨在通过结合当前的静态方法和
+    AI 模型（例如）来进行创新。假设是，使用最准确的模型（投票法），并辅以精确的断裂检测模型（堆叠法）和另一个用于健康患者的模型（三个阈值）来加强其决策，这将是相关的（表
+    2）。此外，还可以对数据进行新的诠释。
+
+
+    ### 2.4.1. 输入参数和诠释
+
+
+    第一项修改是基于 Klouche 的假设，将松弛度测量的影响增加到 134 N，该假设认为更高的平移力将导致更高的准确率。实验表明，没有收益但准确率下降。未观察到收益的事实仍然合理，因为它允许更大的测量多样性，并通过对数据的动态分析来泛化模型。
+
+
+    第二个假设是，健康患者的测量值接近零，而 ACL 撕裂为负值。改变松弛度的诠释可能提高准确率并改善健康患者与受损患者之间的区分。
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_3_0.png)
+
+
+    图 1. 统计分析结果表明，基于所提 3 mm 阈值的诊断正确的概率。该阈值由 GNRB 设备制造商推荐。
+
+
+    因此，新实现的鉴别方法将使用相对差异。这是在实施新方法时的第一个关键区分因素，除了 AI 之外，应在对特异度影响有限的情况下提高灵敏度，以实现超过 90%
+    的速率。
+
+
+    ### 2.4.2. 提高灵敏度和 ACL 撕裂区分
+
+
+    这部分提出了一种不再涉及比较，而是关联三种诊断方法（投票法、堆叠法、阈值法）的解决方案，以利用每种方法的优势。确实，这种方法涉及通过组合多种诊断方法来创建一个元模型，类似于投票等集成学习方法。
+
+
+    第一项更改是基于统计分析支持或修改投票决策。该研究根据诊断分析测量值的分布，以证明基于 GNRB 设备制造商建议的阈值（图 1）诊断正确的比例。它允许在两个明确定义的情况下使用阈值来影响投票方法的预测结果：
+
+
+    - 超过此阈值，无撕裂的患者不到 1%。在这种情况下，完全撕裂将取代健康患者的 AI 预测；
+
+    - 超过 3 mm 时，有 30% 为部分撕裂，70% 为完全撕裂。如果结果是撕裂（部分、全部或 Δ > 3.0 mm），则会将概率表（[0; 0.30;
+    0.70]）添加到预测中，以加强支持完全断裂的诊断；
+
+
+    除了改变数值诠释这一新方法外，通过统计分析加强诊断是一个重要的补充。此修改影响了训练模型预测后诊断为真实的概率。这是改善部分断裂和完全断裂之间区分的有意选择。最后的修改涉及重用部分分析，通过将堆叠模型作为决策标准来关联（而非比较）解决方案（投票法和阈值法），目标是实现尽可能高准确率的模型。
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_4_0.png)
+
+
+    图 2. 在 134 N 下，健康患者和撕裂患者的松弛度测量值，作为夹紧力的函数，P2 斜率系数与关节镜结果：健康（绿色）；部分撕裂（橙色）；完全撕裂（红色）。（关于本图例中对颜色引用的诠释，读者请参阅本文的网络版本。）
+
+
+    - 反之，如果松弛度差异小于 3 mm 和 1.5 mm，且第二个模型（堆叠法）未检测到完全断裂，则将其重新分类为部分撕裂。假设是，如果两种方法认为 ACL
+    健康或部分撕裂，则认为完全断裂可能是一种夸大。如果未满足条件（Δ < 1.5 mm + stack_label < 2），则使用最准确的方法（投票法）。
+
+
+    第二项修改涉及使用堆叠和阈值解决方案来改进投票法所做的诊断。堆叠集成学习方法已被证明是检测和将断裂分类为完全断裂的最准确技术（表 2）。因此，其与制造商定义的阈值相结合应在两种情况下提高断裂的灵敏度和资格：
+
+
+    - 如果松弛度差异超过 3 mm，则断言为完全断裂，忽略投票法的结果；
+
+    - 如果松弛度差异大于 1.5 mm 且 Stack 模型承认存在断裂，则纠正健康患者的诊断。诊断将为部分撕裂，因为投票法将患者定义为健康。
+
+    - 此外，在投票模型检测到病变的情况下，也可以提高部分病变的比率。如果松弛度差异小于 1.5 mm 且堆叠模型预测最多为部分断裂，则诊断为部分撕裂。否则，将保留投票模型的预测，因为它是最准确的，尤其是当松弛度差异在
+    1.5 mm 和 3.0 mm 之间时。
+
+
+    图的右侧部分旨在提高灵敏度和正确诊断的部分断裂比率：
+
+
+    - 第一个条件（Δ < 1.5 mm）确认了投票模型的预测，因为该诊断阈值准确地将患者识别为健康。
+
+    - 第二个条件（stack_label = 2）如果堆叠模型预测有断裂，则将初始诊断（vote_label=0）重新分类为具有部分病变。此修改应提高诊断率，因为堆叠法在检测断裂方面更精确，且
+    1.5 mm 阈值支持其选择。
+
+    - 最后一个条件遵循第 2.4.2 节的分析，表明当绝对松弛度差异超过 3 mm 时，ACL 撕裂应得到资格认定。为了支持支持断裂（部分或完全）的诊断，将应用决策概率表，而不强制做出决定。
+
+
+    ### 2.4.3. 带图示说明的新诊断流程
+
+
+    通过纳入前几小节的所有建议改进，可以实现新的诊断流程。该流程结合统计分析以加强所选集成机器学习模型的决策：投票法（2Knn + RForest）和堆叠法（Knn
+    + SGD + RForest）。目标是提供灵敏度和特异度之间的更好权衡，同时改善将断裂定为部分或完全的资格。图 3 表示作为流程图建议的新诊断。
+
+
+    ### 2.5. 统计分析
+
+
+    首先，左侧部分旨在改善定义为部分或完全断裂的资格。一旦 ACL 撕裂由投票法诊断，第一个条件（Δ < 3.0 mm）旨在与第 2.4.2 节进行的分析保持一致：
+
+
+    - 当超过 3 mm 且满足第二个条件（stack_label=2）时，无论第一个模型（投票法）预测的标签如何，都可以将断裂分类为完全断裂。否则，概率表将添加到投票决策提供的概率表中。目的是加强患者有完全断裂的观点，而不强行这样做。
+
+
+    同时，Matplotlib 可视化库为在同一数据集部分（训练和测试）上评估的五种不同方法绘制 ROC 曲线。它提供了机器学习模型性能的总体度量，并便于比较不同的方法。
+
+
+    所有超参数均自动选择，以在模型训练期间实现准确率和损失之间的最佳权衡。选择已手动检查以确保一致性，例如最佳邻居数 K 为 6，与图 2 的诠释一致。
+
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 5]
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_5_0.png)
+
+
+    # ## 3. Results
+
+
+    All methods compare the same data using successive cross-validation with the same
+    parameters: sex, relative difference of laxity (67 N, 89 N, 134 N) and P2 coefficient.
+    The objective is to ensure that the predicted diagnoses are not arbitrary or too
+    specific to the training data. They use the relative difference in laxity measurement
+    because it increases the accuracy by 4% and the distinction between my two types
+    of ACLs tears by 2%.
+
+
+    # ### 3.1. AI method comparisons
+
+
+    The accuracy of decision trees was about 5% lower than that of SGDs, leading to
+    their exclusion. SGD was the second-best method, with a sensitivity close to 90%,
+    excluding ensemble learning algorithms (Table 2). By standard normalization to
+    maximize accuracy, the KNN algorithm achieved a detection rate (specificity) of
+    over 85% and sensitivity above 90%.
+
+
+    Based on the experiment results presented in Table 2, the GNRB® solution recommended
+    for diagnosis has an accuracy equivalent to 70% as three other methods. However,
+    artificial intelligence
+
+
+    algorithms outperformed the three-threshold solution, achieving a diagnosed rupture
+    rate of 81% and an accuracy of 69.50%. Although the Random Forest algorithm did
+    not perform as well as KNN, it could improve specificity. This explains why the
+    Vote method, which combines multiple algorithms, can correctly distinguish a healthy
+    ACL from a ruptured ACL with rates higher than 91% (sensitivity + specificity)
+    and appears to be the most efficient solution at this stage.
+
+
+    The ROC curves demonstrate (Fig. 4) that the solution using the three thresholds
+    is significantly less effective than the AI solutions, as it consistently falls
+    below the other models. The curves for the Voting model consistently outperform
+    the others, indicating that this model has better classification performance across
+    all decision thresholds. However, Table 2 shows that the Stacking model has an
+    area of 0.87 compared to 0.84 for complete injuries, confirming its usefulness
+    in qualifying this type of rupture. The standalone KNN model performs worse than
+    the Voting and Stacking models, further reinforcing the choice of model combination
+    to achieve even higher precision.
+
+
+    # ### 3.2. Evaluation of the proposed new AI-based method
+
+
+    The new ML model provided results that were at least slightly inferior or superior
+    to the thresholds method with no significant differences'
+  - '[PAGE 6]
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_6_0.png)
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_6_1.png)
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_6_2.png)
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_6_3.png)
+
+
+    ![](img/ab0282b2e74bf5481429a04b974272ca_6_4.png)
+
+
+    Fig. 4. Comparative evaluation of machine learning models (KNN, Voting, Stacking)
+    and the reference method using the three laxity thresholds to assess the improvement
+    of the new model through the analysis of the area under the curve (AUC).
+
+
+    (p > 0.244) for Specificity, VPP, and VPP_Complete. For other results like Accuracy,
+    Sensitivity, Precision (partial or complete), VPN, and VPP_Partial, they were
+    better with a significant difference (p < 0.001). It explains significant gain
+    for qualifying a tear as partial is greater than 56% (Table 2) with no drop in
+    the rate for total ruptures. Table 2 also confirms that for positive and negative
+    predictive values (PPV and NPV), our method is the most efficient with an optimal
+    error rate. Finally, the best discrimination and accuracy between a healthy and
+    a torn ACL is obtained with rates above 93%, justifying the choice to validate
+    all the decisions and hypotheses of part 2.4.
+
+
+    Comparing the new ML method with other individual ML models, results were also
+    at least equivalent with no significant differences (p > 0.189) for Sensitivity
+    except for SGD with better results (p < 0.001), Specificity, Precision for complete
+    ACLs except for SGD where results were worse (p < 0.001), and for RForest where
+    results were better (p < 0.001), VPN and VPP. Results were significantly better
+    (p < 0.001) compared to the other ML models for Accuracy, Precision for partial
+    ACLs, VPP_Partial, and VPP_Complete.
+
+
+    When comparing the areas under the curves (Fig. 4), the proposed solution consistently
+    outperforms the others, although the difference remains small compared to the
+    Voting model, which is the second most accurate method. The new model is the only
+    one to achieve an area of 0.90 for detecting complete rupture and almost 1.0 for
+    detecting partial lesions (Fig. 4). These results demonstrate its capability to
+    accurately classify all three possible diagnoses (healthy, partial tear, or complete
+    tear). The gains are around 0.05 compared to traditional ML solutions and nearly
+    three times higher with the static analysis based on laxity difference using three
+    thresholds (Fig. 4).
+
+
+    MRI is recommended to establish an anterior cruciate ligament tear, whether partial
+    or complete. However, only 169 patients have an MRI result and a valid GNRB test.
+    Each measure is removed from
+
+
+    the training base to compare their diagnoses with MRI diagnoses. The reference
+    remains the arthroscopy result. The comparison shows that the proposed solution
+    detects ruptures better than MRI (sensitivity) by more than 1% (Table 3). The
+    difference is insignificant since some of the MRI results are from the 2010s.
+    Furthermore, MRI provides a better diagnosis if the rupture is total. On the other
+    hand, GNRB® with Machine Learning remains more efficient in differentiating a
+    partial tear from a complete tear (Table 3). Significant gain proves that this
+    device is interesting to use before, after, or without MRI because it is less
+    expensive and simpler to implement. Only the threshold method, which reaches barely
+    70% detection, is inferior and should not be recommended.
+
+
+    # 3.3. Validation of the robustness
+
+
+    The Brest Hospital could evaluate the proposed model using 88 GNRB® measurements
+    from former patients following the device''s usage recommendations. This is the
+    first study that utilizes a second dataset established from a different source
+    to validate the quality and robustness of its solution. The practitioners and
+    the device used in this study are entirely independent from the training dataset,
+    which consists of 1384 measurements.
+
+
+    The thresholds allow for a rupture in 87.80% compared to 92.68% with our solution.
+    The difference in sensitivity with the results in Table 2 is 3%, compared to over
+    20% with the three thresholds (Table 1). Results demonstrate the robustness and
+    quality of the proposed AI-based solution even in the face of new data. Finally,
+    the MRI results showed that the rupture was not qualified for 2 of the 88 patients
+    in this ultimate study. The same observation is made with our solution but with
+    two different patients and allows us to conclude that the two solutions are at
+    least equivalent to ACL tears detection.'
+  - '[PAGE 7]
+
+
+    Table 3
+
+    Results obtained to detect and qualify the type of tears in 169 patients with
+    a GNRB and MRI result linked to an operative report. Specificity does not exist,
+    as no patients are included in this database. The incorporation of the accuracy
+    of the type of tear highlights the most accurate method between MRI, the three
+    alone or the proposed solution based on ensemble learning to classify the type
+    of tear.
+
+
+    | | Thresholds | New_Method | MRI |
+
+    |---|---|---|---|
+
+    | Accuracy (all diagnosis) | 37.56% | 62.64% | 54.91% |
+
+    | Sensitivity (all diagnosis) | 68.84% | 93.21% | 92.92% |
+
+    | Specificity (all diagnosis) | / | / | / |
+
+    | Precision for partial ACLs | 39.79% | 50.27% | 28.38% |
+
+    | Precision for complete ACLs | 35.87% | 71.83% | 74.95% |
+
+
+    # 4. Discussion
+
+
+    The most important finding of this study is that using three thresholds is not
+    recommended despite previous study results. Indeed, our diagnostic proposal is
+    better than that of Beaurin F and Beldae J (Beaurain, 2020) . The absence of pre-selection
+    of data in favor of a diagnosis and the significant increase in data demonstrate
+    the limitations of this approach according to the Table 2. The study confirms
+    previous observations, particularly regarding the threshold of 1.5 mm, which requires
+    reevaluation (Klouche et al., 2015; Mouarbes et al., 2018). Machine Learning applications
+    combined with laxity measurement statistics allow for a much more precise approach
+    (+5%). The main strength of the created method is the sensitivity and specificity
+    ratio of around 94%, with a detection rate of partial ACL tears beyond 55% (Table
+    2). The PPV (positive predictive value) and NPV (negative predictive value) demonstrate
+    that relying solely on laxity is insufficient to ensure a reliable diagnosis in
+    a patient.
+
+
+    Considering additional parameters like sex, grip strength, or laxity at different
+    translating force demonstrated that GNRB® offers a more accurate solution than
+    MRI (Table 3). An explanation is the better differentiation between partial and
+    complete ACL tears (+10%) and improved detection of ruptures (+0.3%). Results
+    support the findings of a 2011 (Van Dyck et al., 2011) study that showed that
+    a standard protocol 1.5-T MRI performed by experienced radiologists might not
+    be sufficiently reliable for diagnosing anterior cruciate ligament rupture. Instead
+    of, comparison with a more recent study demonstrates that the results are similar
+    to MRI diagnoses (Zhao et al., 2020). The accuracy is 92% for our proposed solution
+    compared to 95% for MRI, favoring the latter. Detection of ALC tears (partial
+    and total) shows 95% for MRI and 93% for GNRB (Table 2). The results for distinguishing
+    between the two types of ruptures are very high compared to those reported in
+    the literature (Table 1). This difference can be attributed to more recent data
+    and the smaller number of data points available, with only 66 cases having an
+    MRI compared to 256 (169/1384 + 88 from Brest) in this study. The study (Zhao
+    et al., 2020) had to exclude patients due to strict selection criteria, such as
+    a history of knee pathologies. Also, some people cannot do IRM as pregnant women
+    or individuals with medical devices that prevent MRI. Further supports the value
+    of offering an alternative diagnostic solution that is equally accurate, more
+    cost-effective, and avoids radiation exposure.
+
+
+    The study does not suggest that GNRB® is superior to MRI because it is essential
+    in clinical practice and cannot be replaced. Furthermore, the use of conclusions
+    from MRI reports is subject to interpretation. They may vary depending on factors
+    such as the level of experience of the radiologist, which could explain the observed
+    differences in results.
+
+
+    The most controversial point is the difference in results between this study and
+    existing studies. In our case, sensitivity and specificity with multiple datasets
+    (test base, MRI base, validation base) vary by a maximum of 3%, which is low compared
+    with 20% in published studies (Table 1). The data selection process is unclear
+    or not explained, which may explain the discrepancies in accuracy. Furthermore,
+    it relies solely on laxity to establish a diagnosis with varying translation forces
+    between 134N and 250N (Jenny et al., 2013; Klouche et al., 2015; Mouarbes et al.,
+    2018). Measurements above 134 N proved impossible
+
+
+    for most patients, making it difficult to interpret these measurements in a generalized
+    way. Laxity is a parameter that can vary greatly depending on the configuration
+    of the GNRB® (Bouguennec et al., 2015). Therefore, it is only possible to demonstrate
+    the usefulness of the proposed solution based on our data.
+
+
+    However, it should be noted that all results were verified on 1384 different measurements
+    with cross-validation and confirmed on 88 new patients. No other study has conducted
+    such in-depth analyses and comparisons due to the limited availability of GNRB®
+    measurements. For example, a comparative study between 49 (Di Iorio et al., 2014)
+    and 118 (Klouche et al., 2015) patients will be inconclusive due to a large data
+    gap.
+
+
+    The new diagnostic method based on this device and related analyses thus demonstrates
+    the robustness and relevance of the solution for detecting and characterizing
+    an ACL tear. Only the decision to retain values with tightening differences of
+    more than 40 N, which is twice the limit value for accepting two laxity measurements
+    as valid (Théo Cojean et al., 2023), may be open to discussion. The intention
+    was to avoid having dominant parameters in the decision-making process, but their
+    exclusion could potentially yield better results. Hence, it would be beneficial
+    for all studies to share their data within a regulated research framework to establish
+    a standardized test base. New DB could lead to a more coherent comparison of solutions
+    and enable the development of a more effective diagnostic method with a diverse
+    and comprehensive data set.
+
+
+    The association of two machine learning models with clear advantages is debatable,
+    especially as the three thresholds have not been re-evaluated. A single model
+    could have been sufficient to demonstrate the contribution of AI in diagnostics.
+    However, this approach allows the creation of a new model that appears to be the
+    best solution for leveraging dynamic laximetry device measurements such as GNRB,
+    with gains of around 10%. Nevertheless, a significant improvement is possible
+    by dynamically determining the three laxity thresholds to modify those used to
+    reinforce diagnostic decisions.
+
+
+    It may be necessary to review the choice of hyperparameters, which are automatically
+    selected to maximize the precision-to-loss ratio during training and testing.
+    Although this choice allows for the quick addition of new data and evaluation
+    of new sets, a manual or more statistical approach may increase the quality of
+    diagnostics. Exploring the impact of all the hyperparameters suggested by Scikit-Learn
+    and not just the most important ones (e.g. neighbor number for a Knn) is an area
+    for further improvement.
+
+
+    The training dataset contains less than 30% of patients with rupture among the
+    1384 recorded data, which may explain why the model has an accuracy of approximately
+    62% for this type of injury. Therefore, obtaining more laxity measurements of
+    patients with this type of rupture qualified by arthroscopy would be necessary.
+    Increasing the data should result in a more accurate and robust model for a more
+    comprehensive evaluation. The measurements from the other trials are not published,
+    which is a limitation because collaboration could help improve this solution and
+    find new ones. In the future, we need to find a way for each study to share its
+    data following the rules of the ethics committees.
+
+
+    An alternative is to apply oversampling to increase the sample size could improve
+    accuracy. The fear of creating bias in the database and lack of technical knowledge
+    currently excludes artificial balancing of data choices. Another possible improvement
+    would be to dynamically determine three laxity thresholds and modify those used
+    as diagnostic aids.
+
+
+    Finally, all studies lack a “human” dimension that could be further explored,
+    such as the physician’s opinion on knee instability. Adding other methods evaluated
+    by physicians using Jerk, Lachman, or MRI results could also improve accuracy.
+    There are various diagnostic methods, but they always are compared and never combined.
+
+
+    # 5. Conclusion
+
+
+    In conclusion, this study demonstrates that including only threshold parameter
+    based on difference laxity measurements performed'
+  md: '
+
+    ## 3. Results
+
+
+    All methods compare the same data using successive cross-validation with the same
+    parameters: sex, relative difference of laxity (67 N, 89 N, 134 N) and P2 coefficient.
+    The objective is to ensure that the predicted diagnoses are not arbitrary or too
+    specific to the training data. They use the relative difference in laxity measurement
+    because it increases the accuracy by 4% and the distinction between my two types
+    of ACLs tears by 2%.
+
+
+    ### 3.1. AI method comparisons
+
+
+    The accuracy of decision trees was about 5% lower than that of SGDs, leading to
+    their exclusion. SGD was the second-best method, with a sensitivity close to 90%,
+    excluding ensemble learning algorithms (Table 2). By standard normalization to
+    maximize accuracy, the KNN algorithm achieved a detection rate (specificity) of
+    over 85% and sensitivity above 90%.
+
+
+    Based on the experiment results presented in Table 2, the GNRB® solution recommended
+    for diagnosis has an accuracy equivalent to 70% as three other methods. However,
+    artificial intelligence algorithms outperformed the three-threshold solution,
+    achieving a diagnosed rupture rate of 81% and an accuracy of 69.50%. Although
+    the Random Forest algorithm did not perform as well as KNN, it could improve specificity.
+    This explains why the Vote method, which combines multiple algorithms, can correctly
+    distinguish a healthy ACL from a ruptured ACL with rates higher than 91% (sensitivity
+    + specificity) and appears to be the most efficient solution at this stage.
+
+
+    The ROC curves demonstrate (Fig. 4) that the solution using the three thresholds
+    is significantly less effective than the AI solutions, as it consistently falls
+    below the other models. The curves for the Voting model consistently outperform
+    the others, indicating that this model has better classification performance across
+    all decision thresholds. However, Table 2 shows that the Stacking model has an
+    area of 0.87 compared to 0.84 for complete injuries, confirming its usefulness
+    in qualifying this type of rupture. The standalone KNN model performs worse than
+    the Voting and Stacking models, further reinforcing the choice of model combination
+    to achieve even higher precision.
+
+
+    ### 3.2. Evaluation of the proposed new AI-based method
+
+
+    Fig. 4. Comparative evaluation of machine learning models (KNN, Voting, Stacking)
+    and the reference method using the three laxity thresholds to assess the improvement
+    of the new model through the analysis of the area under the curve (AUC).
+
+
+    The new ML model provided results that were at least slightly inferior or superior
+    to the thresholds method with no significant differences (p > 0.244) for Specificity,
+    PPV, and PPV_Complete. For other results like Accuracy, Sensitivity, Precision
+    (partial or complete), NPV, and PPV_Partial, they were better with a significant
+    difference (p < 0.001). It explains significant gain for qualifying a tear as
+    partial is greater than 56% (Table 2) with no drop in the rate for total ruptures.
+    Table 2 also confirms that for positive and negative predictive values (PPV and
+    NPV), our method is the most efficient with an optimal error rate. Finally, the
+    best discrimination and accuracy between a healthy and a torn ACL is obtained
+    with rates above 93%, justifying the choice to validate all the decisions and
+    hypotheses of part 2.4.
+
+
+    Comparing the new ML method with other individual ML models, results were also
+    at least equivalent with no significant differences (p > 0.189) for Sensitivity
+    except for SGD with better results (p < 0.001), Specificity, Precision for complete
+    ACLs except for SGD where results were worse (p < 0.001), and for RForest where
+    results were better (p < 0.001), NPV and PPV. Results were significantly better
+    (p < 0.001) compared to the other ML models for Accuracy, Precision for partial
+    ACLs, PPV_Partial, and PPV_Complete.
+
+
+    When comparing the areas under the curves (Fig. 4), the proposed solution consistently
+    outperforms the others, although the difference remains small compared to the
+    Voting model, which is the second most accurate method. The new model is the only
+    one to achieve an area of 0.90 for detecting complete rupture and almost 1.0 for
+    detecting partial lesions (Fig. 4). These results demonstrate its capability to
+    accurately classify all three possible diagnoses (healthy, partial tear, or complete
+    tear). The gains are around 0.05 compared to traditional ML solutions and nearly
+    three times higher with the static analysis based on laxity difference using three
+    thresholds (Fig. 4).
+
+
+    MRI is recommended to establish an anterior cruciate ligament tear, whether partial
+    or complete. However, only 169 patients have an MRI result and a valid GNRB test.
+    Each measure is removed from the training base to compare their diagnoses with
+    MRI diagnoses. The reference remains the arthroscopy result. The comparison shows
+    that the proposed solution detects ruptures better than MRI (sensitivity) by more
+    than 1% (Table 3). The difference is insignificant since some of the MRI results
+    are from the 2010s. Furthermore, MRI provides a better diagnosis if the rupture
+    is total. On the other hand, GNRB® with Machine Learning remains more efficient
+    in differentiating a partial tear from a complete tear (Table 3). Significant
+    gain proves that this device is interesting to use before, after, or without MRI
+    because it is less expensive and simpler to implement. Only the threshold method,
+    which reaches barely 70% detection, is inferior and should not be recommended.
+
+
+    ### 3.3. Validation of the robustness
+
+
+    The Brest Hospital could evaluate the proposed model using 88 GNRB® measurements
+    from former patients following the device''s usage recommendations. This is the
+    first study that utilizes a second dataset established from a different source
+    to validate the quality and robustness of its solution. The practitioners and
+    the device used in this study are entirely independent from the training dataset,
+    which consists of 1384 measurements.
+
+
+    The thresholds allow for a rupture in 87.80% compared to 92.68% with our solution.
+    The difference in sensitivity with the results in Table 2 is 3%, compared to over
+    20% with the three thresholds (Table 1). Results demonstrate the robustness and
+    quality of the proposed AI-based solution even in the face of new data. Finally,
+    the MRI results showed that the rupture was not qualified for 2 of the 88 patients
+    in this ultimate study. The same observation is made with our solution but with
+    two different patients and allows us to conclude that the two solutions are at
+    least equivalent to ACL tears detection.
+
+
+    Table 3
+
+    Results obtained to detect and qualify the type of tears in 169 patients with
+    a GNRB and MRI result linked to an operative report. Specificity does not exist,
+    as no patients are included in this database. The incorporation of the accuracy
+    of the type of tear highlights the most accurate method between MRI, the three
+    alone or the proposed solution based on ensemble learning to classify the type
+    of tear.
+
+
+    | | Thresholds | New_Method | MRI |
+
+    |---|---|---|---|
+
+    | Accuracy (all diagnosis) | 37.56% | 62.64% | 54.91% |
+
+    | Sensitivity (all diagnosis) | 68.84% | 93.21% | 92.92% |
+
+    | Specificity (all diagnosis) | / | / | / |
+
+    | Precision for partial ACLs | 39.79% | 50.27% | 28.38% |
+
+    | Precision for complete ACLs | 35.87% | 71.83% | 74.95% |
+
+
+    ## 4. Discussion
+
+
+    The most important finding of this study is that using three thresholds is not
+    recommended despite previous study results. Indeed, our diagnostic proposal is
+    better than that of Beaurin F and Beldae J (Beaurain, 2020) . The absence of pre-selection
+    of data in favor of a diagnosis and the significant increase in data demonstrate
+    the limitations of this approach according to the Table 2. The study confirms
+    previous observations, particularly regarding the threshold of 1.5 mm, which requires
+    reevaluation (Klouche et al., 2015; Mouarbes et al., 2018). Machine Learning applications
+    combined with laxity measurement statistics allow for a much more precise approach
+    (+5%). The main strength of the created method is the sensitivity and specificity
+    ratio of around 94%, with a detection rate of partial ACL tears beyond 55% (Table
+    2). The PPV (positive predictive value) and NPV (negative predictive value) demonstrate
+    that relying solely on laxity is insufficient to ensure a reliable diagnosis in
+    a patient.
+
+
+    Considering additional parameters like sex, grip strength, or laxity at different
+    translating force demonstrated that GNRB® offers a more accurate solution than
+    MRI (Table 3). An explanation is the better differentiation between partial and
+    complete ACL tears (+10%) and improved detection of ruptures (+0.3%). Results
+    support the findings of a 2011 (Van Dyck et al., 2011) study that showed that
+    a standard protocol 1.5-T MRI performed by experienced radiologists might not
+    be sufficiently reliable for diagnosing anterior cruciate ligament rupture. Instead
+    of, comparison with a more recent study demonstrates that the results are similar
+    to MRI diagnoses (Zhao et al., 2020). The accuracy is 92% for our proposed solution
+    compared to 95% for MRI, favoring the latter. Detection of ACL tears (partial
+    and total) shows 95% for MRI and 93% for GNRB (Table 2). The results for distinguishing
+    between the two types of ruptures are very high compared to those reported in
+    the literature (Table 1). This difference can be attributed to more recent data
+    and the smaller number of data points available, with only 66 cases having an
+    MRI compared to 256 (169/1384 + 88 from Brest) in this study. The study (Zhao
+    et al., 2020) had to exclude patients due to strict selection criteria, such as
+    a history of knee pathologies. Also, some people cannot do MRI as pregnant women
+    or individuals with medical devices that prevent MRI. Further supports the value
+    of offering an alternative diagnostic solution that is equally accurate, more
+    cost-effective, and avoids radiation exposure.
+
+
+    The study does not suggest that GNRB® is superior to MRI because it is essential
+    in clinical practice and cannot be replaced. Furthermore, the use of conclusions
+    from MRI reports is subject to interpretation. They may vary depending on factors
+    such as the level of experience of the radiologist, which could explain the observed
+    differences in results.
+
+
+    The most controversial point is the difference in results between this study and
+    existing studies. In our case, sensitivity and specificity with multiple datasets
+    (test base, MRI base, validation base) vary by a maximum of 3%, which is low compared
+    with 20% in published studies (Table 1). The data selection process is unclear
+    or not explained, which may explain the discrepancies in accuracy. Furthermore,
+    it relies solely on laxity to establish a diagnosis with varying translation forces
+    between 134N and 250N (Jenny et al., 2013; Klouche et al., 2015; Mouarbes et al.,
+    2018). Measurements above 134 N proved impossible for most patients, making it
+    difficult to interpret these measurements in a generalized way. Laxity is a parameter
+    that can vary greatly depending on the configuration of the GNRB® (Bouguennec
+    et al., 2015). Therefore, it is only possible to demonstrate the usefulness of
+    the proposed solution based on our data.
+
+
+    However, it should be noted that all results were verified on 1384 different measurements
+    with cross-validation and confirmed on 88 new patients. No other study has conducted
+    such in-depth analyses and comparisons due to the limited availability of GNRB®
+    measurements. For example, a comparative study between 49 (Di Iorio et al., 2014)
+    and 118 (Klouche et al., 2015) patients will be inconclusive due to a large data
+    gap.
+
+
+    The new diagnostic method based on this device and related analyses thus demonstrates
+    the robustness and relevance of the solution for detecting and characterizing
+    an ACL tear. Only the decision to retain values with tightening differences of
+    more than 40 N, which is twice the limit value for accepting two laxity measurements
+    as valid (Théo Cojean et al., 2023), may be open to discussion. The intention
+    was to avoid having dominant parameters in the decision-making process, but their
+    exclusion could potentially yield better results. Hence, it would be beneficial
+    for all studies to share their data within a regulated research framework to establish
+    a standardized test base. New DB could lead to a more coherent comparison of solutions
+    and enable the development of a more effective diagnostic method with a diverse
+    and comprehensive data set.
+
+
+    The association of two machine learning models with clear advantages is debatable,
+    especially as the three thresholds have not been re-evaluated. A single model
+    could have been sufficient to demonstrate the contribution of AI in diagnostics.
+    However, this approach allows the creation of a new model that appears to be the
+    best solution for leveraging dynamic laximetry device measurements such as GNRB,
+    with gains of around 10%. Nevertheless, a significant improvement is possible
+    by dynamically determining the three laxity thresholds to modify those used to
+    reinforce diagnostic decisions.
+
+
+    It may be necessary to review the choice of hyperparameters, which are automatically
+    selected to maximize the precision-to-loss ratio during training and testing.
+    Although this choice allows for the quick addition of new data and evaluation
+    of new sets, a manual or more statistical approach may increase the quality of
+    diagnostics. Exploring the impact of all the hyperparameters suggested by Scikit-Learn
+    and not just the most important ones (e.g. neighbor number for a KNN) is an area
+    for further improvement.
+
+
+    The training dataset contains less than 30% of patients with rupture among the
+    1384 recorded data, which may explain why the model has an accuracy of approximately
+    62% for this type of injury. Therefore, obtaining more laxity measurements of
+    patients with this type of rupture qualified by arthroscopy would be necessary.
+    Increasing the data should result in a more accurate and robust model for a more
+    comprehensive evaluation. The measurements from the other trials are not published,
+    which is a limitation because collaboration could help improve this solution and
+    find new ones. In the future, we need to find a way for each study to share its
+    data following the rules of the ethics committees.
+
+
+    An alternative is to apply oversampling to increase the sample size could improve
+    accuracy. The fear of creating bias in the database and lack of technical knowledge
+    currently excludes artificial balancing of data choices. Another possible improvement
+    would be to dynamically determine three laxity thresholds and modify those used
+    as diagnostic aids.
+
+
+    Finally, all studies lack a “human” dimension that could be further explored,
+    such as the physician’s opinion on knee instability. Adding other methods evaluated
+    by physicians using Jerk, Lachman, or MRI results could also improve accuracy.
+    There are various diagnostic methods, but they always are compared and never combined.
+
+
+    ## 5. Conclusion
+
+
+    In conclusion, this study demonstrates that including only threshold parameter
+    based on difference laxity measurements performed
+
+    '
+  mdcn: '
+
+
+    ## 3. 结果
+
+
+    所有方法使用相同的参数（性别、松弛度相对差值（67 N、89 N、134 N）和 P2 系数），通过逐次交叉验证比较相同的数据。其目的是确保预测诊断不会武断或过度针对训练数据。他们使用松弛度测量的相对差值，因为它使准确率提高了
+    4%，并使两种 ACL 撕裂类型的区分度提高了 2%。
+
+
+    ### 3.1. AI 方法比较
+
+
+    决策树的准确率比 SGD 低约 5%，因此被排除。SGD 是第二好的方法，其灵敏度接近 90%（不包括集成学习算法）（表 2）。通过标准归一化以最大化准确率，KNN
+    算法实现了超过 85% 的检出率（特异度）和 90% 以上的灵敏度。
+
+
+    根据表 2 中呈现的实验结果，推荐用于诊断的 GNRB® 解决方案的准确率相当于另外三种方法的 70%。然而，人工智能算法优于三阈值解决方案，实现了 81%
+    的诊断断裂率和 69.50% 的准确率。尽管随机森林算法的表现不如 KNN，但它可以提高特异度。这解释了为什么结合多种算法的 Vote 方法可以正确区分健康的
+    ACL 和断裂的 ACL，其比率高于 91%（灵敏度 + 特异度），并且在该阶段似乎是最高效的解决方案。
+
+
+    ROC 曲线表明（图 4），使用三个阈值的解决方案明显不如 AI 解决方案有效，因为它始终低于其他模型。投票模型的曲线始终优于其他模型，表明该模型在所有决策阈值下都具有更好的分类性能。然而，表
+    2 显示，堆叠模型的面积为 0.87，而完全损伤的面积为 0.84，证实了其在判定此类断裂方面的有用性。独立的 KNN 模型表现不如投票模型和堆叠模型，这进一步加强了选择模型组合以实现更高精度的决定。
+
+
+    ### 3.2. 拟议新基于 AI 的方法的评估
+
+
+    图 4. 机器学习模型（KNN、投票、堆叠）与使用三个松弛度阈值的参考方法的比较评估，通过分析曲线下面积（AUC）来评估新模型的改进情况。
+
+
+    新机器学习模型的结果至少略逊或略优于阈值方法，在特异度、PPV 和 PPV_Complete 上无显著差异（p > 0.244）。对于准确率、灵敏度、精确度（部分或完全）、NPV
+    和 PPV_Partial 等其他结果，它们更好且具有显著差异（p < 0.001）。这解释了将撕裂定性为部分撕裂的显著收益大于 56%（表 2），且全断裂的比率没有下降。表
+    2 还证实，对于阳性预测值和阴性预测值（PPV 和 NPV），我们的方法是最高效的，且误差率最优。最后，在健康 ACL 和撕裂 ACL 之间获得了最高的区分度和准确率，比率高于
+    93%，证明了验证第 2.4 部分所有决定和假设的选择是正确的。
+
+
+    将新机器学习方法与其他单个机器学习模型进行比较，结果也至少相当，灵敏度上无显著差异（p > 0.189），但 SGD 结果更好（p < 0.001）；特异度、完全
+    ACL 的精确度（除 SGD 结果更差外，p < 0.001）和随机森林结果更好（p < 0.001）、NPV 和 PPV 也是如此。与其他机器学习模型相比，准确率、部分
+    ACL 的精确度、PPV_Partial 和 PPV_Complete 的结果显著更好（p < 0.001）。
+
+
+    比较曲线下面积（图 4）时，拟议方案始终优于其他方案，尽管与第二准确的方法——投票模型相比，差异仍然很小。新模型是唯一实现完整断裂检测面积为 0.90 和近乎
+    1.0 的部分病变检测面积的模型（图 4）。这些结果展示了其准确分类所有三种可能诊断（健康、部分撕裂或完全撕裂）的能力。与传统机器学习解决方案相比，收益约为
+    0.05，而与使用三个阈值的松弛度差值静态分析相比，收益近三倍高（图 4）。
+
+
+    MRI 被推荐用于确定前交叉韧带撕裂，无论是部分还是完全。然而，只有 169 名患者同时拥有 MRI 结果和有效的 GNRB 测试。每个测量值都从训练集中移除，以将其诊断与
+    MRI 诊断进行比较。参考标准仍然是关节镜检查结果。比较表明，拟议方案检测断裂的能力优于 MRI（灵敏度），提高了 1% 以上（表 3）。差异不显著，因为部分
+    MRI 结果来自 2010 年代。此外，如果断裂为全断裂，MRI 能提供更好的诊断。另一方面，GNRB® 结合机器学习在区分部分撕裂和完全撕裂方面仍然更有效（表
+    3）。显著收益证明，该设备在 MRI 前、后或不进行 MRI 时都值得使用，因为它成本更低且实现更简单。只有勉强达到 70% 检出率的阈值方法较差，不应推荐。
+
+
+    ### 3.3. 鲁棒性验证
+
+
+    布列斯特医院可以使用 88 份前患者的 GNRB® 测量值（遵循设备使用建议）来评估拟议模型。这是首项利用来自不同来源的第二个数据集来验证其解决方案质量和鲁棒性的研究。本研究中使用的医师和设备与训练数据集（包含
+    1384 个测量值）完全独立。
+
+
+    阈值方法的检出率为 87.80%，而我们的解决方案为 92.68%。与表 2 结果相比，灵敏度差异为 3%，而与三个阈值相比则超过 20%（表 1）。结果表明，拟议的基于
+    AI 的解决方案在面对新数据时表现出鲁棒性和高质量。最后，MRI 结果表明，在这项最终研究的 88 名患者中，有 2 名患者的断裂未被确诊。我们的解决方案也得出了同样的观察结果，但涉及两名不同的患者，这使我们得出结论：两种解决方案在
+    ACL 撕裂检测方面至少是等效的。
+
+
+    表 3
+
+    169 名同时拥有与手术报告关联的 GNRB 和 MRI 结果的患者检测和确定撕裂类型所获得的结果。特异度不存在，因为该数据库中未包含任何患者。纳入撕裂类型的准确率，突出了
+    MRI、三种单独阈值或基于集成学习的拟议解决方案中分类撕裂类型最准确的方法。
+
+
+    | | 阈值 | 新方法 | MRI |
+
+    |---|---|---|---|
+
+    | 准确率（所有诊断） | 37.56% | 62.64% | 54.91% |
+
+    | 灵敏度（所有诊断） | 68.84% | 93.21% | 92.92% |
+
+    | 特异度（所有诊断） | / | / | / |
+
+    | 部分 ACL 的精确度 | 39.79% | 50.27% | 28.38% |
+
+    | 完全 ACL 的精确度 | 35.87% | 71.83% | 74.95% |
+
+
+    ## 4. 讨论
+
+
+    本研究最重要的发现是，尽管有以往研究结果，但不建议使用三个阈值。确实，我们的诊断建议优于 Beaurin F 和 Beldae J（Beaurain, 2020）。缺乏有利于诊断的数据预选以及数据的显著增加，根据表
+    2，证明了这种方法的局限性。该研究证实了以往的观察，特别是关于 1.5 mm 阈值，需要重新评估（Klouche et al., 2015; Mouarbes
+    et al., 2018）。机器学习应用与松弛度测量统计相结合，可以实现更精确的方法（+5%）。所创建方法的主要优势是灵敏度和特异度比约为 94%，部分 ACL
+    撕裂的检出率超过 55%（表 2）。PPV（阳性预测值）和 NPV（阴性预测值）表明，仅依赖松弛度不足以确保患者的可靠诊断。
+
+
+    考虑性别、握力或不同牵引力下的松弛度等额外参数，证明了 GNRB® 比 MRI 提供更准确的解决方案（表 3）。一个解释是部分和完全 ACL 撕裂的区分度更好（+10%），断裂检测得到改善（+0.3%）。结果支持
+    2011 年（Van Dyck et al., 2011）的一项研究的发现，该研究表明，经验丰富的放射科医生执行的标准协议 1.5-T MRI 可能不足以可靠地诊断前交叉韧带断裂。相反，与更近期的研究比较表明，结果与
+    MRI 诊断相似（Zhao et al., 2020）。我们拟议方案的准确率为 92%，而 MRI 为 95%，后者更受青睐。ACL 撕裂（部分和全）的检测显示
+    MRI 为 95%，GNRB 为 93%（表 2）。区分两种断裂类型的结果远高于文献中报道的结果（表 1）。这种差异可以归因于更新的数据和可用数据点数量较少，其中只有
+    66 例病例有 MRI，而本研究中有 256 例（169/1384 + 88 来自布列斯特）。该研究（Zhao et al., 2020）不得不因为严格的选择标准（如膝部病理病史）而排除患者。此外，有些人无法进行
+    MRI，例如孕妇或有妨碍 MRI 的医疗设备的人。这进一步支持提供一种同样准确、更具成本效益且避免辐射暴露的替代诊断方案的价值。
+
+
+    该研究并不暗示 GNRB® 优于 MRI，因为 MRI 在临床实践中至关重要且无法替代。此外，使用 MRI 报告中的结论存在解释性，可能因放射科医生的经验水平等因素而异，这可能解释了观察到的结果差异。
+
+
+    最具争议的一点是本研究与现有研究之间的结果差异。在我们的情况中，多个数据集（测试集、MRI 集、验证集）的灵敏度和特异度最多变化 3%，与已发表研究中的 20%
+    相比较低（表 1）。数据选择过程不清楚或未说明，这可能解释了准确率的差异。此外，它仅依赖松弛度来建立诊断，牵引力在 134N 到 250N 之间变化（Jenny
+    et al., 2013; Klouche et al., 2015; Mouarbes et al., 2018）。超过 134 N 的测量对大多数患者来说证明是不可能的，使得难以以普遍化的方式解释这些测量。松弛度是一个根据
+    GNRB® 配置可能大幅变化的参数（Bouguennec et al., 2015）。因此，只能基于我们的数据来证明所提议解决方案的有用性。
+
+
+    然而，应注意，所有结果都在 1384 个不同测量值上通过交叉验证进行了验证，并在 88 名新患者中得到了确认。由于 GNRB® 测量值的可用性有限，没有其他研究进行过如此深入的分析和比较。例如，49
+    名患者（Di Iorio et al., 2014）与 118 名患者（Klouche et al., 2015）之间的比较研究将因巨大的数据差距而无法得出结论。
+
+
+    基于该设备及相关分析的新诊断方法，从而证明了该解决方案在检测和表征 ACL 撕裂方面的鲁棒性和相关性。唯一可能值得讨论的决定是保留拧紧差值超过 40 N 的值，这比接受两个松弛度测量为有效的限值高出一倍（Théo
+    Cojean et al., 2023）。其意图是避免在决策过程中出现占主导地位的参数，但排除它们可能会产生更好的结果。因此，所有研究在受监管的研究框架内共享数据以建立标准化测试基将是有益的。新数据库可以带来更一致的解决方案比较，并能够基于多样化且全面的数据集开发更有效的诊断方法。
+
+
+    两种具有明显优势的机器学习模型的关联是值得商榷的，尤其是因为三个阈值尚未重新评估。单一模型本可以足以展示 AI 在诊断中的贡献。然而，这种方法允许创建一个新模型，该模型似乎是利用
+    GNRB 等动态松弛度测量设备测量的最佳解决方案，收益约为 10%。尽管如此，通过动态确定三个松弛度阈值来修改用于加强诊断决策的阈值，仍有显著改进的可能性。
+
+
+    可能需要审查超参数的选择，这些超参数在训练和测试期间被自动选择以最大化精度与损失比。尽管这种选择允许快速添加新数据并评估新集，但手动或更统计的方法可能会提高诊断质量。探索
+    Scikit-Learn 建议的所有超参数的影响，而不仅仅是最重要的超参数（例如 KNN 的邻居数量），是进一步改进的一个领域。
+
+
+    训练数据集中，记录的 1384 条数据中不到 30% 的患者有断裂，这可能解释了为什么该模型对这种损伤的准确率约为 62%。因此，有必要获取更多由关节镜检查确诊的这种断裂患者的松弛度测量值。增加数据应该会产生更准确、更强大的模型，以便进行更全面的评估。其他试验的测量值未公布，这是一个局限，因为合作可能有助于改进此解决方案并找到新的解决方案。未来，我们需要找到一种方法，让每个研究都遵循伦理委员会的规则共享其数据。
+
+
+    一种替代方案是应用过采样来增加样本量，这可能提高准确率。由于担心在数据库中产生偏差且缺乏技术知识，目前排除了人工平衡数据选择。另一个可能的改进是动态确定三个松弛度阈值并修改用作诊断辅助的阈值。
+
+
+    最后，所有研究都缺乏可以进一步探索的“人性”维度，例如医生对膝关节不稳定的看法。添加其他由医生使用 Jerk、Lachman 或 MRI 结果评估的方法也可能提高准确率。存在各种诊断方法，但它们总是被比较而从未结合。
+
+
+    ## 5. 结论
+
+
+    结论：本研究表明，仅包括基于松弛度差异测量的阈值参数，执行了
+
+
+    '
+  merge: 0
+- raw:
+  - '[PAGE 8]
+
+
+    at 134 N could be not enough and impact the diagnostic accuracy. The proposed
+    solution counteract this bias and significantly improve the differentiation between
+    healthy and torn ACLs by using a robust and accurate machine learning model in
+    decision-making, including more parameters such as clamping force, sex, laxity
+    results at different forces. Through a comprehensive analysis of a large dataset
+    spanning multiple years, a more robust and accurate method (+6%) has been developed
+    compared to static laxity interpretation. The choice of not directly confronting
+    existing solutions or models, but proposing a bold combination, leads to the most
+    robust and accurate diagnosis solution. Due to its reduced cost and high precision,
+    this dynamic laxity device should be recommended as an alternative to MRI when
+    used with our new diagnostic process. The results show that the solution is equivalent
+    to this diagnostic standard and feasible everywhere due to the absence of radiation.
+    However, operating on a patient solely based on a positive GNRB® or MRI test without
+    considering their symptoms is not recommended, as it is possible to live with
+    ACL tears. Therefore, we recommend using machine learning for diagnosis, combining
+    the expertise and empathy of a physician that no algorithm can currently replicate.
+
+
+    # Code availability
+
+
+    The source code is strictly private and licensed.
+
+
+    # Funding
+
+
+    No funding was received for this study.
+
+
+    # Ethics approval
+
+
+    Compliance with ethnical standard.
+
+
+    # CRediT authorship contribution statement
+
+
+    Jean Mouchotte: Development, Design, Writing of the article. Matthieu LeBerré:
+    Editorial support, Knowledge exchange. Théo Cojean: Editorial support. Henri Robert:
+    Database with ethic comities.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Data availability
+
+
+    The authors do not have permission to share data.
+
+
+    # Acknowledgments
+
+
+    I thank all the reviewers of the article as well as ESIEA and Genourob for their
+    support.
+
+
+    # References
+
+
+    +   - Algahtani, Y., Murgier, J., Beaufils, P., Boisenoulut, P., Steltzen, C.,
+    & Pujol, N. (2018). Anterior tibial laxity using the GNRB® device in healthy knees.
+    Knee, 25(1), 34–39.
+
+    +   - Balasch, H., Schiller, M., Friebe, H., & Hoffmann, F. (1999). Evaluation
+    of anterior knee joint instability with the rolimeter a test in comparison with
+    manual assessment and measuring with the KT-1000 arthrometer. Knee Surgery, Sports
+    Traumatology, Arthroscopy, 7(4), 204–208.
+
+    +   - Beaurain, F. (2020). GNRB (Medical device) vs MRI on anterior cruciate ligament
+    (ACL) tears with arthroscopic validation. International Journal of Research Studies
+    Medical and Health Sciences, 21.
+
+    +   - Bercovy, M., & Weber, E. (1995). Evaluation of laxity, rigidity and compliance
+    of the normal and pathological knee. Application to survival curves of ligamentoplasties.
+    Revue de chirurgie orthopédique et réparatrice de l''appareil moteur, 81(2), 114–127.
+
+
+    +   - Bohu, Y., Steltzen, C., Lefevre, N., & Herman, S. (2012). Évaluation clinique
+    d''une série continue de 55 cas de ligamentoplastie partielle du ligament croisé
+    antérieur par la technique TLS®(greffe courte aux ischiojambiers). Chir Orthop
+    et Traumatol, 98(7), 5373.
+
+    +   - Bouguennec, N., Odri, G., Gravelieu, N., & Colombet, P. (2015). Comparative
+    reproducibility of TELOS™ and GNRB® for instrumental measurement of anterior tibial
+    translation in normal knees. Orthopedics & Traumatology: Surgery & Research, 101(3),
+    301–305.
+
+    +   - Branch, T. P., Mayr, H. O., Browne, J. E., Campbell, J. C., Stoehr, A.,
+    & Jacobs, C. A. (2010). Instrumented examination of anterior cruciate ligament
+    injuries: minimizing flaws of the manual clinical examination. Arthroscopy, 26(7),
+    997–1004.
+
+    +   - Chang, M. J., Chang, C. B., Choi, J.-Y., Won, H. H., & Kim, T. K. (2013).
+    How useful is MRI in diagnosing isolated bundle ACL injuries? Clinical Orthopaedics
+    and Related Research®, 471, 3283–3290.
+
+    +   - Collette, M., Courville, J., Forton, M., & Gagnierc, B. (2012). Objective
+    evaluation of anterior knee laxity: comparison of the KT-1000 and GNRB® arthrometers.
+    Knee Surgery, Sports Traumatology, Arthroscopy, 20(11), 2232–2238.
+
+    +   - Crawford, R., Walley, G., Bridgman, S., & Maffulli, N. (2007). Magnetic
+    resonance imaging versus arthroscopy in the diagnosis of knee pathology, concentrating
+    on meniscal lesions and ACL tears: a systematic review. British Medical Bulletin,
+    84(1), 5–23.
+
+    +   - Di Iorio, A., Carnescchi, O., Philippot, R., & Farizon, F. (2014). Analyse
+    multimodale des ruptures du ligament croisé antérieur: une étude prospective sur
+    49 cas. R Chir Orthop et Traumatol, 100(7), 537–540.
+
+    +   - Ebrahimpour, H., Mirifezi, S. Z., Najar, A. V., Kachoee, A. R., Ariamanesh,
+    A. S., Ganjali, R., Esmaeili, H., Salari, H., & Vejdani, M. (2014). Developing
+    an appropriateness criteria for knee MRI using the rand appropriateness method
+    (RAM). Archives of Bone and Joint Surgery, 2(1), 47.
+
+    +   - Gustafsson, T., Östenberg, A. H., & Alricsson, M. (2020). ACL diagnosis—The
+    correlation between Rolimeter and MRI Sports Orthopaedics and Traumatology, 36(3),
+    278–283.
+
+    +   - Hairy, P. (2021). Les réseaux de neurones et la data augmentation. MetalBlog.
+
+    +   - Jenny, J. Y., Arndt, J., & Surgery-France, C. A. O. (2013). Anterior knee
+    laxity measurement using stress radiographs and the GNRB® system versus intraoperative
+    navigation. Orthopedics & Traumatology: Surgery & Research, 99(6), S297–S300.
+
+    +   - Jenny, J. Y., Pulerio, B., Schockmel, G., Harnois, S., & Clavert, P. (2017).
+    Experimental validation of the GNRB® for measuring anterior tibial translation.
+    Orthopedics & Traumatology: Surgery & Research, 103(3), 363–366.
+
+    +   - Klasan, A., Putnis, S. E., Kandhari, V., Oxsha, T., Fritsch, B. A., & Parker,
+    D. A. (2020). Healthy knee KT1000 measurements of anterior tibial translation
+    have significant variation. Knee Surgery, Sports Traumatology, Arthroscopy, 28(7),
+    2177–2183.
+
+    +   - Klouche, S., Lefevre, N., Cascua, S., Herman, S., Gerometta, A., & Bohu,
+    Y. (2015). Diagnostic value of the GNRB® in relation to pressure load for complete
+    ACL tears: A prospective case-control study on 118 subjects. Orthopedics & Traumatology:
+    Surgery & Research, 101(3), 297–300.
+
+    +   - Learnia, M. (2022). Ensemble learning : Bagging, boosting et stacking (25/30).
+    URL https://www.youtube.com/watch?v=YpUdYtw8.
+
+    +   - Lefevre, N., Bohu, Y., Naouri, J., Klouche, S., & Herman, S. (2014). Validity
+    of GNRB® arthrometer compared to Telos™ in the assessment of partial anterior
+    cruciate ligament tears. Knee Surgery, Sports Traumatology, Arthroscopy, 22(2),
+    285–290.
+
+    +   - Maheh, B. (2020). Machine learning algorithms-a review. JSR, 9, 381–386.
+
+    +   - Micheo, W., Hernández, L., & Seda, C. (2010). Evaluation, management, and
+    prevention of anterior cruciate ligament injury: current concepts. PM&R, 2(10),
+    935–944.
+
+    +   - Moursas, D., Cavaignac, E., Chiron, P., Bérard, E., & Murgier, J. (2018).
+    Evaluation of reproducibility of robotic knee testing device (GNRB) on 60 healthy
+    knees. Journal of Orthopedics, 15(1), 94–98.
+
+    +   - Obermeyer, Z., & Emanuel, E. J. (2016). Predicting the future—big data,
+    machine learning, and clinical medicine. New England Journal of Medicine, 375(13),
+    1216.
+
+    +   - Pässler, H., & März, S. (1986). Der radiologische Lachman-Test—eine einfache
+    und sichere Methode zum Nachweis von Kreuzbandschäden. European Journal of Trauma,
+    12(6), 295–300.
+
+    +   - Phelan, N., Rowland, P., Galvin, R., & O''Byrne, J. M. (2016). A systematic
+    review and meta-analysis of the diagnostic accuracy of MRI for suspected ACL and
+    meniscal tears of the knee. Knee Surgery, Sports Traumatology, Arthroscopy, 24(5),
+    1525–1539.
+
+    +   - Robert, H., Noureau, S., Gaget, S., & Gagniere, B. (2009). A new knee arthrometer,
+    the GNRB®: experience in ACL complete and partial tears. Orthopedics & Traumatology:
+    Surgery & Research, 95(3), 171–176.
+
+    +   - Saravia, A., Cabrera, S., Molina, R., Pacheco, L., & Muñoz, G. (2020). Validity
+    of the Genourob arthrometer in the evaluation of total thickness tears of anterior
+    cruciate ligament. Journal of Orthopedics, 22, 203–206.
+
+    +   - Schuster, A. J., McNicholas, M. J., Wachtl, S. W., McGurty, D. W., & Jakob,
+    R. P. (2004). A new mechanical testing device for measuring anteroposterior knee
+    laxity. The American Journal of Sports Medicine, 32(7), 1731–1735.
+
+    +   - Théo Cojean, Cécile Bataillon, Henri Robert, & Laurence Cheze (2023). GNRB®
+    laximeter with magnetic resonance imaging in clinical practice for complete and
+    partial anterior cruciate ligament tears detection: A prospective diagnostic study
+    with arthroscopic validation on 214 patients.
+
+    +   - Torg, J. S., Conrad, W., & Kalen, V. (1976). Clinical I diagnosis of anterior
+    cruciate ligament instability in the athlete. The American Journal of Sports Medicine,
+    4(2), 84–93.'
+  md: '
+
+
+    at 134 N could not be enough and impact the diagnostic accuracy. The proposed
+    solution counteracts this bias and significantly improves the differentiation
+    between healthy and torn ACLs by using a robust and accurate machine learning
+    model in decision-making, including more parameters such as clamping force, sex,
+    laxity results at different forces. Through a comprehensive analysis of a large
+    dataset spanning multiple years, a more robust and accurate method (+6%) has been
+    developed compared to static laxity interpretation. The choice of not directly
+    confronting existing solutions or models, but proposing a bold combination, leads
+    to the most robust and accurate diagnosis solution. Due to its reduced cost and
+    high precision, this dynamic laxity device should be recommended as an alternative
+    to MRI when used with our new diagnostic process. The results show that the solution
+    is equivalent to this diagnostic standard and feasible everywhere due to the absence
+    of radiation. However, operating on a patient solely based on a positive GNRB®
+    or MRI test without considering their symptoms is not recommended, as it is possible
+    to live with ACL tears. Therefore, we recommend using machine learning for diagnosis,
+    combining the expertise and empathy of a physician that no algorithm can currently
+    replicate.
+
+
+    ## Code availability
+
+
+    The source code is strictly private and licensed.
+
+
+    ## Funding
+
+
+    No funding was received for this study.
+
+
+    ## Ethics approval
+
+
+    Compliance with ethical standard.
+
+
+    ## CRediT authorship contribution statement
+
+
+    Jean Mouchotte: Development, Design, Writing of the article. Matthieu LeBerré:
+    Editorial support, Knowledge exchange. Théo Cojean: Editorial support. Henri Robert:
+    Database with ethics committees.
+
+
+    ## Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    ## Data availability
+
+
+    The authors do not have permission to share data.
+
+
+    ## Acknowledgments
+
+
+    I thank all the reviewers of the article as well as ESIEA and Genourob for their
+    support.
+
+
+    ## References
+
+
+    - Algahtani, Y., Murgier, J., Beaufils, P., Boisenoulut, P., Steltzen, C., & Pujol,
+    N. (2018). Anterior tibial laxity using the GNRB® device in healthy knees. Knee,
+    25(1), 34–39.
+
+    - Balasch, H., Schiller, M., Friebe, H., & Hoffmann, F. (1999). Evaluation of
+    anterior knee joint instability with the rolimeter a test in comparison with manual
+    assessment and measuring with the KT-1000 arthrometer. Knee Surgery, Sports Traumatology,
+    Arthroscopy, 7(4), 204–208.
+
+    - Beaurain, F. (2020). GNRB (Medical device) vs MRI on anterior cruciate ligament
+    (ACL) tears with arthroscopic validation. International Journal of Research Studies
+    Medical and Health Sciences, 21.
+
+    - Bercovy, M., & Weber, E. (1995). Evaluation of laxity, rigidity and compliance
+    of the normal and pathological knee. Application to survival curves of ligamentoplasties.
+    Revue de chirurgie orthopédique et réparatrice de l''appareil moteur, 81(2), 114–127.
+
+    - Bohu, Y., Steltzen, C., Lefevre, N., & Herman, S. (2012). Évaluation clinique
+    d''une série continue de 55 cas de ligamentoplastie partielle du ligament croisé
+    antérieur par la technique TLS®(greffe courte aux ischiojambiers). Chir Orthop
+    et Traumatol, 98(7), 5373.
+
+    - Bouguennec, N., Odri, G., Gravelieu, N., & Colombet, P. (2015). Comparative
+    reproducibility of TELOS™ and GNRB® for instrumental measurement of anterior tibial
+    translation in normal knees. Orthopedics & Traumatology: Surgery & Research, 101(3),
+    301–305.
+
+    - Branch, T. P., Mayr, H. O., Browne, J. E., Campbell, J. C., Stoehr, A., & Jacobs,
+    C. A. (2010). Instrumented examination of anterior cruciate ligament injuries:
+    minimizing flaws of the manual clinical examination. Arthroscopy, 26(7), 997–1004.
+
+    - Chang, M. J., Chang, C. B., Choi, J.-Y., Won, H. H., & Kim, T. K. (2013). How
+    useful is MRI in diagnosing isolated bundle ACL injuries? Clinical Orthopaedics
+    and Related Research®, 471, 3283–3290.
+
+    - Collette, M., Courville, J., Forton, M., & Gagnier, B. (2012). Objective evaluation
+    of anterior knee laxity: comparison of the KT-1000 and GNRB® arthrometers. Knee
+    Surgery, Sports Traumatology, Arthroscopy, 20(11), 2232–2238.
+
+    - Crawford, R., Walley, G., Bridgman, S., & Maffulli, N. (2007). Magnetic resonance
+    imaging versus arthroscopy in the diagnosis of knee pathology, concentrating on
+    meniscal lesions and ACL tears: a systematic review. British Medical Bulletin,
+    84(1), 5–23.
+
+    - Di Iorio, A., Carnescchi, O., Philippot, R., & Farizon, F. (2014). Analyse multimodale
+    des ruptures du ligament croisé antérieur: une étude prospective sur 49 cas. R
+    Chir Orthop et Traumatol, 100(7), 537–540.
+
+    - Ebrahimpour, H., Mirifezi, S. Z., Najar, A. V., Kachoee, A. R., Ariamanesh,
+    A. S., Ganjali, R., Esmaeili, H., Salari, H., & Vejdani, M. (2014). Developing
+    an appropriateness criteria for knee MRI using the rand appropriateness method
+    (RAM). Archives of Bone and Joint Surgery, 2(1), 47.
+
+    - Gustafsson, T., Östenberg, A. H., & Alricsson, M. (2020). ACL diagnosis—The
+    correlation between Rolimeter and MRI Sports Orthopaedics and Traumatology, 36(3),
+    278–283.
+
+    - Hairy, P. (2021). Les réseaux de neurones et la data augmentation. MetalBlog.
+
+    - Jenny, J. Y., Arndt, J., & Surgery-France, C. A. O. (2013). Anterior knee laxity
+    measurement using stress radiographs and the GNRB® system versus intraoperative
+    navigation. Orthopedics & Traumatology: Surgery & Research, 99(6), S297–S300.
+
+    - Jenny, J. Y., Pulerio, B., Schockmel, G., Harnois, S., & Clavert, P. (2017).
+    Experimental validation of the GNRB® for measuring anterior tibial translation.
+    Orthopedics & Traumatology: Surgery & Research, 103(3), 363–366.
+
+    - Klasan, A., Putnis, S. E., Kandhari, V., Oxsha, T., Fritsch, B. A., & Parker,
+    D. A. (2020). Healthy knee KT1000 measurements of anterior tibial translation
+    have significant variation. Knee Surgery, Sports Traumatology, Arthroscopy, 28(7),
+    2177–2183.
+
+    - Klouche, S., Lefevre, N., Cascua, S., Herman, S., Gerometta, A., & Bohu, Y.
+    (2015). Diagnostic value of the GNRB® in relation to pressure load for complete
+    ACL tears: A prospective case-control study on 118 subjects. Orthopedics & Traumatology:
+    Surgery & Research, 101(3), 297–300.
+
+    - Learnia, M. (2022). Ensemble learning : Bagging, boosting et stacking (25/30).
+    URL https://www.youtube.com/watch?v=YpUdYtw8.
+
+    - Lefevre, N., Bohu, Y., Naouri, J., Klouche, S., & Herman, S. (2014). Validity
+    of GNRB® arthrometer compared to Telos™ in the assessment of partial anterior
+    cruciate ligament tears. Knee Surgery, Sports Traumatology, Arthroscopy, 22(2),
+    285–290.
+
+    - Maheh, B. (2020). Machine learning algorithms-a review. JSR, 9, 381–386.
+
+    - Micheo, W., Hernández, L., & Seda, C. (2010). Evaluation, management, and prevention
+    of anterior cruciate ligament injury: current concepts. PM&R, 2(10), 935–944.
+
+    - Moursas, D., Cavaignac, E., Chiron, P., Bérard, E., & Murgier, J. (2018). Evaluation
+    of reproducibility of robotic knee testing device (GNRB) on 60 healthy knees.
+    Journal of Orthopedics, 15(1), 94–98.
+
+    - Obermeyer, Z., & Emanuel, E. J. (2016). Predicting the future—big data, machine
+    learning, and clinical medicine. New England Journal of Medicine, 375(13), 1216.
+
+    - Pässler, H., & März, S. (1986). Der radiologische Lachman-Test—eine einfache
+    und sichere Methode zum Nachweis von Kreuzbandschäden. European Journal of Trauma,
+    12(6), 295–300.
+
+    - Phelan, N., Rowland, P., Galvin, R., & O''Byrne, J. M. (2016). A systematic
+    review and meta-analysis of the diagnostic accuracy of MRI for suspected ACL and
+    meniscal tears of the knee. Knee Surgery, Sports Traumatology, Arthroscopy, 24(5),
+    1525–1539.
+
+    - Robert, H., Noureau, S., Gaget, S., & Gagniere, B. (2009). A new knee arthrometer,
+    the GNRB®: experience in ACL complete and partial tears. Orthopedics & Traumatology:
+    Surgery & Research, 95(3), 171–176.
+
+    - Saravia, A., Cabrera, S., Molina, R., Pacheco, L., & Muñoz, G. (2020). Validity
+    of the Genourob arthrometer in the evaluation of total thickness tears of anterior
+    cruciate ligament. Journal of Orthopedics, 22, 203–206.
+
+    - Schuster, A. J., McNicholas, M. J., Wachtl, S. W., McGurty, D. W., & Jakob,
+    R. P. (2004). A new mechanical testing device for measuring anteroposterior knee
+    laxity. The American Journal of Sports Medicine, 32(7), 1731–1735.
+
+    - Théo Cojean, Cécile Bataillon, Henri Robert, & Laurence Cheze (2023). GNRB®
+    laximeter with magnetic resonance imaging in clinical practice for complete and
+    partial anterior cruciate ligament tears detection: A prospective diagnostic study
+    with arthroscopic validation on 214 patients.
+
+    - Torg, J. S., Conrad, W., & Kalen, V. (1976). Clinical diagnosis of anterior
+    cruciate ligament instability in the athlete. The American Journal of Sports Medicine,
+    4(2), 84–93.
+
+
+    '
+  mdcn: '
+
+    在134 N时可能不足并影响诊断准确性。所提方案通过在决策中使用鲁棒且准确的机器学习模型，抵消了这种偏差，并显著提高了健康前交叉韧带（ACL）与撕裂前交叉韧带之间的鉴别度，纳入了包括夹持力、性别、不同受力下松弛度结果在内的更多参数。通过对跨越多年的大型数据集进行全面分析，与静态松弛度解读相比，开发出了一种更鲁棒且更准确的方法（+6%）。选择不直接与现有方案或模型对抗，而是提出大胆的组合，从而获得最鲁棒且最准确的诊断方案。由于成本降低且精度高，这种动态松弛度设备应在与我们的新诊断流程配合使用时，作为MRI的替代方案予以推荐。结果表明，该方案与这一诊断标准相当，且因无辐射而在任何地方都可行。然而，不建议仅基于阳性的GNRB®或MRI检查结果且不考虑患者症状就进行手术，因为有可能带着ACL撕裂生活。因此，我们建议使用机器学习进行诊断，结合医生的专业知识和同理心——这是目前任何算法都无法复制的。
+
+
+    ## 代码可用性
+
+
+    源代码严格私有并获得许可。
+
+
+    ## 资助
+
+
+    本研究未获得资助。
+
+
+    ## 伦理批准
+
+
+    符合伦理标准。
+
+
+    ## CRediT 作者贡献声明
+
+
+    Jean Mouchotte：开发、设计、撰写文章。Matthieu LeBerré：编辑支持、知识交流。Théo Cojean：编辑支持。Henri Robert：与伦理委员会合作的数据库。
+
+
+    ## 竞争利益声明
+
+
+    作者声明，他们没有已知的可能影响本文所报道工作的竞争性财务利益或个人关系。
+
+
+    ## 数据可用性
+
+
+    作者无权共享数据。
+
+
+    ## 致谢
+
+
+    感谢文章的所有评审者以及 ESIEA 和 Genourob 的支持。
+
+
+    ## 参考文献
+
+
+    - Algahtani, Y., Murgier, J., Beaufils, P., Boisenoulut, P., Steltzen, C., & Pujol,
+    N. (2018). 使用GNRB®设备评估健康膝关节的胫骨前向松弛度. Knee（膝关节）, 25(1), 34–39.
+
+    - Balasch, H., Schiller, M., Friebe, H., & Hoffmann, F. (1999). 使用罗利米评估前膝关节不稳定性：与手动评估及KT-1000关节仪测量的对比测试.
+    膝关节手术、运动创伤与关节镜, 7(4), 204–208.
+
+    - Beaurain, F. (2020). 前交叉韧带（ACL）撕裂：GNRB®（医疗器械）与MRI的对比，含关节镜验证. 医学与健康科学国际研究期刊,
+    21.
+
+    - Bercovy, M., & Weber, E. (1995). 正常与病理性膝关节松弛度、刚度和顺应性评估：韧带成形术存活曲线的应用. 运动器官矫正与修复外科评论,
+    81(2), 114–127.
+
+    - Bohu, Y., Steltzen, C., Lefevre, N., & Herman, S. (2012). 55例连续部分前交叉韧带成形术系列的临床评估：TLS®技术（短腘绳肌移植）.
+    骨科与创伤外科, 98(7), 5373.
+
+    - Bouguennec, N., Odri, G., Gravelieu, N., & Colombet, P. (2015). TELOS™与GNRB®在测量正常膝关节胫骨前移方面的可比重复性.
+    骨科与创伤外科：手术与研究, 101(3), 301–305.
+
+    - Branch, T. P., Mayr, H. O., Browne, J. E., Campbell, J. C., Stoehr, A., & Jacobs,
+    C. A. (2010). 前交叉韧带损伤的仪器化检查：尽量减少手动临床检查的缺陷. 关节镜, 26(7), 997–1004.
+
+    - Chang, M. J., Chang, C. B., Choi, J.-Y., Won, H. H., & Kim, T. K. (2013). MRI在诊断单束前交叉韧带损伤中的实用性如何？临床骨科及相关研究®,
+    471, 3283–3290.
+
+    - Collette, M., Courville, J., Forton, M., & Gagnier, B. (2012). 前膝关节松弛度的客观评估：KT-1000与GNRB®关节仪的对比.
+    膝关节手术、运动创伤与关节镜, 20(11), 2232–2238.
+
+    - Crawford, R., Walley, G., Bridgman, S., & Maffulli, N. (2007). 膝部病变的磁共振成像与关节镜检查：以半月板病变和前交叉韧带撕裂为重点的系统综述.
+    英国医学通报, 84(1), 5–23.
+
+    - Di Iorio, A., Carnescchi, O., Philippot, R., & Farizon, F. (2014). 前交叉韧带断裂的多模态分析：49例前瞻性研究.
+    骨科与创伤外科评论, 100(7), 537–540.
+
+    - Ebrahimpour, H., Mirifezi, S. Z., Najar, A. V., Kachoee, A. R., Ariamanesh,
+    A. S., Ganjali, R., Esmaeili, H., Salari, H., & Vejdani, M. (2014). 使用RAND适宜性方法（RAM）开发膝关节MRI的适宜性标准.
+    骨与关节外科档案, 2(1), 47.
+
+    - Gustafsson, T., Östenberg, A. H., & Alricsson, M. (2020). ACL诊断——罗利米与MRI的相关性.
+    运动骨科与创伤外科, 36(3), 278–283.
+
+    - Hairy, P. (2021). 神经网络与数据增强. MetalBlog.
+
+    - Jenny, J. Y., Arndt, J., & Surgery-France, C. A. O. (2013). 使用应力X线和GNRB®系统测量前膝关节松弛度，与术中导航的对比.
+    骨科与创伤外科：手术与研究, 99(6), S297–S300.
+
+    - Jenny, J. Y., Pulerio, B., Schockmel, G., Harnois, S., & Clavert, P. (2017).
+    GNRB®测量胫骨前移的实验验证. 骨科与创伤外科：手术与研究, 103(3), 363–366.
+
+    - Klasan, A., Putnis, S. E., Kandhari, V., Oxsha, T., Fritsch, B. A., & Parker,
+    D. A. (2020). 健康膝关节KT1000测量的胫骨前移存在显著差异. 膝关节手术、运动创伤与关节镜, 28(7), 2177–2183.
+
+    - Klouche, S., Lefevre, N., Cascua, S., Herman, S., Gerometta, A., & Bohu, Y.
+    (2015). 完全前交叉韧带撕裂中GNRB®相对于压力负荷的诊断价值：118例受试者的前瞻性病例对照研究. 骨科与创伤外科：手术与研究, 101(3),
+    297–300.
+
+    - Learnia, M. (2022). 集成学习：Bagging、Boosting与堆叠（25/30）. URL https://www.youtube.com/watch?v=YpUdYtw8.
+
+    - Lefevre, N., Bohu, Y., Naouri, J., Klouche, S., & Herman, S. (2014). GNRB®关节仪与Telos™在部分前交叉韧带撕裂评估中的效度对比.
+    膝关节手术、运动创伤与关节镜, 22(2), 285–290.
+
+    - Maheh, B. (2020). 机器学习算法综述. JSR, 9, 381–386.
+
+    - Micheo, W., Hernández, L., & Seda, C. (2010). 前交叉韧带损伤的评估、管理与预防：当前概念. PM&R, 2(10),
+    935–944.
+
+    - Moursas, D., Cavaignac, E., Chiron, P., Bérard, E., & Murgier, J. (2018). 60例健康膝关节上机器人膝关节测试设备（GNRB）的可重复性评估.
+    骨科杂志, 15(1), 94–98.
+
+    - Obermeyer, Z., & Emanuel, E. J. (2016). 预测未来——大数据、机器学习与临床医学. 新英格兰医学杂志, 375(13),
+    1216.
+
+    - Pässler, H., & März, S. (1986). 放射学拉希曼测试——一种简单可靠的交叉韧带损伤检测方法. 欧洲创伤外科杂志, 12(6),
+    295–300.
+
+    - Phelan, N., Rowland, P., Galvin, R., & O''Byrne, J. M. (2016). MRI对可疑前交叉韧带和半月板撕裂的诊断准确性的系统综述与Meta分析.
+    膝关节手术、运动创伤与关节镜, 24(5), 1525–1539.
+
+    - Robert, H., Noureau, S., Gaget, S., & Gagniere, B. (2009). 一种新型膝关节仪GNRB®：在完全和部分前交叉韧带撕裂中的应用经验.
+    骨科与创伤外科：手术与研究, 95(3), 171–176.
+
+    - Saravia, A., Cabrera, S., Molina, R., Pacheco, L., & Muñoz, G. (2020). Genourob关节仪在评估前交叉韧带全厚度撕裂中的效度.
+    骨科杂志, 22, 203–206.
+
+    - Schuster, A. J., McNicholas, M. J., Wachtl, S. W., McGurty, D. W., & Jakob,
+    R. P. (2004). 测量前后膝关节松弛度的一种新型机械测试装置. 美国运动医学杂志, 32(7), 1731–1735.
+
+    - Théo Cojean, Cécile Bataillon, Henri Robert, & Laurence Cheze (2023). 临床实践中用于完全和部分前交叉韧带撕裂检测的GNRB®松弛度计与磁共振成像：含关节镜验证的214例患者前瞻性诊断研究.
+
+    - Torg, J. S., Conrad, W., & Kalen, V. (1976). 运动员前交叉韧带不稳定性的临床诊断. 美国运动医学杂志, 4(2),
+    84–93.
+
+    '
+  merge: 1
+- raw:
+  - '[PAGE 9]
+
+
+    Van Dyck, P., Vanhoenacker, F. M., Gielen, J. L., Dosche, L., Van Gestel, J.,
+    Wouters, K., & Parizel, P. M. (2011). Three tesla magnetic resonance imaging of
+    the anterior cruciate ligament of the knee: can we differentiate complete from
+    partial tears? Skeletal Radiology, 40, 701–707.
+
+
+    Zhao, M., Zhou, Y., Chang, J., Hu, J., Liu, H., Wang, S., Si, D., Yuan, Y., &
+    Li, H. (2020). The accuracy of MRI in the diagnosis of anterior cruciate ligament
+    injury. Annals of Translational Medicine, 8(24).
+
+
+    Zhou, Z. H. (2021). Machine learning. Springer Nature.'
+  md: '
+
+    - Van Dyck, P., Vanhoenacker, F. M., Gielen, J. L., Dosche, L., Van Gestel, J.,
+    Wouters, K., & Parizel, P. M. (2011). Three tesla magnetic resonance imaging of
+    the anterior cruciate ligament of the knee: can we differentiate complete from
+    partial tears? Skeletal Radiology, 40, 701–707.
+
+
+    - Zhao, M., Zhou, Y., Chang, J., Hu, J., Liu, H., Wang, S., Si, D., Yuan, Y.,
+    & Li, H. (2020). The accuracy of MRI in the diagnosis of anterior cruciate ligament
+    injury. Annals of Translational Medicine, 8(24).
+
+
+    - Zhou, Z. H. (2021). Machine learning. Springer Nature.
+
+    '
+  mdcn: '
+
+    - Van Dyck, P., Vanhoenacker, F. M., Gielen, J. L., Dosche, L., Van Gestel, J.,
+    Wouters, K., & Parizel, P. M. (2011). 膝前交叉韧带的3特斯拉磁共振成像：能否鉴别完全撕裂与部分撕裂？骨骼放射学, 40,
+    701–707.
+
+
+    - Zhao, M., Zhou, Y., Chang, J., Hu, J., Liu, H., Wang, S., Si, D., Yuan, Y.,
+    & Li, H. (2020). MRI在前交叉韧带损伤诊断中的准确性. 转化医学年鉴, 8(24).
+
+
+    - Zhou, Z. H. (2021). 机器学习. Springer Nature.
+
+    '
+  merge: 0
