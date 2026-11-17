@@ -1,0 +1,1215 @@
+- pgno: 0
+  md: '# # A hybrid CNN-LSTM model for diagnosing rice nutrient levels at the rice
+    panicle initiation stage
+
+
+    LIAO Fu-bing1, FENG Xiang-qian2, 3, LI Zi-qiu1, WANG Dan-ying2, XU Chun-mei2,
+    CHU Guang2, MA Heng-yu2, YAO Qing1, CHEN Song2#
+
+
+    1 School of Computer Science and Technology, Zhejiang Sci-Tech University, Hangzhou
+    310018, P.R.China
+
+
+    2 China National Rice Research Institute, Chinese Academy of Agricultural Sciences,
+    Hangzhou 310006, P.R.China
+
+
+    3 School of Agriculture, Yangtze University, Jingzhou 434025, P.R.China
+
+
+    # ## Abstract
+
+
+    Nitrogen (N) and potassium (K) are two key mineral nutrient elements involved
+    in rice growth. Accurate diagnosis of N and K status is very important for the
+    rational application of fertilizers at a specific rice growth stage. Therefore,
+    we propose a hybrid model for diagnosing rice nutrient levels at the early panicle
+    initiation stage (EPIS), which combines a convolutional neural network (CNN) with
+    an attention mechanism and a long short-term memory network (LSTM). The model
+    was validated on a large set of sequential images collected by an unmanned aerial
+    vehicle (UAV) from rice canopies at different growth stages during a two-year
+    experiment. Compared with VGG16, AlexNet, GoogleNet, DenseNet, and inceptionV3,
+    ResNet101 combined with LSTM obtained the highest average accuracy of 83.81% on
+    the dataset of Huanghuazhan (HHZ, an indica cultivar). When tested on the datasets
+    of HHZ and Xiu-shui 134 (XS134, a japonica rice variety) in 2021, the ResNet101-LSTM
+    model enhanced with the Squeeze-and-Excitation (SE) block achieved the highest
+    accuracies of 85.38% and 88.38%, respectively. Through the cross-dataset method,
+    the average accuracies on the HHZ and XS134 datasets tested in 2022 were 81.25%
+    and 82.50%, respectively, showing a good generalization. Our proposed model works
+    with the dynamic information of different rice growth stages and can efficiently
+    diagnose different rice nutrient status levels at EPIS, which are helpful for
+    making practical decisions regarding rational fertilization treatments at the
+    panicle initiation stage.'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'Keywords: dynamic model of deep learning, UAV, rice panicle initiation, nutrient
+    level diagnosis, image classification.
+
+
+    # 1 Introduction
+
+
+    Nitrogen (N) and potassium (K) are not only the key nutritional factors affecting
+    rice photosynthesis, population growth and grain production, but they are also
+    the key factors determining rice yields and food security (Vitousek et al. 2009;
+    Hou et al. 2019). Therefore, it is of great significance to accurately judge the
+    N and K requirements of rice and rationally optimize field fertilization in order
+    to achieve high-quality and high-yield rice. Panicle initiation (PI) is a period
+    of rapid growth and development of the rice young panicles. During this period,
+    the rational application of panicle fertilizer is very critical, and the N and
+    K nutrients in fertilizer can be effectively absorbed to increase the number of
+    spikelets per panicle and the panicle size, which increases rice yields (Liu et
+    al. 2021). At present, the methods for diagnosing rice nutrient requirements mainly
+    involve appearance diagnosis, chemical diagnosis and modern nutrient diagnosis.
+    The appearance diagnosis method mainly relies on technicians with long-term diagnostic
+    experience to visually observe the colors, shapes and growth rates of rice stems
+    and leaves (Chen and Wang 2014; Sun et al. 2018). It is subjective, which can
+    easily lead to misdiagnosis of the rice nutritional status. Chemical diagnosis
+    methods mainly measure the critical concentrations of nitrogen in different plant
+    organs by chemical analysis methods, including total nitrogen diagnosis and nitrate
+    diagnosis (Zhang et al. 2022). But these methods have the problems of destructive
+    sampling and complicated analytical operations, so they are difficult to popularize
+    and apply to nutrient level diagnosis on a large scale. Modern nutrient level
+    diagnosis methods mainly include the chlorophyll measurement method and the hyperspectral
+    remote sensing method. Relevant studies have shown that the nitrogen content of
+    rice leaves has a positive correlation with the chlorophyll content, and the Soil
+    and Plant Analyzer Development (SPAD) value has a linear correlation with chlorophyll,
+    which makes this method useful for nitrogen diagnosis in field crops (Ghosh et
+    al. 2020). Although this method is widely used in nitrogen nutrient diagnosis
+    (Peng et al. 2010; Ali et al. 2015; Ling et al. 2017; Baral et al. 2021), it still
+    has some disadvantages. For example, the SPAD value is greatly affected by light,
+    so multiple measurements are needed to effectively reduce the variability, and
+    it is not suitable for large-scale farmland testing. The hyperspectral remote
+    sensing method mainly analyzes the spectral differences of the target objects.
+    The spectral reflection features of plant canopies are affected by many factors,
+    such as the water'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: 'content of plant leaves, the geometric structure of the plant canopy and the
+    soil coverage (Wang et al. 2018; Zheng et al. 2019), which greatly limits the
+    reliability and accessibility of using remote sensors for crop nitrogen diagnosis.
+    Therefore, the current application of ear fertilizer in production mainly depends
+    on the experience and diagnostic knowledge of agricultural experts and technicians.
+    With the aging of the agricultural population in recent years, there is an urgent
+    need to develop an intelligent, efficient, nondestructive and easy method for
+    diagnosing nutrient requirements during rice plant growth.
+
+
+    With the rapid development of digital image processing and artificial intelligence,
+    many studies have focused on the diagnostic methods of crop nutrient status based
+    on images. These methods can be divided into the traditional image pattern recognition
+    methods and deep learning methods. The crop symptoms in response to the lack of
+    nutrient elements are recognized by traditional classification models based on
+    various image features, which mainly include morphological features (Chen and
+    Wang 2014; Sun et al. 2018), texture features (Wood et al. 2012), color features
+    (Sun et al. 2018) and local features (Gu et al. 2012; Li et al. 2015). The steps
+    in traditional pattern recognition methods usually involve first removing the
+    background, then manually designing the image features, and finally training the
+    classifier. Generally, a high accuracy rate can be obtained on the test set. However,
+    the biodiversity and complex backgrounds in field situations cause the traditional
+    pattern recognition methods to show weak robustness and poor generalization ability.
+    With the excellent performance of convolutional neural network (CNN) in large-scale
+    image recognition (Li S X et al. 2022; Sun G J et al. 2022), nutrient deficiency
+    identification methods based on CNN in maize (Condori et al. 2017; Wu et al. 2020),
+    soybean (Xiong et al. 2020), tomato (Tran et al. 2019) and rice (Yao et al. 2021)
+    have shown excellent recognition results. However, the nutrient diagnosis of crops
+    in these studies is usually based on sets of images collected at a single time
+    point. In fact, the responses of crops to nutrient deficiency occur throughout
+    the long growth period of crops. Thus far, many scholars have conducted some studies
+    on the time series data of crops such as corn and wheat, and the results have
+    shown that the fusion of time-series data significantly improves the accuracy
+    of yield estimations (Lin et al. 2020; Li Q et al. 2022; Sun Z Z et al. 2022).
+
+
+    The nutrient level of the rice canopy is related to the population structure,
+    leaf morphology, tiller distribution, other physiological traits and their dynamic
+    changes (Vitousek et al. 2009). Due to the complexity of plant structures and
+    nutrient-stress symptoms at the different development stages of rice, the real-time
+    features of crop population growth combined with their dynamic'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'changes should be considered in order to accurately monitor the rice population
+    nutrient status. In
+
+    a two-year experiment, we first established rice populations at different nutrient
+    levels, and then
+
+    used UAV to take time series images, in order to build a population of images.
+    Then, CNN was
+
+    used to extract the high-dimensional features from the image, and this was combined
+    with LSTM to
+
+    enhance the feature correlations in the time dimension. This approach was able
+    to improve the
+
+    accuracy of nutrient level diagnosis in the early panicle initiation stage, which
+    is of great
+
+    significance for realizing the refined management of panicle fertilization and
+    increasing production
+
+    and income.
+
+
+    # 2 Materials and methods
+
+
+    Figure 1 shows the flowchart of our experiments. The rice canopy images collected
+    by an
+
+    RGB camera installed in the UAV were used to train different models for rice early
+    nutrition
+
+    diagnosis. At the same time, the rice physiological data were collected to train
+    two machine
+
+    learning models for diagnosing rice nutrient levels. Finally, these models were
+    compared to verify
+
+    the performance of the hybrid CNN-LSTM model.
+
+
+    # 2.1 Experiment design
+
+
+    The experiments were carried out in the rice field (30°04′N ,119°55′E) of the
+    China National
+
+    Rice Research Institute (CNRRI) in Hangzhou, Zhejiang Province, China, in 2021
+    and 2022. The
+
+    physicochemical properties of soil were as follows: soil alkaline hydrolyzable
+    nitrogen content
+
+    115.37 mg kg-1, available phosphorus (P) 14.20 mg kg-1, available potassium 140.19
+    mg kg-1,
+
+    organic matter content 30.48 g kg-1, cation exchange capacity 18.37 mg kg-1 and
+    pH 5.83. An
+
+    overview of the experimental fields is shown in Fig. 2.
+
+
+    The two tested rice cultivars were Huanghuazhan (HHZ, a variety of conventional
+    indica rice)
+
+    and Xiushui (XS134, a variety of conventional japonica rice). The rice planting
+    method adopted a
+
+    split-split-plot randomized block design, with rice varieties as the main plot,
+    N fertilizer level as the
+
+    split plot, and K fertilizer levels as subplots; so the two varieties of rice
+    were treated with 16
+
+    combinations of four different N and K dosages (Table 1). Three replicate blocks
+    were set up to
+
+    form 96 plots. In both experiments, N fertilizer was applied once 2-3 days before
+    transplanting and
+
+    once during the rice tillering stage, with a dosage ratio of 5:3, and K fertilizer
+    was applied once 2-3
+
+    days before transplanting. P fertilizer was applied at a dosage of 97.5 kg P2O5/ha
+    to all blocks.
+
+    Each block was separated by ridges covered with PVC film to prevent the N and
+    K from leaching'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'and permeating the other blocks. The water management and pest control practices
+    of all blocks were same as the methods used for local high-yield cultivation.
+
+
+    # ## 2.2 Image collection and preprocessing
+
+
+    Rice canopy images were collected in 2021 and 2022 using a camera with six 1/2.9-inch
+    CMOS image sensors installed on a UAV (P4 Multispectral, DJI Technology, Co.,
+    Ltd., China). The UAV flights were performed at an altitude of 10 m above the
+    plots at a speed of 1 m/s under sunny and windless conditions in the morning of
+    local time (8:00-11:30). Flights were conducted at the tillering stage (TS), early-panicle
+    initiation stage (EPIS) and the intermediate stage (INS) of the rice growth period.
+    The original images were spliced with orthophoto maps by Dajiang Zhitu software
+    (v3.4, DJI Technology Co., Ltd., China). Six images, each 26372*15284 pixels in
+    size, were collected at each stage.
+
+
+    Due to the inclination of the stitched original images, the Hough line detection
+    method (Ballard 1981) was used for slant correction. To avoid the color differences
+    caused by different illumination conditions, the gray world method (Kwok et al.
+    2011) was used to correct the coloration of the original images. To obtain the
+    image of each plot, a mask was created for each plot and the image of each plot
+    was cut from the original images. To increase the sample size, each plot image
+    was divided into 12 square plot images, each 512*512 pixels, so 216 square plot
+    images were obtained from each N and K treatment in each rice growth stage. We
+    obtained 10368 original sub-images and randomly divided the rice sample dataset
+    for 2021 into 80% for training the models and 20% for testing the models. In order
+    to further test the generalization ability of the models, on a different farmland
+    with the same soil properties and fertilization treatments, we collected rice
+    canopy images in the three growth periods of TS, INS and EPIS in 2022 according
+    to the same operational methods of 2021. The new dataset for 2022 was used to
+    test the model trained on the dataset for 2021.
+
+
+    To improve the robustness and generalization ability of the model, the number
+    of training images was extended to 500 images in each treatment by data enhancement
+    methods of left and right mirror, image 90° rotation and adding Gaussian noise.
+    Since our model was trained on time-series images, noise was randomly added to
+    the images, and other data enhancement operations were performed on all images
+    in the training set. Finally, a total of 24000 training samples were obtained.
+    Figure 3 shows examples of the time-series images of HHZ rice in 16 different
+    N and K dosage treatments at three different rice growth stages. These examples
+    show that rice with'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'different nutritional levels have limited visual differences and high similarity
+    at the same growth stage (Fig. 3). Among them, N2K0, N2K1, N2K2, and N2K3 are
+    not clearly different at TS, but there are differences in the whole growth process
+    of rice from TS to EPIS.
+
+
+    # ## 2.3 Rice physiological indicator measurements
+
+
+    After the images for the different rice growth stages were collected by the UAV,
+    rice plants were sampled from each plot. The plant height was measured and tiller
+    number was counted manually. Then the samples were separated into green leaf blades,
+    dead leaf blades and culms plus leaf sheaths, and the samples were oven-dried
+    at 80°C for more than 72 hours before the dry weights of the constituent organs
+    were determined. The leaf area index (LAI) was measured with a leaf area meter
+    (LI-3000A, LICOR, Lincoln, NE, USA), and the specific leaf weight (SLA) was calculated
+    as the ratio of the green leaf area and its dry weight. The N and K concentrations
+    in the plant tissues were determined using the Kjeldahl method after wet digestion
+    (Goyal et al. 2022), and N and K accumulations were expressed as the product of
+    the concentration and its dry matter weight.
+
+
+    # ## 2.4 Rice nutrient diagnosis model
+
+
+    Rice growth is a dynamic process, and the N and K phenotypes of rice plants in
+    different growth stages are different. To accurately diagnose the nutrient level
+    of rice in real-time, a nutrient diagnostic model CNN-LSTM based on the deep learning
+    method was proposed to extract the temporal and spatial features of the rice canopy
+    images. The LSTM involved is a special recursive neural network (RNN) that can
+    learn the short-term and long-term dependencies between time steps in sequential
+    data (Hochreiter and Schmidhuber, 1997). The input of LSTM is composed of a cell
+    state C t-1, a hidden state ht-1 and input vector xt, and the output is composed
+    of a cell state Ct and a hidden state ht, which are mainly controlled by the input
+    gate (i), forgetting gate (f), candidate gate (g) and output gate (o). A sample
+    unit diagram of the LSTM is shown in Fig. 4.
+
+
+    Currently, the typical CNN identification models include AlexNet (Krizhevsky et
+    al. 2012), VGG16 (Simonyan and Zisserman 2015), GoogleNet (Szegedy et al. 2015),
+    DenseNet (Huang et al. 2017), inception v3 (Szegedy et al. 2015), and ResNet101(He
+    et al. 2016). In this study, these six different CNN models were used for feature
+    extraction. All of these networks applied the pretrained models on the Imagenet
+    public dataset (Weiss et al. 2016) to speed up the training. Finally, the best
+    model (ResNet101) was used as the basic model for extracting the features in this'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: 'study. Then the SENet channel attention mechanism was added to the ResNet101
+    model to enhance the extraction of key features. The essence of SENet is to use
+    the relevant feature maps to learn the weight distribution, and then the trained
+    weights are applied to the original feature maps for weighted summation, thereby
+    further improving the ability of the network to obtain local effective information.
+
+
+    The network framework of ResNet101-SE-LSTM is shown in Fig. 4. Firstly, the neural
+    network model ResNet101 was combined with the Squeeze-and-Excitation (SE) module
+    to extract features from the time serial images. In order to avoid the loss of
+    useful features, the model skipped the last fully connected layer, and then directly
+    transformed the features into feature vectors through the reshape layer to regenerate
+    a feature matrix suitable for the LSTM inputs. Each cell input for LSTM (size:
+    m*n) is a group of feature vectors of the rice canopy images containing each time
+    step, where m is the total number of images at each time step, including TS, INS
+    and EPIS, and n is the feature vectors extracted by the neural network. In Fig.
+    4, i is the time step of the input model framework, which equals 2 or 3. In fact,
+    due to the flexibility of this framework, the time step can be adjusted according
+    to the actual needs and model output feedback. Secondly, through the end-to-end
+    trainable class architecture, the LSTM model uses the back-propagation algorithm
+    to iterate repeatedly, and it uses the cross entropy as the loss function for
+    model training. The hyperparameters of the LSTM are shown in Table 3. Finally,
+    the hidden layer ht of the last LSTM cell unit encodes the key information of
+    the sequential data. We converted the generated output vector through a full connection
+    layer, and its length was converted into the number of classes. Then the softmax
+    layer was used to classify the rice nutrient level and its neuron number is the
+    same as the number of classes.
+
+
+    # 2.5 Model training
+
+
+    All models were run on a PC with a CPU which has an AMD Ryzen 5 3600 6-Core Processor
+    3.60GHz. The computer was equipped with 3 GeForce GTX 1080Ti. Its operating system
+    was Linux 16.04 and its host memory was 32.00 GB.
+
+
+    During the training process, the weights of the pretrained model were fine-tuned,
+    the model was trained with 16 sets of small-batch sample data on three GPUs simultaneously
+    by multi-threading, and stochastic gradient descent was selected as the optimization
+    strategy. The detailed configuration parameters of ResNet101-SE-LSTM are shown
+    in Table 2.
+
+
+    # 2.6 Evaluation metrics'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: 'To evaluate the recognition effect of the ResNet101-SE-LSTM model, we used
+    the accuracy (Acc), precision (Pre), recall (Rec) and F1-scores (F1) as the evaluation
+    metrics for measuring the model performance. The calculations of Acc, Pre, Rec
+    and F1 are shown in equations (1-4).
+
+
+    $Acc = \frac{TP + TN}{TP + FP + FN + TN}$ (1)
+
+
+    $P_{re} = \frac{TP}{TP + FP}$ (2)
+
+
+    $R_{ec} = \frac{TP}{TP + FN}$ (3)
+
+
+    $F_1 = \frac{2P_{re}R_{ec}}{P_{re} + R_{ec}}$ (4)
+
+
+    where TP represents that positive instances are predicted to be positive, FN represents
+    that positive instances are predicted to be negative, FP represents that negative
+    instances are predicted to be positive, and TN represents that negative instances
+    are predicted to be negative.
+
+
+    # ## 2.7 Machine identification methods based on rice physiological traits
+
+
+    To distinguish the developmental differences of different N and K interactions,
+    we collected data for the classical plant physiological traits and extended the
+    test data using Monte Carlo samplers (Metropolis and Ulam 1949). These physiological
+    traits included the dry matter weight, N and K contents and accumulation in plant
+    tissues (leaf, stem and sheath, and panicle), total above-ground biomass, specific
+    leaf weight, green leaf weight, leaf area index, plant height and tiller numbers.
+    Two machine learning models, Support Vector Machine (SVM) and random forest, were
+    trained for diagnosing the rice nutrient levels under the interaction of the N
+    and K treatments. The results were compared with the diagnostic results of CNN-LSTM
+    to indirectly evaluate the feasibility of the CNN-LSTM model.
+
+
+    # ## 3 Results
+
+
+    # ### 3.1 Identification results of different models'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: 'Seven feature extraction networks, namely VGG16, AlexNet, GoogLeNet, DenseNet,
+    inceptionV3, ResNet101, and ResNet101-SE, were combined with LSTM model and used
+    to diagnose the N and K nutrition levels of HHZ at EPIS. The diagnostic results
+    are shown in Table 3 and Fig. 5. AlexNet presented the worst performance of the
+    16 nutrient level diagnoses, with an accuracy of 73.94%, and its Area Under Curve
+    (AUC) was the lowest, at 0.76. ResNet101 had relatively good performance, with
+    an accuracy of 83.81% and a corresponding AUC of 0.90. After adding the SE module
+    based on the channel domain to ResNet101, the precision and recall of ResNet101-SE
+    increased by 4.94% and 2.45% respectively, and the AUC increased to 0.93, which
+    presented the best performance among all the tested CNN feature networks. Therefore,
+    ResNet101-SE was used to extract the rice features.
+
+
+    # 3.2 Models with or without time-series
+
+
+    In order to evaluate the diagnostic effect of the temporal and non-temporal models,
+    the ResNet101-SE and ResNet101-SE-LSTM models were tested on the two rice varieties
+    at different growth stages. The diagnostic results are shown in Table 4. The accuracy,
+    precision and recall of ResNet101-SE are less than 60% for diagnosing the N and
+    K levels at TS. These evaluation values increased to over 70% when ResNet101-SE
+    was used to diagnose the N and K levels at EPIS. The ResNet101-SE-LSTM model presents
+    good performance for diagnosing the N and K levels at INS and EPIS. The accuracy
+    of the ResNet101-SE-LSTM model is more than 10% higher than that of the non-temporal
+    model in the same period when diagnosing the N and K levels at INS of both HHZ
+    and XS134, and the F1-scores of the model in diagnosing the N and K levels of
+    the two varieties of rice is more than 85% at EPIS, which means that combining
+    the model ResNet101 with the Long Short-Term Memory model can help to improve
+    the model recognition ability.
+
+
+    Plants have different responses to nutrient stress in different growth stages,
+    and their phenotypic characteristics are dynamic. Therefore, a single growth stage
+    cannot reflect the overall growth state of plants. In addition, determining the
+    optimal growth stage for trophic level diagnosis or developing separate models
+    for different growth stages is a difficult task and may not necessarily provide
+    reliable results for making fertilization decisions. Traditional deep learning
+    classifiers only have information extracted at the current stage and cannot learn
+    the dependence relationship between data from rice at different growth stages,
+    resulting in low prediction ability (Table 4). On the other hand, LSTM is a type
+    of recurrent neural network composed of self-'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'recurrent cells, which allow information to be transmitted internally and thus
+    are better suited for processing multi-temporal data.
+
+
+    Confusion matrices of the ResNet101-SE-LSTM for HHZ and XS134 were generated to
+    prove that our proposed framework can distinguish different nutrient levels (see
+    Fig. 6). ResNet101-SE-LSTM showed superior performance in both conventional *indica*
+    rice (HHZ) (Fig. 6-A) and conventional *japonica* rice (XS134) (Fig. 6-B), and
+    it could effectively diagnose the 16 nutrient levels after different N and K interaction
+    treatments. In the test of HHZ, N0K0, N0K1, N0K2 and N0K3 had some mutual misjudgments,
+    and their accuracy rates were 72.00%, 80.00%, 84.00% and 86.00%, respectively.
+    In the test of XS134, N1K0, N1K1, N1K2 and N1K3 had some misjudgments, and their
+    accuracy rates were 76.00%, 80.00%, 84.00% and 88.00%, respectively. Among these
+    combinations, N1K0 and N1K1 had the most severe misjudgments, but most of the
+    misclassifications occurred with different K treatments at the same N level. In
+    conclusion, the effect of N on the comprehensive growth of rice is significantly
+    higher than that of K.
+
+
+    # 3.3 Model generalization ability
+
+
+    To test the generalization ability of our proposed model, the model was trained
+    on the 2021 dataset and evaluated using the 2022 dataset. The results showed that
+    the accuracy and precision of HHZ were both above 81.00%, and the accuracy and
+    precision of XS were both above 82.00% (Table 5). These results mean that the
+    model has an excellent generalization ability. In the complex paddy environments,
+    our advanced framework is able to extract the rice population structure, leaf
+    morphology, and its dynamic changes from processed images to accurately diagnose
+    the plant nutritional levels. All these procedures are automatically performed
+    by deep learning without any human intervention, which provides great convenience
+    for the intelligent monitoring of rice nutritional levels.
+
+
+    # 3.4 Comparison of machine learning and deep learning models
+
+
+    To further investigate the contribution of the deep features to the diagnosis
+    of nutrient levels in rice, we trained the SVM and random forest models to classify
+    and identify the nutrient levels of rice in EPIS based on the rice physiological
+    data. Table 6 shows the results of these two models in identifying the nutrient
+    levels of the two rice varieties. The accuracy of the SVM model is generally higher
+    than that of the random forest model, and the recognition accuracies of HHZ and
+    XS134 reached 86.00% and 81.00%, respectively. Meanwhile, the accuracy and precision
+    of our proposed'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: 'model are 85.88% and 86.12% in HHZ, and 88.38% and 88.70% in XS134, respectively
+    (Table 4). These results show that the nutrient level diagnosis effect of the
+    ResNet101-SE-LSTM model is consistent with that of the SVM model based on rice
+    physiological traits, but bear in mind that the machine learning method requires
+    many tedious operations and destructive sampling, while our method can greatly
+    reduce labor costs.
+
+
+    # 4 Discussion
+
+
+    # 4.1 Nutrient diagnosis based on the analysis of single time point and muti-temporal
+    crop images
+
+
+    Recent nutrient diagnosis studies on single time point crop images by convolutional
+    neural networks have made some progress (Condori et al. 2017; Tran et al. 2019;
+    Wu et al. 2020; Xiong et al. 2020; Yao et al. 2021). For example, Wu et al. (2020)
+    collected the color images and five-channel multispectral data at a specific time
+    and trained models for the identification of corn nutrient status. The results
+    showed that the identification accuracies based on color images and multispectral
+    data were 84.7% and 90.5%, respectively, which could quickly provide the nutrient
+    status of corn crops without destroying the crop plants. Tran et al. (2019) proposed
+    a method that applies the statistical method of ensemble averaging to the Inception-ResNet
+    v2 and autoencoder models, achieving 91% accuracy in the nutritional diagnosis
+    of tomato plant growth images under greenhouse conditions.
+
+
+    All the above studies focused on a single key time node during crop growth, and
+    the selection of the key time node is easily obtained through research experience
+    or on-site visual observations. However, the symptoms caused by different types
+    of nutrient deficiency may be similar at different growth stages of the crop,
+    and the nutrient deficiency symptoms in crop plants may not be evident at the
+    selected time node (Vitosuek et al. 2009). In fact, the phenotypes caused by nutrient
+    stress can appear in crops throughout the whole growth dynamic period, so phenotype
+    analysis should consider time series data. Although neural networks have shown
+    good performance in diagnosing crop nutrient deficiency, their combination with
+    time series analysis models, such as LSTM, will be more consistent with the facts.
+    LSTM has been applied in processing time series datasets, such as emotion recognition
+    (Son 2017) and disease prediction (Dua et al. 2020). Besides, in laboratory conditions,
+    Taghavi Namin et al. (2018) studied plant growth and dynamic information through
+    LSTM, and used these characteristics as important differential phenotypes for
+    the nutritional classification of Arabidopsis thaliana, achieving classification
+    accuracy of 93%. This is the first time'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'that LSTMs were used to study the temporal characteristics and dynamic information
+    of plants,
+
+    showing their potential for the classification of plant nutritional status. In
+    this study, by comparing
+
+    the results of the single-point time data set and the time series data set, the
+    classification
+
+    performance of the time series data set was found to be generally better than
+    that of the single-
+
+    point time data set for the different varieties of rice (Table 4). This improvement
+    shows that
+
+    temporal information extraction has great potential for analyzing plant nutrient
+    classification, which
+
+    is basically consistent with the conclusion drawn by Taghavi Namin et al. (2018).
+
+
+    # 4.2 The crop growth status responses to N and K treatments
+
+
+    The status of growth in a crop can originate from abiotic/biotic factors in artificial
+    and/or
+
+    circumstantial pathways. Among these factors, N and K are the two dominant nutrients
+    affecting
+
+    the crop plant growth on the rice paddy. The N benefits tillering production and
+    panicle
+
+    development at the vegetative and reproductive stages, respectively, which helps
+    to improve the
+
+    amount, the size, and the weight of the panicle, and results in a high yield at
+    maturity (Liu et al.
+
+    2021). In addition, N and K are also critical for leaf photosynthesis (Coskun
+    et al. 2017), and have
+
+    direct or indirect relationships with canopy size, color, and shape (Che et al.
+    2016). As the N and K
+
+    are extensively involved in various physiological metabolism processes of plants,
+    it is difficult to
+
+    distinguish the growth status using one or two indicators. Therefore, an integrated
+    diagnosis with
+
+    various physiological traits might be a promising way to evaluate the crop growth
+    status at key
+
+    growth stages. In the current study, the SVM and random forest models were used
+    to evaluate the
+
+    crop growth status caused by N and K treatments based on the artificially determined
+    crop
+
+    physiological traits, and the SVM model had 86.00% and 81.00% recognition accuracies
+    in HHZ
+
+    and XS134, respectively. However, it should be noted that the collection of physiological
+    traits was
+
+    time-consuming, laborious and involved destructive sampling, which is not suitable
+    for production
+
+    applications.
+
+
+    In recent decades, reports on N/K fertilizer application have mainly focused on
+    testing the
+
+    amount and/or types of fertilizer at key growth stages by evaluating the final
+    output (Ma et al. 2019;
+
+    Huang et al. 2021), which is not only time-labor intensive, but also relies on
+    the environmental
+
+    conditions and variety. Therefore, a simple technique for the diagnosis of rice
+    nutritional status is
+
+    needed for fertilizer topdressing application. Reports have indicated that the
+    timing of topdressing
+
+    at EPIS has a great impact on improving the source capacity (Ma et al. 2019).
+    However, due to the
+
+    quantitative effects of N and K on crop growth and yield performance, the plant
+    growth status'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'responses to different levels of N/K treatment were progressive and the symptoms
+    were difficult to distinguish at a time when the differences among the treatment
+    levels were small, which has resulted in few quantitative fertilization studies
+    based on the actual nutrient levels before PI (Li et al. 2017; Wang et al. 2021).
+    On the other hand, the application of N and K fertilizers would affect rice growth
+    in both spatial (canopy morphological changes) and temporal (i.e., tillering/LAI
+    dynamic) modes. The N and K contents affect rice growth and respond to rice phenotype.
+    In this study, a spatiotemporal convolutional network model was developed to diagnose
+    the crop growth status resulting from different N and K treatments before PIS.
+    The results show that the effect of the ResNet101-SE-LSTM model is consistent
+    with that of the SVM model based on rice physiological traits. The results can
+    help to improve the accuracy of topdressing fertilizer application at panicle
+    initiation.
+
+
+    # ## 4.3 Relationship between crop nutrient levels and yield prediction
+
+
+    The traditional yield prediction models of crops usually adopt the data fitting
+    method using environmental factors and crop growth factors (Gonzalez-Sanchez et
+    al. 2014; Khaki and Wang 2019; Yao et al. 2020). Environmental factors include
+    soil type, light and CO2. Crop growth factors include the crop growth and development
+    rate. In recent years, remote sensing technology combined with spectroscopy has
+    been used to predict crop yields in practical environments. For example, Latwal
+    et al. (2019) used agrometeorological regression models, empirical models based
+    on remote sensing indices, and semi-physical models to estimate crop yields for
+    rapeseed and mustard at the district level. Kang et al. (2021) analyzed six vegetation
+    indices based on multi-spectral images of UAVs and used them to develop regression
+    models for predicting rice yield and protein content. Panda et al. (2010) used
+    a BP neural network (BPNN) modeling method to verify the effectiveness of four
+    spectral vegetation indices (NDVI, green vegetation index (GVI), soil adjusted
+    vegetation index (SAVI) and vertical vegetation index (PVI))in corn crop yield
+    prediction.
+
+
+    Most of these studies are primarily based on the numerical regression of existing
+    factors for yield fitting. The main factors include the N and K absorption content
+    of rice at the current stage, as N and K play significant roles in crop health
+    and development (Vitosuek et al. 2009; Hou et al. 2019). At the same time, the
+    environmental factors and cost require a prudent application of N and K (Chlingaryan
+    et al. 2018). Therefore, it is challenging to establish a dynamic model of the
+    topdressing amount and yield variation with reference to the nutrient level in
+    order to achieve optimal N and K management. We classified the different nutrient
+    levels of rice at EPIS and'
+  merge: -1
+  img_proc: true
+- pgno: 13
+  md: 'continued to keep the rice growing until maturity without dynamic fertilization.
+    This allowed us to form rice populations with different yields, which is basically
+    consistent with the study of Wang et al. (2013) in which different N fertilizers
+    caused rice populations with different yields. The early nutrient levels of rice
+    will affect the rice yield in the future. The diagnosis of rice nutrient levels
+    at EPIS is a simple way to realize the fine management of panicle fertilizer applications.
+    In the future, we will focus on the relationships of rice early nutrient levels,
+    fertilization amount and yield prediction.
+
+
+    # 5 Conclusion
+
+
+    In this study, a dynamic model of deep learning based on ResNet101 combined with
+    the SE module and LSTM (ResNet101-SE-LSTM) was proposed to explore the feasibility
+    of using rice canopy images collected by UAV to identify nutrient levels in 2021
+    and 2022. Seven convolutional neural networks were trained to identify the N and
+    K nutrient levels. The results showed that the ResNet101-SE model can effectively
+    extract image features from the spatial and temporal domains for the recognition
+    of rice nutrient levels. This study also shows the importance of adding time domain
+    extraction to a single dynamic model for diagnosing nutrition levels. In our experiment,
+    the ResNet101-SE-LSTM model achieved the highest overall accuracies of 85.88%
+    and 88.38% for HHZ and XS134, respectively, in 2021. Our model also showed relatively
+    good generalization ability, with the overall accuracies of 81.25% and 82.50%
+    for HHZ and XS134, respectively, in 2022. Compared with traditional methods involving
+    the destructive detection of rice nutritional status, our method provides a way
+    to identify the rice nutrient levels in EPIS, which can provide field workers
+    with real-time data and references during rice fertilization in order to increase
+    rice yields.
+
+
+    # Acknowledgements
+
+
+    This work was supported by the National Key Research and Development Program of
+    China (2022YFD2300700), the Open Project Program of State Key Laboratory of Rice
+    Biology, China National Rice Research Institute – CNRRI (20210403) and the Zhejiang
+    “Ten thousand talents” plan science and technology innovation leading talent project
+    (2020R52035).
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no conflict of interest.'
+  merge: -1
+  img_proc: true
+- pgno: 14
+  md: '# References
+
+
+    +   - Ali A M, Thind H S, Sharma S, Singh Y. 2015. Site-specific nitrogen management
+    in dry direct-seeded rice using chlorophyll meter and leaf colour chart. Pedosphere,
+    25, 72-81.
+
+    +   - Ballard D H. 1981. Generalizing the Hough transform to detect arbitrary
+    shapes. Pattern Recognition, 13, 111-122.
+
+    +   - Baral B R, Pande K R, Gaihre Y K, Baral K R, Sah S K, Thapa Y B, Singh U.
+    2021. Real-time nitrogen management using decision support-tools increases nitrogen
+    use efficiency of rice. Nutrient Cycling in Agroecosystems, 119, 355-368.
+
+    +   - Che S G, Zhao B Q, Li Y T, Yuan L, Lin Z A, Hu S W, Shen B. 2016. Nutrient
+    uptake requirements with increasing grain yield for rice in China. Journal of
+    Integrative Agriculture, 15, 907-917.
+
+    +   - Chen L S, Wang K. 2014. Diagnosing of rice nitrogen stress based on static
+    scanning technology and image information extraction. Journal of Soil Science
+    and Plant Nutrition, 14, 382-393.
+
+    +   - Chlingaryan A, Sukkarieh S, Whelan B. 2018. Machine learning approaches
+    for crop yield prediction and nitrogen status estimation in precision agriculture:
+    A review. Computers and Electronics in Agriculture, 151, 61-69.
+
+    +   - Condori R H M, Romualdo L M, Bruno O M, de Cerqueira Luz P H. 2017. Comparison
+    between traditional texture methods and deep learning descriptors for detection
+    of nitrogen deficiency in maize crops. In: 2017 Workshop of Computer Vision (WVC).
+    Curran Associates, New York, NY. pp. 7-12.
+
+    +   - Coskun D, Britto D T, Kronzucker H J. 2017. The nitrogen-potassium intersection:
+    membranes, metabolism, and mechanism. Plant Cell and Environment, 40, 2029-2041.
+
+    +   - Dua M, Makhija D, Mishra P Y L, Manasa P. 2020. A CNN–RNN–LSTM based amalgamation
+    for Alzheimer''s disease detection. Journal of Medical and Biological Engineering,
+    40, 688-706.'
+  merge: -1
+  img_proc: true
+- pgno: 15
+  md: 'Ghosh M, Swain D K, Jha M K, Tewari V K, Bohra A. 2020. Optimizing chlorophyll
+    meter (SPAD) reading to allow efficient nitrogen use in rice and wheat under rice-wheat
+    cropping system in eastern India. Plant Production Science, 23, 270-285.
+
+
+    Gonzalez-Sanchez A, Frausto-Solis J, Ojeda-Bustamante W. 2014. Predictive ability
+    of machine learning methods for massive crop yield prediction. Spanish Journal
+    of Agricultural Research, 12, 313-328.
+
+
+    Goyal K, Singh N, Jindal S, Kaur R, Goyal A, Awasthi R. 2022. Kjeldahl method.
+    Advanced Techniques of Analytical Chemistry, 1, 105.
+
+
+    Gu Q, Deng J S, Lu C, Shi Y Y, Wang K, Shen Z Q. 2012. Diagnosis of rice nitrogen
+    nutrition based on spectral and shape characteristics of scanning leaves. Journal
+    of Agricultural Machinery, 43, 170-174. (in Chinese)
+
+
+    He K M, Zhang X Y, Ren S Q, Sun J. 2016. Deep residual learning for image recognition.
+    In: 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). IEEE
+    Computer Society, New York, NY. pp. 770-778.
+
+
+    Hochreiter S, Schmidhuber J. 1997. Long short-term memory. Neural Computation,
+    9, 1735-1780.
+
+
+    Hou W F, Tränkner M, Lu J W, Yan J Y, Huang S Y, Ren T,Cong R H, Li X K. 2019.
+    Interactive effects of nitrogen and potassium on photosynthesis and photosynthetic
+    nitrogen allocation of rice leaves. Bmc Plant Biology, 19, 1-13.
+
+
+    Huang G, Liu Z, Van Der Maaten L, Weinberger K Q. 2017. Densely connected convolutional
+    network. In: 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+    IEEE, Piscataway, NJ. pp. 4700-4708.
+
+
+    Huang Y G, Luo D Q, Jiang X H, Li M, Li L J, Ji G M, Li S X, Xu Y. 2021. Effects
+    of different proportions of nitrogen application on grain yield and quality of
+    Yixiangyou 2115. Hybrid Rice, 36, 94-99. (in Chinese)
+
+
+    Kang Y, Nam J, Kim Y, Lee S, Seong D, Jang S, Ryu C. 2021. Assessment of regression
+    models for predicting rice yield and protein content using unmanned aerial vehicle-based
+    multispectral imagery. Remote Sensing, 13, 1508.'
+  merge: -1
+  img_proc: true
+- pgno: 16
+  md: 'Khaki S, Wang L. 2019. Crop yield prediction using deep neural networks. Frontiers
+    in Plant Science, 10, 621.
+
+
+    Krizhevsky A, Sutskever I, Hinton G E. 2012. Imagenet classification with deep
+    convolutional neural networks. Communications of Acm, 60, 84-90.
+
+
+    Kwok N M M , Wang D, Jia X, Chen S Y, Fang G, Ha Q P. 2011. Gray world based color
+    correction and intensity preservation for image enhancement. In: 2011 4th International
+    Congress on Image and Signal Processing. IEEE, Piscataway, NJ. pp. 994-998.
+
+
+    Latwal A, Saxena S, Dubey S K, Choudhary K, Sehgal S, Ray S S. 2019. Evaluation
+    of pre-harvest production forecasting of mustard crop in major producing states
+    of india, under fasal project. International Archives of the Photogrammetry, Remote
+    Sensing & Spatial Information Sciences, XLII-3/W6, 18-20.
+
+
+    Li H, Hu B, and Chu C C. 2017. Nitrogen use efficiency in crops: lessons from
+    Arabidopsis and rice. Journal of Experimental Botany, 68, 2477-2488.
+
+
+    Li L T, Zhang M, Ren T, Li X K, Cong R H, Wu L S, Lu J W. 2015. Diagnosis of N
+    nutrition of rice using digital image processing technique. Journal of Plant Nutrition
+    and Fertilizer, 21, 259-268. (in Chinese)
+
+
+    Li Q, Jin S C, Zang J R, Wang X, Sun Z Z, Li Z Y, Xu S, Ma Q, Su Y J, Guo Q H,
+    Jiang D. 2022. Deciphering the contributions of spectral and structural data to
+    wheat yield estimation from proximal sensing. The Crop Journal, 10, 1334-1345.
+
+
+    Li S X, Feng Z L, Yang B J, Li H, Liao F B, Gao Y F, Liu S H, Tang J, Yao Q. 2022.
+    An intelligent monitoring system of diseases and pests on rice canopy. Frontiers
+    in Plant Science, 13, 972286.
+
+
+    Lin T, Zhong R H, Wang Y D, Xu J F, Jiang H, Xu J L, Ying Y B, Rodriguez L, Ting
+    K C, Li H F. 2020. DeepCropNet: A deep spatial-temporal learning framework for
+    county-level corn yield estimation. Environmental Research Letters, 15, 034016.
+
+
+    Ling Q H, Wang S H, Ding Y F, Li G H. 2017. Re-evaluation of using the color difference
+    between the top 3rd leaf and the 4th leaf as a unified indicator for high-yielding
+    rice. Scientia Agricultura Sinica, 50, 4705-4713. (in Chinese)'
+  merge: -1
+  img_proc: true
+- pgno: 17
+  md: 'Liu H J, Zhang H, Sheng J, Zhang Y F, Guo Z, Zheng J C, Chen J C, Chen L G.
+    2021. Effects of panicle fertilizer reduction on nitrogen use efficiency of rice
+    under side deep application of basal fertilizer. Chinese Journal of Ecology, 40,
+    1366. (in Chinese)
+
+
+    Ma P, Yang Z Y, Li Y, Lin D, Sun Y J, Ma J. 2019. Effects of nitrogen reduction
+    in wheat/rape season and nitrogen fertilizer management in rice season on crop
+    yield and nitrogen uptake in crop rotation system. Acta Agriculturae Zhejiangensis,
+    31, 1769-1778. (in Chinese)
+
+
+    Metropolis N, Ulam S. 1949. The monte carlo method. Journal of the American Statistical
+    Association 44, 335-341.
+
+
+    Panda S S, Ames D P, Panigrahi S. 2010. Application of vegetation indices for
+    agricultural crop yield prediction using neural network techniques. Remote Sensing,
+    2, 673-696.
+
+
+    Peng S B, Buresh R J, Huang J L, Zhong X H, Zou Y B, Yang J C, Wang G H, Liu Y
+    Y, Hu R F, Tang Q Y, Cui K H, Zhang F S, Dobermann A. 2010. Improving nitrogen
+    fertilization in rice by sitespecific N management. A review. Agronomy for Sustainable
+    Development, 30, 649-656.
+
+
+    Simonyan K, Zisserman A. 2015. Very deep convolutional networks for large-scale
+    image recognition. In: International Conference on Learning Representations(ICLR).
+    OpenReview.net, Ithaca, NY. pp.1-14.
+
+
+    Son H H. 2017. Toward a proposed framework for mood recognition using LSTM Recurrent
+    Neuron Network. Procedia Computer Science, 109, 1028-1034.
+
+
+    Sun G J, Liu S H, Luo H L, Feng Z L, Yang B J, Luo J, Tang J, Yao Q, Xu J J. 2022.
+    Intelligent monitoring system of migratory pests based on searchlight trap and
+    machine vision. Frontiers in Plant Science, 13, 897739.
+
+
+    Sun Y Y, Tong C, He S, Wang K, Chen L S. 2018. Identification of nitrogen, phosphorus,
+    and potassium deficiencies based on temporal dynamics of leaf morphology and color.
+    Sustainability, 10, 762.
+
+
+    Sun Z Z, Li Q, Jin S C, Song Y L, Xu S, Wang X, Cai J, Zhou Q, Ge Y, Zhang R N,
+    Zhang J R, Jiang D. 2022. Simultaneous prediction of wheat yield and grain protein
+    content using multitask deep learning from time-series proximal sensing. Plant
+    Phenomics, 2022, 13.'
+  merge: -1
+  img_proc: true
+- pgno: 18
+  md: 'Szegedy C, Liu W, Jia Y Q, Sermanet P, Reed S, Anguelov D, Erhan D, Vanhoucke
+    V, Rabinovich A. 2015. Going deeper with convolutions. In: 2015 IEEE Conference
+    on Computer Vision and Pattern Recognition (CVPR). IEEE, Piscataway, NJ. pp. 1-9.
+
+
+    Taghavi Namin S, Esmaeilzadeh M, Najafi M, Brown T B, Borevitz J O. 2018. Deep
+    phenotyping: deep learning for temporal phenotype/genotype classification. Plant
+    Methods, 14, 1-14.
+
+
+    Tran T T, Choi J W, Le T T H, Kim J W. 2019. A comparative study of deep CNN in
+    forecasting and classifying the macronutrient deficiencies on development of tomato
+    plant. Applied Sciences, 9, 1601.
+
+
+    Vitousek P M, Naylor R, Crews T, David M B, Drinkwater L E, Holland E, Johnes
+    P J, Katzenberger J, Martinelli L A, Matson P A, Nziguhеba G, Ojima D, Palm C
+    A, Robertson G P, Sanchez P A, Townsend A R, Zhang F S. 2009. Nutrient imbalances
+    in agricultural development. Science, 324, 1519-1520.
+
+
+    Wang L, Chen S S, Li D, Wang C Y, Jiang H, Zheng Q, Peng Z P. 2021. Estimation
+    of paddy rice nitrogen content and accumulation both at leaf and plant levels
+    from UAV hyperspectral imagery. Remote Sensing, 13, 2956.
+
+
+    Wang S W, Cheng X, Zhao Q H, Li X W, Zhang Y, Mani A, Wang R T. 2018. Estimating
+    canopy nitrogen content of rice using hyperspectral reflectance combined with
+    SG-FD-CARS-ELM in cold region. Systems Engineering, 3, 25-34.
+
+
+    Wang Y, Fu L D, Li X, Sui X, Ren H, Lv X H. 2013. Effect of nitrogen application
+    amount on growth development and yield of rice. North Rice, 43, 14-17. (in Chinese)
+
+
+    Weiss K, Khoshgoftaar T M, Wang D D. 2016. A survey of transfer learning. Journal
+    of Big Data, 3, 1-40.
+
+
+    Wood E M, Pidgeon A M, Radeloff V C, Keuler N S. 2012. Image texture as a remotely
+    sensed measure of vegetation structure. Remote Sensing of Environment, 121, 516-526.
+
+
+    Wu G, Peng Y Q, Zhou G Q, Li X L, Zheng Y J, Yan H J. 2020. Recognition method
+    for corn nutrient based on multispectral image and convolutional neural network.
+    Smart Agriculture, 2, 111. (in Chinese)'
+  merge: -1
+  img_proc: true
+- pgno: 19
+  md: 'Xiong J T, Dai S X, Ou J H, Lin X Y, Huang Q H, Yang Z G. 2020. Leaf deficiency
+    symptoms detection method of soybean based on deep learning. *Journal of Agricultural
+    Machinery*, **51**, 195-202. (in Chinese)
+
+
+    Yao Q, Feng J, Tang J, Xu W G, Zhu X H, Yang B J, Lv J, Xie Y Z, Yao B, Wu S Z,
+    Kuai N Y, Wang L J. 2020. Development of an automatic monitoring system for rice
+    light-trap pests based on machine vision. *Journal of Integrative Agriculture*,
+    **19**, 2500-2513.
+
+
+    Yao Q, Li C, Li B, Yi J, Jing T T, Lv B. 2021. Preliminary study on the application
+    of deep learning method in nitrogen nutrition diagnosis of rice. *South China
+    Agriculture*, **15**, 125-129. (in Chinese)
+
+
+    Zhang Z S, Xia J Q, Alfatih A, Song Y, Huang Y J, Sun L Q, Wan G Y, Wang S M,
+    Wang Y P, Hu B H, Zhang G H, Qin P, Li S G, Yu L H, Wu J, Xiang C B. 2022. Rice
+    NIN - LIKE PROTEIN 3 modulates nitrogen use efficiency and grain yield under nitrate
+    - sufficient conditions. *Plant*, **45**, 1520-1536.
+
+
+    Zheng H B, Zhou M, Zhu Y, Cheng T. 2019. Exploiting the textural information of
+    UAV multispectral imagery to monitor nitrogen status in rice. In: *2019 IEEE International
+    Geoscience and Remote Sensing Symposium*. IEEE, Piscataway, NJ. pp. 7251-7253.'
+  merge: -1
+  img_proc: true
+- pgno: 20
+  md: '![](img/db542610b4b4fd61b30576bca8bb188f_20_0.png)
+
+
+    Fig. 1 Flowchart of different nutrient level diagnosis methods. TS, the tillering
+    stage; EPIS, the early-panicle initiation stage; INS, the intermediate stage between
+    TS and EPIS; UAV, the unmanned aerial vehicle.
+
+
+    ![](img/db542610b4b4fd61b30576bca8bb188f_20_1.png)
+
+
+    Fig. 2 Field acquisition of rice canopy images by an unmanned aerial vehicle (A)
+    and overview of the experimental fields (B).'
+  merge: -1
+  img_proc: true
+- pgno: 21
+  md: '![](img/db542610b4b4fd61b30576bca8bb188f_21_0.png)
+
+
+    Fig. 3 Examples of the time-series images of HHZ (an indica cultivar) in different
+    N and K dosage treatments at different rice growth stages in 2021. TS, the tillering
+    stage; EPIS, the early-panicle initiation stage; INS, the intermediate stage between
+    TS and EPIS.'
+  merge: -1
+  img_proc: true
+- pgno: 22
+  md: '![](img/db542610b4b4fd61b30576bca8bb188f_22_0.png)
+
+
+    Fig. 4 The framework of the ResNet101-SE-LSTM model for rice nutrient diagnosis
+    using time-series image datasets. SE, the Squeeze-and-Excitation module; FC, the
+    Full Connection layer; Relu, the Rectified Linear Unit; LSTM, the long short-term
+    memory network.
+
+
+    ![](img/db542610b4b4fd61b30576bca8bb188f_22_1.png)
+
+
+    Fig. 5 The receiver operator curves for different models based on the HHZ dataset
+    in 2021.'
+  merge: -1
+  img_proc: true
+- pgno: 23
+  md: '![](img/db542610b4b4fd61b30576bca8bb188f_23_0.png)
+
+
+    # Fig. 6 Confusion matrices of the ResNet101-SE-LSTM model for indica cultivar
+    HHZ(A) and japonica rice variety XS134 (B). Rec, the recall of diagnosing each
+    type of nutritional level in rice; Pre, the precision of diagnosing each type
+    of nutritional level in rice; Err, the difference between each value and 100%.
+
+
+    # Table 1 N and K fertilizer rates for each treatment of HHZ and XS134 rice in
+    Hangzhou, Zhejiang, in 2021 and 2022
+
+
+    | Class | N0K0 | N0K1 | N0K2 | N0K3 | N1K0 | N1K1 | N1K2 | N1K3 |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | N | 0 | 0 | 0 | 0 | 67.5 | 67.5 | 67.5 | 67.5 |
+
+    | K | 0 | 54 | 108 | 162 | 0 | 54 | 108 | 162 |
+
+    | Class | N2K0 | N2K1 | N2K2 | N2K3 | N3K0 | N3K1 | N3K2 | N3K3 |
+
+    | N | 135 | 135 | 135 | 135 | 202.5 | 202.5 | 202.5 | 202.5 |
+
+    | K | 0 | 54 | 108 | 162 | 0 | 54 | 108 | 162 |'
+  merge: -1
+  img_proc: true
+- pgno: 24
+  md: '# Table 2 Descriptions of the CNN-LSTM model parameters
+
+
+    | Parameter | Value |
+
+    |---|---|
+
+    | Learning rate | 5e-4 |
+
+    | Epochs | 200 |
+
+    | Number of layers | 1 |
+
+    | Split size | 0.2 |
+
+    | Batch size | 16 |
+
+    | Number of Hidden units | 256 |
+
+    | Momentum | 0.9 |
+
+    | Latent dims | 512 |
+
+
+    # Table 3 Diagnostic results of rice nutrient levels by the different models based
+    on the HHZ dataset in 20211)
+
+
+    | Feature extraction network | Acc (%) | Pre (%) | Rec (%) | F1 (%) |
+
+    |---|---|---|---|---|
+
+    | VGG16 | 77.81 | 71.50 | 77.81 | 74.51 |
+
+    | AlexNet | 73.94 | 75.06 | 72.88 | 74.12 |
+
+    | GoogleNet | 81.25 | 84.50 | 79.37 | 83.37 |
+
+    | DenseNet | 80.46 | 85.06 | 74.68 | 80.43 |
+
+    | inceptionV3 | 81.71 | 78.06 | 81.56 | 81.25 |
+
+    | ResNet101 | 83.81 | 81.18 | 83.43 | 83.81 |
+
+    | ResNet101-SE | 85.88 | 86.12 | 85.88 | 85.61 |
+
+
+    1) Acc, the accuracy of diagnosing rice nutrient levels; Pre, the precision of
+    diagnosing rice nutrient levels; Rec, the recall of diagnosing rice nutrient levels;
+    F1, the F1-scores of diagnosing rice nutrient levels.
+
+
+    # Table 4 Identification results for the temporal model and the non-temporal model1)
+
+
+    | Rice variety | Growth stage | Model | Acc (%) | Pre (%) | Rec (%) | F1 (%) |
+
+    |---|---|---|---|---|---|---|
+
+    | HHZ | TS | ResNet101-SE | 57.75 | 58.29 | 57.75 | 57.68 |
+
+    | | INS | | 63.88 | 65.20 | 63.88 | 64.04 |
+
+    | | EPIS | | 72.63 | 74.06 | 72.72 | 72.77 |
+
+    | | INS | ResNet101-SE-LSTM | 74.25 | 75.20 | 74.25 | 74.10 |
+
+    | | EPIS | | 85.88 | 86.12 | 85.88 | 85.61 |
+
+    | XS134 | TS | ResNet101-SE | 57.25 | 58.32 | 57.25 | 57.43 |'
+  merge: -1
+  img_proc: true
+- pgno: 25
+  md: '| | | | | | |
+
+    |---|---|---|---|---|---|
+
+    | INS | | 65.63 | 65.90 | 65.56 | 65.88 |
+
+    | EPIS | | 68.38 | 68.81 | 68.38 | 68.54 |
+
+    | INS | ResNet101-SE-LSTM | 77.63 | 78.37 | 77.71 | 77.99 |
+
+    | EPIS | | 88.38 | 88.70 | 88.38 | 88.53 |
+
+
+    1) Acc, the accuracy of diagnosing rice nutrient levels; Pre, the precision of
+    diagnosing rice nutrient levels; Rec, the recall of diagnosing rice nutrient levels;
+    F1, the F1-scores of diagnosing rice nutrient levels.
+
+
+    # Table 5 Diagnosis results of rice nutrient levels by the ResNet101-SE-LSTM model
+    in the dataset of HHZ and XS134 at EPIS in 20221)
+
+
+    | Rice variety | Model | Acc (%) | Pre (%) | Rec (%) | F1 (%) |
+
+    |---|---|---|---|---|---|
+
+    | HHZ | ResNet101-SE-LSTM | 81.25 | 81.13 | 79.54 | 80.49 |
+
+    | XS134 | | 82.50 | 82.96 | 83.34 | 83.14 |
+
+
+    1) Acc, the accuracy of diagnosing rice nutrient levels; Pre, the precision of
+    diagnosing rice nutrient levels; Rec, the recall of diagnosing rice nutrient levels;
+    F1, the F1-scores of diagnosing rice nutrient levels.
+
+
+    # Table 6 Identification results of nutrient levels using two different machine
+    learning models1)
+
+
+    | Rice variety | Model | Acc (%) | Pre (%) | Rec3) (%) | F1(4) (%) |
+
+    |---|---|---|---|---|---|
+
+    | HHZ | SVM | 86.00 | 81.88 | 74.94 | 79.44 |
+
+    | | Random forest | 73.46 | 73.53 | 73.46 | 72.96 |
+
+    | XS134 | SVM | 81.00 | 81.87 | 81.06 | 79.43 |
+
+    | | Random forest | 79.91 | 79.79 | 79.90 | 79.57 |
+
+
+    1) Acc, the accuracy of diagnosing rice nutrient levels; Pre, the precision of
+    diagnosing rice nutrient levels; Rec, the recall of diagnosing rice nutrient levels;
+    F1, the F1-scores of diagnosing rice nutrient levels.'
+  merge: -1
+  img_proc: true
