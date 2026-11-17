@@ -1,0 +1,32 @@
+level_changes:
+- line: 58
+  before: 3
+  after: 2
+- line: 61
+  before: 3
+  after: 2
+- line: 64
+  before: 3
+  after: 2
+- line: 67
+  before: 3
+  after: 2
+- line: 70
+  before: 3
+  after: 2
+- line: 73
+  before: 3
+  after: 2
+- line: 76
+  before: 3
+  after: 2
+- line: 79
+  before: 3
+  after: 2
+- line: 4437
+  before: 1
+  after: 2
+text_changes:
+- line: 12763
+  before: 第15章
+  after: 第 15 章
