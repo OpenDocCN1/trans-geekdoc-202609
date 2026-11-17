@@ -1,0 +1,7 @@
+cluster and none are reported from the high-density clusters. Although this example is contrived for demonstration purposes, it is clear that the DBSCAN might not produce an optimal solution when the dataset has density differences among clusters since only one value of eps is specified. Furthermore, in a multidimensional setting, it is not easy to determine the proper settings without trial-and-error or domain knowledge.
+
+Generally speaking, DBSCAN provides acceptable results in most cases as long as eps and MinPts are set properly. To illustrate this further, consider the four plots given in Figure 11.6 where the inliers are highlighted in gray and the outliers found by DBSCAN are highlighted in black. In the top-left corner, all 12 anomalies were found. In the second example on the top-right, there are 9 anomalies but 10 outliers were found. Only one data point is at the boundary of being an inlier or an outlier. The others are correctly reported as anomalies. In the bottom-left case, 11 anomalies were correctly detected. Finally, in the bottom-right case, 10 anomalies were found, although it seems there are several undetected anomalies. We note that by adjusting eps and MinPts, the desired set of anomalies can be produced but this would be difficult in high dimensions where visualization is not possible.
+
+![](bbox=[0.12, 0.385, 0.7, 0.855])
+
+Figure 11.6 DBSCAN (eps = 4.5,MinPts = 30) applied to four synthesized datasets with inliers (gray) and detected outliers/anomalies (black).

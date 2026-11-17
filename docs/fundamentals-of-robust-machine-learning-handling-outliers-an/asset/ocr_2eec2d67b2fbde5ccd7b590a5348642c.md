@@ -1,0 +1,7 @@
+![](bbox=[0.11, 0.11, 0.62, 0.54])
+
+Figure 4.18 Quad-plot of the Boston Housing LC residuals, r.
+
+outliers while leaving the valuable data intact. Note that standard methods for finding outliers are not as effective because most of the outliers can only be found after a robust regression is performed and the residuals are computed.
+
+The Iterative Boxplot method is a fast and accurate alternative that can be used to remove outliers of a dataset. The idea is to use the boxplot method in an iterative loop to remove outliers at each step until none are left. It is derived from the 1.5-IQR method but uses Ifactor-IQR instead. The value of Ifactor starts at 1.5 and is steadily increased by 50/n in each iteration based on the data size, n. This is a heuristic value but it works well in practice over many datasets. Each additional pass takes the partially cleaned data and removes any remaining outliers. Eventually, all of the outliers can be detected and removed with enough iterations, typically around one to four iterations. The procedure given in Algorithm 4.1 is fast, reliable, and more precise than previous algorithms. For the diabetes dataset, it removes all three outliers. In the Boston Housing dataset, it finds and removes 52 outliers. In the Swiss dataset, it is unable to find outliers because there are none. The results for the Iterative Boxplot method are given in Table 4.2.

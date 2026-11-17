@@ -1,0 +1,13 @@
+and a significant resurgence around 2010. It continues to gain traction and momentum to this day with the advent of generative AI. Of course, in the 1980s, computers were relatively slow, datasets were not readily available, and algorithms for ML were in their infancy. Fast forward a few decades and we find the landscape has changed dramatically. Today, access to high-speed computing is at everyone's fingertips, data is ubiquitous, and many advanced ML algorithms have been developed, implemented, and tested. They are now widely available through open-access online mechanisms.
+
+Some of the algorithms in ML are grounded in statistical theory, while others are based on nonparametric methods or a set of heuristics. We will study methods that fall into all these categories. There are three main varieties of ML tools: supervised learning, unsupervised learning, and reinforcement learning.1 We focus only on the supervised and unsupervised learning methods in this book. To understand these two methods, consider a dataset given by a matrix X ∈ R^{n×d}, where n is the number of observations (rows in the dataset) and d is the number of variables (columns in the dataset). The “ground truth” or true responses associated with each observation is optionally provided in a vector y ∈ R^n. To contrast the two categories, supervised ML requires both X and y, while unsupervised ML requires only X.
+
+For example, linear regression, logistic regression, neural networks, k-nearest neighbors, tree-based methods, and so on fall into the supervised category. In this book, we focus on the robustness aspects of these methods. On the other hand, data clustering and anomaly detection are examples of unsupervised learning methods. We will discuss robust clustering in this chapter as a way of introducing robust concepts and their value in machine learning. Anomaly detection will be covered in Chapter 11.
+
+For supervised learning, we mainly consider two types of problems: regression and classification. Figure 1.2 shows the two cases graphically. On the left side, we show a set of points that are fitted with a line, where the x-axis is the year and the y-axis is the number of sales in that year. Fitting a line to the data is called linear regression. The ML objective in this case is to use the data to find the slope and intercept
+
+![](bbox=[0.13, 0.56, 0.88, 0.82])
+
+Figure 1.2 Linear regression vs. linear classification.
+
+1 Although an important topic in ML, reinforcement learning is outside the scope of this book.

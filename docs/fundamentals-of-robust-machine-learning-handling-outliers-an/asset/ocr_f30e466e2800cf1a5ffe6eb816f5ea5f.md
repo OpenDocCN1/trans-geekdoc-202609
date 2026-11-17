@@ -1,0 +1,13 @@
+![](bbox=[0.11, 0.1, 0.89, 0.32])
+
+Figure 8.3 Outlier definition and robustness in a two-dimensional setting.
+
+to have a method that is robust enough to produce a good model in the presence of a small percentage of such outliers. In fact, the word *robust* implies that a certain amount of tolerance to outliers, meaning that outliers will not greatly affect the estimation of the true underlying model. Hence, the model building process should withstand a small number of these outliers and produce results as if they did not exist, as shown in the right panel of Figure 8.3.
+
+Unfortunately, standard cross-entropy methods are strongly affected by outliers. They act like an attractive force that moves the decision boundary in their direction. In essence, these methods are based on the mean of the residuals, much like least squares for linear regression. In the robust approach, the median is used to build the model. Note that it does not have to be precisely the median. Any quantile in the vicinity of the median effectively ignores outliers.
+
+Non-robust methods currently in use may produce misleading or erroneous results if there are outliers present in the data, and this fact would be hidden from the user. Oftentimes, the accuracy of predictions on a training set may reach 100%, which gives the user confidence in the results. Unfortunately, overfitting has likely occurred. This means that the outliers were perfectly captured by the parameters which can occur if the feature space is large enough. The effect of outliers will be felt only when the accuracy on the test set is significantly lower than expected. With this background, the details of the standard and robust methods will now be described.
+
+# 8.3 The Cross-Entropy (CE) Loss
+
+The concept of “cross-entropy” originated in information theory as a way of quantifying the difference between two distributions. It is now used widely in machine learning in the form of a loss function to compare a known distribution of the true labels **y** against an estimated distribution **p** over the same set of observations. Following the procedure similar to that of Chapter 2 on linear regression, we will first derive this loss function which is used in logistic regression. We will eventually end up with the cross-entropy loss function and an equation to compute **p** so we might as well get a glimpse of these equations before setting off to derive them.

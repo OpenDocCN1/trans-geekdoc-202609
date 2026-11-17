@@ -1,0 +1,12 @@
+# 11
+Anomaly Detection and Evaluation Metrics
+
+# ## 11.1 Introduction
+
+Anomaly detection (see Aggarwal 2017) is a form of outlier detection where the outliers are at extreme locations and represent unusual and unexpected occurrences in the dataset. Identifying such anomalies is typically an unsupervised activity. There are a wide variety of anomaly detection methods reported in the literature and in common use in machine learning. The techniques to be described in this chapter generally involve repurposing well-known machine learning methods, such as k-nearest neighbors (k-NN), clustering methods, and tree-based approaches. The details of k-NN, DBSCAN, and Isolation Forest will be described as they are popular techniques in this category. This will be followed by a new method based on robust statistics and k-medians clustering called MADmax which is shown to provide better results than current methods.
+
+For our purposes here, the datasets to be considered are those that would be used for clustering. In these datasets, there are data points near each other forming one or more clusters, along with other isolated data points far from all clusters that we seek to identify using an anomaly detector. Sometimes, a few points will be declared as anomalies when they are actually inliers. These are called false positives. In other cases, some anomalies are left undetected. These are the false negatives. Methods are required to evaluate different anomaly detectors based on their ability to limit the number of false designations. The chapter includes an examination of various metrics to compare different anomaly detectors.
+
+# ## 11.2 Anomaly Detection Methods
+
+In terms of definitions, the term “outlier” is an all-encompassing term whereas an “anomaly” is a specific type of outlier that is far from the rest of the data. In other words, an anomaly is an extreme outlier that is considered a rare or unusual event associated with suspicious activity such as bank fraud, spam, and network intrusion. More generally, anomalies are data points in a dataset that are somewhat isolated from all other data and occur infrequently. While the difference between outliers and anomalies is somewhat subjective, the terms are often used interchangeably since many of the techniques find both outliers and anomalies depending on the settings of various hyperparameters. However, keep in mind that the overall objective here is to find the isolated points in the dataset.
