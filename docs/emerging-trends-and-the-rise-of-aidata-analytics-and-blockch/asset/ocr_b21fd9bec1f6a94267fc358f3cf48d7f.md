@@ -1,0 +1,19 @@
+The firms were identified through a database obtained by the Higher Education Institution through a partnership. The representation of the sample was considered adequate due to the analyzed position being predominantly analytical than executive.
+
+All selected firms are located in the state of São Paulo, Brazil. In addition, it is important to inform that the industry in São Paulo is the most modern and diversified in Latin America and is supported by a robust technological base, generating products with high added value in various economic sectors. In sum, the State of São Paulo concentrates 36% of Brazilian industrial production.
+
+In Brazil it is not easy to bring firms closer to Universities due to the prevalence of the closed innovation model instead of the open innovation model. However, there has been a movement of change, but not yet at the necessary speed. The firms that participated in this research are leaders in product and service innovation development in their respective sectors. It agrees with Ransbotham and Kiron (2017), who found that leaders in adopting Big Data analysis are more likely to produce new products and services than others.
+
+Two management academics were consulted to refine the questionnaire and validate the adaptation of the research instrument to the Brazilian context. Based on their feedback, some items were reformulated. Through operationalization, the research variables were reduced to constructs that can be observed and measured. To measure each item of the constructs, the Likert scale was used with endpoints anchored in “totally disagree” (1) and “totally agree” (5) for all 35 statements (scrambled assertions in the questionnaire). The constructs and corresponding survey items used in this questionnaire are based on previously published latent variables with psychometric properties that support their validity. For aspects of the characterization of the demographic profile and organizations, specific objective questions were elaborated.
+
+The data collection method was convenience sampling, a non-probabilistic technique, a fact that limits the generalization of research results. The questionnaire was made available by email and LinkedIn to facilitate access to managers and professionals from the firms that participated in this research. For this study, a pre-test was performed with 25 individuals to verify the research instrument’s understanding (Hair et al., 2009). Around 450 firms were contacted to participate in the survey. However, 141 valid questionnaires were obtained, which were analyzed in IBM SPSS 25 and SmartPLS 3.3.3. In this research, we used the G*Power 3.1.9 software to calculate the sample’s test power (1-b err prob) is equal to 98.78%.
+
+# 5. Analysis of results
+
+# 5.1 Non-response bias
+
+A bias that occurs due to systematic differences between responders and non-responders. To determine whether there was any non-response bias in our sample, the respondents’ profile was carefully selected and compared with the others who did not participate in the survey. These were observed by the mailing list and by LinkedIn – with the profile of each manager (“middle management” and “top management”) initially contacted, also observing the characteristics of each firm (Mikalef et al., 2019a). In addition to non-response, we also examine late-response bias by comparing early (first month) and late responses (last second month). We found no significant difference between respondents and non-respondents. Considering that all data were collected from a single source (survey) at one point in time, in a cross-selection study, and that all data were perceptions of key respondents.
+
+# 5.2 Profile of respondents
+
+The sample had most male individuals (n = 104/73.8%). About age, the largest number of respondents in the survey is concentrated up to 35 years (n = 83/58.9%), and respondents were characterized by a sample of managers (45.4%) and professionals (54.6%).

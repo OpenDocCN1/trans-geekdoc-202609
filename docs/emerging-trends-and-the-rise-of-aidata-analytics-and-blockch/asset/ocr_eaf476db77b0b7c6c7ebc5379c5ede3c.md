@@ -1,0 +1,11 @@
+![](bbox=[0.435, 0.12, 0.665, 0.465])
+
+Figure 1. Sampling and data collection process following the GT approach
+
+decided to stop collecting data upon reaching a theoretical saturation point in the eighth interview because the “theoretical sampling of any category ceases when it is saturated, elaborated, and integrated into the emerging theory” (Glaser, 1992, p. 102).
+
+Additionally, owing to the COVID-19 pandemic, the interviews were conducted using videoconferences from June to September 2020. Previous research shows that the quality of data obtained from face-to-face and videoconference interviews is similar. Moreover, for sensitive topics, using such technologies can even be advantageous (Jennner and Myers, 2019).
+
+3.2.3 Sample presentation. Twelve stakeholders were interviewed to gather diverse points of view on supply chains and the traceability of goods in the luxury ecosystem. The blockchain division of Ernst and Young Consulting Europe was the primary source of contacts. Based on its recommendations and the authors’ network in the luxury sector, interviews were organized with five French luxury goods companies selected because of their widespread operations in the sector (textiles, jewelry, watches, cosmetics and wine). Companies that matched the predefined cluster characteristics were selected to include supply chain practices that were broadly representative of the luxury field (Caniato et al., 2011). These companies included small (less than €50m of turnover) and large firms. These companies also had dedicated supply chain management departments, demonstrating the strategic importance of monitoring the rate of logistics services. Finally, all the interviewed companies were experienced in implementing blockchain solutions within their organizations. We also interviewed the founders and chief executive officers (CEOs) of start-ups and large information technology (IT) players to gather their experiences on implementing blockchains in luxury companies.
+
+Four of our interviewees were CEOs from blockchain start-ups, and the remaining eight were CEOs, supply chain directors, a legal director, chief information officers (CIOs) and chief digital officers (CDOs) in large luxury and IT groups linked with luxury players (Table 2). All the respondents were engaged in discussions or applications of blockchain solutions in the

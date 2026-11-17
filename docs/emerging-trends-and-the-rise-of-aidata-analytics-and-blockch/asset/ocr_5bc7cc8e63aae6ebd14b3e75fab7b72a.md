@@ -1,0 +1,10 @@
+| Blockchain Feature | Feature description | Security threats addressed by blockchain | IoT Layer | How Threats are Addressed | References |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Smart contracts | (1) A smart contract is a formal agreement between two parties before engaging in any transaction | Flooding attacks (Hello flood attack and Flooding attack in the cloud) | Network and Processing | It prevents flooding attacks ensuring user authenticity before accessing resources | Pohrmen et al. (2019) |
+| | (2) The smart contract executes the corresponding contractual clause when the certain condition is | Eavesdropping | Network | Blockchain ensures security by encrypting the IoT data using cryptographic keys | Fernández and Fraga-Lamas (2018), Dai et al. (2019) |
+| | triggered | Phishing site attack | Network | Implement access control policies to safeguard users against DoS and phishing attacks | Zhu and Badr (2018), Wang et al. (2019) |
+| | (3) They enhance the transaction performance without third parties | Sybil attack | Application | Smart contracts optimize the security protocols for use in blockchain hence preventing sybil attacks | Altalibi (2019) |
+| | (4) They are meant to digitally verify the performance of a transaction and validate the message exchange between devices | Node tampering | Perception | The smart contract detects any new change which is therefore notified to all miners | Koshy et al. (2020) |
+| | | Malicious node injection | Perception | Enhances data integrity by ensuring the accuracy of the transactions free from human errors | Yu et al. (2018), Liu et al. (2019) |
+| | | Malicious attacks (Node and code injections) | Perception and Application | (1) Executed individually and automatically and only the parties involved come up with the agreement and executes it thereby enhancing privacy | |
+| | | Selfish attack | Application | Smart contracts help to trace any illegal information by the host, therefore, preventing any selfish attack. | Zhu et al. (2018) |

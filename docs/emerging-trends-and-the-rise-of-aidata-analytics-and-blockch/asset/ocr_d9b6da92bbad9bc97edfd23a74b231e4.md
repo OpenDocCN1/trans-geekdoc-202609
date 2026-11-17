@@ -1,0 +1,11 @@
+From Figure 10, it can be seen that the True positive value or accuracy of the happy class is 0.96. 123 images out of 128 are correctly classified as happy, and the True negative value or accuracy of the sad class is 0.76. 97 images out of 128 sad images are correctly classified as sad.
+
+# 5.3 Visualization of images
+
+Visualization is one of the essential skills for deep learning. Visualization helps the end-users in understanding and further interpreting the results. The visualization of Instagram images for human facial emotion has been done using a tensorboard embedding projector visualization tool. This tool provides various features such as PCA analysis, t-SNE (Bunte et al., 2012) visualization with a graphical interface. The tensorboard embedding projector visualization tool also provides flexibility to change different hyperparameters such as perplexity, learning rate and enable the control to view in 3D or 2D. We have obtained the visualization of Instagram images using both t-SNE and PCA. The visualization of Instagram images using tensorboard can be seen in Figure 11.
+
+From Figure 11, it can be observed that there are two distinct classes', i.e. happy class and sad class. The oval marked in blue color shows the images belonging to the happy class, and the oval marked in red color indicates the images belonging to the sad class. The t-Distributed Stochastic Neighbor Embedding (t-SNE) is a nonlinear dimensionality reduction algorithm used for exploring high-dimensional data (Bunte et al., 2012). t-SNE, in general, gives the feel of how the data is arranged in a high-dimensional space. Principal Component Analysis, or PCA, on the other hand, is a linear feature extraction technique. PCA performs a linear mapping of the data to a lower-dimensional space in such a way that the variance of the data in the low-dimensional representation is maximized. We have used both t-SNE and PCA for the visualization of images.
+
+![](bbox=[0.093, 0.54, 0.95, 0.7])
+
+![](bbox=[0.093, 0.74, 0.95, 0.89])

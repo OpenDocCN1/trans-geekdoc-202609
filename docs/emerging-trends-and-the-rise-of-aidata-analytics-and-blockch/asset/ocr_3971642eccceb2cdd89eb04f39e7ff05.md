@@ -1,0 +1,9 @@
+# About the authors
+
+Luis Hernan Contreras Pinochet is a Researcher and associate professor in the Business Administration Department in the Paulista School of Politics, Economics and Business of the Federal University of São Paulo (UNIFESP). He has didactic experience in undergraduate and postgraduate courses in the area of Marketing, emphasizing Strategic Management of Information Technology. He primarily works researching Emerging Technologies and Society Information Management, and Business Analytics. He has a Doctoral Degree in Business Administration from Getulio Vargas Foundation (FGV/EAESP). Luis Hernan Contreras Pinochet is the corresponding author and can be contacted at: luis.hernan@unifesp.br
+
+Guilherme de Camargo Belli Amorim is a graduate of Business Administration from Federal University of São Paulo (UNIFESP). He has worked as Information Technology project analyst at Bradesco.
+
+Durval Lucas Júnior PhD in Administration (granted from the School of Economics, Business and Accounting at University of São Paulo (FEA-USP). Adjunct Professor of the Department of Administration in Paulista School of Politics, Economics and Business at Federal University of São Paulo (EPPEN-UNIFESP). He has research interest and experience in these issues: corporate use of social networking sites, information systems and technologies, e-commerce, education in Administration and entrepreneurship.
+
+Cesar Alexandre de Souza is a Professor at the Economy, Business and Accounting School of the University of São Paulo (FEA/USP). He has a PhD degree in Business Administration. He has authored and co-authored several papers and book chapters, mainly in Information Systems Management and Impacts of Emerging Information Technologies in Business and Government. He teaches undergraduate and graduates’ courses on New Digital Business Models, Digital Innovation, Digital Commerce and Machine Learning and Artificial Intelligence.

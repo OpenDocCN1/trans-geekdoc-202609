@@ -1,0 +1,13 @@
+A journal that has been in publication for 20 years or more and has an H index of more than 20 is considered a successful journal (Hirsch, 2005). Figure 3 suggests that successful journals of differentiable aims and scope do have acceptance for articles focusing on AI applications in HRM. The most influential journal that has published articles on AI in HRM is the European Journal of Operational Research, with an H index of 243.
+
+Figure 4 presents the ten most contributing countries based on the first authors’ affiliation. The first author of the 59 articles belonged to 23 countries; however, six countries, namely USA (n = 10), Iran (n = 6), India (n = 6), South Korea (n = 5), China (n = 4) and Taiwan (n = 4), cumulatively accounted for 59% of the studied articles. Researchers participating from developing and developed economies suggest an international recognition of potential offered by AI applications in the HRM domain. Furthermore, Figure 5 presents the most frequently used authors’ keywords. The different font sizes represent the frequency of occurrence of the corresponding keywords. A bigger font is allotted to the more frequent keywords. “Human resource management,” “artificial intelligence,” “data mining” and “talent management” were observed to be the most used keywords.
+
+# 3.2 The synthesis of the literature on AI applications in HRM functions
+
+The reviewed literature presents a diverse set of recommendations on how specific HR tasks could be handled using various AI techniques. For example, the use of fuzzy logic for selection (Karam et al., 2020, artificial neural networks for performance management (Stavrou et al., 2007), and data mining for job allocation (Chen and Chien, 2011). Undoubtedly, such contributions bring in distinct, meaningful and essential insights into the application of individual AI subfields for different HR tasks. However, these contributions are currently scattered and diverse. To organize how and when these subfields appeared in the HR domain,
+
+![](bbox=[0.17, 0.52, 0.73, 0.8])
+
+Note(s): The distribution is based on the affiliation country of the first author. The classification of countries into developed/developing economies is as per the World Economic Situation and Prospects 2020. Retrieved from: https://www.un.org/development/desa/dpad/wp-content/uploads/sites/45/WESP2020_FullReport.pdf
+
+Figure 4. Ten most contributing countries

@@ -1,0 +1,19 @@
+Big Data Analytics Capability. In Product Innovation Performance, the subjective Product Innovation Performance measures were largely adapted from Wang et al. (2012) and Wamba et al. (2017). This makes it possible to understand the management’s perception of the market performance of new products and services through the firm’s performance analysis, facing the market, in two dimensions analyzed in this research: Financial performance and market performance. Following is the conceptualization of these first-order constructs.
+
++   (1) Financial performance: it is often related to profitability or return on investment (ROI) and can be improved by an organization’s learning ability. Firms that can learn about their customers or potential customers, competitors and regulators have a better chance of detecting and acting on market events and trends. The growth in sales or provision of services drives financial performance (Wang et al., 2012; Wamba et al., 2017). One of the main objectives of any organization is to capture a large market share, which is only possible when organizations obtain respectable margins and profits through their sales and economically because their optimized operations strengthen the firm’s financial aspirations (Gupta et al., 2020).
+
++   (2) Market performance: defined as the firm’s success in entering and bringing new products or services to the market. The existing literature suggests that when there is greater support from the IT area in its strategies, operational and market performance tend to improve competitively (Wang et al., 2012). For Gupta et al. (2014) and Gupta et al. (2020), market performance can be achieved through innovation, which has a negotiating effect between market orientations and organizational learning.
+
+The following hypothesis was made based on the presentation of these two second-order variables: Big Data Analytics Capability and Product Innovation Performance.
+
++   H1a. Big Data Analytics Capability positively influences Product Innovation Performance.
+
+3.2.2 Process-oriented dynamic capabilities. Process-oriented dynamic capabilities help to understand how the firm is facing methodologies and business processes compared to the competition. Product development is an example of process-oriented dynamic capabilities and includes the basic elements of strategizing (practice, process and practitioners). Together with learning and isomorphic mechanisms present in the organizational field, they explain how the product development process occurs (Goes, 2014; McAfee and Brynjolfsson, 2012). We see Big Data Analytics Capability as an important organizational capability, leading to a sustainable competitive advantage in the Big Data environment (Singh and El-Kassar, 2018). Organizations must have specialists with the knowledge and experience of working in a competitive and highly dynamic market, which requires the adoption of Big Data as a way to remain competitive (Eisenhardt and Martin, 2000; Helfat et al., 2007; Wamba et al., 2017), so the following hypotheses were elaborated:
+
++   H1b. Big Data Analytics Capability positively influences process-oriented dynamic capabilities.
+
++   H2. Process-oriented dynamic capabilities influence Product Innovation Performance.
+
++   H3. Big Data Analytics Capability positively influences Product Innovation Performance when it is mediated by process-oriented dynamic capabilities.
+
+3.2.3 Business Value. Big Data Analytics Capability evaluation results in an affective or emotional response, such as Business Value. Given this, the existing literature identifies that the analytical excellence of Big Data has a significant positive impact on Business Value. The literature suggests that the greater the perception of the novelty of products and services

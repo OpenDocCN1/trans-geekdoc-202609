@@ -1,0 +1,407 @@
+level_changes:
+- line: 13
+  before: 2
+  after: 1
+- line: 58
+  before: 2
+  after: 3
+- line: 62
+  before: 2
+  after: 3
+- line: 66
+  before: 2
+  after: 3
+- line: 70
+  before: 2
+  after: 3
+- line: 182
+  before: 2
+  after: 1
+- line: 250
+  before: 2
+  after: 3
+- line: 472
+  before: 2
+  after: 3
+- line: 542
+  before: 2
+  after: 3
+- line: 585
+  before: 2
+  after: 3
+- line: 589
+  before: 3
+  after: 4
+- line: 593
+  before: 3
+  after: 4
+- line: 597
+  before: 3
+  after: 4
+- line: 601
+  before: 2
+  after: 3
+- line: 605
+  before: 3
+  after: 4
+- line: 609
+  before: 3
+  after: 4
+- line: 613
+  before: 3
+  after: 4
+- line: 617
+  before: 3
+  after: 4
+- line: 621
+  before: 2
+  after: 3
+- line: 629
+  before: 3
+  after: 4
+- line: 630
+  before: 3
+  after: 4
+- line: 631
+  before: 3
+  after: 4
+- line: 635
+  before: 3
+  after: 4
+- line: 637
+  before: 4
+  after: 5
+- line: 640
+  before: 4
+  after: 5
+- line: 648
+  before: 3
+  after: 4
+- line: 650
+  before: 4
+  after: 5
+- line: 653
+  before: 4
+  after: 5
+- line: 657
+  before: 4
+  after: 5
+- line: 660
+  before: 4
+  after: 5
+- line: 666
+  before: 3
+  after: 4
+- line: 668
+  before: 4
+  after: 5
+- line: 674
+  before: 4
+  after: 5
+- line: 681
+  before: 3
+  after: 4
+- line: 683
+  before: 4
+  after: 5
+- line: 692
+  before: 3
+  after: 4
+- line: 1026
+  before: 2
+  after: 1
+- line: 1539
+  before: 2
+  after: 1
+- line: 1650
+  before: 2
+  after: 3
+- line: 1789
+  before: 2
+  after: 3
+- line: 1805
+  before: 3
+  after: 4
+- line: 1809
+  before: 3
+  after: 4
+- line: 1815
+  before: 3
+  after: 4
+- line: 1823
+  before: 3
+  after: 4
+- line: 1831
+  before: 3
+  after: 4
+- line: 1835
+  before: 3
+  after: 4
+- line: 1851
+  before: 2
+  after: 3
+- line: 1867
+  before: 2
+  after: 3
+- line: 1885
+  before: 2
+  after: 3
+- line: 1891
+  before: 3
+  after: 4
+- line: 1899
+  before: 3
+  after: 4
+- line: 1907
+  before: 3
+  after: 4
+- line: 1925
+  before: 3
+  after: 4
+- line: 2179
+  before: 2
+  after: 1
+- line: 2379
+  before: 2
+  after: 3
+- line: 2381
+  before: 3
+  after: 4
+- line: 2452
+  before: 2
+  after: 3
+- line: 2454
+  before: 3
+  after: 4
+- line: 2601
+  before: 2
+  after: 3
+- line: 2603
+  before: 3
+  after: 4
+- line: 2933
+  before: 2
+  after: 1
+- line: 2989
+  before: 3
+  after: 4
+- line: 2993
+  before: 3
+  after: 4
+- line: 2997
+  before: 3
+  after: 4
+- line: 3001
+  before: 3
+  after: 4
+- line: 3009
+  before: 2
+  after: 3
+- line: 3042
+  before: 3
+  after: 4
+- line: 3055
+  before: 3
+  after: 4
+- line: 3063
+  before: 3
+  after: 4
+- line: 3247
+  before: 2
+  after: 3
+- line: 3421
+  before: 2
+  after: 1
+- line: 3509
+  before: 2
+  after: 3
+- line: 3517
+  before: 2
+  after: 3
+- line: 3539
+  before: 3
+  after: 4
+- line: 3545
+  before: 3
+  after: 4
+- line: 3561
+  before: 3
+  after: 4
+- line: 3586
+  before: 2
+  after: 3
+- line: 3588
+  before: 3
+  after: 4
+- line: 3592
+  before: 3
+  after: 4
+- line: 3610
+  before: 3
+  after: 4
+- line: 3843
+  before: 2
+  after: 1
+- line: 3883
+  before: 3
+  after: 2
+- line: 3903
+  before: 3
+  after: 2
+- line: 3907
+  before: 4
+  after: 3
+- line: 3923
+  before: 2
+  after: 3
+- line: 3931
+  before: 2
+  after: 3
+- line: 4012
+  before: 2
+  after: 3
+- line: 4047
+  before: 2
+  after: 3
+- line: 4051
+  before: 3
+  after: 4
+- line: 4055
+  before: 3
+  after: 4
+- line: 4070
+  before: 3
+  after: 4
+- line: 4082
+  before: 2
+  after: 3
+- line: 4086
+  before: 3
+  after: 4
+- line: 4096
+  before: 3
+  after: 4
+- line: 4157
+  before: 2
+  after: 3
+- line: 4423
+  before: 2
+  after: 1
+- line: 4445
+  before: 3
+  after: 2
+- line: 4518
+  before: 2
+  after: 3
+- line: 4655
+  before: 2
+  after: 3
+- line: 4928
+  before: 2
+  after: 1
+- line: 5959
+  before: 2
+  after: 1
+- line: 6011
+  before: 3
+  after: 4
+- line: 6017
+  before: 3
+  after: 4
+- line: 6021
+  before: 3
+  after: 4
+- line: 6032
+  before: 2
+  after: 3
+- line: 6036
+  before: 3
+  after: 4
+- line: 6040
+  before: 3
+  after: 4
+- line: 6090
+  before: 3
+  after: 4
+- line: 6100
+  before: 3
+  after: 4
+- line: 6104
+  before: 3
+  after: 4
+- line: 6108
+  before: 2
+  after: 3
+- line: 6112
+  before: 3
+  after: 4
+- line: 6116
+  before: 3
+  after: 4
+- line: 6122
+  before: 3
+  after: 4
+- line: 6262
+  before: 2
+  after: 3
+- line: 6286
+  before: 2
+  after: 3
+text_changes:
+- line: 589
+  before: 5.1.1 数据认证。
+  after: 5.1.1 数据认证
+- line: 593
+  before: 5.1.2 轻量级系统和数据气化。
+  after: 5.1.2 轻量级系统和数据气化
+- line: 597
+  before: 5.1.3 去中心化身份。
+  after: 5.1.3 去中心化身份
+- line: 605
+  before: 5.2.1 电子商务与供应链管理。
+  after: 5.2.1 电子商务与供应链管理
+- line: 609
+  before: 5.2.2 医疗保健。
+  after: 5.2.2 医疗保健
+- line: 613
+  before: 5.2.3 智慧城市。
+  after: 5.2.3 智慧城市
+- line: 617
+  before: 5.2.4 设备管理。
+  after: 5.2.4 设备管理
+- line: 1135
+  before: 3.2.1 研究协议。
+  after: 3.2.1 研究协议
+- line: 1139
+  before: 3.2.2 数据收集。
+  after: 3.2.2 数据收集
+- line: 1162
+  before: 3.2.3 样本介绍。
+  after: 3.2.3 样本介绍
+- line: 3539
+  before: 4.1.1 案例背景。
+  after: 4.1.1 案例背景
+- line: 3545
+  before: 4.1.2 基于物联网的 IPF 解决方案。
+  after: 4.1.2 基于物联网的 IPF 解决方案
+- line: 3561
+  before: 4.1.3 案例与数据分析。
+  after: 4.1.3 案例与数据分析
+- line: 3588
+  before: 4.2.1 案例背景。
+  after: 4.2.1 案例背景
+- line: 3592
+  before: 4.2.2 基于物联网与区块链融合的 IPF 解决方案。
+  after: 4.2.2 基于物联网与区块链融合的 IPF 解决方案
+- line: 3610
+  before: 4.2.3 案例与数据分析。
+  after: 4.2.3 案例与数据分析
+- line: 4055
+  before: 4.2.2 Confirmatory factorial analysis (CFA).
+  after: 4.2.2 Confirmatory factorial analysis (CFA)
+- line: 4070
+  before: 4.2.3 Structural equation modelling (SEM).
+  after: 4.2.3 Structural equation modelling (SEM)
+- line: 4966
+  before: 引言
+  after: 1. 引言
