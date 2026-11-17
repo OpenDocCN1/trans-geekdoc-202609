@@ -1,0 +1,62 @@
+
+
+- [11] Y. Liu, Y. Chen, Z. Gao, X. Zhang, L. Zhang, M. Wang, B. Chen, Y. Diao, Y. Li, D. Xiao, X. Wang, D. Ma, C. Shi, 将高负载且均匀的Ni纳米粒子嵌入silicalite-1沸石用于甲烷干式改制, Appl. Catal. B 307 (2022), 121202.
+- [12] S. Das, J. Ashok, Z. Bian, N. Dewangan, M.H. Wai, Y. Du, A. Borgna, K. Hidajat, S. Kawai, 低温沼气干式改制用硅-铈三明治式Ni核壳催化剂：耐焦炭性与机理洞察, Appl. Catal. B 230 (2018) 220-236.
+- [13] S. Das, A. Jangam, S. Jayaprakash, S. Xi, K. Hidajat, K. Tomishige, S. Kawai, Ni-phyllosilicate@Ce1-xZrxO2核壳催化剂甲烷干式改制中晶格氧在甲烷活化中的作用：Zr掺杂效应、机理及动力学研究, Appl. Catal. B 290 (2021), 119998.
+- [14] J. Zhang, F. Li, 耐焦炭Ni@SiO2催化剂用于甲烷干式改制, Appl. Catal. B 176 (2015) 513-521.
+- [15] K. Mondal, S. Sasmal, S. Badgandi, D.R. Chowdhury, V. Nair, 甲烷干式改制制取合成气：一种增值化学品的潜在替代工艺——技术经济视角, Environ. Sci. Pollut. R. 23 (2016) 22267-22273.
+- [16] F.G.M. de Medeiros, F.W.B. Lopes, B. Rego de Vasconcelos, 通过甲烷干式改制生产氢气的前景与技术挑战, Catalysts 12 (2022) 363.
+- [17] R.Y. Chen, Y.C. Chen, C.T. Yu, J.N. Chung, CH4与CO2干式改制的热力学分析, High. Press. J. Nat. Gas. Eng. 26 (2015) 617-629.
+- [18] P. Cao, S. Adebgite, T. Wu, CO2甲烷改制的热力学平衡分析：碳沉积消除与H2/CO比调节, Energy Procedia 105 (2017) 1864-1869.
+- [19] H. Swana, V. Kroll, G. Martin, C. Mirodatos, 二氧化碳甲烷改制过程中负载镍催化剂的失活, Catal. Today 21 (1994) 571-578.
+- [20] D. Baudouin, U. Rodekrack, F. Krumeich, A. De Dallmann, K.C. Czeto, H. Ménard, L. Vreyne, J.-P. Candy, P.B. Webb, C. Thieuleux, 二氧化碳低温甲烷改制中SiO2负载Ni纳米粒子的粒径效应, J. Catal. 297 (2013) 27-34.
+- [21] J.W. Han, J.S. Park, M.S. Choi, H. Lee, 解耦甲烷干式改制Ni催化剂的粒径与载体效应, Appl. Catal. B 203 (2017) 625-632.
+- [22] S.M. Moosavi, K.M. Jablonka, B. Smit, 机器学习在材料理解与设计中的作用, J. Am. Chem. Soc. 142 (2020) 20273-20287.
+- [23] P. Schlexer Lamoureux, K.T. Winther, J.A. Garrido Torres, V. Strelov, M. Zhao, M. Badjic, F. Abild-Pedersen, T. Bligaard, 计算异相催化中的机器学习, ChemCatChem 11 (2019) 3581-3601.
+- [24] A. Mazheika, Y.-G. Wang, R. Valero, F. Vines, F. Illas, L.M. Ghiringhelli, S. V. Levchenko, M. Scheffler, 人工智能驱动的催化基因发现及其在半导体氧化物上CO2活化中的应用, Nat. Commun. 13 (2022) 419.
+- [25] Z.W. Ulissi, A.J. Medford, T. Bligaard, J.K. Nørskov, 利用缩放关系机器学习和DFT计算解决表面反应网络复杂性问题, Nat. Commun. 8 (2017) 1-7.
+- [26] M.E. Günyay, Y. Yıldırım, 从过往催化中提取知识：2000-2012年贵金属催化剂选择性CO氧化的一个案例, ChemCatChem 5 (2013) 1395-1406.
+- [27] A. Smith, A. Keane, J.A. Dumesic, G.W. Huber, V.M. Zavala, 基于实验数据的催化活性分析与预测机器学习框架, Appl. Catal. B 263 (2020), 118257.
+- [28] M. Suvarta, T.P. Araújo, J. Pérez-Ramírez, 一种用于热催化CO2加氢制甲醇时空产率预测的通用机器学习框架, Appl. Catal. B (2022), 121530.
+- [29] L. Foppa, C. Sutton, L.M. Ghirardelli, S. De, P. Löser, S.A. Schunk, A. Schäfer, M. Scheffler, 从高通量实验与人工智能中学习选择性氧化催化剂的设计规则, ACS Catal. 12 (2022) 2223-2232.
+- [30] T.N. Nguyen, T.T.P. Nhat, K. Takimoto, A. Thakur, S. Nimishira, J. Ohyama, I. Miyazato, L. Takahashi, J. Fujima, K. Takahashi, T. Tanitame, 甲烷氧化耦合的高通量实验与催化剂信息学, ACS Catal. 10 (2020) 921-932.
+- [31] J.A. Esterhuizen, B.R. Goldsmith, S. Linic, 异相催化知识生成的可解释机器学习, Nat. Catal. 5 (2022) 175-184.
+- [32] B. Weng, Z. Song, R. Zhu, Q. Yan, Q. Sun, C.G. Grice, Y. Yan, W.-J. Yin, 源自符号回归的简单描述符加速新钙钛矿催化剂的发现, Nat. Commun. 11 (2020) 3513.
+- [33] W. Xu, M. Andersen, K. Reuter, 用于预测过渡金属氧化物反应性的数据驱动描述符工程与改进的缩放关系, ACS Catal. 11 (2021) 734-742.
+- [34] X. Wang, S. Jiang, W. Hu, S. Ye, T. Wang, F. Wu, L. Yang, X. Li, G. Zhang, X. Chen, 利用可解释机器学习从振动光谱中定量确定表面吸附质性质, J. Am. Chem. Soc. 144 (2022) 16069-16076.
+- [35] L. Breiman, 随机森林, Mach. Learn 45 (2001) 5-32.
+- [36] J.H. Friedman, 贪婪函数逼近：一种梯度提升机, Ann. Stat. (2001) 1189-1232.
+- [37] L. Prokhorenkova, G. Gusev, A. Vorobev, A.V. Dorogush, A. Gulin, CatBoost：具有类别特征的无偏提升, Adv. Neural Inf. Process. Syst. 31 (2018).
+- [38] M. Christoph, 可解释机器学习：使黑盒模型可解释的指南, 2019.
+- [39] A.J. Medford, M.R. Kunz, S.M. Ewing, T. Borders, R. Fushimi, 通过催化信息学从数据中提取知识, ACS Catal. 8 (2018) 7403-7429.
+- [40] Z. Jensen, E. Kim, S. Kwon, T.Z.H. Gani, Y. Román-Leshkov, M. Moliner, A. Corma, E. Olivetti, 基于自动文献数据提取的沸石合成机器学习方法, ACS Cent. Sci. 5 (2019) 892-899.
+- [41] S. Park, B. Kim, S. Choi, P.G. Boyd, B. Smit, J. Kim, 金属有机框架论文的文本挖掘, J. Chem. Inf. Model 58 (2018) 244-251.
+- [42] C.R. Harris, K.J. Millman, S.J. Van Der Walt, R. Gommers, P. Virtanen, D. Cournapeau, E. Wieser, J. Taylor, S. Berg, N.J. Smith, 基于NumPy的数组编程, Nature 585 (2020) 357-362.
+- [43] W. McKinney, Python中的统计计算数据结构, Proc. 9th Python in Sci. Conf. Austin, TX (2010) 51-56.
+- [44] F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, Scikit-learn：Python中的机器学习, J. Mach. Learn. Res. 12 (2011) 2825-2830.
+- [45] J.D. Hunter, Matplotlib：一个二维图形环境, Comput. Sci. Eng. 9 (2007) 90-95.
+- [46] M.L. Waskom, Seaborn：统计数据可视化, J. Open Source Softw. 6 (2021) 3021.
+- [47] T. Hastie, R. Tibshirani, J.H. Friedman, J.H. Friedman, 统计学习方法：数据挖掘、推断与预测, Springer, 2009.
+- [48] Y. Nohara, K. Matsumoto, H. Soejima, N. Nakashima, 使用改进的Shapley加法解释解释机器学习模型, Proc. 10th ACM Int. Conf. Bioinformatics. Comput. Biol. Health Inform. (2019), pp. 546-546.
+- [49] S.M. Lundberg, S.-I. Lee, 解释模型预测的统一方法, Adv. Neural Inf. Process. Syst. 30 (2017).
+- [50] J.Y.-L. Chan, S.M.H. Lew, K.Y. Beal, W.K. Cheng, S.W. Phoong, Z.-W. Hong, Y.-L. Chen, 缓解多重共线性问题及其机器学习方法：综述, Mathematics 10 (2022) 1283.
+- [51] C.C. Chong, Y.W. Cheng, S.N. Bukhari, H.D. Setiabudi, A.A. Jalil, Ni/氟化物SBA-15催化剂上的甲烷干式改制：载体形貌（棒状F-SBA-15和树枝状DFSBA-15）的影响, Catal. Today 375 (2021) 245-257.
+- [52] R. Debek, M. Totak, M.E. Galvez, T. Grzybek, P. Da Costa, CO2甲烷改制中水滑石衍生Mg(Ni, Al)O混合氧化物上锆的促进效应, Appl. Catal. B 223 (2018) 36-46.
+- [53] S.M. Sajjadi, M. Haghhighi, A.A. Eslami, F. Rahmani, Cu和Co掺杂Ni/Al2O3纳米催化剂上的CO2甲烷改制制氢：浸渍法与溶胶-凝胶法及工艺条件和促进剂的影响, J. Sol. Gel. Sci. Technol. 67 (2013) 601-617.
+- [54] M. Shah, S. Das, A.K. Nayak, P. Mondal, A. Bordoloi, 金属-载体界面的智能设计用于不可允许的干式改制催化剂, Appl. Catal. A 556 (2018) 137-154.
+- [55] R. Blom, I.M. Dahl, Å. Slagtern, B. Sortland, A. Spjelkavik, E. Tangstad, 流化床反应器中镧改性催化剂上的二氧化碳甲烷改制, Catal. Today 21 (1994) 535-543.
+- [56] A.M. Gaddalla, M.E. Sommer, 镍催化剂上的二氧化碳甲烷改制, Chem. Eng. Sci. 44 (1989) 2825-2829.
+- [57] L. Foppa, T. Margossian, S.M. Kim, C. Muller, C. Copéret, K. Larmiier, A. Comas-Vives, 对比水煤气变换与甲烷干式改制中Ni/Al2O3界面的作用, J. Am. Chem. Soc. 139 (2017) 17128-17139.
+- [58] D. Chen, K.O. Christensen, E. Ochoa-Fernández, Z. Yu, B. Tøttrup, N. Latorre, A. Monzon, A. Holmen, 碳纳米纤维的合成：甲烷分解过程中Ni晶粒尺寸的影响, J. Catal. 229 (2005) 82-96.
+- [59] O. Daoura, G. Fornasieri, M. Boutros, N. El Hassan, P. Beaunier, C. Thomas, M. Selmane, A. Miche, C. Sassoey, O. Ersen, 一锅法制备的嵌入Ni颗粒的类SBA-15介孔二氧化硅单一孔道作为选择性且稳定的甲烷干式改制催化剂, Appl. Catal. B 280 (2021), 119417.
+- [60] M. Li, A.C. van Veen, 通过Ni-CeO2-x相互作用调节Ni催化甲烷干式改制及碳沉积的催化性能, Appl. Catal. B 237 (2018) 641-648.
+- [61] M. Akri, S. Zhao, X. Li, K. Zang, A.F. Lee, M.A. Isaacs, W. Xi, Y. Gangarajula, J. Luo, Y. Ren, 原子分散镍作为耐焦炭活性位点用于甲烷干式改制, Nat. Commun. 10 (2019) 1-10.
+- [62] J.P. Janet, S. Ramesh, C. Duan, H.J. Kulik, 基于神经网络驱动的高效全局优化，在数百万个过渡金属配合物空间中进行精确多目标设计, ACS Cent. Sci. 6 (2020) 513-524.
+- [63] C.R. Blyth, 论Simpson悖论与确定性原则, J. Am. Stat. Assoc. 67 (1972) 364-366.
+- [64] D.H. Wolpert, 堆叠泛化, Neural Netw. 5 (1992) 241-259.
+- [65] A. Khemphila, V. Boonjing, 比较逻辑回归、决策树和神经网络在心脏病患者分类中的性能, 2010 Int. Conf. Comput. Intell. Syst. Manag. Appl. (CISIM), IEEE (2010) 193-198.
+- [66] L. Grinštajn, E. Oyallon, G. Varoquaux, 为何基于树的模型在表格数据上仍优于深度学习, arXiv Prepr. arXiv 2207 (2022) 08815.
+- [67] Y. Gorishniy, I. Rubachev, V. Khrulkov, A. Babenko, 重新审视表格数据的深度学习模型, Adv. Neural Inf. Process. Syst. 34 (2021) 18932-1843.
+- [68] T.G. Dietterich, 机器学习中的集成方法, International Workshop on Multiple Classifier Systems, Springer, 2000, pp. 1-15.
+- [69] E.C. Carlson, 仿真中不要拿物理性质赌博, Chem. Eng. Prog. 92 (1996) 35-46.
+

@@ -1,0 +1,371 @@
+# 基于可解释机器学习的镍催化甲烷干重整中催化剂和工艺参数的影响
+
+
+
+
+
+
+
+
+
+
+## 摘要
+
+甲烷干式重整（DRM）是一种利用两种强效温室气体（即 CO2 和 CH4）的有前景技术。尽管活性且稳定的催化剂设计原则已确立，但预测 DRM 在改变产物 H2/CO 比的竞争性副反应中的选择性仍然具有挑战性。在这里，我们从发表的文献中策划了一组 1638 个数据点，并训练树回归模型，将 H2/CO 比作为 11 个催化剂和工艺参数的函数进行预测。CatBoost 回归器实现了最佳预测性能，R2 = 0.91。特征重要性分析表明，除了工艺参数对 DRM 性能的已知影响外，Ni 粒子尺寸和负载量可能在调节 H2/CO 比方面发挥作用，且不受反应物转化率影响。我们的探索性研究凸显了数据驱动 ML 模型在非均相催化中发掘结构-性质关系的能力，通过隔离单个设计参数的影响来实现，这种方法在实验中难以实现。
+
+## 1. 引言
+
+全球变暖的不利影响促使国际社会加大力度应对其有害影响并促进可持续发展，例如协调努力将升温限制在工业化前温度以上 1.5 °C [1]。能够将 CO2 等温室气体转化为有用化学产品的工艺因此近年来备受关注，作为脱碳化学工业的可能手段 [2]。例如，甲烷干式重整（DRM）（Eq. 1）是生产合成气（即 CO 和 H2 的混合物）[3] 的蒸汽甲烷重整的一种有前途的替代方法。由于理论 H2/CO 比接近 1，所产生的合成气非常适合通过后续加工制成醋酸或醛类 [4]，或通过菲希尔-托普谢反应制造柴油和喷气燃料等高值液态烃产品 [5,6]。
+
+CH4 + CO2 ⇌ 2 H2 + 2 CO, ΔH298 K = +247.3 kJ/mol (1)
+
+除了作为 DRM 高效催化剂的贵金属（如 Pt）外，某些地球富集元素（如 Ni）也表现出合理的活性，但容易积炭和烧结，从而导致催化剂失活和反应器压力升高等有害影响 [7, 8]。因此，通过提高地球富集 DRM 催化剂的抗积炭和抗烧结性能来改善其活性和稳定性的策略已得到广泛探索 [4,5,9]。例如，通过高氧迁移率的氧化还原活性氧化物（如 CeO2 或 ZrO2）进行表面改性，可通过促进 CO2 解离及随后由活性氧物种气化沉积碳来提高抗积炭能力 [10]，而通过介孔通道内的限域可物理抑制烧结 [11]。值得注意的是，通过将催化剂包覆于多孔可还原氧化物外壳中，可以同时实现这两个优势，其中核-壳结构既能物理防止烧结，又能最大化活性于 CO 形成的 Ni-可还原氧化物界面位点比例 [12–14]。
+
+与基于 Ni 的 DRM 催化剂相关的另一个挑战——即产物合成气比（H2/CO 比）因副反应逆水煤气变换（RWGS）而低于 1 的趋势——受到的关注要少得多。该反应会消耗 H2 并产生 H2O 作为不需要的副产物 [15]。低合成气比是不理想的，因为合成气流在用于下游应用前必须补充 H2，导致预处理成本增加 [16]。在公开文献中，很少有论文讨论催化剂性质对合成气比的影响，更重要的是，如何调节这些性质以提高合成气比 [17,18]。尽管有时有人推测合成气比主要由 RWGS 反应的热力学而非催化剂本身的性质所决定 [19,20]，但这与几项观察结果不一致：即使在相同反应条件下，不同催化剂的合成气比也存在显著差异 [21]，这表明可以通过靶向催化剂工程来提高 DRM 反应相对于 RWGS 反应的选择性，其方式类似于抑制热力学有利的积炭反应在抗积炭材料上的发生。
+
+H2 + CO2 ⇌ H2O + CO, ΔH298 K = +41 kJ/mol (2)
+
+机器学习（ML）在材料设计和发现中得到广泛应用，因其能够在大型数据集中发现相关性 [22]。在非均相催化领域，ML 模型常被用来克服与密度泛函理论（DFT）计算相关的计算瓶颈 [23]，通过从电子或结构指纹中预测可计算的物理性质 [24]（例如吸附能和反应机理 [25]（即，基于可能的基本步骤的估计活化能））。在一种互补的方法中，ML 模型还可以从实验数据中进行训练，这些数据要么从发表的文献中提取 [26–28]，要么从高通量实验中生成 [29,30]，以根据工艺参数和可测的催化剂性质预测催化性能 [26,31]。后一种方法对于无法用当前可用计算方法（例如 DFT）准确建模的具有复杂架构的多组分材料特别有用。在这些研究中，模型可解释性 [31]（例如，通过黑箱 ML 模型输出的特征重要性分析实现）对于发展定性科学洞察 [28] 至关重要，这些洞察反过来可由实验人员利用，以帮助开发改进的催化剂和工艺。与固有可解释的 ML 方法（如基于符号回归的方法 [32–34]）相比，这种两步“灰箱”方法通常在大型和复杂数据集上提供更高的预测精度 [31]。
+
+在本工作中，我们开发可解释的 ML 模型，以从大量关于 Ni 催化 DRM 的文献中发掘结构-性质关系。具体来说，我们首先从公开文献中收集了一份全面、高质量的催化剂性质、工艺参数和反应性数据数据集，然后在此基础上训练树回归模型（随机森林 – RF [35]、梯度提升回归器 – GBR [36] 和分类树回归器 – CatBoost [37]），以使用催化剂性质和工艺参数作为特征来预测反应物转化率和合成气比。然后，我们应用事后模型解释技术 [38] 来说明每个特征如何影响合成气比和反应物转化率。除了复制温度、空速和进料稀释对 DRM 性能的已知影响外，我们研究中应用的部分依赖图还揭示了 Ni 粒子尺寸作为一种潜在手段，可用于独立于工艺操作条件影响来控制合成气比。
+
+## 2. 方法
+
+### 2.1. 总体方法
+
+我们选择三种常用的 DRM 催化剂性能定量指标，即 CH4 转化率、CO2 转化率和合成气比（定义为 H2 生成速率与 CO 生成速率之比），作为我们的目标。催化剂稳定性通过在反应结束或每运行 10 小时后记录目标值来隐含考虑（见下文）。我们选择 11 个输入特征，包括 5 个工艺参数和 6 个催化剂性质，这些特征可能与目标预测相关（表 1），随后进行特征分析以确定与目标预测最相关的特征。我们关注任何材料都可测量的催化剂性质，而不是更常用的结构、电子或组成描述符 [27,29]，从而最大限度地提高了我们框架在各种催化剂架构和配方中的通用性。
+
+我们的总体方法如图 1 所示。我们通过在 Scopus 数据库中搜索过去 20 年内发表的所有与 Ni 催化 DRM 相关的期刊文章（搜索字符串见补充资料文本 S1）来开始数据策划过程。搜索返回了 1810 篇文章，这些文章经人工审核以排除未报告至少一个完整数据点（即上述目标属性和输入特征的完整集合）的研究。例如，纯计算研究和催化剂表征不完整的研究被排除在数据集之外。
+
+表 1
+用于机器学习模型的选定特征摘要。
+
+| 类型 | 特征（单位） | 描述 |
+| :--- | :--- | :--- |
+| 工艺参数 | 进料中 CH4 比例 / CH4 进料分数a | CH4 体积流量与进料至催化剂反应器的总体积流量之比。也相当于 CH4 分压。 |
+| | 反应温度 (°C) | 进行 DRM 实验的反应温度。 |
+| | 镍负载量 (%)b | 所制备催化剂中镍的重量百分比。 |
+| | 反应时间 (h)c | 进行转化率和合成气比读数的反应时间。 |
+| | GHSV (mL/gcat·h)d | 反应的气体每小时空速，定义为单位质量催化剂每小时的总进料体积流量。 |
+| 催化剂特性 | 孔径 (nm)e | 催化剂载体的孔径。 |
+| | 孔容 (cm3/g)c | 催化剂载体的比孔容。 |
+| | 比表面积 (m2/g)f | 新鲜催化剂的比表面积。 |
+| | H2-TPR 峰温 (°C)g | 温度程序还原（TPR）期间 H2 最大吸附温度。 |
+| | Ni 粒子尺寸 (nm)h | 还原催化剂上 Ni 纳米颗粒的平均直径。 |
+| | 修饰物电负性i | 催化剂制备中使用的修饰物、掺杂剂或助剂的 Pauling 电负性。 |
+
+a: 在整个数据集中，CH4:CO2 比例始终等于 1，而进料中的稀释剂分数有所不同。  
+b: 如果报告了感应耦合等离子体（ICP）分析确定的负载量，则采用该值，否则使用标称负载量。  
+c: 如果时间-流数据可用，则采集最后一个数据点。对于超过 20 h 的实验，每隔 10 小时从时间流中采集多个数据点。  
+d: GHSV 的计算如下：GHSV (mLgcat⁻¹h⁻¹) = 进料流速 (mLh⁻¹) / 催化剂重量 (gcat)  
+e: 孔径和分布通常采用 Barrett-Joyner-Halenda (BJH) 方法测量，并采用作者报告的平均孔径和总孔容。  
+f: 采用的值通过 Brunauer-Emmett-Teller (BET) 分析 N2 物理吸附数据测量。  
+g: 如果还原剖面中识别出多个峰值，则取最大峰值。  
+h: 如果可用，则通过透射电子显微镜（TEM）测量；否则通过 X 射线衍射（XRD）数据利用 Scherrer 方程测量。  
+i: 如果存在多种不同含量的修饰物，则采用加权平均值。
+
+
+
+
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_2_0.png)
+
+图 1. : 我们总体工作流程的示意图，指示数据收集、预处理和分析，接着是机器学习（ML）模型应用及其利用特征重要性图、单向和双向部分依赖图（PDPs）以及夏普利附加解释（SHAP）图进行解释。
+
+### 2.2. 数据整理
+
+在本工作中，我们利用先前发表的数据来绕过原本所需的许多耗时实验。尽管通过文本挖掘自动提取信息的想法可能很有前景 [39,40]，但我们观察到，关于 DRM 的已发表研究在表征技术和实验条件方面往往存在差异，这可能会影响模型的可解释性 [31]。此外，以图形方式（例如，在图表或图中）而不是以文本方式（例如，在表格中）呈现的数据，通常更难以自动提取 [41]。因此，我们没有利用自动数据检索方法，而是手动扫描并从每篇文章中提取数据，以减少文本挖掘方法导致的错误数据收集。在必要时，从文献中呈现的图表中提取所需的数值，使用图形读取工具从图中提取。该程序得到了 221 篇论文的较小列表（补充信息 Fig. S1），从中手动提取了总共 1637 个完整数据点。
+
+在 Python 中使用了 NumPy [42] 和 pandas [43] 软件库来准备用于可视化和模型训练的数据。对于合成气比预测，移除了合成气比预测目标值顶部和底部 0.5 百分位的异常值。这些是极端值和特殊案例，样本点很少，因此可能会影响模型精度。顶部 0.5 百分位代表产生高于 1.3 的合成气比的催化剂，这明显大于在以 RWGS 为副反应的 DRM 过程中预期的合成气比（小于 1）。我们将在 3.1 节稍后讨论合成气比大于 1 的一些原因。相反，底部 0.5 百分位代表性能较差的催化剂，产生 0 到 0.15 之间的合成气比，显示出对 DRM 低且几乎可忽略的活性。在这两种情况下，这些点都落在感兴趣的活性 Ni 催化剂样本空间之外，因此可能对我们探索导致接近一的合成气比的特性不利。移除的点在补充信息 Table S1 中指示。遵循训练-测试划分惯例，数据集被随机划分，将 90% 的数据点分配给训练集，10% 分配给测试集。我们在附录中提供了关于机器学习工作流的更多信息。
+
+### 2.3. 模型评估与数据分析
+
+我们的工作评估了三种集成树模型，即随机森林（RF）[35]、梯度提升回归器（GBR）[36] 和类别提升回归器（CatBoost）[37]。我们在附录中提供了不同模型实现的更多细节（以及它们算法的介绍在 Text S2）。scikit-learn 库 [44] 用于应用 RF 和 GBR 模型，CatBoost Python 库用于应用 CatBoost 回归器。模型性能使用默认的均方根误差（RMSE）准则进行评估，模型得分由决定系数值 R2 决定。对于模型测试，展示了预测目标值与实际目标值的回归图，以说明训练模型的预测性能。matplotlib 库 [45] 用于绘制直方图、散点图和其他数据可视化方法。seaborn 库 [46] 也用于绘制特征相关矩阵的热图，以可视化数据集中输入特征对之间的相关系数。对于模型解释，使用 scikit-learn 库提供的每个特征变量的单向部分依赖图（PDP）折线图来可视化输入特征与目标响应之间的交互作用。双向 PDP 作为三维（3D）曲面图展示，以可视化一对输入特征对目标响应的影响 [47]。用于说明调整每个特征值对两个目标变量的部分依赖值的影响的轨迹图，是通过先从训练模型计算部分依赖值，然后在带有说明特征值范围的 colormap 的散点图上绘制部分依赖值得到的。所描绘的点构成数据集中第 5 到第 95 个百分位，颜色较浅代表在数据集中获得较低百分位的特征值，颜色较深代表在数据集中获得较高百分位的特征值。
+
+### 2.4. 模型解释技术
+
+模型训练后，我们应用模型解释工具来分析和可视化特征输入对目标响应的不同影响。特征重要性可以基于三种不同的方法计算，即基尼重要度、排列重要度和夏普利附加解释（SHAP）值 [48]。基于前两种方法（基尼重要度和排列重要度）的特征重要性图由 scikit-learn 库提供，而 SHAP 图使用 SHAP 软件库实现 [49]。特别是，SHAP 库中的蜂群图被应用来可视化每个特征对模型的重要性以及每个特征的方差如何影响模型输出。夏普利值基于合作博弈论的公平分配结果，为模型输出分配重要性或信用给其输入特征，从而对每个特征对训练模型的影响进行排序。特征重要性、排列重要度和 SHAP 值计算的理论背景在补充信息 Text S3 中提供。
+
+scikit-learn 库中实现的单向和双向 PDP 被用于显示目标值与一组感兴趣的输入特征之间的依赖关系，同时将其他特征的值保持在其均值。换句话说，PDP 是一种可视化一组特征对训练机器学习模型预测目标响应的边际效应的方法。可以从 PDP 分析说明的趋势中分析工艺参数和催化剂特性对合成气比、CH4 转化率和 CO2 转化率的预测影响。我们还将 PDP 中观察到的趋势与当前文献中的推理相联系，以突出我们结果的可解释性。
+
+## 3. 结果与讨论
+
+### 3.1. 数据分析与可视化
+
+我们开始分析，通过获取每对特征之间的相关系数来更好地理解数据集。相关矩阵的热图如 Fig. 2a 所示，其中深红色表示强正相关系数，深蓝色表示强负相关系数，淡黄色表示弱相关系数。正如训练 ML 模型所期望的那样，大多数特征具有弱交叉相关，除了（1）表面积与孔容之间的强正相关，以及（2）表面积与孔径之间的中度负相关。这些相关性与普遍理解的催化剂载体纹理特性一致：高度多孔且孔径小的材料往往由于孔内间隙而具有较大的比表面积。尽管这种多重共线性可能会低估相关特征的重要性 [50]，但我们仍保留了所有特征，以避免模型训练中可能丢失重要信息。
+
+图 2b 显示了我们为目标（即 CH4 转化率、CO2 转化率和合成气比）收集的原始数据分布。此外，每个分布的描述性统计量（如均值、中位数、标准差和偏度）汇总在补充信息 Table S2 中。数据集中反应物（即 CH4 和 CO2）的转化率范围从 0% 到近 99%，平均值分别为 59.9% 和 67%。CO2 转化率略高于 CH4，这与 CO2 除了 DRM 之外还在多个副反应（如 RWGS 和焦炭气化）中被消耗是一致的。移除异常值后（见 2.2 节），合成气比数据集有 1620 个样本点，最小值、平均值和最大值分别为 0.165、0.827 和 1.29。有趣的是，有少数研究报道了大于 1 的合成气比，这与一般经验法则（即由于寄生耗氢 RWGS 反应，合成气比通常小于 1）明显相悖。有两个原因，都涉及其他副反应，有
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_3_0.png)
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_3_1.png)
+
+图 2 : 数据集的总体特性。（a）显示每对特征之间相关系数的相关矩阵热图。（b）目标值分布图：左 – 合成气比，中：CH4 转化率，右：CO2 转化率。
+
+
+
+
+
+已有文献提出了解释这些异常高合成气比的机制。首先，在高 CO 浓度下，布杜阿尔反应（2CO <=> CO2 + C）可能更有利，这将降低 CO 的相对浓度并从而提高合成气比 [51]。其次，特别容易发生甲烷直接分解（CH4 <=> 2 H2 + C）的催化剂会因该副反应产生额外的 H2 [52]。因此，尽管生产 H2/CO 比大于 1 的合成气在名义上颇具吸引力，但这种行为总伴随着显著的碳沉积，无论是通过布杜阿尔反应还是甲烷分解，都对整体 DRM 过程极为不利。还值得注意的是，转化率和合成气比的分布向右偏斜，最可能指出已发表文献中存在固有偏见，即不愿报告性能较差（会导致较低数值）的催化剂。特征分布的偏度（见补充信息图 S2 和表 S3）也可能出于同样的原因得到解释。
+
+最后，我们还可以观察到合成气比与反应物转化率之间存在中等程度的正线性关系（见补充信息图 S3），以合成气比为因变量、反应物转化率为自变量进行线性回归得到的调整 R^2 为 0.46，RMSE 为 0.14。如果假设在不同 DRM 转化率下 RWGS 步骤均达到完全平衡，则这种关系可以由反应温度对每个参数的共同潜在影响来解释，此前已在 Ni/SiO2 催化剂 [20] 上得到证实，并通过我们自己的 Aspen 模拟得到确认（模拟细节见附录；结果表提供补充信息表 S4）。从最佳拟合直线的斜率来看，平均反应物转化率每增加 1%，合成气比约增加 0.005。然而，相关性相对较弱，这促使我们更仔细地审查是否可以识别出独立于反应转化率影响合成气比的特征，我们将在 3.5 节中再次讨论这一点。
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_4_0.png)
+
+Fig. 3: 使用以下回归器预测合成气比的回归图（网格线上显示 R^2、RMSE 和数据分布）及残差分布图：（a-b）随机森林回归器，（c-d）梯度提升回归器和（e-f）CatBoost 回归器。残差计算为实际目标值与预测目标值之差。
+
+### 3.2. 合成气比预测
+
+我们在训练集上训练 RF、GBR 和 CatBoost 模型，以预测测试集的合成气比。每个模型的性能基于实际合成气比与预测合成气比之间的决定系数（模型得分；R^2）和 RMSE 进行评估。三种模型均表现出良好的 R^2 值（0.87–0.91），其中 CatBoost 模型表现出最高的 R^2 值 0.91 和最低的 RMSE 0.053（见图 3）。
+
+为确定不同特征对合成气比影响的重要性，我们使用 SHAP 蜂群图进行特征重要性分析（见图 4）。三个最重要的特征是反应温度、气体小时空速（GHSV）和 Ni 粒径，其 SHAP 值在水平轴上表现出最大方差。蜂群图还说明了特征值（由图 4 中点的颜色色调表示）对目标 SHAP 值（如图 4 的 x 轴所示）的预期影响。特别是，反应温度较高（由粉色点“群”表示）会导致较高的 SHAP 值，从而导致较高的预测合成气比。模型预测，较低的 GHSV 和较小的 Ni 粒径（由图 4 中深蓝色点簇表示）会导致较高的 SHAP 值和预测合成气比。因此，比表面积、Ni 负载量、孔体积、H2-TPR 峰温和孔径值较高，通常会导致较高的预测合成气比，而较高的 CH4 进料分数则产生相反效果。反应时间和助剂电负性的影响对 SHAP 值不那么显著，被认为是最不重要的。基于基尼重要性和置换重要性（见补充信息图 S4）确定的特征重要性与我们的 SHAP 分析基本一致。
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_5_0.png)
+
+Fig. 4: 显示合成气比预测特征重要性的 SHAP 蜂群图。
+
+### 3.3. 工艺参数对合成气比的影响
+
+在工艺参数中，上述 SHAP 图（见图 4）表明温度和 GHSV 对合成气比具有最显著的影响。高温度从热力学上有利于强吸热的 DRM 反应而非 RWGS 副反应，从而导致较高的合成气比，这一结果也在我们的偏依赖图（PDP）（见图 5a）中得到观察，并由 Aspen Plus 中的热力学模拟证实（见补充信息图 S5）。然而，如果合成气比完全由热力学决定，则不应预期会观察到合成气比随 GHSV 的变化，但相应的单向 PDP（见图 5b）反而显示合成气比在 GHSV 增加时最初降低，随后趋于平稳。当反应温度高于约 800 °C 时，模型显示合成气比数值无显著变化，因为 RWGS 反应受到青睐 [16]。这种行为与一系列反应模型一致，其中 RWGS 速率取决于 DRM 产物（即 H2）的浓度，因此随着 GHSV 降低和总转化率升高而增加 [53]。此外，随着 CH4 进料分数增加至 0.3，合成气比略有下降，随后似乎趋于平稳（见图 5c）。在我们的数据集中，CH4 进料分数是进料稀释程度的代理指标（见表 1），根据勒夏特列原理，这应使平衡向有利于 DRM 的方向移动，同时阻碍正向 RWGS 反应。实验结果还表明，进料中较低的 CH4 进料比会导致更接近 1 的合成气比 [54]。反应时间的 PDP（对合成气比无显著影响）在补充信息图 S6 中描述。反应时间的可忽略影响（旨在捕捉失活效应）可能是由于对快速失活催化剂发表结果的偏见所致。
+
+通过双向 PDP，我们可以得出两个特征同时对合成气比影响的有用解释（见图 6）。特别是，它们明确排除了各特征间存在混淆交叉相关效应的可能性，从而证实了我们从单向 PDP 得出的结论：较低的 GHSV 和增加的进料稀释有利于获得较高的合成气比，这些可作为工艺控制手段，用于实现接近 1 的合成气比。
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_6_0.png)
+
+Fig. 5: 工艺参数对合成气比影响的单向偏依赖图，使用第 1 到第 99 百分位的特征值构建。x 轴上的黑线指示我们数据集中特征的近似分布，每条线表示从最左侧线（第 10 百分位）到最右侧线（第 90 百分位）的连续第 10 百分位。
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_6_1.png)
+
+Fig. 6: 成对工艺参数对合成气比影响的双向偏依赖图：（a）反应温度和 GHSV，（b）CH4 进料分数和 GHSV，以及（c）CH4 进料分数和反应温度。表面根据其相对合成气比值着色（蓝色：低，黄色：高）。
+
+### 3.4. 催化剂参数对合成气比的影响
+
+在所研究的催化剂设计参数中，Ni 粒径对合成气比影响最显著（见图 7a），合成气比与粒径之间存在强负相关。针对这一观察，可提出两种可能的假设。首先，如果 RWGS 基本步骤持续达到平衡，则粒径可能不会直接影响合成气比，而是仅通过其对反应物转化率的影响产生间接影响（见 3.5 节）。在 Ni/SiO2 催化剂低温 DRM 的一项研究中，Baudouin et al. 观察到合成气比在很大程度上由 CH4 或 CO2 转化率控制，与基础粒径无关，这归因于 Ni 表面上 DRM 和 RWGS 中间体的竞争性吸附以及因此无法解耦两种过程 [20]。尽管他们的发现与多项早期研究一致 [19,55]，但有时也发现 RWGS 并不处于动态平衡 [56]。或者，如果 DRM 和 RWGS 反应由同一催化剂上的不同位点催化，而它们的相对
+
+
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_7_0.png)
+
+Fig. 7: 单向部分依赖图，展示了催化剂参数对合成气比例的影响，使用第1到第99百分位的特征值构建。x轴上的黑线表示数据集中特征的近似分布，每条线表示从最左侧线（第10百分位）到最右侧线（第90百分位）的连续第10百分位。
+
+fractions are affected distinctly by particle size, then particle size can play a direct role in determining the relative selectivities towards DRM and RWGS, and hence the observed syngas ratio. For instance, Foppa et al. showed computationally and experimentally for Ni/Al2O3 that all surface Ni atoms are active for DRM, whereas only the Ni-Al2O3 interface sites are implicated in the forward water gas shift reaction [57]. The methane decomposition reaction (Section 3.1), which is particularly favorable over moderately-large Ni particles (ca. 20 – 100 nm) [58], may also increase observed syngas ratios beyond what is expected from the DRM/RWGS balance alone. Also, the nature of the support can influence the mechanisms, active sites and dominant surface intermediates: for instance, reducible metal oxides such as CeO2 can induce a bifunctional mechanism involving lattice oxygen vacancies that enable the decoupling of CO2 and CH4 activation steps [12].
+
+若比例受粒子尺寸的显著影响，则粒子尺寸可以直接决定向DRM和RWGS的相对选择性，从而影响观察到的合成气比例。例如，Foppa等人通过计算和实验研究Ni/Al2O3表明，所有表面Ni原子对DRM都有活性，而只有Ni-Al2O3界面位点参与正向水煤气变换反应[57]。甲烷分解反应（第3.1节）在中等偏大的Ni颗粒（约20–100 nm）[58]上尤其有利，也可能使观察到的合成气比例超过仅由DRM/RWGS平衡所预期的水平。此外，载体的性质可以影响反应机理、活性位点和占优势的表面中间体：例如，可还原金属氧化物（如CeO2）可以诱导涉及晶格氧空位的双功能机理，从而实现CO2和CH4活化步骤的解耦[12]。
+
+To the best of our knowledge, there have not been any studies in the published literature that have elucidated the precise effect of metal nanoparticle size on syngas ratios over realistic DRM catalysts. Experimentally, it can be difficult to isolate the effect of particle size from that of other catalyst parameters while also keeping the conversion and extents of coking and sintering unchanged. To this end, the approach of Han et al., in which pre-synthesized Ni nanoparticles of different sizes are deposited onto an inert support and coated with different oxide overlayers to minimize coking and sintering [21], could be promising. On the other hand, first-principles computational studies are complicated by the need to calculate product yields at high reactant concentrations to match experimental conditions, which would necessitate a full microkinetic model in addition to a realistic depiction of the working catalyst surface under reaction conditions, which can be challenging to obtain for complex catalyst architectures. Nevertheless, our present results suggest that such studies are warranted, and work along these lines is currently ongoing in our laboratory.
+
+据我们所知，已有文献中尚无任何研究阐明过金属纳米粒子尺寸对实际DRM催化剂上合成气比例的精确影响。在实验中，要将粒子尺寸的效应与其他催化剂参数的效应分离开来，同时保持转化率和焦炭及烧结程度不变，可能会很困难。为此，Han等人的方法可能很有前景：将预合成的不同尺寸Ni纳米颗粒沉积到惰性载体上，并包覆不同的氧化物外层以最小化焦炭和烧结[21]。另一方面，从原理计算研究因需要在高反应物浓度下计算产物产率以匹配实验条件而变得复杂，这除了需要对反应条件下工作催化剂表面进行真实描述外，还需要完整的微动力学模型，对于复杂催化剂架构而言，这可能难以获得。尽管如此，我们的当前结果表明这类研究是有必要的，并且沿着这一思路的工作目前正在我们的实验室中进行。
+
+Interestingly, syngas ratio increases with Ni loading up to ca. 20 wt% Ni, above which the effect attenuates (see Fig. 7b). Though this trend may appear to contradict that observed for the particle size considering that particle sizes usually increase with Ni loadings, the one-way PDPs are obtained by varying one feature at a time while keeping the other features at their average values; in other words, they assume that the features are decoupled from each other. Thus, our model points to a synergistic effect between higher Ni loadings, and small particle sizes in achieving optimal syngas ratios, which is further confirmed by two-way PDPs (see Fig. 8a). In practice, high Ni loadings and small particle sizes can be simultaneously achieved by improving dispersions through tailored syntheses involving mesoporous supports in tandem with strong metal-support interactions [59].
+
+有趣的是，合成气比例随Ni负载量增加至约20 wt% Ni而升高，在此之后效应减弱（见图7b）。尽管这一趋势看似与粒子尺寸所观察到的趋势相矛盾，考虑到粒子尺寸通常随Ni负载量增加而增大，但单向PDP是通过一次改变一个特征而保持其他特征在其平均值得到的；换言之，它们假设特征之间是解耦的。因此，我们的模型表明，较高的Ni负载量与小粒子尺寸在实现最优合成气比例之间存在协同效应，这由双向PDP进一步证实（见图8a）。在实践中，可以通过涉及介孔载体并结合强金属-载体相互作用的定制合成来提高分散度，从而同时实现高Ni负载量和小粒子尺寸[59]。
+
+Surprisingly, modifier electronegativity does not have a significant effect on syngas ratio (see Supplementary Information Fig. S6), even though the addition of promoters is a common strategy in catalyst design. There are two possible explanations for this observation. Firstly, the effects of promoters on textural properties, such as Ni dispersion and strength of metal-support interactions, could already have been captured by other catalyst features, namely H2-temperature programmed reduction (TPR) peak temperature, surface area, and particle size. Secondly, despite its successful use as a descriptor in several studies [28,29], the electronegativity may be too simplistic of a descriptor for the promoter’s effect on a catalyst, which could occur via diverse mechanisms such as enhancing redox properties or Brønsted/Lewis acidity/basicity. Unfortunately, the corresponding experimental measurables (e.g., band gap, oxygen vacancy density, titration, or temperature-programmed desorption results) are often only qualitatively reported in the literature and rarely quantified.
+
+令人惊讶的是，改性剂电负性对合成气比例没有显著影响（见补充信息图S6），尽管添加助剂是催化剂设计中的常见策略。对此观察有两种可能的解释。首先，助剂对纹理性质（如Ni分散度和金属-载体相互作用强度）的影响，可能已经被其他催化剂特征捕获，即H2-温度程序还原（TPR）峰温、比表面积和粒子尺寸。其次，尽管电负性在多项研究[28,29]中已成功用作描述符，但作为描述助剂对催化剂影响的描述符，它可能过于简单，这种影响可能通过多种机制发生，例如增强氧还原性质或Brønsted/Lewis酸性/碱性。不幸的是，相关的实验可测量量（例如，带隙、氧空位密度、滴定或温度程序脱附结果）在文献中通常仅定性报告，很少进行定量。
+
+The temperature of maximum H2 consumption during TPR is indicative of the reducibility of the catalyst, and in turn the strength of interactions between the unreduced oxide phase and the catalyst support. For Ni-based catalysts, peaks around ca. 300-400 °C are typically assigned to the bulk NiO weakly interacting with the support, 400-600 °C to the well-dispersed NiO strongly interacting with the support, and > 600 °C to the poorly reducible mixed oxide phases (e.g., silicates or aluminates). We observe that optimal syngas ratios are achieved between ca. 400 °C and 800 °C (see Fig. 7c). We hypothesize that the weak metal-support interactions of easily reducible NiO phases induce sintering under reaction conditions, leading to larger particle sizes. Conversely, poorly reducible precursors and overly strong metal-support interactions may result in a low degree of reduction and correspondingly an absence of Ni metal species for the reaction at lower
+
+TPR过程中最大H2消耗温度指示催化剂的还原性，进而指示未还原氧化物相与催化剂载体之间相互作用的强度。对于Ni基催化剂，约300-400 °C的峰通常分配给与载体弱相互作用的块体NiO，400-600 °C分配给与载体强相互作用的高分散NiO，而> 600 °C分配给还原性差的混合氧化物相（例如，硅酸盐或铝酸盐）。我们观察到，最优合成气比例在约400 °C至800 °C之间实现（见图7c）。我们假设，易还原NiO相的弱金属-载体相互作用在反应条件下诱导烧结，导致更大的粒子尺寸。相反，还原性差的前驱体和过强的金属-载体相互作用可能导致还原度低，从而在较低
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_8_0.png)
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_8_1.png)
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_8_2.png)
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_8_3.png)
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_8_4.png)
+
+Fig. 8: Two-way partial dependence plots of the effects of pairs of catalyst parameters on syngas ratio: (a) Ni loading and Ni particle size, (b) Pore size and Ni particle size, (c) Surface area and Ni particle size, (d) H2-TPR peak temperature and Ni particle size, and (e) Pore size and pore volume. The surfaces are colored according to their relative syngas ratio values (blue: low, yellow: high).
+
+反应温度[60]，从而导致转化率和合成气比例降低。
+
+Fig. 8: 双向部分依赖图，展示了催化剂参数对合成气比例的成对影响：(a) Ni负载量和Ni粒子尺寸，(b) 孔径和Ni粒子尺寸，(c) 比表面积和Ni粒子尺寸，(d) H2-TPR峰温和Ni粒子尺寸，以及(e) 孔径和孔容。表面根据其相对合成气比例值着色（蓝色：低，黄色：高）。
+
+For textural properties, we observe that syngas ratio increases with surface area (see Fig. 7d), pore size (see Fig. 7e) and pore volume (see Fig. 7f) until critical values of ca. 400 m²/g, 40 nm, and 1 cm³/g respectively. The effects of pore volume and surface area, which are strongly correlated (see Fig. 2), can be attributed to increased Ni dispersion which indirectly favors smaller Ni particle sizes. The effect of pore size is subtler because it is usually difficult to introduce very small pores to common support materials such as mixed oxides, hydroxyapatite, and layered double hydroxides. Thus, the observed correlation between pore size and syngas ratio may not imply causation and is more likely because the best-performing supports for achieving high syngas ratios are difficult to synthesize with very small pore sizes.
+
+对于纹理性质，我们观察到，合成气比例随比表面积（见图7d）、孔径（见图7e）和孔容（见图7f）增加而升高，直至分别达到约400 m²/g、40 nm和1 cm³/g的临界值。孔容和比表面积的影响（两者强相关，见图2）可归因于Ni分散度的提高，这间接有利于更小的Ni粒子尺寸。孔径的影响更微妙，因为通常很难在常见的载体材料（如混合氧化物、羟基磷灰石和层状双氢氧化物）中引入非常小的孔径。因此，孔径与合成气比例之间观察到的相关性可能并不意味着因果关系，更可能是因为实现高合成气比例的最佳载体难以合成具有非常小孔径的形式。
+
+Finally, the remainder of the two-way PDPs illustrating the effect of catalyst parameters on syngas ratio are shown in Fig. 8d-b. These plots together show that the preference for a smaller particle size dominates the determination of syngas ratio, with the other catalyst parameters playing relatively minor roles.
+
+最后，说明催化剂参数对合成气比例影响的其余双向PDP见图8d-b。这些图共同表明，偏好更小的粒子尺寸在确定合成气比例中占主导地位，而其他催化剂参数起相对次要的作用。
+
+### 3.5. Decoupling syngas ratios and reactant conversions
+
+The same process used for the prediction of syngas ratio is used to train a tree regressor model to predict CH4 and CO2 conversions. The CatBoost model demonstrates good prediction accuracy with test scores (R2) of 0.895 and 0.875 for CH4 and CO2 conversions, as shown by the regression plots in Supplementary Information Fig. S7. SHAP plots are again used to evaluate the feature importance for predicting CH4 and CO2 conversions (see Supplementary Information Fig. S8), and show that process parameters, particularly reaction temperature, GHSV and CH4 feed fraction, are the most important features for predicting both CH4 and CO2 conversions. However, catalyst properties such as pore volume, H2-TPR peak temperature, Ni particle size, surface area, and pore size are also of mild importance for predicting conversions, in agreement with the relevance of catalyst design for achieving high reactant conversions in DRM.
+
+### 3.5. 解耦合成气比例和反应物转化率
+
+用于预测合成气比例的相同过程也用于训练树回归模型以预测CH4和CO2转化率。如补充信息图S7中的回归图所示，CatBoost模型对CH4和CO2转化率表现出良好的预测准确性，测试得分（R2）分别为0.895和0.875。SHAP图再次被用于评估预测CH4和CO2转化率的特征重要性（见补充信息图S8），并显示工艺参数，特别是反应温度、GHSV和CH4进料分数，是预测CH4和CO2转化率最重要的特征。然而，孔容、H2-TPR峰温、Ni粒子尺寸、比表面积和孔径等催化剂特性对预测转化率也具有中等重要性，这与催化剂设计在DRM中实现高反应物转化率方面的重要性相一致。
+
+As discussed in Section 3.1 above, considering the moderate correlation between syngas ratio and reactant conversions in our dataset, we focus only on identifying where the effects of each feature on reactant conversions and syngas ratio diverge. The one-way PDPs of the effects of each feature on reactant conversions are shown in Supplementary Information Fig. S9-S10, and two-way PDPs for important feature pairs are provided in Supplementary Information Fig. S11-S14. To visualize each feature's simultaneous effect on conversion and syngas ratio, we plot the PDP-predicted CH4 conversions and syngas ratios across the range of feature values on the same axes (see Fig. 9). The corresponding plots for CO2 conversion are very similar and presented in Supplementary Information Fig. S15. In this manner, each feature's contribution to the overall positive correlation between syngas ratio and conversion can be decoupled and compared independently.
+
+如第3.1节所述，考虑到我们的数据集中合成气比例与反应物转化率之间存在中等相关性，我们仅关注识别每个特征对反应物转化率和合成气比例的影响不一致的地方。每个特征对反应物转化率影响的单向PDP显示在补充信息图S9-S10中，重要特征对的双向PDP提供在补充信息图S11-S14中。为了可视化每个特征对转化率和合成气比例的同时影响，我们在相同的坐标轴上绘制了跨特征值范围的PDP预测CH4转化率和合成气比例（见图9）。CO2转化率的相应图表非常相似，并呈现在补充信息图S15中。这样一来，每个特征对合成气比例与转化率之间总体正相关性的贡献可以被解耦并独立比较。
+
+With several exceptions, the predicted syngas ratios and CH4 conversions are strongly correlated across most features, with slopes that are in general agreement with the overall trend (i.e., a ca. 0.005 unit increase in syngas ratio per 1% increase in CH4 conversion). The Ni particle size and Ni loading exert much stronger effects on syngas ratio than on CH4 conversion. By varying Ni particle size across the 5th to the 95th percentile of the dataset (ca. 3–26 nm) while holding all other features constant at their average values, the predicted syngas ratio decreases by ca. 0.011 units for every 1% decrease in the predicted CH4 conversion. Similarly, the predicted syngas ratio increases from ca. 0.82–0.85 as Ni loading increases from ca. 3–20%, while the predicted CH4 conversion remains almost unchanged (ca. 61%) across the same range of Ni loadings. These PDP correlation analyses are corroborated by the SHAP plots (see Fig. 4 and Supplementary Information Fig. S8), which show Ni particle size and Ni loading as the 3rd and 5th most important features respectively for predicting syngas ratio, but only the 5th and 9th most important features for predicting CH4 conversion. In contrast, pore size affects reactant conversions more strongly than syngas ratio: for pore sizes between ca. 4 and 27 nm, the predicted CH4 conversion varies between ca. 55% and 62% while the predicted syngas ratio remains nearly constant (ca. 0.83). Overall, our observations highlight the possibility of designing catalysts, using the metal loading, particle size, and pore size as potential handles, to tune product syngas ratios at any reactant conversion.
+
+除少数例外外，预测的合成气比例和CH4转化率在大多数特征上强相关，斜率总体上与整体趋势一致（即，CH4转化率每增加1%，合成气比例约增加0.005个单位）。Ni粒子尺寸和Ni负载量对合成气比例的影响远大于对CH4转化率的影响。通过将Ni粒子尺寸在数据集的第5到第95百分位（约3–26 nm）之间变化，同时保持所有其他特征在其平均值不变，预测的CH4转化率每下降1%，预测的合成气比例约减少0.011个单位。同样，随着Ni负载量从约3%增加到20%，预测的合成气比例从约0.82–0.85增加，而预测的CH4转化率在相同的Ni负载量范围内几乎保持不变（约61%）。这些PDP相关性分析得到了SHAP图（见图4和补充信息图S8）的证实，后者显示Ni粒子尺寸和Ni负载量分别是预测合成气比例的第3和第5重要特征，但仅分别是预测CH4转化率的第5和第9重要特征。相比之下，孔径对反应物转化率的影响比对合成气比例更强：对于约4至27 nm的孔径，预测的CH4转化率在约55%至62%之间变化，而预测的合成气比例保持近乎不变（约0.83）。总体而言，我们的观察突出了设计催化剂的可能性，使用金属负载量、粒子尺寸和孔径作为潜在控制手段，以在任何反应物转化率下调节产物合成气比例。
+
+The low importance of Ni loading in predicting conversions may be particularly surprising considering that, all else being equal as assumed in the PDP analysis, increasing the metal content should increase the number of active sites for the DRM reaction. We believe that this could be a result of the current trend in the published literature towards highly-dispersed, single-atom catalysts [61] that demonstrate excellent DRM activity at relatively low Ni loadings. Our study nevertheless points to an independent positive effect of Ni loading on syngas ratio, which could motivate future global optimization studies [62] that take into account tradeoffs between the synthetic accessibilities of multiple
+
+Ni负载量在预测转化率中的重要性较低，这可能特别令人惊讶，考虑到在PDP分析所假设的其他条件不变的情况下，增加金属含量应该增加DRM反应的活性位点数量。我们认为这可能是已有文献中当前趋势的结果，即高分散单原子催化剂[61]在相对较低的Ni负载量下表现出优异的DRM活性。尽管如此，我们的研究指出Ni负载量对合成气比例具有独立的正向影响，这可能激励未来的全局优化研究[62]，该研究将考虑多种合成可及性之间的权衡 multiple
+
+![](img/16422e279462b2d8ffa23c6682aa47a2_9_0.png)
+
+Fig. 9: Trajectory plots showing each process and catalyst parameter's simultaneous effect on syngas ratio and CH4 conversion.
+
+Fig. 9: 轨迹图，显示每个工艺和催化剂参数对合成气比例和CH4转化率的同时影响。
+
+
+
+
+
+## 4. Conclusions
+
+在本工作中，我们进行了一项探索性可解释机器学习分析，该分析基于从近期文献中整理的综合数据集训练，研究了工艺参数和催化剂性能对镍催化干重整（DRM）中反应物转化率和合成气比的影响。通过将后验解释方法应用于黑箱机器学习模型结果，我们首次能够复制关于工艺参数的基本趋势，这些趋势与 DRM 工艺的整体热力学分析一致：更高的反应温度、更低的 GHSV 和稀释进料有利于更高的合成气比。
+
+在催化剂参数方面，我们观察到偏好较小的镍粒径是高合成气比的主要决定因素。此外，合成气比和反应物转化率呈中度相关，残差方差很大程度上可以归因于镍粒径和镍负载量的不同影响：虽然合成气比随镍粒径增大而降低，随镍负载量增加而升高，但它们对反应物转化率的相应影响要弱得多。因此，与以往得出合成气比由热力学控制的二氧化硅载体催化剂研究相反，我们基于涵盖多种催化剂配方和形貌的综合数据集得出的当前结果表明，RWGS 和 DRM 反应可以部分解耦。我们的研究结果还表明，有可能利用金属负载量、粒径和孔径作为潜在控制手段，设计出对 DRM 具有特殊选择性且能在任何反应物转化率下实现高产品合成气比的催化剂：特别是，我们的模型表明，较小的粒径、较高的金属负载量以及（在较小程度上）较大的孔径对此有利。同时，我们的探索性研究也凸显了数据驱动机器学习模型在揭示结构-性质关系方面补充多相催化中实验和理论研究的潜力，这些关系随后可以更详细地研究。关键的是，这些模型有助于隔离各种设计参数的个别影响，这些影响在实验研究中否则难以观察。随后，我们还期望将研究扩展到通过应用全局优化方法来预测最佳 DRM 催化剂配方，这些方法在考虑不同特征对目标值的影响的同时，也同时考虑材料可合成性，并利用我们的数据集和类似数据集作为训练集，开发针对多相催化文献量身定制的自动文本挖掘方法。
+
+我们模型的局限性主要与发表数据偏向高性能催化剂有关，这导致特征空间遍历相对稀疏，不利于机器学习模型训练。可以理解的是，这种偏差限制了模型对特征在其整个值范围内效应的解释，
+
+尤其是在特征和目标分布的尾端。因此，尽管整体趋势和特征效应的一般理解可能成立，但模型解释技术对特定特征或目标值范围的准确性可能较不可靠。进一步的局限性包括仅电负率作为单一描述符无法完全捕获催化剂助剂产生的电子效应，以及由于 SIMPSON 悖论（即在数据的几个子集中观察到一种趋势，但在整体数据集中观察到相反趋势[63]），PDP 趋势在大型通用催化剂数据集中的有限推广性到特定较小催化剂数据子集。未来工作将着重于通过纳入设计良好的高通量实验数据集来补充模型中遍历稀疏的区域，并识别异原子助剂的改进描述符，以更好地描述助剂与活性金属之间的相互作用。
+
+## CRediT 作者贡献声明
+
+**Keerthana Vellayappan**：概念化、方法论、调查、软件、验证、编写 – 原始草稿、可视化。**Yifei Yue**：概念化、方法论、调查、软件、验证、编写 – 原始草稿、可视化。**Kang Hui Lim**：概念化、调查、验证、编写 – 审阅与编辑、可视化。**Keyu Cao**：数据获取。**Ji Yang Tan**：数据获取。**Shuwen Cheng**：数据获取。**Tianchang Wang**：数据获取。**Terry Z.H. Gani**：监督、编写 – 审阅与编辑。**Iftekhar A. Karimi**：监督、编写 – 审阅与编辑、资金获取。**Sibudjing Kawi**：监督、编写 – 审阅与编辑、资金获取。
+
+## 竞争利益声明
+
+作者声明他们没有已知的竞争性财务利益或个人关系，这些关系可能会被认为会影响本文所报道的工作。
+
+## 数据可用性
+
+完整数据集和代码可在 GitHub 上获取（https://github.com/yifei-1021/DRM-ML-Project）。
+
+## 致谢
+
+本工作由 A*STAR LCERFI（WBS：A-8000278–00-00）和 FRC MOE T1 项目（WBS：A-0009184–00-00）支持。Y.Y.、K.H.L.、K.C.、J.Y.T. 和 T.W. 承认新加坡国立大学为其研究提供的财务支持。S.C. 承认中国奖学委员会提供的财务支持。
+
+## 附录：模型细节
+
+### 数据和代码可用性
+
+完整数据集和代码可在 GitHub 上获取（https://github.com/yifei-1021/DRM-ML-Project），需在手稿接受后提供。
+
+### 机器学习算法
+
+我们考虑的主要机器学习算法类型是集成模型，这些模型结合多个基估计器（特别是决策树）所作出的预测，以提高集成模型相对于单个估计器的整体推广性和准确性[64]。在本工作中，我们采用基于树的集成模型，因为决策树能够通过将特征空间划分为更小的子集来学习复杂和非平滑特征空间中的趋势，与逻辑回归等更简单的模型相比，这提供了更高的性能[65]。与更流行的深度学习模型（如多层感知机（MLP））相比，集成模型通常对表格数据表现更好[66]：与 MLPs 不同，基于树的集成模型不表现出对非平滑目标函数的偏差，且基于树的集成模型对非信息性和共线性特征更稳健[66,67]。此外，基于树的集成模型更容易实现和调优（例如，集成树允许特征直接作为输入到集成模型，而无需进行归一化）。
+
+基于树的集成模型使用两种主要集成方法，特别是袋装法和提升法。在袋装法中，集成中的每个决策树使用随机采样的训练数据子集进行训练。在梯度提升法中，集成中的基决策树通过与另一个决策树依次拟合来解决之前决策树产生的不准确预测[68]。RF、GBR 和 CatBoost 算法的更多详细信息载于补充信息文本 S2 中，每个集成树模型的超参数载于补充信息表 S5 中。
+
+### 机器学习工作流
+
+我们的机器学习工作流详细如下：（1）我们执行了一次训练-测试划分（90%-10% 训练-测试）。（2）我们在训练集上使用网格交叉验证来寻找最优超参数。（3）模型在初始划分的训练集上进行训练。（4）模型性能根据测试集进行评估和比较。
+
+### Aspen Plus 热力学模拟
+
+在任何给定温度（即 500°C–800 °C）和大气压（即 1 bar）下，甲烷干重整（DRM）的热力学平衡计算基于最小化多组分系统的吉布斯自由能。假设整个系统包含主要的 DRM 反应（即 CH4 + CO2 ⇌ 2 H2 + 2CO）及其最突出的副反应，即逆水煤气变换反应（RWGS，即 H2 + CO2 ⇌ H2O + CO）。整个化学系统的总吉布斯自由能（Gtotal）是所涉及各物种化学势之和（即 CH4、CO2、H2、CO、H2O 和 He，后者用作稀释剂）：
+
+```
+$G^{total} = \sum_{i=1}^N n_i \mu_i$ (1)
+```
+
+其中 $n_i$ 是物种 $i$ 的摩尔数，$\mu_i$ 是物种 $i$ 的相应化学势。化学势可定义为：
+
+```
+$\mu_i = \Delta G_{f_i}^0 + RTln(\gamma_i \hat{\varphi}_i \frac{P}{P_0})$ (2)
+```
+
+其中 $\Delta G_{f_i}^0$ 是物种 $i$ 在标准条件下的标准生成吉布斯自由能。$R$ 是摩尔气体常数，$T$ 是温度，$y_i$ 是物种 $i$ 的摩尔分数，$\widehat{\varphi}_i$ 是物种 $i$ 的逸度系数，$P$ 是操作压力，$P_0$ 是标准条件下的压力。逸度系数 $\widehat{\varphi}_i$ 可以从气相的状态方程建模中估计。根据 Carlson 的状态方程选择决策树，Peng-Robinson 状态方程是非极性化学系统中估计逸度系数的最佳选择，因此被选用于我们的热力学计算[69]。分析在 Aspen Plus V12 中使用 RGibbs 反应器进行。
+
+采用相同的模型进行不同温度下不同 DRM 反应程度的热力学模拟，以确定合成气比趋势。使用转化反应器来指定反应程度，并使用 RWGS 的吉布斯平衡反应器来确保 RWGS 处于平衡转化率。模拟进料是在 1 bar 压力下的未稀释等摩尔 CH4 和 CO 混合物。
+
+## 相关内容
+
+### 补充信息
+
+在 Scopus 中使用的搜索字符串、所用模型的理论背景、附加数据可视化图、描述统计表、异常值列表、ML 模型超参数（PDF）。
+
+## 附录 A. 支持信息
+
+与本文相关的补充数据可在在线版本中找到，DOI：10.1016/j.apcatb.2023.122593。
+
+## 参考文献
+
+- [1] J. Rogelj, G. Luderer, R.C. Pietzcker, E. Kriegler, M. Schaeffer, V. Krey, K. Riahi, 将本世纪末升温限制在 1.5 °C 以下的能源系统转型, Nat. Clim. Change 5 (2015) 519–527.
+- [2] S. Cheng, Z. Sun, K.H. Lim, T.Z.H. Gani, T. Zhang, Y. Wang, H. Yin, K. Liu, H. Guo, T. Du, J. Liu, G.K. Yi, Z. Yin, S. Zhai, CO2 光催化还原为 CH4 的新兴策略：从实验到数据驱动设计, Adv. Energy Mater. 12 (2022) 2200389.
+- [3] Y. Song, E. Ozdemir, S. Ramesh, A. Adishev, S. Subramanian, A. Harale, M. Albulai, B.A. Fadhel, A. Jamali, D. Moon, S.H. Choi, C.T. Yavuz, 基于单晶 MgO 的稳定 Ni-Mo 纳米催化剂进行的甲烷干重整, Science 367 (2020) 777–781.
+- [4] K. Wittich, M. Krämer, N. Bottke, S.A. Schunk, 甲烷催化干重整：来自模型系统的见解, ChemCatChem 12 (2020) 2130–2147.
+- [5] I.V. Yentekakis, P. Panagiotopoulou, G. Artemetis, 通过双金属催化剂配方促进甲烷干重整（DRM）生产合成气的近期努力综述, Appl. Catal. B (2021), 120210.
+- [6] S. Lögdberg, D. Tristantini, Ø. Borg, L. Ilver, B. Gevert, S. Járás, E.A. Blekkan, A. Holmen, 基于不同 Fe-Co-/$\gamma$-Al2O3 双金属催化剂，通过 Fischer–Tropsch 合成从贫氢合成气生产烃类, Appl. Catal. B 89 (2009) 167–182.
+- [7] S. Damyanova, B. Pawelec, K. Aristhrova, M.V.M. Huerta, J.L.G. Fierro, CeO2 对 Pt/Co–O–ZrO2 催化剂表面及催化性能的影响：用于甲烷干重整, Appl. Catal. B 89 (2009) 149–159.
+- [8] I.V. Yentekakis, G. Goula, M. Hatzisymeon, I. Besti–Argyropoulou, G. Botzolaki, K. Kousi, D.I. Kondarides, M.J. Taylor, C.M. Parlett, A. Osatiashtiani, 载体氧储存能力对用于 CO2 改性甲烷的 Rh 纳米颗粒催化性能的影响, Appl. Catal. B 243 (2019) 490–501.
+- [9] W. Kong, Y. Fu, L. Shi, S. Li, E. Vok, X. Zhou, R. Si, B. Pan, C. Yuan, S. Li, 具有界面限域的镍纳米颗粒在甲烷干重整中模拟贵金属催化剂, Appl. Catal. B 285 (2021), 119837.
+- [10] A.L.A. Marinho, R.C. Rabelo-Neto, F. Epron, N. Blon, F.S. Toninlo, F.B. Noronha, 嵌入 CeZrO2 中的镍纳米颗粒作为甲烷干重整的稳定催化剂, Appl. Catal. B 268 (2020), 118387.
+
+
+
+
+
+- [11] Y. Liu, Y. Chen, Z. Gao, X. Zhang, L. Zhang, M. Wang, B. Chen, Y. Diao, Y. Li, D. Xiao, X. Wang, D. Ma, C. Shi, 将高负载且均匀的Ni纳米粒子嵌入silicalite-1沸石用于甲烷干式改制, Appl. Catal. B 307 (2022), 121202.
+- [12] S. Das, J. Ashok, Z. Bian, N. Dewangan, M.H. Wai, Y. Du, A. Borgna, K. Hidajat, S. Kawai, 低温沼气干式改制用硅-铈三明治式Ni核壳催化剂：耐焦炭性与机理洞察, Appl. Catal. B 230 (2018) 220-236.
+- [13] S. Das, A. Jangam, S. Jayaprakash, S. Xi, K. Hidajat, K. Tomishige, S. Kawai, Ni-phyllosilicate@Ce1-xZrxO2核壳催化剂甲烷干式改制中晶格氧在甲烷活化中的作用：Zr掺杂效应、机理及动力学研究, Appl. Catal. B 290 (2021), 119998.
+- [14] J. Zhang, F. Li, 耐焦炭Ni@SiO2催化剂用于甲烷干式改制, Appl. Catal. B 176 (2015) 513-521.
+- [15] K. Mondal, S. Sasmal, S. Badgandi, D.R. Chowdhury, V. Nair, 甲烷干式改制制取合成气：一种增值化学品的潜在替代工艺——技术经济视角, Environ. Sci. Pollut. R. 23 (2016) 22267-22273.
+- [16] F.G.M. de Medeiros, F.W.B. Lopes, B. Rego de Vasconcelos, 通过甲烷干式改制生产氢气的前景与技术挑战, Catalysts 12 (2022) 363.
+- [17] R.Y. Chen, Y.C. Chen, C.T. Yu, J.N. Chung, CH4与CO2干式改制的热力学分析, High. Press. J. Nat. Gas. Eng. 26 (2015) 617-629.
+- [18] P. Cao, S. Adebgite, T. Wu, CO2甲烷改制的热力学平衡分析：碳沉积消除与H2/CO比调节, Energy Procedia 105 (2017) 1864-1869.
+- [19] H. Swana, V. Kroll, G. Martin, C. Mirodatos, 二氧化碳甲烷改制过程中负载镍催化剂的失活, Catal. Today 21 (1994) 571-578.
+- [20] D. Baudouin, U. Rodekrack, F. Krumeich, A. De Dallmann, K.C. Czeto, H. Ménard, L. Vreyne, J.-P. Candy, P.B. Webb, C. Thieuleux, 二氧化碳低温甲烷改制中SiO2负载Ni纳米粒子的粒径效应, J. Catal. 297 (2013) 27-34.
+- [21] J.W. Han, J.S. Park, M.S. Choi, H. Lee, 解耦甲烷干式改制Ni催化剂的粒径与载体效应, Appl. Catal. B 203 (2017) 625-632.
+- [22] S.M. Moosavi, K.M. Jablonka, B. Smit, 机器学习在材料理解与设计中的作用, J. Am. Chem. Soc. 142 (2020) 20273-20287.
+- [23] P. Schlexer Lamoureux, K.T. Winther, J.A. Garrido Torres, V. Strelov, M. Zhao, M. Badjic, F. Abild-Pedersen, T. Bligaard, 计算异相催化中的机器学习, ChemCatChem 11 (2019) 3581-3601.
+- [24] A. Mazheika, Y.-G. Wang, R. Valero, F. Vines, F. Illas, L.M. Ghiringhelli, S. V. Levchenko, M. Scheffler, 人工智能驱动的催化基因发现及其在半导体氧化物上CO2活化中的应用, Nat. Commun. 13 (2022) 419.
+- [25] Z.W. Ulissi, A.J. Medford, T. Bligaard, J.K. Nørskov, 利用缩放关系机器学习和DFT计算解决表面反应网络复杂性问题, Nat. Commun. 8 (2017) 1-7.
+- [26] M.E. Günyay, Y. Yıldırım, 从过往催化中提取知识：2000-2012年贵金属催化剂选择性CO氧化的一个案例, ChemCatChem 5 (2013) 1395-1406.
+- [27] A. Smith, A. Keane, J.A. Dumesic, G.W. Huber, V.M. Zavala, 基于实验数据的催化活性分析与预测机器学习框架, Appl. Catal. B 263 (2020), 118257.
+- [28] M. Suvarta, T.P. Araújo, J. Pérez-Ramírez, 一种用于热催化CO2加氢制甲醇时空产率预测的通用机器学习框架, Appl. Catal. B (2022), 121530.
+- [29] L. Foppa, C. Sutton, L.M. Ghirardelli, S. De, P. Löser, S.A. Schunk, A. Schäfer, M. Scheffler, 从高通量实验与人工智能中学习选择性氧化催化剂的设计规则, ACS Catal. 12 (2022) 2223-2232.
+- [30] T.N. Nguyen, T.T.P. Nhat, K. Takimoto, A. Thakur, S. Nimishira, J. Ohyama, I. Miyazato, L. Takahashi, J. Fujima, K. Takahashi, T. Tanitame, 甲烷氧化耦合的高通量实验与催化剂信息学, ACS Catal. 10 (2020) 921-932.
+- [31] J.A. Esterhuizen, B.R. Goldsmith, S. Linic, 异相催化知识生成的可解释机器学习, Nat. Catal. 5 (2022) 175-184.
+- [32] B. Weng, Z. Song, R. Zhu, Q. Yan, Q. Sun, C.G. Grice, Y. Yan, W.-J. Yin, 源自符号回归的简单描述符加速新钙钛矿催化剂的发现, Nat. Commun. 11 (2020) 3513.
+- [33] W. Xu, M. Andersen, K. Reuter, 用于预测过渡金属氧化物反应性的数据驱动描述符工程与改进的缩放关系, ACS Catal. 11 (2021) 734-742.
+- [34] X. Wang, S. Jiang, W. Hu, S. Ye, T. Wang, F. Wu, L. Yang, X. Li, G. Zhang, X. Chen, 利用可解释机器学习从振动光谱中定量确定表面吸附质性质, J. Am. Chem. Soc. 144 (2022) 16069-16076.
+- [35] L. Breiman, 随机森林, Mach. Learn 45 (2001) 5-32.
+- [36] J.H. Friedman, 贪婪函数逼近：一种梯度提升机, Ann. Stat. (2001) 1189-1232.
+- [37] L. Prokhorenkova, G. Gusev, A. Vorobev, A.V. Dorogush, A. Gulin, CatBoost：具有类别特征的无偏提升, Adv. Neural Inf. Process. Syst. 31 (2018).
+- [38] M. Christoph, 可解释机器学习：使黑盒模型可解释的指南, 2019.
+- [39] A.J. Medford, M.R. Kunz, S.M. Ewing, T. Borders, R. Fushimi, 通过催化信息学从数据中提取知识, ACS Catal. 8 (2018) 7403-7429.
+- [40] Z. Jensen, E. Kim, S. Kwon, T.Z.H. Gani, Y. Román-Leshkov, M. Moliner, A. Corma, E. Olivetti, 基于自动文献数据提取的沸石合成机器学习方法, ACS Cent. Sci. 5 (2019) 892-899.
+- [41] S. Park, B. Kim, S. Choi, P.G. Boyd, B. Smit, J. Kim, 金属有机框架论文的文本挖掘, J. Chem. Inf. Model 58 (2018) 244-251.
+- [42] C.R. Harris, K.J. Millman, S.J. Van Der Walt, R. Gommers, P. Virtanen, D. Cournapeau, E. Wieser, J. Taylor, S. Berg, N.J. Smith, 基于NumPy的数组编程, Nature 585 (2020) 357-362.
+- [43] W. McKinney, Python中的统计计算数据结构, Proc. 9th Python in Sci. Conf. Austin, TX (2010) 51-56.
+- [44] F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, Scikit-learn：Python中的机器学习, J. Mach. Learn. Res. 12 (2011) 2825-2830.
+- [45] J.D. Hunter, Matplotlib：一个二维图形环境, Comput. Sci. Eng. 9 (2007) 90-95.
+- [46] M.L. Waskom, Seaborn：统计数据可视化, J. Open Source Softw. 6 (2021) 3021.
+- [47] T. Hastie, R. Tibshirani, J.H. Friedman, J.H. Friedman, 统计学习方法：数据挖掘、推断与预测, Springer, 2009.
+- [48] Y. Nohara, K. Matsumoto, H. Soejima, N. Nakashima, 使用改进的Shapley加法解释解释机器学习模型, Proc. 10th ACM Int. Conf. Bioinformatics. Comput. Biol. Health Inform. (2019), pp. 546-546.
+- [49] S.M. Lundberg, S.-I. Lee, 解释模型预测的统一方法, Adv. Neural Inf. Process. Syst. 30 (2017).
+- [50] J.Y.-L. Chan, S.M.H. Lew, K.Y. Beal, W.K. Cheng, S.W. Phoong, Z.-W. Hong, Y.-L. Chen, 缓解多重共线性问题及其机器学习方法：综述, Mathematics 10 (2022) 1283.
+- [51] C.C. Chong, Y.W. Cheng, S.N. Bukhari, H.D. Setiabudi, A.A. Jalil, Ni/氟化物SBA-15催化剂上的甲烷干式改制：载体形貌（棒状F-SBA-15和树枝状DFSBA-15）的影响, Catal. Today 375 (2021) 245-257.
+- [52] R. Debek, M. Totak, M.E. Galvez, T. Grzybek, P. Da Costa, CO2甲烷改制中水滑石衍生Mg(Ni, Al)O混合氧化物上锆的促进效应, Appl. Catal. B 223 (2018) 36-46.
+- [53] S.M. Sajjadi, M. Haghhighi, A.A. Eslami, F. Rahmani, Cu和Co掺杂Ni/Al2O3纳米催化剂上的CO2甲烷改制制氢：浸渍法与溶胶-凝胶法及工艺条件和促进剂的影响, J. Sol. Gel. Sci. Technol. 67 (2013) 601-617.
+- [54] M. Shah, S. Das, A.K. Nayak, P. Mondal, A. Bordoloi, 金属-载体界面的智能设计用于不可允许的干式改制催化剂, Appl. Catal. A 556 (2018) 137-154.
+- [55] R. Blom, I.M. Dahl, Å. Slagtern, B. Sortland, A. Spjelkavik, E. Tangstad, 流化床反应器中镧改性催化剂上的二氧化碳甲烷改制, Catal. Today 21 (1994) 535-543.
+- [56] A.M. Gaddalla, M.E. Sommer, 镍催化剂上的二氧化碳甲烷改制, Chem. Eng. Sci. 44 (1989) 2825-2829.
+- [57] L. Foppa, T. Margossian, S.M. Kim, C. Muller, C. Copéret, K. Larmiier, A. Comas-Vives, 对比水煤气变换与甲烷干式改制中Ni/Al2O3界面的作用, J. Am. Chem. Soc. 139 (2017) 17128-17139.
+- [58] D. Chen, K.O. Christensen, E. Ochoa-Fernández, Z. Yu, B. Tøttrup, N. Latorre, A. Monzon, A. Holmen, 碳纳米纤维的合成：甲烷分解过程中Ni晶粒尺寸的影响, J. Catal. 229 (2005) 82-96.
+- [59] O. Daoura, G. Fornasieri, M. Boutros, N. El Hassan, P. Beaunier, C. Thomas, M. Selmane, A. Miche, C. Sassoey, O. Ersen, 一锅法制备的嵌入Ni颗粒的类SBA-15介孔二氧化硅单一孔道作为选择性且稳定的甲烷干式改制催化剂, Appl. Catal. B 280 (2021), 119417.
+- [60] M. Li, A.C. van Veen, 通过Ni-CeO2-x相互作用调节Ni催化甲烷干式改制及碳沉积的催化性能, Appl. Catal. B 237 (2018) 641-648.
+- [61] M. Akri, S. Zhao, X. Li, K. Zang, A.F. Lee, M.A. Isaacs, W. Xi, Y. Gangarajula, J. Luo, Y. Ren, 原子分散镍作为耐焦炭活性位点用于甲烷干式改制, Nat. Commun. 10 (2019) 1-10.
+- [62] J.P. Janet, S. Ramesh, C. Duan, H.J. Kulik, 基于神经网络驱动的高效全局优化，在数百万个过渡金属配合物空间中进行精确多目标设计, ACS Cent. Sci. 6 (2020) 513-524.
+- [63] C.R. Blyth, 论Simpson悖论与确定性原则, J. Am. Stat. Assoc. 67 (1972) 364-366.
+- [64] D.H. Wolpert, 堆叠泛化, Neural Netw. 5 (1992) 241-259.
+- [65] A. Khemphila, V. Boonjing, 比较逻辑回归、决策树和神经网络在心脏病患者分类中的性能, 2010 Int. Conf. Comput. Intell. Syst. Manag. Appl. (CISIM), IEEE (2010) 193-198.
+- [66] L. Grinštajn, E. Oyallon, G. Varoquaux, 为何基于树的模型在表格数据上仍优于深度学习, arXiv Prepr. arXiv 2207 (2022) 08815.
+- [67] Y. Gorishniy, I. Rubachev, V. Khrulkov, A. Babenko, 重新审视表格数据的深度学习模型, Adv. Neural Inf. Process. Syst. 34 (2021) 18932-1843.
+- [68] T.G. Dietterich, 机器学习中的集成方法, International Workshop on Multiple Classifier Systems, Springer, 2000, pp. 1-15.
+- [69] E.C. Carlson, 仿真中不要拿物理性质赌博, Chem. Eng. Prog. 92 (1996) 35-46.
+

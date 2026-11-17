@@ -1,0 +1,1301 @@
+- pgno: 0
+  md: '# # Impacts of catalyst and process parameters on Ni-catalyzed methane dry
+    reforming via interpretable machine learning
+
+
+    Keerthana Vellayappan , Yifei Yue , Kang Hui Lim , Keyu Cao , Ji Yang Tan , Shuwen
+    Cheng , Tianchang Wang , Terry Z.H. Gani , Iftekhar A. Karimi , Sibujing Kawi
+
+
+    Department of Chemical and Biomolecular Engineering, National University of Singapore,
+    Singapore 119260, Singapore
+
+    School of Metallurgy, Northeastern University, Shenyang 100819, PR China
+
+
+    # ## ARTICLE INFO
+
+
+    +   - Machine Learning
+
+    +   - Heterogeneous catalysis
+
+    +   - Dry reforming of methane
+
+    +   - Syngas
+
+    +   - Catalyst design
+
+
+    # ## ABSTRACT
+
+
+    Dry reforming of methane (DRM) is a promising technology for valorizing two potent
+    greenhouse gases, namely CO2 and CH4. Although design principles for active and
+    stable catalysts are well-established, predicting selectivity of DRM over competing
+    side reactions that alter product H2/CO ratio remains challenging. Here, we curate
+    a set of 1638 data points from published literature and train tree regressor models
+    to predict H2/CO ratio as a function of 11 catalyst and process parameters. The
+    CatBoost regressors achieved best prediction performance with R2 = 0.91. Feature
+    importance analysis reveals, in addition to well-known effects of process parameters
+    on DRM performance, the potential roles of Ni particle size and loading in tuning
+    H2/CO ratio independently of reactant conversions. Our exploratory study highlights
+    ability of data-driven ML models to unearth structure–property relationships in
+    heterogeneous catalysis by isolating effects of individual design parameters in
+    a manner that would be difficult to achieve experimentally.
+
+
+    # ### 1. Introduction
+
+
+    The adverse effects of global warming have prompted vigorous international efforts
+    to counteract its harmful effects and foster sustainable development, such as
+    the coordinated efforts to limit warming to 1.5 °C above pre-industrial temperatures
+    [1]. Processes that can convert greenhouse gases such as CO2 into useful chemical
+    products have thus received intense interest in recent years as a possible means
+    of decarbonizing the chemical industry [2]. For instance, the dry reforming of
+    methane (DRM) (Eq. 1) is a promising alternative to steam methane reforming for
+    the production of syngas (i.e., a mixture of CO and H2) [3]. With a theoretical
+    H2/CO ratio of near unity, the syngas produced is well-suited for subsequent processing
+    via oxo chemistry into acetic acid or aldehydes [4], or via Fischer-Tropsch chemistry
+    into high-value liquid hydrocarbon products such as diesel and jet fuels [5,6].
+
+
+    CH4 + CO2 ⇌ 2 H2 + 2 CO, ΔH298 K = +247.3 kJ/mol (1)
+
+
+    In addition to noble metals such as Pt that are highly active catalysts for DRM,
+    certain earth-abundant elements such as Ni also show reasonable activity but are
+    prone to coking and sintering which cause
+
+
+    deleterious effects such as deactivation and reactor pressure buildup [7, 8].
+    Hence, strategies for improving the activity and stability of earth-abundant DRM
+    catalysts by targeting their coking and sintering resistance have been broadly
+    explored [4,5,9]. For instance, surface modification by redox-active oxides such
+    as CeO2 or ZrO2 with high oxygen mobility can improve coke resistance by promoting
+    the dissociation of CO2 and subsequent gasification of deposited carbon by reactive
+    oxygen species [10], and sintering can be physically inhibited by confinement
+    within mesoporous channels [11]. Notably, both of these advantages can be simultaneously
+    realized via encapsulation within a porous reducible oxide shell, in which the
+    core-shell morphology plays a dual role of physically preventing sintering while
+    also maximizing the fraction of Ni-reducible oxide interfacial sites that are
+    active for CO formation [12–14].
+
+
+    Another challenge associated with Ni-based DRM catalysts that has received much
+    less attention is the tendency for the product syngas ratio (i.e., H2/CO ratio)
+    to fall below unity because of the parasitic reverse water-gas shift (RWGS) reaction
+    (Eq. 2) that consumes H2 and produces H2O as an unwanted by-product [15]. A low
+    syngas ratio is undesirable because the syngas stream must then be replenished
+    with H2 before it'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'can be used in downstream applications, leading to increased pre-treatment
+    costs [16]. Within the open literature, there are relatively few papers that discuss
+    the effects of catalyst properties on the syngas ratio and, more importantly,
+    how they can be tuned to increase the syngas ratio [17,18]. While it is sometimes
+    postulated that the syngas ratio is largely governed by the thermodynamics of
+    the RWGS reaction rather than the nature of the catalyst itself [19,20], this
+    is inconsistent with several reported observations of significantly different
+    syngas ratios over different catalysts even at the same reaction conditions [21],
+    which points to the possibility of targeted catalyst engineering to increase the
+    selectivity of the DRM reaction over the RWGS reaction in a manner similar to
+    how the thermodynamically favorable coking reaction can be inhibited over coking-resistant
+    materials.
+
+
+    H2 + CO2 <=> H2O + CO, ΔH298 K = +41 kJ/mol (2)
+
+
+    Machine learning (ML) has seen widespread use in materials design and discovery
+    for its ability to uncover correlations across large datasets [22]. Within the
+    field of heterogeneous catalysis, ML models have often been employed to overcome
+    computational bottlenecks associated with density functional theory (DFT) calculations
+    [23] by predicting computable physical properties [24] (e.g., adsorption energies
+    and reaction mechanisms [25] (i.e., based on estimated activation energies of
+    possible elementary steps) from electronic or structural fingerprints. In a complementary
+    approach, ML models can also be trained on experimental data, either extracted
+    from published literature [26–28] or generated from high-throughput experimentation
+    [29,30], to predict catalytic performance from process parameters and measurable
+    catalyst properties [26,31]. This latter approach is particularly useful for multicomponent
+    materials with complex architectures that cannot be accurately modeled by presently
+    available computational methods (e.g., DFT). In all of these studies, model interpretability
+    [31], as can be achieved by feature importance analyses of black-box ML model
+    output, is crucial for developing qualitative scientific insights [28] that can
+    in turn be leveraged by experimentalists to help develop improved catalysts and
+    processes. Compared to inherently interpretable ML methods such as symbolic regression-based
+    approaches [32–34], this two-step “gray-box” approach typically offers increased
+    prediction accuracy across large and complex datasets [31].
+
+
+    In this work, we develop interpretable ML models to unearth structure-property
+    relationships from the vast body of literature on Ni-catalyzed DRM. Specifically,
+    we first gather from the open literature a comprehensive, high-quality dataset
+    of catalyst properties, process parameters, and reactivity data, on which we then
+    train tree regressor models (random forest – RF [35], gradient boosted regressor
+    – GBR [36] and categorical tree regressor – CatBoost [37]) to predict reactant
+    conversions and syngas ratios using catalyst properties and process parameters
+    as features. We then apply posteriori model interpretation techniques [38] to
+    illustrate how each feature influences syngas ratio and reactant conversions.
+    In addition to reproducing the well-known effects of temperature, space velocity,
+    and feed dilution on DRM performance, the partial dependence plots applied in
+    our study also reveal Ni particle size as a potential handle for controlling syngas
+    ratio independently of the effects of process operating conditions.
+
+
+    # 2. Method
+
+
+    # 2.1. Overall approach
+
+
+    We select three commonly used quantitative metrics of DRM catalyst performance,
+    namely CH4 conversion, CO2 conversion, and syngas ratio (defined as the ratio
+    of H2 formation rate to CO formation rate), as our targets. Catalyst stability
+    is implicitly accounted for by recording the target values at the end of the reaction
+    or after every 10 h on stream (see below). We select 11 input features, comprising
+    5 process parameters and 6 catalyst properties, that could be relevant to the
+    prediction of the
+
+
+    targets (Table 1), and later perform feature analyses to identify the features
+    most relevant to target prediction. Our focus on catalyst properties that can
+    be measured for any material, instead of more commonly employed structural, electronic,
+    or compositional descriptors [27,29], maximizes the generality of our framework
+    across catalyst architectures and formulations.
+
+
+    Our overall approach is illustrated in Fig. 1. We begin our data curation process
+    by searching the Scopus database for all journal articles related to Ni-catalyzed
+    DRM published within the past 20 years (search string shown in Supplementary Information
+    Text S1). The search returned 1810 articles which were manually reviewed to exclude
+    studies that did not report at least one complete data point (i.e., complete set
+    of target properties and input features as described above). For instance, purely
+    computational studies and studies with incomplete catalyst characterization were
+    excluded from the dataset.
+
+
+    Table 1
+
+    Summary of features selected for machine learning model.
+
+
+    | Type | Features (Units) | Description |
+
+    | :--- | :--- | :--- |
+
+    | Process parameters | Ratio of CH4 in feed/ CH4 feed fractiona | Ratio of volumetric
+    flow rate of CH4 to the total volumetric flow rate of feed to the catalytic reactor.
+    Also equivalent to the CH4 partial pressure. |
+
+    | | Reaction temperature (°C) | Reaction temperature at which the DRM experiment
+    was conducted. |
+
+    | | Nickel loading (%)b | Weight percentage of nickel present in the prepared
+    catalyst. |
+
+    | | Reaction time (h)c | Reaction time at which the readings for conversions and
+    syngas ratio are taken. |
+
+    | | GHSV (ML/gcat·h)d | Gas hourly space velocity of the reaction, defined as
+    the total volumetric feed flow rate per unit mass of catalyst per hour. |
+
+    | Catalyst characteristics | Pore size (nm)e | Pore diameter of the catalyst support.
+    |
+
+    | | Pore Volume (cm3/g)c | Specific pore volume of the catalyst support. |
+
+    | | Surface Area (m2/g)f | Specific surface area of the fresh catalyst. |
+
+    | | H2-TPR peak temperature (°C)g | Temperature of maximum H2 uptake during temperature
+    programmed reduction (TPR). |
+
+    | | Ni particle size (nm)h | Average diameter of Ni nanoparticles on the reduced
+    catalysts. |
+
+    | | Modifier electronegativityi | The Pauling electronegativity of the modifiers,
+    dopants, or promoters used in the catalyst preparation. |
+
+
+    a: The CH4:CO2 ratio was always equal to 1 across the entire dataset, while the
+    diluent fraction in the feed differed.
+
+    b: Weight loadings determined by inductively coupled plasma (ICP) analysis were
+    taken if reported, else the nominal weight loading was used.
+
+    c: The last data point was collected if time-on-stream data is available. For
+    experiments exceeding 20 h, multiple data points from the time stream were taken
+    at 10-hour intervals.
+
+    d: GHSV is calculated as follows: GHSV (mLgcat⁻¹h⁻¹) = Feed Flow Rate (mLh⁻¹)
+    / Catalyst Weight (gcat)
+
+    e: Pore size and distributions are commonly measured using the Barrett-Joyner-Halenda
+    (BJH) method, and author-reported average pore diameters and total pore volumes
+    were taken.
+
+    f: Values taken were measured using Brunauer-Emmett-Teller (BET) analysis of N2
+    physisorption data.
+
+    g: The largest peak was taken if multiple peaks were identified in the reduction
+    profile.
+
+    h: Values taken were measured by transmission electron microscopy (TEM) if available,
+    otherwise from x-ray diffraction (XRD) data using the Scherrer equation.
+
+    i: A weighted average value was taken if multiple modifiers were present in different
+    amounts.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/16422e279462b2d8ffa23c6682aa47a2_2_0.png)
+
+
+    Fig. 1. : Schematic of our overall workflow indicating the data collection, pre-processing,
+    and analysis followed by machine learning (ML) model application and its interpretation
+    using feature importance plots, one-way and two-way partial dependence plots (PDPs),
+    and Shapley Additive Explanations (SHAP) plots.
+
+
+    # 2.2. Data curation
+
+
+    In this work, we leveraged previously published data to bypass the many time-consuming
+    experiments that would otherwise be required. Though the idea of automatically
+    extracting the information through text mining may be promising [39,40], we observed
+    that published studies on DRM often vary in terms of characterization techniques
+    and experimental conditions, which may compromise the interpretability of the
+    model [31]. Furthermore, data that is presented graphically (e.g., in a graph
+    or figure) instead of textually (e.g., in a table) is often more difficult to
+    automatically extract [41]. Therefore, instead of utilizing automated data retrieval
+    methods, we manually scanned and extracted data from each article to reduce the
+    erroneous data collection incurred by text mining methods. Where necessary, required
+    numerical values from graphs presented in literature were extracted from figures
+    using a graph reader tool. This procedure resulted in a smaller list of 221 papers
+    (Supplementary Information Fig. S1), from which a total of 1637 complete data
+    points were extracted by hand.
+
+
+    The NumPy [42] and pandas [43] software libraries in Python were used to prepare
+    the data for visualization and model training. For pre-dicting syngas ratio, outliers
+    from the top and bottom 0.5 percentile of the target values for the prediction
+    of syngas ratio are removed. These are extreme values and exceptional cases that
+    have very few sample points and can therefore compromise the model accuracy. The
+    top 0.5 percentile represents catalysts which produce syngas ratio above 1.3,
+    which is significantly greater than the expected syngas ratio (less than 1) in
+    a DRM process with RWGS as a side reaction. We discuss some reasons for syngas
+    ratios greater than unity later in Section 3.1. Conversely, the bottom 0.5 percentile
+    represents poor performing catalysts that produce syngas ratios between 0 and
+    0.15, demonstrating low, almost negligible, activity for DRM. In both cases, these
+    points fall outside the sample space of active Ni catalysts that are of interest,
+    and thus may be detrimental to our exploration of properties that lead to a close-to-unity
+    syngas ratio. The points removed are indicated in Supplementary Information Table
+    S1. Following the convention of the train-test split, the data set was randomly
+    partitioned to assign 90% of data points to the train set and 10% to the test
+    set. We provide further information on our machine learning workflow in the Appendix.
+
+
+    # 2.3. Model evaluation and data analysis
+
+
+    Our work evaluates three ensemble tree models, namely Random Forest (RF) [35],
+    Gradient-Boosting Regressor (GBR) [36] and Cat-e-gorical Boosting Regressor (CatBoost)
+    [37]. We provide additional details on the implementation of the different models
+    in the Appendix
+
+
+    (and an introduction to their algorithms in Text S2). The scikit-learn library
+    [44] was used to apply the RF and the GBR models, and the CatBoost library for
+    Python was used to apply the CatBoost Regressor The model performance was evaluated
+    using the default root-mean-square error (RMSE) criterion, and the model scores
+    determined by the coefficient of determination value R2. For model testing, regression
+    plots of the predicted target values against the actual target values were presented
+    to illustrate the prediction performance of the trained model. The matplotlib
+    library [45] was used for plotting histograms, scatter plots and other data visualization
+    methods. The seaborn library [46] was also used to plot heatmaps of the correlation
+    matrix for the features to visualize the correlation coefficient between the pairs
+    of input features in our dataset. For model interpretation, line plots of one-way
+    partial dependence plots (PDP) for each feature variable provided by the scikit-learn
+    library were used to visualize the interaction between an input feature and the
+    target response. Two-way PDPs were presented as three-dimensional (3D) surface
+    plots to visualize the effects of a pair of input features on the target response
+    [47]. The trajectory plots used to illustrate the effect of tuning each feature
+    value on the partial dependence values on two target variables are obtained by
+    first computing the partial dependence values from the trained models, then plotting
+    the partial dependence values on a scatterplot with a colormap that illustrates
+    the range of feature values. The points depicted consti-tute the 5th to the 95th
+    percentiles in the dataset, with a lighter color representing a feature value
+    that obtained lower percentile in the dataset and a darker color representing
+    a feature value obtained at a higher percentile in the dataset.
+
+
+    # 2.4. Model Interpretation Techniques
+
+
+    After model training, we applied model interpretation tools to analyze and visualize
+    the different effects of our feature inputs on the target responses. Feature importance
+    can be computed based on three different methods, namely the Gini importance,
+    permutation importance, and Shapley Additive exPlanations (SHAP) values [48].
+    Feature importance plots based on the first two methods (Gini importance and permutation
+    importance) were provided by the scikit-learn library, while SHAP plots were implemented
+    using the SHAP software library [49]. In particular, the bee swarm plot in the
+    SHAP library was applied to visualize the importance of each feature to the model
+    and how variance in each feature affects the model output. The Shapley value is
+    based on fair allocation results from cooperative game theory to allocate importance
+    or credit for a model’s output to its input features, which ranks the impact of
+    each feature on the trained model. Theoretical background on the computations
+    of feature importance, permutation'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: 'importance and SHAP values are provided in Supplementary Information Text S3.
+
+
+    One-way and two-way PDPs implemented in the scikit-learn library were used to
+    show the dependence between the target values and a set of input features of interest
+    while keeping the values of the other features at their mean values. In other
+    words, PDP is a method to visualize the marginal effect of a set of features on
+    the predicted target response of a trained machine learning. The predicted impact
+    of process parameters and catalyst properties on syngas ratio, CH4 conversion
+    and CO2 conversion can be analyzed from the trends illustrated by PDP analysis.
+    We also connect our observed trends observed in our PDPs to reasoning from the
+    current literature in order to highlight the interpretability of our results.
+
+
+    # 3. Results and discussion
+
+
+    # 3.1. Data analysis and visualization
+
+
+    We begin our analysis by obtaining correlation coefficients between each pair
+    of features to better understand our dataset. The heat map of the correlation
+    matrix is shown in Fig. 2a, in which a dark red hue represents a strong positive
+    correlation coefficient, a dark blue hue represents a strong negative correlation
+    coefficient, and a light-yellow hue represents a weak correlation coefficient.
+    As is ideal for training ML models, most of the features possess weak cross-correlations,
+    except
+
+
+    for (1) a strong positive correlation between surface area and pore volume, and
+    (2) a moderate negative correlation between surface area and pore size. These
+    correlations agree with what is generally understood about the textural properties
+    of catalyst supports: highly porous materials with small pores tend to have larger
+    specific surface areas arising from the interstitial voids within the pores. Although
+    such multicollinearity can potentially underestimate the importance of correlated
+    features [50], we nevertheless retained all features to avoid the potential loss
+    of important information for model training.
+
+
+    The distributions of the raw data collected for our targets, namely CH4 conversion,
+    CO2 conversion and syngas ratio, are shown in Fig. 2b. Further, a summary of their
+    descriptive statistics such as mean, median, standard deviation and skewness of
+    each distribution is provided in Supplementary Information Table S2. The reactant
+    (i.e., CH4 and CO2) conversions within the dataset range from 0% to nearly 99%
+    with average values of 59.9% and 67% respectively. The slightly higher conversions
+    for CO2 than CH4 are consistent with CO2 being consumed in multiple side reactions,
+    such as RWGS and coke gasification, in addition to DRM. After the removal of outliers
+    (see Section 2.2), the syngas ratio dataset has 1620 sample points with minimum,
+    average and maximum values of 0.165, 0.827 and 1.29 respectively. Interestingly,
+    syngas ratios of greater than 1 have been reported by a small minority of studies
+    in apparent exception to the general rule of thumb that syngas ratios are typically
+    less than 1 because of the parasitic H2-consuming RWGS reaction. Two reasons,
+    both involving other side reactions, have
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_3_0.png)
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_3_1.png)
+
+
+    Fig. 2 : Overall properties of dataset. (a) Correlation matrix heat map displaying
+    the correlation coefficients across each pair of features. (b) Distribution plots
+    of target values: left – syngas ratio, center: CH4 conversion, right: CO2 conversion.'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: 'been proposed in the literature to explain these anomalously high syngas ratios.
+    Firstly, the Boudouard reaction (2CO <=> CO2 + C) may be favored under high CO
+    concentrations, which will decrease the relative concentration of CO and thus
+    increase the syngas ratio [51]. Secondly, catalysts that are particularly prone
+    to direct methane decomposition (CH4 <=> 2 H2 + C) will produce additional H2
+    as a result of this side reaction [52]. Thus, although the possibility of producing
+    syngas with
+
+
+    greater-than-unity H2/CO ratio is nominally attractive, such behavior is invariably
+    accompanied by significant carbon deposition, either by the Boudouard reaction
+    or methane decomposition, that are highly detrimental to the overall DRM process.
+    It is also noteworthy that the distributions for conversions and syngas ratio
+    are skewed towards the right, most likely pointing towards an inherent bias in
+    the published literature against the reporting of poor-
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_4_0.png)
+
+
+    Fig. 3 : Regression plots (showing R^2, RMSE and data distribution on gridlines)
+    and residual distribution plots for the prediction of syngas ratios using: (a-b)
+    random forest regressor, (c-d) gradient boosted regressor and (e-f) CatBoost regressor.
+    Residuals are computed as the difference between the actual target and predicted
+    target values.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: 'performing catalysts that would give lower values. The skewness of feature
+    distributions (see Supplementary Information Fig. S2 and Table S3) can possibly
+    also be explained by the same reason.
+
+
+    Finally, we can also observe a moderate positive linear relationship between syngas
+    ratio and reactant conversions (see Supplementary Information Fig. S3), with an
+    adjusted R^2 of 0.46 and RMSE of 0.14 from a linear regression using syngas ratio
+    as the dependent variable and reactant conversions as independent variables. This
+    relationship can be explained by the common underlying effect of reaction temperature
+    on each of these parameters if the R WGS steps are assumed to be fully equilibrated
+    at varying DRM conversions, as previously demonstrated for Ni/SiO2 catalysts [20]
+    and confirmed by our own Aspen simulations (simulation details provided in Appendix;
+    Table of results provides Supplementary Information Table S4). From the slope
+    of the best-fit line, a 1% increase in average reactant conversion is accompanied
+    by an increase of roughly 0.005 in syngas ratio. However, the relatively weak
+    correlation motivates a closer examination of whether it is possible to identify
+    features that affect syngas ratio independently of reaction conversions, which
+    we return to in Section 3.5.
+
+
+    # 3.2. Prediction of syngas ratio
+
+
+    We then train RF, GBR, and CatBoost models on the training set to predict the
+    syngas ratio of the test set. The performance of each model is evaluated based
+    on the coefficient of determination (model score; R^2) and RMSE between the actual
+    and predicted syngas ratios. All three models demonstrate good R^2 values of 0.87–0.91,
+    among which the CatBoost model exhibited the highest R^2 value of 0.91 and the
+    lowest RMSE of 0.053 (see Fig. 3).
+
+
+    To determine the importance of different features in affecting syngas ratio, we
+    perform a feature importance analysis using the SHAP bee swarm plots (see Fig.
+    4). The three most important features are reaction temperature, gas hourly space
+    velocity (GHSV) and Ni particle size, which have the greatest variance in SHAP
+    values as illustrated on the horizontal axis. The bee swarm plot also illustrates
+    the expected effects of feature values (represented by the color hue of the points
+    in Fig. 4) on the target SHAP value (as shown on the x-axis in Fig. 4). Particularly,
+    a higher value of reaction temperature, as indicated by the “swarm” of points
+    in pink, results in a higher SHAP value, and thus a higher predicted syngas ratio.
+    The model predicts that a lower GHSV and smaller Ni particle size, illustrated
+    by the clusters of points in dark blue in Fig. 4, result in a higher SHAP value
+    and predicted syngas ratio. Accordingly, higher values of surface area, Ni loading,
+    pore volume, H2-TPR peak
+
+
+    temperature and pore size generally result in a higher predicted syngas ratio,
+    whereas a higher CH4 feed fraction results in the opposite. The effects on reaction
+    time and modifier electronegativity are less significant on the SHAP values and
+    are deemed to be least important. The feature importance determined by Gini importance
+    and permutation importance (see Supplementary Information Fig. S4) are largely
+    in agreement with our SHAP analysis.
+
+
+    # 3.3. Effect of process parameters on syngas ratio
+
+
+    Among the process parameters, the SHAP plots shown above (see Fig. 4) illustrate
+    that temperature and GHSV have the most significant effects on the syngas ratio.
+    High temperatures thermodynamically favor the strongly endothermic DRM reaction
+    over the RWGS side reaction, thus leading to a higher syngas ratio, which is also
+    observed in our partial dependence plots (PDPs) (see Fig. 5a) and confirmed by
+    thermodynamic simulations in Aspen Plus (see Supplementary Information Fig. S5).
+    However, if syngas ratio were fully determined by thermodynamics, then one would
+    not expect to observe a change in syngas ratio with the GHSV, but the corresponding
+    one-way PDP (see Fig. 5b) instead shows that the syngas ratio initially decreases
+    with increasing GHSV before leveling off. Above a reaction temperature of ca.
+    800 °C, the model shows that syngas ratio does not change notably in value since
+    the RWGS reaction is favored [16]. Such behavior is consistent with a reactions-in-series
+    model in which the RWGS rate is dependent on the concentrations of the DRM products
+    (i.e., H2), and thus increases as the GHSV is reduced and overall conversions
+    increase [53]. Additionally, syngas ratio decreases slightly as CH4 feed fraction
+    increases until a value of 0.3, and subsequently appears to level off (see Fig.
+    5c). Within our dataset, CH4 feed fraction is a proxy for the extent of feed dilution
+    (see Table 1), which, according to Le Chatelier’s principle, should shift the
+    equilibrium in favor of DRM while also hindering the forward RWGS reaction. Experimental
+    results have also shown that lower CH4 feed ratios in feed lead to a syngas ratio
+    that is closer to unity [54]. The PDP of reaction time, which does not have a
+    significant effect on syngas ratio, is depicted in Supplementary Information Fig.
+    S6. The negligible effect of reaction time, which is intended to capture the effect
+    of deactivation, may be due to a bias against the publication of rapidly deactivating
+    catalysts.
+
+
+    From two-way PDPs, we can draw useful interpretations of the effects of two features
+    simultaneously on the syngas ratio (see Fig. 6). In particular, they definitively
+    exclude the presence of confounding cross-correlation effects between each feature,
+    and thus confirm our
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_5_0.png)
+
+
+    Fig. 4. : SHAP bee swarm plot showing feature importance for prediction of syngas
+    ratio.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/16422e279462b2d8ffa23c6682aa47a2_6_0.png)
+
+
+    Fig. 5. : One-way partial dependence plots of the effects of process parameters
+    on syngas ratio, constructed with feature values from the 1st to 99th percentile.
+    The black lines on the x-axis indicate the approximate distributions of features
+    in our dataset, where each line indicates a consecutive 10th percentile starting
+    from the leftmost line (10th percentile) to the rightmost line (90th percentile).
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_6_1.png)
+
+
+    Fig. 6. : Two-way partial dependence plots of the effects of pairs of process
+    parameters on syngas ratio: (a) Reaction temperature and GHSV, (b) CH4 feed fraction
+    and GHSV, and (c) CH4 feed fraction and reaction temperature. The surfaces are
+    colored according to their relative syngas ratio values (blue: low, yellow: high).
+
+
+    conclusions from the one-way PDPs that high syngas ratios are favored by lower
+    GHSVs and increased feed dilution, which could serve as process handles for achieving
+    close-to-unity syngas ratios.
+
+
+    # 3.4. Effect of catalyst parameters on syngas ratio
+
+
+    Among the catalyst design parameters investigated, Ni particle size has the most
+    pronounced effect on the syngas ratio (see Fig. 7a) with a strong negative correlation
+    between the syngas ratio and particle size. Two possible hypotheses can be put
+    forth for this observation. Firstly, if the RWGS elementary steps are continuously
+    equilibrated, then the
+
+
+    particle size may not directly affect the syngas ratio, instead exerting only
+    an indirect influence through its effect on reactant conversions (see Section
+    3.5). In a study on low-temperature DRM over Ni/SiO2 catalysts, Baudouin et al.
+    observed that syngas ratio was largely governed by the CH4 or CO2 conversion independently
+    of underlying particle size, which was attributed to competitive adsorption of
+    DRM and RWGS intermediates on the Ni surface and consequent inability to decouple
+    both processes [20]. While their findings are in agreement with several older
+    studies [19,55], RWGS has sometimes also been found to be not in dynamic equilibrium
+    [56]. Alternatively, if the DRM and RWGS reactions are catalyzed by different
+    sites on the same catalyst whose relative'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/16422e279462b2d8ffa23c6682aa47a2_7_0.png)
+
+
+    Fig. 7. : One-way partial dependence plots of the effects of catalyst parameters
+    on syngas ratio, constructed with feature values from the 1st to 99th percentile.
+    The black lines on the x-axis indicate the approximate distributions of features
+    in our dataset, where each line indicates a consecutive 10th percentile starting
+    from the leftmost line (10th percentile) to the rightmost line (90th percentile).
+
+
+    fractions are affected distinctly by particle size, then particle size can play
+    a direct role in determining the relative selectivities towards DRM and RWGS,
+    and hence the observed syngas ratio. For instance, Foppa et al. showed computationally
+    and experimentally for Ni/Al2O3 that all surface Ni atoms are active for DRM,
+    whereas only the Ni-Al2O3 interface sites are implicated in the forward water
+    gas shift reaction [57]. The methane decomposition reaction (Section 3.1), which
+    is particularly favorable over moderately-large Ni particles (ca. 20 – 100 nm)
+    [58], may also increase observed syngas ratios beyond what is expected from the
+    DRM/RWGS balance alone. Also, the nature of the support can influence the mechanisms,
+    active sites and dominant surface intermediates: for instance, reducible metal
+    oxides such as CeO2 can induce a bifunctional mechanism involving lattice oxygen
+    vacancies that enable the decoupling of CO2 and CH4 activation steps.[12].
+
+
+    To the best of our knowledge, there have not been any studies in the published
+    literature that have elucidated the precise effect of metal nanoparticle size
+    on syngas ratios over realistic DRM catalysts. Experimentally, it can be difficult
+    to isolate the effect of particle size from that of other catalyst parameters
+    while also keeping the conversion and extents of coking and sintering unchanged.
+    To this end, the approach of Han et al., in which pre-synthesized Ni nanoparticles
+    of different sizes are deposited onto an inert support and coated with different
+    oxide overlayers to minimize coking and sintering [21], could be promising. On
+    the other hand, first-principles computational studies are complicated by the
+    need to calculate product yields at high reactant concentrations to match experimental
+    conditions, which would necessitate a full microkinetic model in addition to a
+    realistic depiction of the working catalyst surface under reaction conditions,
+    which can be challenging to obtain for complex catalyst architectures. Nevertheless,
+    our present results suggest that such studies are warranted, and work along these
+    lines is currently ongoing in our laboratory.
+
+
+    Interestingly, syngas ratio increases with Ni loading up to ca. 20 wt% Ni, above
+    which the effect attenuates (see Fig. 7b). Though this trend may appear to contradict
+    that observed for the particle size considering that particle sizes usually increase
+    with Ni loadings, the one-way PDPs are obtained by varying one feature at a time
+    while keeping the other features at their average values; in other words, they
+    assume that the
+
+
+    features are decoupled from each other. Thus, our model points to a synergistic
+    effect between higher Ni loadings, and small particle sizes in achieving optimal
+    syngas ratios, which is further confirmed by two-way PDPs (see Fig. 8a). In practice,
+    high Ni loadings and small particle sizes can be simultaneously achieved by improving
+    dispersions through tailored syntheses involving mesoporous supports in tandem
+    with strong metal-support interactions [59].
+
+
+    Surprisingly, modifier electronegativity does not have a significant effect on
+    syngas ratio (see Supplementary Information Fig. S6), even though the addition
+    of promoters is a common strategy in catalyst design. There are two possible explanations
+    for this observation. Firstly, the effects of promoters on textural properties,
+    such as Ni dispersion and strength of metal-support interactions, could already
+    have been captured by other catalyst features, namely H2-temperature programmed
+    reduction (TPR) peak temperature, surface area, and particle size. Secondly, despite
+    its successful use as a descriptor in several studies [28,29], the electronegativity
+    may be too simplistic of a descriptor for the promoter’s effect on a catalyst,
+    which could occur via diverse mechanisms such as enhancing redox properties or
+    Brønsted/Lewis acidity/basicity. Unfortunately, the corresponding experimental
+    measurables (e.g., band gap, oxygen vacancy density, titration, or temperature-programmed
+    desorption results) are often only qualitatively reported in the literature and
+    rarely quantified.
+
+
+    The temperature of maximum H2 consumption during TPR is indicative of the reducibility
+    of the catalyst, and in turn the strength of interactions between the unreduced
+    oxide phase and the catalyst support. For Ni-based catalysts, peaks around ca.
+    300-400 °C are typically assigned to the bulk NiO weakly interacting with the
+    support, 400-600 °C to the well-dispersed NiO strongly interacting with the support,
+    and > 600 °C to the poorly reducible mixed oxide phases (e.g., silicates or aluminates).
+    We observe that optimal syngas ratios are achieved between ca. 400 °C and 800
+    °C (see Fig. 7c). We hypothesize that the weak metal-support interactions of easily
+    reducible NiO phases induce sintering under reaction conditions, leading to larger
+    particle sizes. Conversely, poorly reducible precursors and overly strong metal-support
+    interactions may result in a low degree of reduction and correspondingly an absence
+    of Ni metal species for the reaction at lower'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/16422e279462b2d8ffa23c6682aa47a2_8_0.png)
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_8_1.png)
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_8_2.png)
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_8_3.png)
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_8_4.png)
+
+
+    Fig. 8 : Two-way partial dependence plots of the effects of pairs of catalyst
+    parameters on syngas ratio: (a) Ni loading and Ni particle size, (b) Pore size
+    and Ni particle size, (c) Surface area and Ni particle size, (d) H2-TPR peak temperature
+    and Ni particle size, and (e) Pore size and pore volume. The surfaces are colored
+    according to their relative syngas ratio values (blue: low, yellow: high).
+
+
+    reaction temperatures,[60] thus causing conversions and syngas ratios to decrease.
+
+
+    For textural properties, we observe that syngas ratio increases with surface area
+    (see Fig. 7d), pore size (see Fig. 7e) and pore volume (see Fig. 7f) until critical
+    values of ca. 400 m2/g, 40 nm, and 1 cm3/g respectively. The effects of pore volume
+    and surface area, which are strongly correlated (see Fig. 2), can be attributed
+    to increased Ni dispersion which indirectly favors smaller Ni particle sizes.
+    The effect of pore size is subtler because it is usually difficult to introduce
+    very small pores to common support materials such as mixed oxides, hydroxyapatite,
+    and layered double hydroxides. Thus, the observed correlation between pore size
+    and syngas ratio may not imply causation and is more likely because the best-performing
+    supports for achieving high syngas
+
+
+    ratios are difficult to synthesize with very small pore sizes.
+
+
+    Finally, the remainder of the two-way PDPs illustrating the effect of catalyst
+    parameters on syngas ratio are shown in Fig. 8d-b. These plots together show that
+    the preference for a smaller particle size dominates the determination of syngas
+    ratio, with the other catalyst parameters playing relatively minor roles.
+
+
+    # 3.5. Decoupling syngas ratios and reactant conversions
+
+
+    The same process used for the prediction of syngas ratio is used to train a tree
+    regressor model to predict CH4 and CO2 conversions. The CatBoost model demonstrates
+    good prediction accuracy with test scores (R2) of 0.895 and 0.875 for CH4 and
+    CO2 conversions, as shown by the'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: 'regression plots in Supplementary Information Fig. S7. SHAP plots are again
+    used to evaluate the feature importance for predicting CH4 and CO2 conversions
+    (see Supplementary Information Fig. S8), and show that process parameters, particularly
+    reaction temperature, GHSV and CH4 feed fraction, are the most important features
+    for predicting both CH4 and CO2 conversions. However, catalyst properties such
+    as pore volume, H2-TPR peak temperature, Ni particle size, surface area, and pore
+    size are also of mild importance for predicting conversions, in agreement with
+    the relevance of catalyst design for achieving high reactant conversions in DRM.
+
+
+    As discussed in Section 3.1 above, considering the moderate correlation between
+    syngas ratio and reactant conversions in our dataset, we focus only on identifying
+    where the effects of each feature on reactant conversions and syngas ratio diverge.
+    The one-way PDPs of the effects of each feature on reactant conversions are shown
+    in Supplementary Information Fig. S9-S10, and two-way PDPs for important feature
+    pairs are provided in Supplementary Information Fig. S11-S14. To visualize each
+    feature''s simultaneous effect on conversion and syngas ratio, we plot the PDP-predicted
+    CH4 conversions and syngas ratios across the range of feature values on the same
+    axes (see Fig. 9). The corresponding plots for CO2 conversion are very similar
+    and presented in Supplementary Information Fig. S15. In this manner, each feature''s
+    contribution to the overall positive correlation between syngas ratio and conversion
+    can be decoupled and compared independently.
+
+
+    With several exceptions, the predicted syngas ratios and CH4 conversions are strongly
+    correlated across most features, with slopes that are in general agreement with
+    the overall trend (i.e., a ca. 0.005 unit increase in syngas ratio per 1% increase
+    in CH4 conversion). The Ni particle size and Ni loading exert much stronger effects
+    on syngas ratio
+
+
+    than on CH4 conversion. By varying Ni particle size across the 5th to the 95th
+    percentile of the dataset (ca. 3–26 nm) while holding all other features constant
+    at their average values, the predicted syngas ratio decreases by ca. 0.011 units
+    for every 1% decrease in the predicted CH4 conversion. Similarly, the predicted
+    syngas ratio increases from ca. 0.82–0.85 as Ni loading increases from ca. 3–20%,
+    while the predicted CH4 conversion remains almost unchanged (ca. 61%) across the
+    same range of Ni loadings. These PDP correlation analyses are corroborated by
+    the SHAP plots (see Fig. 4 and Supplementary Information Fig. S8), which show
+    Ni particle size and Ni loading as the 3rd and 5th most important features respectively
+    for predicting syngas ratio, but only the 5th and 9th most important features
+    for predicting CH4 conversion. In contrast, pore size affects reactant conversions
+    more strongly than syngas ratio: for pore sizes between ca. 4 and 27 nm, the predicted
+    CH4 conversion varies between ca. 55% and 62% while the predicted syngas ratio
+    remains nearly constant (ca. 0.83). Overall, our observations highlight the possibility
+    of designing catalysts, using the metal loading, particle size, and pore size
+    as potential handles, to tune product syngas ratios at any reactant conversion.
+
+
+    The low importance of Ni loading in predicting conversions may be particularly
+    surprising considering that, all else being equal as assumed in the PDP analysis,
+    increasing the metal content should increase the number of active sites for the
+    DRM reaction. We believe that this could be a result of the current trend in the
+    published literature towards highly-dispersed, single-atom catalysts [61] that
+    demonstrate excellent DRM activity at relatively low Ni loadings. Our study nevertheless
+    points to an independent positive effect of Ni loading on syngas ratio, which
+    could motivate future global optimization studies [62] that take into account
+    tradeoffs between the synthetic accessibilities of multiple
+
+
+    ![](img/16422e279462b2d8ffa23c6682aa47a2_9_0.png)
+
+
+    Fig. 9. : Trajectory plots showing each process and catalyst parameter''s simultaneous
+    effect on syngas ratio and CH4 conversion.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '# ## 4. Conclusions
+
+
+    In this work, we performed an exploratory interpretable ML analysis, trained on
+    a comprehensive dataset curated from recent literature, of the effects of process
+    parameters and catalyst properties on reactant conversions and syngas ratios in
+    Ni-catalyzed DRM. By applying posteriori interpretation methods to the black-box
+    ML model results, we were first able to reproduce basic trends concerning process
+    parameters that are in accordance with overall thermodynamic analysis of the DRM
+    process: higher syngas ratios are favored by higher reaction temperatures, lower
+    GHSVs and dilute feeds.
+
+
+    In terms of catalyst parameters, we observed that the preference for a smaller
+    Ni particle size is the primary determinant of high syngas ratios. Furthermore,
+    syngas ratio and reactant conversions are moderately correlated and the residual
+    variance can largely be attributed to the divergent effects of Ni particle size
+    and Ni loading: while syngas ratio decreases with Ni particle size and increases
+    with Ni loading, their corresponding effects on reactant conversions are far more
+    muted. Thus, in contrast to previous studies on silica-supported catalysts concluding
+    that syngas ratio is thermodynamically controlled, our present results that were
+    derived over a comprehensive dataset covering diverse catalyst formulations and
+    morphologies suggest that the RWGS and DRM reactions can be partially decoupled.
+    Our findings also suggest the possibility of designing catalysts, using the metal
+    loading, particle size, and pore size as potential handles, that are particularly
+    selective for DRM and able to achieve high product syngas ratios at any reactant
+    conversion: in particular, our model suggests a combination of smaller particle
+    sizes, higher metal loadings and, to a lesser extent, larger pore sizes to be
+    beneficial in this regard. At the same time, our exploratory study also highlights
+    the potential of data-driven ML models to complement experimental and theoretical
+    studies in heterogeneous catalysis by uncovering structure-property relationships
+    that can then be investigated in greater detail. Crucially, these models facilitate
+    the isolation of the individual effects of the various design parameters, which
+    would otherwise be difficult to observe in experimental studies. Subsequently,
+    we also anticipate extending our study to predicting optimal DRM catalyst formulations
+    by applying global optimization methods that simultaneously consider material
+    synthesizability in addition to the effects of different features on target values,
+    and leveraging our dataset and similar datasets as training sets for the development
+    of automated text mining approaches tailored towards the heterogeneous catalysis
+    literature.
+
+
+    The limitations of our model are primarily related to the bias of published data
+    towards high-performing catalysts, which results in a relatively sparse traversal
+    of feature space that is not conducive to ML model training. Understandably, this
+    bias limits the model from interpreting the effect of the feature over the entire
+    range of its values,
+
+
+    especially at the tail ends of the feature and target distributions. Therefore,
+    though the overall trend and the general understanding of feature effect may hold
+    true, the accuracy of model interpretation techniques may be less reliable for
+    those ranges of feature or target values. Further limitations include the inability
+    of electronegativity as a sole descriptor to fully capture the electronic effects
+    exerted by catalyst promoters, and the limited generalizability of the PDP trends
+    in a large general catalyst dataset to a specific smaller subset of catalyst data
+    due to the Simpson’s paradox – in which a trend is observed in several subsets
+    of data but the reverse trend is observed for the general dataset [63]. Future
+    work will focus on addressing these limitations by incorporating a well-designed
+    high-throughput experimental dataset to supplement the sparsely traversed regions
+    of our model, and identifying improved descriptors for heteroatom promoters that
+    can better describe the interactions between promoter and active metal.
+
+
+    # ## CRediT authorship contribution statement
+
+
+    **Keerthana Vellayappan**: Conceptualization, Methodology, Investigation, Software,
+    Validation, Writing – original draft, Visualization. **Yifei Yue**: Conceptualization,
+    Methodology, Investigation, Software, Validation, Writing – original draft, Visualization.
+    **Kang Hui Lim**: Conceptualization, Investigation, Validation, Writing – review
+    & editing, Visualization. **Keyu Cao**: Data acquisition. **Ji Yang Tan**: Data
+    acquisition. **Shuwen Cheng**: Data acquisition. **Tianchang Wang**: Data acquisition.
+    **Terry Z.H. Gani**: Supervision, Writing – review & editing. **Iftekhar A. Karimi**:
+    Supervision, Writing – review & editing, Funding acquisition. **Sibudjing Kawi**:
+    Supervision, Writing – review & editing, Funding acquisition.
+
+
+    # ## Declaration of Competing Interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # ## Data Availability
+
+
+    Complete dataset and code are available on GitHub (https://github.com/yifei-1021/DRM-ML-Project).
+
+
+    # ## Acknowledgment
+
+
+    This work was supported by A*STAR LCERFI (WBS: A-8000278–00-00) and FRC MOE T1
+    Project (WBS: A-0009184–00-00). Y.Y., K.H.L., K. C., J.Y.T. and T.W. acknowledge
+    financial support from the National University of Singapore for their studies.
+    S.C. acknowledges financial support from the China Scholarship Council.
+
+
+    # ### Appendix: Model Details
+
+
+    # #### Data and code availability
+
+
+    Complete dataset and code are available on GitHub (https://github.com/yifei-1021/DRM-ML-Project)
+    upon acceptance of the manuscript.
+
+
+    # #### Machine learning algorithms
+
+
+    The main types of machine learning algorithms that we considered are ensemble
+    models, which combine the predictions made by multiple base estimators, particularly
+    decision trees, to improve the overall generalizability and accuracy of the ensemble
+    over a single estimator [64]. In this work, we adopted tree-based ensemble as
+    decision trees are able to learn trends in complex and non-smooth feature space
+    by partitioning the feature space into smaller subsets, which offers higher performance
+    compared to simpler models such as logistic regression [65]. Compared to more
+    popular deep'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: 'learning models, such as Multi-Layer Perceptions (MLPs), ensemble models often
+    perform better for tabular data [66]: unlike MLPs, tree-ensemble models do not
+    exhibit bias towards non-smooth target functions, and tree-ensemble models are
+    more robust to uninformative and colinear features [66,67]. In addition, tree-based
+    ensemble models are easier to implement and tune (e.g., ensemble trees allow the
+    feature to be directly used as inputs to the ensemble model without the need for
+    normalization:
+
+
+    Tree-based ensemble models use two main ensemble methods, particularly bagging
+    and boosting. In bagging, each decision tree in the ensemble is trained using
+    a randomly sampled subset of the training dataset. In gradient boosting, the base
+    decision trees in the ensemble are sequentially fitted with another decision tree
+    to resolve inaccurate predictions produced by the previous decision tree [68].
+    Further details on the RF, GBR, and CatBoost algorithms are provided in Supplementary
+    Information Text S2, and the hyperparameters of each ensemble tree model are provided
+    in Supplementary Information Table S5.
+
+
+    # Machine learning workflow
+
+
+    Our machine learning workflow is detailed as follows: (1) We performed the train-test
+    split once (90%–10% train-test). (2) We used grid cross validation on the training
+    set to find the optimal hyperparameters. (3) The model is trained on the training
+    set that is partitioned at the start. (4) Model performance is evaluated and compared
+    based on the test set.
+
+
+    # Aspen plus thermodynamic simulations
+
+
+    Thermodynamic equilibrium calculations of dry reforming of methane (DRM) at any
+    given temperature (i.e., 500°C–800 °C) and at atmospheric pressure (i.e., 1 bar)
+    are based on minimizing the Gibbs free energy of a multicomponent system. The
+    overall system is assumed to contain the main DRM reaction (i.e., CH4 + CO2 ⇌
+    2 H2 + 2CO) and its most prominent side reaction, the reverse water gas shift
+    (RWGS, i.e., H2 + CO2 ⇌ H2O + CO). The total Gibbs free energy (Gtotal) of the
+    overall chemical system is the sum of the chemical potential of each species involved
+    (i.e., CH4, CO2, H2, CO, H2O and He, which is used as a diluent):
+
+
+    ```
+
+    $G^{total} = \sum_{i=1}^N n_i \mu_i$ (1)
+
+    ```
+
+
+    where $n_i$ is the number of moles of species $i$ and $\mu_i$ is the corresponding
+    chemical potential of species $i$. The chemical potential can be defined as:
+
+
+    ```
+
+    $\mu_i = \Delta G_{f_i}^0 + RTln(\gamma_i \hat{\varphi}_i \frac{P}{P_0})$ (2)
+
+    ```
+
+
+    where $\Delta G_{f_i}^0$ is the standard Gibbs free energy of formation for species
+    $i$ at standard conditions. $R$ is the molar gas constant, $T$ is the temperature,
+    $y_i$ is the molar fraction of species $i$, $\widehat{\varphi}_i$ is the fugacity
+    coefficient of species $i$, $P$ is the operating pressure, and $P_0$ is the pressure
+    at standard conditions. The fugacity coefficient, $\widehat{\varphi}_i$, can be
+    estimated from equation of state modelling in the gas phase. Based on Carlson’s
+    decision tree for equations of state selection, the Peng-Robinson Equation of
+    State is the optimal choice for estimating fugacity coefficients in non-polar
+    chemical systems, and hence chosen in our thermodynamics calculations [69]. The
+    analysis was performed on Aspen Plus V12 using RGibbs reactor.
+
+
+    The same model was used for thermodynamic simulations with varying extents of
+    DRM reaction at different temperatures to determine the syngas ratio trend. A
+    conversion reactor was used to specify the extent of the reaction, and a Gibbs
+    equilibrium reactor for RWGS was used to ensure RWGS is at equilibrium conversion.
+    The simulated feed was an undiluted equimolar mixture of CH4 and CO at a pressure
+    of 1 bar.
+
+
+    # Associated content
+
+
+    # Supplementary Information
+
+
+    Search string used in Scopus, theoretical background of models used, additional
+    data visualization plots, tables of descriptive statistics, list of outliers,
+    ML model hyperparameters (PDF).
+
+
+    # Appendix A. Supporting information
+
+
+    Supplementary data associated with this article can be found in the online version
+    at doi:10.1016/j.apcatb.2023.122593.
+
+
+    # References
+
+
+    +   [1] J. Rogelj, G. Luderer, R.C. Pietzcker, E. Kriegler, M. Schaeffer, V. Krey,
+    K. Riahi, Energy system transformations for limiting end-of-century warming to
+    below 1.5 °C, Nat. Clim. Change 5 (2015) 519–527.
+
+    +   [2] S. Cheng, Z. Sun, K.H. Lim, T.Z.H. Gani, T. Zhang, Y. Wang, H. Yin, K.
+    Liu, H. Guo, T. Du, J. Liu, G.K. Yi, Z. Yin, S. Zhai, Emerging strategies for
+    CO2 photocorreduction to CH4: from experimental to data-driven design, Adv. Energy
+    Mater. 12 (2022) 2200389.
+
+    +   [3] Y. Song, E. Ozdemir, S. Ramesh, A. Adishev, S. Subramanian, A. Harale,
+    M. Albulai, B.A. Fadhel, A. Jamali, D. Moon, S.H. Choi, C.T. Yavuz, Dry reforming
+    of methane by stable Ni-Mo nanocatalysts on single-crystalline MgO, Science 367
+    (2020) 777–781.
+
+    +   [4] K. Wittich, M. Krämer, N. Bottke, S.A. Schunk, Catalytic dry reforming
+    of methane: Insights from model systems, ChemCatChem 12 (2020) 2130–2147.
+
+    +   [5] I.V. Yentekakis, P. Panagiotopoulou, G. Artemetis, A review of recent
+    efforts to promote dry reforming of methane (DRM) to syngas production via bimetallic
+    catalyst formulations, Appl. Catal. B (2021), 120210.
+
+    +   [6] S. Lögdberg, D. Tristantini, Ø. Borg, L. Ilver, B. Gevert, S. Járás, E.A.
+    Blekkan, A. Holmen, Hydrocarbon production via Fischer–Tropsch synthesis from
+    H2-poor syngas over different Fe-Co-/$\gamma$-Al2O3 bimetallic catalyts, Appl.
+    Catal. B 89 (2009) 167–182.
+
+    +   [7] S. Damyanova, B. Pawelec, K. Aristhrova, M.V.M. Huerta, J.L.G. Fierro,
+    The effect of CeO2 on the surface and catalytic properties of Pt/Co–O–ZrO2 catalysts
+    for methane dry reforming, Appl. Catal. B 89 (2009) 149–159.
+
+    +   [8] I.V. Yentekakis, G. Goula, M. Hatzisymeon, I. Besti–Argyropoulou, G. Botzolaki,
+    K. Kousi, D.I. Kondarides, M.J. Taylor, C.M. Parlett, A. Osatiashtiani, Effect
+    of support oxygen storage capacity on the catalytic performance of Rh nanoparticles
+    for CO2 reforming of methane, Appl. Catal. B 243 (2019) 490–501.
+
+    +   [9] W. Kong, Y. Fu, L. Shi, S. Li, E. Vok, X. Zhou, R. Si, B. Pan, C. Yuan,
+    S. Li, Nickel nanoparticles with interfacial confinement mimic noble metal catalyst
+    in methane dry reforming, Appl. Catal. B 285 (2021), 119837.
+
+    +   [10] A.L.A. Marinho, R.C. Rabelo-Neto, F. Epron, N. Blon, F.S. Toninlo, F.B.
+    Noronha, Embedded Ni nanoparticles in CeZrO2 as stable catalyst for dry reforming
+    of methane, Appl. Catal. B 268 (2020), 118387.'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: '+   [11] Y. Liu, Y. Chen, Z. Gao, X. Zhang, L. Zhang, M. Wang, B. Chen, Y.
+    Diao, Y. Li, D. Xiao, X. Wang, D. Ma, C. Shi, Embedding high loading and uniform
+    Ni nanoparticles into silicalite-1 zeolite for dry reforming of methane, Appl.
+    Catal. B 307 (2022), 121202.
+
+    +   [12] S. Das, J. Ashok, Z. Bian, N. Dewangan, M.H. Wai, Y. Du, A. Borgna, K.
+    Hidajat, S. Kawai, Silica-Ceria sandwich Ni core-shell catalyst for low temperature
+    dry reforming of biogas: Coke resistance and mechanistic insights, Appl. Catal.
+    B 230 (2018) 220-236.
+
+    +   [13] S. Das, A. Jangam, S. Jayaprakash, S. Xi, K. Hidajat, K. Tomishige, S.
+    Kawai, Role of lattice oxygen in methane activation on Ni-phyllosilicate@ Ce1-xZrxO2
+    core-shell catalyst for methane dry reforming: Zr doping effect, mechanism, and
+    kinetic study, Appl. Catal. B 290 (2021), 119998.
+
+    +   [14] J. Zhang, F. Li, Coke-resistant Ni@SiO2 catalyst for dry reforming of
+    methane, Appl. Catal. B 176 (2015) 513-521.
+
+    +   [15] K. Mondal, S. Sasmal, S. Badgandi, D.R. Chowdhury, V. Nair, Dry reforming
+    of methane to syngas: a potential alternative process for value added chemicals—a
+    techno-economic perspective, Environ. Sci. Pollut. R. 23 (2016) 22267-22273.
+
+    +   [16] F.G.M. de Medeiros, F.W.B. Lopes, B. Rego de Vasconcelos, Prospects and
+    technical challenges in hydrogen production through dry reforming of methane,
+    Catalysts 12 (2022) 363.
+
+    +   [17] R.Y. Chen, Y.C. Chen, C.T. Yu, J.N. Chung, Thermodynamic analysis of
+    dry reforming of CH4 with CO2, High. Press. J. Nat. Gas. Eng. 26 (2015) 617-629.
+
+    +   [18] P. Cao, S. Adebgite, T. Wu, Thermodynamic equilibrium analysis of CO2
+    reforming of methane: elimination of carbon deposition and adjustment of H2/CO
+    ratio, Energy Procedia 105 (2017) 1864-1869.
+
+    +   [19] H. Swana, V. Kroll, G. Martin, C. Mirodatos, Deactivation of supported
+    nickel catalysts during the reforming of methane by carbon dioxide, Catal. Today
+    21 (1994) 571-578.
+
+    +   [20] D. Baudouin, U. Rodekrack, F. Krumeich, A. De Dallmann, K.C. Czeto, H.
+    Ménard, L. Vreyne, J.-P. Candy, P.B. Webb, C. Thieuleux, Particle size effect
+    in the low temperature reforming of methane by carbon dioxide on silica-supported
+    Ni nanoparticles, J. Catal. 297 (2013) 27-34.
+
+    +   [21] J.W. Han, J.S. Park, M.S. Choi, H. Lee, Uncoupling the size and support
+    effects of Ni catalysts for dry reforming of methane, Appl. Catal. B 203 (2017)
+    625-632.
+
+    +   [22] S.M. Moosavi, K.M. Jablonka, B. Smit, The role of machine learning in
+    the understanding and design of materials, J. Am. Chem. Soc. 142 (2020) 20273-20287.
+
+    +   [23] P. Schlexer Lamoureux, K.T. Winther, J.A. Garrido Torres, V. Strelov,
+    M. Zhao, M. Badjic, F. Abild-Pedersen, T. Bligaard, Machine learning for computational
+    heterogeneous catalysis, ChemCatChem 11 (2019) 3581-3601.
+
+    +   [24] A. Mazheika, Y.-G. Wang, R. Valero, F. Vines, F. Illas, L.M. Ghiringhelli,
+    S. V. Levchenko, M. Scheffler, Artificial-intelligence-driven discovery of catalyst
+    genes with application to CO2 activation on semiconductor oxides, Nat. Commun.
+    13 (2022) 419.
+
+    +   [25] Z.W. Ulissi, A.J. Medford, T. Bligaard, J.K. Nørskov, To address surface
+    reaction network complexity using scaling relations machine learning and DFT calculations,
+    Nat. Commun. 8 (2017) 1-7.
+
+    +   [26] M.E. Günyay, Y. Yıldırım, Knowledge extraction from catalysis of the
+    past: a case of selective CO oxidation over noble metal catalysts between 2000
+    and 2012, ChemCatChem 5 (2013) 1395-1406.
+
+    +   [27] A. Smith, A. Keane, J.A. Dumesic, G.W. Huber, V.M. Zavala, A machine
+    learning framework for the analysis and prediction of catalytic activity from
+    experimental data, Appl. Catal. B 263 (2020), 118257.
+
+    +   [28] M. Suvarta, T.P. Araújo, J. Pérez-Ramírez, A generalized machine learning
+    framework to predict the space-time yield of methanol from thermocatalytic CO2
+    hydrogenation, Appl. Catal. B (2022), 121530.
+
+    +   [29] L. Foppa, C. Sutton, L.M. Ghirardelli, S. De, P. Löser, S.A. Schunk,
+    A. Schäfer, M. Scheffler, Learning design rules for selective oxidation catalysts
+    from high-throughput experimentation and artificial intelligence, ACS Catal. 12
+    (2022) 2223-2232.
+
+    +   [30] T.N. Nguyen, T.T.P. Nhat, K. Takimoto, A. Thakur, S. Nimishira, J. Ohyama,
+    I. Miyazato, L. Takahashi, J. Fujima, K. Takahashi, T. Tanitame, High-throughput
+    experimentation and catalyst informatics for oxidative coupling of methane, ACS
+    Catal. 10 (2020) 921-932.
+
+    +   [31] J.A. Esterhuizen, B.R. Goldsmith, S. Linic, Interpretable machine learning
+    for knowledge generation in heterogeneous catalysis, Nat. Catal. 5 (2022) 175-184.
+
+    +   [32] B. Weng, Z. Song, R. Zhu, Q. Yan, Q. Sun, C.G. Grice, Y. Yan, W.-J. Yin,
+    Simple descriptor derived from symbolic regression accelerating the discovery
+    of new perovskite catalysts, Nat. Commun. 11 (2020) 3513.
+
+    +   [33] W. Xu, M. Andersen, K. Reuter, Data-driven descriptor engineering and
+    refined scaling relations for predicting transition metal oxide reactivity, ACS
+    Catal. 11 (2021) 734-742.
+
+    +   [34] X. Wang, S. Jiang, W. Hu, S. Ye, T. Wang, F. Wu, L. Yang, X. Li, G. Zhang,
+    X. Chen, Quantitatively determining surface-adsorbate properties from vibrational
+    spectroscopy with interpretable machine learning, J. Am. Chem. Soc. 144 (2022)
+    16069-16076.
+
+    +   [35] L. Breiman, Random forests, Mach. Learn 45 (2001) 5-32.
+
+    +   [36] J.H. Friedman, Greedy function approximation: a gradient boosting machine,
+    Ann. Stat. (2001) 1189-1232.
+
+    +   [37] L. Prokhorenkova, G. Gusev, A. Vorobev, A.V. Dorogush, A. Gulin, CatBoost:
+    unbiased boosting with categorical features, Adv. Neural Inf. Process. Syst. 31
+    (2018).
+
+
+    +   [38] M. Christoph, Interpretable machine learning: A guide for making black
+    box models explainable, 2019.
+
+    +   [39] A.J. Medford, M.R. Kunz, S.M. Ewing, T. Borders, R. Fushimi, Extracting
+    knowledge from data through catalysis informatics, ACS Catal. 8 (2018) 7403-7429.
+
+    +   [40] Z. Jensen, E. Kim, S. Kwon, T.Z.H. Gani, Y. Román-Leshkov, M. Moliner,
+    A. Corma, E. Olivetti, A machine learning approach to zeolite synthesis enabled
+    by automatic literature data extraction, ACS Cent. Sci. 5 (2019) 892-899.
+
+    +   [41] S. Park, B. Kim, S. Choi, P.G. Boyd, B. Smit, J. Kim, Text mining metal–organic
+    framework papers, J. Chem. Inf. Model 58 (2018) 244-251.
+
+    +   [42] C.R. Harris, K.J. Millman, S.J. Van Der Walt, R. Gommers, P. Virtanen,
+    D. Cournapeau, E. Wieser, J. Taylor, S. Berg, N.J. Smith, Array programming with
+    NumPy, Nature 585 (2020) 357-362.
+
+    +   [43] W. McKinney, Data structures for statistical computing in python, Proc.
+    9th Python in Sci. Conf. Austin, TX (2010) 51-56.
+
+    +   [44] F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel,
+    M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, Scikit-learn: Machine learning
+    in Python, J. Mach. Learn. Res. 12 (2011) 2825-2830.
+
+    +   [45] J.D. Hunter, Matplotlib: A 2D graphics environment, Comput. Sci. Eng.
+    9 (2007) 90-95.
+
+    +   [46] M.L. Waskom, Seaborn: statistical data visualization, J. Open Source
+    Softw. 6 (2021) 3021.
+
+    +   [47] T. Hastie, R. Tibshirani, J.H. Friedman, J.H. Friedman, The elements
+    of statistical learning: data mining, inference, and prediction, Springer, 2009.
+
+    +   [48] Y. Nohara, K. Matsumoto, H. Soejima, N. Nakashima, Explanation of machine
+    learning models using improved Shapley Additive Explanation, Proc. 10th ACM Int.
+    Conf. Bioinformatics. Comput. Biol. Health Inform. (2019), pp. 546-546.
+
+    +   [49] S.M. Lundberg, S.-I. Lee, A unified approach to interpreting model predictions,
+    Adv. Neural Inf. Process. Syst. 30 (2017).
+
+    +   [50] J.Y.-L. Chan, S.M.H. Lew, K.Y. Beal, W.K. Cheng, S.W. Phoong, Z.-W. Hong,
+    Y.-L. Chen, Mitigating the multicollinearity problem and its machine learning
+    approach: a review, Mathematics 10 (2022) 1283.
+
+    +   [51] C.C. Chong, Y.W. Cheng, S.N. Bukhari, H.D. Setiabudi, A.A. Jalil, Methane
+    dry reforming over Ni/fluoride SBA-15 catalysts: effects of support morphology
+    (rod-like F-SBA-15 and dendritic DFSBA-15), Catal. Today 375 (2021) 245-257.
+
+    +   [52] R. Debek, M. Totak, M.E. Galvez, T. Grzybek, P. Da Costa, Promotion effect
+    of zirconia on Mg(Ni, Al)O mixed oxides derived from hydrotalcites in CO2 methane
+    reforming, Appl. Catal. B 223 (2018) 36-46.
+
+    +   [53] S.M. Sajjadi, M. Haghhighi, A.A. Eslami, F. Rahmani, Hydrogen production
+    via CO2 reforming of methane over Cu and Co doped Ni/Al2O3 nanocatalyst: impregnation
+    versus sol-gel method and effect of process conditions and promoter, J. Sol. Gel.
+    Sci. Technol. 67 (2013) 601-617.
+
+    +   [54] M. Shah, S. Das, A.K. Nayak, P. Mondal, A. Bordoloi, Smart designing
+    of metal-support interface for imperisable dry reforming catalyst, Appl. Catal.
+    A 556 (2018) 137-154.
+
+    +   [55] R. Blom, I.M. Dahl, Å. Slagtern, B. Sortland, A. Spjelkavik, E. Tangstad,
+    Carbon dioxide reforming of methane over lanthanum-modified catalysts in a fluidized-bed
+    reactor, Catal. Today 21 (1994) 535-543.
+
+    +   [56] A.M. Gaddalla, M.E. Sommer, Carbon dioxide reforming of methane on nickel
+    catalysts, Chem. Eng. Sci. 44 (1989) 2825-2829.
+
+    +   [57] L. Foppa, T. Margossian, S.M. Kim, C. Muller, C. Copéret, K. Larmiier,
+    A. Comas-Vives, Contrasting the role of Ni/Al2O3 interfaces in water–gas shift
+    and dry reforming of methane, J. Am. Chem. Soc. 139 (2017) 17128-17139.
+
+    +   [58] D. Chen, K.O. Christensen, E. Ochoa-Fernández, Z. Yu, B. Tøttrup, N.
+    Latorre, A. Monzon, A. Holmen, Synthesis of carbon nanofibers: effects of Ni crystal
+    size during methane decomposition, J. Catal. 229 (2005) 82-96.
+
+    +   [59] O. Daoura, G. Fornasieri, M. Boutros, N. El Hassan, P. Beaunier, C. Thomas,
+    M. Selmane, A. Miche, C. Sassoey, O. Ersen, One-pot prepared mesoporous silica
+    SBA-15-like monoliths with embedded Ni particles as selective and stable catalysts
+    for methane dry reforming, Appl. Catal. B 280 (2021), 119417.
+
+    +   [60] M. Li, A.C. van Veen, Tuning the catalytic performance of Ni-catalysed
+    dry reforming of methane and carbon deposition via Ni-CeO2-x interaction, Appl.
+    Catal. B 237 (2018) 641-648.
+
+    +   [61] M. Akri, S. Zhao, X. Li, K. Zang, A.F. Lee, M.A. Isaacs, W. Xi, Y. Gangarajula,
+    J. Luo, Y. Ren, Atomically dispersed nickel as co-resistant active sites for methane
+    dry reforming, Nat. Commun. 10 (2019) 1-10.
+
+    +   [62] J.P. Janet, S. Ramesh, C. Duan, H.J. Kulik, Accurate multiobjective design
+    in a space of millions of transition metal complexes with neural-network-driven
+    efficient global optimization, ACS Cent. Sci. 6 (2020) 513-524.
+
+    +   [63] C.R. Blyth, On Simpson''s paradox and the sure-thing principle, J. Am.
+    Stat. Assoc. 67 (1972) 364-366.
+
+    +   [64] D.H. Wolpert, Stacked generalization, Neural Netw. 5 (1992) 241-259.
+
+    +   [65] A. Khemphila, V. Boonjing, Comparing performances of logistic regression,
+    decision trees, and neural networks for classifying heart disease patients, 2010
+    Int. Conf. Comput. Intell. Syst. Manag. Appl. (CISIM), IEEE (2010) 193-198.
+
+    +   [66] L. Grinštajn, E. Oyallon, G. Varoquaux, Why do tree-based models still
+    outperform deep learning on tabular data, arXiv Prepr. arXiv 2207 (2022) 08815.
+
+    +   [67] Y. Gorishniy, I. Rubachev, V. Khrulkov, A. Babenko, Revisiting deep learning
+    models for tabular data, Adv. Neural Inf. Process. Syst. 34 (2021) 18932-18943.
+
+    +   [68] T.G. Dietterich, Ensemble methods in machine learning, International
+    Workshop on Multiple Classifier Systems, Springer, 2000, pp. 1-15.
+
+    +   [69] E.C. Carlson, Don''t gamble with physical properties for simulations,
+    Chem. Eng. Prog. 92 (1996) 35-46.'
+  merge: -1
+  img_proc: true
