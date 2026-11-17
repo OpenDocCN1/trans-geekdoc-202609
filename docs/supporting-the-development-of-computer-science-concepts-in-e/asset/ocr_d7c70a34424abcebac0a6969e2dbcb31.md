@@ -1,0 +1,11 @@
+you're the only one using your login credentials, your password should still be changed every once in a while. Just in case. For younger learners, once a year should be sufficient.
+
+If your learners have never used their own username and password when logging in, they'll need lots of practice. Their usernames should never be more than eight characters and their passwords should also be simple. A good rule of thumb for younger learners is to create passwords that are two words, together, with a capital letter in the middle and a single digit number at the end—for example, “techBoss1”. They'll need practice figuring out how to create a capital letter and where to find the numbers and letters on their keyboards. However, using a password that includes capital letters and numbers helps to teach young learners the basis for creating secure passwords. As they get older, they can add a symbol.
+
+By limiting the number of characters your younger learners need to use, you'll increase their chances of mastering the skill of logging in independently. Security and usability should always be in balance when considering login credentials for young learners. In a school setting, I would strongly recommend creating a login card for each of your learners, with their names on the front of the card and their login credentials on the back. Point out that they should flip the cards back over (so just their names are showing) when they don't need them for logging in. This is another way to reinforce keeping login credentials secure.
+
+In a school setting, when you're first teaching your learners to log in, consider also creating a handout with screenshots that they can look at as they move through the steps. Leave extra time for practice and have other
+
+![](bbox=[0.273, 0.466, 0.706, 0.843])
+
+activities ready for your learners who are faster at completing this task. With younger learners, consider using songs to help them remember to keep their passwords safe such as The Silly Password Song.

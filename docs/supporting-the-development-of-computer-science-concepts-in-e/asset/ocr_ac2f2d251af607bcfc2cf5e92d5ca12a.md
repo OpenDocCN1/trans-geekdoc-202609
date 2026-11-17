@@ -1,0 +1,5 @@
+using the color, if they wished—for example, “green” using a green colored pencil). If you’re using the Use “Fun Size” M&M’s to Create a Bar Graph handout, you can skip the step of writing down the names of the colors (but your learners could still color the words with the corresponding color, if learning colors is a skill they’re working on).
+
+Next, have them count how many candies they have in each color pile. Demonstrate this by telling your learners to count the first pile, write the number of candies on the paper next to the name of the color, then count that same pile a second time to check their work. If they get a different count the second time, have them check again. They could also work with a friend to check each other’s work.
+
+Once they’re confident that their count is correct, they can draw a bar graph (or use the one on the handout) and color in the number of boxes that correlate to the number of candies in each color. For example, if they have three red M&M’s, they should color (using red) in the row labeled “red” columns 1, 2, and 3. Have them repeat this process until they’ve graphed all of their M&M’s.
