@@ -1,0 +1,15 @@
+Effective ML methods utilized in developing prognostic markers encompass regression models, classification, and regression trees.
+
+# 1.3.1.2 Unsupervised Learning
+
+It involves algorithms tasked with discovering patterns or structures within unlabeled data. Clustering and dimensionality reduction are common applications, allowing the algorithm to discern inherent relationships and groupings within the dataset. Cluster analysis is a technique that organizes samples into distinct groups based on the similarity between them. These groups consist of samples that are more alike than those in other groups. Various clustering algorithms, each with its advantages and disadvantages, are employed in biomedical research. Hierarchical clustering, self-organizing maps, and K-means are among the most frequently utilized algorithms for this purpose (D'haeseleer 2005). Unsupervised learning has found extensive application in the identification of homogeneous subgroups within biological samples. Given the heterogeneity observed in clinical outcomes and therapeutic responses across various diseases, it becomes crucial to discern homogeneous patient subgroups. This aids in pinpointing the biological factors influencing the disease and the efficacy of treatments. While this methodology has demonstrated significant success in treating individuals with breast cancer, there is a growing awareness that extending this approach to all types of cancer could be advantageous (Cancer Genome Atlas Network 2012).
+
+# 1.3.1.3 Reinforcement Learning
+
+This is centered around the concept of an agent interacting with an environment. The agent takes action, receives feedback in the form of rewards or penalties, and adjusts its strategy to maximize cumulative rewards over time. This paradigm is instrumental in training autonomous systems and decision-making processes. The use of reinforcement learning techniques has proven effective in optimizing antiretroviral therapy for human immunodeficiency virus (HIV) and in defining optimal strategies for managing sepsis. Reinforcement learning algorithms are employed to effectively learn optimal policies. Despite facing challenges, these algorithms are actively utilized to address significant issues within the healthcare sector (Gottesman et al. 2018).
+
+# 1.3.1.4 Deep Learning
+
+It is a subset of ML, which focuses on neural networks with multiple layers (deep neural networks). This architecture enables the automatic extraction of hierarchical features from data, contributing to remarkable achievements in image recognition, natural language processing, and other complex tasks (LeCun et al. 2015). Deep learning, also known as deep neural networks (DNN), has experienced substantial growth in recent years. DNNs belong to the category of artificial neural networks (ANNs) characterized by numerous concealed layers and distinct activation functions.
+
+The fundamental unit of the ANN is a neuron, it accepts a collection of input values and generates a solitary output derived from them. This is typically accomplished

@@ -1,0 +1,18 @@
+Harris RA, McAllister JM, Strauss JF (2023) Single-cell RNA-Seq identifies pathways and genes contributing to the hyperandrogenemia associated with polycystic ovary syndrome. IJMS 24:10611. https://doi.org/10.3390/ijms241310611
+Harrison OB, Schoen C, Retchless AC, et al (2017) Neisseria genomics: current status and future perspectives. Pathog Dis 75:ftx060. https://doi.org/10.1093/femspd/ftx060
+National Research Council (US) Panel on Reproductive Health, Tsui AO, Wasserheit JN, Haaga JG (1997) Introduction. In: Reproductive Health in Developing Countries: Expanding Dimensions, Building Solutions. Washington, DC: National Academies Press (US).
+Herbert M, Choudhary M, Zander-Fox D (2023) Assisted reproductive technologies at the nexus of fertility treatment and disease prevention. Science 380:164–167. https://doi.org/10.1126/science.adh0073
+Hussen BM, Hidayat HJ, Salihi A, et al (2021) MicroRNA: a signature for cancer progression. Biomed Pharmacother 138:111528. https://doi.org/10.1016/j.biopha.2021.111528
+Johannsen EB, Skakkebæk A, Kalucka JM, et al (2023) The testicular microvasculature in Klinefelter syndrome is immature with compromised integrity and characterized by excessive inflammatory cross-talk. Hum Reprod 38:2339–2349. https://doi.org/10.1093/humrep/dead224
+Jovic D, Liang X, Zeng H, et al (2022) Single-cell RNA sequencing technologies and applications: a brief overview. Clin Transl Med 12:e694. https://doi.org/10.1002/ctm2.694
+Kulshreshtha S, Narad P, Singh B, et al (2023) Identification of distinct vaginal microbiota signatures contributing toward preterm birth using an integrative computational approach. Microbial Biotechnol Lett 51:109–123. https://doi.org/10.48022/mbl.2210.10008
+Kulshreshtha S, Narad P, Pai SS, et al (2024) Metagenomic investigation of 16S rRNA marker gene samples to analyze the role of race, ethnicity, and location in preterm birth: a comprehensive vaginal microbiome meta-analysis. Hum Gene 39:201260. https://doi.org/10.1016/j.humgen.2024.201260
+Kumari R, Kaur P, Verma SK, et al (2024) Omics-based cutting-edge technologies for identifying predictive biomarkers to measure the impact of air borne particulate matter exposure on male reproductive health. JRHM 5:2. https://doi.org/10.25259/JRHM_25_2023
+Leisegang K, Sengupta P, Agarwal A, Henkel R (2021) Obesity and male infertility: mechanisms and management. Andrologia 53. https://doi.org/10.1111/and.13617
+Liang Z, Di N, Li L, Yang D (2021) Gut microbiota alterations reveal potential gut–brain axis changes in polycystic ovary syndrome. J Endocrinol Invest 44:1727–1737. https://doi.org/10.1007/s40618-020-01481-5
+Lilienthal D, Cahr M (2020) Genetic counseling and assisted reproductive technologies. Cold Spring Harb Perspect Med 10:a036566. https://doi.org/10.1101/cshperspect.a036566
+Linscott ML, Chung WCJ (2020) Epigenetic control of gonadotropin-releasing hormone neurone development and hypogonadotropic hypogonadism. J Neuroendocrinol 32:e12860. https://doi.org/10.1111/jne.12860
+Lowe R, Shirley N, Bleackley M, et al (2017) Transcriptomics technologies. PLoS Comput Biol 13:e1005457. https://doi.org/10.1371/journal.pcbi.1005457
+Malone JH, Oliver B (2011) Microarrays, deep sequencing and the true measure of the transcriptome. BMC Biol 9:34. https://doi.org/10.1186/1741-7007-9-34
+Mani S, Ghosh J, Coutifaris C, et al (2020) Epigenetic changes and assisted reproductive technologies. Epigenetics 15:12–25. https://doi.org/10.1080/15592294.2019.1646572
+Manos J (2022) The human microbiome in disease and pathology. APMIS 130:690–705. https://doi.org/10.1111/apm.13225
