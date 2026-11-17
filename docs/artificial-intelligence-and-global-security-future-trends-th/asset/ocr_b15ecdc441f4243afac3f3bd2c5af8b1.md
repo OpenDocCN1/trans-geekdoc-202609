@@ -1,0 +1,8 @@
+# # Table of Contents
+
++   - About the Editor ... xv
++   - About the Contributors ... xvii
++   - List of Contributors ... xxi
++   - Preface ... xxiii
+
+The book was written by researchers and authors across many disciplines and domains – Artificial Intelligence (AI), autonomous unmanned systems, undersea, space, as well as humanitarian crises, including the ethical, theological, and moral conflicts of war. These areas and topics encompass numerous moral and ethical issues. Among the questions these chapters will explore are: What are the implications of AI for the individual, for personal identity, privacy, and freedom, and for society? What are the consequences of AI advances related to national and global security? These chapters will examine the perspectives and consequences for the integration of AI in our daily lives, as well as its influence on society and war. Authors will present their perspectives on the potential for significant consequences related to the impact of AI on an individual’s identity that may place society at risk. What are the moral and ethical boundaries and responsibilities of each person’s life as AI blends with humans into the whole of society? Does humanity lose its identity in the process? Where are the lines drawn between AI systems and the human? These are but a few of the questions that will be examined in these chapters. Whatever the course of action, AI will continue to be part of our future world. As such, humans must chart a course of action to navigate the waters of the future that we design for ourselves.

@@ -1,0 +1,9 @@
+# Acknowledgments
+
+My long-standing interest in research and the topics of neuroscience, brain development, and cognitive psychology has afforded me the opportunity to work with a number of outstanding individuals across civilian and military communities. I believe that our thinking is a tapestry woven throughout the course of our lives shaped by our education, experience, knowledge, and insights gained through research and dialogue with others. I am indebted to those friends, colleagues, mentors, and students with whom I have engaged and learned from over the years. Indeed, they are far too numerous to mention here. However, I would like to share the following acknowledgments with you regarding those who contributed to making this book a reality.
+
+Please allow me to acknowledge the contributions of my contributing authors for sharing their knowledge, expertise, and perspectives on Artificial Intelligence. Special thanks to Dr. Timothy Demy for his encouragement in my research, teaching, and writing. Special acknowledgment to my friend and colleague, Dr. William Bundy who recently passed away. Dr. Bundy was a champion for all of us who reached out to the future to anticipate how technology would change our lives and warfare. He was a friend, teacher, and mentor to many students and colleagues as he led the Gravely Group at the US Naval War College.
+
+I am especially grateful to my US Naval War College, Ethics and Emerging Military Technology (EEMT) graduate students for the hours spent discussing, brainstorming, speculating, and imagining a future with ubiquitous Artificial Intelligence shaping and controlling our future lives and warfare.
+
+Special thanks to my editors at Emerald Publishing for their patience, support, and continuous encouragement. This book is evidence of their commitment to excellence in their work and publishing.

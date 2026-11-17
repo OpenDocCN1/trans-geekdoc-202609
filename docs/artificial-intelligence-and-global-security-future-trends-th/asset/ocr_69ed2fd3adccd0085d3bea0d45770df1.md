@@ -1,0 +1,15 @@
+correct, and the part moral agency played. These are both borderline cases of the sort that are commonly faced in warfare. The critical question here is to what extent AI can innovate and adapt in reliable and trustworthy ways that can be articulated after the fact to provide justification in ways that are better than what humans can do. Humans do get it wrong. Can machines do better? If they can, then would we say that they have the power of moral judgement and therefore, moral autonomy, in ways that are analogous enough to humans to count as moral agents?
+
+Moral considerations, as we see in the above cases, often conflict. So you need both moral reasoning and moral judgement oriented towards a specific action and context to generate moral agency. Rob Sparrow, one of the founding members of the International Committee for Robot Arms Control, notes that while robots and other machines can identify things, they cannot necessarily identify and interpret human intent, like when someone fakes surrender (Scharre, 2018, p. 259). Paul Scharre notes that “Making life-or-death decisions on the battlefield is the essence of the military profession...Making judgment calls in midst of uncertainty, ambiguous information and conflicting valued is what military professionals do.” and that autonomous weapons are a direct threat to the military profession itself and the idea of human moral agency in warfare (Scharre, 2018, p. 293).
+
+# Moral Agency
+
+While we expressed skepticism that AI is capable of the kind of moral reasoning and judgement that is necessarily for and constitutive of moral agency, we now turn more directly to the issue of moral agency itself.
+
+As a helpful checklist, we will use List and Pettit’s (2011) three criteria for agency.9 They use these criteria to argue that groups of individual agents are themselves agents, but the conditions serve equally well to determine when robots or AI count as agents. To that point, the central illustration List and Petit use is whether we should attribute agency to a robot traversing a table and picking up cylinders. They list three conditions (paraphrased):
+
++   - **Representation**: Agents must have some representation of the way the world is.
++   - **Motivation**: Agents must have some desires and/or commitments about the way the world ought to be.
++   - **Action**: Agents must be able to act based on their motivations and representations to (attempt to) realize their desired states of affairs.
+
+Let’s consider a simple example: when Juliette promises to help Elizabeth clean up their toys, and then does so, she has satisfied the above arguments. First, she needed some understanding of the situation: there was a room with toys strewn about. Second, she was able to form commitments on the basis of her desire to clean the room, and this is evidenced by her ability to credibly promise to help clean the room. Lastly, she is able to act based on these conditions.
