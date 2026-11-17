@@ -1,0 +1,136 @@
+
+
+## 考试准备演练 – 章节复习问题
+
+Apart from a solid understanding of key concepts, being able to think quickly under time pressure is a skill that will help you ace your certification exam. That is why working on these skills early on in your learning journey is key.
+
+Chapter review questions are designed to improve your test-taking skills progressively with each chapter you learn and review your understanding of key concepts in the chapter at the same time. You'll find these at the end of each chapter.
+
+## HOW TO ACCESS THESE RESOURCES
+
+To learn how to access these resources, head over to the chapter titled Chapter 11, Accessing the Online Practice Resources.
+
+To open the Chapter Review Questions for this chapter, perform the following steps:
+
+- 1. Click the link – https://packt.link/MLSC01E2_CH03.
+
+Alternatively, you can scan the following QR code (Figure 3.9):
+
+![](img/87c29232224b00f5a8bba6a66a391700_88_0.png)
+
+Figure 3.9 – QR code that opens Chapter Review Questions for logged-in users
+
+- 2. Once you log in, you'll see a page similar to the one shown in Figure 3.10:
+
+## AWS Services for Data Migration and Processing
+
+### Summary
+
+In this chapter, you learned about different ways of processing data in AWS. You also learned the capabilities in terms of extending your data centers to AWS, migrating data to AWS, and the ingestion process. You learned about the various ways of using data to process it and make it ready for analysis. You understood the magic of using a data catalog, which helps you to query your data via AWS Glue and Athena.
+
+In the next chapter, you will learn about various machine learning algorithms and their usage.
+
+![](img/87c29232224b00f5a8bba6a66a391700_89_0.png)
+
+Figure 3.10 – Chapter Review Questions for Chapter 3
+
+- 3. Once ready, start the following practice drills, re-attempting the quiz multiple times.
+
+## Exam Readiness Drill
+
+For the first three attempts, don’t worry about the time limit.
+
+### ATTEMPT 1
+
+The first time, aim for at least **40%**. Look at the answers you got wrong and read the relevant sections in the chapter again to fix your learning gaps.
+
+### ATTEMPT 2
+
+The second time, aim for at least **60%**. Look at the answers you got wrong and read the relevant sections in the chapter again to fix any remaining learning gaps.
+
+### ATTEMPT 3
+
+The third time, aim for at least **75%**. Once you score 75% or more, you start working on your timing.
+
+### TIP
+
+You may take more than **three** attempts to reach 75%. That’s okay. Just review the relevant sections in the chapter till you get there.
+
+## Working On Timing
+
+Target: Your aim is to keep the score the same while trying to answer these questions as quickly as possible. Here’s an example of how your next attempts should look like:
+
+| Attempt | Score | Time Taken |
+|---|---|---|
+| Attempt 5 | 77% | 21 mins 30 seconds |
+| Attempt 6 | 78% | 18 mins 34 seconds |
+| Attempt 7 | 76% | 14 mins 44 seconds |
+
+Table 3.1 – Sample timing practice drills on the online platform
+
+## NOTE
+
+The time limits shown in the above table are just examples. Set your own time limits with each attempt based on the time limit of the quiz on the website.
+
+With each new attempt, your score should stay above 75% while your “time taken” to complete should “decrease”. Repeat as many attempts as you want till you feel confident dealing with the time pressure.
+
+## 4 Data Preparation and Transformation
+
+You have probably heard that data scientists spend most of their time working on data-preparation-related activities. It is now time to explain why that happens and what types of activities they work on.
+
+In this chapter, you will learn how to deal with categorical and numerical features, as well as how to apply different techniques to transform your data, such as one-hot encoding, binary encoders, ordinal encoding, binning, and text transformations. You will also learn how to handle missing values and outliers in your data, which are two important tasks you can implement to build good **machine learning (ML)** models.
+
+In this chapter, you will cover the following topics:
+
+- Identifying types of features
+- Dealing with categorical features
+- Dealing with numerical features
+- Understanding data distributions
+- Handling missing values
+- Dealing with outliers
+- Dealing with unbalanced datasets
+- Dealing with text data
+
+This chapter is a little longer than the others and will require more patience. Knowing about these topics in detail will put you in a good position for the AWS Machine Learning Specialty exam.
+
+### Identifying types of features
+
+You *cannot* start modeling without knowing what a feature is and what type of information it can store. You have already read about the different processes that deal with features. For example, you know that feature engineering is related to the task of building and preparing features for your models; you also know that feature selection is related to the task of choosing the best set of features to feed a particular algorithm. These two tasks have one behavior in common: they may vary according to the types of features they are processing. It is very important to understand this behavior (feature type versus applicable transformations) because it will help you eliminate invalid answers during your exam (and, most importantly, you will become a better data scientist).
+
+By types of features, you refer to the data type that a particular feature is supposed to store. Figure 4.1 shows how you could potentially describe the different types of features of a model.
+
+![](img/87c29232224b00f5a8bba6a66a391700_92_0.png)
+
+Figure 4.1 – Feature types
+
+In **Chapter 1**, *Machine Learning Fundamentals*, you were introduced to the feature classification shown in **Figure 4.1**. Now, look at some real examples, so that you can eliminate any remaining questions you may have:
+
+| Feature type | Feature sub-type | Definition | Example |
+|---|---|---|---|
+| Categorical | Nominal | Labelled variables with no quantitative value | Cloud provider: AWS, MS, Google |
+| Categorical | Ordinal | Adds the sense of order to the labelled variable | Job title: junior data scientist, senior data scientist, chief data scientist |
+| Categorical | Binary | A variable with only two allowed values | Fraud classification: fraud, not fraud |
+| Numerical | Discrete | Individual and countable items | Number of students: 100 |
+| Numerical | Continuous | Infinite number of possible measurements and they often carry decimal points | Total amount: $150.35 |
+
+Table 4.1 – Real examples of feature values
+
+Although looking at the values of the variable may help you find its type, you should never rely only on this approach. The nature of the variable is also very important for making such decisions. For example, someone could encode the cloud provider variable shown in Table 4.1 as follows: 1 (AWS), 2 (MS), 3 (Google). In that case, the variable is still a nominal feature, even if it is now represented by discrete numbers.
+
+If you are building an ML model and you don’t tell your algorithm that this variable is not a discrete number but is instead a nominal variable, the algorithm will treat it as a number and the model won’t be interpretable anymore.
+
+## IMPORTANT NOTE
+
+> *Before feeding any ML algorithm with data, make sure your feature types have been properly identified.*
+
+In theory, if you are happy with your features and have properly classified each of them, you should be ready to go into the modeling phase of the CRISP-DM methodology, shouldn’t you? Well, maybe not. There are many reasons you may want to spend a little more time on data preparation, even after you have correctly classified your features:
+
+- Some ML libraries, such as `scikit-learn`, may not accept string values on your categorical features.
+- The data distribution of your variable may not be the most optimal distribution for your algorithm.
+- Your ML algorithm may be impacted by the scale of your data.
+- Some observations of your variable may be missing information and you will have to fix it. These are also known as missing values.
+- You may find outlier values of your variable that can potentially add bias to your model.
+- Your variable may be storing different types of information and you may only be interested in a few of them (for example, a date variable can store the day of the week or the week of the month).
+- You might want to find a mathematical representation for a text variable.
+- Believe me, this list has no real end!
+

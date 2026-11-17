@@ -1,0 +1,12 @@
+# Using other types of data stores
+
+Elastic Block Store (EBS) is used to create volumes in an Availability Zone. The volume can only be attached to an EC2 instance in the same Availability Zone. Amazon EBS provides both Solid-State Drive (SSD) and Hard Disk Drive (HDD) types of volumes. For SSD-based volumes, the dominant performance attribute is Input-Output Per Second (IOPS), and for HDD it is throughput, which is generally measured as MiB/s. You can choose between different volume types, such as General Purpose SSD (gp2), Provisioned IOPS SSD (io1), or Throughput Optimized HDD (st1), depending on your requirements. Provisioned IOPS volumes are often used for high-performance workloads, such as deep learning training, where low latency and high throughput are critical. Table 2.1 provides an overview of the different volumes and types:
+
+| Volume Types | Use cases |
+|---|---|
+| General Purpose SSD (gp2) | Useful for maintaining balance between price and performance. Good for most workloads, system boot volumes, dev, and test environments |
+| Provisioned IOPS SSD (io2, io1) | Useful for mission-critical, high-throughput or low-latency workloads. For example, I/O intensive database workloads like MongoDB, Cassandra, Oracle |
+| Throughput Optimized HDD (st1) | Useful for frequently accessed, throughput-intensive workloads. For example, big data processing, data warehouses, log processing |
+| Cold HDD (sc1) | Useful for less frequently accessed workloads |
+
+EBS is designed to be resilient within an Availability Zone (AZ). If, for some reason, an AZ fails, then the volume cannot be accessed. To prevent such scenarios, snapshots can be created from the EBS volumes, and they are stored in S3. Once the snapshot arrives in S3, the data in the snapshot becomes Region-resilient. The first snapshot is a full copy of data on the volume and, from then onward, snapshots are incremental. Snapshots can be used to clone a volume. As the snapshot is stored in S3, a volume can be cloned in any AZ in that Region. Snapshots can be shared between Regions and volumes can be cloned from them during disaster recovery. Even after the EC2 instance is stopped/terminated, EBS volumes can retain data through an easy restoration process from backed-up snapshots.
