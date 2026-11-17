@@ -1,0 +1,50 @@
+level_changes:
+- line: 69
+  before: 2
+  after: 3
+- line: 88
+  before: 2
+  after: 3
+- line: 92
+  before: 3
+  after: 4
+- line: 129
+  before: 3
+  after: 4
+- line: 150
+  before: 2
+  after: 3
+- line: 154
+  before: 3
+  after: 4
+- line: 170
+  before: 3
+  after: 4
+- line: 174
+  before: 3
+  after: 4
+- line: 457
+  before: 2
+  after: 3
+- line: 461
+  before: 2
+  after: 3
+- line: 465
+  before: 2
+  after: 3
+- line: 469
+  before: 2
+  after: 3
+text_changes:
+- line: 170
+  before: 3.4.4.2. 分类的深度学习技术
+  after: 3.4.2. 分类的深度学习技术
+- line: 174
+  before: 3.4.4.3. CNN的组件
+  after: 3.4.3. CNN的组件
+- line: 457
+  before: 7.2. 皮肤病灶出现的先进精细分割方法
+  after: 7.2. 皮肤病灶的先进精细分割方法
+- line: 461
+  before: 7.3. 出现的改进分类方法
+  after: 7.3. 改进分类方法
