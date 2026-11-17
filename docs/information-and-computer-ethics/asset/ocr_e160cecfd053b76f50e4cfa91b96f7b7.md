@@ -1,0 +1,13 @@
+# # 1.3. RELATIONSHIP BETWEEN ETHICS AND INFORMATION ETHICS
+
+Ethics often referred to as moral philosophy, is that division of philosophy that is concerned with systematizing, defending, and providing guidance on ethical and unethical conduct. Moral behavior merits doing the right things and taking the right action, irrespective of the situation. However, it is very difficult to decide on what is the right thing to do and what is wrong. Ethics is concerned with providing reasonable justification for our decisions. It evaluates if an action is moral or immoral.
+
+The role of information in routine decision-making and the advancement of our society is significant. The absence of precise and timely information will make it very challenging to make the right choices and decide the course of action. Ethics facilitates in the establishment of a code of conduct that can be applied in particular situations. Ethical principles also aid in setting up standards that can guide information professionals.
+
+The omnipresence of information in all fields of human exertions has given rise to new challenges for the human. The problem now is the presence of an exorbitant amount of information as opposed to the lack of it. In the present situation, it has become extremely difficult to use information judiciously to resolve our routine challenges and decision making.
+
+IE is expected to pave the path for problem-solving and utilizing information productively. IE is concerned with the ethical conduct of the users of information. It reinforces their accountability and obligation. It deals with the moral questions emerging from the use of information and the related activities during its lifecycle including creation, protection, distribution, and possibly destruction.
+
+The task of providing information is not very challenging and tough. There is now abundant ICT tools and techniques at our disposal. The information landscape has evolved into a very intricate and complicated information network. Also, the demand of information users all over the globe have now varied and broadened. These factors have complicated the situation. Hence, there is an additional endeavor, of distributing information to the right person at the right time in the right manner. And this is not an easy task anymore.
+
+One disturbing fact is the presence of ‘information divide.’ This is a result of inequalities in wealth creation and distribution among the various

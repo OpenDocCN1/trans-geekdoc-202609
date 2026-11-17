@@ -1,0 +1,13 @@
+of access and use or abuse of electronic information. Issues of plagiarism have therefore been more closely monitored in student works, while citation ethics is included in courses of information literacy.
+
+The different instances include matters of defense of intellectual property with the help of novel methods of information utilization in digital science, which is called as “Creative Commons.” A state of issue pertains due to the stress that accumulates when a situation related to the right to information and freedom of speech arises, particularly as regards censorship and filtering of information. Restrictions may apply particularly to dissemination of malignant information (These are that information which might not be suitable for the kids to go through or would be inappropriate for them to understand.).
+
+Use of information systems and technologies is another main concern that gets originated when encountered by an individual. For example, digital divide, provision of electronic information services in governmental areas, cybernetic crime. Maximum number of solutions to ethical dilemmas is contingent on existing regulations (laws, codes) on the one hand, and on the formation of information policies and information literacy that underpin man’s information behavior on the other.
+
+The best-suited method for understanding the matters related to IE is information ecology (Capurro, 2005; Floridi, 2010). It has now become an indispensable part of interpretation of relationships between man, information, and technologies, placing emphasis on the positive values of the cultivation of information environment and services for advancement of knowledge in society.
+
+For example, the technologies established by the companies like Volkswagen and YouTube have as well as continue to have a reflective influence on the society. For more than ten years, YouTube has formed the way people make, share, and consume the content of video. Likewise, it is quite hard to imagine a world deprived of Volkswagen cars, as since the early of 20th century, the company has been a mainstay.
+
+There is a reason why incidents leave an impact on the society. For example, incidents like “YouTube’s controversial recommended videos incident” and Volkswagen’s emission scandal were few to name that had a long-lasting impact on the society and especially on the kids (a major point of concern for the parents).
+
+The rush to meet deadlines and sell products can cause delivery teams to overlook security, unit, integration, and performance tests that eliminate

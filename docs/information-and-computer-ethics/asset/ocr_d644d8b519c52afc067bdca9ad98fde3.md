@@ -1,0 +1,13 @@
+Information ethics (IE) deals with the moral values and ethical standards related to the privacy, protection, and security of information. The definition and the beginning of IE as subject and the various aspects regarding IE have been discussed. The major aspects of IE are the micro ethical and macro ethical approaches that delineate the concept of IE have been elucidated. The various theoretical approaches and different perspectives like the socio-philosophical, information ecology perspective and the systems and technology perspective have been explained. The classification, factors, and different principles of IE have been discussed.
+
+# 5.1. INTRODUCTION
+
+The field of IE have been studied deeply studied over a period for a period of more than twenty years. The term IE was initially made by the Rafael Capurro, director of International Center for Information Ethics (ICIE) in the year nineteen eighty-seven.
+
+The study of ethics is more inclined towards the moral values and its concepts. Concepts related to values could be values that could be good or bad, right or wrong. It all depends on the actions related to the groups and norms. Therefore, ethics and their studies take a deep dive into the issues that are more or less related to practical decision-making (Veatch, 1977). In the case of “Computer software systems,” most of the decisions are taken after a complete analysis has been made through computer software which also comprises data/information storage and manipulation, data availability, and ‘alternatives’ formulation and selection.
+
+There was a conference on IE sponsored by the Graduate School of Library and Information Science, and from then there are a lot of new schools, magazines, and various conferences started to study the field of IE.
+
+The IE was started as a university program by the University of Pittsburgh and Kent State University. The IE is a field that is grounded on the various ethical aspects of the data process in the society and by the data obtained from the performance of different individuals, groups, and organizations.
+
+The IE signifies a setup of different moral values and behavior rules in the context of various related factors of the information environment. The experts state that the IE is understood as the art and science that enables receptivity and approaches to perceive ethical standards that are used to obtain, process, and utilize information for the information behaviors

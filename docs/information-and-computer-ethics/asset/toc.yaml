@@ -1,0 +1,119 @@
+level_changes:
+- line: 8
+  before: 2
+  after: 1
+- line: 14
+  before: 2
+  after: 1
+- line: 16
+  before: 3
+  after: 2
+- line: 20
+  before: 3
+  after: 2
+- line: 34
+  before: 2
+  after: 1
+- line: 400
+  before: 2
+  after: 1
+- line: 401
+  before: 2
+  after: 1
+- line: 443
+  before: 3
+  after: 2
+- line: 481
+  before: 2
+  after: 3
+- line: 519
+  before: 2
+  after: 3
+- line: 624
+  before: 2
+  after: 3
+- line: 882
+  before: 2
+  after: 1
+- line: 899
+  before: 3
+  after: 2
+- line: 1237
+  before: 2
+  after: 3
+- line: 1280
+  before: 2
+  after: 3
+- line: 1329
+  before: 2
+  after: 1
+- line: 1350
+  before: 3
+  after: 2
+- line: 1674
+  before: 2
+  after: 3
+- line: 1704
+  before: 2
+  after: 1
+- line: 1722
+  before: 3
+  after: 2
+- line: 2075
+  before: 3
+  after: 2
+- line: 2083
+  before: 3
+  after: 2
+- line: 2098
+  before: 2
+  after: 1
+- line: 2114
+  before: 3
+  after: 2
+- line: 2559
+  before: 2
+  after: 1
+- line: 2561
+  before: 3
+  after: 2
+- line: 2574
+  before: 3
+  after: 2
+- line: 3051
+  before: 2
+  after: 1
+- line: 3053
+  before: 3
+  after: 2
+- line: 3067
+  before: 3
+  after: 2
+- line: 3085
+  before: 3
+  after: 2
+- line: 3480
+  before: 2
+  after: 3
+text_changes:
+- line: 229
+  before: ' Walter Maner及其关于计算机伦理的观点'
+  after: Walter Maner及其关于计算机伦理的观点
+- line: 1484
+  before: 4.5.2 “数据对象”作为具有道德地位
+  after: 4.5.2. “数据对象”作为具有道德地位
+- line: 2098
+  before: 网络冲突与伦理
+  after: 6. 网络冲突与伦理
+- line: 2320
+  before: 6.5 使用武力与网络攻击
+  after: 6.5. 使用武力与网络攻击
+- line: 2350
+  before: 6.6 非国家行为体及其在网络战中的增加
+  after: 6.6. 非国家行为体及其在网络战中的增加
+- line: 2362
+  before: 6.6.1 参与网络战的行为体
+  after: 6.6.1. 参与网络战的行为体
+- line: 2386
+  before: 6.6.2 网络世界中非国家行为体的雇佣
+  after: 6.6.2. 网络世界中非国家行为体的雇佣

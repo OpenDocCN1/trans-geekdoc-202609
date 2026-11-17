@@ -1,0 +1,13 @@
+first place? It is because the bringing together of disparate data makes the development of new information relationships possible.
+
+# 4.11.2. Accuracy
+
+Deception has a method for messing up individuals’ lives, particularly when the gathering with the off-base data has leverage in power and expert. Consider the situation of one Louis Marches. Walks, an outsider, was a persevering man who, with his better half Eileen, at long last spared enough cash to buy a home in Los Angeles amid the 1950s.
+
+They took out a long-haul amount in the form of loan from Crocker National Bank. Consistently Louis Marches would stroll to his nearby bank, with the loan coupon book close by, to make his installment of $196.53. He constantly checked with consideration to protected that the teller had marked “paid” in his book on the correct line, that is, only in the line of the month for which the installment was expected. What’s more, he kept on doing this long after the bank had changed over to its computerized credit preparing framework.
+
+One September a couple of years prior Marches was advised by the bank that he had neglected to make his present house installment. Walks snatched his coupon book, walked to the bank and, in broken English that indicated hints of his nation legacy, endeavored to disclose to the teller this dunning notice wasn’t right. He had made his installment he guaranteed.
+
+The stamp on his coupon book demonstrated that he had paid. The teller punched Marches’ credit number on the console and surveyed the subsequent screen. Lamentably, she couldn’t affirm Marches’ case, nor consequently could the head teller, nor the branch administrator. At the point when looked with a PC produced screen that plainly demonstrated that his record was reprobate, this pecking order of brokers just overlooked the sections recorded in his coupon book and furthermore his chaparon raving. Befuddled, Marches left the bank in sicken.
+
+In October, in any case, Marches obediently went to the bank to make his next installment. He was informed that he couldn’t make his October installment since he was multi-month financially past due. He again demonstrated the teller his stepped coupon book. She declined to acknowledge it, and he raged out of the bank. In November he returned on calendar as he had improved the situation more than 20 years and attempted to make his installment once more, just to be informed that he was presently two months financially past due. Thus, it went until unavoidably the bank

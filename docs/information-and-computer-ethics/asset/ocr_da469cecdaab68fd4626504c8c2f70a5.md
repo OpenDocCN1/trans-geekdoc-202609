@@ -1,0 +1,13 @@
+to the fundamental alterations in his living conditions. The human race can continue to be dominant only if they make use of their inherent, adaptive, learning faculties that they derive from their physiological structure (Wiener, 1954, pp. 57–58, italics in the original)
+
+The physiology of humans empowers them to absorb a wide range of information from their environment, take in information about conditions and events within themselves. Human anatomy not just enables access to all the information but allows to reason, analyze, reflect, determine, and engage intellectually with the information obtained. Weiner inferred from all his research that the objective of human life was to thrive as an information-processing organism since they have the inherent ability to do so.
+
+It is evident that humans possess the ability to absorb massive amounts of information, gather knowledge on an ongoing basis. Almost half of human life could be dedicated to learning and studies, since they are physically capable to do so unlike insects like ants. The two intrinsic characteristics of human sensorium are variety and possibility. This is because these two characteristics are a part of the structure of the human organism (Wiener, 1954, pp. 51–52).
+
+# ## 1.5. DEVELOPMENT OF COMPUTER ETHICS
+
+In the 50s and 60s, Norbert Wiener contributed profoundly to the field of IE, and this was wider than the more specific field of computer ethics. Wiener’s principles and notions about IE id not restricted to computer ethics alone but can also be extended to other fields like Agent ethics, Internet ethics, and the ethics of nanotechnology, the ethics of bioengineering, even journalism ethics, and library ethics.
+
+In the 1960s and early 1970s, even before Walter Maner came up with the term “computer ethics” and offered a definition in the field, progress was made in the exact field of computer ethics. For example, Donn Parker, who was a computer scientist at SRI International, had started to take notice of the illegal doings of computer professionals and began to study them. This was during the mid-1960s. The article “Rules of Ethics in Information Processing,” was published by Parker in Communications of the ACM. This contained information about cases of computer crimes.
+
+Parker also supervised the conception of the original Code of Professional Conduct for the Association for Computing Machinery (ACM). In 1973,
