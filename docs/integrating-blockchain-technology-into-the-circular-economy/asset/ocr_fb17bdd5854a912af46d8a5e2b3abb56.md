@@ -1,0 +1,15 @@
+# Hypothesis 1: training and development have a significant statistical relationship between job performances.
+
+The second important concept is that of the perceived usefulness of social media. Social media may also be considered an essential tool for consumers and conventional business organizations to market the products. However, this is the actual usefulness of social media. On the other hand, the perceived usefulness of social media refers to the usefulness of the same as perceived by the customers and the businesses alike (, 2020). The perceived usefulness of social media to enhance the job performance of individual employees has not been targeted in the previous research studies in this domain. It is because of this reason that this particular concept remains quite new and untapped (Stanger, 2017). Due to this reason, this present research study frames its second hypothesis in the following manner:
+
+# Hypothesis 2: there is a statistically significant impact of perceived usefulness of social media on job performance.
+
+The exchange of knowledge and prevalent information symmetry between the employers and the employer is another important factor that influences the employees’ job performance. Businesses operating in any industry must, and now information is dispensed at frequent intervals (Trotman, 2020). At the same time, the employees must be allowed to communicate with the business’s senior SCM hip to inform them of any areas of concern for the business, including but not limited to operational bottlenecks. According to (Hang, 2020), this keeps the employees motivated and engaged, thereby affecting their job performance.
+
+# Hypothesis 3: frequent and mutual exchange of knowledge influences job performance of employees.
+
+Communication and coordination are final variables that have been chosen as the independent variable for this study. Effective communication in the organizational context has no replacement; this is the most critical factor that can rule out all the other variables involved in this study and directly affect the organization’s performance in the organization head-on (Sbeih, 2020). The employee must focus extensively on improving communication and coordination by utilizing Google Docs, Facebook Groups, WhatsApp Chat Groups, etc. An in-depth communication eventually engages the employees and helps them understand that they are a useful asset to the company.
+
+# Hypothesis 4: communication and coordination significantly impact job performance.
+
+First, our data suggest that workers’ social networking usage is strongly linked to the need for personal fulfillment and workplace morale (, 2020). Throughout the shutdown, major players reported use of social media, and participation levels of media streaming and other live sessions increased dramatically with a growing number of information and viewer-generated opinions. Even with growing internet

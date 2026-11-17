@@ -1,0 +1,13 @@
+# EMERGING ISSUES
+
+Although the industry faces some of the issues such as supply chain management and automotive safety concerns, new challenges are evolving as the technology is advancing and to support industry 4.0. In this section, the author presents the emerging issues that arouse in employing blockchain technology in industry 4.0. This section discusses emerging issues that have been identified as a result of the research conducted for this chapter.
+
+# Issues in Smart contract
+
+Since smart contracts and distributed ledgers are still in their early growth stage, there are several challenges to consider in addition to the benefits. First is the issue of compatibility. Industries should determine if their current technology is compatible with the technology needed to implement a smart contract. For instance, is freight forwarders’ existing shipment tracking equipment capable of digitally interacting with the smart contract code without human intervention? Or does it necessitate any human involvement? Moreover, computer coding is used to create smart contracts. This is specialized expertise that few companies would have on staff. Hence, industries need to hire programmers to code and manage smart contracts compared to traditional contracts where only attorneys were hired.
+
+Additionally, there are some restrictions on what a smart contract can do. Smart contracts are often referred to as “unalterable.” That is, when the smart contract has been incorporated into the distribution ledger, what’s been coded cannot be modified. As a result, if the parties change their minds at a later time, the smart contract cannot be changed to reflect the new conditions. As previously mentioned, the code operates on an “if y, then x” basis. As a consequence, if the parties’ agreement allows for a price change to be resolved at a future date, this cannot be coded into the smart contract. The smart contract will be unable to carry out an instruction such as “if y, then the parties will agree on a price variation collectively.”
+
+# BCT interoperability
+
+The resurgence of interest in blockchains has sparked a slew of research and development projects. As a result, today’s blockchain ecosystem is extremely diverse, with users having access to a variety of incompatible BCTs. Since interoperability between BCTs is rarely planned in current protocols and standards, functions such as transmitting tokens from one party to another or triggering and implementing smart contracts are limited to a single blockchain (Schulte et al., 2019).

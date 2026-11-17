@@ -1,0 +1,13 @@
+All agreements and Bitcoin exchanges are executed anonymously. Hence, Bitcoin block chains are essentially permission-less. Nonetheless, there are a variety of situations in which the transacting parties may like to keep all transaction details secret, such as several financial transactions, the exchange of medical records, or the conveyance of commodities (Kakavand et al., 2016). Such block chains are essentially permission-driven. Given their suitability and relevance for a wide range of business applications, permission-driven or private block chains will likely be in high demand in the future. The use of private block chains allows for the determination of any network participant’s access rights and accessibility while keeping their information private (Swan, 2015). New members are invited to join the network by the existing members. There are several types of invitations driven by algorithms, such as unanimous agreement, single user invitations, and core group acceptance of a pre-determined set of parameters (Kakavand *et al.*, 2016).
+
+# 2.3 Metrics
+
+As block chain technology advances a range of new database systems and distributed protocols have emerged. All of these technologies are relevant to a wide range of sectors, necessitating standardization (Copigneaux *et al.*, 2020). The fundamental goal of standardized technology development should be to improve block chains by addressing their scalability and throughput capacity, as well as ensuring their security, performance, and durability. Various forms of distributed ledger technology with differing degrees of decentralization cover these domains (Crosby *et al.*, 2016). A block chain node keeps track of the network’s present and historical status. On both a qualitative and quantitative level, the metrics described below can be used to evaluate the performance of the block chain architecture (Drescher, 2017; Kakavand *et al.*, 2016; Swan, 2015):
+
++   (a) Submission throughput: The maximum number of transaction submissions per second that each node and the entire network can handle is called submission throughput.
+
++   (b) Validation Throughput (Maximum/Average): This is the parameter that determines the network’s maximum/average transaction processing speed.
+
++   (c) Validation of Transactions on the Average Latency: It is the average time taken for a transaction to be validated from the time it is submitted. This metric measures how long users have to wait for their transactions to be validated and placed in a block. It’s crucial to note that each block chain’s block confirmation and definition of validation may differ.
+
++   (d) Latency Volatility: It is a term used to describe how volatile a blockchain system is.

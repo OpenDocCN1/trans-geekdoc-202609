@@ -1,0 +1,13 @@
+# About the Contributors
+
+**Manish Mohan Baral** is a Ph.D. Scholar in Department of Management, Birla Institute of Technology, Mesra, Ranchi, Jharkhand. He is an engineering graduate from KIIT University, Bhubaneswar, Odisha. He has done his MBA in International Business from GITAM University, Visakhapatnam, Andhra Pradesh. He has publications indexed in SCOPUS, UGC “A” Category Journals, and few Book chapters which are also indexed in SCOPUS and Web of Science. His research areas include Information Technology, Cloud Computing, Supply Chain Management, Artificial Intelligence, Operations Research, and Quality Management.
+
+**Shahid Imran** is Senior Lecturer in the Department of Management Studies, Middle East College, Muscat, Oman. Mr. Shahid earned his Master of Business Administration Degree from Mohi Ud Din Islamic University, AJK, Pakistan. He is having a vast industrial and academic experience. His research interests include Logistics, Supply Chain Management and Manufacturing business.
+
+**Fredrick Ishengoma** serves as a lecturer at the College of Informatics and Vir-tual Education, The University of Dodoma, Tanzania, His research interest includes ICT4D, blockchain technology, e/m-government, and technology adoption.
+
+**Shamsa Kanwal** received the Bachelor of Science (BSc) degree in 2011 from the University of Punjab, and Masters of Arts (MA) in English Language and Lit-erature in 2018 from International Islamic University Islamabad (IIUI), Pakistan. She is currently pursuing the Masters (MS) degree with the School of Economics and Management in Enterprise Management from North China Electric Power University (NCEPU) Beijing, China. She is a recipient of the Chinese Government Scholarship (CSC).
+
+**Arsalan Zahid Piprani** received the Ph.D. degree from the University of Malaya, Malaysia, in 2020. He is currently an Assistant Professor with the Department of Business Administration, FUUAST, Karachi. He has teaching and research experi-ence of over twelve years. He is a quantitative researcher and has published articles in various peer reviewed journals. His research interests include supply chain risk management, logistics and operations management, supply chain analytics and green supply chain management.
+
+**Muhammad Tanveer** is a Doctor of Philosophy (Ph.D.) in Management from well-reputed accredited Lincoln University College (LUC) Malaysia. Dr. Muhammad is a research scholar in the department of Management currently working at Prince Sultan University, Riyadh, Saudi Arabia. His work-to-date which have aligned with Management, Economics, Leadership, Higher Education, and Marketing. Published 28

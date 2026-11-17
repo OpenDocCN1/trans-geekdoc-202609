@@ -1,0 +1,3 @@
+Zin, S. M., & Manaf, K. A. (2019). Role of Intellectual Capital in Women Entrepreneurs’ Business Performance. In Tomos, F., Kumar, N., Clifton, N., & Hyams-Ssekasi, D. (Ed.), Women Entrepreneurs and Strategic Decision Making in the Global Economy (pp. 209-230). IGI Global. http://doi:10.4018/978-1-5225-7479-8.ch011
+
+Zolbanin, H. M., Delen, D., & Sharma, S. K. (2018). The Strategic Value of Big Data Analytics in Health Care Policy-Making. [IJEBR]. International Journal of E-Business Research, 14(3), 20–33. doi:10.4018/IJEBR.2018070102

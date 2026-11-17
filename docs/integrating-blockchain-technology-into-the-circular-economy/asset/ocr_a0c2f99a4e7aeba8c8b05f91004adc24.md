@@ -1,0 +1,13 @@
++   2. Warehouse management system: The flow of goods warehouse plays a vital role in the supply chain. It is a competitive advantage for logistic providers that serve as a critical source to increase reach efficiency. IR 4.0 model has embarked on innovative change in keeping (WMS) warehouse management system up-to-date by providing minute information with every warehouse activity to meet inbound logistic requirements in the 4.0 paradigm.
+
++   3. Transportation management systems: A TMS (transportation management system) is centered on transportation logistics as part of supply chain management. It allows interaction between the distribution center and the order management system or warehouse. A GPS in TMS helps companies to locate and monitor freight movement during deliveries.
+
++   4. Intelligent transportation system: In transportation systems, ITS (intelligent transportation system) is an innovative field that interoperates in diverse areas. IR4.0, the emergence of creative technology, helps in large operations being an essential factor of transportation. It increases the reliability of the transport system and reduces the risk of any incident during transportation.
+
++   5. Information security: A rise in the internet-based application have promoted the development of cloud-based systems, big data analytics, IoT, bring your device and choose your device technology has changed the business approach that organization conducts.
+
+# 5. WAREHOUSING
+
+In IR 4.0, essential warehouse and logistic operations processes use innovative technology like stock and loading management. It is about robots who undertake repetitive tasks, but it is about using intelligent computers to collect massive data, disclose processes, and improve further. However, using smart features in warehousing helps measure stock levels more accurately and automate order processes. Devices and human operators' actions can be tracked easily via an intelligent technology system implemented in the warehouse. It helps monitor key points' error and inefficacy and poor interactions and processes while keeping stock management.
+
+WMS is used in many warehouses operations under industrial 4.0 to run smooth deliveries and store buffer stock effectively by utilizing timely available information. WMS is a nerve center of massive digital operations, data collection, and send out orders to a crowd of autonomous and mobile platforms. Each task is controlled and classified by the independent system, with having only one or two human involvement. Businesses are taking plentiful benefits from innovative technology for warehouse systems. IR 4.0 provides accurate inventory management to reduce waste and the potential for stocking, while robotics doing repetitive tasks benefits
