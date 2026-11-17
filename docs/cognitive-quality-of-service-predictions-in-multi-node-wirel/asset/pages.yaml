@@ -1,0 +1,1055 @@
+- pgno: 0
+  md: '# # Cognitive quality of service predictions in multi-node wireless sensor
+    networks
+
+
+    Muhammad Ateeq ^a, Muhammad Khalil Afzal ^b, Sheraz Anjum ^b, Byung-Seo Kim ^c,
+    *
+
+
+    * Faculty of Computing, The Islamia University of Bahawalpur, Pakistan
+
+    b Department of Computer Science, Comsats University Islamabad, Wah Campus, Pakistan
+
+    c Department of Software and Communications Engineering, Hongik University, South
+    Korea
+
+
+    # ### ARTICLE INFO
+
+
+    +   Keywords:
+
+    +   - Performance predictions
+
+    +   - Machine learning
+
+    +   - Internet of things
+
+    +   - Wireless sensor networks
+
+    +   - Quality of service
+
+
+    # ### ABSTRACT
+
+
+    Wireless sensor networks lead the way to the realization and penetration of the
+    internet of things into daily life. As the sensors and communication devices interconnect
+    things and people more, the quality of service demands become stringent and diverse.
+    Optimizing conflicting quality of service goals is NP-hard. Moreover, the need
+    for the communication systems to dynamically adapt has grown as factors like scale,
+    application-specific performance demands, and deployment scenarios evolve. In
+    this article, we intend to predict the quality of service with an aim to improve
+    the performance of services in the internet of things. We conducted experiments
+    using a real test-bed and collected performance data under a wide range of communication
+    parameter configurations. Statistical analysis revealed a significant relationship
+    between communication parameters and quality of service metrics. Based on the
+    correlations, we trained deep learning models to assess the predictability of
+    the metrics. The prediction results are encouraging. The outcomes of this research
+    pave the way to lay the foundation for a data-driven design of adaptive quality
+    of service in wireless sensor networks and the internet of things.
+
+
+    # ## 1. Introduction
+
+
+    The ubiquitous presence of Wireless Sensor Networks (WSNs) has contributed greatly
+    to the realization of the internet of things (IoT) [1], and this increasing scale
+    also positions IoT in more challenging situations. WSNs find applications in many
+    areas of daily life where sensor nodes are used to carry out specific tasks without
+    the intervention of humans. Some of the application domains include agriculture,
+    medical units, underwater monitoring systems, smart home appliances, smart industries,
+    etc. [2,3]. Lately, wearable sensor technologies have caused a surge in the number
+    of people connected to the internet. [4]
+
+
+    The evolution in WSNs has diversified its application domains and hence meeting
+    performance goals become challenging. It is common to find particular Medium Access
+    Control (MAC) and physical (PHY) layer solutions to meet the performance demands
+    of specific application domains. However, devising MAC and PHY protocols leads
+    to heavy experimentation, standardization, and manufacturing costs. The costs
+    come in the form of monitory as well as time. The other major limitation of the
+    aforementioned approach is the lack of adaptivity. The protocols are usually hard-defined
+    with minimal configurability and cannot self-tune as the network and application
+    scenarios exhibit evolution. We can address the problem of adaptivity by maximizing
+    the configurability of various parameters protocols by identifying their
+
+
+    respective relationships with the quality of service (QoS) metrics as well as
+    selecting appropriate MAC protocol. It is pertinent to mention that configurability
+    of parameters means assigning appropriate values to different parameters at different
+    layers of the protocol stack in use (e.g., packet size, traffic rate, transmission
+    power, backoff, etc.). Some of these parameters (which are protocol specific)
+    can contribute to the configuration of a protocol. Whereas, we also propose to
+    choose a particular protocol depending on the QoS need. For example, the current
+    implementation of Contiki operating systems allows for choosing CSMA or TSCH as
+    a MAC layer protocol. Both have different characteristics and can behave differently
+    under different conditions. Understanding the relationships among the communication
+    parameters and QoS metrics is vital to meeting the conflicting QoS goals in changing
+    network conditions and emerging application requirements. [5].
+
+
+    Research in the domain of WSNs has been extended to diverse considerations. Work
+    presented in [6] highlights the importance of efficient wireless sensor and actuator
+    node organization in critical sectors like agriculture. The proposed solution
+    is not based on any adaptive method like machine learning. Considering the growing
+    importance of the cloud and integration of WSNs with it, [7] proposed a solution
+    to reduce the network load being transferred to the cloud by facilitating processing
+    at the edge. The proposed solution can benefit from possible
+
+
+    * Corresponding author.
+
+    E-mail address: jsnbs@hongik.ac.kr (B.-S. Kim).
+
+
+    https://doi.org/10.1016/j.comcom.2022.06.042
+
+    Received 25 February 2022; Received in revised form 22 May 2022; Accepted 29 June
+    2022
+
+    Available online 6 July 2022'
+  merge: -1
+  img_proc: true
+- pgno: 1
+  md: 'adaptive network-level configurations. A solution based on vertical handover
+    operations for tackling the QoS problem in wireless networks is presented in [8].
+    A machine learning-based enaderer is presented in [9] that discusses efficient
+    QoS in industrial wireless sensor and actuator networks using support vector machine.
+    The proposed solution focuses on interference classification that can be helpful
+    in further characterizing QoS.
+
+
+    Machine Learning (ML) models can play a vital role in predicting the optimal configurations
+    for communication parameters that can meet the required QoS goals. ML models are
+    trained under different stack parameter combinations to predict the performance
+    metrics. We propose a solution for Packet Delivery Ratio (PDR), Throughput (THP),
+    and energy consumption (radio and CPU) by considering Transmission Power (TP),
+    Maximum Transmissions (MT), Distance (DT), Packet Size (PS), Inter Arrival Time
+    (IAT) and Number of Nodes (NN). It is pertinent to mention that MT represents
+    the maximum transmission attempts allowed until a packet is successfully delivered,
+    whereas IAT refers to the gap in milliseconds between successive packet transmissions.
+    To train the dataset, we used Deep Neural Network (DNN). This multi- parametric
+    approach has been found in literature [5,10]. The purpose is to understand the
+    relationship of these parameters to QoS metrics. Results achieved from this experiment
+    give sufficient insight into the dynamics of communication parameters and their
+    influence on QoS performance metrics.
+
+
+    ML models are widely used to create prediction models for many WSN application
+    scenarios. A link quality prediction technique is presented in [11], based on
+    the naive Bayes classifier, logistic regression, and artificial Neural Networks
+    (NN). The proposed model uses Packets Received Percentage (PRP) and PHY layer
+    information as input parameters and predicts the reception of the next packet
+    as output. Logistic regression performs better with a small computational cost.
+    The main limitation of this work is that too few parameters are used to capture
+    any meaningful variations and relationships among QoS metrics and parameters of
+    interest. In [12], a data-driven technique is presented for MAC layer optimization
+    by considering real-time communication information. Again, it follows the common
+    limitation of using limited parameters as well as adopted receiver side quantities
+    to predict sender side parameters which are impractical. Authors in [13] used
+    offline mode and traces for performance evaluation. Mathematical programming techniques
+    are highly complex for constrained devices like sensor nodes. Neural networks
+    based prediction models for predicting network lifetime, TP, and DT between nodes
+    are proposed. The proposed approach is purely a simulation and shares the lacking
+    discussed for [12]. In [14], an attempt for collaborative QoS prediction is presented.
+    This technique is based on a context-sensitive matrix-factorization approach for
+    prediction. It considered both implicit and explicit factors in QoS data, thus
+    providing better insight for QoS prediction.
+
+
+    There are two major limitations of the above-mentioned solutions. First, most
+    of the solutions use very few parameters that lack capturing any meaningful relationship
+    among QoS metrics and parameters. Second, many proposed schemes rely on using
+    receiver-side parameters to predict sender-side quantities. In addition, some
+    solutions are based on simulated data which makes it hard to achieve representative
+    results for real-world situations.
+
+
+    Authors in [15] also provide ML-based QoS solutions for predicting QoS parameters
+    for better user-side experience in both WSN and IoT applications. In [16], authors
+    proposed a neural network model for QoS prediction. In [17], a goal-driven service
+    model for the QoS prediction model is presented for IoT which is adaptive and
+    self-organizing. An overall limitation in the literature summarized above is that
+    the number of parameters used to train the ML models is limited. Another shortcoming
+    that these studies suffer from is that in many cases receiver-side parameters
+    are used as input features at the sender-side for prediction. The common limitation
+    in these solutions is that the QoS is predicted at a service level and no attention
+    is paid to the network-specific settings that keep the potential of accurate and
+    adaptive predictive system abstract.
+
+
+    In recent endeavors [18–21], we extended the number of parameters for predicting
+    QoS metrics as well as avoided the use of receiver- side parameters as features
+    for sender-side predictions. In [18], PDR and energy consumption are predicted
+    using more than 48 thousand combinations of as many as 7 pre-configured parameters
+    (including IAT, PS, TP, DT, MT, MT, etc.). In [19], the delay is predicted using
+    the same parameters. PDR with signal-to-noise ratio is predicted in [20]. The
+    major limitation of results presented in [18–21] is that the experimental data
+    was collected using a single-hop topology. The current work focuses on the experimental
+    data collected under multi-node scenarios.
+
+
+    The rest of this paper is organized into 4 sections. The experiment details including
+    topology and parameter configurations as well as the adopted ML method are described
+    in Section 2. Section 3 elaborated on the statistical analysis between communication
+    parameters and QoS metrics. Prediction results are detailed in Section 4. Section
+    5 concludes the paper and highlights the significance of the research work as
+    well as future leads.
+
+
+    The limitations that motivate the present research can be summarized as follows:
+
+
+    +   - Meeting conflicting QoS goals in prevailing deployments of WSNs and IoT
+    requires solving complex optimization problems which are often NP-hard.
+
+    +   - Conventional methods to improve QoS lack in adapting to evolving network
+    parameters.
+
+    +   - Configurable parameters provide an opportunity to fine-tune those according
+    to the current need of the QoS.
+
+
+    Based on the limitations and motivations the current research is intended to contribute
+    the following:
+
+
+    +   - Analyze the metrics like packet delivery ratio, throughput, and energy consumption
+    as various communication 56parameter settings impact these metrics.
+
+    +   - Use machine learning models to identify how each feature and different subsets
+    of features contribute to determining the accuracy in predicting all the metrics
+    considered.
+
+    +   - Rank the features that yield the best prediction results in the context.
+
+
+    The proposed work potentially lays down the foundation to realize an adaptive
+    framework to facilitate QoS in the evolving IoT settings.
+
+
+    # 2. Materials and methods
+
+
+    The idea of this experiment was to carry out foundation work to build an intelligent
+    framework for QoS predictions in WSNs. QoS Predictions in WSNs have gained attention
+    recently.
+
+
+    In our previous efforts [18–20], we have predicted metrics like packet delivery
+    ratio, energy consumption, signal-to-noise ratio, and delay using various communication
+    parameters as shown in Fig. 1. We adopted various machine learning models and
+    used various communication parameter settings to train and test those models.
+    The data used was collected using a two-node (1 sender, and 1 receiver) topology
+    though. In this paper, we extended the idea to a broader perspective by considering
+    a multi-node environment and included metrics like THP, detailed EC in terms of
+    radio as well as CPU usage, in addition to PDR. To understand the behavior of
+    these QoS metrics, we also included diverse parameters including TP, DT, IAT,
+    PS, MT, and NN. In addition to these pre-configured variables, the actual number
+    of Packets Transmitted (PT) and Maximum Packets (MP) that can be transmitted in
+    a defined interval are also recorded.'
+  merge: -1
+  img_proc: true
+- pgno: 2
+  md: '![](img/8c67599fb241414866e9d0fa45bb987f_2_0.png)
+
+
+    Fig. 1. Relationship between communication parameters and QoS metrics.
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_2_1.png)
+
+
+    Fig. 2. Experiment topology involving 8 (black), 16 (black+green), and 24 (black+green+purple)
+    nodes with sink (red) in center. (For interpretation of the references to color
+    in this figure legend, the reader is referred to the web version of this article.)
+
+
+    # 2.1. Experiment topology
+
+
+    The topology of the experiment is shown in Fig. 2. The experimental setup is configured
+    on w.iLab testbed [22], located in Gent University, Belgium. The sending nodes
+    are indicated using indicated squares (black, green, and purple), and receivers
+    (sinks) are indicated using red circles. The purple nodes participate in experiments
+    only when the number of nodes is set to 24. The green nodes participate when the
+    number of nodes is 16, or 24. Black nodes participate in all experiments when
+    the number of nodes is set to 8, 16, or 24. The average node to node distance
+    is a little over 2 m, whereas the receiver/sink is placed in the center of the
+    network. The numbers of sending nodes are varied between 8 (black), 16 (black+green),
+    and 24 (black+green+purple). The Fig. 2 is taken from the actual dashboard of
+    the testbed and a cross is placed to indicate dysfunctional nodes due to maintenance
+    or any other problem. Node 0–32 was not available during the time this experiment
+    was conducted.
+
+
+    The minimum runtime of the experiment is based on the number of combinations of
+    parameter values. The detail of the communication parameters and their values
+    are provided in Table 1. Based on this description in Table 1, we present the
+    detail of combinations as follows:
+
+
+    ```
+
+    Total combinations = TP x NN x MT x PS x IAT
+
+    = 6 x 3 x 3 x 3 x 4
+
+    ~ 650 (1)
+
+    ```
+
+
+    This meant that the experiment ran against these almost 650 combinations of the
+    parameter configurations. We ran the experiment against each parameter configuration
+    for 600 s (10 min) and repeated aiming to reach a consistent behavior. Therefore,
+    the minimum time required for running the experiment and overheads due to schedule,
+    technical difficulties, erroneous runs, is as follows:
+
+
+    ```
+
+    Total time for experiments = Number of parameter configurations
+
+    x Time + Overhead(1/4th of actual time)
+
+    = 650 x 10 min + 1625 min
+
+    ~ 6500 min + 1625 min
+
+    = 8125 min ~ 135 h = 06 days
+
+    (2)
+
+    ```
+
+
+    # 2.2. Features
+
+
+    After collecting the data, features (parameters) extraction is done. Some features
+    (e.g., TP, PS, NN, etc.) are used as it is; whereas, others (i.e., MP and PT)
+    are calculated based on other features, including per-packet information. Similarly,
+    QoS metrics (PDR, THP, and EC) are calculated from the data. A thorough statistical
+    analysis of the relationship among the parameters and QoS metrics is carried out
+    to reveal the rationale of the experiment undertaken. All these features'
+  merge: -1
+  img_proc: true
+- pgno: 3
+  md: '**Table 1**
+
+    Detail of communication parameters configurations.
+
+
+    | Protocol layer | Parameter | Number of distinct values | Proposed values | Rationale
+    |
+
+    |---|---|---|---|---|
+
+    | Physical | TP: Transmission Power (dBm) | 5-6 | -7, -5, -3, -1, 1, 3 | TP values
+    are empirically chosen |
+
+    | | NN: Number of Active Nodes | 3 | 8, 16, 24 | 8, 16 and 24 sender nodes are
+    used for transmission |
+
+    | | MT: Maximum Transmissions | 3 | 2, 4, 6 | To characterize packet delivery
+    behavior |
+
+    | Application | PS: Packet Size (Bytes) | 3 | 25, 50, 75 | 802.15.4 accommodates
+    small packet sizes |
+
+    | | IAT: Inter-Arrival Time (s) | 4 | NN = 8 | 2, 4, 6, 8 | The load ranges from
+    very low to very high |
+
+    | | | | NN = 16 | 4, 6, 8, 10 | |
+
+    | | | | NN = 24 | 6, 8, 10, 12 | |
+
+
+    are provided as input to the ML models to figure out the prediction error. Mean
+    Absolute Error (MAE) is used as the primary evaluation metric. Training is done
+    using 55% of the data, with 15% data being used for validation. The remaining
+    30% of the data is used for testing.
+
+
+    # 2.3. Prediction model
+
+
+    ML offers huge potential in making QoS predictions in wireless scenarios. Since
+    the QoS parameters like PDR, THP, as well as EC, are continuous, therefore regression-based
+    models are suited for predicting such variables. We adopted a 10 layers DNN using
+    JupyterHub running GPU-enabled notebook with Tensorflow and Keras API. The versatile
+    constructs available in deep learning demonstrate very good prediction potential.
+
+
+    Considering the 8 proposed parameters and 8 metrics (PDR, THP, CPU, LPM, DLP,
+    LSN, TX, and Off) to be predicted, the data can be represented using the following
+    vector:
+
+
+    ```
+
+    f_{(n,1)}, f_{(n,2)}, f_{(n,3)}, f_{(n,4)}, f_{(n,5)}, f_{(n,6)}, f_{(n,7)}, f_{(n,8)},
+    f_{(n,9)}, f_{(n,10)},
+
+    f_{(n,1.1)}, f_{(n,1.2)}, PDR, THP, CPU, LPM, DLPM, LSN, TX, Off
+
+    ```
+
+
+    Where f and n represent input features (parameters) and row (record) number, whereas
+    PDR, THP, CPU, LPM, DLPM, LSN, TX, and OFF are the metrics to be predicted using
+    ML. This data is input to the DNN. The computation in DNN consists of the forward
+    and backward passes. A forward pass is calculated using:
+
+
+    ```
+
+    O_{[l]}^i = W_{[l]}^i \cdot X_{[l-1]}^i + c_{[l]}^i,
+
+    X_{[l]}^i = f_{(l)}(O_{[l]}^i),
+
+    ```
+
+
+    where l represents the current layer, and O, W, X, C, and f represent output,
+    weights of the inputs, a regression parameter, and an activation function, respectively.
+    The activation function (e.g., ReLU) is applied to the output O to achieve input
+    X for the next layer. Following a forward pass, a backward pass, where d represents
+    the derivative, is calculated using:
+
+
+    ```
+
+    dO_{[l]}^i = dX_{[l]}^i \times df_{(l)}(O_{[l]}^i).
+
+    dW_{[l]}^i = \frac{1}{n}(dO_{[l]}^i \cdot X_{[l]^T}^i),
+
+    dc_{[l]}^i = \frac{1}{n} \sum_{l=1}^n O_{[l]}^i,
+
+    dX_{[l-1]}^i = W_{[l]^T}^i \cdot dX_{[l]}^i,
+
+    ```
+
+
+    Here T represent the transpose of relevant matrix. In order to update the weights
+    and regression parameter, gradient descent is executed using:
+
+
+    ```
+
+    W_{[l]}^i = W_{[l]}^i - \alpha \times dW_{[l]}^i.
+
+    ```
+
+
+    ```
+
+    b_{[l]}^i = b_{[l]}^i - \alpha \times dc_{[l]}^i.
+
+    ```
+
+
+    The value for alpha is set to 0.001. The conventional values used for alpha are
+    0.1, 0.01, and 0.001. This choice of 0.001 is made empirically in this case. Before
+    applying and evaluating the ML performance, the statistical (Pearson) correlations
+    are calculated between the parameters and QoS metrics aiming to develop insight
+    into the relationship between parameters and metrics under consideration. To evaluate
+    the test data using the above-mentioned ML models, we use MAE as a metric. The
+    whole workflow of the experiment and predictions is given in Fig. 3. As the proposed
+    system is data-driven, it begins with a data source. The data can be in the form
+    of a pre-recorded instance (and/or simulation) for bootstrapping the system. Any
+    such data will have an underlying topology and parameters configuration. However,
+    as the system run into production, it is supposed to interact with real deployments
+    and collect live data from different installations of the WSN infrastructure in
+    the IoT. The data needs to be pre-processed to achieve a structured format representing
+    the communication parameters as features and the QoS metrics as labels or targets.
+    This pre-processed data is shown in the form of a simple 2-dimensional table consisting
+    of rows and columns. The data divided into train and test splits is passed through
+    learning models to achieve sufficient accuracy. This first phase of training is
+    carried out offline. Considering the accuracy and efficiency, a suitable model
+    can be chosen for deployment.
+
+
+    # 3. Statistical analysis
+
+
+    In the following, an pictorial analysis of the relationship among the communication
+    parameters and QoS metrics is presented.
+
+
+    # 3.1. Packet Delivery Ratio
+
+
+    The relationship of PDR with different communication parameters is shown in Fig.
+    4. The effect of NN and TP is revealed in Fig. 4(a). There is a very clear dropping
+    trend in PDR as NN increase and TP decrease. The effect of NN alongside PS is
+    shown in Fig. 4(b). The PDR decreases as PS increases in addition to the increase
+    in NN. This confirms the trend observed in Fig. 4(a). The effect of NN and MT
+    is depicted in Fig. 4(c). The 50th percentile of PDR tends to fall a little as
+    MT increases, whereas, 25th percentile of PDR rises somewhat. This dual trend
+    explains both the challenging conditions when higher values of MT are uses as
+    well a positive impact of more transmission attempts. Fig. 4(d) highlights the
+    impact of MT and TP on PDR. An increase in both TP and MT causes a rise in PDR
+    values. The effect of PS and TP unveils the same trend (Fig. 4(e)) as witnessed
+    in Fig. 4(d) in case of MT and TP. Smaller packets at a higher TP level make it
+    more possible to reach the destination. Fig. 4(f) reveals the effect of PS and
+    likely to reach PDR. It is again evident that PDR is'
+  merge: -1
+  img_proc: true
+- pgno: 4
+  md: '![](img/8c67599fb241414866e9d0fa45bb987f_4_0.png)
+
+
+    Fig. 3. System model showing data generation, feature vector preparation, model
+    training, and predictions.
+
+
+    inversely proportional to both PS and distance. Similarly, the effect of IAT and
+    distance on PDR is shown in Fig. 4(g). PDR increases as IAT increases and distance
+    decreases.
+
+
+    All these depictions in Fig. 4 highlight the impact that PS, DT, TP, IAT, MT,
+    and NN cast on PDR. The observed trends encourage the potential to use ML for
+    predicting PDR.
+
+
+    # 3.2. Throughput
+
+
+    The relationship of THP with different communication parameters is shown in Fig.
+    5. Effect of PS and MT on THP is highlighted in Fig. 5(a). THP raises with the
+    increase in both PS and MT values. This is intuitive because bigger packets reduce
+    the control data proportion and increase the number of transmission attempts,
+    and therefore can improve reliability. Fig. 5(b) reveals the effect of NN and
+    TP on THP. As witnessed, THP decreases with an increasing number of nodes, whereas
+    it increases with an increase in TP.
+
+
+    Understandably, more nodes make it difficult for communication to take place simultaneously.
+    The effect of PS and NN on THP is shown in Fig. 5(c). The trend of decrease in
+    THP is very consistent with increasing NN and smaller packet sizes. The effect
+    of NN and MT on THP can be witnessed in Fig. 5(d). In addition to the THP trend
+    observed for NN, it can be observed that higher values for MT result in higher
+    THP. Therefore, the behavior of THP against multiple parameters is consistent
+    across these figures.
+
+
+    The effect of MT and TP on THP is shown in Fig. 5(e). THP increases with an increase
+    in both MT and TP values. However, TP appears to be more influential compared
+    to MT. Similarly, the impact of PS and TP on THP is revealed in Fig. 5(f). THP
+    increases as both PS and TP increase. Fig. 5(g) unveils the behavior of THP as
+    IAT and PS are varied. It is apparent that THP increases with increasing PS and
+    decreasing IAT values meaning that packets with more data bits sent at higher
+    rates improve the throughput. The effect of PS on both PDR and THP is shown in
+    Fig. 5(h). It has already been observed (Fig. 4(e)) that PDR tends to drop a bit
+    with increasing PS. However, it casts a different
+
+
+    impact on THP as it rises with bigger packet sizes. Therefore, PS proves to be
+    a conflicting metric for optimizing PDR and THP simultaneously.
+
+
+    Fig. 5(i) highlights the impact of DT on both PDR and THP. Distance casts a relatively
+    consistent impact on both PDR and THP as increasing DT cases decline in both PDR
+    and THP. Therefore, the role of DT appears to be more defining for these reliability-related
+    metrics. Similarly, the impact of IAT on both PDR and THP is revealed in Fig.
+    5(j). It appears that sending packets at shorter intervals causes improvement
+    in THP. However, the same relationship between IAT and PDR diverges. Sending packets
+    at a faster rate causes some decline in PDR. Therefore, IAT also impacts PDR and
+    THP in a conflicting manner and requires careful fine-tuning.
+
+
+    # 3.3. Energy consumption: Radio usage
+
+
+    # 3.3.1. Listen mode
+
+
+    The effect of PS and TP on the Listen period is shown in Fig. 6(a). The increase
+    in the Listen period is clearly in direct proportion to PS. Although the rise
+    in TP also causes Listen period to increase, however, the relationship does not
+    appear to be as strong as of PS with the Listen period. The relationship between
+    NN and PS with the Listen period is depicted in Fig. 6(b). Affirming the relationship
+    of PS (Fig. 6(a)), NN also appears to cause a rise in the Listen period. Particularly,
+    as NN increases to 24 (maximum), the Listen period increases too.
+
+
+    # 3.3.2. Off mode
+
+
+    The effect of PS and TP on the radio Off period is shown in Fig. 6(c). The radio
+    Off period tends to decrease as PS increase, indicating that bigger PS drain more
+    energy. However, the impact of TP does not appear to be very significant. However,
+    there is a slight trend of decrease in the Off period with increasing TP levels.
+    The relationship of the Off period with PS and NN is revealed in Fig. 6(d). Affirming
+    the impact of PS (Fig. 6(c)), the impact of NN on the Off period is in inverse
+    proportion. More nodes tend to increase the radio Off periods of the nodes.'
+  merge: -1
+  img_proc: true
+- pgno: 5
+  md: '![](img/8c67599fb241414866e9d0fa45bb987f_5_0.png)
+
+
+    # (a) NN and TP vs PDR
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_5_1.png)
+
+
+    # (b) NN and PS vs PDR
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_5_2.png)
+
+
+    # (c) NN and MT vs PDR
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_5_3.png)
+
+
+    # (d) MT and TP vs PDR
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_5_4.png)
+
+
+    # (e) PS and TP vs PDR
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_5_5.png)
+
+
+    # (f) PS and DT vs PDR
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_5_6.png)
+
+
+    # (g) IAT and DT vs PDR
+
+
+    # Fig. 4. Relationship between communication parameters and PDR.'
+  merge: -1
+  img_proc: true
+- pgno: 6
+  md: '![](img/8c67599fb241414866e9d0fa45bb987f_6_0.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_6_1.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_6_2.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_6_3.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_6_4.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_6_5.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_6_6.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_6_7.png)
+
+
+    # Fig. 5. Relationship between communication parameters and throughput.'
+  merge: -1
+  img_proc: true
+- pgno: 7
+  md: '![](img/8c67599fb241414866e9d0fa45bb987f_7_0.png)
+
+
+    # Fig. 5. (continued).
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_7_1.png)
+
+
+    # Fig. 6. Relationship between communication parameters and radio usage.
+
+
+    # 3.4. Energy consumption: CPU usage
+
+
+    # 3.4.1. Low Power Mode
+
+
+    The effect of NN and TP on the CPU LPM period is shown in Fig. 7(a). The LPM period
+    tends to increase with an increase in both NN and MT. However, this increasing
+    trend in the LPM period becomes clearer when PS is used in combination with NN
+    (Fig. 7(b)).
+
+
+    # 3.4.2. Deep Low Power Mode
+
+
+    The effect of NN and TP on the CPU DLPM period is shown in Fig. 7(c). DLPM period
+    increases as NN increases. The behavior of
+
+
+    DLPM varies with varying TP levels. When NN is 8, DLPM appears to increase with
+    an increase in TP level. However, for bigger values of NN, the impact of the TP
+    level is not consistent. The impact of NN and PS on the DLPM period is described
+    in Fig. 7(d). In addition to the variation in DLPM with relation to NN (Fig. 7(c)),
+    increasing PS causes DLPM to drop. Fig. 7(e) reveals the behavior of DLPM in relation
+    to MT and NN. Intuitively, and unlike NN, an increase in MT causes a drop in DLPM.
+    We have pictorially depicted the relationship among various parameters and QoS
+    metrics in detail. Based on the trends observed in the above description, we feel
+    convinced to apply ML to identify the prediction potential of various QoS metrics
+    based on variations in different parameters.'
+  merge: -1
+  img_proc: true
+- pgno: 8
+  md: '![](img/8c67599fb241414866e9d0fa45bb987f_8_0.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_8_1.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_8_2.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_8_3.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_8_4.png)
+
+
+    Fig. 7. Relationship between communication parameters and CPU usage.
+
+
+    # 4. Results and discussion
+
+
+    # 4.1. Correlations among parameters and metrics
+
+
+    Statistical correlations are described in Fig. 8. It shows the R² scores of the
+    relationship among the parameters/features (y-axis) and QoS metrics (x-axis).
+    The magnitude of correlation scores of MP, TP, IAT, NN, DT, and PS with THP are
+    0.77, 0.77, 0.59, 0.53, 0.35, and 0.35, respectively. In the case of PDR, DT (0.55)
+    proves to be most correlated, followed by TP (0.27), and NN (0.26). Other metrics
+    that tend to have strong correlations include time in transmission (TiTx), time
+    in DLPMM (TiDLPMM), and time in CPU (TiCPU). TiTx has correlation scores of 0.54,
+    0.54, 0.46, 0.30, and 0.27 with MP, PT, IAT, PS, and DT, respectively. DLPMM is
+    affected by MP, PT, and IAT with scores of 0.38, 0.37, and 0.31, respectively.
+    CPU time period is determined by MP, PT, IAT, and NN with scores of 0.92, 0.92,
+    0.72, and 0.33, respectively.
+
+
+    These correlations scores affirm the pictorial relationships shown in Figs. 4,
+    5, 6, and 7 and provide a basis for predicting QoS metrics based on the variation
+    in the values of the parameters/features under consideration.
+
+
+    # 4.2. Prediction results for QoS metrics
+
+
+    In the following, prediction results for QoS metrics are presented based on DNN.
+    Fig. 9 unveils the prediction error (MAE) for PDR against each feature as well
+    as when all features are used together. Overall, MAE is 0.03 representing 97%
+    prediction accuracy. The most influential features are DT, NN, and TP followed
+    by MP, IAT, PT, PS, and MT. The MAE reported for the respective features is consistent
+    with the correlation scores witnessed in Fig. 8. The prediction for THP is shown
+    in Fig. 10. The minimum MAE value achieved while using all features is 538. Considering
+    the'
+  merge: -1
+  img_proc: true
+- pgno: 9
+  md: '![](img/8c67599fb241414866e9d0fa45bb987f_9_0.png)
+
+
+    # Fig. 8. Correlation matrix.
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_9_1.png)
+
+
+    # Fig. 9. Prediction error for Packet delivery ratio.
+
+
+    maximum THP (46816), the error is 1.14%, whereas for mean THP (6613) error is
+    8.14%. PT, IAT, MP, PS, and NN achieve MAE values of 1106, 1642, 1732, 1861, and
+    2191 respectively. Thus these features contribute significantly towards the prediction
+    of THP. These contributing features are also reflected in the correlation matrix
+    having stronger relationships with THP. Fig. 11(a) reveals prediction
+
+
+    error for time spent by radio in listening. The values for listen range between
+    1 and 102 with a mean and median of 24 and 23, respectively. The minimum value
+    for MAE when all features are used together is 9.6 indicating above 90% accuracy
+    over the range of listen period. The most influential features in predicting listen
+    periods are MT, NN, MP, and IAT with MAE values of 18.8, 29.4, 32.9, and 38.3,
+    respectively.'
+  merge: -1
+  img_proc: true
+- pgno: 10
+  md: '![](img/8c67599fb241414866e9d0fa45bb987f_10_0.png)
+
+
+    Fig. 10. Prediction error for throughput.
+
+
+    | Metric | PDR | THP | Transmit | Listen | Off | CPU | LPM | DLPM |
+
+    |---|---|---|---|---|---|---|---|---|
+
+    | MAE | 0.0368 | 538.7 | 0.4815 | 9.603 | 82.06 | 6.325 | 19.08 | 44.05 |
+
+    | RMSE | 0.0413 | 788.4 | 0.5122 | 13.272 | 108.2 | 8.549 | 26.57 | 51.76 |
+
+    | MAPE | 0.0368 | 0.0982 | 0.1038 | 0.1246 | 0.1582 | 0.2235 | 0.1864 | 0.0829
+    |
+
+    | R | 0.9812 | 0.9538 | 0.9451 | 0.9509 | 0.8964 | 0.8723 | 0.8984 | 0.9667 |
+
+    | p-value | <0.01 | <0.01 | <0.01 | <0.01 | <0.05 | <0.05 | <0.05 | <0.01 |
+
+
+    Fig. 11(b) shows the prediction error for OFF period of radio. The values range
+    from 10 to 591 s. The mean and median are 577 and 579, respectively. The minimum
+    value of MAE against all features is 82, indicating an accuracy of over 85% over
+    the range of OFF periods. PT, MP, NN, IAT, and MT achieve MAE values of 142, 151,
+    164, 169, and 192, respectively, and contribute more than the rest of the features.
+    The results are consistent with the correlation scores exhibited in Fig. 8. The
+    prediction results for the time spent by radio in transmitting are depicted in
+    Fig. 11(c). The value for the transmit period range between 0 and 5 with a mean
+    and median around 1. The minimum MAE achieved against all features is 0.481 representing
+    an accuracy of over 90%. However, since the granularity of time in seconds; therefore,
+    the quantitative accuracy of the transmit period is not highly accurate as the
+    individual packet transmission can better be measured at a much finer scale. PS,
+    PT, MP, and IAT prove to be more significant with MAE values of 0.587, 0.595,
+    0.626, and 0.639. These outcomes are consistent with the correlation scores displayed
+    in Fig. 8.
+
+
+    Fig. 12(a) describes the prediction results for CPU usage. The range of values
+    is between 1 and 36, and the mean and median are 15 and 14, respectively. The
+    minimum MAE using all features is 6.32 indicating accuracy of over 80%. MP, IAT,
+    PT, and NN achieve MAE values of 9.34, 9.68, 10.21, and 13.48, respectively. This
+    significance of features is also confirmed in correlation matrix (Fig. 8).
+
+
+    The prediction error for CPU running in low power mode is revealed in Fig. 12(b).
+    The values of LPM periods range from 1 to 106. The mean and median values are
+    33 and 32, respectively. The minimum value for MAE is 19 achieved using all features.
+    This indicates an accuracy of over 80%.
+
+
+    82% over the range of LPM periods. Most contributing features are MP, PT, MT,
+    and PS with MAE values of 29, 34, 50, and 57, respectively. These findings are
+    again consistent with the correlation scores reported in Fig. 8. Fig. 12(c) describes
+    the prediction results for CPU running in deep low power mode. The values of DLPM
+    range from 10 to 574 with a mean and median of 554 and 557, respectively. The
+    minimum value of MAE against al features is 44 resulting in an accuracy of over
+    92%. Most contributing features in predicting DLPM are MP, PT, MT, PS, and IAT
+    with MAE values of 92, 102, 122, 145, and 157, respectively.
+
+
+    The detailed prediction statistics are presented in Table 2. In addition to MAE,
+    root mean squared error (RMSE), mean absolute percentage error (MAPE), correlation
+    coefficient (R), and p-value. The value of RMSE is in general higher compared
+    to MAE for all metrics but PDR. This indicates large spread in data for metrics
+    like THP, radio, and CPU parameters. The values for THP (538.7 vs 788.4), and
+    Off periods (82.06 vs 108.2) are particularly higher indicating a high variance.
+    MAPE is within 10% for PDR, THP, and DLPM. Whereas, the same crosses 20% in case
+    of CPU. The p-values validate the general hypothesis that there are significant
+    correlations among the metrics under study and the communication parameters considered.
+
+
+    # ## 5. Conclusions
+
+
+    Modern communication systems are envisioned to be adaptive. The advent of software-defined
+    networking and network function virtualization makes it possible to implement
+    adaptive designs. Such adaptive design can be realized using dynamic fine-tuning
+    of configurable communication parameters with the help of machine learning. In
+    this'
+  merge: -1
+  img_proc: true
+- pgno: 11
+  md: '![](img/8c67599fb241414866e9d0fa45bb987f_11_0.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_11_1.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_11_2.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_11_3.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_11_4.png)
+
+
+    ![](img/8c67599fb241414866e9d0fa45bb987f_11_5.png)
+
+
+    # Fig. 11. Prediction error for radio usage.
+
+
+    # Fig. 12. Prediction error for cpu usage modes.
+
+
+    paper, we demonstrated the potential of using machine learning for predicting
+    quality of service metrics in wireless sensor networks and the internet of things
+    based on parameters like traffic rate, packet size, transmission power, maximum
+    transmissions, number of nodes, and distance. The accurate predictions of the
+    quality of service metrics
+
+
+    can help design a data-driven adaptive communication system for the internet of
+    things. Data was collected through extensive experiments and was statistically
+    analyzed to identify the relationship among the communication parameters and quality
+    of service metrics like packet delivery ratio, throughput, energy consumption
+    (both CPU and radio).'
+  merge: -1
+  img_proc: true
+- pgno: 12
+  md: 'The correlations encouraged adopting intelligent techniques like machine learning.
+    The prediction results are sufficiently accurate and provide a basis for the products
+    and solutions development based on adaptive design. In future, we intend to develop
+    a working prototype of an adaptive system that integrates the communication network
+    with the cloud and predictions are made using live performance data.
+
+
+    # Funding
+
+
+    This research was supported by the Higher Education Commission of Pakistan under
+    National Research Program for Universities (NRPU) 7522/Balochistan/NRPU/R&D/HEC/2017.
+
+
+    # Declaration of competing interest
+
+
+    The authors declare that they have no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this
+    paper.
+
+
+    # Acknowledgment
+
+
+    This work was supported by the National Research Foundation of Korea, under project
+    BK21 FOUR.
+
+
+    # References
+
+
+    +   [1] L. Mainetti, L. Patrono, A. Vilei, Evolution of wireless sensor networks
+    towards the internet of things: A survey, in: SoftCOM 2011, 19th International
+    Conference on Software, Telecommunications and Computer Networks, IEEE, 2011,
+    pp. 1–6.
+
+
+    +   [2] L.M. Borges, F.J. Velez, A.S. Lebres, Survey on the characterization and
+    classification of wireless sensor network applications, IEEE Commun. Surv. Tutor.
+    16 (4) (2014) 1860–1890.
+
+
+    +   [3] B. Rashid, M.H. Rehmani, Applications of wireless sensor networks for
+    urban areas: A survey, J. Netw. Comput. Appl. 60 (2016) 192–219.
+
+
+    +   [4] A.B. Noel, A. Abdaoui, T. Elfouly, M.H. Ahmed, A. Badawy, M.S. Shehata,
+    Structural health monitoring using wireless sensor networks: A comprehensive survey,
+    IEEE Commun. Surv. Tutor. 19 (3) (2017) 1403–1423.
+
+
+    +   [5] S. Fu, Y. Zhang, Y. Jiang, C. Hu, C.-Y. Shih, P.J. Marron, Experimental
+    study for multi-layer parameter configuration of wsn links, in: 2015 IEEE 35th
+    International Conference on Distributed Computing Systems, IEEE, 2015, pp. 369–378.
+
+
+    +   [6] D. Loukatos, K.G. Arvanitis, Multi-modal sensor nodes in experimental
+    scalable agricultural IoT application scenarios, in: IoT-Based Intelligent Modelling
+    for Environmental and Ecological Engineering, Springer, 2021, pp. 101–128.
+
+
+    +   [7] F. Xhafa, B. Kilic, P. Krause, Evaluation of IoT stream processing at
+    edge computing layer for semantic data enrichment, Future Gener. Comput. Syst.
+    105 (2020) 730–736.
+
+
+    +   [8] N. Dimitriou, L. Sarakis, D. Loukatos, G. Kormentzas, C. Skianis, Vertical
+    handover (VHO) framework for future collaborative wireless networks, Int. J. Netw.
+    Manage. 21 (6) (2011) 548–564.
+
+
+    +   [9] S. Grimaldi, A. Mahmood, M. Gidlund, An SVM-based method for classification
+    of external interference in industrial wireless sensor and actuator networks,
+    J. Sens. Actuator Netw. 6 (2) (2017) 9.
+
+
+    +   [10] D. Yuan, S.S. Kanhere, M. Hollick, Instrumenting wireless sensor networks—A
+    survey on the metrics that matter, Pervasive Mob. Comput. 37 (2017) 45–62.
+
+
+    +   [11] T. Liu, A.E. Cerpa, Data-driven link quality prediction using link features,
+    ACM Trans. Sensor Netw. 10 (2) (2014) 1–35.
+
+
+    +   [12] M. Kulin, E. De Poorter, T. Kazaz, I. Moerman, Towards a cognitive MAC
+    layer: Predicting the MAC-level performance in dynamic WSN using machine learning,
+    in: EWSN2017, the International Conference on Embedded Wireless Systems and Networks,
+    2017, pp. 1–2.
+
+
+    +   [13] A. Akbas, H.U. Yildiz, A.M. Ozbayoglu, B. Tavli, Neural network based
+    instant parameter prediction for wireless sensor network optimization models,
+    Wirel. Netw. 25 (6) (2019) 3405–3418.
+
+
+    +   [14] H. Wu, K. Yue, B. Li, B. Zhang, C.-H. Hsu, Collaborative QoS prediction
+    with context-sensitive matrix factorization, Future Gener. Comput. Syst. 82 (2018)
+    669–678.
+
+
+    +   [15] G. White, A. Palade, C. Cabrera, S. Clarke, IoTpredict: collaborative
+    QoS prediction in IoT, in: 2018 IEEE International Conference on Pervasive Computing
+    and Communications (PerCom), IEEE, 2018, pp. 1–10.
+
+
+    +   [16] H. Wu, Z. Zhang, J. Luo, K. Yue, C.-H. Hsu, Multiple attributes QoS prediction
+    via deep neural model with contexts, IEEE Trans. Serv. Comput. 14 (4) (2018) 1084–1096.
+
+
+    +   [17] G. White, A. Palade, S. Clarke, Qos prediction for reliable service composition
+    in iot, in: International Conference on Service-Oriented Computing, Springer,
+    2017, pp. 149–160.
+
+
+    +   [18] M. Ateeq, F. Ishmanov, M.K. Afzal, M. Naeem, Multi-parametric analysis
+    of reliability and energy consumption in IoT: A deep learning approach, Sensors
+    19 (2) (2019) 309.
+
+
+    +   [19] M. Ateeq, F. Ishmanov, M.K. Afzal, M. Naeem, Predicting delay in IoT
+    using deep learning: A multiparametric approach, IEEE Access 7 (2019) 62022–62031.
+
+
+    +   [20] M. Ateeq, M.K. Afzal, M. Naeem, M. Shafiq, J.-G. Choi, Deep learning-based
+    multiparametric predictions for IoT, Sustainability 12 (18) (2020) 7752.
+
+
+    +   [21] M. Ateeq, H. Habib, M.K. Afzal, M. Naeem, S.W. Kim, Towards data-driven
+    control of QoS in IoT: Unleashing the potential of diversified datasets, IEEE
+    Access 9 (2021) 146068–146081.
+
+
+    +   [22] W-iliab.t testbed, https://doc.iliabt.imec.be/iliabt/wilab/index.html.
+    (Accessed: 27-Feb-2021).'
+  merge: -1
+  img_proc: true
