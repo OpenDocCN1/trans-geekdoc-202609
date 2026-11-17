@@ -1,0 +1,197 @@
+- raw:
+  - '[PAGE 0]
+
+
+    Academic Press is an imprint of Elsevier
+
+    125 London Wall, London EC2Y 5AS, United Kingdom
+
+    525 B Street, Suite 1650, San Diego, CA 92101, United States
+
+    50 Hampshire Street, 5th Floor, Cambridge, MA 02139, United States
+
+    The Boulevard, Langford Lane, Kidlington, Oxford OX5 1GB, United Kingdom
+
+
+    Copyright © 2022 Elsevier Inc. All rights reserved.
+
+
+    No part of this publication may be reproduced or transmitted in any form or by
+    any means, electronic or mechanical, including photocopying, recording, or any
+    information storage and retrieval system, without permission in writing from the
+    publisher. Details on how to seek permission, further information about the Publisher''s
+    permissions policies and our arrangements with organizations such as the Copyright
+    Clearance Center and the Copyright Licensing Agency, can be found at our website:
+    www.elsevier.com/permissions.
+
+
+    This book and the individual contributions contained in it are protected under
+    copyright by the Publisher (other than as may be noted herein).
+
+
+    # ## Notices
+
+
+    Knowledge and best practice in this field are constantly changing. As new research
+    and experience broaden our understanding, changes in research methods, professional
+    practices, or medical treatment may become necessary.
+
+
+    Practitioners and researchers must always rely on their own experience and knowledge
+    in evaluating and using any information, methods, compounds, or experiments described
+    herein. In using such information or methods they should be mindful of their own
+    safety and the safety of others, including parties for whom they have a professional
+    responsibility.
+
+
+    To the fullest extent of the law, neither the Publisher nor the authors, contributors,
+    or editors, assume any liability for any injury and/or damage to persons or property
+    as a matter of products liability, negligence or otherwise, or from any use or
+    operation of any methods, products, instructions, or ideas contained in the material
+    herein.
+
+
+    ISBN: 978-0-323-90550-3
+
+
+    For Information on all Academic Press publications visit our website at https://www.elsevier.com/books-and-journals
+
+
+    Publisher: Nikki Levy
+
+    Acquisitions Editor: Nancy Maragioglio
+
+    Editorial Project Manager: Kyle Gravel
+
+    Production Project Manager: Sruthi Satheesh
+
+    Cover Designer: Victoria Pearson
+
+    Typeset by MPS Limited, Chennai, India'
+  md: '
+
+    Academic Press is an imprint of Elsevier
+
+    125 London Wall, London EC2Y 5AS, United Kingdom
+
+    525 B Street, Suite 1650, San Diego, CA 92101, United States
+
+    50 Hampshire Street, 5th Floor, Cambridge, MA 02139, United States
+
+    The Boulevard, Langford Lane, Kidlington, Oxford OX5 1GB, United Kingdom
+
+
+    Copyright © 2022 Elsevier Inc. All rights reserved.
+
+
+    No part of this publication may be reproduced or transmitted in any form or by
+    any means, electronic or mechanical, including photocopying, recording, or any
+    information storage and retrieval system, without permission in writing from the
+    publisher. Details on how to seek permission, further information about the Publisher''s
+    permissions policies and our arrangements with organizations such as the Copyright
+    Clearance Center and the Copyright Licensing Agency, can be found at our website:
+    www.elsevier.com/permissions.
+
+
+    This book and the individual contributions contained in it are protected under
+    copyright by the Publisher (other than as may be noted herein).
+
+
+    ## Notices
+
+
+    Knowledge and best practice in this field are constantly changing. As new research
+    and experience broaden our understanding, changes in research methods, professional
+    practices, or medical treatment may become necessary.
+
+
+    Practitioners and researchers must always rely on their own experience and knowledge
+    in evaluating and using any information, methods, compounds, or experiments described
+    herein. In using such information or methods they should be mindful of their own
+    safety and the safety of others, including parties for whom they have a professional
+    responsibility.
+
+
+    To the fullest extent of the law, neither the Publisher nor the authors, contributors,
+    or editors, assume any liability for any injury and/or damage to persons or property
+    as a matter of products liability, negligence or otherwise, or from any use or
+    operation of any methods, products, instructions, or ideas contained in the material
+    herein.
+
+
+    ISBN: 978-0-323-90550-3
+
+
+    For Information on all Academic Press publications visit our website at https://www.elsevier.com/books-and-journals
+
+
+    Publisher: Nikki Levy
+
+    Acquisitions Editor: Nancy Maragioglio
+
+    Editorial Project Manager: Kyle Gravel
+
+    Production Project Manager: Sruthi Satheesh
+
+    Cover Designer: Victoria Pearson
+
+    Typeset by MPS Limited, Chennai, India
+
+    '
+  mdcn: '
+
+
+    Academic Press 是 Elsevier 的一个出版品牌。
+
+    125 London Wall, London EC2Y 5AS, 英国
+
+    525 B Street, Suite 1650, San Diego, CA 92101, 美国
+
+    50 Hampshire Street, 5th Floor, Cambridge, MA 02139, 美国
+
+    The Boulevard, Langford Lane, Kidlington, Oxford OX5 1GB, 英国
+
+
+    Copyright © 2022 Elsevier Inc. 保留所有权利。
+
+
+    未经出版商书面许可，不得以任何形式或以任何方式（包括电子、机械、影印、录制或任何信息存储与检索系统）复制或传播本出版物的任何部分。关于如何申请许可、出版商许可政策的更多信息，以及我们与版权清算中心（Copyright
+    Clearance Center）和版权许可署（Copyright Licensing Agency）等组织的安排，可在我们的网站上查询：www.elsevier.com/permissions。
+
+
+    本书及其中包含的个别稿件受出版商版权保护（除非在此另有说明）。
+
+
+    ## 通告
+
+
+    该领域的知识和最佳实践在不断变化。随着新的研究和经验拓宽我们的理解，研究方法、专业实践或医疗治疗可能需要做出改变。
+
+
+    从业者和研究人员在评估和使用本文中描述的任何信息、方法、化合物或实验时，必须始终依赖自己的经验和知识。在使用此类信息或方法时，他们应注意自身安全及他人安全，包括对其负有专业责任的各方。
+
+
+    在法律允许的最大范围内，出版商、作者、贡献者或编辑均不对因产品责任、疏忽或其他原因，或因使用本材料中包含的任何方法、产品、说明或观点而导致的人员伤亡和/或财产损失承担任何责任。
+
+
+    ISBN：978-0-323-90550-3
+
+
+    有关所有 Academic Press 出版物的信息，请访问我们的网站：https://www.elsevier.com/books-and-journals
+
+
+    出版商：Nikki Levy
+
+    选题编辑：Nancy Maragioglio
+
+    编辑项目经理：Kyle Gravel
+
+    制作项目经理：Sruthi Satheesh
+
+    封面设计师：Victoria Pearson
+
+    由 MPS Limited, Chennai, India 排版
+
+
+    '
+  merge: -1
